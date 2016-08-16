@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4CF33BC-C606-478C-9A8D-8619BFEEF087}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Odeum.My.MyApplication</StartupObject>
+    <RootNamespace>Odeum</RootNamespace>
+    <AssemblyName>Odeum Movies</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://odeum.at.vu</SupportUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Odeum Movies</ProductName>
+    <PublisherName>Zeduc</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>2.7.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Odeum Movies.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Odeum Movies.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Odeum Movies Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2BAF7F5D541310AEACEB08EFCC42EC2B3CF0F126</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Odeum Beta_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CButtonLib">
+      <HintPath>..\..\..\DLLs\CButton\CButton\bin\Debug\CButtonLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="VIBlend.WinForms.Controls">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\VIBlend\Windows Forms Controls v.10.1.0.0\VIBlend.WinForms.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="VIBlend.WinForms.Controls.Design">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\VIBlend\Windows Forms Controls v.10.1.0.0\VIBlend.WinForms.Controls.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="VIBlend.WinForms.DataGridView">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\VIBlend\Windows Forms Controls v.10.1.0.0\VIBlend.WinForms.DataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="VIBlend.WinForms.Utilities, Version=10.1.0.0, Culture=neutral, PublicKeyToken=970a5af59bc48043, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\VIBlend\Windows Forms Controls v.10.1.0.0\VIBlend.WinForms.Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddonTextboxWatermark.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CButtonExtension.vb" />
+    <Compile Include="DownloadClient.Designer.vb">
+      <DependentUpon>DownloadClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PopupBackground.Designer.vb">
+      <DependentUpon>PopupBackground.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PopupBackground.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoviePlayer.Designer.vb">
+      <DependentUpon>MoviePlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MoviePlayer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageNotification.Designer.vb">
+      <DependentUpon>MessageNotification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageNotification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovieInfo.Designer.vb">
+      <DependentUpon>MovieInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MovieInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoTabs.Designer.vb">
+      <DependentUpon>InfoTabs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTabs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupError.Designer.vb">
+      <DependentUpon>PopupError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PopupError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RtfExtensions.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StartupTab.Designer.vb">
+      <DependentUpon>StartupTab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartupTab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabPageError.Designer.vb">
+      <DependentUpon>TabPageError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TabPageError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextboxExtensions.vb" />
+    <Compile Include="Odeum Movies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odeum Movies.Designer.vb">
+      <DependentUpon>Odeum Movies.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PosterTitle.Designer.vb">
+      <DependentUpon>PosterTitle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PosterTitle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UpdateNotification.Designer.vb">
+      <DependentUpon>UpdateNotification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateNotification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DownloadClient.resx">
+      <DependentUpon>DownloadClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupBackground.resx">
+      <DependentUpon>PopupBackground.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoviePlayer.resx">
+      <DependentUpon>MoviePlayer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageNotification.resx">
+      <DependentUpon>MessageNotification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieInfo.resx">
+      <DependentUpon>MovieInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTabs.resx">
+      <DependentUpon>InfoTabs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupError.resx">
+      <DependentUpon>PopupError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupTab.resx">
+      <DependentUpon>StartupTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabPageError.resx">
+      <DependentUpon>TabPageError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odeum Movies.resx">
+      <DependentUpon>Odeum Movies.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosterTitle.resx">
+      <DependentUpon>PosterTitle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateNotification.resx">
+      <DependentUpon>UpdateNotification.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Odeum Movies Logo.ico" />
+    <None Include="Resources\MinimiseAppH.png" />
+    <None Include="Resources\MaximiseAppH.png" />
+    <None Include="Resources\CloseAppH.png" />
+    <None Include="Resources\MaximiseApp.png" />
+    <None Include="Resources\CloseApp.png" />
+    <None Include="Resources\MinimiseApp.png" />
+    <None Include="Resources\Add Movies to Favourites.png" />
+    <None Include="Resources\SearchIconL3.png" />
+    <None Include="Resources\SearchIconH1.png" />
+    <None Include="Resources\SearchIconL2.png" />
+    <None Include="Resources\SearchIconL.png" />
+    <None Include="Resources\SearchIconH.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\SearchIconL1.png" />
+    <None Include="Resources\ArrowDown1.png" />
+    <None Include="Resources\ThreeDots.png" />
+    <None Include="Resources\TempThreeDots.png" />
+    <None Include="Resources\FavouriteL2.png" />
+    <None Include="Resources\FavouriteH1.png" />
+    <None Include="Resources\FavouriteH.png" />
+    <None Include="Resources\WatchedH.png" />
+    <None Include="Resources\WatchedL.png" />
+    <None Include="Resources\WatchListL1.png" />
+    <None Include="Resources\FavouriteL1.png" />
+    <None Include="Resources\FavouriteL.png" />
+    <None Include="Resources\closeL.png" />
+    <None Include="Resources\closeH.png" />
+    <None Include="Resources\TwitterH.png" />
+    <None Include="Resources\twitter logo.png" />
+    <None Include="Resources\twitter logo WHITE.png" />
+    <None Include="Resources\the_movie_db-c1cc8205ad01c84e5c86b31b3885698af54fd8c10851fe0c5453903f8bbc2401.png" />
+    <None Include="Resources\TempBg2.png" />
+    <None Include="Resources\TempBg.png" />
+    <None Include="Resources\sperm_loader1412018867.gif" />
+    <None Include="Resources\socialYouTubeL.png" />
+    <None Include="Resources\socialYouTubeH.png" />
+    <None Include="Resources\socialTwitterL.png" />
+    <None Include="Resources\socialTwitterH.png" />
+    <None Include="Resources\socialGoogleL.png" />
+    <None Include="Resources\socialGoogleH.png" />
+    <None Include="Resources\socialFacebookL.png" />
+    <None Include="Resources\socialFacebookH.png" />
+    <None Include="Resources\shuffleL.png" />
+    <None Include="Resources\shuffleH.png" />
+    <None Include="Resources\seenL.png" />
+    <None Include="Resources\seenIconL.png" />
+    <None Include="Resources\seenIconH.png" />
+    <None Include="Resources\seenH.png" />
+    <None Include="Resources\SearchIconXXX.png" />
+    <None Include="Resources\SearchIconX.png" />
+    <None Include="Resources\search-icon-hi %281%29.png" />
+    <None Include="Resources\Search-icon.png" />
+    <None Include="Resources\SearchIcon.png" />
+    <None Include="Resources\searchbar21.png" />
+    <None Include="Resources\searchbar14.png" />
+    <None Include="Resources\searchbar13.png" />
+    <None Include="Resources\searchbar12.png" />
+    <None Include="Resources\searchbar11.png" />
+    <None Include="Resources\searchbar2.png" />
+    <None Include="Resources\searchbar1.png" />
+    <None Include="Resources\rTnKpLx6c2.png" />
+    <None Include="Resources\rTnKpLx6c1.png" />
+    <None Include="Resources\rTnKpLx6c.png" />
+    <None Include="Resources\reset-icon.png" />
+    <None Include="Resources\reportBtnH.png" />
+    <None Include="Resources\reportBtn.png" />
+    <None Include="Resources\removeFavesBtnH.png" />
+    <None Include="Resources\removeFavesBtn.png" />
+    <None Include="Resources\release-1.7-eye-iconx.png" />
+    <None Include="Resources\release-1.7-eye-icon.png" />
+    <None Include="Resources\refresh-256.png" />
+    <None Include="Resources\refresh_icon.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\preloader2.gif" />
+    <None Include="Resources\preloader_big.gif" />
+    <None Include="Resources\preloader_animatedgif_v2.gif" />
+    <None Include="Resources\preloader.gif" />
+    <None Include="Resources\PopupCloseL.png" />
+    <None Include="Resources\PopupCloseH.png" />
+    <None Include="Resources\popcorniconxx.png" />
+    <None Include="Resources\popcorniconx.png" />
+    <None Include="Resources\popcornico.png" />
+    <None Include="Resources\popcorn_1x.png" />
+    <None Include="Resources\popcorn.png" />
+    <None Include="Resources\playdl.png" />
+    <None Include="Resources\odeumtext3.png" />
+    <None Include="Resources\odeumtext2.png" />
+    <None Include="Resources\odeumtext1.png" />
+    <None Include="Resources\odeumtext.png" />
+    <None Include="Resources\Odeum Movies Logo.png" />
+    <None Include="Resources\newMin1.png" />
+    <None Include="Resources\newMin.png" />
+    <None Include="Resources\newMax2.png" />
+    <None Include="Resources\newMax1.png" />
+    <None Include="Resources\newMax.png" />
+    <None Include="Resources\newClose1.png" />
+    <None Include="Resources\newClose.png" />
+    <None Include="Resources\MovieErrorImage.png" />
+    <None Include="Resources\minimiseIcon.png" />
+    <None Include="Resources\menuIconXXX.png" />
+    <None Include="Resources\menuIconX.png" />
+    <None Include="Resources\menuIcon.png" />
+    <None Include="Resources\maximiseIcon.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\loader.gif" />
+    <None Include="Resources\left_roundH.png" />
+    <None Include="Resources\left_round.png" />
+    <None Include="Resources\infoH.png" />
+    <None Include="Resources\info1H.png" />
+    <None Include="Resources\info_icon.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\icon-watchlist.png" />
+    <None Include="Resources\icon-arrow-down-b-128.png" />
+    <None Include="Resources\heartttthis.png" />
+    <None Include="Resources\heartttHOVER.png" />
+    <None Include="Resources\hearttt.png" />
+    <None Include="Resources\HeartOutlineL2.png" />
+    <None Include="Resources\HeartOutlineL1.png" />
+    <None Include="Resources\HeartOutlineL.png" />
+    <None Include="Resources\HeartOutlineH.png" />
+    <None Include="Resources\heartL.png" />
+    <None Include="Resources\heartH.png" />
+    <None Include="Resources\Heart_icon_red_hollow.svg.png" />
+    <None Include="Resources\gradientBg2.png" />
+    <None Include="Resources\gradientBg1.png" />
+    <None Include="Resources\gradientBg.png" />
+    <None Include="Resources\GoogleL.png" />
+    <None Include="Resources\GoogleH.png" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\feedbackLxx.png" />
+    <None Include="Resources\FeedbackL2.png" />
+    <None Include="Resources\FeedbackL1.png" />
+    <None Include="Resources\feedbackL.png" />
+    <None Include="Resources\FeedbackIcon.png" />
+    <None Include="Resources\feedbackHxx.png" />
+    <None Include="Resources\FeedbackH1.png" />
+    <None Include="Resources\FeedbackH.png" />
+    <None Include="Resources\faveicon1HRed.png" />
+    <None Include="Resources\faveicon1H.png" />
+    <None Include="Resources\faveicon1.png" />
+    <None Include="Resources\faveicon.png" />
+    <None Include="Resources\faveBtn2xH.png" />
+    <None Include="Resources\faveBtn2x.png" />
+    <None Include="Resources\faveBtn1.png" />
+    <None Include="Resources\faveBtn.png" />
+    <None Include="Resources\FacebookLogo.png" />
+    <None Include="Resources\facebook-4096.png" />
+    <None Include="Resources\facebook logo WHITE.png" />
+    <None Include="Resources\f3333333dback.png" />
+    <None Include="Resources\f33dback.png" />
+    <None Include="Resources\f.png" />
+    <None Include="Resources\expandL.png" />
+    <None Include="Resources\expandIcon.png" />
+    <None Include="Resources\expandH.png" />
+    <None Include="Resources\DownloadIconL.png" />
+    <None Include="Resources\downL4.png" />
+    <None Include="Resources\downL3.png" />
+    <None Include="Resources\downL2.png" />
+    <None Include="Resources\downL1.png" />
+    <None Include="Resources\downL.png" />
+    <None Include="Resources\downHYellow.png" />
+    <None Include="Resources\downHTeal.png" />
+    <None Include="Resources\downHRed.png" />
+    <None Include="Resources\downHBlue.png" />
+    <None Include="Resources\downH21.png" />
+    <None Include="Resources\downH2.png" />
+    <None Include="Resources\downH.png" />
+    <None Include="Resources\down22.png" />
+    <None Include="Resources\down21.png" />
+    <None Include="Resources\down2.png" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\closeLxxxxxxxxxxxxxxxxxxx.png" />
+    <None Include="Resources\closeIcon.png" />
+    <None Include="Resources\closeBtnH.png" />
+    <None Include="Resources\closeBtn.png" />
+    <None Include="Resources\CheckUpdate.png" />
+    <None Include="Resources\btnAppMINL2.png" />
+    <None Include="Resources\btnAppMINL1.png" />
+    <None Include="Resources\btnAppMINL.png" />
+    <None Include="Resources\btnAppMINH2.png" />
+    <None Include="Resources\btnAppMINH1.png" />
+    <None Include="Resources\btnAppMINH.png" />
+    <None Include="Resources\btnAppMIN1.png" />
+    <None Include="Resources\btnAppMIN.png" />
+    <None Include="Resources\btnAppMAXL.png" />
+    <None Include="Resources\btnAppMAXH.png" />
+    <None Include="Resources\btnAppMAX.png" />
+    <None Include="Resources\btnAppCLOSEL.png" />
+    <None Include="Resources\btnAppCLOSEH.png" />
+    <None Include="Resources\btnAppCLOSE.png" />
+    <None Include="Resources\btnAddonx31.png" />
+    <None Include="Resources\btnAddonx9.png" />
+    <None Include="Resources\btnAddonx3.png" />
+    <None Include="Resources\btnAddonx1.png" />
+    <None Include="Resources\btnAddonx.png" />
+    <None Include="Resources\btnAddon21.png" />
+    <None Include="Resources\btnAddon2.png" />
+    <None Include="Resources\btnAddon1.png" />
+    <None Include="Resources\btnAddon.png" />
+    <None Include="Resources\borderImage.png" />
+    <None Include="Resources\blue-triangle-rounded-corners-md.png" />
+    <None Include="Resources\blue_button.png" />
+    <None Include="Resources\black_2_audio_simple_repeat_2-128.png" />
+    <None Include="Resources\Banner Text.png" />
+    <None Include="Resources\Background.png" />
+    <None Include="Resources\arrowRound2.png" />
+    <None Include="Resources\arrowRound.png" />
+    <None Include="Resources\arrow-down.png" />
+    <None Include="Resources\ArrowDown.png" />
+    <None Include="Resources\ArrowDown#2.png" />
+    <None Include="Resources\appMinLx.png" />
+    <None Include="Resources\appMinL.png" />
+    <None Include="Resources\appMinHx.png" />
+    <None Include="Resources\appMinH.png" />
+    <None Include="Resources\appCloseL1.png" />
+    <None Include="Resources\appCloseL.png" />
+    <None Include="Resources\appCloseH.png" />
+    <None Include="Resources\animated_loading.gif" />
+    <None Include="Resources\addon1.png" />
+    <None Include="Resources\addon.png" />
+    <None Include="Resources\addon %281%29.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\aboutIocn.png" />
+    <None Include="Resources\6797810-hd-space-wallpapers.jpg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\zoomOnL.png" />
+    <None Include="Resources\zoomOnH.png" />
+    <None Include="Resources\zoomOffL.png" />
+    <None Include="Resources\zoomOffH.png" />
+    <None Include="Resources\YouTubeL1.png" />
+    <None Include="Resources\YouTubeL.png" />
+    <None Include="Resources\YouTubeH.png" />
+    <None Include="Resources\xyzMinimize.png" />
+    <None Include="Resources\xyzClose.png" />
+    <None Include="Resources\xxxMinimize.png" />
+    <None Include="Resources\xxxClose1.png" />
+    <None Include="Resources\xxxClose.png" />
+    <None Include="Resources\xMinimize.png" />
+    <None Include="Resources\xHeartIcon.png" />
+    <None Include="Resources\xExpandyzzzzz.png" />
+    <None Include="Resources\xExpandy.png" />
+    <None Include="Resources\xClose.png" />
+    <None Include="Resources\wpspin-2x.gif" />
+    <None Include="Resources\websiteL.png" />
+    <None Include="Resources\websiteH.png" />
+    <None Include="Resources\watchListL.png" />
+    <None Include="Resources\watchListH.png" />
+    <None Include="Resources\watchImage1.png" />
+    <None Include="Resources\watchImage.png" />
+    <None Include="Resources\watchIconHx.png" />
+    <None Include="Resources\watchIconH.png" />
+    <None Include="Resources\watchepL.png" />
+    <None Include="Resources\watchepH.png" />
+    <None Include="Resources\watchedIconxL.png" />
+    <None Include="Resources\watchedIconxH.png" />
+    <None Include="Resources\watchedIconH1.png" />
+    <None Include="Resources\watchedIconH.png" />
+    <None Include="Resources\WatchedIcon1.png" />
+    <None Include="Resources\watchedIcon.png" />
+    <None Include="Resources\watchBtnH.png" />
+    <None Include="Resources\watchBtn.png" />
+    <None Include="Resources\Untitled-1.png" />
+    <None Include="Resources\twitterLogo.png" />
+    <None Include="Resources\TwitterL1.png" />
+    <None Include="Resources\TwitterL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>True</Isolated>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>True</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
