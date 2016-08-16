@@ -219,7 +219,7 @@ Partial Class InfoTabs
         '
         Me.ImgProvider.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ImgProvider.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ImgProvider.Image = Global.Odeum.My.Resources.Resources.the_movie_db_c1cc8205ad01c84e5c86b31b3885698af54fd8c10851fe0c5453903f8bbc2401
+        Me.ImgProvider.Image = Global.Odeum.My.Resources.Resources.themoviedb_org
         Me.ImgProvider.Location = New System.Drawing.Point(267, 579)
         Me.ImgProvider.Name = "ImgProvider"
         Me.ImgProvider.Size = New System.Drawing.Size(355, 69)

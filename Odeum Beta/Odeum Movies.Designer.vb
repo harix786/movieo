@@ -611,7 +611,7 @@ Partial Class Odeum_Movies
         '
         Me.TxtSearchIcon.BackColor = System.Drawing.Color.Transparent
         Me.TxtSearchIcon.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TxtSearchIcon.Image = Global.Odeum.My.Resources.Resources.SearchIconL1
+        Me.TxtSearchIcon.Image = Global.Odeum.My.Resources.Resources.SearchIconL
         Me.TxtSearchIcon.Location = New System.Drawing.Point(19, 14)
         Me.TxtSearchIcon.Margin = New System.Windows.Forms.Padding(0)
         Me.TxtSearchIcon.Name = "TxtSearchIcon"
@@ -878,7 +878,7 @@ Partial Class Odeum_Movies
         Me.AppExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AppExit.BackColor = System.Drawing.Color.Transparent
         Me.AppExit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AppExit.Image = Global.Odeum.My.Resources.Resources.CloseApp
+        Me.AppExit.Image = Global.Odeum.My.Resources.Resources.CloseAppL
         Me.AppExit.Location = New System.Drawing.Point(473, 0)
         Me.AppExit.Margin = New System.Windows.Forms.Padding(0)
         Me.AppExit.Name = "AppExit"
@@ -892,7 +892,7 @@ Partial Class Odeum_Movies
         Me.AppMaximize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AppMaximize.BackColor = System.Drawing.Color.Transparent
         Me.AppMaximize.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AppMaximize.Image = Global.Odeum.My.Resources.Resources.MaximiseApp
+        Me.AppMaximize.Image = Global.Odeum.My.Resources.Resources.MaximiseAppL
         Me.AppMaximize.Location = New System.Drawing.Point(446, 0)
         Me.AppMaximize.Margin = New System.Windows.Forms.Padding(0)
         Me.AppMaximize.Name = "AppMaximize"
@@ -906,7 +906,7 @@ Partial Class Odeum_Movies
         Me.AppMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AppMinimize.BackColor = System.Drawing.Color.Transparent
         Me.AppMinimize.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AppMinimize.Image = Global.Odeum.My.Resources.Resources.MinimiseApp
+        Me.AppMinimize.Image = Global.Odeum.My.Resources.Resources.MinimiseAppL
         Me.AppMinimize.Location = New System.Drawing.Point(419, 0)
         Me.AppMinimize.Margin = New System.Windows.Forms.Padding(0)
         Me.AppMinimize.Name = "AppMinimize"
@@ -950,7 +950,7 @@ Partial Class Odeum_Movies
         '
         Me.BtnSendFeedback.BackColor = System.Drawing.Color.Transparent
         Me.BtnSendFeedback.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnSendFeedback.Image = Global.Odeum.My.Resources.Resources.FeedbackL2
+        Me.BtnSendFeedback.Image = Global.Odeum.My.Resources.Resources.FeedbackL
         Me.BtnSendFeedback.Location = New System.Drawing.Point(7, 5)
         Me.BtnSendFeedback.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnSendFeedback.Name = "BtnSendFeedback"

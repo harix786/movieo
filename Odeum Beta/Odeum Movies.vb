@@ -363,12 +363,12 @@ Public Class Odeum_Movies
     Public Sub SearchboxInactive()
         TxtSearchBox.Text = ""
         TxtSearchBg.BorderColor = Color.FromArgb(161, 168, 179)
-        TxtSearchIcon.Image = My.Resources.SearchIconL1
+        TxtSearchIcon.Image = My.Resources.SearchIconL
     End Sub
 
     Public Sub SearchboxActive()
         TxtSearchBg.BorderColor = Color.White
-        TxtSearchIcon.Image = My.Resources.SearchIconH1
+        TxtSearchIcon.Image = My.Resources.SearchIconH
     End Sub
 
     'Switch Tabs
@@ -701,7 +701,7 @@ Public Class Odeum_Movies
     End Sub
 
     Private Sub appExpand_MouseLeave(sender As Object, e As EventArgs) Handles AppMaximize.MouseLeave
-        AppMaximize.Image = My.Resources.MaximiseApp
+        AppMaximize.Image = My.Resources.MaximiseAppL
     End Sub
 
     Private Sub appExpand_Click(sender As Object, e As EventArgs) Handles AppMaximize.Click
@@ -717,7 +717,7 @@ Public Class Odeum_Movies
     End Sub
 
     Private Sub appMin_MouseLeave(sender As Object, e As EventArgs) Handles AppMinimize.MouseLeave
-        AppMinimize.Image = My.Resources.MinimiseApp
+        AppMinimize.Image = My.Resources.MinimiseAppL
     End Sub
 
     Private Sub appMin_Click(sender As Object, e As EventArgs) Handles AppMinimize.Click
@@ -729,7 +729,7 @@ Public Class Odeum_Movies
     End Sub
 
     Private Sub appClose_MouseLeave(sender As Object, e As EventArgs) Handles AppExit.MouseLeave
-        AppExit.Image = My.Resources.CloseApp
+        AppExit.Image = My.Resources.CloseAppL
     End Sub
 
     Private Sub appClose_Click(sender As Object, e As EventArgs) Handles AppExit.Click
@@ -1029,7 +1029,7 @@ Public Class Odeum_Movies
     End Sub
 
     Private Sub SendFeedback_MouseLeave(sender As Object, e As EventArgs) Handles BtnSendFeedback.MouseLeave
-        BtnSendFeedback.Image = My.Resources.FeedbackL2
+        BtnSendFeedback.Image = My.Resources.FeedbackL
     End Sub
 
     Private Sub PanelMovies_Scroll(sender As Object, e As ScrollEventArgs) Handles PanelMovies.Scroll
@@ -1086,13 +1086,13 @@ Public Class Odeum_Movies
 
     Private Sub txtboxSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearchBox.Enter
         TxtSearchBg.BorderColor = Color.White
-        TxtSearchIcon.Image = My.Resources.SearchIconH1
+        TxtSearchIcon.Image = My.Resources.SearchIconH
     End Sub
 
     Private Sub txtboxSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearchBox.Leave
         If Not Tabs.SelectedIndex = 4 Then
             TxtSearchBg.BorderColor = Color.FromArgb(161, 168, 179)
-            TxtSearchIcon.Image = My.Resources.SearchIconL1
+            TxtSearchIcon.Image = My.Resources.SearchIconL
         End If
     End Sub
 

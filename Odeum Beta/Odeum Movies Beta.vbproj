@@ -292,15 +292,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Odeum Movies Logo.ico" />
+    <None Include="Resources\MovieErrorImage.png" />
+    <None Include="Resources\FeedbackH.png" />
+    <None Include="Resources\FeedbackL2.png" />
+    <None Include="Resources\FavouriteH.png" />
+    <None Include="Resources\MinimiseAppL.png" />
     <None Include="Resources\MinimiseAppH.png" />
+    <None Include="Resources\MaximiseAppL.png" />
     <None Include="Resources\MaximiseAppH.png" />
+    <None Include="Resources\CloseAppL.png" />
     <None Include="Resources\CloseAppH.png" />
+    <None Include="Resources\SearchIconH1.png" />
+    <None Include="Resources\SearchIconL3.png" />
+    <None Include="Resources\Odeum Movies Logo.png" />
+    <None Include="Resources\WatchedL.png" />
+    <None Include="Resources\WatchedH.png" />
+    <None Include="Resources\WatchListL1.png" />
+    <None Include="Resources\watchepL.png" />
+    <None Include="Resources\FavouriteH1.png" />
+    <None Include="Resources\PopupCloseH.png" />
+    <None Include="Resources\PopupCloseL.png" />
+    <None Include="Resources\FacebookLogo.png" />
+    <None Include="Resources\twitterLogo.png" />
+    <None Include="Resources\themoviedb.org.png" />
+    <None Include="Resources\Add Movies to Favourites.png" />
+    <None Include="Resources\Add Movies to Favourites1.png" />
     <None Include="Resources\MaximiseApp.png" />
     <None Include="Resources\CloseApp.png" />
     <None Include="Resources\MinimiseApp.png" />
-    <None Include="Resources\Add Movies to Favourites.png" />
-    <None Include="Resources\SearchIconL3.png" />
-    <None Include="Resources\SearchIconH1.png" />
     <None Include="Resources\SearchIconL2.png" />
     <None Include="Resources\SearchIconL.png" />
     <None Include="Resources\SearchIconH.png" />
@@ -310,11 +329,6 @@
     <None Include="Resources\ThreeDots.png" />
     <None Include="Resources\TempThreeDots.png" />
     <None Include="Resources\FavouriteL2.png" />
-    <None Include="Resources\FavouriteH1.png" />
-    <None Include="Resources\FavouriteH.png" />
-    <None Include="Resources\WatchedH.png" />
-    <None Include="Resources\WatchedL.png" />
-    <None Include="Resources\WatchListL1.png" />
     <None Include="Resources\FavouriteL1.png" />
     <None Include="Resources\FavouriteL.png" />
     <None Include="Resources\closeL.png" />
@@ -369,8 +383,6 @@
     <None Include="Resources\preloader_big.gif" />
     <None Include="Resources\preloader_animatedgif_v2.gif" />
     <None Include="Resources\preloader.gif" />
-    <None Include="Resources\PopupCloseL.png" />
-    <None Include="Resources\PopupCloseH.png" />
     <None Include="Resources\popcorniconxx.png" />
     <None Include="Resources\popcorniconx.png" />
     <None Include="Resources\popcornico.png" />
@@ -381,7 +393,6 @@
     <None Include="Resources\odeumtext2.png" />
     <None Include="Resources\odeumtext1.png" />
     <None Include="Resources\odeumtext.png" />
-    <None Include="Resources\Odeum Movies Logo.png" />
     <None Include="Resources\newMin1.png" />
     <None Include="Resources\newMin.png" />
     <None Include="Resources\newMax2.png" />
@@ -389,7 +400,6 @@
     <None Include="Resources\newMax.png" />
     <None Include="Resources\newClose1.png" />
     <None Include="Resources\newClose.png" />
-    <None Include="Resources\MovieErrorImage.png" />
     <None Include="Resources\minimiseIcon.png" />
     <None Include="Resources\menuIconXXX.png" />
     <None Include="Resources\menuIconX.png" />
@@ -423,13 +433,11 @@
     <None Include="Resources\GoogleH.png" />
     <None Include="Resources\giphy.gif" />
     <None Include="Resources\feedbackLxx.png" />
-    <None Include="Resources\FeedbackL2.png" />
     <None Include="Resources\FeedbackL1.png" />
     <None Include="Resources\feedbackL.png" />
     <None Include="Resources\FeedbackIcon.png" />
     <None Include="Resources\feedbackHxx.png" />
     <None Include="Resources\FeedbackH1.png" />
-    <None Include="Resources\FeedbackH.png" />
     <None Include="Resources\faveicon1HRed.png" />
     <None Include="Resources\faveicon1H.png" />
     <None Include="Resources\faveicon1.png" />
@@ -438,7 +446,6 @@
     <None Include="Resources\faveBtn2x.png" />
     <None Include="Resources\faveBtn1.png" />
     <None Include="Resources\faveBtn.png" />
-    <None Include="Resources\FacebookLogo.png" />
     <None Include="Resources\facebook-4096.png" />
     <None Include="Resources\facebook logo WHITE.png" />
     <None Include="Resources\f3333333dback.png" />
@@ -544,7 +551,6 @@
     <None Include="Resources\watchImage.png" />
     <None Include="Resources\watchIconHx.png" />
     <None Include="Resources\watchIconH.png" />
-    <None Include="Resources\watchepL.png" />
     <None Include="Resources\watchepH.png" />
     <None Include="Resources\watchedIconxL.png" />
     <None Include="Resources\watchedIconxH.png" />
@@ -555,7 +561,6 @@
     <None Include="Resources\watchBtnH.png" />
     <None Include="Resources\watchBtn.png" />
     <None Include="Resources\Untitled-1.png" />
-    <None Include="Resources\twitterLogo.png" />
     <None Include="Resources\TwitterL1.png" />
     <None Include="Resources\TwitterL.png" />
   </ItemGroup>
