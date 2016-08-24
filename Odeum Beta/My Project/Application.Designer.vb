@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Odeum.Odeum_Movies
+            Me.MainForm = Global.Movieo.Movieo
         End Sub
     End Class
 End Namespace

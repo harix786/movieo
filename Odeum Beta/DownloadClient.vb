@@ -5,7 +5,7 @@ Public Class DownloadClient
     Private Sub DownloadClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Top = 28
         Left = 0
-        Size = New Size(Odeum_Movies.Size.Width, Odeum_Movies.Size.Height - Odeum_Movies.AppTitle.Size.Height)
+        Size = New Size(Movieo.Size.Width, Movieo.Size.Height - Movieo.AppTitle.Size.Height)
         BtnCancel.Text = "Cancel"
     End Sub
 
@@ -13,7 +13,7 @@ Public Class DownloadClient
 
     Public Sub DownloadMovie(MovieLink As String, MovieTitle As String, MovieYear As String, MovieExtension As String)
         Try
-            Dim DownloadDirectory As String = Odeum_Movies.DownloadLocation + MovieTitle + " (" + MovieYear + ")." + MovieExtension
+            Dim DownloadDirectory As String = Movieo.DownloadLocation + MovieTitle + " (" + MovieYear + ")." + MovieExtension
             TextDownloadLocation.Text = DownloadDirectory
             My.Settings.TempMovieTitleYear = MovieTitle + " "
             AddHandler client.DownloadProgressChanged, AddressOf client_ProgressChanged
@@ -21,7 +21,7 @@ Public Class DownloadClient
             client.DownloadFileAsync(New Uri(MovieLink), DownloadDirectory)
             LblMovie.Text = "Downloading: " + MovieTitle
         Catch ex As Exception
-            Odeum_Movies.ShowPopupError("Unable to download movie.", ex.Message)
+            Movieo.ShowPopupError("Unable to download movie.", ex.Message)
         End Try
     End Sub
 

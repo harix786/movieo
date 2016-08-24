@@ -1,4 +1,4 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MoviePlayer
     Inherits System.Windows.Forms.Form
 
@@ -38,7 +38,7 @@ Partial Class MoviePlayer
         '
         Me.appClose.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.appClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.appClose.Image = Global.Odeum.My.Resources.Resources.PopupCloseL
+        Me.appClose.Image = My.Resources.Resources.PopupCloseL
         Me.appClose.Location = New System.Drawing.Point(1197, 11)
         Me.appClose.Name = "appClose"
         Me.appClose.Size = New System.Drawing.Size(25, 25)

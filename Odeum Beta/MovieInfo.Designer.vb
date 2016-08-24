@@ -230,7 +230,7 @@ Partial Class MovieInfo
         'BtnFavourite
         '
         Me.BtnFavourite.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnFavourite.Image = Global.Odeum.My.Resources.Resources.FavouriteL
+        Me.BtnFavourite.Image = Global.Movieo.My.Resources.Resources.FavouriteL
         Me.BtnFavourite.Location = New System.Drawing.Point(3, 2)
         Me.BtnFavourite.Margin = New System.Windows.Forms.Padding(3, 2, 0, 3)
         Me.BtnFavourite.Name = "BtnFavourite"
@@ -267,7 +267,7 @@ Partial Class MovieInfo
         'BtnWatchList
         '
         Me.BtnWatchList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnWatchList.Image = Global.Odeum.My.Resources.Resources.WatchListL
+        Me.BtnWatchList.Image = Global.Movieo.My.Resources.Resources.WatchListL
         Me.BtnWatchList.Location = New System.Drawing.Point(186, 2)
         Me.BtnWatchList.Margin = New System.Windows.Forms.Padding(3, 2, 1, 3)
         Me.BtnWatchList.Name = "BtnWatchList"
@@ -304,7 +304,7 @@ Partial Class MovieInfo
         'BtnWatched
         '
         Me.BtnWatched.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnWatched.Image = Global.Odeum.My.Resources.Resources.WatchedL
+        Me.BtnWatched.Image = Global.Movieo.My.Resources.Resources.WatchedL
         Me.BtnWatched.Location = New System.Drawing.Point(366, 3)
         Me.BtnWatched.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
         Me.BtnWatched.Name = "BtnWatched"
@@ -458,7 +458,7 @@ Partial Class MovieInfo
         '
         Me.appClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.appClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.appClose.Image = Global.Odeum.My.Resources.Resources.PopupCloseL
+        Me.appClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
         Me.appClose.Location = New System.Drawing.Point(1150, 29)
         Me.appClose.Name = "appClose"
         Me.appClose.Size = New System.Drawing.Size(25, 25)

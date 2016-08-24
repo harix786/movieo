@@ -9,18 +9,18 @@ Public Class PosterTitle
 
     Public Sub ShowMovie()
         Try
-            If Odeum_Movies.FavouriteMovies.Items.Contains(InfoTitle.Text + " (" + InfoYear.Text + ")") Then
+            If Movieo.FavouriteMovies.Items.Contains(InfoTitle.Text + " (" + InfoYear.Text + ")") Then
                 MovieInfo.TextFavourites.Text = "Remove from favourites"
             Else
                 MovieInfo.TextFavourites.Text = "Add to favourites"
             End If
-            If Odeum_Movies.WatchListMovies.Items.Contains(InfoTitle.Text + " (" + InfoYear.Text + ")") Then
+            If Movieo.WatchListMovies.Items.Contains(InfoTitle.Text + " (" + InfoYear.Text + ")") Then
                 MovieInfo.TextWatchList.Text = "Remove from watch list"
             Else
                 MovieInfo.TextWatchList.Text = "Add to watch list"
             End If
 
-            If Odeum_Movies.WatchedMovies.Items.Contains(InfoTitle.Text + " (" + InfoYear.Text + ")") Then
+            If Movieo.WatchedMovies.Items.Contains(InfoTitle.Text + " (" + InfoYear.Text + ")") Then
                 MovieInfo.TextWatched.Text = "Watched"
             Else
                 MovieInfo.TextWatched.Text = "Not watched"
@@ -85,6 +85,6 @@ Public Class PosterTitle
     End Function
 
     Private Sub MovieTitle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        BackColor = Odeum_Movies.PanelMovies.BackColor
+        BackColor = Movieo.PanelMovies.BackColor
     End Sub
 End Class

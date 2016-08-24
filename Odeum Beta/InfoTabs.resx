@@ -122,7 +122,7 @@
 
 We adore movies but finding where to watch was usually a hassle. We had been searching for a nicely designed and simple interface for watching movies without the use of torrents, yet we couldn’t find one… so we made one ourselves.
 
-Odeum Movies started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.</value>
+Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>We aim to offer the easiest application possible to watching movies fast without any of those annoying advertisements, sign-up/login or subscriptions. We will always be free and can guarantee we will never, ever charge our users for the service we offer.</value>
@@ -131,10 +131,10 @@ Odeum Movies started out as a passion project and continues to improve thanks to
     <value>Of course! We want to try and have all the movies that you're going to enjoy and we honestly couldn't do that without your help. So, go ahead and send us a message using the 'CONTACT' form. If possible, try to include the movie title and year released so we can go hunting and add it straight to the list as quick as we can. Note: if you include your email within the message then we'll send you a reply as soon as we've added the movie so you can start watching immediately! </value>
   </data>
   <data name="qSub3.Text" xml:space="preserve">
-    <value>You may be using a Proxy Address or a VPN that is blocking the access to the sites we use to bring you the data and movies. If you are, then simply allow Odeum Movies to access the web and you won't have anymore issues!</value>
+    <value>You may be using a Proxy Address or a VPN that is blocking the access to the sites we use to bring you the data and movies. If you are, then simply allow Movieo to access the web and you won't have anymore issues!</value>
   </data>
   <data name="qSub2.Text" xml:space="preserve">
-    <value>We're still in beta as they're may be a few bugs but odeum movies is being worked on the best as we can to keep you enjoying your favourite movies. As you may run into some bugs that might occur, we rely on the community to help us, we've added some report features that allow you to send us a quick message and/or a screenshot with it, so we can try our best to fix it for you.</value>
+    <value>We're still in beta as they're may be a few bugs but Movieo is being worked on the best as we can to keep you enjoying your favourite movies. As you may run into some bugs that might occur, we rely on the community to help us, we've added some report features that allow you to send us a quick message and/or a screenshot with it, so we can try our best to fix it for you.</value>
   </data>
   <data name="qSub1.Text" xml:space="preserve">
     <value>We have a very simple database with a load of movies, which includes only the movie title, year released and the best quality streaming link out there, then we use a third-party source to gather all of the other information provided for each movie; synopsis, poster, etc. Once you've chosen a movie, you then have the option to either start watching right away or to download the movie directly to your device.</value>

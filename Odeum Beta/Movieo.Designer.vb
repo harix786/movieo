@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Odeum_Movies
+Partial Class Movieo
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class Odeum_Movies
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Odeum_Movies))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Movieo))
         Me.Tabs = New System.Windows.Forms.TabControl()
         Me.tabMovies = New System.Windows.Forms.TabPage()
         Me.PanelMovies = New System.Windows.Forms.FlowLayoutPanel()
@@ -34,12 +34,13 @@ Partial Class Odeum_Movies
         Me.TextEmpty2 = New System.Windows.Forms.PictureBox()
         Me.PanelWatchList = New System.Windows.Forms.FlowLayoutPanel()
         Me.tabLoading = New System.Windows.Forms.TabPage()
+        Me.lblSearchingText = New CButtonLib.CButton()
+        Me.CButton1 = New CButtonLib.CButton()
         Me.NotifCheck = New System.Windows.Forms.ListBox()
         Me.WatchListMovies = New System.Windows.Forms.ListBox()
         Me.WatchedMovies = New System.Windows.Forms.ListBox()
         Me.FavouriteMovies = New System.Windows.Forms.ListBox()
         Me.MovieContent = New System.Windows.Forms.RichTextBox()
-        Me.CButton1 = New CButtonLib.CButton()
         Me.tabSearchResults = New System.Windows.Forms.TabPage()
         Me.TextEmpty0 = New System.Windows.Forms.Label()
         Me.PanelSearchResultsText = New System.Windows.Forms.FlowLayoutPanel()
@@ -50,7 +51,6 @@ Partial Class Odeum_Movies
         Me.BgPanel = New System.Windows.Forms.Panel()
         Me.BoxText = New CButtonLib.CButton()
         Me.filterGenreBox = New System.Windows.Forms.ComboBox()
-        Me.btnFAQ = New System.Windows.Forms.Label()
         Me.TextUseBrowseTab = New System.Windows.Forms.Label()
         Me.AppTitle = New System.Windows.Forms.Label()
         Me.StartupTimer = New System.Windows.Forms.Timer(Me.components)
@@ -65,7 +65,6 @@ Partial Class Odeum_Movies
         Me.SearchClose = New System.Windows.Forms.PictureBox()
         Me.FncSplitter = New CButtonLib.CButton()
         Me.TxtSearchIcon = New System.Windows.Forms.PictureBox()
-        Me.TxtSearchBox = New Odeum.RtfExtensions()
         Me.TxtSearchBg = New CButtonLib.CButton()
         Me.BtnSortByYearReleased = New CButtonLib.CButton()
         Me.BtnSortByAZ = New CButtonLib.CButton()
@@ -80,13 +79,14 @@ Partial Class Odeum_Movies
         Me.AppExit = New System.Windows.Forms.PictureBox()
         Me.AppMaximize = New System.Windows.Forms.PictureBox()
         Me.AppMinimize = New System.Windows.Forms.PictureBox()
-        Me.btnChangelog = New System.Windows.Forms.Label()
+        Me.btnRequestMovie = New System.Windows.Forms.Label()
         Me.SearchFavourites = New System.Windows.Forms.Timer(Me.components)
         Me.SearchWatchList = New System.Windows.Forms.Timer(Me.components)
         Me.FilterSearchTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ResetFiltersTimer = New System.Windows.Forms.Timer(Me.components)
         Me.BtnSendFeedback = New System.Windows.Forms.PictureBox()
         Me.icoLoadingWeb = New System.Windows.Forms.PictureBox()
+        Me.TxtSearchBox = New RtfExtensions()
         Me.Tabs.SuspendLayout()
         Me.tabMovies.SuspendLayout()
         Me.tabFavourites.SuspendLayout()
@@ -167,7 +167,7 @@ Partial Class Odeum_Movies
         '
         Me.TextEmpty1.BackColor = System.Drawing.Color.Transparent
         Me.TextEmpty1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.TextEmpty1.Image = Global.Odeum.My.Resources.Resources.Add_Movies_to_Favourites
+        Me.TextEmpty1.Image = CType(resources.GetObject("TextEmpty1.Image"), System.Drawing.Image)
         Me.TextEmpty1.Location = New System.Drawing.Point(115, 0)
         Me.TextEmpty1.Margin = New System.Windows.Forms.Padding(0)
         Me.TextEmpty1.Name = "TextEmpty1"
@@ -204,7 +204,7 @@ Partial Class Odeum_Movies
         '
         Me.TextEmpty2.BackColor = System.Drawing.Color.Transparent
         Me.TextEmpty2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.TextEmpty2.Image = Global.Odeum.My.Resources.Resources.Add_Movies_to_Favourites
+        Me.TextEmpty2.Image = CType(resources.GetObject("TextEmpty2.Image"), System.Drawing.Image)
         Me.TextEmpty2.Location = New System.Drawing.Point(115, 0)
         Me.TextEmpty2.Margin = New System.Windows.Forms.Padding(0)
         Me.TextEmpty2.Name = "TextEmpty2"
@@ -229,17 +229,73 @@ Partial Class Odeum_Movies
         'tabLoading
         '
         Me.tabLoading.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.tabLoading.Controls.Add(Me.lblSearchingText)
+        Me.tabLoading.Controls.Add(Me.CButton1)
         Me.tabLoading.Controls.Add(Me.NotifCheck)
         Me.tabLoading.Controls.Add(Me.WatchListMovies)
         Me.tabLoading.Controls.Add(Me.WatchedMovies)
         Me.tabLoading.Controls.Add(Me.FavouriteMovies)
         Me.tabLoading.Controls.Add(Me.MovieContent)
-        Me.tabLoading.Controls.Add(Me.CButton1)
         Me.tabLoading.Location = New System.Drawing.Point(23, 4)
         Me.tabLoading.Name = "tabLoading"
         Me.tabLoading.Size = New System.Drawing.Size(1295, 672)
         Me.tabLoading.TabIndex = 5
         Me.tabLoading.Text = "tabLoading"
+        '
+        'lblSearchingText
+        '
+        Me.lblSearchingText.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblSearchingText.BackColor = System.Drawing.Color.Transparent
+        Me.lblSearchingText.BorderColor = System.Drawing.Color.White
+        Me.lblSearchingText.BorderShow = False
+        Me.lblSearchingText.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.lblSearchingText.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblSearchingText.DesignerSelected = False
+        Me.lblSearchingText.DimFactorClick = 0
+        Me.lblSearchingText.DimFactorHover = 0
+        Me.lblSearchingText.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.lblSearchingText.Font = New System.Drawing.Font("Segoe UI Semibold", 13.5!)
+        Me.lblSearchingText.ImageIndex = 0
+        Me.lblSearchingText.Location = New System.Drawing.Point(104, 99)
+        Me.lblSearchingText.Name = "lblSearchingText"
+        Me.lblSearchingText.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.lblSearchingText.SideImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblSearchingText.SideImageSize = New System.Drawing.Size(17, 18)
+        Me.lblSearchingText.Size = New System.Drawing.Size(1086, 213)
+        Me.lblSearchingText.TabIndex = 6
+        Me.lblSearchingText.Text = "Please wait, we're loading your movies..."
+        Me.lblSearchingText.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblSearchingText.TextShadow = System.Drawing.Color.White
+        Me.lblSearchingText.TextShadowShow = False
+        '
+        'CButton1
+        '
+        Me.CButton1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CButton1.BackColor = System.Drawing.Color.Transparent
+        Me.CButton1.BorderColor = System.Drawing.Color.White
+        Me.CButton1.BorderShow = False
+        Me.CButton1.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.CButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CButton1.DesignerSelected = False
+        Me.CButton1.DimFactorClick = 0
+        Me.CButton1.DimFactorHover = 0
+        Me.CButton1.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.CButton1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.CButton1.ImageIndex = 0
+        Me.CButton1.Location = New System.Drawing.Point(104, 71)
+        Me.CButton1.Name = "CButton1"
+        Me.CButton1.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.CButton1.SideImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CButton1.SideImageSize = New System.Drawing.Size(17, 18)
+        Me.CButton1.Size = New System.Drawing.Size(1086, 32)
+        Me.CButton1.TabIndex = 27
+        Me.CButton1.Text = "Loading..."
+        Me.CButton1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.CButton1.TextShadow = System.Drawing.Color.White
+        Me.CButton1.TextShadowShow = False
         '
         'NotifCheck
         '
@@ -285,32 +341,6 @@ Partial Class Odeum_Movies
         Me.MovieContent.TabIndex = 23
         Me.MovieContent.Text = ""
         Me.MovieContent.Visible = False
-        '
-        'CButton1
-        '
-        Me.CButton1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CButton1.BackColor = System.Drawing.Color.Transparent
-        Me.CButton1.BorderColor = System.Drawing.Color.White
-        Me.CButton1.BorderShow = False
-        Me.CButton1.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.CButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.CButton1.DesignerSelected = False
-        Me.CButton1.DimFactorClick = 0
-        Me.CButton1.DimFactorHover = 0
-        Me.CButton1.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.CButton1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.CButton1.ImageIndex = 0
-        Me.CButton1.Location = New System.Drawing.Point(396, 73)
-        Me.CButton1.Name = "CButton1"
-        Me.CButton1.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.CButton1.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CButton1.SideImageSize = New System.Drawing.Size(17, 18)
-        Me.CButton1.Size = New System.Drawing.Size(503, 30)
-        Me.CButton1.TabIndex = 6
-        Me.CButton1.Text = "Please wait, we're loading your movies..."
-        Me.CButton1.TextShadow = System.Drawing.Color.White
-        Me.CButton1.TextShadowShow = False
         '
         'tabSearchResults
         '
@@ -397,7 +427,7 @@ Partial Class Odeum_Movies
         '
         Me.SearchResultsClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SearchResultsClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SearchResultsClose.Image = Global.Odeum.My.Resources.Resources.PopupCloseL
+        Me.SearchResultsClose.Image = CType(resources.GetObject("SearchResultsClose.Image"), System.Drawing.Image)
         Me.SearchResultsClose.Location = New System.Drawing.Point(1265, 17)
         Me.SearchResultsClose.Name = "SearchResultsClose"
         Me.SearchResultsClose.Size = New System.Drawing.Size(15, 15)
@@ -432,7 +462,7 @@ Partial Class Odeum_Movies
         Me.BoxText.Location = New System.Drawing.Point(0, 0)
         Me.BoxText.Name = "BoxText"
         Me.BoxText.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.BoxText.SideImage = Global.Odeum.My.Resources.Resources.ArrowDown
+        Me.BoxText.SideImage = CType(resources.GetObject("BoxText.SideImage"), System.Drawing.Image)
         Me.BoxText.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BoxText.SideImageSize = New System.Drawing.Size(17, 18)
         Me.BoxText.Size = New System.Drawing.Size(121, 30)
@@ -458,21 +488,6 @@ Partial Class Odeum_Movies
         Me.filterGenreBox.TabIndex = 0
         Me.filterGenreBox.TabStop = False
         Me.filterGenreBox.Visible = False
-        '
-        'btnFAQ
-        '
-        Me.btnFAQ.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnFAQ.AutoSize = True
-        Me.btnFAQ.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnFAQ.Font = New System.Drawing.Font("Segoe UI", 9.5!, System.Drawing.FontStyle.Bold)
-        Me.btnFAQ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btnFAQ.Location = New System.Drawing.Point(380, 4)
-        Me.btnFAQ.Margin = New System.Windows.Forms.Padding(2, 4, 6, 2)
-        Me.btnFAQ.Name = "btnFAQ"
-        Me.btnFAQ.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.btnFAQ.Size = New System.Drawing.Size(33, 22)
-        Me.btnFAQ.TabIndex = 12
-        Me.btnFAQ.Text = "FAQ"
         '
         'TextUseBrowseTab
         '
@@ -500,7 +515,7 @@ Partial Class Odeum_Movies
         Me.AppTitle.Name = "AppTitle"
         Me.AppTitle.Size = New System.Drawing.Size(1291, 27)
         Me.AppTitle.TabIndex = 99999
-        Me.AppTitle.Text = "Odeum Movies"
+        Me.AppTitle.Text = "Movieo"
         Me.AppTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'StartupTimer
@@ -573,7 +588,7 @@ Partial Class Odeum_Movies
         Me.SearchClose.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.SearchClose.BackColor = System.Drawing.Color.Transparent
         Me.SearchClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SearchClose.Image = Global.Odeum.My.Resources.Resources.PopupCloseH
+        Me.SearchClose.Image = CType(resources.GetObject("SearchClose.Image"), System.Drawing.Image)
         Me.SearchClose.Location = New System.Drawing.Point(241, 16)
         Me.SearchClose.Name = "SearchClose"
         Me.SearchClose.Size = New System.Drawing.Size(13, 13)
@@ -611,7 +626,7 @@ Partial Class Odeum_Movies
         '
         Me.TxtSearchIcon.BackColor = System.Drawing.Color.Transparent
         Me.TxtSearchIcon.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TxtSearchIcon.Image = Global.Odeum.My.Resources.Resources.SearchIconL
+        Me.TxtSearchIcon.Image = CType(resources.GetObject("TxtSearchIcon.Image"), System.Drawing.Image)
         Me.TxtSearchIcon.Location = New System.Drawing.Point(19, 14)
         Me.TxtSearchIcon.Margin = New System.Windows.Forms.Padding(0)
         Me.TxtSearchIcon.Name = "TxtSearchIcon"
@@ -619,25 +634,6 @@ Partial Class Odeum_Movies
         Me.TxtSearchIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.TxtSearchIcon.TabIndex = 100000
         Me.TxtSearchIcon.TabStop = False
-        '
-        'TxtSearchBox
-        '
-        Me.TxtSearchBox.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.TxtSearchBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.TxtSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtSearchBox.DetectUrls = False
-        Me.TxtSearchBox.Font = New System.Drawing.Font("Segoe UI", 10.25!, System.Drawing.FontStyle.Bold)
-        Me.TxtSearchBox.ForeColor = System.Drawing.Color.White
-        Me.TxtSearchBox.Location = New System.Drawing.Point(42, 12)
-        Me.TxtSearchBox.MaxLength = 50
-        Me.TxtSearchBox.Multiline = False
-        Me.TxtSearchBox.Name = "TxtSearchBox"
-        Me.TxtSearchBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.TxtSearchBox.Size = New System.Drawing.Size(214, 19)
-        Me.TxtSearchBox.TabIndex = 1
-        Me.TxtSearchBox.Text = ""
-        Me.TxtSearchBox.Watermark = "Search movies, people, years..."
-        Me.TxtSearchBox.WatermarkColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         '
         'TxtSearchBg
         '
@@ -864,10 +860,9 @@ Partial Class Odeum_Movies
         Me.PanelTopRight.Controls.Add(Me.AppExit)
         Me.PanelTopRight.Controls.Add(Me.AppMaximize)
         Me.PanelTopRight.Controls.Add(Me.AppMinimize)
-        Me.PanelTopRight.Controls.Add(Me.btnFAQ)
-        Me.PanelTopRight.Controls.Add(Me.btnChangelog)
+        Me.PanelTopRight.Controls.Add(Me.btnRequestMovie)
         Me.PanelTopRight.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.PanelTopRight.Location = New System.Drawing.Point(790, -4)
+        Me.PanelTopRight.Location = New System.Drawing.Point(791, -4)
         Me.PanelTopRight.Margin = New System.Windows.Forms.Padding(0)
         Me.PanelTopRight.Name = "PanelTopRight"
         Me.PanelTopRight.Size = New System.Drawing.Size(500, 32)
@@ -878,7 +873,7 @@ Partial Class Odeum_Movies
         Me.AppExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AppExit.BackColor = System.Drawing.Color.Transparent
         Me.AppExit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AppExit.Image = Global.Odeum.My.Resources.Resources.CloseAppL
+        Me.AppExit.Image = Global.Movieo.My.Resources.Resources.CloseAppL
         Me.AppExit.Location = New System.Drawing.Point(473, 0)
         Me.AppExit.Margin = New System.Windows.Forms.Padding(0)
         Me.AppExit.Name = "AppExit"
@@ -892,7 +887,7 @@ Partial Class Odeum_Movies
         Me.AppMaximize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AppMaximize.BackColor = System.Drawing.Color.Transparent
         Me.AppMaximize.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AppMaximize.Image = Global.Odeum.My.Resources.Resources.MaximiseAppL
+        Me.AppMaximize.Image = Global.Movieo.My.Resources.Resources.MaximiseAppL
         Me.AppMaximize.Location = New System.Drawing.Point(446, 0)
         Me.AppMaximize.Margin = New System.Windows.Forms.Padding(0)
         Me.AppMaximize.Name = "AppMaximize"
@@ -906,7 +901,7 @@ Partial Class Odeum_Movies
         Me.AppMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AppMinimize.BackColor = System.Drawing.Color.Transparent
         Me.AppMinimize.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AppMinimize.Image = Global.Odeum.My.Resources.Resources.MinimiseAppL
+        Me.AppMinimize.Image = Global.Movieo.My.Resources.Resources.MinimiseAppL
         Me.AppMinimize.Location = New System.Drawing.Point(419, 0)
         Me.AppMinimize.Margin = New System.Windows.Forms.Padding(0)
         Me.AppMinimize.Name = "AppMinimize"
@@ -915,20 +910,20 @@ Partial Class Odeum_Movies
         Me.AppMinimize.TabIndex = 1002
         Me.AppMinimize.TabStop = False
         '
-        'btnChangelog
+        'btnRequestMovie
         '
-        Me.btnChangelog.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnChangelog.AutoSize = True
-        Me.btnChangelog.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnChangelog.Font = New System.Drawing.Font("Segoe UI", 9.5!, System.Drawing.FontStyle.Bold)
-        Me.btnChangelog.ForeColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.btnChangelog.Location = New System.Drawing.Point(304, 4)
-        Me.btnChangelog.Margin = New System.Windows.Forms.Padding(2, 4, 0, 2)
-        Me.btnChangelog.Name = "btnChangelog"
-        Me.btnChangelog.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.btnChangelog.Size = New System.Drawing.Size(74, 22)
-        Me.btnChangelog.TabIndex = 11
-        Me.btnChangelog.Text = "Changelog"
+        Me.btnRequestMovie.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRequestMovie.AutoSize = True
+        Me.btnRequestMovie.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnRequestMovie.Font = New System.Drawing.Font("Segoe UI", 9.5!, System.Drawing.FontStyle.Bold)
+        Me.btnRequestMovie.ForeColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
+        Me.btnRequestMovie.Location = New System.Drawing.Point(320, 4)
+        Me.btnRequestMovie.Margin = New System.Windows.Forms.Padding(2, 4, 0, 2)
+        Me.btnRequestMovie.Name = "btnRequestMovie"
+        Me.btnRequestMovie.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.btnRequestMovie.Size = New System.Drawing.Size(99, 22)
+        Me.btnRequestMovie.TabIndex = 11
+        Me.btnRequestMovie.Text = "Request Movie"
         '
         'SearchFavourites
         '
@@ -950,7 +945,7 @@ Partial Class Odeum_Movies
         '
         Me.BtnSendFeedback.BackColor = System.Drawing.Color.Transparent
         Me.BtnSendFeedback.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnSendFeedback.Image = Global.Odeum.My.Resources.Resources.FeedbackL
+        Me.BtnSendFeedback.Image = CType(resources.GetObject("BtnSendFeedback.Image"), System.Drawing.Image)
         Me.BtnSendFeedback.Location = New System.Drawing.Point(7, 5)
         Me.BtnSendFeedback.Margin = New System.Windows.Forms.Padding(0)
         Me.BtnSendFeedback.Name = "BtnSendFeedback"
@@ -967,7 +962,26 @@ Partial Class Odeum_Movies
         Me.icoLoadingWeb.TabIndex = 0
         Me.icoLoadingWeb.TabStop = False
         '
-        'Odeum_Movies
+        'TxtSearchBox
+        '
+        Me.TxtSearchBox.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.TxtSearchBox.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(55, Byte), Integer))
+        Me.TxtSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtSearchBox.DetectUrls = False
+        Me.TxtSearchBox.Font = New System.Drawing.Font("Segoe UI", 10.25!, System.Drawing.FontStyle.Bold)
+        Me.TxtSearchBox.ForeColor = System.Drawing.Color.White
+        Me.TxtSearchBox.Location = New System.Drawing.Point(42, 12)
+        Me.TxtSearchBox.MaxLength = 50
+        Me.TxtSearchBox.Multiline = False
+        Me.TxtSearchBox.Name = "TxtSearchBox"
+        Me.TxtSearchBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.TxtSearchBox.Size = New System.Drawing.Size(214, 19)
+        Me.TxtSearchBox.TabIndex = 1
+        Me.TxtSearchBox.Text = ""
+        Me.TxtSearchBox.Watermark = "Search movies, people, years..."
+        Me.TxtSearchBox.WatermarkColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
+        '
+        'Movieo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -985,9 +999,9 @@ Partial Class Odeum_Movies
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(305, 150)
-        Me.Name = "Odeum_Movies"
+        Me.Name = "MovieoApp"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Odeum Movies"
+        Me.Text = "Movieo"
         Me.TransparencyKey = System.Drawing.Color.Fuchsia
         Me.Tabs.ResumeLayout(False)
         Me.tabMovies.ResumeLayout(False)
@@ -1035,7 +1049,6 @@ Partial Class Odeum_Movies
     Friend WithEvents tabWatchList As TabPage
     Friend WithEvents icoLoadingWeb As PictureBox
     Friend WithEvents BgPanel As Panel
-    Friend WithEvents btnFAQ As Label
     Friend WithEvents SortByTimer As Timer
     Friend WithEvents ContentToFilter1 As ListBox
     Friend WithEvents ContentToFilter2 As ListBox
@@ -1060,7 +1073,7 @@ Partial Class Odeum_Movies
     Friend WithEvents BtnSortByAZ As CButtonLib.CButton
     Friend WithEvents BtnSortByYearReleased As CButtonLib.CButton
     Friend WithEvents FncSplitter As CButtonLib.CButton
-    Friend WithEvents btnChangelog As Label
+    Friend WithEvents btnRequestMovie As Label
     Friend WithEvents TxtSearchBox As RtfExtensions
     Friend WithEvents SearchFavourites As Timer
     Friend WithEvents SearchWatchList As Timer
@@ -1072,7 +1085,7 @@ Partial Class Odeum_Movies
     Friend WithEvents SearchResultsClose As PictureBox
     Friend WithEvents TextEmpty0 As Label
     Friend WithEvents TxtSearchIcon As PictureBox
-    Friend WithEvents CButton1 As CButtonLib.CButton
+    Friend WithEvents lblSearchingText As CButtonLib.CButton
     Friend WithEvents TextEmpty1 As PictureBox
     Friend WithEvents WatchListMovies As ListBox
     Friend WithEvents WatchedMovies As ListBox
@@ -1083,4 +1096,5 @@ Partial Class Odeum_Movies
     Friend WithEvents FilterSearchTimer As Timer
     Friend WithEvents SearchClose As PictureBox
     Friend WithEvents ResetFiltersTimer As Timer
+    Friend WithEvents CButton1 As CButtonLib.CButton
 End Class

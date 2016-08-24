@@ -3,7 +3,7 @@ Public Class MoviePlayer
     Private Sub FastWeb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Top = 0
         Left = 0
-        Size = New Size(Odeum_Movies.Size)
+        Size = New Size(Movieo.Size)
 
         MediaPlayerControl.uiMode = "full"
         MediaPlayerControl.stretchToFit = True
@@ -11,7 +11,7 @@ Public Class MoviePlayer
     End Sub
 
     Private Sub btnReportBroken_ClickButtonArea(sender As Object, e As EventArgs) Handles btnReportBroken.ClickButtonArea
-        Odeum_Movies.InfoSelectedTab = InfoTabs.TabContact
+        Movieo.InfoSelectedTab = InfoTabs.TabContact
         InfoTabs.Show(Me)
         InfoTabs.TxtMessageForm.Focus()
         InfoTabs.TxtMessageForm.Text = "I am having issues with movie """ + PlayerMovieTitle.Text + """ because "

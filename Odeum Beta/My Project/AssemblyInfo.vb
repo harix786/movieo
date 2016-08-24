@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Odeum Movies")>
+<Assembly: AssemblyTitle("Movieo")>
 <Assembly: AssemblyDescription("Discover and watch movies instantly")>
 <Assembly: AssemblyCompany("Zeduc")>
 <Assembly: AssemblyProduct("")>

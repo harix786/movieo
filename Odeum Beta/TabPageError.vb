@@ -1,6 +1,6 @@
 ﻿Public Class TabPageError
     Private Sub TabPageError_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        BackColor = Odeum_Movies.tabMovies.BackColor
+        BackColor = Movieo.tabMovies.BackColor
     End Sub
 
     Private Sub Btn1_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles BtnRestart.ClickButtonArea

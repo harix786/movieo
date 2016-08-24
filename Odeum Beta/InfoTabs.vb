@@ -3,18 +3,18 @@
 Public Class InfoTabs
     Private Sub PopupChangelog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Set selected tab
-        Tab.SelectedTab = Odeum_Movies.InfoSelectedTab
+        Tab.SelectedTab = Movieo.InfoSelectedTab
 
         'Set position/size of window
         Top = 0
         Left = 0
-        Size = New Size(Odeum_Movies.Size)
+        Size = New Size(Movieo.Size)
 
         'Latest changelog text
         Try
-            TxtChangelog.Text = New WebClient().DownloadString(Odeum_Movies.OdeumChangelog)
+            TxtChangelog.Text = New WebClient().DownloadString(Movieo.MovieoChangelog)
         Catch ex As Exception
-            TxtChangelog.Text = "Error loading our changelog..."
+            TxtChangelog.Text = "Error loading the changelog..."
         End Try
 
         'Fix bug where textboxes were sometimes sent to the back
@@ -113,7 +113,7 @@ Public Class InfoTabs
         If Not TxtMessageForm.Text = "" Then
             If Not TxtEmailForm.Text = "" Then
                 Try
-                    Odeum_Movies.SendMail("Message",
+                    Movieo.SendMail("Message",
                     "Message: " + vbNewLine + TxtMessageForm.Text + vbNewLine + vbNewLine +
                     "From: " + vbNewLine + TxtEmailForm.Text)
                     MsgSentConfirmation.Text = "Message sent! Thank you so much ❤"

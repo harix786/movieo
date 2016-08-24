@@ -13,9 +13,9 @@ Public Class MovieInfo
     Private Sub MovieInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Top = 0
         Me.Left = 0
-        Me.Size = New Size(Odeum_Movies.Size)
+        Me.Size = New Size(Movieo.Size)
 
-        If Odeum_Movies.FavouriteMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
+        If Movieo.FavouriteMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
             BtnFavourite.Image = FavouriteImageH
             TextFavourites.ForeColor = Color.White
         Else
@@ -23,7 +23,7 @@ Public Class MovieInfo
             TextFavourites.ForeColor = Color.FromArgb(172, 180, 191)
         End If
 
-        If Odeum_Movies.WatchListMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
+        If Movieo.WatchListMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
             BtnWatchList.Image = WatchListImageH
             TextWatchList.ForeColor = Color.White
         Else
@@ -31,7 +31,7 @@ Public Class MovieInfo
             TextWatchList.ForeColor = Color.FromArgb(172, 180, 191)
         End If
 
-        If Odeum_Movies.WatchedMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
+        If Movieo.WatchedMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
             BtnWatched.Image = WatchedImageH
             TextWatched.ForeColor = Color.White
         Else
@@ -60,7 +60,7 @@ Public Class MovieInfo
     End Sub
 
     Private Sub btnFaveMovie_MouseLeave(sender As Object, e As EventArgs) Handles BtnFavourite.MouseLeave, TextFavourites.MouseLeave
-        If Odeum_Movies.FavouriteMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
+        If Movieo.FavouriteMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
             BtnFavourite.Image = FavouriteImageH
             TextFavourites.ForeColor = Color.White
         Else
@@ -70,21 +70,21 @@ Public Class MovieInfo
     End Sub
 
     Private Sub btnFaveMovie_Click(sender As Object, e As EventArgs) Handles BtnFavourite.Click, TextFavourites.Click
-        If Odeum_Movies.FavouriteMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
-            For Each a As Control In Odeum_Movies.PanelFavourites.Controls
+        If Movieo.FavouriteMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
+            For Each a As Control In Movieo.PanelFavourites.Controls
                 For Each ab As Control In a.Controls
                     If ab.Text = MovieTitleText.Text Then
-                        Odeum_Movies.PanelFavourites.Controls.Remove(a)
+                        Movieo.PanelFavourites.Controls.Remove(a)
                     End If
                 Next
             Next
-            Odeum_Movies.FavouriteMovies.Items.Remove(MovieTitleText.Text + " (" + MovieYearText.Text + ")")
+            Movieo.FavouriteMovies.Items.Remove(MovieTitleText.Text + " (" + MovieYearText.Text + ")")
             BtnFavourite.Image = FavouriteImageL
             TextFavourites.Text = "Add to favourites"
         Else
             TextFavourites.Text = "Remove from favourites"
             BtnFavourite.Image = FavouriteImageH
-            Odeum_Movies.AddMovie(Odeum_Movies.PanelFavourites, Odeum_Movies.FavouriteMovies, MovieTitleText.Text, MovieYearText.Text, MovieGenreText.Text, MovieDirectorText.Text, MovieStarsText.Text, MovieDescriptionText.Text, MovieDurationText.Text, MovieRatingText.Text.Replace("/10", ""), MovieImageLinkText.Text, MovieLinkText.Text)
+            Movieo.AddMovie(Movieo.PanelFavourites, Movieo.FavouriteMovies, MovieTitleText.Text, MovieYearText.Text, MovieGenreText.Text, MovieDirectorText.Text, MovieStarsText.Text, MovieDescriptionText.Text, MovieDurationText.Text, MovieRatingText.Text.Replace("/10", ""), MovieImageLinkText.Text, MovieLinkText.Text)
         End If
     End Sub
 
@@ -94,7 +94,7 @@ Public Class MovieInfo
     End Sub
 
     Private Sub btnWatchSeason_MouseLeave(sender As Object, e As EventArgs) Handles BtnWatchList.MouseLeave, TextWatchList.MouseLeave
-        If Odeum_Movies.WatchListMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
+        If Movieo.WatchListMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
             BtnWatchList.Image = WatchListImageH
             TextWatchList.ForeColor = Color.White
         Else
@@ -104,21 +104,21 @@ Public Class MovieInfo
     End Sub
 
     Private Sub btnWatchSeason_Click(sender As Object, e As EventArgs) Handles BtnWatchList.Click, TextWatchList.Click
-        If Odeum_Movies.WatchListMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
-            For Each a As Control In Odeum_Movies.PanelWatchList.Controls
+        If Movieo.WatchListMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
+            For Each a As Control In Movieo.PanelWatchList.Controls
                 For Each ab As Control In a.Controls
                     If ab.Text = MovieTitleText.Text Then
-                        Odeum_Movies.PanelWatchList.Controls.Remove(a)
+                        Movieo.PanelWatchList.Controls.Remove(a)
                     End If
                 Next
             Next
-            Odeum_Movies.WatchListMovies.Items.Remove(MovieTitleText.Text + " (" + MovieYearText.Text + ")")
+            Movieo.WatchListMovies.Items.Remove(MovieTitleText.Text + " (" + MovieYearText.Text + ")")
             BtnWatchList.Image = WatchListImageL
             TextWatchList.Text = "Add to watch list"
         Else
             TextWatchList.Text = "Remove from watch list"
             BtnWatchList.Image = WatchListImageH
-            Odeum_Movies.AddMovie(Odeum_Movies.PanelWatchList, Odeum_Movies.WatchListMovies, MovieTitleText.Text, MovieYearText.Text, MovieGenreText.Text, MovieDirectorText.Text, MovieStarsText.Text, MovieDescriptionText.Text, MovieDurationText.Text, MovieRatingText.Text.Replace("/10", ""), MovieImageLinkText.Text, MovieLinkText.Text)
+            Movieo.AddMovie(Movieo.PanelWatchList, Movieo.WatchListMovies, MovieTitleText.Text, MovieYearText.Text, MovieGenreText.Text, MovieDirectorText.Text, MovieStarsText.Text, MovieDescriptionText.Text, MovieDurationText.Text, MovieRatingText.Text.Replace("/10", ""), MovieImageLinkText.Text, MovieLinkText.Text)
         End If
     End Sub
 
@@ -128,7 +128,7 @@ Public Class MovieInfo
     End Sub
 
     Private Sub btnSeenMovie_MouseLeave(sender As Object, e As EventArgs) Handles BtnWatched.MouseLeave, TextWatched.MouseLeave
-        If Odeum_Movies.WatchedMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
+        If Movieo.WatchedMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
             BtnWatched.Image = WatchedImageH
             TextWatched.ForeColor = Color.White
         Else
@@ -138,14 +138,14 @@ Public Class MovieInfo
     End Sub
 
     Private Sub btnSeenMovie_Click(sender As Object, e As EventArgs) Handles BtnWatched.Click, TextWatched.Click
-        If Odeum_Movies.WatchedMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
-            Odeum_Movies.WatchedMovies.Items.Remove(MovieTitleText.Text + " (" + MovieYearText.Text + ")")
+        If Movieo.WatchedMovies.Items.Contains(MovieTitleText.Text + " (" + MovieYearText.Text + ")") Then
+            Movieo.WatchedMovies.Items.Remove(MovieTitleText.Text + " (" + MovieYearText.Text + ")")
             BtnWatched.Image = WatchedImageL
             TextWatched.Text = "Not watched"
         Else
             TextWatched.Text = "Watched"
             BtnWatched.Image = WatchedImageH
-            Odeum_Movies.WatchedMovies.Items.Add(MovieTitleText.Text + " (" + MovieYearText.Text + ")")
+            Movieo.WatchedMovies.Items.Add(MovieTitleText.Text + " (" + MovieYearText.Text + ")")
         End If
     End Sub
 

@@ -1,10 +1,10 @@
 ﻿Public Class MessageNotification
     Private Sub MessageNotification_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        BackColor = Odeum_Movies.PanelMovies.BackColor
+        BackColor = Movieo.PanelMovies.BackColor
     End Sub
 
     Private Sub appClose_Click(sender As Object, e As EventArgs) Handles appClose.Click
-        Odeum_Movies.notifcheck.Items.Add(LblNotifNumber.Text)
+        Movieo.notifcheck.Items.Add(LblNotifNumber.Text)
         Me.Close()
     End Sub
 

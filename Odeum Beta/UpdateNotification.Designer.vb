@@ -78,7 +78,7 @@ Partial Class UpdateNotification
         Me.AppClose.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.AppClose.BackColor = System.Drawing.Color.Transparent
         Me.AppClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AppClose.Image = Global.Odeum.My.Resources.Resources.PopupCloseL
+        Me.AppClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
         Me.AppClose.Location = New System.Drawing.Point(739, 10)
         Me.AppClose.Name = "AppClose"
         Me.AppClose.Size = New System.Drawing.Size(14, 14)

@@ -4,15 +4,15 @@ Public Class UpdateNotification
 
     Private Sub dlBtn_Click(sender As Object, e As EventArgs) Handles BtnInstall.ClickButtonArea
         Try
-            Process.Start(Odeum_Movies.UpdaterPath)
+            Process.Start(Movieo.UpdaterPath)
             Application.Exit()
         Catch ex As Exception
-            Odeum_Movies.ShowPopupError("Update Failed", ex.Message)
+            Movieo.ShowPopupError("Update Failed", ex.Message)
         End Try
     End Sub
 
     Private Sub UpdateNotification_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        BackColor = Odeum_Movies.PanelMovies.BackColor
+        BackColor = Movieo.PanelMovies.BackColor
     End Sub
 
     Private Sub appClose_Click(sender As Object, e As EventArgs) Handles AppClose.Click

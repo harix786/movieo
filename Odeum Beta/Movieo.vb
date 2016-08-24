@@ -2,24 +2,31 @@
 Imports System.Net
 Imports System.Net.Mail
 
-Public Class Odeum_Movies
+Public Class Movieo
 
 
     'Preferences
-    Public CurrentDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/odeum-db.txt?dl=0"
-    Public OdeumChangelog As String = "https://dl.dropbox.com/s/3514qygmbok1rvv/odeum-changelog.txt?dl=0"
-    Public OdeumNotifications As String = "https://dl.dropbox.com/s/eqxi751t8z031na/odeum-notifications.txt?dl=0"
-    Public LatestVersion As String = "https://dl.dropbox.com/s/n0lwh73gh15vpf5/latest-version.txt?dl=0"
-    Public AutoUpdater As String = "https://dl.dropbox.com/s/aqouj2qgn7galjd/Odeum%20Movies%20Updater.exe?dl=0"
+    Public CurrentDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
+    Public MovieoChangelog As String = "https://dl.dropbox.com/s/3514qygmbok1rvv/movieo-changelog.txt?dl=0"
+    Public MovieoNotifications As String = "https://dl.dropbox.com/s/eqxi751t8z031na/movieo-notifications.txt?dl=0"
+    Public LatestVersion As String = "https://dl.dropbox.com/s/n0lwh73gh15vpf5/movieo-version.txt?dl=0"
+    Public AutoUpdater As String = "https://dl.dropbox.com/s/aqouj2qgn7galjd/Movieo%20Updater.exe?dl=0"
     Public ThisVersion As String = "Beta Build v" + Application.ProductVersion
-    Public DownloadLocation As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Odeum Movies\"
+    Public DownloadLocation As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\"
     Public UpdateNotificationText As String = "New version is available, get downloading now! - v"
     Public SearchboxWatermark As String = "Search movies, people, years..."
-    Public TempUpdaterPath As String = Path.GetTempPath + "\Odeum Movies Updater.exe"
-    Public UpdaterPath As String = Application.StartupPath + "\Odeum Movies Updater.exe"
+    Public TempUpdaterPath As String = Path.GetTempPath + "\Movieo Updater.exe"
+    Public UpdaterPath As String = Application.StartupPath + "\Movieo Updater.exe"
+    Public SearchingTexts As ICollection(Of String) = {"Have a great day!",
+        "Thank you for using Movieo." + vbNewLine + "We appreciate it!",
+        "If nobody comes back from the future to" + vbNewLine + "stop you, then how bad of a decision" + vbNewLine + "can it really be?",
+        "Pixelating the pixels.",
+        "It's just you, me, and the loading screen.",
+        "Doing the impossible.",
+        "Teaching snakes to kick."}
 
-    Private Sub Odeum_Movies_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Tabs.SelectedTab = tabLoading 'Set to loading page
+    Private Sub Movieo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Tabs.SelectedTab = tabLoading 'Show loading page
         'Set top left and maximised
         Enabled = False
         Top = 0
@@ -153,7 +160,7 @@ Public Class Odeum_Movies
         My.Settings.Save()
     End Sub
 
-    Private Sub Odeum_Movies_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub Movieo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         SaveLists()
     End Sub
 
@@ -450,6 +457,8 @@ Public Class Odeum_Movies
             End If
 
         ElseIf Tabs.SelectedIndex = 3 Then
+            lblSearchingText.Text = RandomText(SearchingTexts)
+
             If GoToNextTab = 1 Then
                 txtMovies.ForeColor = Color.FromArgb(161, 168, 179)
                 txtFavourites.ForeColor = Color.White
@@ -473,30 +482,56 @@ Public Class Odeum_Movies
         End If
     End Sub
 
+    'Generate a random loading screen text
+    Public Function RandomText(ByVal Items As ICollection(Of String)) As String
+        Dim Rndm As New Random()
+        Dim StringList As New List(Of String)(Items)
+        Return StringList(Rndm.Next(0, Items.Count))
+    End Function
+
     'Filter Functions
+    Dim DoFilter As Boolean = True 'Stop the double function of filtering movies
+
     Private Sub filterGenreBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles filterGenreBox.SelectedIndexChanged
-        Tabs.SelectedTab = tabLoading
-        BoxText.Text = filterGenreBox.SelectedItem.ToString
-        FilterGenreTimer.Enabled = True
+        If DoFilter = True Then
+            Tabs.SelectedTab = tabLoading
+            BoxText.Text = filterGenreBox.SelectedItem.ToString
+            FilterGenreTimer.Enabled = True
+        End If
     End Sub
 
     Private Sub FilterGenreTimer_Tick(sender As Object, e As EventArgs) Handles FilterGenreTimer.Tick
         If TxtSearchBox.Text = "" Then
-            ResetFilterGenre()
-            FilterMoviesByGenre()
-            Tabs.SelectedTab = tabMovies
-            FilterGenreTimer.Enabled = False
+            If filterGenreBox.SelectedIndex = 0 Then
+                ResetFilterGenre()
+                Tabs.SelectedTab = tabMovies
+                FilterGenreTimer.Enabled = False
+            Else
+                ResetFilterGenre()
+                FilterMoviesByGenre()
+                Tabs.SelectedTab = tabMovies
+                FilterGenreTimer.Enabled = False
+            End If
         Else
-            FilterAndSearchMovies()
-            Tabs.SelectedTab = tabMovies
-            FilterGenreTimer.Enabled = False
+            If filterGenreBox.SelectedIndex = 0 Then
+                ResetFilterGenre()
+                FilterMoviesBySearch()
+                Tabs.SelectedTab = tabMovies
+                FilterGenreTimer.Enabled = False
+            Else
+                Tabs.SelectedTab = tabLoading
+                FilterAndSearchMovies()
+                Tabs.SelectedTab = tabMovies
+                FilterGenreTimer.Enabled = False
+            End If
         End If
     End Sub
 
-    Public Sub FilterAndSearchMovies()
+    Public Sub FilterMoviesBySearch()
         For Each a As Control In PanelMovies.Controls
             a.Visible = True
         Next
+
 
         Dim IfNone As Integer = 0
         For Each a As Control In PanelMovies.Controls
@@ -511,10 +546,34 @@ Public Class Odeum_Movies
             Next
         Next
 
+
+        If IfNone = 0 Then TextEmpty0.Visible = True Else TextEmpty0.Visible = False
+    End Sub
+
+    Public Sub FilterAndSearchMovies()
+        For Each a As Control In PanelMovies.Controls
+            a.Visible = True
+        Next
+
+
+        Dim IfNone As Integer = 0
+        For Each a As Control In PanelMovies.Controls
+            For Each ab As Control In a.Controls
+                If ab.Name = "InfoSearches" Then
+                    If Not ab.Text.ToLower.Contains(TxtSearchBox.Text.ToLower) Then
+                        a.Visible = False
+                    Else
+                        IfNone = IfNone + 1
+                    End If
+                End If
+            Next
+        Next
+
+
         For Each a As Control In PanelMovies.Controls
             For Each ab As Control In a.Controls
                 If ab.Name = "InfoGenre" Then
-                    If ab.Text.ToLower.Contains(filterGenreBox.SelectedItem.ToString.ToLower) Then
+                    If Not ab.Text.ToLower.Contains(filterGenreBox.SelectedItem.ToString.ToLower) Then
                         a.Visible = False
                     Else
                         IfNone = IfNone + 1
@@ -547,10 +606,10 @@ Public Class Odeum_Movies
         If e.KeyCode = Keys.Enter Then
             If Tabs.SelectedIndex = 0 Then
                 If TxtSearchBox.Text = "" Then
+                    Tabs.SelectedTab = tabLoading
                     SearchboxInactive()
                     SearchboxIsActive = False
                     GoToNextTab = 0
-                    Tabs.SelectedTab = tabLoading
                     ResetFiltersTimer.Enabled = True
                 Else
                     SearchboxActive()
@@ -569,10 +628,12 @@ Public Class Odeum_Movies
     End Sub
 
     Private Sub SearchMovies_Tick(sender As Object, e As EventArgs) Handles SearchMovies.Tick
+        DoFilter = False
         SearchClose.Visible = True
         filterGenreBox.SelectedIndex = 0
         SearchMoviesFnc()
         Tabs.SelectedTab = tabMovies
+        DoFilter = True
         SearchMovies.Enabled = False
     End Sub
 
@@ -743,19 +804,10 @@ Public Class Odeum_Movies
         ShowMoviesTimer.Enabled = False
     End Sub
 
-    Private Sub btnDeveloper_Click(sender As Object, e As EventArgs)
-        Process.Start("www.zeduc.cf")
-    End Sub
-
     Public InfoSelectedTab As TabPage = InfoTabs.TabAbout
 
-    Private Sub btnChangelog_Click(sender As Object, e As EventArgs) Handles btnChangelog.Click
-        InfoSelectedTab = InfoTabs.TabChangelog
-        InfoTabs.Show(Me)
-    End Sub
-
-    Private Sub btnFAQ_Click(sender As Object, e As EventArgs) Handles btnFAQ.Click
-        InfoSelectedTab = InfoTabs.TabHelpFaq
+    Private Sub btnChangelog_Click(sender As Object, e As EventArgs) Handles btnRequestMovie.Click
+        InfoSelectedTab = InfoTabs.TabContact
         InfoTabs.Show(Me)
     End Sub
 
@@ -780,15 +832,15 @@ Public Class Odeum_Movies
         End If
     End Sub
 
-    Private Sub Odeum_Movies_KeyDown(sender As Object, e As KeyEventArgs) Handles Tabs.KeyDown
+    Private Sub Movieo_KeyDown(sender As Object, e As KeyEventArgs) Handles Tabs.KeyDown
         e.Handled = True
     End Sub
 
     Private Sub GetUpdateNotification_Tick(sender As Object, e As EventArgs) Handles GetUpdateNotification.Tick
         Try
-            Dim request As System.Net.HttpWebRequest = WebRequest.Create(LatestVersion)
-            Dim response As System.Net.HttpWebResponse = request.GetResponse()
-            Dim sr As System.IO.StreamReader = New System.IO.StreamReader(response.GetResponseStream())
+            Dim request As HttpWebRequest = WebRequest.Create(LatestVersion)
+            Dim response As HttpWebResponse = request.GetResponse()
+            Dim sr As StreamReader = New StreamReader(response.GetResponseStream())
             Dim newestversion As String = sr.ReadToEnd()
             Dim currentversion As String = Application.ProductVersion
 
@@ -853,7 +905,7 @@ Public Class Odeum_Movies
                         My.Settings.IsImageError = True
                     End Try
                     a.InfoBasic.Text = "☆ " + rating + " • " + credentials(1)
-                    a.InfoMovieLink.Text = credentials(2)
+                    a.InfoMovieLink.Text = credentials(6)
                     a.InfoSearches.Text = credentials(1) + " " + credentials(2) + " " + genre + " " + director + " " + stars
                     a.Show()
                     PanelMovies.Controls.Add(a)
@@ -963,7 +1015,7 @@ Public Class Odeum_Movies
                         My.Settings.IsImageError = True
                     End Try
                     a.InfoBasic.Text = "☆ " + rating + " • " + credentials(1)
-                    a.InfoMovieLink.Text = credentials(2)
+                    a.InfoMovieLink.Text = credentials(6)
                     a.InfoSearches.Text = credentials(0) + " " + credentials(1) + " " + genre + " " + director + " " + stars
                     a.Show()
                     PanelMovies.Controls.Add(a)
@@ -976,11 +1028,11 @@ Public Class Odeum_Movies
         End Try
     End Sub
 
-    Private Sub TopRight_MouseMove(sender As Object, e As MouseEventArgs) Handles btnFAQ.MouseMove, btnChangelog.MouseMove
+    Private Sub TopRight_MouseMove(sender As Object, e As MouseEventArgs) Handles btnRequestMovie.MouseMove
         sender.ForeColor = Color.White
     End Sub
 
-    Private Sub TopRight_MouseLeave(sender As Object, e As EventArgs) Handles btnFAQ.MouseLeave, btnChangelog.MouseLeave
+    Private Sub TopRight_MouseLeave(sender As Object, e As EventArgs) Handles btnRequestMovie.MouseLeave
         sender.ForeColor = Color.FromArgb(166, 166, 166)
     End Sub
 
@@ -1001,7 +1053,7 @@ Public Class Odeum_Movies
     Private Sub GetNotifications_Tick(sender As Object, e As EventArgs) Handles GetNotifications.Tick
         Try
             Dim objDl As New WebClient
-            Dim NotificationDb As String = objDl.DownloadString(OdeumNotifications)
+            Dim NotificationDb As String = objDl.DownloadString(MovieoNotifications)
             Dim LineByLine() As String = Split(NotificationDb, vbNewLine) 'Split db into lines
 
             For Each MessageText As String In LineByLine.Reverse
@@ -1071,6 +1123,8 @@ Public Class Odeum_Movies
     End Sub
 
     Private Sub SortByTimer_Tick(sender As Object, e As EventArgs) Handles SortByTimer.Tick
+        filterGenreBox.SelectedIndex = 0
+        SearchboxInactive()
         If CurrentSortBy.Name = BtnSortByNewlyAdded.Name Then
             GrabMovies()
         ElseIf CurrentSortBy.Name = BtnSortByPopularity.Name Then

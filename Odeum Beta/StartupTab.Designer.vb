@@ -30,7 +30,7 @@ Partial Class StartupTab
         'PictureBox1
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = Global.Odeum.My.Resources.Resources.Odeum_Movies_Logo
+        Me.PictureBox1.Image = Global.Movieo.My.Resources.Resources.Odeum_Movies_Logo
         Me.PictureBox1.Location = New System.Drawing.Point(419, 206)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(150, 150)
