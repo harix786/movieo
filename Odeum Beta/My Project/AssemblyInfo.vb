@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Movieo")>
 <Assembly: AssemblyDescription("Discover and watch movies instantly")>
-<Assembly: AssemblyCompany("Zeduc")>
+<Assembly: AssemblyCompany("Godly")>
 <Assembly: AssemblyProduct("")>
 <Assembly: AssemblyCopyright("Copyright ©  2016")>
 <Assembly: AssemblyTrademark("")>
@@ -32,6 +32,6 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("0.2.7.1")>
-<Assembly: AssemblyFileVersion("0.2.7.1")>
+<Assembly: AssemblyVersion("0.2.7.2")>
+<Assembly: AssemblyFileVersion("0.2.7.2")>
 <Assembly: NeutralResourcesLanguage("en")>

@@ -56,73 +56,13 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property FavouriteItems() As String
-            Get
-                Return CType(Me("FavouriteItems"),String)
-            End Get
-            Set
-                Me("FavouriteItems") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property ToggleZoom() As Boolean
-            Get
-                Return CType(Me("ToggleZoom"),Boolean)
-            End Get
-            Set
-                Me("ToggleZoom") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property IsImageError() As Boolean
+        Public Property doo() As Boolean
             Get
-                Return CType(Me("IsImageError"),Boolean)
+                Return CType(Me("doo"),Boolean)
             End Get
             Set
-                Me("IsImageError") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property WatchListItems() As String
-            Get
-                Return CType(Me("WatchListItems"),String)
-            End Get
-            Set
-                Me("WatchListItems") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property WatchedItems() As String
-            Get
-                Return CType(Me("WatchedItems"),String)
-            End Get
-            Set
-                Me("WatchedItems") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property TempMovieTitleYear() As String
-            Get
-                Return CType(Me("TempMovieTitleYear"),String)
-            End Get
-            Set
-                Me("TempMovieTitleYear") = value
+                Me("doo") = value
             End Set
         End Property
         
@@ -135,6 +75,210 @@ Namespace My
             End Get
             Set
                 Me("NotifNumbers") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property doTheme() As Integer
+            Get
+                Return CType(Me("doTheme"),Integer)
+            End Get
+            Set
+                Me("doTheme") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property doStartScr() As Integer
+            Get
+                Return CType(Me("doStartScr"),Integer)
+            End Get
+            Set
+                Me("doStartScr") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property doFilters() As Boolean
+            Get
+                Return CType(Me("doFilters"),Boolean)
+            End Get
+            Set
+                Me("doFilters") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property doWatchedMovies() As Integer
+            Get
+                Return CType(Me("doWatchedMovies"),Integer)
+            End Get
+            Set
+                Me("doWatchedMovies") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property doFullScr() As Boolean
+            Get
+                Return CType(Me("doFullScr"),Boolean)
+            End Get
+            Set
+                Me("doFullScr") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property doWatchList() As Boolean
+            Get
+                Return CType(Me("doWatchList"),Boolean)
+            End Get
+            Set
+                Me("doWatchList") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property doRndmBtn() As Boolean
+            Get
+                Return CType(Me("doRndmBtn"),Boolean)
+            End Get
+            Set
+                Me("doRndmBtn") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property doBackupDb() As Boolean
+            Get
+                Return CType(Me("doBackupDb"),Boolean)
+            End Get
+            Set
+                Me("doBackupDb") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property doFilterNum() As Integer
+            Get
+                Return CType(Me("doFilterNum"),Integer)
+            End Get
+            Set
+                Me("doFilterNum") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property doAutoProxy() As Boolean
+            Get
+                Return CType(Me("doAutoProxy"),Boolean)
+            End Get
+            Set
+                Me("doAutoProxy") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property doManualProxy() As Boolean
+            Get
+                Return CType(Me("doManualProxy"),Boolean)
+            End Get
+            Set
+                Me("doManualProxy") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property webProxyAddress() As String
+            Get
+                Return CType(Me("webProxyAddress"),String)
+            End Get
+            Set
+                Me("webProxyAddress") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property webProxyPort() As String
+            Get
+                Return CType(Me("webProxyPort"),String)
+            End Get
+            Set
+                Me("webProxyPort") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property webProxyUsername() As String
+            Get
+                Return CType(Me("webProxyUsername"),String)
+            End Get
+            Set
+                Me("webProxyUsername") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property webProxyPassword() As String
+            Get
+                Return CType(Me("webProxyPassword"),String)
+            End Get
+            Set
+                Me("webProxyPassword") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property doAutoUpdate() As Boolean
+            Get
+                Return CType(Me("doAutoUpdate"),Boolean)
+            End Get
+            Set
+                Me("doAutoUpdate") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property doCelebr8() As Boolean
+            Get
+                Return CType(Me("doCelebr8"),Boolean)
+            End Get
+            Set
+                Me("doCelebr8") = value
             End Set
         End Property
     End Class

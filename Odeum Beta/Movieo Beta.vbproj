@@ -11,7 +11,7 @@
     <AssemblyName>Movieo</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -90,7 +90,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CButtonLib">
-      <HintPath>..\..\..\DLLs\CButton\CButton\bin\Debug\CButtonLib.dll</HintPath>
+      <HintPath>..\..\..\- Plugins\CButton\CButton\bin\Debug\CButtonLib.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -107,19 +107,6 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="VIBlend.WinForms.Controls">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\VIBlend\Windows Forms Controls v.10.1.0.0\VIBlend.WinForms.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="VIBlend.WinForms.Controls.Design">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\VIBlend\Windows Forms Controls v.10.1.0.0\VIBlend.WinForms.Controls.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="VIBlend.WinForms.DataGridView">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\VIBlend\Windows Forms Controls v.10.1.0.0\VIBlend.WinForms.DataGridView.dll</HintPath>
-    </Reference>
-    <Reference Include="VIBlend.WinForms.Utilities, Version=10.1.0.0, Culture=neutral, PublicKeyToken=970a5af59bc48043, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\VIBlend\Windows Forms Controls v.10.1.0.0\VIBlend.WinForms.Utilities.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -140,10 +127,28 @@
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="CButtonExtension.vb" />
-    <Compile Include="DownloadClient.Designer.vb">
-      <DependentUpon>DownloadClient.vb</DependentUpon>
+    <Compile Include="frmDownloadClient.Designer.vb">
+      <DependentUpon>frmDownloadClient.vb</DependentUpon>
     </Compile>
-    <Compile Include="DownloadClient.vb">
+    <Compile Include="frmDownloadClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.vb">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ctrlInfoMenu.Designer.vb">
+      <DependentUpon>ctrlInfoMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlInfoMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrailerPlayer.Designer.vb">
+      <DependentUpon>frmTrailerPlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrailerPlayer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -151,55 +156,61 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="PopupBackground.Designer.vb">
-      <DependentUpon>PopupBackground.vb</DependentUpon>
+    <Compile Include="frmPopupBg.Designer.vb">
+      <DependentUpon>frmPopupBg.vb</DependentUpon>
     </Compile>
-    <Compile Include="PopupBackground.vb">
+    <Compile Include="frmPopupBg.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MoviePlayer.Designer.vb">
-      <DependentUpon>MoviePlayer.vb</DependentUpon>
+    <Compile Include="frmPlayer.Designer.vb">
+      <DependentUpon>frmPlayer.vb</DependentUpon>
     </Compile>
-    <Compile Include="MoviePlayer.vb">
+    <Compile Include="frmPlayer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MessageNotification.Designer.vb">
-      <DependentUpon>MessageNotification.vb</DependentUpon>
+    <Compile Include="ctrlNotification.Designer.vb">
+      <DependentUpon>ctrlNotification.vb</DependentUpon>
     </Compile>
-    <Compile Include="MessageNotification.vb">
+    <Compile Include="ctrlNotification.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MovieInfo.Designer.vb">
-      <DependentUpon>MovieInfo.vb</DependentUpon>
+    <Compile Include="frmMovieDetails.Designer.vb">
+      <DependentUpon>frmMovieDetails.vb</DependentUpon>
     </Compile>
-    <Compile Include="MovieInfo.vb">
+    <Compile Include="frmMovieDetails.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoTabs.Designer.vb">
-      <DependentUpon>InfoTabs.vb</DependentUpon>
+    <Compile Include="frmInfo.Designer.vb">
+      <DependentUpon>frmInfo.vb</DependentUpon>
     </Compile>
-    <Compile Include="InfoTabs.vb">
+    <Compile Include="frmInfo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PopupError.Designer.vb">
-      <DependentUpon>PopupError.vb</DependentUpon>
+    <Compile Include="frmPopupOk.Designer.vb">
+      <DependentUpon>frmPopupOk.vb</DependentUpon>
     </Compile>
-    <Compile Include="PopupError.vb">
+    <Compile Include="frmPopupOk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPopupYesNo.Designer.vb">
+      <DependentUpon>frmPopupYesNo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPopupYesNo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RtfExtensions.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="StartupTab.Designer.vb">
-      <DependentUpon>StartupTab.vb</DependentUpon>
+    <Compile Include="frmStartupTab.Designer.vb">
+      <DependentUpon>frmStartupTab.vb</DependentUpon>
     </Compile>
-    <Compile Include="StartupTab.vb">
+    <Compile Include="frmStartupTab.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TabPageError.Designer.vb">
-      <DependentUpon>TabPageError.vb</DependentUpon>
+    <Compile Include="frmErrorTab.Designer.vb">
+      <DependentUpon>frmErrorTab.vb</DependentUpon>
     </Compile>
-    <Compile Include="TabPageError.vb">
+    <Compile Include="frmErrorTab.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TextboxExtensions.vb" />
@@ -210,10 +221,10 @@
       <DependentUpon>Movieo.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PosterTitle.Designer.vb">
-      <DependentUpon>PosterTitle.vb</DependentUpon>
+    <Compile Include="ctrlPosterTitle.Designer.vb">
+      <DependentUpon>ctrlPosterTitle.vb</DependentUpon>
     </Compile>
-    <Compile Include="PosterTitle.vb">
+    <Compile Include="ctrlPosterTitle.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -226,57 +237,69 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UpdateNotification.Designer.vb">
-      <DependentUpon>UpdateNotification.vb</DependentUpon>
+    <Compile Include="ctrlNotificationUpdate.Designer.vb">
+      <DependentUpon>ctrlNotificationUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="UpdateNotification.vb">
+    <Compile Include="ctrlNotificationUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DownloadClient.resx">
-      <DependentUpon>DownloadClient.vb</DependentUpon>
+    <EmbeddedResource Include="frmDownloadClient.resx">
+      <DependentUpon>frmDownloadClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlInfoMenu.resx">
+      <DependentUpon>ctrlInfoMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrailerPlayer.resx">
+      <DependentUpon>frmTrailerPlayer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPopupBg.resx">
+      <DependentUpon>frmPopupBg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlayer.resx">
+      <DependentUpon>frmPlayer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlNotification.resx">
+      <DependentUpon>ctrlNotification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovieDetails.resx">
+      <DependentUpon>frmMovieDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfo.resx">
+      <DependentUpon>frmInfo.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PopupBackground.resx">
-      <DependentUpon>PopupBackground.vb</DependentUpon>
+    <EmbeddedResource Include="frmPopupOk.resx">
+      <DependentUpon>frmPopupOk.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MoviePlayer.resx">
-      <DependentUpon>MoviePlayer.vb</DependentUpon>
+    <EmbeddedResource Include="frmPopupYesNo.resx">
+      <DependentUpon>frmPopupYesNo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MessageNotification.resx">
-      <DependentUpon>MessageNotification.vb</DependentUpon>
+    <EmbeddedResource Include="frmStartupTab.resx">
+      <DependentUpon>frmStartupTab.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MovieInfo.resx">
-      <DependentUpon>MovieInfo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InfoTabs.resx">
-      <DependentUpon>InfoTabs.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopupError.resx">
-      <DependentUpon>PopupError.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StartupTab.resx">
-      <DependentUpon>StartupTab.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TabPageError.resx">
-      <DependentUpon>TabPageError.vb</DependentUpon>
+    <EmbeddedResource Include="frmErrorTab.resx">
+      <DependentUpon>frmErrorTab.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movieo.resx">
       <DependentUpon>Movieo.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PosterTitle.resx">
-      <DependentUpon>PosterTitle.vb</DependentUpon>
+    <EmbeddedResource Include="ctrlPosterTitle.resx">
+      <DependentUpon>ctrlPosterTitle.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateNotification.resx">
-      <DependentUpon>UpdateNotification.vb</DependentUpon>
+    <EmbeddedResource Include="ctrlNotificationUpdate.resx">
+      <DependentUpon>ctrlNotificationUpdate.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -294,6 +317,44 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Movieo Logo.ico" />
+    <None Include="Resources\CelebValentines.png" />
+    <None Include="Resources\CelebXmas.png" />
+    <None Include="Resources\CelebHalloween.png" />
+    <None Include="Resources\BrowseIconH.png" />
+    <None Include="Resources\BrowseIconL.png" />
+    <None Include="Resources\Favourite H STICKY.png" />
+    <None Include="Resources\Watch List H STICKY.png" />
+    <None Include="Resources\Seen List H STICKY.png" />
+    <None Include="Resources\Black List Icon STICKY.png" />
+    <None Include="Resources\RTomatoesIcon.png" />
+    <None Include="Resources\MetaCriticIcon.png" />
+    <None Include="Resources\ImdbIcon.png" />
+    <None Include="Resources\ArrowLeftH.png" />
+    <None Include="Resources\ArrowLeftL.png" />
+    <None Include="Resources\Favourite H1.png" />
+    <None Include="Resources\Favourite L Z.png" />
+    <None Include="Resources\Favourite L1.png" />
+    <None Include="Resources\Favourite L.png" />
+    <None Include="Resources\Favourite H.png" />
+    <None Include="Resources\Watch List L.png" />
+    <None Include="Resources\Watch List H.png" />
+    <None Include="Resources\Seen List L.png" />
+    <None Include="Resources\Seen List H.png" />
+    <None Include="Resources\Black List Icon L.png" />
+    <None Include="Resources\Black List Icon H.png" />
+    <None Include="Resources\UnderlineGlow9x.png" />
+    <None Include="Resources\UnderlineGlow7.png" />
+    <None Include="Resources\UnderlineGlow4.png" />
+    <None Include="Resources\UnderlineGlow3.png" />
+    <None Include="Resources\UnderlineGlow2.png" />
+    <None Include="Resources\UnderlineGlow1.png" />
+    <None Include="Resources\UnderlineGlow.png" />
+    <None Include="Resources\Movieo Glow1.png" />
+    <None Include="Resources\Movieo Glow.png" />
+    <None Include="Resources\PosterGlow.png" />
+    <None Include="Resources\DropletsIconL.png" />
+    <None Include="Resources\DropletsIconH.png" />
+    <None Include="Resources\DropletsIconBgH.png" />
     <None Include="Resources\MovieErrorImage.png" />
     <None Include="Resources\FeedbackH.png" />
     <None Include="Resources\FeedbackL2.png" />
@@ -404,7 +465,7 @@
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>aximp</WrapperTool>
-      <Isolated>True</Isolated>
+      <Isolated>False</Isolated>
       <Private>True</Private>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
@@ -414,8 +475,9 @@
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>True</Isolated>
+      <Isolated>False</Isolated>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
     </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
