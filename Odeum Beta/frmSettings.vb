@@ -22,7 +22,7 @@
 
         'Database
         chckBackupDb.Checked = My.Settings.doBackupDb
-        txtDbDir.Text = Movieo.BackupDatabase
+        txtDbDir.Text = Movieo.pathBackupDatabase
 
         'Connection
         rdioAutoProxy.Checked = My.Settings.doAutoProxy
@@ -64,7 +64,7 @@
     End Sub
 
     Private Sub cmboboxStartScreen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxStartScreen.SelectedIndexChanged
-        cmboTxtStartScreen.Text = cmboboxStartScreen.SelectedItem.Remove(0, 1)
+        cmboTxtStartScreen.Text = cmboboxStartScreen.SelectedItem.ToString
         My.Settings.doStartScr = cmboboxStartScreen.SelectedIndex
     End Sub
 
@@ -77,7 +77,7 @@
     End Sub
 
     Private Sub cmboboxWatchedMovies_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxWatchedMovies.SelectedIndexChanged
-        cmboTxtWatchedMovies.Text = cmboboxWatchedMovies.SelectedItem.Remove(0, 1)
+        cmboTxtWatchedMovies.Text = cmboboxWatchedMovies.SelectedItem.ToString
         My.Settings.doWatchedMovies = cmboboxWatchedMovies.SelectedIndex
     End Sub
 
@@ -113,7 +113,7 @@
         Dim ab As New SaveFileDialog
         If ab.ShowDialog = DialogResult.OK Then
             Try
-                Movieo.NetDl.DownloadFile(Movieo.CurrentDatabase, ab.FileName)
+                Movieo.NetDl.DownloadFile(Movieo.linkDatabase, ab.FileName)
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try

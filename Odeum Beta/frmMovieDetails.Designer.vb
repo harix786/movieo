@@ -74,7 +74,7 @@ Partial Class frmMovieDetails
         Me.btnDownloadMovie = New CButtonLib.CButton()
         Me.btnWatchMovie = New CButtonLib.CButton()
         Me.frmFadeIn = New System.Windows.Forms.Timer(Me.components)
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.panelDetails = New System.Windows.Forms.FlowLayoutPanel()
         Me.ImgMetaCritic = New System.Windows.Forms.PictureBox()
         Me.ImgRTomatoes = New System.Windows.Forms.PictureBox()
         Me.ImgImdb = New System.Windows.Forms.PictureBox()
@@ -86,7 +86,7 @@ Partial Class frmMovieDetails
         CType(Me.BtnSeenList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnBlackList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.InfoPanel1.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.panelDetails.SuspendLayout()
         CType(Me.ImgMetaCritic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImgRTomatoes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImgImdb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,7 +117,7 @@ Partial Class frmMovieDetails
         'MovieDuration
         '
         resources.ApplyResources(Me.MovieDuration, "MovieDuration")
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.MovieDuration, True)
+        Me.panelDetails.SetFlowBreak(Me.MovieDuration, True)
         Me.MovieDuration.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.MovieDuration.Name = "MovieDuration"
         '
@@ -263,14 +263,14 @@ Partial Class frmMovieDetails
         'lblHeaderDetails
         '
         resources.ApplyResources(Me.lblHeaderDetails, "lblHeaderDetails")
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.lblHeaderDetails, True)
+        Me.panelDetails.SetFlowBreak(Me.lblHeaderDetails, True)
         Me.lblHeaderDetails.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.lblHeaderDetails.Name = "lblHeaderDetails"
         '
         'MovieRating
         '
         resources.ApplyResources(Me.MovieRating, "MovieRating")
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.MovieRating, True)
+        Me.panelDetails.SetFlowBreak(Me.MovieRating, True)
         Me.MovieRating.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.MovieRating.Name = "MovieRating"
         '
@@ -298,7 +298,7 @@ Partial Class frmMovieDetails
         'MovieReleaseDate
         '
         resources.ApplyResources(Me.MovieReleaseDate, "MovieReleaseDate")
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.MovieReleaseDate, True)
+        Me.panelDetails.SetFlowBreak(Me.MovieReleaseDate, True)
         Me.MovieReleaseDate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.MovieReleaseDate.Name = "MovieReleaseDate"
         '
@@ -306,7 +306,7 @@ Partial Class frmMovieDetails
         '
         resources.ApplyResources(Me.MovieProduction, "MovieProduction")
         Me.MovieProduction.AutoEllipsis = True
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.MovieProduction, True)
+        Me.panelDetails.SetFlowBreak(Me.MovieProduction, True)
         Me.MovieProduction.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.MovieProduction.Name = "MovieProduction"
         '
@@ -319,7 +319,7 @@ Partial Class frmMovieDetails
         'MovieBoxOffice
         '
         resources.ApplyResources(Me.MovieBoxOffice, "MovieBoxOffice")
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.MovieBoxOffice, True)
+        Me.panelDetails.SetFlowBreak(Me.MovieBoxOffice, True)
         Me.MovieBoxOffice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.MovieBoxOffice.Name = "MovieBoxOffice"
         '
@@ -355,7 +355,7 @@ Partial Class frmMovieDetails
         '
         resources.ApplyResources(Me.MovieLanguage, "MovieLanguage")
         Me.MovieLanguage.AutoEllipsis = True
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.MovieLanguage, True)
+        Me.panelDetails.SetFlowBreak(Me.MovieLanguage, True)
         Me.MovieLanguage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.MovieLanguage.Name = "MovieLanguage"
         '
@@ -369,14 +369,14 @@ Partial Class frmMovieDetails
         '
         resources.ApplyResources(Me.MovieCountry, "MovieCountry")
         Me.MovieCountry.AutoEllipsis = True
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.MovieCountry, True)
+        Me.panelDetails.SetFlowBreak(Me.MovieCountry, True)
         Me.MovieCountry.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.MovieCountry.Name = "MovieCountry"
         '
         'MovieAwards
         '
         resources.ApplyResources(Me.MovieAwards, "MovieAwards")
-        Me.FlowLayoutPanel1.SetFlowBreak(Me.MovieAwards, True)
+        Me.panelDetails.SetFlowBreak(Me.MovieAwards, True)
         Me.MovieAwards.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.MovieAwards.Name = "MovieAwards"
         '
@@ -504,27 +504,27 @@ Partial Class frmMovieDetails
         '
         Me.frmFadeIn.Interval = 200
         '
-        'FlowLayoutPanel1
+        'panelDetails
         '
-        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
-        Me.FlowLayoutPanel1.Controls.Add(Me.lblHeaderDetails)
-        Me.FlowLayoutPanel1.Controls.Add(Me.lblSubRating)
-        Me.FlowLayoutPanel1.Controls.Add(Me.MovieRating)
-        Me.FlowLayoutPanel1.Controls.Add(Me.lblSubRuntime)
-        Me.FlowLayoutPanel1.Controls.Add(Me.MovieDuration)
-        Me.FlowLayoutPanel1.Controls.Add(Me.lblSubReleaseDate)
-        Me.FlowLayoutPanel1.Controls.Add(Me.MovieReleaseDate)
-        Me.FlowLayoutPanel1.Controls.Add(Me.lblSubCountry)
-        Me.FlowLayoutPanel1.Controls.Add(Me.MovieCountry)
-        Me.FlowLayoutPanel1.Controls.Add(Me.lblSubLanguage)
-        Me.FlowLayoutPanel1.Controls.Add(Me.MovieLanguage)
-        Me.FlowLayoutPanel1.Controls.Add(Me.lblSubProduction)
-        Me.FlowLayoutPanel1.Controls.Add(Me.MovieProduction)
-        Me.FlowLayoutPanel1.Controls.Add(Me.lblSubBoxOffice)
-        Me.FlowLayoutPanel1.Controls.Add(Me.MovieBoxOffice)
-        Me.FlowLayoutPanel1.Controls.Add(Me.lblSubAwards)
-        Me.FlowLayoutPanel1.Controls.Add(Me.MovieAwards)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        resources.ApplyResources(Me.panelDetails, "panelDetails")
+        Me.panelDetails.Controls.Add(Me.lblHeaderDetails)
+        Me.panelDetails.Controls.Add(Me.lblSubRating)
+        Me.panelDetails.Controls.Add(Me.MovieRating)
+        Me.panelDetails.Controls.Add(Me.lblSubRuntime)
+        Me.panelDetails.Controls.Add(Me.MovieDuration)
+        Me.panelDetails.Controls.Add(Me.lblSubReleaseDate)
+        Me.panelDetails.Controls.Add(Me.MovieReleaseDate)
+        Me.panelDetails.Controls.Add(Me.lblSubCountry)
+        Me.panelDetails.Controls.Add(Me.MovieCountry)
+        Me.panelDetails.Controls.Add(Me.lblSubLanguage)
+        Me.panelDetails.Controls.Add(Me.MovieLanguage)
+        Me.panelDetails.Controls.Add(Me.lblSubProduction)
+        Me.panelDetails.Controls.Add(Me.MovieProduction)
+        Me.panelDetails.Controls.Add(Me.lblSubBoxOffice)
+        Me.panelDetails.Controls.Add(Me.MovieBoxOffice)
+        Me.panelDetails.Controls.Add(Me.lblSubAwards)
+        Me.panelDetails.Controls.Add(Me.MovieAwards)
+        Me.panelDetails.Name = "panelDetails"
         '
         'ImgMetaCritic
         '
@@ -589,7 +589,7 @@ Partial Class frmMovieDetails
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.Controls.Add(Me.btnWatchTrailer)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Controls.Add(Me.panelDetails)
         Me.Controls.Add(Me.MovieImageLinkText)
         Me.Controls.Add(Me.MovieRTomLink)
         Me.Controls.Add(Me.MovieImdbId)
@@ -622,8 +622,8 @@ Partial Class frmMovieDetails
         CType(Me.BtnBlackList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.InfoPanel1.ResumeLayout(False)
         Me.InfoPanel1.PerformLayout()
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.FlowLayoutPanel1.PerformLayout()
+        Me.panelDetails.ResumeLayout(False)
+        Me.panelDetails.PerformLayout()
         CType(Me.ImgMetaCritic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ImgRTomatoes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ImgImdb, System.ComponentModel.ISupportInitialize).EndInit()
@@ -686,6 +686,6 @@ Partial Class frmMovieDetails
     Friend WithEvents MovieRTomLink As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents frmFadeIn As Timer
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents panelDetails As FlowLayoutPanel
     Public WithEvents btnWatchTrailer As CButtonLib.CButton
 End Class

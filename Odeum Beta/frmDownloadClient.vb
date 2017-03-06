@@ -18,18 +18,18 @@ Public Class frmDownloadClient
     Public Sub doDownload(MovieLink As String, MovieTitle As String, MovieYear As String, MovieExtension As String)
         Try
             LblTitleProgress.Text = "Connecting..."
-            If Not My.Computer.FileSystem.DirectoryExists(Movieo.DownloadLocation) Then
-                My.Computer.FileSystem.CreateDirectory(Movieo.DownloadLocation)
+            If Not My.Computer.FileSystem.DirectoryExists(Movieo.pathDownloads) Then
+                My.Computer.FileSystem.CreateDirectory(Movieo.pathDownloads)
             End If
             TitleAndYear = MovieTitle + " (" + MovieYear + ")"
             Title = MovieTitle
-            Dim DownloadDirectory As String = Movieo.DownloadLocation + TitleAndYear + "." + MovieExtension
+            Dim DownloadDirectory As String = Movieo.pathDownloads + TitleAndYear + "." + MovieExtension
             TextDownloadLocation.Text = DownloadDirectory
             AddHandler client.DownloadProgressChanged, AddressOf client_ProgressChanged
             AddHandler client.DownloadFileCompleted, AddressOf client_DownloadCompleted
             client.DownloadFileAsync(New Uri(MovieLink), DownloadDirectory)
         Catch ex As Exception
-            Movieo.ShowPopupError("Unable to download movie.", ex.Message)
+            Movieo.ShowPopupError("Unable to download movie.", ex.Message, Me)
         End Try
     End Sub
 
@@ -56,7 +56,7 @@ Public Class frmDownloadClient
             Else
                 LblTitleProgress.Text = "Download Failed :("
                 BtnCancel.Text = "Close"
-                Movieo.ShowPopupError("Unable to download movie.", e.Error.InnerException.Message)
+                Movieo.ShowPopupError("Unable to download movie.", e.Error.InnerException.Message, Me)
             End If
         Catch ex As Exception
         End Try

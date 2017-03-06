@@ -70,7 +70,7 @@ Partial Class frmStartupTab
         Me.Name = "frmStartupTab"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "StartupTab"
+        Me.Text = "Loading, please wait..."
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

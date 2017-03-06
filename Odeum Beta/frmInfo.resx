@@ -124,7 +124,7 @@ We adore movies but finding where to watch was usually a hassle. We had been sea
 
 Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.</value>
   </data>
-  <data name="LblLegalText.Text" xml:space="preserve">
+  <data name="lblLegalText.Text" xml:space="preserve">
     <value>All of the free movies found on this freeware are hosted on third-party servers that are freely available to watch online for all internet users. Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.</value>
   </data>
   <data name="qSub0.Text" xml:space="preserve">
@@ -141,11 +141,8 @@ Your feedback is extremely important as it makes it easier for us to focus on th
   <data name="qSub2.Text" xml:space="preserve">
     <value>We're still in beta as they're may be a few bugs but Movieo is being worked on the best as we can to keep you enjoying your favourite movies. As you may run into some bugs that might occur, we rely on the community to help us, we've added some report features that allow you to send us a quick message and/or a screenshot with it, so we can try our best to fix it for you.</value>
   </data>
-  <metadata name="HideConfirmation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>209, 17</value>
-  </metadata>
-  <metadata name="HideSettingsConfirmation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="timerHideMessageSent.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>-2, 2</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>

@@ -22,7 +22,7 @@ Public Class frmMovieDetails
     Public imgBlackListSticky As Bitmap = My.Resources.Black_List_H_STICKY
 
     Private Sub MovieInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Hide()
+        Hide()
 
         Top = 0
         Left = 0
@@ -51,6 +51,7 @@ Public Class frmMovieDetails
         Else
             BtnBlackList.Image = imgBlackListL
         End If
+
 
     End Sub
 
@@ -235,7 +236,7 @@ Public Class frmMovieDetails
             frmTrailerPlayer.web.Navigate(EmbedLink)
             frmTrailerPlayer.Show(Me)
         Catch ex As Exception
-            Movieo.ShowPopupError("Unable to locate trailer", "Sorry, but we're unable to find a trailer for this movie.")
+            Movieo.ShowPopupError("Unable to locate trailer", "Sorry, but we're unable to find a trailer for this movie.", Me)
         End Try
     End Sub
 
@@ -281,13 +282,7 @@ Public Class frmMovieDetails
         Process.Start(MovieRTomLink.Text)
     End Sub
 
-    Private Sub frmMovieDetails_Validated(sender As Object, e As EventArgs) Handles Me.Validated
+    Private Sub frmMovieDetails_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         Show()
     End Sub
-
-    Private Sub frmMovieDetails_Validating(sender As Object, e As EventArgs) Handles Me.Validating
-        Hide()
-    End Sub
-
-
 End Class

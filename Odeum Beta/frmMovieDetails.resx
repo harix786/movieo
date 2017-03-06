@@ -507,7 +507,7 @@
   <data name="MovieDuration.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="FlowLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="panelDetails.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="lblHeaderDetails.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -544,7 +544,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblHeaderDetails.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;lblHeaderDetails.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -583,7 +583,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblSubRating.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;lblSubRating.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -622,7 +622,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MovieRating.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;MovieRating.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -661,7 +661,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblSubRuntime.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;lblSubRuntime.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -700,7 +700,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblSubReleaseDate.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;lblSubReleaseDate.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -739,7 +739,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MovieReleaseDate.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;MovieReleaseDate.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -778,7 +778,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblSubCountry.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;lblSubCountry.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -817,7 +817,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MovieCountry.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;MovieCountry.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -856,7 +856,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblSubLanguage.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;lblSubLanguage.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -895,7 +895,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MovieLanguage.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;MovieLanguage.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -934,7 +934,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblSubProduction.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;lblSubProduction.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -973,7 +973,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MovieProduction.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;MovieProduction.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -1012,7 +1012,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblSubBoxOffice.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;lblSubBoxOffice.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -1051,7 +1051,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MovieBoxOffice.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;MovieBoxOffice.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -1090,7 +1090,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblSubAwards.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;lblSubAwards.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -1129,30 +1129,30 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MovieAwards.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;MovieAwards.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelDetails.Location" type="System.Drawing.Point, System.Drawing">
     <value>868, 140</value>
   </data>
-  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 354</value>
   </data>
-  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelDetails.TabIndex" type="System.Int32, mscorlib">
     <value>1092</value>
   </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+  <data name="&gt;&gt;panelDetails.Name" xml:space="preserve">
+    <value>panelDetails</value>
   </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelDetails.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelDetails.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelDetails.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="MovieDuration.Font" type="System.Drawing.Font, System.Drawing">
@@ -1180,7 +1180,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MovieDuration.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
+    <value>panelDetails</value>
   </data>
   <data name="&gt;&gt;MovieDuration.ZOrder" xml:space="preserve">
     <value>4</value>

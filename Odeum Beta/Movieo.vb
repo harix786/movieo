@@ -6,23 +6,23 @@ Public Class Movieo
 
 #Region "Preferences (some can be changed)"
 
-    Public DeveloperMode As Boolean = True
-    Public CurrentDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
-    Public BackupDatabase As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Movieo.db"
-    Public MovieoChangelog As String = "https://dl.dropbox.com/s/3514qygmbok1rvv/movieo-changelog.txt?dl=0"
-    Public MovieoNotifications As String = "https://dl.dropbox.com/s/eqxi751t8z031na/movieo-notifications.txt?dl=0"
-    Public LatestVersion As String = "https://dl.dropbox.com/s/n0lwh73gh15vpf5/movieo-version.txt?dl=0"
-    Public AutoUpdater As String = "https://dl.dropbox.com/s/aqouj2qgn7galjd/Movieo%20Updater.exe?dl=0"
-    Public FavouritesListPath As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\favourites.txt"
-    Public WatchListPath As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\watch list.txt"
-    Public WatchedListPath As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\watched.txt"
-    Public ThisVersion As String = "Beta Build v" + Application.ProductVersion
-    Public DownloadLocation As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Downloads\"
-    Public SearchboxWatermark As String = "Search movies, people, years..."
-    Public TempUpdaterPath As String = Path.GetTempPath + "\Movieo Updater.exe"
-    Public UpdaterPath As String = Application.StartupPath + "\Movieo Updater.exe"
-    Public BackupDatabaseErrorMessage As String = "Movieo has bumped into an issue loading movies from our database. Information on your issue has been sent to us, we promise we'll be back up soon :)"
-    Public NoInternetErrorMessage As String = "Movieo is unable to access the internet to reach our server. Please check your internet connection and try again. If you have anymore issues then please email us at info@movieo.at.vu"
+    Public devMode As Boolean = True
+    Public linkDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
+    Public linkChangelog As String = "https://dl.dropbox.com/s/3514qygmbok1rvv/movieo-changelog.txt?dl=0"
+    Public linkNotifications As String = "https://dl.dropbox.com/s/eqxi751t8z031na/movieo-notifications.txt?dl=0"
+    Public linkLatestVersion As String = "https://dl.dropbox.com/s/n0lwh73gh15vpf5/movieo-version.txt?dl=0"
+    Public linkUpdater As String = "https://dl.dropbox.com/s/aqouj2qgn7galjd/Movieo%20Updater.exe?dl=0"
+    Public pathBackupDatabase As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Movieo.db"
+    Public pathFavouritesList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\favourites.txt"
+    Public pathWatchList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\watch list.txt"
+    Public pathSeenList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\seen list.txt"
+    Public pathBlackList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\black list.txt"
+    Public pathDownloads As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Downloads\"
+    Public pathUpdater As String = Application.StartupPath + "\Movieo Updater.exe"
+    Public infoVersionText As String = "Beta Build v" + Application.ProductVersion
+    Public ctrlSearchBoxWatermark As String = "Search movies, people, years"
+    Public msgBackupDatabaseError As String = "Movieo has bumped into an issue loading movies from our database. Information on your issue has been sent to us, we promise we'll be back up soon :)"
+    Public msgNoInternetConnection As String = "Movieo is unable to access the internet to reach our server. Please check your internet connection and try again. If you have anymore issues then please email us at info@movieo.at.vu"
     Public SearchingTexts As ICollection(Of String) = {"Have a great day!",
         "Thank you for using Movieo." + vbNewLine + "We hope you enjoy!",
         "If nobody comes back from the future to" + vbNewLine + "stop you, then how bad of a decision" + vbNewLine + "can it really be?",
@@ -57,9 +57,9 @@ Public Class Movieo
         Left = 0
         Height = Screen.PrimaryScreen.WorkingArea.Height
         Width = Screen.PrimaryScreen.WorkingArea.Width
-        TxtSearchBox.Watermark = SearchboxWatermark 'Set search bar watermark text
+        txtboxSearch.WaterMark = ctrlWatermark  'Set search bar watermark text
         LoadLists() 'Load movies into users lists (ListBoxes)
-        frmInfo.LblVersion.Text = ThisVersion 'Set current version in ABOUT page
+        frmInfo.lblAboutVersion.Text = infoVersionText  'Set current version in ABOUT page
         If CheckForInternetConnection() = True Then 'Proceed to internet required functions
             UseBackupDatabase = False 'So the database function uses the latest (from the server
 
@@ -67,8 +67,8 @@ Public Class Movieo
             frmStartupTab.Size = New Size(Size.Width, Size.Height - AppTitle.Size.Height - 3)
             frmStartupTab.Show(Me)
             frmStartupTab.Location = New Point(Location.X, Location.Y + AppTitle.Size.Height + 3)
-            filterGenreBox.SelectedIndex = My.Settings.doFilterNum
-            CurrentSortBy = BtnSortByNewlyAdded
+            cmboboxGenre.SelectedIndex = My.Settings.doFilterNum
+            CurrentSortBy = 0
             Tab.SelectedTab = tabLoading
             Enabled = False
             Tab.SelectedTab = tabLoading
@@ -81,15 +81,15 @@ Public Class Movieo
                 SaveBackupDatabase()
             End If
         Else
-            If My.Computer.FileSystem.FileExists(BackupDatabase) Then
+            If My.Computer.FileSystem.FileExists(pathBackupDatabase) Then
                 If ShowYesNo("Unable to load database", "Sorry, Movieo is unable to connect to the internet so we can access our server. Although, we may be able to load-up a backup of the database but unfortunately it could be outdated. Would you like us to proceed?", Me) = DialogResult.Yes Then
                     UseBackupDatabase = True 'So the database function uses the backup of db
                     'Show startup loading page
                     frmStartupTab.Size = New Size(Size.Width, Size.Height - AppTitle.Size.Height - 3)
                     frmStartupTab.Show(Me)
                     frmStartupTab.Location = New Point(Location.X, Location.Y + AppTitle.Size.Height + 3)
-                    filterGenreBox.SelectedIndex = My.Settings.doFilterNum
-                    CurrentSortBy = BtnSortByNewlyAdded
+                    cmboboxGenre.SelectedIndex = My.Settings.doFilterNum
+                    CurrentSortBy = 0
                     Tab.SelectedTab = tabLoading
                     Enabled = False
                     Tab.SelectedTab = tabLoading
@@ -108,13 +108,10 @@ Public Class Movieo
                     a.Dock = DockStyle.Fill
                     a.BringToFront()
                     Tab.SelectedTab = tabMovies
-                    BtnSortByAZ.Enabled = False
-                    BtnSortByNewlyAdded.Visible = False
-                    BtnSortByYearReleased.Visible = False
-                    BtnSortByPopularity.Visible = False
+                    cmboboxGenre.Enabled = False
                     Enabled = True
                     ShowPopupError("No internet connection",
-                    NoInternetErrorMessage)
+                    msgNoInternetConnection, Me)
                 End If
             Else
                 'Show error form on movies tab - if no backup database file stored
@@ -126,13 +123,11 @@ Public Class Movieo
                 a.Dock = DockStyle.Fill
                 a.BringToFront()
                 Tab.SelectedTab = tabMovies
-                BtnSortByAZ.Enabled = False
-                BtnSortByNewlyAdded.Visible = False
-                BtnSortByYearReleased.Visible = False
-                BtnSortByPopularity.Visible = False
+                cmboboxGenre.Enabled = False
+
                 Enabled = True
                 ShowPopupError("No internet connection",
-                NoInternetErrorMessage)
+                msgNoInternetConnection, Me)
             End If
         End If
     End Sub
@@ -165,21 +160,21 @@ Public Class Movieo
     End Sub
 
     Public Sub ShowCelebrationIcon() 'Sets the Celebration icon form the returned current month
-        If MonthName(10, False) = "October" Then
+        If MonthName(Now.Month, False) = "October" Then
             imgCelebrationMonth.Image = My.Resources.CelebHalloween
-        ElseIf MonthName(12, False) = "December" Then
+        ElseIf MonthName(Now.Month, False) = "December" Then
             imgCelebrationMonth.Image = My.Resources.CelebXmas
         End If
     End Sub
 
     Public Sub SaveBackupDatabase() 'Download and save a backup of the current database
         Try
-            NetDl.DownloadFile(CurrentDatabase, BackupDatabase)
+            NetDl.DownloadFile(linkDatabase, pathBackupDatabase)
         Catch ex As Exception
         End Try
     End Sub
 
-    Public Shared Function CheckForInternetConnection() As Boolean 'Returns the current status of internet connection (must be able to access dropbox)
+    Public Shared Function CheckForInternetConnection() As Boolean 'Returns the status of internet connection (must be able to access dropbox)
         Try
             Using client = New WebClient()
                 Using stream = client.OpenRead("http://www.dropbox.com")
@@ -195,15 +190,40 @@ Public Class Movieo
 
 #Region "Top Right Controls (Window)"
 
-    Private Sub appExpand_MouseMove(sender As Object, e As MouseEventArgs) Handles AppMaximize.MouseMove
+    Public IsNotificationsOpen As Boolean = False
+
+    Private Sub AppNotifications_MouseMove(sender As Object, e As MouseEventArgs) Handles AppNotifications.MouseMove
+        If IsNotificationsOpen = True Then
+            AppNotifications.Image = My.Resources.notificationsIconH
+        Else
+            AppNotifications.Image = My.Resources.notificationsIconH
+        End If
+    End Sub
+
+    Private Sub AppNotifications_MouseLeave(sender As Object, e As EventArgs) Handles AppNotifications.MouseLeave
+        If IsNotificationsOpen = True Then
+            AppNotifications.Image = My.Resources.notificationsIconH
+        Else
+            AppNotifications.Image = My.Resources.notificationsIconL
+        End If
+    End Sub
+
+    Private Sub AppNotifications_Click(sender As Object, e As EventArgs) Handles AppNotifications.Click
+        ctrlNotificationsMenu.Location = New Point(AppNotifications.Location.X + 429, AppNotifications.Location.Y + 22)
+        AppNotifications.Image = My.Resources.notificationsIconH
+        ctrlNotificationsMenu.Show()
+        IsNotificationsOpen = True
+    End Sub
+
+    Private Sub AppMaximize_MouseMove(sender As Object, e As MouseEventArgs) Handles AppMaximize.MouseMove
         AppMaximize.Image = My.Resources.MaximiseAppH
     End Sub
 
-    Private Sub appExpand_MouseLeave(sender As Object, e As EventArgs) Handles AppMaximize.MouseLeave
+    Private Sub AppMaximize_MouseLeave(sender As Object, e As EventArgs) Handles AppMaximize.MouseLeave
         AppMaximize.Image = My.Resources.MaximiseAppL
     End Sub
 
-    Private Sub appExpand_Click(sender As Object, e As EventArgs) Handles AppMaximize.Click
+    Private Sub appMaximize_Click(sender As Object, e As EventArgs) Handles AppMaximize.Click
         Me.WindowState = FormWindowState.Normal
         Me.Top = 0
         Me.Left = 0
@@ -240,7 +260,7 @@ Public Class Movieo
     End Sub
 
     Private Sub btnChangelog_Click(sender As Object, e As EventArgs) Handles btnRequestMovie.Click
-        InfoSelectedTab = frmInfo.TabContact
+        InfoSelectedTab = frmInfo.tabContact
         frmInfo.Show(Me)
     End Sub
 
@@ -252,9 +272,9 @@ Public Class Movieo
 
 #Region "Show popups / Open folder"
 
-    Public Sub ShowPopupError(Title As String, Message As String)
+    Public Sub ShowPopupError(Title As String, Message As String, owns As Form)
         Try
-            frmPopupBg.ShowDialog(Me)
+            frmPopupBg.Show(owns)
             frmPopupOk.DialogTitle.Text = Title
             frmPopupOk.DialogMessage.Text = Message
             frmPopupOk.Show(frmPopupBg)
@@ -263,7 +283,7 @@ Public Class Movieo
     End Sub
 
     Public Function ShowYesNo(Title As String, Message As String, owns As Form) As DialogResult
-        frmPopupBg.ShowDialog(Me)
+        frmPopupBg.Show(owns)
         frmPopupYesNo.DialogTitle.Text = Title
         frmPopupYesNo.DialogMessage.Text = Message
         frmPopupYesNo.ShowDialog(frmPopupBg)
@@ -282,13 +302,13 @@ Public Class Movieo
 
     Private Sub LoadLists()
         Try
-            Dim MoviesFavourites() As String = File.ReadAllLines(FavouritesListPath)
+            Dim MoviesFavourites() As String = File.ReadAllLines(pathFavouritesList)
             itemsFavouritesList.Items.AddRange(MoviesFavourites)
 
-            Dim MoviesWatchList() As String = File.ReadAllLines(WatchListPath)
+            Dim MoviesWatchList() As String = File.ReadAllLines(pathWatchList)
             itemsWatchList.Items.AddRange(MoviesWatchList)
 
-            Dim MoviesWatched() As String = File.ReadAllLines(WatchedListPath)
+            Dim MoviesWatched() As String = File.ReadAllLines(pathSeenList)
             itemsSeenList.Items.AddRange(MoviesWatched)
 
             Dim NotifItem As String = My.Settings.NotifNumbers
@@ -297,10 +317,10 @@ Public Class Movieo
                 itemsNotificationList.Items.AddRange(NotifItem.Split("|"))
             End If
         Catch ex As Exception
-            If ex.Message.ToString.Contains(FavouritesListPath) Then
+            If ex.Message.ToString.Contains(pathFavouritesList) Then
                 CreateEmptyListFiles()
             Else
-                ShowPopupError("Issue Loading Lists", ex.Message)
+                ShowPopupError("Issue Loading Lists", ex.Message, Me)
             End If
         End Try
     End Sub
@@ -314,21 +334,28 @@ Public Class Movieo
             For Each MovieItem As String In itemsFavouritesList.Items
                 BuildLists1.AppendLine(MovieItem)
             Next
-            File.WriteAllText(FavouritesListPath, BuildLists1.ToString())
+            File.WriteAllText(pathFavouritesList, BuildLists1.ToString())
 
             'Watch List Movies
             Dim BuildLists2 As New Text.StringBuilder()
             For Each MovieItem As String In itemsWatchList.Items
                 BuildLists2.AppendLine(MovieItem)
             Next
-            File.WriteAllText(WatchListPath, BuildLists2.ToString())
+            File.WriteAllText(pathWatchList, BuildLists2.ToString())
 
-            'Watched Movies
+            'Seen List Movies
             Dim BuildLists3 As New Text.StringBuilder()
             For Each MovieItem As String In itemsSeenList.Items
                 BuildLists3.AppendLine(MovieItem)
             Next
-            File.WriteAllText(WatchedListPath, BuildLists3.ToString())
+            File.WriteAllText(pathSeenList, BuildLists3.ToString())
+
+            'Black List Movies
+            Dim BuildLists4 As New Text.StringBuilder()
+            For Each MovieItem As String In itemsBlackList.Items
+                BuildLists4.AppendLine(MovieItem)
+            Next
+            File.WriteAllText(pathBlackList, BuildLists4.ToString())
 
             'Notifications
             Dim NotifItem As New List(Of String)
@@ -339,17 +366,18 @@ Public Class Movieo
 
             My.Settings.Save()
         Catch ex As Exception
-            ShowPopupError("Issue loading your lists", ex.Message)
+            ShowPopupError("Issue loading your lists", ex.Message, Me)
         End Try
     End Sub
 
     Public Sub CreateEmptyListFiles()
         My.Computer.FileSystem.CreateDirectory(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\")
-        My.Computer.FileSystem.CreateDirectory(DownloadLocation)
-        File.WriteAllText(FavouritesListPath, "")
-        File.WriteAllText(WatchListPath, "")
-        File.WriteAllText(WatchedListPath, "")
-        File.WriteAllText(BackupDatabase, "")
+        My.Computer.FileSystem.CreateDirectory(pathDownloads)
+        File.WriteAllText(pathFavouritesList, "")
+        File.WriteAllText(pathWatchList, "")
+        File.WriteAllText(pathSeenList, "")
+        File.WriteAllText(pathBlackList, "")
+        File.WriteAllText(pathBackupDatabase, "")
     End Sub
 
 #End Region
@@ -358,9 +386,9 @@ Public Class Movieo
 
     Private Sub StartupTimer_Tick(sender As Object, e As EventArgs) Handles StartupTimer.Tick
         If UseBackupDatabase = False Then
-            GrabMovies(CurrentDatabase)
+            GrabMovies(linkDatabase)
         Else
-            GrabMovies(BackupDatabase)
+            GrabMovies(pathBackupDatabase)
         End If
 
         Enabled = True
@@ -376,6 +404,8 @@ Public Class Movieo
         'If My.Settings.doFilters = True Then
         'filterGenreBox.SelectedIndex = My.Settings.doFilterNum
         'End If
+
+        doSortByFunc = True
 
         frmStartupTab.Close()
         StartupTimer.Enabled = False
@@ -393,12 +423,15 @@ Public Class Movieo
     Public Sub GrabMovies(Content As String)
         Try
             MovieItem = 0
-            ContentToFilter3.Items.Clear()
             ContentToFilter1.Items.Clear()
             ContentToFilter2.Items.Clear()
-            filterGenreBox.SelectedIndex = My.Settings.doFilterNum  'Reset genre filter box
+            ContentToFilter3.Items.Clear()
+            ContentToFilter4.Items.Clear()
+            doSortByFunc = False
+            cmboboxGenre.SelectedIndex = My.Settings.doFilterNum  'Reset genre filter box
+            cmboboxSortBy.SelectedIndex = 0  'Reset sort by box
             Tab.SelectedTab = tabLoading
-            TxtSearchBox.Text = "" 'Reset search bar text
+            txtboxSearch.Text = "" 'Reset search bar text
 
             'Remove movies from panels
             PanelWatchList.Controls.Clear()
@@ -502,9 +535,10 @@ Public Class Movieo
                     a.InfoBasic.Text = "☆ " + imdbrating + " • " + MovieCred(1)
                     a.InfoSearches.Text = MovieCred(0) + " " + MovieCred(1) + " " + genre + " " + director + " " + stars
                     a.Show()
-                    ContentToFilter3.Items.Add(imdbrating + "~" + MovieCred(0) + "~" + MovieCred(1) + "~" + genre + "~" + time + "~" + director + "~" + stars + "~" + about + "~" + poster + "~" + MovieCred(2))
-                    ContentToFilter1.Items.Add(MovieCred(1) + "~" + MovieCred(0) + "~" + imdbrating + "~" + genre + "~" + time + "~" + director + "~" + stars + "~" + about + "~" + poster + "~" + MovieCred(2))
-                    ContentToFilter2.Items.Add(MovieCred(0) + "~" + MovieCred(1) + "~" + imdbrating + "~" + genre + "~" + time + "~" + director + "~" + stars + "~" + about + "~" + poster + "~" + MovieCred(2))
+                    ContentToFilter4.Items.Add(MovieCred(0) + "~" + MovieCred(1) + "~" + MovieCred(2))
+                    ContentToFilter3.Items.Add(imdbrating + "~" + MovieCred(0) + "~" + MovieCred(1) + "~" + MovieCred(2))
+                    ContentToFilter2.Items.Add(MovieCred(0) + "~" + MovieCred(1) + "~" + MovieCred(2))
+                    ContentToFilter1.Items.Add(MovieCred(1) + "~" + MovieCred(0) + "~" + MovieCred(2))
 
                     a.Name = MovieCred(0).Replace(" ", "") + "(" + MovieCred(1) + ")"
 
@@ -555,12 +589,12 @@ Public Class Movieo
             Tab.SelectedTab = tabMovies
             Enabled = True
             'SendMail("Issue Loading Movies", ex.Message)
-            If DeveloperMode = True Then
+            If devMode = True Then
                 ShowPopupError("Oh no!", ErrorMovie +
-                BackupDatabaseErrorMessage)
+                msgBackupDatabaseError, Me)
             Else
                 ShowPopupError("Oh no!",
-                BackupDatabaseErrorMessage)
+                msgBackupDatabaseError, Me)
             End If
         End Try
     End Sub
@@ -680,12 +714,20 @@ Public Class Movieo
         Tab.SelectedTab = tabWatchList
     End Sub
 
+    Private Sub txtSeenList_Click(sender As Object, e As EventArgs) Handles txtSeenList.ClickButtonArea
+        Tab.SelectedTab = tabSeenList
+    End Sub
+
+    Private Sub txtBlackList_Click(sender As Object, e As EventArgs) Handles txtBlackList.ClickButtonArea
+        Tab.SelectedTab = tabBlackList
+    End Sub
+
     'Tab Title Effects
-    Private Sub txtWatchList_MouseMove(sender As Object, e As MouseEventArgs) Handles txtWatchList.MouseMove, txtMovies.MouseMove, txtFavourites.MouseMove
+    Private Sub txtWatchList_MouseMove(sender As Object, e As MouseEventArgs) Handles txtMovies.MouseMove, txtFavourites.MouseMove, txtWatchList.MouseMove, txtSeenList.MouseMove, txtBlackList.MouseMove
         sender.ForeColor = Color.White
     End Sub
 
-    Private Sub txtWatchList_MouseLeave(sender As Object, e As EventArgs) Handles txtWatchList.MouseLeave, txtMovies.MouseLeave, txtFavourites.MouseLeave
+    Private Sub txtWatchList_MouseLeave(sender As Object, e As EventArgs) Handles txtMovies.MouseLeave, txtFavourites.MouseLeave, txtWatchList.MouseLeave, txtSeenList.MouseLeave, txtBlackList.MouseLeave
         If Not Tab.SelectedTab.Name.Replace("tab", "").Contains(sender.Text.ToString.Replace(" ", "")) Then
             sender.ForeColor = Color.FromArgb(161, 168, 179)
         End If
@@ -853,9 +895,9 @@ Public Class Movieo
 
     Private Sub ShowMoviesTimer_Tick(sender As Object, e As EventArgs) Handles ShowMoviesTimer.Tick
         If UseBackupDatabase = False Then
-            GrabMovies(CurrentDatabase)
+            GrabMovies(linkDatabase)
         Else
-            GrabMovies(BackupDatabase)
+            GrabMovies(pathBackupDatabase)
         End If
         doBothFilters()
         Tab.SelectedTab = tabMovies
@@ -863,21 +905,21 @@ Public Class Movieo
     End Sub
 
     'Filter Functions
-    Dim DoFilter As Boolean = True 'Stop the double function of filtering movies
+    Dim doFilterFunc As Boolean = True 'Stop the double function of filtering movies
 
-    Private Sub filterGenreBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles filterGenreBox.SelectedIndexChanged
-        If DoFilter = True Then
+    Private Sub filterGenreBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxGenre.SelectedIndexChanged
+        If doFilterFunc = True Then
             Tab.SelectedTab = tabLoading
-            cmboTextGenre.Text = filterGenreBox.SelectedItem.ToString
+            cmboTextGenre.Text = cmboboxGenre.SelectedItem.ToString
             FilterGenreTimer.Enabled = True
         End If
-        My.Settings.doFilterNum = filterGenreBox.SelectedIndex
+        My.Settings.doFilterNum = cmboboxGenre.SelectedIndex
         My.Settings.Save()
     End Sub
 
     Private Sub FilterGenreTimer_Tick(sender As Object, e As EventArgs) Handles FilterGenreTimer.Tick
-        If TxtSearchBox.Text = "" Then
-            If filterGenreBox.SelectedIndex = 0 Then
+        If txtboxSearch.Text = "" Then
+            If cmboboxGenre.SelectedIndex = 0 Then
                 ResetFilterGenre()
                 Tab.SelectedTab = tabMovies
                 FilterGenreTimer.Enabled = False
@@ -888,7 +930,7 @@ Public Class Movieo
                 FilterGenreTimer.Enabled = False
             End If
         Else
-            If filterGenreBox.SelectedIndex = 0 Then
+            If cmboboxGenre.SelectedIndex = 0 Then
                 ResetFilterGenre()
                 FilterMoviesBySearch()
                 Tab.SelectedTab = tabMovies
@@ -912,7 +954,7 @@ Public Class Movieo
         For Each a As Control In PanelMovies.Controls
             For Each ab As Control In a.Controls
                 If ab.Name = "InfoSearches" Then
-                    If Not ab.Text.ToLower.Contains(TxtSearchBox.Text.ToLower) Then
+                    If Not ab.Text.ToLower.Contains(txtboxSearch.Text.ToLower) Then
                         a.Visible = False
                     Else
                         IfNone = IfNone + 1
@@ -935,7 +977,7 @@ Public Class Movieo
         For Each a As Control In PanelMovies.Controls
             For Each ab As Control In a.Controls
                 If ab.Name = "InfoSearches" Then
-                    If Not ab.Text.ToLower.Contains(TxtSearchBox.Text.ToLower) Then
+                    If Not ab.Text.ToLower.Contains(txtboxSearch.Text.ToLower) Then
                         a.Visible = False
                     Else
                         IfNone = IfNone + 1
@@ -948,7 +990,7 @@ Public Class Movieo
         For Each a As Control In PanelMovies.Controls
             For Each ab As Control In a.Controls
                 If ab.Name = "InfoGenre" Then
-                    If Not ab.Text.ToLower.Contains(filterGenreBox.SelectedItem.ToString.ToLower) Then
+                    If Not ab.Text.ToLower.Contains(cmboboxGenre.SelectedItem.ToString.ToLower) Then
                         a.Visible = False
                     Else
                         IfNone = IfNone + 1
@@ -964,7 +1006,7 @@ Public Class Movieo
         For Each a As Control In PanelMovies.Controls
             For Each ab As Control In a.Controls
                 If ab.Name = "InfoGenre" Then
-                    If Not ab.Text.ToLower.Contains(filterGenreBox.SelectedItem.ToString.ToLower) Then
+                    If Not ab.Text.ToLower.Contains(cmboboxGenre.SelectedItem.ToString.ToLower) Then
                         a.Visible = False
                     End If
                 End If
@@ -976,11 +1018,12 @@ Public Class Movieo
 
     'Search Movies Bar (All/Favourites/Watch List)
     Dim GoInactive As Boolean = True 'Keep search box inactive or not
+    Dim doSearchMovies As Control = PanelMovies
 
-    Private Sub txtSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtSearchBox.KeyDown
+    Private Sub txtboxSearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtboxSearch.KeyDown
         If e.KeyCode = Keys.Enter Then
             If Tab.SelectedIndex = 0 Then
-                If TxtSearchBox.Text = "" Then
+                If txtboxSearch.Text = "" Then
                     Tab.SelectedTab = tabLoading
                     SearchboxInactive()
                     SearchboxIsActive = False
@@ -994,35 +1037,56 @@ Public Class Movieo
                 End If
             ElseIf Tab.SelectedIndex = 1 Then
                 Tab.SelectedTab = tabLoading
-                SearchFavourites.Enabled = True
+                timerSearchFavouritesList.Enabled = True
             ElseIf Tab.SelectedIndex = 2 Then
                 Tab.SelectedTab = tabLoading
-                SearchWatchList.Enabled = True
+                timerSearchWatchList.Enabled = True
+            ElseIf Tab.SelectedIndex = 3 Then
+                Tab.SelectedTab = tabLoading
+                timerSearchSeenList.Enabled = True
+            ElseIf Tab.SelectedIndex = 4 Then
+                Tab.SelectedTab = tabLoading
+                timerSearchBlackList.Enabled = True
             End If
         End If
     End Sub
 
     Private Sub SearchMovies_Tick(sender As Object, e As EventArgs) Handles SearchMovies.Tick
-        DoFilter = False
+        doFilterFunc = False
+        doSortByFunc = False
         SearchClose.Visible = True
-        filterGenreBox.SelectedIndex = 0
+        cmboboxGenre.SelectedIndex = 0
+        cmboboxSortBy.SelectedIndex = 0
         cmboTextGenre.Text = "Any Genre"
         SearchMoviesFnc()
         Tab.SelectedTab = tabMovies
-        DoFilter = True
+        doFilterFunc = True
+        doSortByFunc = True
         SearchMovies.Enabled = False
     End Sub
 
-    Private Sub SearchFavourites_Tick(sender As Object, e As EventArgs) Handles SearchFavourites.Tick
+    Private Sub SearchFavourites_Tick(sender As Object, e As EventArgs) Handles timerSearchFavouritesList.Tick
         SearchFavouritesFunc()
         Tab.SelectedTab = tabFavourites
-        SearchFavourites.Enabled = False
+        timerSearchFavouritesList.Enabled = False
     End Sub
 
-    Private Sub SearchWatchList_Tick(sender As Object, e As EventArgs) Handles SearchWatchList.Tick
+    Private Sub SearchWatchList_Tick(sender As Object, e As EventArgs) Handles timerSearchWatchList.Tick
         SearchWatchListFunc()
         Tab.SelectedTab = tabWatchList
-        SearchWatchList.Enabled = False
+        timerSearchWatchList.Enabled = False
+    End Sub
+
+    Private Sub SearchSeenList_Tick(sender As Object, e As EventArgs) Handles timerSearchSeenList.Tick
+        SearchSeenListFunc()
+        Tab.SelectedTab = tabSeenList
+        timerSearchSeenList.Enabled = False
+    End Sub
+
+    Private Sub SearchBlackList_Tick(sender As Object, e As EventArgs) Handles timerSearchBlackList.Tick
+        SearchBlackListFunc()
+        Tab.SelectedTab = tabBlackList
+        timerSearchBlackList.Enabled = False
     End Sub
 
     Private Sub ResetFilterGenre()
@@ -1033,7 +1097,7 @@ Public Class Movieo
 
     Private Sub ResetAllFilters()
         SearchboxInactive()
-        filterGenreBox.SelectedIndex = 0
+        cmboboxGenre.SelectedIndex = 0
         For Each a As Control In PanelMovies.Controls
             a.Visible = True
         Next
@@ -1042,7 +1106,7 @@ Public Class Movieo
     Dim CloseSearch As Boolean = False
 
     Private Sub ResetFiltersTimer_Tick(sender As Object, e As EventArgs) Handles ResetFiltersTimer.Tick
-        TxtSearchBox.Text = ""
+        txtboxSearch.Text = ""
         SearchboxInactive()
         SearchboxIsActive = False
         ResetAllFilters()
@@ -1059,7 +1123,7 @@ Public Class Movieo
         For Each a As Control In PanelMovies.Controls
             For Each ab As Control In a.Controls
                 If ab.Name = "InfoSearches" Then
-                    If Not ab.Text.ToLower.Contains(TxtSearchBox.Text.ToLower) Then
+                    If Not ab.Text.ToLower.Contains(txtboxSearch.Text.ToLower) Then
                         a.Visible = False
                     Else
                         IfNone = IfNone + 1
@@ -1076,7 +1140,7 @@ Public Class Movieo
         For Each a As Control In PanelFavourites.Controls
             For Each ab As Control In a.Controls
                 If ab.Name = "InfoSearches" Then
-                    If Not ab.Text.ToLower.Contains(TxtSearchBox.Text.ToLower) Then
+                    If Not ab.Text.ToLower.Contains(txtboxSearch.Text.ToLower) Then
                         a.Visible = False
                     Else
                         IfNone = IfNone + 1
@@ -1093,7 +1157,7 @@ Public Class Movieo
         For Each a As Control In PanelWatchList.Controls
             For Each ab As Control In a.Controls
                 If ab.Name = "InfoSearches" Then
-                    If Not ab.Text.ToLower.Contains(TxtSearchBox.Text.ToLower) Then
+                    If Not ab.Text.ToLower.Contains(txtboxSearch.Text.ToLower) Then
                         a.Visible = False
                     Else
                         IfNone = IfNone + 1
@@ -1105,8 +1169,44 @@ Public Class Movieo
         If IfNone = 0 Then imgPanelsEmpty2.Visible = True Else imgPanelsEmpty2.Visible = False
     End Sub
 
-    Private Sub TxtSearchBg_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles TxtSearchBg.ClickButtonArea
-        TxtSearchBox.Focus()
+    Public Sub SearchSeenListFunc()
+        Dim IfNone As Integer = 0
+
+        For Each a As Control In PanelSeenList.Controls
+            For Each ab As Control In a.Controls
+                If ab.Name = "InfoSearches" Then
+                    If Not ab.Text.ToLower.Contains(txtboxSearch.Text.ToLower) Then
+                        a.Visible = False
+                    Else
+                        IfNone = IfNone + 1
+                    End If
+                End If
+            Next
+        Next
+
+        If IfNone = 0 Then imgPanelsEmpty3.Visible = True Else imgPanelsEmpty3.Visible = False
+    End Sub
+
+    Public Sub SearchBlackListFunc()
+        Dim IfNone As Integer = 0
+
+        For Each a As Control In PanelBlackList.Controls
+            For Each ab As Control In a.Controls
+                If ab.Name = "InfoSearches" Then
+                    If Not ab.Text.ToLower.Contains(txtboxSearch.Text.ToLower) Then
+                        a.Visible = False
+                    Else
+                        IfNone = IfNone + 1
+                    End If
+                End If
+            Next
+        Next
+
+        If IfNone = 0 Then imgPanelsEmpty4.Visible = True Else imgPanelsEmpty4.Visible = False
+    End Sub
+
+    Private Sub TxtSearchBg_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles txtboxSearchBG.ClickButtonArea
+        txtboxSearch.Focus()
     End Sub
 
     Private Sub SearchClose_Click(sender As Object, e As EventArgs) Handles SearchClose.Click
@@ -1116,16 +1216,16 @@ Public Class Movieo
             Tab.SelectedTab = tabLoading
             ResetFiltersTimer.Enabled = True
         Else
-            TxtSearchBox.Text = ""
+            txtboxSearch.Text = ""
             Refresh()
             Update()
-            TxtSearchBox.Refresh()
-            TxtSearchBox.Update()
+            txtboxSearch.Refresh()
+            txtboxSearch.Update()
         End If
     End Sub
 
-    Private Sub TxtSearchBox_TextChanged(sender As Object, e As EventArgs) Handles TxtSearchBox.TextChanged
-        If TxtSearchBox.Text = "" Then
+    Private Sub txtboxSearch_TextChanged(sender As Object, e As EventArgs) Handles txtboxSearch.TextChanged
+        If txtboxSearch.Text = "" Then
             SearchClose.Visible = False
         Else
             SearchClose.Visible = True
@@ -1134,74 +1234,65 @@ Public Class Movieo
 
     'Make Searchbox Inactive Colours
     Public Sub SearchboxInactive()
-        TxtSearchBox.Text = ""
-        TxtSearchBg.BorderColor = Color.FromArgb(161, 168, 179)
+        txtboxSearch.Text = ""
+        txtboxSearchBG.BorderColor = Color.FromArgb(161, 168, 179)
         TxtSearchIcon.Image = My.Resources.SearchIconL
     End Sub
 
     Public Sub SearchboxActive()
-        TxtSearchBg.BorderColor = Color.White
+        txtboxSearchBG.BorderColor = Color.White
         TxtSearchIcon.Image = My.Resources.SearchIconH
     End Sub
 
-    Private Sub BoxText_Click(sender As Object, e As EventArgs) Handles cmboTextGenre.ClickButtonArea
-        filterGenreBox.DroppedDown = True
+    Private Sub cmboTextGenre_Click(sender As Object, e As EventArgs) Handles cmboTextGenre.ClickButtonArea
+        cmboboxGenre.DroppedDown = True
     End Sub
 
     'Sort Movies
-    Private Sub SortByNewlyAdded_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnSortByYearReleased.MouseMove, BtnSortByPopularity.MouseMove, BtnSortByNewlyAdded.MouseMove, BtnSortByAZ.MouseMove
-        sender.ForeColor = Color.White
+
+    Dim CurrentSortBy = 0
+    Dim doSortByFunc As Boolean = True 'Stop the double function of sorting movies on startup
+
+    Private Sub cmboTextSortBy_Click(sender As Object, e As EventArgs) Handles cmboTextSortBy.ClickButtonArea
+        cmboboxSortBy.DroppedDown = True
     End Sub
 
-    Private Sub SortByNewlyAdded_MouseLeave(sender As Object, e As EventArgs) Handles BtnSortByYearReleased.MouseLeave, BtnSortByPopularity.MouseLeave, BtnSortByNewlyAdded.MouseLeave, BtnSortByAZ.MouseLeave
-        If Not sender.name = CurrentSortBy.Name Then
-            sender.ForeColor = Color.FromName("ScrollBar")
-        End If
-    End Sub
-
-    Dim CurrentSortBy = BtnSortByNewlyAdded
-
-    Private Sub SortByAZ_Click(sender As Object, e As EventArgs) Handles BtnSortByYearReleased.Click, BtnSortByPopularity.Click, BtnSortByNewlyAdded.Click, BtnSortByAZ.Click
-        If Not sender.name = CurrentSortBy.name Then
+    Private Sub cmboboxSortBy_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxSortBy.SelectedIndexChanged
+        If doSortByFunc = True Then
             Tab.SelectedTab = tabLoading
-            CurrentSortBy = sender
-            BtnSortByYearReleased.ForeColor = Color.FromName("ScrollBar")
-            BtnSortByPopularity.ForeColor = Color.FromName("ScrollBar")
-            BtnSortByAZ.ForeColor = Color.FromName("ScrollBar")
-            BtnSortByNewlyAdded.ForeColor = Color.FromName("ScrollBar")
-            sender.ForeColor = Color.White
+            cmboTextSortBy.Text = cmboboxSortBy.SelectedItem.ToString
+            CurrentSortBy = cmboboxSortBy.SelectedIndex
             SortByTimer.Enabled = True
         End If
     End Sub
 
     Private Sub SortByTimer_Tick(sender As Object, e As EventArgs) Handles SortByTimer.Tick
-        filterGenreBox.SelectedIndex = 0
         SearchboxInactive()
-        If CurrentSortBy.Name = BtnSortByNewlyAdded.Name Then
+        If CurrentSortBy = 0 Then
             If UseBackupDatabase = False Then
-                GrabMovies(CurrentDatabase)
+                GrabMovies(linkDatabase)
             Else
-                GrabMovies(BackupDatabase)
+                GrabMovies(pathBackupDatabase)
             End If
-        ElseIf CurrentSortBy.Name = BtnSortByPopularity.Name Then
+        ElseIf CurrentSortBy = 1 Then
             SortByRating()
-        ElseIf CurrentSortBy.Name = BtnSortByYearReleased.Name Then
+        ElseIf CurrentSortBy = 2 Then
             SortByYear()
-        ElseIf CurrentSortBy.Name = BtnSortByAZ.Name Then
+        ElseIf CurrentSortBy = 3 Then
             SortByName()
         End If
         Tab.SelectedTab = tabMovies
         SortByTimer.Enabled = False
     End Sub
 
-    Private Sub txtboxSearch_Enter(sender As Object, e As EventArgs) Handles TxtSearchBox.Enter
-        TxtSearchBg.BorderColor = Color.White
+    Private Sub txtboxSearch_Enter(sender As Object, e As EventArgs) Handles txtboxSearch.Enter
+        txtboxSearchBG.BorderColor = Color.White
         TxtSearchIcon.Image = My.Resources.SearchIconH
     End Sub
 
-    Private Sub txtboxSearch_Leave(sender As Object, e As EventArgs) Handles TxtSearchBox.Leave
-        If Not Tab.SelectedIndex = 4 Then
-            TxtSearchBg.BorderColor = Color.FromArgb(161, 168, 179)
+    Private Sub txtboxSearch_Leave(sender As Object, e As EventArgs) Handles txtboxSearch.Leave
+        If Not Tab.SelectedIndex = 5 Then
+            txtboxSearchBG.BorderColor = Color.FromArgb(161, 168, 179)
             TxtSearchIcon.Image = My.Resources.SearchIconL
         End If
     End Sub
@@ -1209,55 +1300,78 @@ Public Class Movieo
     Private Sub SortByNewlyAdded()
         Try
             PanelMovies.Controls.Clear()
-            ContentToFilter4.Sorted = True
             Dim credentialsplitter As String = "~"
             Dim Items() As String = ContentToFilter4.Items.Cast(Of String).ToArray
             Array.Reverse(Items)
             Dim objDl = New WebClient()
             objDl.Proxy = Nothing
-            For Each lineinbox As String In Items
-                If Not lineinbox = "" Then
-                    Dim credentials As String() = Split(lineinbox, credentialsplitter)
 
+            For Each movieInItem As String In Items
+                If Not movieInItem = "" Then
+                    Dim MovieCredential As String() = Split(movieInItem, credentialsplitter)
 
-                    Dim rating As String = credentials(0)
-                    Dim title As String = credentials(1)
-                    Dim year As String = credentials(2)
-                    Dim genre As String = credentials(3)
-                    Dim time As String = credentials(4)
-                    Dim director As String = credentials(5)
-                    Dim stars As String = credentials(6)
-                    Dim desc As String = credentials(7)
-                    Dim posterlink As String = credentials(8)
-                    Dim movielink As String = credentials(9)
-
-                    Dim TitleAndYear As String = title + " (" + year + ")"
+                    Dim TitleAndYear As String = MovieCredential(0) + " (" + MovieCredential(1) + ")"
 
                     Dim a As New ctrlPosterTitle
                     a.TopLevel = False
                     a.Hide()
 
-                    a.InfoTitle.Text = title
-                    a.InfoYear.Text = year
+                    a.InfoTitle.Text = MovieCredential(0)
+                    a.InfoYear.Text = MovieCredential(1)
+
+                    Dim dstring = objDl.DownloadString("http://www.omdbapi.com/?t=" & a.InfoTitle.Text & "&y=" & a.InfoYear.Text + "&tomatoes=true")
+                    Dim dar = dstring.Split(Chr(34))
+                    Dim time = dar(19)
+                    Dim genre = dar(23)
+                    Dim about = dar(39)
+                    Dim director = dar(27)
+                    Dim stars = dar(35)
+                    Dim poster = dar(55)
+
+                    'MORE DETAILS
+                    Dim imdbrating = dar(63)
+                    a.InfoImdbRating.Text = imdbrating
+                    If a.InfoImdbRating.Text.Contains("N/A") Then a.InfoImdbRating.Text = imdbrating.Replace("N/A", "0")
+                    Dim rtomatoes = dar(79)
+                    a.InfoRTomatoes.Text = rtomatoes
+                    Dim metacritic = dar(59)
+                    a.InfoRMetaCritic.Text = metacritic
+
+                    Dim releasedate = dar(15)
+                    Dim rating = dar(11)
+                    Dim country = dar(47)
+                    Dim language = dar(43)
+                    Dim production = dar(131)
+                    Dim boxoffice = dar(127)
+                    Dim awards = dar(51)
+                    Dim imdbid = dar(71)
+                    Dim rtomlink = dar(119)
+
                     a.InfoGenre.Text = genre
+                    a.InfoDesc.Text = about
                     a.InfoDuration.Text = time
                     a.InfoDirector.Text = director
                     a.InfoStars.Text = stars
-                    a.InfoDesc.Text = desc
-                    a.InfoImdbRating.Text = rating
-                    a.InfoPosterLink.Text = posterlink
+                    a.InfoPosterLink.Text = poster
 
-                    Try
-                        a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(objDl.DownloadData(posterlink)))
-                    Catch ex As Exception
-                        a.InfoPoster.BackgroundImage = My.Resources.MovieErrorImage
-                        My.Settings.doo = True
-                    End Try
+                    'MORE DETAILS
+                    a.InfoReleaseDate.Text = releasedate
+                    a.InfoRating.Text = rating
+                    a.InfoCountry.Text = country
+                    a.InfoLanguage.Text = language
+                    a.InfoProduction.Text = production
+                    a.InfoBoxOffice.Text = boxoffice
+                    a.InfoAwards.Text = awards
+                    a.InfoImdbId.Text = imdbid
+                    a.InfoRTomLink.Text = rtomlink
 
-                    a.InfoBasic.Text = "☆ " + rating + " • " + year
-                    a.InfoMovieLink.Text = movielink
-                    a.InfoSearches.Text = title + " " + year + " " + genre + " " + director + " " + stars
+                    a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(objDl.DownloadData(poster)))
+                    a.InfoMovieLink.Text = MovieCredential(2)
+                    a.InfoBasic.Text = "☆ " + imdbrating + " • " + MovieCredential(1)
+                    a.InfoSearches.Text = MovieCredential(0) + " " + MovieCredential(1) + " " + genre + " " + director + " " + stars
                     a.Show()
+
+                    a.Name = MovieCredential(0).Replace(" ", "") + "(" + MovieCredential(1) + ")"
 
                     If My.Settings.doWatchedMovies = 0 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
                         PanelMovies.Controls.Add(a)
@@ -1286,49 +1400,73 @@ Public Class Movieo
             Array.Reverse(Items)
             Dim objDl = New WebClient()
             objDl.Proxy = Nothing
-            For Each lineinbox As String In Items
-                If Not lineinbox = "" Then
-                    Dim credentials As String() = Split(lineinbox, credentialsplitter)
 
+            For Each movieInItem As String In Items
+                If Not movieInItem = "" Then
+                    Dim MovieCredential As String() = Split(movieInItem, credentialsplitter)
 
-                    Dim rating As String = credentials(0)
-                    Dim title As String = credentials(1)
-                    Dim year As String = credentials(2)
-                    Dim genre As String = credentials(3)
-                    Dim time As String = credentials(4)
-                    Dim director As String = credentials(5)
-                    Dim stars As String = credentials(6)
-                    Dim desc As String = credentials(7)
-                    Dim posterlink As String = credentials(8)
-                    Dim movielink As String = credentials(9)
-
-                    Dim TitleAndYear As String = title + " (" + year + ")"
+                    Dim TitleAndYear As String = MovieCredential(1) + " (" + MovieCredential(2) + ")"
 
                     Dim a As New ctrlPosterTitle
                     a.TopLevel = False
                     a.Hide()
 
-                    a.InfoTitle.Text = title
-                    a.InfoYear.Text = year
+                    a.InfoTitle.Text = MovieCredential(1)
+                    a.InfoYear.Text = MovieCredential(2)
+
+                    Dim dstring = objDl.DownloadString("http://www.omdbapi.com/?t=" & a.InfoTitle.Text & "&y=" & a.InfoYear.Text + "&tomatoes=true")
+                    Dim dar = dstring.Split(Chr(34))
+                    Dim time = dar(19)
+                    Dim genre = dar(23)
+                    Dim about = dar(39)
+                    Dim director = dar(27)
+                    Dim stars = dar(35)
+                    Dim poster = dar(55)
+
+                    'MORE DETAILS
+                    Dim imdbrating = dar(63)
+                    a.InfoImdbRating.Text = imdbrating
+                    If a.InfoImdbRating.Text.Contains("N/A") Then a.InfoImdbRating.Text = imdbrating.Replace("N/A", "0")
+                    Dim rtomatoes = dar(79)
+                    a.InfoRTomatoes.Text = rtomatoes
+                    Dim metacritic = dar(59)
+                    a.InfoRMetaCritic.Text = metacritic
+
+                    Dim releasedate = dar(15)
+                    Dim rating = dar(11)
+                    Dim country = dar(47)
+                    Dim language = dar(43)
+                    Dim production = dar(131)
+                    Dim boxoffice = dar(127)
+                    Dim awards = dar(51)
+                    Dim imdbid = dar(71)
+                    Dim rtomlink = dar(119)
+
                     a.InfoGenre.Text = genre
+                    a.InfoDesc.Text = about
                     a.InfoDuration.Text = time
                     a.InfoDirector.Text = director
                     a.InfoStars.Text = stars
-                    a.InfoDesc.Text = desc
-                    a.InfoImdbRating.Text = rating
-                    a.InfoPosterLink.Text = posterlink
+                    a.InfoPosterLink.Text = poster
 
-                    Try
-                        a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(objDl.DownloadData(posterlink)))
-                    Catch ex As Exception
-                        a.InfoPoster.BackgroundImage = My.Resources.MovieErrorImage
-                        My.Settings.doo = True
-                    End Try
+                    'MORE DETAILS
+                    a.InfoReleaseDate.Text = releasedate
+                    a.InfoRating.Text = rating
+                    a.InfoCountry.Text = country
+                    a.InfoLanguage.Text = language
+                    a.InfoProduction.Text = production
+                    a.InfoBoxOffice.Text = boxoffice
+                    a.InfoAwards.Text = awards
+                    a.InfoImdbId.Text = imdbid
+                    a.InfoRTomLink.Text = rtomlink
 
-                    a.InfoBasic.Text = "☆ " + rating + " • " + year
-                    a.InfoMovieLink.Text = movielink
-                    a.InfoSearches.Text = title + " " + year + " " + genre + " " + director + " " + stars
+                    a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(objDl.DownloadData(poster)))
+                    a.InfoMovieLink.Text = MovieCredential(3)
+                    a.InfoBasic.Text = "☆ " + imdbrating + " • " + MovieCredential(2)
+                    a.InfoSearches.Text = MovieCredential(1) + " " + MovieCredential(2) + " " + genre + " " + director + " " + stars
                     a.Show()
+
+                    a.Name = MovieCredential(1).Replace(" ", "") + "(" + MovieCredential(2) + ")"
 
                     If My.Settings.doWatchedMovies = 0 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
                         PanelMovies.Controls.Add(a)
@@ -1357,49 +1495,73 @@ Public Class Movieo
             Array.Reverse(Items)
             Dim objDl = New WebClient()
             objDl.Proxy = Nothing
-            For Each credentialsline As String In Items
-                If Not credentialsline = "" Then
 
-                    Dim credentials As String() = Split(credentialsline, credentialsplitter)
+            For Each movieInItem As String In Items
+                If Not movieInItem = "" Then
+                    Dim MovieCredential As String() = Split(movieInItem, credentialsplitter)
 
-                    Dim rating As String = credentials(2)
-                    Dim title As String = credentials(1)
-                    Dim year As String = credentials(0)
-                    Dim genre As String = credentials(3)
-                    Dim time As String = credentials(4)
-                    Dim director As String = credentials(5)
-                    Dim stars As String = credentials(6)
-                    Dim desc As String = credentials(7)
-                    Dim posterlink As String = credentials(8)
-                    Dim movielink As String = credentials(9)
-
-                    Dim TitleAndYear As String = title + " (" + year + ")"
+                    Dim TitleAndYear As String = MovieCredential(1) + " (" + MovieCredential(0) + ")"
 
                     Dim a As New ctrlPosterTitle
                     a.TopLevel = False
                     a.Hide()
 
-                    a.InfoTitle.Text = title
-                    a.InfoYear.Text = year
+                    a.InfoTitle.Text = MovieCredential(1)
+                    a.InfoYear.Text = MovieCredential(0)
+
+                    Dim dstring = objDl.DownloadString("http://www.omdbapi.com/?t=" & a.InfoTitle.Text & "&y=" & a.InfoYear.Text + "&tomatoes=true")
+                    Dim dar = dstring.Split(Chr(34))
+                    Dim time = dar(19)
+                    Dim genre = dar(23)
+                    Dim about = dar(39)
+                    Dim director = dar(27)
+                    Dim stars = dar(35)
+                    Dim poster = dar(55)
+
+                    'MORE DETAILS
+                    Dim imdbrating = dar(63)
+                    a.InfoImdbRating.Text = imdbrating
+                    If a.InfoImdbRating.Text.Contains("N/A") Then a.InfoImdbRating.Text = imdbrating.Replace("N/A", "0")
+                    Dim rtomatoes = dar(79)
+                    a.InfoRTomatoes.Text = rtomatoes
+                    Dim metacritic = dar(59)
+                    a.InfoRMetaCritic.Text = metacritic
+
+                    Dim releasedate = dar(15)
+                    Dim rating = dar(11)
+                    Dim country = dar(47)
+                    Dim language = dar(43)
+                    Dim production = dar(131)
+                    Dim boxoffice = dar(127)
+                    Dim awards = dar(51)
+                    Dim imdbid = dar(71)
+                    Dim rtomlink = dar(119)
+
                     a.InfoGenre.Text = genre
+                    a.InfoDesc.Text = about
                     a.InfoDuration.Text = time
                     a.InfoDirector.Text = director
                     a.InfoStars.Text = stars
-                    a.InfoDesc.Text = desc
-                    a.InfoImdbRating.Text = rating
-                    a.InfoPosterLink.Text = posterlink
+                    a.InfoPosterLink.Text = poster
 
-                    Try
-                        a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(objDl.DownloadData(posterlink)))
-                    Catch ex As Exception
-                        a.InfoPoster.BackgroundImage = My.Resources.MovieErrorImage
-                        My.Settings.doo = True
-                    End Try
+                    'MORE DETAILS
+                    a.InfoReleaseDate.Text = releasedate
+                    a.InfoRating.Text = rating
+                    a.InfoCountry.Text = country
+                    a.InfoLanguage.Text = language
+                    a.InfoProduction.Text = production
+                    a.InfoBoxOffice.Text = boxoffice
+                    a.InfoAwards.Text = awards
+                    a.InfoImdbId.Text = imdbid
+                    a.InfoRTomLink.Text = rtomlink
 
-                    a.InfoBasic.Text = "☆ " + rating + " • " + year
-                    a.InfoMovieLink.Text = movielink
-                    a.InfoSearches.Text = title + " " + year + " " + genre + " " + director + " " + stars
+                    a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(objDl.DownloadData(poster)))
+                    a.InfoMovieLink.Text = MovieCredential(2)
+                    a.InfoBasic.Text = "☆ " + imdbrating + " • " + MovieCredential(1)
+                    a.InfoSearches.Text = MovieCredential(0) + " " + MovieCredential(1) + " " + genre + " " + director + " " + stars
                     a.Show()
+
+                    a.Name = MovieCredential(0).Replace(" ", "") + "(" + MovieCredential(1) + ")"
 
                     If My.Settings.doWatchedMovies = 0 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
                         PanelMovies.Controls.Add(a)
@@ -1415,7 +1577,8 @@ Public Class Movieo
         Catch ex As Exception
             SendMail("Issue", ex.Message)
             ShowPopupError("Oh no!",
-            "We've bumped into an issue loading movies, information on your issue has been sent to us - until then you can send us a message and we'll get back to you as soon as. Sorry for the inconvenience.")
+            "We've bumped into an issue loading movies, information on your issue has been sent to us - until then you can send us a message and we'll get back to you as soon as. Sorry for the inconvenience.",
+            Me)
         End Try
     End Sub
 
@@ -1426,49 +1589,72 @@ Public Class Movieo
             Dim credentialsplitter As String = "~"
             Dim objDl = New WebClient()
             objDl.Proxy = Nothing
-            For Each credentialsline As String In ContentToFilter2.Items
-                If Not credentialsline = "" Then
+            For Each movieInItem As String In ContentToFilter2.Items
+                If Not movieInItem = "" Then
+                    Dim MovieCredential As String() = Split(movieInItem, credentialsplitter)
 
-                    Dim credentials As String() = Split(credentialsline, credentialsplitter)
-
-                    Dim rating As String = credentials(2)
-                    Dim title As String = credentials(0)
-                    Dim year As String = credentials(1)
-                    Dim genre As String = credentials(3)
-                    Dim time As String = credentials(4)
-                    Dim director As String = credentials(5)
-                    Dim stars As String = credentials(6)
-                    Dim desc As String = credentials(7)
-                    Dim posterlink As String = credentials(8)
-                    Dim movielink As String = credentials(9)
-
-                    Dim TitleAndYear As String = title + " (" + year + ")"
+                    Dim TitleAndYear As String = MovieCredential(0) + " (" + MovieCredential(1) + ")"
 
                     Dim a As New ctrlPosterTitle
                     a.TopLevel = False
                     a.Hide()
 
-                    a.InfoTitle.Text = title
-                    a.InfoYear.Text = year
+                    a.InfoTitle.Text = MovieCredential(0)
+                    a.InfoYear.Text = MovieCredential(1)
+
+                    Dim dstring = objDl.DownloadString("http://www.omdbapi.com/?t=" & a.InfoTitle.Text & "&y=" & a.InfoYear.Text + "&tomatoes=true")
+                    Dim dar = dstring.Split(Chr(34))
+                    Dim time = dar(19)
+                    Dim genre = dar(23)
+                    Dim about = dar(39)
+                    Dim director = dar(27)
+                    Dim stars = dar(35)
+                    Dim poster = dar(55)
+
+                    'MORE DETAILS
+                    Dim imdbrating = dar(63)
+                    a.InfoImdbRating.Text = imdbrating
+                    If a.InfoImdbRating.Text.Contains("N/A") Then a.InfoImdbRating.Text = imdbrating.Replace("N/A", "0")
+                    Dim rtomatoes = dar(79)
+                    a.InfoRTomatoes.Text = rtomatoes
+                    Dim metacritic = dar(59)
+                    a.InfoRMetaCritic.Text = metacritic
+
+                    Dim releasedate = dar(15)
+                    Dim rating = dar(11)
+                    Dim country = dar(47)
+                    Dim language = dar(43)
+                    Dim production = dar(131)
+                    Dim boxoffice = dar(127)
+                    Dim awards = dar(51)
+                    Dim imdbid = dar(71)
+                    Dim rtomlink = dar(119)
+
                     a.InfoGenre.Text = genre
+                    a.InfoDesc.Text = about
                     a.InfoDuration.Text = time
                     a.InfoDirector.Text = director
                     a.InfoStars.Text = stars
-                    a.InfoDesc.Text = desc
-                    a.InfoImdbRating.Text = rating
-                    a.InfoPosterLink.Text = posterlink
+                    a.InfoPosterLink.Text = poster
 
-                    Try
-                        a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(objDl.DownloadData(posterlink)))
-                    Catch ex As Exception
-                        a.InfoPoster.BackgroundImage = My.Resources.MovieErrorImage
-                        My.Settings.doo = True
-                    End Try
+                    'MORE DETAILS
+                    a.InfoReleaseDate.Text = releasedate
+                    a.InfoRating.Text = rating
+                    a.InfoCountry.Text = country
+                    a.InfoLanguage.Text = language
+                    a.InfoProduction.Text = production
+                    a.InfoBoxOffice.Text = boxoffice
+                    a.InfoAwards.Text = awards
+                    a.InfoImdbId.Text = imdbid
+                    a.InfoRTomLink.Text = rtomlink
 
-                    a.InfoBasic.Text = "☆ " + rating + " • " + year
-                    a.InfoMovieLink.Text = movielink
-                    a.InfoSearches.Text = title + " " + year + " " + genre + " " + director + " " + stars
+                    a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(objDl.DownloadData(poster)))
+                    a.InfoMovieLink.Text = MovieCredential(2)
+                    a.InfoBasic.Text = "☆ " + imdbrating + " • " + MovieCredential(1)
+                    a.InfoSearches.Text = MovieCredential(0) + " " + MovieCredential(1) + " " + genre + " " + director + " " + stars
                     a.Show()
+
+                    a.Name = MovieCredential(0).Replace(" ", "") + "(" + MovieCredential(1) + ")"
 
                     If My.Settings.doWatchedMovies = 0 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
                         PanelMovies.Controls.Add(a)
@@ -1484,12 +1670,13 @@ Public Class Movieo
         Catch ex As Exception
             SendMail("Issue", ex.Message)
             ShowPopupError("Oh no!",
-            "We've bumped into an issue loading movies, information on your issue has been sent to us - until then you can send us a message and we'll get back to you as soon as. Sorry for the inconvenience.")
+            "We've bumped into an issue loading movies, information on your issue has been sent to us - until then you can send us a message and we'll get back to you as soon as. Sorry for the inconvenience.",
+            Me)
         End Try
     End Sub
 
     Public Sub doBothFilters()
-        TxtSearchBox.Text = ""
+        txtboxSearch.Text = ""
 
         For Each a As Control In PanelMovies.Controls
             For Each ab As Control In a.Controls
@@ -1497,64 +1684,60 @@ Public Class Movieo
             Next
         Next
 
-        If Not filterGenreBox.SelectedIndex = 0 Then
+        If Not cmboboxGenre.SelectedIndex = 0 Then
             FilterMoviesByGenre()
         End If
     End Sub
 
-    'Hide Genre Filter and Sort By items for Selected Tab
+    'Hide Genre Filter and Sort By items for Tabs
     Private Sub HideExt()
-        filterGenreBox.Visible = False
-        BgPanel.Visible = False
-        FncSplitter.Visible = False
-        BtnSortByAZ.Visible = False
-        BtnSortByNewlyAdded.Visible = False
-        BtnSortByPopularity.Visible = False
-        BtnSortByYearReleased.Visible = False
-        BtnSortByAZ.Visible = False
+        cmboboxGenre.Visible = False
+        panelFilterBox.Visible = False
+        fncSplitter0.Visible = False
+        fncSplitter1.Visible = False
+        cmboTextGenre.Enabled = False
+        panelSortBy.Visible = False
     End Sub
 
     Private Sub ShowExt()
-        filterGenreBox.Visible = True
-        BgPanel.Visible = True
-        FncSplitter.Visible = True
-        BtnSortByAZ.Visible = True
-        BtnSortByNewlyAdded.Visible = True
-        BtnSortByPopularity.Visible = True
-        BtnSortByYearReleased.Visible = True
-        BtnSortByAZ.Visible = True
+        cmboboxGenre.Visible = True
+        panelFilterBox.Visible = True
+        fncSplitter0.Visible = True
+        fncSplitter1.Visible = True
+        cmboTextGenre.Enabled = True
+        panelSortBy.Visible = True
     End Sub
 
 #End Region
 
 #Region "Info Tabs"
 
-    Public InfoSelectedTab As TabPage = frmInfo.TabAbout
+    Public InfoSelectedTab As TabPage = frmInfo.tabAbout
 
     Public IsContextOpen As Boolean = False
 
-    Private Sub SendFeedback_Click(sender As Object, e As EventArgs) Handles BtnSendFeedback.Click
+    Private Sub btnInfoMenu_Click(sender As Object, e As EventArgs) Handles btnInfoMenu.Click
         'InfoSelectedTab = InfoTabs.TabContact
         'InfoTabs.Show(Me)
-        ctrlInfoMenu.Location = New Point(BtnSendFeedback.Location.X, BtnSendFeedback.Location.Y + 28)
-        BtnSendFeedback.Image = My.Resources.DropletsIconBgH
+        ctrlInfoMenu.Location = New Point(btnInfoMenu.Location.X, btnInfoMenu.Location.Y + 28)
+        btnInfoMenu.Image = My.Resources.DropletsIconBgH
         ctrlInfoMenu.Show()
         IsContextOpen = True
     End Sub
 
-    Private Sub SendFeedback_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnSendFeedback.MouseMove
+    Private Sub btnInfoMenu_MouseMove(sender As Object, e As MouseEventArgs) Handles btnInfoMenu.MouseMove
         If IsContextOpen = True Then
-            BtnSendFeedback.Image = My.Resources.DropletsIconBgH
+            btnInfoMenu.Image = My.Resources.DropletsIconH
         Else
-            BtnSendFeedback.Image = My.Resources.DropletsIconH
+            btnInfoMenu.Image = My.Resources.DropletsIconH
         End If
     End Sub
 
-    Private Sub SendFeedback_MouseLeave(sender As Object, e As EventArgs) Handles BtnSendFeedback.MouseLeave
+    Private Sub btnInfoMenu_MouseLeave(sender As Object, e As EventArgs) Handles btnInfoMenu.MouseLeave
         If IsContextOpen = True Then
-            BtnSendFeedback.Image = My.Resources.DropletsIconBgH
+            btnInfoMenu.Image = My.Resources.DropletsIconH
         Else
-            BtnSendFeedback.Image = My.Resources.DropletsIconL
+            btnInfoMenu.Image = My.Resources.DropletsIconL
         End If
     End Sub
 
@@ -1584,7 +1767,7 @@ Public Class Movieo
 
     Private Sub GetUpdateNotification_Tick(sender As Object, e As EventArgs) Handles GetUpdateNotification.Tick
         Try
-            Dim request As HttpWebRequest = WebRequest.Create(LatestVersion)
+            Dim request As HttpWebRequest = WebRequest.Create(linkLatestVersion)
             Dim response As HttpWebResponse = request.GetResponse()
             Dim sr As StreamReader = New StreamReader(response.GetResponseStream())
             Dim versionfile As String() = Split(sr.ReadToEnd, "~")
@@ -1602,33 +1785,6 @@ Public Class Movieo
             GetUpdateNotification.Enabled = False
         Catch ex As Exception
             GetUpdateNotification.Enabled = False
-        End Try
-    End Sub
-
-    Private Sub GetNotifications_Tick(sender As Object, e As EventArgs) Handles GetNotifications.Tick
-        Try
-            Dim objDl As New WebClient
-            Dim NotificationDb As String = objDl.DownloadString(MovieoNotifications)
-            Dim LineByLine() As String = Split(NotificationDb, vbNewLine) 'Split db into lines
-
-            For Each MessageText As String In LineByLine.Reverse
-                Dim NotifText As String() = Split(MessageText, "|") 'Split text line into Number & Message
-                If Not MessageText = "" Then 'If message isn't blank
-                    If Not itemsNotificationList.Items.Contains(NotifText(0)) Then 'If user has 'closed' the notification 
-                        Dim a As New ctrlNotification
-                        a.PictureBox1.Image = ConvertImageText(NotifText(1))
-                        a.LblNotifNumber.Text = NotifText(0) 'Set image to appropriate
-                        a.LblNotification.Text = NotifText(2) 'Set text to current message text received
-                        a.Dock = DockStyle.Top
-                        a.TopLevel = False
-                        a.Show()
-                        tabMovies.Controls.Add(a) 'Add to notifications panel (above posters)
-                    End If
-                End If
-            Next
-            GetNotifications.Enabled = False
-        Catch ex As Exception
-            GetNotifications.Enabled = False
         End Try
     End Sub
 

@@ -4,10 +4,10 @@ Public Class ctrlNotificationUpdate
 
     Private Sub dlBtn_Click(sender As Object, e As EventArgs) Handles BtnInstall.ClickButtonArea
         Try
-            Process.Start(Movieo.UpdaterPath)
+            Process.Start(Movieo.pathUpdater)
             Application.Exit()
         Catch ex As Exception
-            Movieo.ShowPopupError("Update Failed", ex.Message)
+            Movieo.ShowPopupError("Update Failed", ex.Message, Me)
         End Try
     End Sub
 

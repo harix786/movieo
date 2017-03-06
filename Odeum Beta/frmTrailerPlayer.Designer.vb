@@ -64,6 +64,8 @@ Partial Class frmTrailerPlayer
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTrailerPlayer"
         Me.Opacity = 0.97R
+        Me.ShowInTaskbar = False
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Movieo - Watch Tailer"
         CType(Me.appClose, System.ComponentModel.ISupportInitialize).EndInit()

@@ -127,17 +127,14 @@
   <data name="Favourite L" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Favourite L Z.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ArrowLeftL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ArrowLeftL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MetaCriticIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MetaCriticIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MinimiseAppL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinimiseAppL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MinimiseAppH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinimiseAppH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ArrowDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ArrowDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MetaCriticIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MetaCriticIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Watch_List_H_STICKY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Watch List H STICKY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +142,11 @@
   <data name="PopupCloseH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PopupCloseH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SearchIconH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SearchIconH1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ArrowLeftH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowLeftH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DropletsIconBgH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DropletsIconBgH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Favourite_H_STICKY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Favourite H STICKY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,14 +166,23 @@
   <data name="Black_List_Icon_L" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Black List Icon L.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="RTomatoesIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RTomatoesIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Watch_List_L" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Watch List L.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CloseAppH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloseAppH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UnderlineGlow9x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UnderlineGlow9x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Favourite H" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Favourite H1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CelebXmas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CelebXmas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BrowseIconL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BrowseIconL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DropletsIconL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DropletsIconL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,23 +196,20 @@
   <data name="MaximiseAppL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaximiseAppL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DropletsIconBgH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DropletsIconBgH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SearchIconH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SearchIconH1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Movieo_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Odeum Movies Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CelebHalloween" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CelebHalloween.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DropletsIconH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DropletsIconH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ArrowLeftL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowLeftL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Watch_List_L" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Watch List L.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ArrowDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Seen_List_L" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Seen List L.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Seen_List_H_STICKY" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Seen List H STICKY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Black_List_Icon_H" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Black List Icon H.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,8 +217,8 @@
   <data name="Movieo_Glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Movieo Glow1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MinimiseAppL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MinimiseAppL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="RTomatoesIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RTomatoesIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PopupCloseL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PopupCloseL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,23 +229,23 @@
   <data name="PosterGlow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PosterGlow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ArrowLeftH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ArrowLeftH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MaximiseAppH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaximiseAppH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="themoviedb_org" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\themoviedb.org.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MaximiseAppH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MaximiseAppH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Seen_List_H_STICKY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Seen List H STICKY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BrowseIconL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BrowseIconL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DropletsIconH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DropletsIconH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BrowseIconH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BrowseIconH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CloseAppH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CloseAppH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Movieo_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Odeum Movies Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Watch_List_H" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Watch List H.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,10 +256,10 @@
   <data name="FeedbackH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FavouriteH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CelebHalloween" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CelebHalloween.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="notificationsIconH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notificationsIconH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CelebXmas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CelebXmas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="notificationsIconL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notificationsIconL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -15,11 +15,11 @@ Public Class frmPlayer
     End Sub
 
     Private Sub btnReportBroken_ClickButtonArea(sender As Object, e As EventArgs) Handles btnReportBroken.ClickButtonArea
-        Movieo.InfoSelectedTab = frmInfo.TabContact
+        Movieo.InfoSelectedTab = frmInfo.tabContact
         frmInfo.Show(Me)
-        frmInfo.TxtMessageForm.Focus()
-        frmInfo.TxtMessageForm.Text = "I am having issues with movie """ + PlayerMovieTitle.Text + """ because "
-        frmInfo.TxtMessageForm.SelectionStart = frmInfo.TxtMessageForm.TextLength
+        frmInfo.txtFormMessage.Focus()
+        frmInfo.txtFormMessage.Text = "I am having issues with movie """ + PlayerMovieTitle.Text + """ because "
+        frmInfo.txtFormMessage.SelectionStart = frmInfo.txtFormMessage.TextLength
     End Sub
 
     Private Sub appClose_Click(sender As Object, e As EventArgs) Handles appClose.Click
