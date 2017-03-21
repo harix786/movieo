@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Movieo")>
 <Assembly: AssemblyDescription("Discover and watch movies instantly")>
-<Assembly: AssemblyCompany("Godly")>
+<Assembly: AssemblyCompany("accurynx")>
 <Assembly: AssemblyProduct("")>
 <Assembly: AssemblyCopyright("Copyright ©  2016")>
 <Assembly: AssemblyTrademark("")>

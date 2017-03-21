@@ -18,7 +18,7 @@ Public Class ctrlPosterTitle
             frmMovieDetails.InfoGenre.Text = InfoGenre.Text
             frmMovieDetails.InfoDirectors.Text = InfoDirector.Text
             frmMovieDetails.InfoCast.Text = InfoStars.Text
-            frmMovieDetails.InfoQuality.Text = ReturnQuality(InfoMovieLink.Text)
+            frmMovieDetails.InfoQuality.Text = InfoMovieQuality.Text
 
             frmMovieDetails.MovieImdbRating.Text = InfoImdbRating.Text
             frmMovieDetails.MovieTomRating.Text = InfoRTomatoes.Text + "%"
@@ -36,7 +36,6 @@ Public Class ctrlPosterTitle
 
             frmMovieDetails.MovieLinkText.Text = InfoMovieLink.Text
 
-            'MovieInfo.MovImage.Image = InfoPoster2.Image
             Dim WebClient = New WebClient()
             frmMovieDetails.MovImage.Image = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
 
@@ -46,7 +45,7 @@ Public Class ctrlPosterTitle
         End Try
     End Sub
 
-    Private Function ReturnQuality(Link As String) As String
+    Public Function ReturnQuality(Link As String) As String
         If Link.ToLower.Contains("1080") Then
             Return "1080p"
         ElseIf Link.ToLower.Contains("hdts") Then

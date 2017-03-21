@@ -59,6 +59,15 @@
 
 #Region "General"
 
+    Private Sub chkAlwaysOnTop_CheckedChanged(sender As Object, e As EventArgs) Handles chkAlwaysOnTop.CheckedChanged
+        My.Settings.doOnTop = chkAlwaysOnTop.Checked
+        Movieo.TopMost = True
+    End Sub
+
+    Private Sub chkShowRating_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowRating.CheckedChanged
+        My.Settings.doRatingOnPoster = chkShowRating.Checked
+    End Sub
+
     Private Sub cmboTxtStartScreen_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles cmboTxtStartScreen.ClickButtonArea
         cmboboxStartScreen.DroppedDown = True
     End Sub
@@ -79,6 +88,14 @@
     Private Sub cmboboxWatchedMovies_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxWatchedMovies.SelectedIndexChanged
         cmboTxtWatchedMovies.Text = cmboboxWatchedMovies.SelectedItem.ToString
         My.Settings.doWatchedMovies = cmboboxWatchedMovies.SelectedIndex
+    End Sub
+
+#End Region
+
+#Region "Quality"
+
+    Private Sub chkShowMovieQuality_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowMovieQuality.CheckedChanged
+        My.Settings.doQualityOnPoster = chkShowMovieQuality.Checked
     End Sub
 
 #End Region

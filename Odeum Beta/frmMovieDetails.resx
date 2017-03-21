@@ -156,6 +156,9 @@
   <data name="&gt;&gt;InfoTitle.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="InfoYear.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="InfoYear.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -472,7 +475,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;InfoPanel1.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="InfoYear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
@@ -504,6 +507,9 @@
   <data name="&gt;&gt;InfoYear.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="MovieDuration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="MovieDuration.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -523,10 +529,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblHeaderDetails.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
+    <value>2, 0</value>
   </data>
   <data name="lblHeaderDetails.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 3, 20</value>
+    <value>2, 0, 3, 20</value>
   </data>
   <data name="lblHeaderDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 25</value>
@@ -1159,19 +1165,16 @@
     <value>Segoe UI, 12.2pt</value>
   </data>
   <data name="MovieDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 72</value>
-  </data>
-  <data name="MovieDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 3, 0</value>
+    <value>85, 72</value>
   </data>
   <data name="MovieDuration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 23</value>
+    <value>74, 23</value>
   </data>
   <data name="MovieDuration.TabIndex" type="System.Int32, mscorlib">
     <value>1071</value>
   </data>
   <data name="MovieDuration.Text" xml:space="preserve">
-    <value>Duration</value>
+    <value>Runtime</value>
   </data>
   <data name="&gt;&gt;MovieDuration.Name" xml:space="preserve">
     <value>MovieDuration</value>
@@ -1198,7 +1201,7 @@
     <value>NoControl</value>
   </data>
   <data name="MovieImageLinkText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 411</value>
+    <value>207, 703</value>
   </data>
   <data name="MovieImageLinkText.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 21</value>
@@ -1646,6 +1649,12 @@
   <data name="BtnFavouriteList.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>232, 3</value>
+  </metadata>
+  <data name="BtnFavouriteList.ToolTip" xml:space="preserve">
+    <value>Add to Favourites</value>
+  </data>
   <data name="&gt;&gt;BtnFavouriteList.Name" xml:space="preserve">
     <value>BtnFavouriteList</value>
   </data>
@@ -1708,6 +1717,9 @@
   </data>
   <data name="BtnWatchList.TabIndex" type="System.Int32, mscorlib">
     <value>1038</value>
+  </data>
+  <data name="BtnWatchList.ToolTip" xml:space="preserve">
+    <value>Add to Watch List</value>
   </data>
   <data name="&gt;&gt;BtnWatchList.Name" xml:space="preserve">
     <value>BtnWatchList</value>
@@ -1772,6 +1784,9 @@
   <data name="BtnSeenList.TabIndex" type="System.Int32, mscorlib">
     <value>1043</value>
   </data>
+  <data name="BtnSeenList.ToolTip" xml:space="preserve">
+    <value>Add to Seen List</value>
+  </data>
   <data name="&gt;&gt;BtnSeenList.Name" xml:space="preserve">
     <value>BtnSeenList</value>
   </data>
@@ -1835,6 +1850,9 @@
   <data name="BtnBlackList.TabIndex" type="System.Int32, mscorlib">
     <value>1045</value>
   </data>
+  <data name="BtnBlackList.ToolTip" xml:space="preserve">
+    <value>Add to Black List</value>
+  </data>
   <data name="&gt;&gt;BtnBlackList.Name" xml:space="preserve">
     <value>BtnBlackList</value>
   </data>
@@ -1866,10 +1884,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ActionsPanel.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <metadata name="getStarsTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>-2, 2</value>
   </metadata>
   <data name="MovieLinkText.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
@@ -1887,7 +1905,7 @@
     <value>1056</value>
   </data>
   <data name="MovieLinkText.Text" xml:space="preserve">
-    <value>Movie Link's Here</value>
+    <value>Movie Link</value>
   </data>
   <data name="MovieLinkText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
@@ -1905,7 +1923,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MovieLinkText.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="MovieImdbRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1941,7 +1959,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MovieImdbRating.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="MovieTomRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2157,7 +2175,7 @@
     <value>848, 29</value>
   </data>
   <data name="SplitterLine1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 376</value>
+    <value>2, 530</value>
   </data>
   <data name="SplitterLine1.TabIndex" type="System.Int32, mscorlib">
     <value>1064</value>
@@ -2175,13 +2193,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SplitterLine1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="btnDownloadMovie.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 14.5pt</value>
   </data>
   <data name="btnDownloadMovie.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 452</value>
+    <value>32, 493</value>
   </data>
   <data name="btnDownloadMovie.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 35</value>
@@ -2202,13 +2220,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDownloadMovie.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="btnWatchMovie.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 14.5pt</value>
   </data>
   <data name="btnWatchMovie.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 411</value>
+    <value>32, 452</value>
   </data>
   <data name="btnWatchMovie.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 35</value>
@@ -2229,10 +2247,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnWatchMovie.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <metadata name="frmFadeIn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>144, 18</value>
+    <value>125, 3</value>
   </metadata>
   <data name="ImgMetaCritic.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2331,7 +2349,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ImgImdb.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="appClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2361,13 +2379,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;appClose.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="btnWatchTrailer.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 14.5pt</value>
   </data>
   <data name="btnWatchTrailer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 493</value>
+    <value>32, 411</value>
   </data>
   <data name="btnWatchTrailer.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 35</value>
@@ -2389,6 +2407,123 @@
   </data>
   <data name="&gt;&gt;btnWatchTrailer.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="PosterLinkText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 9.75pt</value>
+  </data>
+  <data name="PosterLinkText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PosterLinkText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 705</value>
+  </data>
+  <data name="PosterLinkText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 20</value>
+  </data>
+  <data name="PosterLinkText.TabIndex" type="System.Int32, mscorlib">
+    <value>1094</value>
+  </data>
+  <data name="PosterLinkText.Text" xml:space="preserve">
+    <value>Poster Link</value>
+  </data>
+  <data name="PosterLinkText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="PosterLinkText.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PosterLinkText.Name" xml:space="preserve">
+    <value>PosterLinkText</value>
+  </data>
+  <data name="&gt;&gt;PosterLinkText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PosterLinkTetx.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 9.75pt</value>
+  </data>
+  <data name="PosterLinkTetx.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PosterLinkTetx.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 705</value>
+  </data>
+  <data name="PosterLinkTetx.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 20</value>
+  </data>
+  <data name="PosterLinkTetx.TabIndex" type="System.Int32, mscorlib">
+    <value>1094</value>
+  </data>
+  <data name="PosterLinkTetx.Text" xml:space="preserve">
+    <value>Poster Link</value>
+  </data>
+  <data name="PosterLinkTetx.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="PosterLinkTetx.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PosterLinkTetx.Name" xml:space="preserve">
+    <value>PosterLinkTetx</value>
+  </data>
+  <data name="&gt;&gt;PosterLinkTetx.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSimilar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSimilar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12.2pt</value>
+  </data>
+  <data name="lblSimilar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSimilar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblSimilar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblSimilar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 23</value>
+  </data>
+  <data name="lblSimilar.TabIndex" type="System.Int32, mscorlib">
+    <value>1059</value>
+  </data>
+  <data name="lblSimilar.Text" xml:space="preserve">
+    <value>Movies you may like...</value>
+  </data>
+  <data name="&gt;&gt;lblSimilar.Name" xml:space="preserve">
+    <value>lblSimilar</value>
+  </data>
+  <data name="&gt;&gt;lblSimilar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSimilar.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblSimilar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 407</value>
+  </data>
+  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>530, 255</value>
+  </data>
+  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1094</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -8594,6 +8729,12 @@
   </data>
   <data name="&gt;&gt;frmFadeIn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
+    <value>ToolTip1</value>
+  </data>
+  <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMovieDetails</value>

@@ -80,6 +80,11 @@ Partial Class frmSettings
         Me.btnDbExport = New CButtonLib.CButton()
         Me.MeClose = New System.Windows.Forms.PictureBox()
         Me.lblStillBeta = New System.Windows.Forms.Label()
+        Me.chkAlwaysOnTop = New System.Windows.Forms.CheckBox()
+        Me.chkShowRating = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.chkShowMovieQuality = New System.Windows.Forms.CheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.cmboBoxStartScreenPanel.SuspendLayout()
         Me.cmboBoxWatchedMoviesPanel.SuspendLayout()
         CType(Me.imgOpenFolder, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,7 +97,7 @@ Partial Class frmSettings
         Me.lblComingSoon.AutoSize = True
         Me.lblComingSoon.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.lblComingSoon.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblComingSoon.Location = New System.Drawing.Point(107, 1630)
+        Me.lblComingSoon.Location = New System.Drawing.Point(121, 1882)
         Me.lblComingSoon.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblComingSoon.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblComingSoon.Name = "lblComingSoon"
@@ -106,7 +111,7 @@ Partial Class frmSettings
         Me.Splitter1g.AutoSize = True
         Me.Splitter1g.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1g.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1g.Location = New System.Drawing.Point(103, 1530)
+        Me.Splitter1g.Location = New System.Drawing.Point(117, 1782)
         Me.Splitter1g.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1g.MinimumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1g.Name = "Splitter1g"
@@ -120,10 +125,9 @@ Partial Class frmSettings
         Me.chckCelebr8.AutoSize = True
         Me.chckCelebr8.Checked = True
         Me.chckCelebr8.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chckCelebr8.Enabled = False
         Me.chckCelebr8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chckCelebr8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckCelebr8.Location = New System.Drawing.Point(113, 1489)
+        Me.chckCelebr8.Location = New System.Drawing.Point(127, 1741)
         Me.chckCelebr8.Name = "chckCelebr8"
         Me.chckCelebr8.Size = New System.Drawing.Size(199, 25)
         Me.chckCelebr8.TabIndex = 18
@@ -138,7 +142,7 @@ Partial Class frmSettings
         Me.chckBackupDb.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chckBackupDb.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chckBackupDb.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckBackupDb.Location = New System.Drawing.Point(112, 816)
+        Me.chckBackupDb.Location = New System.Drawing.Point(126, 1068)
         Me.chckBackupDb.Name = "chckBackupDb"
         Me.chckBackupDb.Size = New System.Drawing.Size(194, 25)
         Me.chckBackupDb.TabIndex = 7
@@ -152,7 +156,7 @@ Partial Class frmSettings
         Me.txtDbDir.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtDbDir.Font = New System.Drawing.Font("Segoe UI", 10.25!)
         Me.txtDbDir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtDbDir.Location = New System.Drawing.Point(342, 859)
+        Me.txtDbDir.Location = New System.Drawing.Point(356, 1111)
         Me.txtDbDir.Name = "txtDbDir"
         Me.txtDbDir.ReadOnly = True
         Me.txtDbDir.Size = New System.Drawing.Size(396, 19)
@@ -164,7 +168,7 @@ Partial Class frmSettings
         Me.chckRandomizeBtn.AutoSize = True
         Me.chckRandomizeBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chckRandomizeBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckRandomizeBtn.Location = New System.Drawing.Point(113, 671)
+        Me.chckRandomizeBtn.Location = New System.Drawing.Point(127, 923)
         Me.chckRandomizeBtn.Name = "chckRandomizeBtn"
         Me.chckRandomizeBtn.Size = New System.Drawing.Size(242, 25)
         Me.chckRandomizeBtn.TabIndex = 6
@@ -179,7 +183,7 @@ Partial Class frmSettings
         Me.chckAutoUpdate.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chckAutoUpdate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chckAutoUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckAutoUpdate.Location = New System.Drawing.Point(113, 1447)
+        Me.chckAutoUpdate.Location = New System.Drawing.Point(127, 1699)
         Me.chckAutoUpdate.Name = "chckAutoUpdate"
         Me.chckAutoUpdate.Size = New System.Drawing.Size(229, 25)
         Me.chckAutoUpdate.TabIndex = 17
@@ -192,7 +196,7 @@ Partial Class frmSettings
         Me.lblHeaderMisc.AutoSize = True
         Me.lblHeaderMisc.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderMisc.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderMisc.Location = New System.Drawing.Point(107, 1395)
+        Me.lblHeaderMisc.Location = New System.Drawing.Point(121, 1647)
         Me.lblHeaderMisc.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderMisc.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderMisc.Name = "lblHeaderMisc"
@@ -206,7 +210,7 @@ Partial Class frmSettings
         Me.Splitter1f.AutoSize = True
         Me.Splitter1f.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1f.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1f.Location = New System.Drawing.Point(103, 1342)
+        Me.Splitter1f.Location = New System.Drawing.Point(117, 1594)
         Me.Splitter1f.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1f.MinimumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1f.Name = "Splitter1f"
@@ -220,7 +224,7 @@ Partial Class frmSettings
         Me.lblHeaderDb.AutoSize = True
         Me.lblHeaderDb.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderDb.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderDb.Location = New System.Drawing.Point(107, 769)
+        Me.lblHeaderDb.Location = New System.Drawing.Point(121, 1021)
         Me.lblHeaderDb.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderDb.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderDb.Name = "lblHeaderDb"
@@ -234,7 +238,7 @@ Partial Class frmSettings
         Me.Splitter1d.AutoSize = True
         Me.Splitter1d.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1d.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1d.Location = New System.Drawing.Point(103, 718)
+        Me.Splitter1d.Location = New System.Drawing.Point(117, 970)
         Me.Splitter1d.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1d.MinimumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1d.Name = "Splitter1d"
@@ -250,7 +254,7 @@ Partial Class frmSettings
         Me.chckWatchList.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chckWatchList.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chckWatchList.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckWatchList.Location = New System.Drawing.Point(112, 629)
+        Me.chckWatchList.Location = New System.Drawing.Point(126, 881)
         Me.chckWatchList.Name = "chckWatchList"
         Me.chckWatchList.Size = New System.Drawing.Size(100, 25)
         Me.chckWatchList.TabIndex = 5
@@ -263,7 +267,7 @@ Partial Class frmSettings
         Me.lblSettingsFeatures.AutoSize = True
         Me.lblSettingsFeatures.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSettingsFeatures.ForeColor = System.Drawing.Color.White
-        Me.lblSettingsFeatures.Location = New System.Drawing.Point(107, 579)
+        Me.lblSettingsFeatures.Location = New System.Drawing.Point(121, 831)
         Me.lblSettingsFeatures.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblSettingsFeatures.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblSettingsFeatures.Name = "lblSettingsFeatures"
@@ -277,7 +281,7 @@ Partial Class frmSettings
         Me.Splitter1c.AutoSize = True
         Me.Splitter1c.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1c.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1c.Location = New System.Drawing.Point(103, 524)
+        Me.Splitter1c.Location = New System.Drawing.Point(117, 776)
         Me.Splitter1c.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1c.MinimumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1c.Name = "Splitter1c"
@@ -291,7 +295,7 @@ Partial Class frmSettings
         Me.chckPlayFullscr.AutoSize = True
         Me.chckPlayFullscr.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chckPlayFullscr.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckPlayFullscr.Location = New System.Drawing.Point(113, 474)
+        Me.chckPlayFullscr.Location = New System.Drawing.Point(127, 726)
         Me.chckPlayFullscr.Name = "chckPlayFullscr"
         Me.chckPlayFullscr.Size = New System.Drawing.Size(256, 25)
         Me.chckPlayFullscr.TabIndex = 4
@@ -304,7 +308,7 @@ Partial Class frmSettings
         Me.lblHeaderPlayBck.AutoSize = True
         Me.lblHeaderPlayBck.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderPlayBck.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderPlayBck.Location = New System.Drawing.Point(107, 422)
+        Me.lblHeaderPlayBck.Location = New System.Drawing.Point(121, 674)
         Me.lblHeaderPlayBck.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderPlayBck.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderPlayBck.Name = "lblHeaderPlayBck"
@@ -317,7 +321,7 @@ Partial Class frmSettings
         Me.cmboBoxStartScreenPanel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmboBoxStartScreenPanel.BackColor = System.Drawing.Color.Transparent
         Me.cmboBoxStartScreenPanel.Controls.Add(Me.cmboTxtStartScreen)
-        Me.cmboBoxStartScreenPanel.Location = New System.Drawing.Point(339, 235)
+        Me.cmboBoxStartScreenPanel.Location = New System.Drawing.Point(353, 331)
         Me.cmboBoxStartScreenPanel.Name = "cmboBoxStartScreenPanel"
         Me.cmboBoxStartScreenPanel.Size = New System.Drawing.Size(135, 31)
         Me.cmboBoxStartScreenPanel.TabIndex = 100000006
@@ -342,13 +346,13 @@ Partial Class frmSettings
         Me.cmboTxtStartScreen.FocalPoints.CenterPtY = 0!
         Me.cmboTxtStartScreen.Font = New System.Drawing.Font("Segoe UI", 10.25!)
         Me.cmboTxtStartScreen.ImageIndex = 0
-        Me.cmboTxtStartScreen.Location = New System.Drawing.Point(-2, 0)
+        Me.cmboTxtStartScreen.Location = New System.Drawing.Point(0, 0)
         Me.cmboTxtStartScreen.Name = "cmboTxtStartScreen"
         Me.cmboTxtStartScreen.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.cmboTxtStartScreen.SideImage = CType(resources.GetObject("cmboTxtStartScreen.SideImage"), System.Drawing.Image)
         Me.cmboTxtStartScreen.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmboTxtStartScreen.SideImageSize = New System.Drawing.Size(17, 18)
-        Me.cmboTxtStartScreen.Size = New System.Drawing.Size(136, 30)
+        Me.cmboTxtStartScreen.Size = New System.Drawing.Size(134, 30)
         Me.cmboTxtStartScreen.TabIndex = 1
         Me.cmboTxtStartScreen.Text = "Movies"
         Me.cmboTxtStartScreen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -366,7 +370,7 @@ Partial Class frmSettings
         Me.cmboboxStartScreen.ForeColor = System.Drawing.Color.White
         Me.cmboboxStartScreen.FormattingEnabled = True
         Me.cmboboxStartScreen.Items.AddRange(New Object() {"Movies", "Favourites", "Watch List"})
-        Me.cmboboxStartScreen.Location = New System.Drawing.Point(339, 239)
+        Me.cmboboxStartScreen.Location = New System.Drawing.Point(353, 335)
         Me.cmboboxStartScreen.Name = "cmboboxStartScreen"
         Me.cmboboxStartScreen.Size = New System.Drawing.Size(134, 27)
         Me.cmboboxStartScreen.TabIndex = 100000005
@@ -378,7 +382,7 @@ Partial Class frmSettings
         Me.cmboBoxWatchedMoviesPanel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmboBoxWatchedMoviesPanel.BackColor = System.Drawing.Color.Transparent
         Me.cmboBoxWatchedMoviesPanel.Controls.Add(Me.cmboTxtWatchedMovies)
-        Me.cmboBoxWatchedMoviesPanel.Location = New System.Drawing.Point(339, 319)
+        Me.cmboBoxWatchedMoviesPanel.Location = New System.Drawing.Point(353, 415)
         Me.cmboBoxWatchedMoviesPanel.Name = "cmboBoxWatchedMoviesPanel"
         Me.cmboBoxWatchedMoviesPanel.Size = New System.Drawing.Size(135, 31)
         Me.cmboBoxWatchedMoviesPanel.TabIndex = 100000004
@@ -403,13 +407,13 @@ Partial Class frmSettings
         Me.cmboTxtWatchedMovies.FocalPoints.CenterPtY = 0!
         Me.cmboTxtWatchedMovies.Font = New System.Drawing.Font("Segoe UI", 10.25!)
         Me.cmboTxtWatchedMovies.ImageIndex = 0
-        Me.cmboTxtWatchedMovies.Location = New System.Drawing.Point(-2, 0)
+        Me.cmboTxtWatchedMovies.Location = New System.Drawing.Point(0, 0)
         Me.cmboTxtWatchedMovies.Name = "cmboTxtWatchedMovies"
         Me.cmboTxtWatchedMovies.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.cmboTxtWatchedMovies.SideImage = CType(resources.GetObject("cmboTxtWatchedMovies.SideImage"), System.Drawing.Image)
         Me.cmboTxtWatchedMovies.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmboTxtWatchedMovies.SideImageSize = New System.Drawing.Size(17, 18)
-        Me.cmboTxtWatchedMovies.Size = New System.Drawing.Size(136, 30)
+        Me.cmboTxtWatchedMovies.Size = New System.Drawing.Size(134, 30)
         Me.cmboTxtWatchedMovies.TabIndex = 3
         Me.cmboTxtWatchedMovies.Text = "Fade"
         Me.cmboTxtWatchedMovies.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -427,7 +431,7 @@ Partial Class frmSettings
         Me.cmboboxWatchedMovies.ForeColor = System.Drawing.Color.White
         Me.cmboboxWatchedMovies.FormattingEnabled = True
         Me.cmboboxWatchedMovies.Items.AddRange(New Object() {"Fade", "Hide", "Show"})
-        Me.cmboboxWatchedMovies.Location = New System.Drawing.Point(339, 323)
+        Me.cmboboxWatchedMovies.Location = New System.Drawing.Point(353, 419)
         Me.cmboboxWatchedMovies.Name = "cmboboxWatchedMovies"
         Me.cmboboxWatchedMovies.Size = New System.Drawing.Size(134, 27)
         Me.cmboboxWatchedMovies.TabIndex = 100000003
@@ -438,9 +442,10 @@ Partial Class frmSettings
         '
         Me.chckFilters.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.chckFilters.AutoSize = True
+        Me.chckFilters.Enabled = False
         Me.chckFilters.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chckFilters.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckFilters.Location = New System.Drawing.Point(111, 281)
+        Me.chckFilters.Location = New System.Drawing.Point(125, 377)
         Me.chckFilters.Name = "chckFilters"
         Me.chckFilters.Size = New System.Drawing.Size(156, 25)
         Me.chckFilters.TabIndex = 2
@@ -453,7 +458,7 @@ Partial Class frmSettings
         Me.lblHeaderGeneral.AutoSize = True
         Me.lblHeaderGeneral.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderGeneral.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderGeneral.Location = New System.Drawing.Point(107, 190)
+        Me.lblHeaderGeneral.Location = New System.Drawing.Point(119, 190)
         Me.lblHeaderGeneral.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderGeneral.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderGeneral.Name = "lblHeaderGeneral"
@@ -467,7 +472,7 @@ Partial Class frmSettings
         Me.Splitter1a.AutoSize = True
         Me.Splitter1a.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1a.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1a.Location = New System.Drawing.Point(103, 139)
+        Me.Splitter1a.Location = New System.Drawing.Point(116, 139)
         Me.Splitter1a.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1a.MinimumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1a.Name = "Splitter1a"
@@ -481,7 +486,7 @@ Partial Class frmSettings
         Me.lblWatchedMovies.AutoSize = True
         Me.lblWatchedMovies.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWatchedMovies.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblWatchedMovies.Location = New System.Drawing.Point(107, 322)
+        Me.lblWatchedMovies.Location = New System.Drawing.Point(121, 418)
         Me.lblWatchedMovies.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblWatchedMovies.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblWatchedMovies.Name = "lblWatchedMovies"
@@ -496,7 +501,7 @@ Partial Class frmSettings
         Me.lblSettings.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblSettings.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSettings.ForeColor = System.Drawing.Color.White
-        Me.lblSettings.Location = New System.Drawing.Point(413, 83)
+        Me.lblSettings.Location = New System.Drawing.Point(424, 83)
         Me.lblSettings.Name = "lblSettings"
         Me.lblSettings.Size = New System.Drawing.Size(141, 45)
         Me.lblSettings.TabIndex = 100000000
@@ -508,7 +513,7 @@ Partial Class frmSettings
         Me.lblStartScreen.AutoSize = True
         Me.lblStartScreen.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblStartScreen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblStartScreen.Location = New System.Drawing.Point(107, 239)
+        Me.lblStartScreen.Location = New System.Drawing.Point(121, 335)
         Me.lblStartScreen.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblStartScreen.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblStartScreen.Name = "lblStartScreen"
@@ -522,7 +527,7 @@ Partial Class frmSettings
         Me.Splitter1b.AutoSize = True
         Me.Splitter1b.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1b.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1b.Location = New System.Drawing.Point(103, 367)
+        Me.Splitter1b.Location = New System.Drawing.Point(116, 463)
         Me.Splitter1b.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1b.MinimumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1b.Name = "Splitter1b"
@@ -536,7 +541,7 @@ Partial Class frmSettings
         Me.lblDbDir.AutoSize = True
         Me.lblDbDir.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDbDir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblDbDir.Location = New System.Drawing.Point(107, 858)
+        Me.lblDbDir.Location = New System.Drawing.Point(121, 1110)
         Me.lblDbDir.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblDbDir.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblDbDir.Name = "lblDbDir"
@@ -554,7 +559,7 @@ Partial Class frmSettings
         Me.lblHeaderConnection.AutoSize = True
         Me.lblHeaderConnection.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderConnection.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderConnection.Location = New System.Drawing.Point(107, 1021)
+        Me.lblHeaderConnection.Location = New System.Drawing.Point(121, 1273)
         Me.lblHeaderConnection.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderConnection.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblHeaderConnection.Name = "lblHeaderConnection"
@@ -568,7 +573,7 @@ Partial Class frmSettings
         Me.Splitter1e.AutoSize = True
         Me.Splitter1e.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1e.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1e.Location = New System.Drawing.Point(103, 968)
+        Me.Splitter1e.Location = New System.Drawing.Point(117, 1220)
         Me.Splitter1e.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1e.MinimumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1e.Name = "Splitter1e"
@@ -583,7 +588,7 @@ Partial Class frmSettings
         Me.rdioAutoProxy.Checked = True
         Me.rdioAutoProxy.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.rdioAutoProxy.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.rdioAutoProxy.Location = New System.Drawing.Point(112, 1072)
+        Me.rdioAutoProxy.Location = New System.Drawing.Point(126, 1324)
         Me.rdioAutoProxy.Name = "rdioAutoProxy"
         Me.rdioAutoProxy.Size = New System.Drawing.Size(208, 25)
         Me.rdioAutoProxy.TabIndex = 10
@@ -597,7 +602,7 @@ Partial Class frmSettings
         Me.rdioManualProxy.AutoSize = True
         Me.rdioManualProxy.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.rdioManualProxy.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.rdioManualProxy.Location = New System.Drawing.Point(112, 1114)
+        Me.rdioManualProxy.Location = New System.Drawing.Point(126, 1366)
         Me.rdioManualProxy.Name = "rdioManualProxy"
         Me.rdioManualProxy.Size = New System.Drawing.Size(223, 25)
         Me.rdioManualProxy.TabIndex = 11
@@ -612,7 +617,7 @@ Partial Class frmSettings
         Me.txtProxyAddress.Enabled = False
         Me.txtProxyAddress.Font = New System.Drawing.Font("Segoe UI", 10.25!)
         Me.txtProxyAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtProxyAddress.Location = New System.Drawing.Point(342, 1168)
+        Me.txtProxyAddress.Location = New System.Drawing.Point(356, 1420)
         Me.txtProxyAddress.Name = "txtProxyAddress"
         Me.txtProxyAddress.Size = New System.Drawing.Size(277, 19)
         Me.txtProxyAddress.TabIndex = 12
@@ -624,7 +629,7 @@ Partial Class frmSettings
         Me.lblProxyAddress.Enabled = False
         Me.lblProxyAddress.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProxyAddress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblProxyAddress.Location = New System.Drawing.Point(107, 1166)
+        Me.lblProxyAddress.Location = New System.Drawing.Point(121, 1418)
         Me.lblProxyAddress.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblProxyAddress.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblProxyAddress.Name = "lblProxyAddress"
@@ -640,7 +645,7 @@ Partial Class frmSettings
         Me.txtProxyPort.Enabled = False
         Me.txtProxyPort.Font = New System.Drawing.Font("Segoe UI", 10.25!)
         Me.txtProxyPort.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtProxyPort.Location = New System.Drawing.Point(342, 1210)
+        Me.txtProxyPort.Location = New System.Drawing.Point(356, 1462)
         Me.txtProxyPort.Name = "txtProxyPort"
         Me.txtProxyPort.Size = New System.Drawing.Size(277, 19)
         Me.txtProxyPort.TabIndex = 13
@@ -652,7 +657,7 @@ Partial Class frmSettings
         Me.lblProxyPort.Enabled = False
         Me.lblProxyPort.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProxyPort.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblProxyPort.Location = New System.Drawing.Point(107, 1208)
+        Me.lblProxyPort.Location = New System.Drawing.Point(121, 1460)
         Me.lblProxyPort.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblProxyPort.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblProxyPort.Name = "lblProxyPort"
@@ -668,7 +673,7 @@ Partial Class frmSettings
         Me.txtProxyPassword.Enabled = False
         Me.txtProxyPassword.Font = New System.Drawing.Font("Segoe UI", 10.25!)
         Me.txtProxyPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtProxyPassword.Location = New System.Drawing.Point(342, 1295)
+        Me.txtProxyPassword.Location = New System.Drawing.Point(356, 1547)
         Me.txtProxyPassword.Name = "txtProxyPassword"
         Me.txtProxyPassword.Size = New System.Drawing.Size(277, 19)
         Me.txtProxyPassword.TabIndex = 15
@@ -680,7 +685,7 @@ Partial Class frmSettings
         Me.lblProxyPassword.Enabled = False
         Me.lblProxyPassword.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProxyPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblProxyPassword.Location = New System.Drawing.Point(107, 1293)
+        Me.lblProxyPassword.Location = New System.Drawing.Point(121, 1545)
         Me.lblProxyPassword.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblProxyPassword.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblProxyPassword.Name = "lblProxyPassword"
@@ -696,7 +701,7 @@ Partial Class frmSettings
         Me.txtProxyUsername.Enabled = False
         Me.txtProxyUsername.Font = New System.Drawing.Font("Segoe UI", 10.25!)
         Me.txtProxyUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtProxyUsername.Location = New System.Drawing.Point(342, 1255)
+        Me.txtProxyUsername.Location = New System.Drawing.Point(356, 1507)
         Me.txtProxyUsername.Name = "txtProxyUsername"
         Me.txtProxyUsername.Size = New System.Drawing.Size(277, 19)
         Me.txtProxyUsername.TabIndex = 14
@@ -708,7 +713,7 @@ Partial Class frmSettings
         Me.lblProxyUsername.Enabled = False
         Me.lblProxyUsername.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProxyUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblProxyUsername.Location = New System.Drawing.Point(107, 1251)
+        Me.lblProxyUsername.Location = New System.Drawing.Point(121, 1503)
         Me.lblProxyUsername.MaximumSize = New System.Drawing.Size(750, 0)
         Me.lblProxyUsername.MinimumSize = New System.Drawing.Size(750, 0)
         Me.lblProxyUsername.Name = "lblProxyUsername"
@@ -732,7 +737,7 @@ Partial Class frmSettings
         Me.txtProxyPasswordBg.Enabled = False
         Me.txtProxyPasswordBg.FillType = CButtonLib.CButton.eFillType.Solid
         Me.txtProxyPasswordBg.ImageIndex = 0
-        Me.txtProxyPasswordBg.Location = New System.Drawing.Point(335, 1292)
+        Me.txtProxyPasswordBg.Location = New System.Drawing.Point(349, 1544)
         Me.txtProxyPasswordBg.Name = "txtProxyPasswordBg"
         Me.txtProxyPasswordBg.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.txtProxyPasswordBg.Size = New System.Drawing.Size(291, 26)
@@ -756,7 +761,7 @@ Partial Class frmSettings
         Me.txtProxyUsernameBg.Enabled = False
         Me.txtProxyUsernameBg.FillType = CButtonLib.CButton.eFillType.Solid
         Me.txtProxyUsernameBg.ImageIndex = 0
-        Me.txtProxyUsernameBg.Location = New System.Drawing.Point(335, 1252)
+        Me.txtProxyUsernameBg.Location = New System.Drawing.Point(349, 1504)
         Me.txtProxyUsernameBg.Name = "txtProxyUsernameBg"
         Me.txtProxyUsernameBg.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.txtProxyUsernameBg.Size = New System.Drawing.Size(291, 26)
@@ -780,7 +785,7 @@ Partial Class frmSettings
         Me.txtProxyPortBg.Enabled = False
         Me.txtProxyPortBg.FillType = CButtonLib.CButton.eFillType.Solid
         Me.txtProxyPortBg.ImageIndex = 0
-        Me.txtProxyPortBg.Location = New System.Drawing.Point(335, 1207)
+        Me.txtProxyPortBg.Location = New System.Drawing.Point(349, 1459)
         Me.txtProxyPortBg.Name = "txtProxyPortBg"
         Me.txtProxyPortBg.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.txtProxyPortBg.Size = New System.Drawing.Size(291, 26)
@@ -804,7 +809,7 @@ Partial Class frmSettings
         Me.txtProxyAddressBg.Enabled = False
         Me.txtProxyAddressBg.FillType = CButtonLib.CButton.eFillType.Solid
         Me.txtProxyAddressBg.ImageIndex = 0
-        Me.txtProxyAddressBg.Location = New System.Drawing.Point(335, 1165)
+        Me.txtProxyAddressBg.Location = New System.Drawing.Point(349, 1417)
         Me.txtProxyAddressBg.Name = "txtProxyAddressBg"
         Me.txtProxyAddressBg.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.txtProxyAddressBg.Size = New System.Drawing.Size(291, 26)
@@ -830,12 +835,12 @@ Partial Class frmSettings
         Me.lblSucessText.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!)
         Me.lblSucessText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.lblSucessText.ImageIndex = 0
-        Me.lblSucessText.Location = New System.Drawing.Point(623, 1586)
+        Me.lblSucessText.Location = New System.Drawing.Point(637, 1834)
         Me.lblSucessText.Name = "lblSucessText"
         Me.lblSucessText.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.lblSucessText.Size = New System.Drawing.Size(232, 35)
+        Me.lblSucessText.Size = New System.Drawing.Size(293, 41)
         Me.lblSucessText.TabIndex = 22
-        Me.lblSucessText.Text = "Your settings have been saved."
+        Me.lblSucessText.Text = "Your settings have been saved. Some may take affect after the next startup."
         Me.lblSucessText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblSucessText.TextShadowShow = False
         Me.lblSucessText.Visible = False
@@ -858,7 +863,7 @@ Partial Class frmSettings
         Me.btnResetAllDatabases.Font = New System.Drawing.Font("Segoe UI Semibold", 11.5!)
         Me.btnResetAllDatabases.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnResetAllDatabases.ImageIndex = 0
-        Me.btnResetAllDatabases.Location = New System.Drawing.Point(449, 1585)
+        Me.btnResetAllDatabases.Location = New System.Drawing.Point(463, 1837)
         Me.btnResetAllDatabases.Name = "btnResetAllDatabases"
         Me.btnResetAllDatabases.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnResetAllDatabases.Size = New System.Drawing.Size(163, 35)
@@ -884,7 +889,7 @@ Partial Class frmSettings
         Me.btnResetSettings.Font = New System.Drawing.Font("Segoe UI Semibold", 11.5!)
         Me.btnResetSettings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnResetSettings.ImageIndex = 0
-        Me.btnResetSettings.Location = New System.Drawing.Point(243, 1585)
+        Me.btnResetSettings.Location = New System.Drawing.Point(257, 1837)
         Me.btnResetSettings.Name = "btnResetSettings"
         Me.btnResetSettings.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnResetSettings.Size = New System.Drawing.Size(195, 35)
@@ -910,7 +915,7 @@ Partial Class frmSettings
         Me.btnSaveSettings.Font = New System.Drawing.Font("Segoe UI Semibold", 11.5!)
         Me.btnSaveSettings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnSaveSettings.ImageIndex = 0
-        Me.btnSaveSettings.Location = New System.Drawing.Point(111, 1585)
+        Me.btnSaveSettings.Location = New System.Drawing.Point(125, 1837)
         Me.btnSaveSettings.Name = "btnSaveSettings"
         Me.btnSaveSettings.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnSaveSettings.Size = New System.Drawing.Size(121, 35)
@@ -934,7 +939,7 @@ Partial Class frmSettings
         Me.txtDbDirBg.Enabled = False
         Me.txtDbDirBg.FillType = CButtonLib.CButton.eFillType.Solid
         Me.txtDbDirBg.ImageIndex = 0
-        Me.txtDbDirBg.Location = New System.Drawing.Point(335, 856)
+        Me.txtDbDirBg.Location = New System.Drawing.Point(349, 1108)
         Me.txtDbDirBg.Name = "txtDbDirBg"
         Me.txtDbDirBg.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.txtDbDirBg.Size = New System.Drawing.Size(410, 26)
@@ -947,9 +952,9 @@ Partial Class frmSettings
         Me.imgOpenFolder.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.imgOpenFolder.Cursor = System.Windows.Forms.Cursors.Hand
         Me.imgOpenFolder.Image = Global.Movieo.My.Resources.Resources.BrowseIconL
-        Me.imgOpenFolder.Location = New System.Drawing.Point(754, 859)
+        Me.imgOpenFolder.Location = New System.Drawing.Point(768, 1112)
         Me.imgOpenFolder.Name = "imgOpenFolder"
-        Me.imgOpenFolder.Size = New System.Drawing.Size(20, 20)
+        Me.imgOpenFolder.Size = New System.Drawing.Size(20, 18)
         Me.imgOpenFolder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.imgOpenFolder.TabIndex = 100000021
         Me.imgOpenFolder.TabStop = False
@@ -972,7 +977,7 @@ Partial Class frmSettings
         Me.btnDbExport.Font = New System.Drawing.Font("Segoe UI Semibold", 11.5!)
         Me.btnDbExport.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnDbExport.ImageIndex = 0
-        Me.btnDbExport.Location = New System.Drawing.Point(111, 906)
+        Me.btnDbExport.Location = New System.Drawing.Point(125, 1158)
         Me.btnDbExport.Name = "btnDbExport"
         Me.btnDbExport.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnDbExport.Size = New System.Drawing.Size(147, 35)
@@ -985,7 +990,7 @@ Partial Class frmSettings
         Me.MeClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MeClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MeClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
-        Me.MeClose.Location = New System.Drawing.Point(930, 33)
+        Me.MeClose.Location = New System.Drawing.Point(929, 33)
         Me.MeClose.Name = "MeClose"
         Me.MeClose.Size = New System.Drawing.Size(23, 23)
         Me.MeClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -998,11 +1003,82 @@ Partial Class frmSettings
         Me.lblStillBeta.AutoSize = True
         Me.lblStillBeta.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblStillBeta.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblStillBeta.Location = New System.Drawing.Point(225, 1034)
+        Me.lblStillBeta.Location = New System.Drawing.Point(239, 1286)
         Me.lblStillBeta.Name = "lblStillBeta"
         Me.lblStillBeta.Size = New System.Drawing.Size(65, 13)
         Me.lblStillBeta.TabIndex = 100000056
         Me.lblStillBeta.Text = "Still in beta"
+        '
+        'chkAlwaysOnTop
+        '
+        Me.chkAlwaysOnTop.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.chkAlwaysOnTop.AutoSize = True
+        Me.chkAlwaysOnTop.Enabled = False
+        Me.chkAlwaysOnTop.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkAlwaysOnTop.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.chkAlwaysOnTop.Location = New System.Drawing.Point(124, 244)
+        Me.chkAlwaysOnTop.Name = "chkAlwaysOnTop"
+        Me.chkAlwaysOnTop.Size = New System.Drawing.Size(127, 25)
+        Me.chkAlwaysOnTop.TabIndex = 100000057
+        Me.chkAlwaysOnTop.Text = "Always on top"
+        Me.chkAlwaysOnTop.UseVisualStyleBackColor = True
+        '
+        'chkShowRating
+        '
+        Me.chkShowRating.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.chkShowRating.AutoSize = True
+        Me.chkShowRating.Checked = True
+        Me.chkShowRating.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkShowRating.Enabled = False
+        Me.chkShowRating.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkShowRating.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.chkShowRating.Location = New System.Drawing.Point(124, 289)
+        Me.chkShowRating.Name = "chkShowRating"
+        Me.chkShowRating.Size = New System.Drawing.Size(197, 25)
+        Me.chkShowRating.TabIndex = 100000058
+        Me.chkShowRating.Text = "Show rating on posters*"
+        Me.chkShowRating.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(117, 619)
+        Me.Label1.MaximumSize = New System.Drawing.Size(750, 0)
+        Me.Label1.MinimumSize = New System.Drawing.Size(750, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(750, 32)
+        Me.Label1.TabIndex = 100000060
+        Me.Label1.Text = "-------------------------------------------------------------------------"
+        '
+        'chkShowMovieQuality
+        '
+        Me.chkShowMovieQuality.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.chkShowMovieQuality.AutoSize = True
+        Me.chkShowMovieQuality.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkShowMovieQuality.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.chkShowMovieQuality.Location = New System.Drawing.Point(127, 569)
+        Me.chkShowMovieQuality.Name = "chkShowMovieQuality"
+        Me.chkShowMovieQuality.Size = New System.Drawing.Size(212, 25)
+        Me.chkShowMovieQuality.TabIndex = 100000059
+        Me.chkShowMovieQuality.Text = "Show movie quality on list"
+        Me.chkShowMovieQuality.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(119, 517)
+        Me.Label2.MaximumSize = New System.Drawing.Size(750, 0)
+        Me.Label2.MinimumSize = New System.Drawing.Size(750, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(750, 30)
+        Me.Label2.TabIndex = 100000061
+        Me.Label2.Text = "Quality"
         '
         'frmSettings
         '
@@ -1011,7 +1087,15 @@ Partial Class frmSettings
         Me.AutoScroll = True
         Me.AutoScrollMargin = New System.Drawing.Size(0, 70)
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1041, 561)
+        Me.ClientSize = New System.Drawing.Size(1058, 561)
+        Me.Controls.Add(Me.cmboBoxWatchedMoviesPanel)
+        Me.Controls.Add(Me.cmboboxWatchedMovies)
+        Me.Controls.Add(Me.lblWatchedMovies)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.chkShowMovieQuality)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.chkShowRating)
+        Me.Controls.Add(Me.chkAlwaysOnTop)
         Me.Controls.Add(Me.lblStillBeta)
         Me.Controls.Add(Me.MeClose)
         Me.Controls.Add(Me.txtProxyPassword)
@@ -1053,18 +1137,15 @@ Partial Class frmSettings
         Me.Controls.Add(Me.lblHeaderPlayBck)
         Me.Controls.Add(Me.cmboBoxStartScreenPanel)
         Me.Controls.Add(Me.cmboboxStartScreen)
-        Me.Controls.Add(Me.cmboBoxWatchedMoviesPanel)
-        Me.Controls.Add(Me.cmboboxWatchedMovies)
         Me.Controls.Add(Me.chckFilters)
         Me.Controls.Add(Me.lblHeaderGeneral)
         Me.Controls.Add(Me.Splitter1a)
-        Me.Controls.Add(Me.lblWatchedMovies)
         Me.Controls.Add(Me.lblSettings)
         Me.Controls.Add(Me.lblStartScreen)
-        Me.Controls.Add(Me.Splitter1b)
         Me.Controls.Add(Me.imgOpenFolder)
         Me.Controls.Add(Me.rdioAutoProxy)
         Me.Controls.Add(Me.lblDbDir)
+        Me.Controls.Add(Me.Splitter1b)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmSettings"
@@ -1139,4 +1220,9 @@ Partial Class frmSettings
     Friend WithEvents btnDbExport As CButtonLib.CButton
     Friend WithEvents MeClose As PictureBox
     Friend WithEvents lblStillBeta As Label
+    Friend WithEvents chkAlwaysOnTop As CheckBox
+    Friend WithEvents chkShowRating As CheckBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents chkShowMovieQuality As CheckBox
+    Friend WithEvents Label2 As Label
 End Class

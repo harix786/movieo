@@ -50,7 +50,7 @@ Partial Class ctrlNotificationsMenu
         Me.topArrow.DimFactorHover = 0
         Me.topArrow.FillType = CButtonLib.CButton.eFillType.Solid
         Me.topArrow.ImageIndex = 0
-        Me.topArrow.Location = New System.Drawing.Point(370, 4)
+        Me.topArrow.Location = New System.Drawing.Point(449, 4)
         Me.topArrow.Name = "topArrow"
         Me.topArrow.Shape = CButtonLib.CButton.eShape.TriangleUp
         Me.topArrow.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -73,19 +73,21 @@ Partial Class ctrlNotificationsMenu
         Me.topHeaderBlank.Location = New System.Drawing.Point(0, -4)
         Me.topHeaderBlank.Name = "topHeaderBlank"
         Me.topHeaderBlank.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.topHeaderBlank.Size = New System.Drawing.Size(400, 16)
+        Me.topHeaderBlank.Size = New System.Drawing.Size(474, 16)
         Me.topHeaderBlank.TabIndex = 3
         Me.topHeaderBlank.Text = ""
         '
         'tab
         '
-        Me.tab.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.tab.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.tab.Controls.Add(Me.tabLoading)
         Me.tab.Controls.Add(Me.tabNotifications)
         Me.tab.Location = New System.Drawing.Point(-4, -10)
         Me.tab.Name = "tab"
         Me.tab.SelectedIndex = 0
-        Me.tab.Size = New System.Drawing.Size(408, 239)
+        Me.tab.Size = New System.Drawing.Size(482, 264)
         Me.tab.TabIndex = 4
         '
         'tabLoading
@@ -96,7 +98,7 @@ Partial Class ctrlNotificationsMenu
         Me.tabLoading.Location = New System.Drawing.Point(4, 22)
         Me.tabLoading.Name = "tabLoading"
         Me.tabLoading.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabLoading.Size = New System.Drawing.Size(400, 213)
+        Me.tabLoading.Size = New System.Drawing.Size(474, 238)
         Me.tabLoading.TabIndex = 0
         Me.tabLoading.Text = "tabLoading"
         '
@@ -109,9 +111,9 @@ Partial Class ctrlNotificationsMenu
         Me.labelLoading.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.labelLoading.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelLoading.ForeColor = System.Drawing.Color.White
-        Me.labelLoading.Location = New System.Drawing.Point(53, 43)
+        Me.labelLoading.Location = New System.Drawing.Point(54, 43)
         Me.labelLoading.Name = "labelLoading"
-        Me.labelLoading.Size = New System.Drawing.Size(294, 126)
+        Me.labelLoading.Size = New System.Drawing.Size(367, 152)
         Me.labelLoading.TabIndex = 12
         Me.labelLoading.Text = "Loading..."
         Me.labelLoading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -124,7 +126,7 @@ Partial Class ctrlNotificationsMenu
         Me.background0.BackColor = System.Drawing.Color.Gray
         Me.background0.BorderColor = System.Drawing.Color.Gray
         Me.background0.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.background0.DesignerSelected = False
+        Me.background0.DesignerSelected = True
         Me.background0.DimFactorClick = 0
         Me.background0.DimFactorHover = 0
         Me.background0.FillType = CButtonLib.CButton.eFillType.Solid
@@ -132,7 +134,7 @@ Partial Class ctrlNotificationsMenu
         Me.background0.Location = New System.Drawing.Point(0, 0)
         Me.background0.Name = "background0"
         Me.background0.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.background0.Size = New System.Drawing.Size(400, 213)
+        Me.background0.Size = New System.Drawing.Size(474, 238)
         Me.background0.TabIndex = 11
         Me.background0.Text = " "
         '
@@ -145,7 +147,7 @@ Partial Class ctrlNotificationsMenu
         Me.tabNotifications.Location = New System.Drawing.Point(4, 22)
         Me.tabNotifications.Name = "tabNotifications"
         Me.tabNotifications.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabNotifications.Size = New System.Drawing.Size(400, 213)
+        Me.tabNotifications.Size = New System.Drawing.Size(476, 266)
         Me.tabNotifications.TabIndex = 1
         Me.tabNotifications.Text = "tabNotifications"
         '
@@ -170,7 +172,7 @@ Partial Class ctrlNotificationsMenu
         Me.panelNotifications.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.panelNotifications.Location = New System.Drawing.Point(1, 32)
         Me.panelNotifications.Name = "panelNotifications"
-        Me.panelNotifications.Size = New System.Drawing.Size(398, 180)
+        Me.panelNotifications.Size = New System.Drawing.Size(474, 233)
         Me.panelNotifications.TabIndex = 8
         '
         'background1
@@ -189,7 +191,7 @@ Partial Class ctrlNotificationsMenu
         Me.background1.Location = New System.Drawing.Point(0, 0)
         Me.background1.Name = "background1"
         Me.background1.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.background1.Size = New System.Drawing.Size(400, 213)
+        Me.background1.Size = New System.Drawing.Size(476, 266)
         Me.background1.TabIndex = 10
         Me.background1.Text = " "
         '
@@ -202,7 +204,7 @@ Partial Class ctrlNotificationsMenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(400, 225)
+        Me.ClientSize = New System.Drawing.Size(474, 250)
         Me.Controls.Add(Me.topArrow)
         Me.Controls.Add(Me.topHeaderBlank)
         Me.Controls.Add(Me.tab)

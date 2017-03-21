@@ -39,7 +39,7 @@ Partial Class frmPopupYesNo
         Me.DialogMessage.Cursor = System.Windows.Forms.Cursors.Default
         Me.DialogMessage.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DialogMessage.ForeColor = System.Drawing.Color.White
-        Me.DialogMessage.Location = New System.Drawing.Point(19, 55)
+        Me.DialogMessage.Location = New System.Drawing.Point(19, 52)
         Me.DialogMessage.Name = "DialogMessage"
         Me.DialogMessage.Size = New System.Drawing.Size(467, 75)
         Me.DialogMessage.TabIndex = 999
@@ -62,8 +62,7 @@ Partial Class frmPopupYesNo
         '
         Me.btnYes.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnYes.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.btnYes.BorderColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.btnYes.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnYes.ColorFillSolid = System.Drawing.Color.SteelBlue
         Me.btnYes.Corners.All = 2
         Me.btnYes.Corners.LowerLeft = 2
         Me.btnYes.Corners.LowerRight = 2
@@ -77,7 +76,7 @@ Partial Class frmPopupYesNo
         Me.btnYes.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnYes.Font = New System.Drawing.Font("Segoe UI", 10.5!, System.Drawing.FontStyle.Bold)
         Me.btnYes.ImageIndex = 0
-        Me.btnYes.Location = New System.Drawing.Point(405, 161)
+        Me.btnYes.Location = New System.Drawing.Point(403, 161)
         Me.btnYes.Name = "btnYes"
         Me.btnYes.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnYes.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -87,6 +86,7 @@ Partial Class frmPopupYesNo
         Me.btnYes.Size = New System.Drawing.Size(89, 30)
         Me.btnYes.TabIndex = 1
         Me.btnYes.Text = "Yes"
+        Me.btnYes.TextMargin = New System.Windows.Forms.Padding(2, 3, 2, 2)
         Me.btnYes.TextShadowShow = False
         '
         'panelBottom
@@ -122,7 +122,7 @@ Partial Class frmPopupYesNo
         Me.btnNo.Corners.UpperLeft = 2
         Me.btnNo.Corners.UpperRight = 2
         Me.btnNo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNo.DesignerSelected = True
+        Me.btnNo.DesignerSelected = False
         Me.btnNo.DialogResult = System.Windows.Forms.DialogResult.No
         Me.btnNo.DimFactorClick = 0
         Me.btnNo.DimFactorHover = 10
@@ -130,7 +130,7 @@ Partial Class frmPopupYesNo
         Me.btnNo.Font = New System.Drawing.Font("Segoe UI", 10.5!, System.Drawing.FontStyle.Bold)
         Me.btnNo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.btnNo.ImageIndex = 0
-        Me.btnNo.Location = New System.Drawing.Point(310, 161)
+        Me.btnNo.Location = New System.Drawing.Point(308, 161)
         Me.btnNo.Name = "btnNo"
         Me.btnNo.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnNo.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -140,6 +140,7 @@ Partial Class frmPopupYesNo
         Me.btnNo.Size = New System.Drawing.Size(89, 30)
         Me.btnNo.TabIndex = 10001
         Me.btnNo.Text = "Nope"
+        Me.btnNo.TextMargin = New System.Windows.Forms.Padding(2, 3, 2, 2)
         Me.btnNo.TextShadowShow = False
         '
         'frmPopupYesNo

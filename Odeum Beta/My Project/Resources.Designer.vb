@@ -63,16 +63,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Add_Movies_to_Favourites() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Add_Movies_to_Favourites", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property ArrowDown() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("ArrowDown", resourceCulture)
@@ -216,6 +206,16 @@ Namespace My.Resources
         Friend ReadOnly Property DropletsIconL() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("DropletsIconL", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Empty_Panel() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Empty Panel", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

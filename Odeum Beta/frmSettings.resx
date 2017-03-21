@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblComingSoon.Text" xml:space="preserve">
-    <value>* These features are either not completed, for future references or they've not been started on yet. However, everything is in working order so try those out. Hopefully lots of other new features to come. Let me know what you'd like to see, I need all the help I can get. Enjoy!</value>
+    <value>* These features are either have not been completed or are for future reference. However, everything else working perfectly fine and hopefully lots of other new features to come. Let me know what you'd like to see, I need all the help I can get. Enjoy!</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmboTxtStartScreen.SideImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

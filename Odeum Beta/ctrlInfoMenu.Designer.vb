@@ -43,9 +43,9 @@ Partial Class ctrlInfoMenu
         Me.btnAbout.BorderShow = False
         Me.btnAbout.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAbout.DesignerSelected = False
-        Me.btnAbout.DimFactorClick = -15
-        Me.btnAbout.DimFactorHover = -15
+        Me.btnAbout.DesignerSelected = True
+        Me.btnAbout.DimFactorClick = 0
+        Me.btnAbout.DimFactorHover = 0
         Me.btnAbout.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnAbout.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAbout.ForeColor = System.Drawing.Color.Silver
@@ -53,7 +53,7 @@ Partial Class ctrlInfoMenu
         Me.btnAbout.Location = New System.Drawing.Point(1, 13)
         Me.btnAbout.Margin = New System.Windows.Forms.Padding(0)
         Me.btnAbout.Name = "btnAbout"
-        Me.btnAbout.ShowFocus = CButtonLib.CButton.eFocus.[Dim]
+        Me.btnAbout.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnAbout.Size = New System.Drawing.Size(153, 32)
         Me.btnAbout.TabIndex = 0
         Me.btnAbout.Text = "About"
@@ -70,9 +70,9 @@ Partial Class ctrlInfoMenu
         Me.btnLegal.BorderShow = False
         Me.btnLegal.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.btnLegal.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLegal.DesignerSelected = True
-        Me.btnLegal.DimFactorClick = -15
-        Me.btnLegal.DimFactorHover = -15
+        Me.btnLegal.DesignerSelected = False
+        Me.btnLegal.DimFactorClick = 0
+        Me.btnLegal.DimFactorHover = 0
         Me.btnLegal.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnLegal.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLegal.ForeColor = System.Drawing.Color.Silver
@@ -80,9 +80,9 @@ Partial Class ctrlInfoMenu
         Me.btnLegal.Location = New System.Drawing.Point(1, 74)
         Me.btnLegal.Margin = New System.Windows.Forms.Padding(0)
         Me.btnLegal.Name = "btnLegal"
-        Me.btnLegal.ShowFocus = CButtonLib.CButton.eFocus.[Dim]
+        Me.btnLegal.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnLegal.Size = New System.Drawing.Size(153, 32)
-        Me.btnLegal.TabIndex = 1
+        Me.btnLegal.TabIndex = 2
         Me.btnLegal.Text = "Legal"
         Me.btnLegal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnLegal.TextMargin = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -98,8 +98,8 @@ Partial Class ctrlInfoMenu
         Me.btnChangelog.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.btnChangelog.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnChangelog.DesignerSelected = False
-        Me.btnChangelog.DimFactorClick = -15
-        Me.btnChangelog.DimFactorHover = -15
+        Me.btnChangelog.DimFactorClick = 0
+        Me.btnChangelog.DimFactorHover = 0
         Me.btnChangelog.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnChangelog.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnChangelog.ForeColor = System.Drawing.Color.Silver
@@ -107,7 +107,7 @@ Partial Class ctrlInfoMenu
         Me.btnChangelog.Location = New System.Drawing.Point(1, 105)
         Me.btnChangelog.Margin = New System.Windows.Forms.Padding(0)
         Me.btnChangelog.Name = "btnChangelog"
-        Me.btnChangelog.ShowFocus = CButtonLib.CButton.eFocus.[Dim]
+        Me.btnChangelog.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnChangelog.Size = New System.Drawing.Size(153, 32)
         Me.btnChangelog.TabIndex = 3
         Me.btnChangelog.Text = "Changelog"
@@ -125,8 +125,8 @@ Partial Class ctrlInfoMenu
         Me.btnFAQ.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.btnFAQ.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnFAQ.DesignerSelected = False
-        Me.btnFAQ.DimFactorClick = -15
-        Me.btnFAQ.DimFactorHover = -15
+        Me.btnFAQ.DimFactorClick = 0
+        Me.btnFAQ.DimFactorHover = 0
         Me.btnFAQ.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnFAQ.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFAQ.ForeColor = System.Drawing.Color.Silver
@@ -134,9 +134,9 @@ Partial Class ctrlInfoMenu
         Me.btnFAQ.Location = New System.Drawing.Point(1, 43)
         Me.btnFAQ.Margin = New System.Windows.Forms.Padding(0)
         Me.btnFAQ.Name = "btnFAQ"
-        Me.btnFAQ.ShowFocus = CButtonLib.CButton.eFocus.[Dim]
+        Me.btnFAQ.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnFAQ.Size = New System.Drawing.Size(153, 32)
-        Me.btnFAQ.TabIndex = 2
+        Me.btnFAQ.TabIndex = 1
         Me.btnFAQ.Text = "Help / Faq's"
         Me.btnFAQ.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFAQ.TextMargin = New System.Windows.Forms.Padding(10, 0, 0, 0)
@@ -152,8 +152,8 @@ Partial Class ctrlInfoMenu
         Me.btnContact.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.btnContact.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnContact.DesignerSelected = False
-        Me.btnContact.DimFactorClick = -15
-        Me.btnContact.DimFactorHover = -15
+        Me.btnContact.DimFactorClick = 0
+        Me.btnContact.DimFactorHover = 0
         Me.btnContact.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnContact.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnContact.ForeColor = System.Drawing.Color.Silver
@@ -161,7 +161,7 @@ Partial Class ctrlInfoMenu
         Me.btnContact.Location = New System.Drawing.Point(1, 136)
         Me.btnContact.Margin = New System.Windows.Forms.Padding(0)
         Me.btnContact.Name = "btnContact"
-        Me.btnContact.ShowFocus = CButtonLib.CButton.eFocus.[Dim]
+        Me.btnContact.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnContact.Size = New System.Drawing.Size(153, 32)
         Me.btnContact.TabIndex = 4
         Me.btnContact.Text = "Contact"
@@ -178,8 +178,8 @@ Partial Class ctrlInfoMenu
         Me.btnSettings.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSettings.DesignerSelected = False
-        Me.btnSettings.DimFactorClick = -15
-        Me.btnSettings.DimFactorHover = -15
+        Me.btnSettings.DimFactorClick = 0
+        Me.btnSettings.DimFactorHover = 0
         Me.btnSettings.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnSettings.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSettings.ForeColor = System.Drawing.Color.Silver
@@ -187,7 +187,7 @@ Partial Class ctrlInfoMenu
         Me.btnSettings.Location = New System.Drawing.Point(0, 167)
         Me.btnSettings.Margin = New System.Windows.Forms.Padding(0)
         Me.btnSettings.Name = "btnSettings"
-        Me.btnSettings.ShowFocus = CButtonLib.CButton.eFocus.[Dim]
+        Me.btnSettings.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnSettings.Size = New System.Drawing.Size(155, 32)
         Me.btnSettings.TabIndex = 5
         Me.btnSettings.Text = "Settings"
@@ -211,6 +211,7 @@ Partial Class ctrlInfoMenu
         Me.topArrow.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.topArrow.Size = New System.Drawing.Size(14, 8)
         Me.topArrow.TabIndex = 12
+        Me.topArrow.TabStop = False
         Me.topArrow.Text = ""
         '
         'topHeaderBlank
@@ -230,6 +231,7 @@ Partial Class ctrlInfoMenu
         Me.topHeaderBlank.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.topHeaderBlank.Size = New System.Drawing.Size(155, 16)
         Me.topHeaderBlank.TabIndex = 13
+        Me.topHeaderBlank.TabStop = False
         Me.topHeaderBlank.Text = ""
         '
         'background
@@ -250,6 +252,7 @@ Partial Class ctrlInfoMenu
         Me.background.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.background.Size = New System.Drawing.Size(155, 183)
         Me.background.TabIndex = 14
+        Me.background.TabStop = False
         Me.background.Text = " "
         '
         'ctrlInfoMenu

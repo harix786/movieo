@@ -37,7 +37,7 @@ Partial Class frmPopupBg
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmPopupBg"
-        Me.Opacity = 0.2R
+        Me.Opacity = 0.5R
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide

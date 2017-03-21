@@ -281,6 +281,42 @@ Namespace My
                 Me("doCelebr8") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property doOnTop() As Boolean
+            Get
+                Return CType(Me("doOnTop"),Boolean)
+            End Get
+            Set
+                Me("doOnTop") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property doRatingOnPoster() As Boolean
+            Get
+                Return CType(Me("doRatingOnPoster"),Boolean)
+            End Get
+            Set
+                Me("doRatingOnPoster") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property doQualityOnPoster() As Boolean
+            Get
+                Return CType(Me("doQualityOnPoster"),Boolean)
+            End Get
+            Set
+                Me("doQualityOnPoster") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

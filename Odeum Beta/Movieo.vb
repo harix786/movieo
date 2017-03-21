@@ -47,6 +47,10 @@ Public Class Movieo
             ShowCelebrationIcon()
         End If
 
+        If My.Settings.doOnTop = True Then
+            TopMost = True
+        End If
+
         frmStartupTab.txtLoading.Text = "Loading, please wait..."
         Threading.Thread.Sleep(1000)
 
@@ -57,7 +61,7 @@ Public Class Movieo
         Left = 0
         Height = Screen.PrimaryScreen.WorkingArea.Height
         Width = Screen.PrimaryScreen.WorkingArea.Width
-        txtboxSearch.WaterMark = ctrlWatermark  'Set search bar watermark text
+        txtboxSearch.WaterMark = ctrlSearchBoxWatermark  'Set search bar watermark text
         LoadLists() 'Load movies into users lists (ListBoxes)
         frmInfo.lblAboutVersion.Text = infoVersionText  'Set current version in ABOUT page
         If CheckForInternetConnection() = True Then 'Proceed to internet required functions
@@ -209,7 +213,7 @@ Public Class Movieo
     End Sub
 
     Private Sub AppNotifications_Click(sender As Object, e As EventArgs) Handles AppNotifications.Click
-        ctrlNotificationsMenu.Location = New Point(AppNotifications.Location.X + 429, AppNotifications.Location.Y + 22)
+        ctrlNotificationsMenu.Location = New Point(AppNotifications.Location.X + 350, AppNotifications.Location.Y + 22)
         AppNotifications.Image = My.Resources.notificationsIconH
         ctrlNotificationsMenu.Show()
         IsNotificationsOpen = True
@@ -251,15 +255,15 @@ Public Class Movieo
         AppExit.Image = My.Resources.CloseAppL
     End Sub
 
-    Private Sub TopRight_MouseMove(sender As Object, e As MouseEventArgs) Handles btnRequestMovie.MouseMove
+    Private Sub TopRight_MouseMove(sender As Object, e As MouseEventArgs)
         sender.ForeColor = Color.White
     End Sub
 
-    Private Sub TopRight_MouseLeave(sender As Object, e As EventArgs) Handles btnRequestMovie.MouseLeave
+    Private Sub TopRight_MouseLeave(sender As Object, e As EventArgs)
         sender.ForeColor = Color.FromArgb(166, 166, 166)
     End Sub
 
-    Private Sub btnChangelog_Click(sender As Object, e As EventArgs) Handles btnRequestMovie.Click
+    Private Sub btnChangelog_Click(sender As Object, e As EventArgs)
         InfoSelectedTab = frmInfo.tabContact
         frmInfo.Show(Me)
     End Sub
@@ -283,11 +287,15 @@ Public Class Movieo
     End Sub
 
     Public Function ShowYesNo(Title As String, Message As String, owns As Form) As DialogResult
-        frmPopupBg.Show(owns)
-        frmPopupYesNo.DialogTitle.Text = Title
-        frmPopupYesNo.DialogMessage.Text = Message
-        frmPopupYesNo.ShowDialog(frmPopupBg)
-        Return frmPopupYesNo.DialogResult
+        Try
+            frmPopupBg.Show(owns)
+            frmPopupYesNo.DialogTitle.Text = Title
+            frmPopupYesNo.DialogMessage.Text = Message
+            frmPopupYesNo.Show(frmPopupBg)
+            Return frmPopupYesNo.DialogResult
+        Catch ex As Exception
+            Return DialogResult.No
+        End Try
     End Function
 
     Public Sub ShowFile(file As String)
@@ -532,8 +540,12 @@ Public Class Movieo
 
                     a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebDl.DownloadData(poster)))
                     a.InfoMovieLink.Text = MovieCred(2)
-                    a.InfoBasic.Text = "☆ " + imdbrating + " • " + MovieCred(1)
+                    a.InfoBasic.Text = MovieCred(1) + " • " + "☆ " + imdbrating
                     a.InfoSearches.Text = MovieCred(0) + " " + MovieCred(1) + " " + genre + " " + director + " " + stars
+                    a.InfoMovieQuality.Text = ctrlPosterTitle.ReturnQuality(MovieCred(2))
+                    If My.Settings.doQualityOnPoster = True Then
+                        a.InfoMovieQuality.Visible = True
+                    End If
                     a.Show()
                     ContentToFilter4.Items.Add(MovieCred(0) + "~" + MovieCred(1) + "~" + MovieCred(2))
                     ContentToFilter3.Items.Add(imdbrating + "~" + MovieCred(0) + "~" + MovieCred(1) + "~" + MovieCred(2))
@@ -554,19 +566,19 @@ Public Class Movieo
                     End If
 
                     If itemsFavouritesList.Items.Contains(TitleAndYear) Then
-                        AddMovieOnStartup(PanelFavourites, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoImdbRating.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
+                        AddMovieOnStartup(PanelFavourites, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoRating.Text, a.InfoReleaseDate.Text = releasedate, a.InfoCountry.Text, a.InfoLanguage.Text, a.InfoProduction.Text, a.InfoBoxOffice.Text, a.InfoAwards.Text, a.InfoImdbId.Text, a.InfoImdbRating.Text, a.InfoRTomLink.Text, a.InfoRTomatoes.Text, a.InfoRMetaCritic.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
                     End If
 
                     If itemsWatchList.Items.Contains(TitleAndYear) Then
-                        AddMovieOnStartup(PanelWatchList, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoImdbRating.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
+                        AddMovieOnStartup(PanelWatchList, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoRating.Text, a.InfoReleaseDate.Text = releasedate, a.InfoCountry.Text, a.InfoLanguage.Text, a.InfoProduction.Text, a.InfoBoxOffice.Text, a.InfoAwards.Text, a.InfoImdbId.Text, a.InfoImdbRating.Text, a.InfoRTomLink.Text, a.InfoRTomatoes.Text, a.InfoRMetaCritic.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
                     End If
 
                     If itemsSeenList.Items.Contains(TitleAndYear) Then
-                        AddMovieOnStartup(PanelSeenList, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoImdbRating.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
+                        AddMovieOnStartup(PanelSeenList, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoRating.Text, a.InfoReleaseDate.Text = releasedate, a.InfoCountry.Text, a.InfoLanguage.Text, a.InfoProduction.Text, a.InfoBoxOffice.Text, a.InfoAwards.Text, a.InfoImdbId.Text, a.InfoImdbRating.Text, a.InfoRTomLink.Text, a.InfoRTomatoes.Text, a.InfoRMetaCritic.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
                     End If
 
                     If itemsBlackList.Items.Contains(TitleAndYear) Then
-                        AddMovieOnStartup(PanelBlackList, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoImdbRating.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
+                        AddMovieOnStartup(PanelBlackList, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoRating.Text, a.InfoReleaseDate.Text = releasedate, a.InfoCountry.Text, a.InfoLanguage.Text, a.InfoProduction.Text, a.InfoBoxOffice.Text, a.InfoAwards.Text, a.InfoImdbId.Text, a.InfoImdbRating.Text, a.InfoRTomLink.Text, a.InfoRTomatoes.Text, a.InfoRMetaCritic.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
                     End If
 
                     If MovieItem Mod 30 = 0 Then 'Change to a random loading text every x movies, this case it's 30
@@ -603,7 +615,7 @@ Public Class Movieo
 
 #Region "Add/Remove Movies from Panel"
 
-    Public Sub AddMovieOnStartup(AddToPanel As FlowLayoutPanel, Title As String, Year As String, Genre As String, Director As String, Stars As String, Description As String, Duration As String, Rating As String, PosterLink As String, MovieLink As String)
+    Public Sub AddMovieOnStartup(AddToPanel As FlowLayoutPanel, Title As String, Year As String, Genre As String, Director As String, Stars As String, Description As String, Duration As String, Rating As String, ReleaseDate As String, Country As String, Language As String, Production As String, BoxOffice As String, Awards As String, ImdbId As String, ImdbRating As String, RTomLink As String, RTomRating As String, MetaCritic As String, PosterLink As String, MovieLink As String)
         Dim NetDl As New WebClient
         NetDl.Proxy = Nothing
         Dim tab As New ctrlPosterTitle
@@ -617,8 +629,24 @@ Public Class Movieo
         tab.InfoImdbRating.Text = Rating
         tab.InfoDirector.Text = Director
         tab.InfoStars.Text = Stars
+
+        tab.InfoImdbRating.Text = ImdbRating
+        If tab.InfoImdbRating.Text.Contains("N/A") Then tab.InfoImdbRating.Text = ImdbRating.Replace("N/A", "0")
+        tab.InfoRTomatoes.Text = RTomRating
+        tab.InfoRMetaCritic.Text = MetaCritic
+
+        tab.InfoReleaseDate.Text = ReleaseDate
+        tab.InfoRating.Text = Rating
+        tab.InfoCountry.Text = Country
+        tab.InfoLanguage.Text = Language
+        tab.InfoProduction.Text = Production
+        tab.InfoBoxOffice.Text = BoxOffice
+        tab.InfoAwards.Text = Awards
+        tab.InfoImdbId.Text = ImdbId
+        tab.InfoRTomLink.Text = RTomLink
+
         tab.InfoPosterLink.Text = PosterLink
-        tab.InfoBasic.Text = "☆ " + Rating + " • " + Year
+        tab.InfoBasic.Text = "☆ " + ImdbRating + " • " + Year
         tab.InfoMovieLink.Text = MovieLink
         tab.InfoSearches.Text = Title + " " + Year + " " + Genre + " " + Director + " " + Stars
         Try
@@ -630,8 +658,8 @@ Public Class Movieo
         AddToPanel.Controls.Add(tab)
     End Sub
 
-    'Add Movie to Favourites/Watch List
-    Public Sub AddMovie(AddToPanel As FlowLayoutPanel, AddToList As ListBox, Title As String, Year As String, Genre As String, Director As String, Stars As String, Description As String, Duration As String, Rating As String, PosterLink As String, MovieLink As String)
+    'Add Movie to Lists
+    Public Sub AddMovie(AddToPanel As FlowLayoutPanel, AddToList As ListBox, Title As String, Year As String, Genre As String, Director As String, Stars As String, Description As String, Duration As String, Rating As String, ReleaseDate As String, Country As String, Language As String, Production As String, BoxOffice As String, Awards As String, ImdbId As String, ImdbRating As String, RTomLink As String, RTomRating As String, MetaCritic As String, PosterLink As String, MovieLink As String)
         Dim NetDl As New WebClient
         NetDl.Proxy = Nothing
         Dim tab As New ctrlPosterTitle
@@ -645,8 +673,19 @@ Public Class Movieo
         tab.InfoImdbRating.Text = Rating
         tab.InfoDirector.Text = Director
         tab.InfoStars.Text = Stars
+
+        tab.InfoReleaseDate.Text = ReleaseDate
+        tab.InfoRating.Text = Rating
+        tab.InfoCountry.Text = Country
+        tab.InfoLanguage.Text = Language
+        tab.InfoProduction.Text = Production
+        tab.InfoBoxOffice.Text = BoxOffice
+        tab.InfoAwards.Text = Awards
+        tab.InfoImdbId.Text = ImdbId
+        tab.InfoRTomLink.Text = RTomLink
+
         tab.InfoPosterLink.Text = PosterLink
-        tab.InfoBasic.Text = "☆ " + Rating + " • " + Year
+        tab.InfoBasic.Text = "☆ " + ImdbRating + " • " + Year
         tab.InfoMovieLink.Text = MovieLink
         tab.InfoSearches.Text = Title + " " + Year + " " + Genre + " " + Director + " " + Stars
         Try
@@ -662,7 +701,7 @@ Public Class Movieo
     Public Sub RemoveMovie(RemoveFromPanel As FlowLayoutPanel, RemoveFromList As ListBox, Title As String, Year As String)
         For Each a As Control In RemoveFromPanel.Controls
             For Each ab As Control In a.Controls
-                If ab.Text = Title Then
+                If ab.Name = Title + " (" + Year + ")" Then
                     RemoveFromPanel.Controls.Remove(a)
                 End If
             Next
@@ -1557,20 +1596,22 @@ Public Class Movieo
 
                     a.InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(objDl.DownloadData(poster)))
                     a.InfoMovieLink.Text = MovieCredential(2)
-                    a.InfoBasic.Text = "☆ " + imdbrating + " • " + MovieCredential(1)
-                    a.InfoSearches.Text = MovieCredential(0) + " " + MovieCredential(1) + " " + genre + " " + director + " " + stars
+                    a.InfoBasic.Text = "☆ " + imdbrating + " • " + MovieCredential(0)
+                    a.InfoSearches.Text = MovieCredential(1) + " " + MovieCredential(0) + " " + genre + " " + director + " " + stars
                     a.Show()
 
-                    a.Name = MovieCredential(0).Replace(" ", "") + "(" + MovieCredential(1) + ")"
+                    a.Name = MovieCredential(1).Replace(" ", "") + "(" + MovieCredential(0) + ")"
 
-                    If My.Settings.doWatchedMovies = 0 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
-                        PanelMovies.Controls.Add(a)
-                    ElseIf My.Settings.doWatchedMovies = 1 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
-                        'Do nothing
-                    ElseIf My.Settings.doWatchedMovies = 2 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
-                        PanelMovies.Controls.Add(a)
-                    Else
-                        PanelMovies.Controls.Add(a)
+                    If Not itemsBlackList.Items.Contains(TitleAndYear) Then 'If movies in users Black List
+                        If My.Settings.doWatchedMovies = 0 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
+                            PanelMovies.Controls.Add(a)
+                        ElseIf My.Settings.doWatchedMovies = 1 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
+                            'Do nothing
+                        ElseIf My.Settings.doWatchedMovies = 2 AndAlso itemsSeenList.Items.Contains(TitleAndYear) Then
+                            PanelMovies.Controls.Add(a)
+                        Else
+                            PanelMovies.Controls.Add(a)
+                        End If
                     End If
                 End If
             Next
@@ -1763,7 +1804,7 @@ Public Class Movieo
 
 #End Region
 
-#Region "Update / Notifications"
+#Region "Update Notification / Convert Text to Image"
 
     Private Sub GetUpdateNotification_Tick(sender As Object, e As EventArgs) Handles GetUpdateNotification.Tick
         Try
@@ -1809,6 +1850,14 @@ Public Class Movieo
             Return SystemIcons.Information.ToBitmap()
         End If
     End Function
+
+    Private Sub cmboTextSortBy_Click(Sender As Object, e As MouseEventArgs) Handles cmboTextSortBy.ClickButtonArea
+
+    End Sub
+
+    Private Sub cmboTextGenre_Click(Sender As Object, e As MouseEventArgs) Handles cmboTextGenre.ClickButtonArea
+
+    End Sub
 
 #End Region
 

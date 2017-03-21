@@ -38,7 +38,7 @@ Public Class ctrlNotificationsMenu
             tab.SelectedTab = tabNotifications
             timerGetItems.Enabled = False
         Catch ex As Exception
-            labelLoading.Text = "Unable to get notifications." + vbNewLine + ex.Message
+            labelLoading.Text = "Notifications can't be loaded right now." + vbNewLine + ex.Message
             timerGetItems.Enabled = False
         End Try
     End Sub

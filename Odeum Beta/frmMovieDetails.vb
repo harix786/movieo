@@ -88,7 +88,7 @@ Public Class frmMovieDetails
             Movieo.RemoveMovie(Movieo.PanelFavourites, Movieo.itemsFavouritesList, InfoTitle.Text, InfoYear.Text)
             BtnFavouriteList.Image = imgFavouriteL
         Else
-            Movieo.AddMovie(Movieo.PanelFavourites, Movieo.itemsFavouritesList, InfoTitle.Text, InfoYear.Text, InfoGenre.Text, InfoDirectors.Text, InfoCast.Text, InfoDescription.Text, MovieDuration.Text, MovieImdbRating.Text.Replace("/10", ""), MovieImageLinkText.Text, MovieLinkText.Text)
+            Movieo.AddMovie(Movieo.PanelFavourites, Movieo.itemsFavouritesList, InfoTitle.Text, InfoYear.Text, InfoGenre.Text, InfoDirectors.Text, InfoCast.Text, InfoDescription.Text, MovieDuration.Text, MovieRating.Text, MovieReleaseDate.Text, MovieCountry.Text, MovieLanguage.Text, MovieProduction.Text, MovieBoxOffice.Text, MovieAwards.Text, MovieImdbId.Text, MovieImdbRating.Text, MovieRTomLink.Text, MovieTomRating.Text, MovieMetaRating.Text, MovieImageLinkText.Text, MovieLinkText.Text)
             BtnFavouriteList.Image = imgFavouriteSticky
         End If
     End Sub
@@ -99,6 +99,7 @@ Public Class frmMovieDetails
         Else
             BtnWatchList.Image = imgWatchListH
         End If
+        ToolTip1.SetToolTip(BtnWatchList, "Add to Watch List")
     End Sub
 
     Private Sub btnWatchSeason_MouseLeave(sender As Object, e As EventArgs) Handles BtnWatchList.MouseLeave
@@ -115,7 +116,7 @@ Public Class frmMovieDetails
             Movieo.RemoveMovie(Movieo.PanelWatchList, Movieo.itemsWatchList, InfoTitle.Text, InfoYear.Text)
             BtnWatchList.Image = imgWatchListL
         Else
-            Movieo.AddMovie(Movieo.PanelWatchList, Movieo.itemsWatchList, InfoTitle.Text, InfoYear.Text, InfoGenre.Text, InfoDirectors.Text, InfoCast.Text, InfoDescription.Text, MovieDuration.Text, MovieImdbRating.Text.Replace("/10", ""), MovieImageLinkText.Text, MovieLinkText.Text)
+            Movieo.AddMovie(Movieo.PanelWatchList, Movieo.itemsWatchList, InfoTitle.Text, InfoYear.Text, InfoGenre.Text, InfoDirectors.Text, InfoCast.Text, InfoDescription.Text, MovieDuration.Text, MovieRating.Text, MovieReleaseDate.Text, MovieCountry.Text, MovieLanguage.Text, MovieProduction.Text, MovieBoxOffice.Text, MovieAwards.Text, MovieImdbId.Text, MovieImdbRating.Text, MovieRTomLink.Text, MovieTomRating.Text, MovieMetaRating.Text, MovieImageLinkText.Text, MovieLinkText.Text)
             BtnWatchList.Image = imgWatchListSticky
 
             If Movieo.itemsBlackList.Items.Contains(InfoTitle.Text + " (" + InfoYear.Text + ")") Then
@@ -152,7 +153,7 @@ Public Class frmMovieDetails
             Movieo.RemoveMovie(Movieo.PanelSeenList, Movieo.itemsSeenList, InfoTitle.Text, InfoYear.Text)
             BtnSeenList.Image = imgSeenListL
         Else
-            Movieo.AddMovie(Movieo.PanelSeenList, Movieo.itemsSeenList, InfoTitle.Text, InfoYear.Text, InfoGenre.Text, InfoDirectors.Text, InfoCast.Text, InfoDescription.Text, MovieDuration.Text, MovieImdbRating.Text.Replace("/10", ""), MovieImageLinkText.Text, MovieLinkText.Text)
+            Movieo.AddMovie(Movieo.PanelSeenList, Movieo.itemsSeenList, InfoTitle.Text, InfoYear.Text, InfoGenre.Text, InfoDirectors.Text, InfoCast.Text, InfoDescription.Text, MovieDuration.Text, MovieRating.Text, MovieReleaseDate.Text, MovieCountry.Text, MovieLanguage.Text, MovieProduction.Text, MovieBoxOffice.Text, MovieAwards.Text, MovieImdbId.Text, MovieImdbRating.Text, MovieRTomLink.Text, MovieTomRating.Text, MovieMetaRating.Text, MovieImageLinkText.Text, MovieLinkText.Text)
             BtnSeenList.Image = imgSeenListSticky
 
             If Movieo.itemsBlackList.Items.Contains(InfoTitle.Text + " (" + InfoYear.Text + ")") Then
@@ -189,7 +190,7 @@ Public Class frmMovieDetails
             Movieo.RemoveMovie(Movieo.PanelBlackList, Movieo.itemsBlackList, InfoTitle.Text, InfoYear.Text)
             BtnBlackList.Image = imgBlackListL
         Else
-            Movieo.AddMovie(Movieo.PanelBlackList, Movieo.itemsBlackList, InfoTitle.Text, InfoYear.Text, InfoGenre.Text, InfoDirectors.Text, InfoCast.Text, InfoDescription.Text, MovieDuration.Text, MovieImdbRating.Text.Replace("/10", ""), MovieImageLinkText.Text, MovieLinkText.Text)
+            Movieo.AddMovie(Movieo.PanelBlackList, Movieo.itemsBlackList, InfoTitle.Text, InfoYear.Text, InfoGenre.Text, InfoDirectors.Text, InfoCast.Text, InfoDescription.Text, MovieDuration.Text, MovieRating.Text, MovieReleaseDate.Text, MovieCountry.Text, MovieLanguage.Text, MovieProduction.Text, MovieBoxOffice.Text, MovieAwards.Text, MovieImdbId.Text, MovieImdbRating.Text, MovieRTomLink.Text, MovieTomRating.Text, MovieMetaRating.Text, MovieImageLinkText.Text, MovieLinkText.Text)
             BtnBlackList.Image = imgBlackListSticky
 
             If Movieo.itemsSeenList.Items.Contains(InfoTitle.Text + " (" + InfoYear.Text + ")") Then
@@ -230,7 +231,7 @@ Public Class frmMovieDetails
 
     Private Sub btnWatchTrailer_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnWatchTrailer.ClickButtonArea
         Try
-            Dim GetLink As String = Movieo.NetDl.DownloadString("http://trailersapi.com/trailers.json?movie=" + InfoTitle.Text + "&limit=1")
+            Dim GetLink = Movieo.NetDl.DownloadString("http://trailersapi.com/trailers.json?movie=" + InfoTitle.Text + "&limit=1")
             Dim SplitIt = GetLink.Split(Chr(34))
             Dim EmbedLink = SplitIt(12).Replace("\/", "\")
             frmTrailerPlayer.web.Navigate(EmbedLink)
@@ -285,4 +286,5 @@ Public Class frmMovieDetails
     Private Sub frmMovieDetails_Paint(sender As Object, e As PaintEventArgs) Handles Me.Paint
         Show()
     End Sub
+
 End Class

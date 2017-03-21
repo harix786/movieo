@@ -233,7 +233,7 @@ Public Class frmInfo
     End Sub
 
     Private Sub ContactTwitter_Click(sender As Object, e As EventArgs) Handles lblSocialTwitter.Click
-        Process.Start("http://twitter.com/localenvy")
+        Process.Start("http://twitter.com/accurynx")
     End Sub
 
     Private Sub TabAbout_Scroll(sender As Object, e As ScrollEventArgs) Handles tabAbout.Scroll

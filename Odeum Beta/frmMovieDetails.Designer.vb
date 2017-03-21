@@ -80,6 +80,11 @@ Partial Class frmMovieDetails
         Me.ImgImdb = New System.Windows.Forms.PictureBox()
         Me.appClose = New System.Windows.Forms.PictureBox()
         Me.btnWatchTrailer = New CButtonLib.CButton()
+        Me.PosterLinkText = New System.Windows.Forms.Label()
+        Me.PosterLinkTetx = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.lblSimilar = New System.Windows.Forms.Label()
         Me.ActionsPanel.SuspendLayout()
         CType(Me.BtnFavouriteList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnWatchList, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,6 +96,7 @@ Partial Class frmMovieDetails
         CType(Me.ImgRTomatoes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImgImdb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.appClose, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'InfoTitle
@@ -152,6 +158,7 @@ Partial Class frmMovieDetails
         resources.ApplyResources(Me.BtnFavouriteList, "BtnFavouriteList")
         Me.BtnFavouriteList.Name = "BtnFavouriteList"
         Me.BtnFavouriteList.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BtnFavouriteList, resources.GetString("BtnFavouriteList.ToolTip"))
         '
         'Splitter2
         '
@@ -166,6 +173,7 @@ Partial Class frmMovieDetails
         resources.ApplyResources(Me.BtnWatchList, "BtnWatchList")
         Me.BtnWatchList.Name = "BtnWatchList"
         Me.BtnWatchList.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BtnWatchList, resources.GetString("BtnWatchList.ToolTip"))
         '
         'Splitter3
         '
@@ -180,6 +188,7 @@ Partial Class frmMovieDetails
         resources.ApplyResources(Me.BtnSeenList, "BtnSeenList")
         Me.BtnSeenList.Name = "BtnSeenList"
         Me.BtnSeenList.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BtnSeenList, resources.GetString("BtnSeenList.ToolTip"))
         '
         'Splitter4
         '
@@ -194,6 +203,7 @@ Partial Class frmMovieDetails
         resources.ApplyResources(Me.BtnBlackList, "BtnBlackList")
         Me.BtnBlackList.Name = "BtnBlackList"
         Me.BtnBlackList.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.BtnBlackList, resources.GetString("BtnBlackList.ToolTip"))
         '
         'InfoCast
         '
@@ -583,6 +593,41 @@ Partial Class frmMovieDetails
         Me.btnWatchTrailer.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnWatchTrailer.TextShadowShow = False
         '
+        'PosterLinkText
+        '
+        resources.ApplyResources(Me.PosterLinkText, "PosterLinkText")
+        Me.PosterLinkText.ForeColor = System.Drawing.Color.White
+        Me.PosterLinkText.Name = "PosterLinkText"
+        '
+        'PosterLinkTetx
+        '
+        resources.ApplyResources(Me.PosterLinkTetx, "PosterLinkTetx")
+        Me.PosterLinkTetx.ForeColor = System.Drawing.Color.White
+        Me.PosterLinkTetx.Name = "PosterLinkTetx"
+        '
+        'ToolTip1
+        '
+        Me.ToolTip1.AutomaticDelay = 200
+        Me.ToolTip1.AutoPopDelay = 2000
+        Me.ToolTip1.BackColor = System.Drawing.Color.DimGray
+        Me.ToolTip1.ForeColor = System.Drawing.Color.White
+        Me.ToolTip1.InitialDelay = 200
+        Me.ToolTip1.OwnerDraw = True
+        Me.ToolTip1.ReshowDelay = 0
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.lblSimilar)
+        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        '
+        'lblSimilar
+        '
+        resources.ApplyResources(Me.lblSimilar, "lblSimilar")
+        Me.FlowLayoutPanel1.SetFlowBreak(Me.lblSimilar, True)
+        Me.lblSimilar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.lblSimilar.Name = "lblSimilar"
+        '
         'frmMovieDetails
         '
         resources.ApplyResources(Me, "$this")
@@ -598,6 +643,7 @@ Partial Class frmMovieDetails
         Me.Controls.Add(Me.ImgMetaCritic)
         Me.Controls.Add(Me.MovieTomRating)
         Me.Controls.Add(Me.ImgRTomatoes)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.MovieImdbRating)
         Me.Controls.Add(Me.ImgImdb)
         Me.Controls.Add(Me.SplitterLine1)
@@ -628,6 +674,8 @@ Partial Class frmMovieDetails
         CType(Me.ImgRTomatoes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ImgImdb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.appClose, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -688,4 +736,9 @@ Partial Class frmMovieDetails
     Friend WithEvents frmFadeIn As Timer
     Friend WithEvents panelDetails As FlowLayoutPanel
     Public WithEvents btnWatchTrailer As CButtonLib.CButton
+    Friend WithEvents PosterLinkText As Label
+    Friend WithEvents PosterLinkTetx As Label
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents lblSimilar As Label
 End Class

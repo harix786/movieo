@@ -38,7 +38,7 @@ Partial Class frmPopupOk
         Me.DialogMessage.Cursor = System.Windows.Forms.Cursors.Default
         Me.DialogMessage.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.DialogMessage.ForeColor = System.Drawing.Color.White
-        Me.DialogMessage.Location = New System.Drawing.Point(19, 55)
+        Me.DialogMessage.Location = New System.Drawing.Point(19, 52)
         Me.DialogMessage.Name = "DialogMessage"
         Me.DialogMessage.Size = New System.Drawing.Size(467, 75)
         Me.DialogMessage.TabIndex = 999
@@ -61,22 +61,21 @@ Partial Class frmPopupOk
         '
         Me.btnOk.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnOk.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.btnOk.BorderColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.btnOk.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(151, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.btnOk.ColorFillSolid = System.Drawing.Color.SteelBlue
         Me.btnOk.Corners.All = 2
         Me.btnOk.Corners.LowerLeft = 2
         Me.btnOk.Corners.LowerRight = 2
         Me.btnOk.Corners.UpperLeft = 2
         Me.btnOk.Corners.UpperRight = 2
         Me.btnOk.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnOk.DesignerSelected = True
+        Me.btnOk.DesignerSelected = False
         Me.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.btnOk.DimFactorClick = 0
         Me.btnOk.DimFactorHover = 10
         Me.btnOk.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnOk.Font = New System.Drawing.Font("Segoe UI", 10.5!, System.Drawing.FontStyle.Bold)
         Me.btnOk.ImageIndex = 0
-        Me.btnOk.Location = New System.Drawing.Point(405, 161)
+        Me.btnOk.Location = New System.Drawing.Point(403, 161)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnOk.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -86,6 +85,7 @@ Partial Class frmPopupOk
         Me.btnOk.Size = New System.Drawing.Size(89, 30)
         Me.btnOk.TabIndex = 1
         Me.btnOk.Text = "Ok"
+        Me.btnOk.TextMargin = New System.Windows.Forms.Padding(2, 3, 2, 2)
         Me.btnOk.TextShadowShow = False
         '
         'panelBottom
@@ -105,7 +105,7 @@ Partial Class frmPopupOk
         Me.panelBottom.Name = "panelBottom"
         Me.panelBottom.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.panelBottom.Size = New System.Drawing.Size(509, 62)
-        Me.panelBottom.TabIndex = 10000
+        Me.panelBottom.TabIndex = 10002
         Me.panelBottom.TabStop = False
         Me.panelBottom.Text = ""
         '

@@ -50,6 +50,7 @@ Partial Class ctrlPosterTitle
         Me.InfoBoxOffice = New System.Windows.Forms.Label()
         Me.InfoImdbId = New System.Windows.Forms.Label()
         Me.InfoRTomLink = New System.Windows.Forms.Label()
+        Me.InfoMovieQuality = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -205,14 +206,13 @@ Partial Class ctrlPosterTitle
         Me.InfoBasic.AutoEllipsis = True
         Me.InfoBasic.BackColor = System.Drawing.Color.Transparent
         Me.InfoBasic.Font = New System.Drawing.Font("Segoe UI", 9.25!)
-        Me.InfoBasic.ForeColor = System.Drawing.Color.White
-        Me.InfoBasic.Location = New System.Drawing.Point(6, 299)
+        Me.InfoBasic.ForeColor = System.Drawing.Color.DarkGray
+        Me.InfoBasic.Location = New System.Drawing.Point(7, 298)
         Me.InfoBasic.Margin = New System.Windows.Forms.Padding(3)
         Me.InfoBasic.Name = "InfoBasic"
-        Me.InfoBasic.Size = New System.Drawing.Size(172, 18)
+        Me.InfoBasic.Size = New System.Drawing.Size(90, 18)
         Me.InfoBasic.TabIndex = 26
-        Me.InfoBasic.Text = "☆ 0.0 • 0000"
-        Me.InfoBasic.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.InfoBasic.Text = "0.0 • 0000"
         '
         'InfoTitle
         '
@@ -226,8 +226,7 @@ Partial Class ctrlPosterTitle
         Me.InfoTitle.Name = "InfoTitle"
         Me.InfoTitle.Size = New System.Drawing.Size(172, 25)
         Me.InfoTitle.TabIndex = 43
-        Me.InfoTitle.Text = "Movie Title Text"
-        Me.InfoTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.InfoTitle.Text = "Movie Title"
         '
         'InfoPoster
         '
@@ -238,7 +237,7 @@ Partial Class ctrlPosterTitle
         Me.InfoPoster.BorderShow = False
         Me.InfoPoster.ColorFillSolid = System.Drawing.Color.Transparent
         Me.InfoPoster.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.InfoPoster.DesignerSelected = False
+        Me.InfoPoster.DesignerSelected = True
         Me.InfoPoster.DimFactorClick = 0
         Me.InfoPoster.DimFactorHover = 0
         Me.InfoPoster.FillType = CButtonLib.CButton.eFillType.Solid
@@ -283,9 +282,8 @@ Partial Class ctrlPosterTitle
         Me.InfoRMetaCritic.AutoSize = True
         Me.InfoRMetaCritic.Location = New System.Drawing.Point(73, 157)
         Me.InfoRMetaCritic.Name = "InfoRMetaCritic"
-        Me.InfoRMetaCritic.Size = New System.Drawing.Size(39, 13)
+        Me.InfoRMetaCritic.Size = New System.Drawing.Size(0, 13)
         Me.InfoRMetaCritic.TabIndex = 46
-        Me.InfoRMetaCritic.Text = "Label2"
         Me.InfoRMetaCritic.Visible = False
         '
         'PictureBox1
@@ -307,9 +305,8 @@ Partial Class ctrlPosterTitle
         Me.InfoRTomatoes.AutoSize = True
         Me.InfoRTomatoes.Location = New System.Drawing.Point(81, 165)
         Me.InfoRTomatoes.Name = "InfoRTomatoes"
-        Me.InfoRTomatoes.Size = New System.Drawing.Size(39, 13)
+        Me.InfoRTomatoes.Size = New System.Drawing.Size(0, 13)
         Me.InfoRTomatoes.TabIndex = 47
-        Me.InfoRTomatoes.Text = "Label2"
         Me.InfoRTomatoes.Visible = False
         '
         'InfoRating
@@ -320,9 +317,8 @@ Partial Class ctrlPosterTitle
         Me.InfoRating.AutoSize = True
         Me.InfoRating.Location = New System.Drawing.Point(89, 173)
         Me.InfoRating.Name = "InfoRating"
-        Me.InfoRating.Size = New System.Drawing.Size(39, 13)
+        Me.InfoRating.Size = New System.Drawing.Size(0, 13)
         Me.InfoRating.TabIndex = 48
-        Me.InfoRating.Text = "Label2"
         Me.InfoRating.Visible = False
         '
         'InfoCountry
@@ -333,9 +329,8 @@ Partial Class ctrlPosterTitle
         Me.InfoCountry.AutoSize = True
         Me.InfoCountry.Location = New System.Drawing.Point(97, 181)
         Me.InfoCountry.Name = "InfoCountry"
-        Me.InfoCountry.Size = New System.Drawing.Size(39, 13)
+        Me.InfoCountry.Size = New System.Drawing.Size(0, 13)
         Me.InfoCountry.TabIndex = 49
-        Me.InfoCountry.Text = "Label2"
         Me.InfoCountry.Visible = False
         '
         'InfoLanguage
@@ -346,9 +341,8 @@ Partial Class ctrlPosterTitle
         Me.InfoLanguage.AutoSize = True
         Me.InfoLanguage.Location = New System.Drawing.Point(105, 189)
         Me.InfoLanguage.Name = "InfoLanguage"
-        Me.InfoLanguage.Size = New System.Drawing.Size(39, 13)
+        Me.InfoLanguage.Size = New System.Drawing.Size(0, 13)
         Me.InfoLanguage.TabIndex = 50
-        Me.InfoLanguage.Text = "Label2"
         Me.InfoLanguage.Visible = False
         '
         'InfoAwards
@@ -359,9 +353,8 @@ Partial Class ctrlPosterTitle
         Me.InfoAwards.AutoSize = True
         Me.InfoAwards.Location = New System.Drawing.Point(113, 197)
         Me.InfoAwards.Name = "InfoAwards"
-        Me.InfoAwards.Size = New System.Drawing.Size(39, 13)
+        Me.InfoAwards.Size = New System.Drawing.Size(0, 13)
         Me.InfoAwards.TabIndex = 51
-        Me.InfoAwards.Text = "Label2"
         Me.InfoAwards.Visible = False
         '
         'InfoProduction
@@ -372,9 +365,8 @@ Partial Class ctrlPosterTitle
         Me.InfoProduction.AutoSize = True
         Me.InfoProduction.Location = New System.Drawing.Point(121, 205)
         Me.InfoProduction.Name = "InfoProduction"
-        Me.InfoProduction.Size = New System.Drawing.Size(39, 13)
+        Me.InfoProduction.Size = New System.Drawing.Size(0, 13)
         Me.InfoProduction.TabIndex = 52
-        Me.InfoProduction.Text = "Label2"
         Me.InfoProduction.Visible = False
         '
         'InfoBoxOffice
@@ -385,9 +377,8 @@ Partial Class ctrlPosterTitle
         Me.InfoBoxOffice.AutoSize = True
         Me.InfoBoxOffice.Location = New System.Drawing.Point(129, 213)
         Me.InfoBoxOffice.Name = "InfoBoxOffice"
-        Me.InfoBoxOffice.Size = New System.Drawing.Size(39, 13)
+        Me.InfoBoxOffice.Size = New System.Drawing.Size(0, 13)
         Me.InfoBoxOffice.TabIndex = 53
-        Me.InfoBoxOffice.Text = "Label2"
         Me.InfoBoxOffice.Visible = False
         '
         'InfoImdbId
@@ -398,9 +389,8 @@ Partial Class ctrlPosterTitle
         Me.InfoImdbId.AutoSize = True
         Me.InfoImdbId.Location = New System.Drawing.Point(137, 221)
         Me.InfoImdbId.Name = "InfoImdbId"
-        Me.InfoImdbId.Size = New System.Drawing.Size(39, 13)
+        Me.InfoImdbId.Size = New System.Drawing.Size(0, 13)
         Me.InfoImdbId.TabIndex = 54
-        Me.InfoImdbId.Text = "Label2"
         Me.InfoImdbId.Visible = False
         '
         'InfoRTomLink
@@ -411,10 +401,22 @@ Partial Class ctrlPosterTitle
         Me.InfoRTomLink.AutoSize = True
         Me.InfoRTomLink.Location = New System.Drawing.Point(145, 229)
         Me.InfoRTomLink.Name = "InfoRTomLink"
-        Me.InfoRTomLink.Size = New System.Drawing.Size(39, 13)
+        Me.InfoRTomLink.Size = New System.Drawing.Size(0, 13)
         Me.InfoRTomLink.TabIndex = 55
-        Me.InfoRTomLink.Text = "Label2"
         Me.InfoRTomLink.Visible = False
+        '
+        'InfoMovieQuality
+        '
+        Me.InfoMovieQuality.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.InfoMovieQuality.Font = New System.Drawing.Font("Segoe UI", 9.25!)
+        Me.InfoMovieQuality.ForeColor = System.Drawing.Color.DarkGray
+        Me.InfoMovieQuality.Location = New System.Drawing.Point(113, 298)
+        Me.InfoMovieQuality.Name = "InfoMovieQuality"
+        Me.InfoMovieQuality.Size = New System.Drawing.Size(64, 18)
+        Me.InfoMovieQuality.TabIndex = 56
+        Me.InfoMovieQuality.Text = "Quality"
+        Me.InfoMovieQuality.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.InfoMovieQuality.Visible = False
         '
         'ctrlPosterTitle
         '
@@ -424,6 +426,7 @@ Partial Class ctrlPosterTitle
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(185, 327)
         Me.ControlBox = False
+        Me.Controls.Add(Me.InfoMovieQuality)
         Me.Controls.Add(Me.InfoRTomLink)
         Me.Controls.Add(Me.InfoImdbId)
         Me.Controls.Add(Me.InfoBoxOffice)
@@ -492,4 +495,5 @@ Partial Class ctrlPosterTitle
     Friend WithEvents InfoBoxOffice As Label
     Friend WithEvents InfoImdbId As Label
     Friend WithEvents InfoRTomLink As Label
+    Friend WithEvents InfoMovieQuality As Label
 End Class
