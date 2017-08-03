@@ -103,6 +103,7 @@ Partial Class Movieo
         Me.panelTabTitles = New System.Windows.Forms.Panel()
         Me.fncSplitter2 = New CButtonLib.CButton()
         Me.titleCoreMyLists = New CButtonLib.CButton()
+        Me.txtboxSearch = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.btnInfoMenu = New System.Windows.Forms.PictureBox()
         Me.titleCoreDiscover = New CButtonLib.CButton()
         Me.imgSearchIcon = New System.Windows.Forms.PictureBox()
@@ -114,7 +115,6 @@ Partial Class Movieo
         Me.timerHideNotifications = New System.Windows.Forms.Timer(Me.components)
         Me.imgDropShadowMainTabs = New System.Windows.Forms.PictureBox()
         Me.icoLoadingWeb = New System.Windows.Forms.PictureBox()
-        Me.txtboxSearch = New ChreneLib.Controls.TextBoxes.CTextBox()
         Me.Tab.SuspendLayout()
         Me.tabDiscover.SuspendLayout()
         Me.panelGenres.SuspendLayout()
@@ -780,7 +780,7 @@ Partial Class Movieo
         Me.imgPanelsEmptyAllMovies.BackColor = System.Drawing.Color.Transparent
         Me.imgPanelsEmptyAllMovies.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold)
         Me.imgPanelsEmptyAllMovies.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.imgPanelsEmptyAllMovies.Location = New System.Drawing.Point(309, 102)
+        Me.imgPanelsEmptyAllMovies.Location = New System.Drawing.Point(309, 104)
         Me.imgPanelsEmptyAllMovies.Name = "imgPanelsEmptyAllMovies"
         Me.imgPanelsEmptyAllMovies.Size = New System.Drawing.Size(841, 56)
         Me.imgPanelsEmptyAllMovies.TabIndex = 10004
@@ -1595,6 +1595,23 @@ Partial Class Movieo
         Me.titleCoreMyLists.TextShadow = System.Drawing.Color.White
         Me.titleCoreMyLists.TextShadowShow = False
         '
+        'txtboxSearch
+        '
+        Me.txtboxSearch.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.txtboxSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.txtboxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtboxSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.txtboxSearch.ForeColor = System.Drawing.Color.White
+        Me.txtboxSearch.Location = New System.Drawing.Point(1009, 13)
+        Me.txtboxSearch.MaxLength = 50
+        Me.txtboxSearch.Name = "txtboxSearch"
+        Me.txtboxSearch.Size = New System.Drawing.Size(213, 18)
+        Me.txtboxSearch.TabIndex = 100022
+        Me.txtboxSearch.WaterMark = "Search movies, people, years..."
+        Me.txtboxSearch.WaterMarkActiveForeColor = System.Drawing.Color.White
+        Me.txtboxSearch.WaterMarkFont = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.txtboxSearch.WaterMarkForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
+        '
         'btnInfoMenu
         '
         Me.btnInfoMenu.Anchor = System.Windows.Forms.AnchorStyles.Right
@@ -1708,23 +1725,6 @@ Partial Class Movieo
         Me.icoLoadingWeb.Size = New System.Drawing.Size(100, 50)
         Me.icoLoadingWeb.TabIndex = 0
         Me.icoLoadingWeb.TabStop = False
-        '
-        'txtboxSearch
-        '
-        Me.txtboxSearch.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.txtboxSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.txtboxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtboxSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
-        Me.txtboxSearch.ForeColor = System.Drawing.Color.White
-        Me.txtboxSearch.Location = New System.Drawing.Point(1009, 13)
-        Me.txtboxSearch.MaxLength = 50
-        Me.txtboxSearch.Name = "txtboxSearch"
-        Me.txtboxSearch.Size = New System.Drawing.Size(213, 18)
-        Me.txtboxSearch.TabIndex = 100022
-        Me.txtboxSearch.WaterMark = "Search movies, people, years..."
-        Me.txtboxSearch.WaterMarkActiveForeColor = System.Drawing.Color.White
-        Me.txtboxSearch.WaterMarkFont = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
-        Me.txtboxSearch.WaterMarkForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         '
         'Movieo
         '
