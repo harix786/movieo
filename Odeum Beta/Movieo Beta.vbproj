@@ -94,6 +94,10 @@
     <Reference Include="CButtonLib">
       <HintPath>..\..\..\- Plugins\CButton\CButton\bin\Debug\CButtonLib.dll</HintPath>
     </Reference>
+    <Reference Include="ChreneLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\- Plugins\ChreneLib_DLL\ChreneLib.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -547,12 +551,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>True</Private>
     </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\- Plugins\ChreneLib\ChreneLib.csproj">
-      <Project>{C636A9AF-6648-4CC6-9905-A972CFBCEE09}</Project>
-      <Name>ChreneLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

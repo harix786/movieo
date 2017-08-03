@@ -5,9 +5,9 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Movieo Beta", "Odeum Beta\Movieo Beta.vbproj", "{E4CF33BC-C606-478C-9A8D-8619BFEEF087}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CButtonLib", "..\..\- Plugins\CButton\CButton\CButtonLib.vbproj", "{24116FE6-8501-45F0-ADD0-67FFFB037BAF}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CButtonLib", "..\..\..\..\Documents\Visual Studio 2015\- Plugins\CButton\CButton\CButtonLib.vbproj", "{24116FE6-8501-45F0-ADD0-67FFFB037BAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChreneLib", "..\..\- Plugins\ChreneLib\ChreneLib.csproj", "{C636A9AF-6648-4CC6-9905-A972CFBCEE09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChreneLib", "..\..\..\..\Documents\Visual Studio 2015\- Plugins\ChreneLib\ChreneLib.csproj", "{C636A9AF-6648-4CC6-9905-A972CFBCEE09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
