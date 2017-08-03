@@ -118,87 +118,84 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="InfoTitle.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="InfoTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 24pt</value>
+  <data name="infoTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 18pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="InfoTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="InfoTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 0</value>
+  <data name="infoTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="InfoTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 0, 0</value>
+  <data name="infoTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="InfoTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 45</value>
+  <data name="infoTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 32</value>
   </data>
-  <data name="InfoTitle.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoTitle.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
-  <data name="InfoTitle.Text" xml:space="preserve">
+  <data name="infoTitle.Text" xml:space="preserve">
     <value>Movie Title</value>
   </data>
-  <data name="&gt;&gt;InfoTitle.Name" xml:space="preserve">
-    <value>InfoTitle</value>
+  <data name="&gt;&gt;infoTitle.Name" xml:space="preserve">
+    <value>infoTitle</value>
   </data>
-  <data name="&gt;&gt;InfoTitle.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoTitle.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InfoTitle.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoTitle.Parent" xml:space="preserve">
     <value>InfoPanel1</value>
   </data>
-  <data name="&gt;&gt;InfoTitle.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoTitle.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="InfoYear.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="InfoYear.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoYear.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="InfoPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="InfoGenre.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoGenre.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="InfoGenre.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoGenre.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="InfoGenre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoGenre.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="InfoGenre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 47</value>
+  <data name="infoGenre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 36</value>
   </data>
-  <data name="InfoGenre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 2, 0, 20</value>
+  <data name="infoGenre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 0, 20</value>
   </data>
-  <data name="InfoGenre.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoGenre.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 23</value>
   </data>
-  <data name="InfoGenre.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoGenre.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="InfoGenre.Text" xml:space="preserve">
+  <data name="infoGenre.Text" xml:space="preserve">
     <value>Genre(s)</value>
   </data>
-  <data name="&gt;&gt;InfoGenre.Name" xml:space="preserve">
-    <value>InfoGenre</value>
+  <data name="&gt;&gt;infoGenre.Name" xml:space="preserve">
+    <value>infoGenre</value>
   </data>
-  <data name="&gt;&gt;InfoGenre.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoGenre.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InfoGenre.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoGenre.Parent" xml:space="preserve">
     <value>InfoPanel1</value>
   </data>
-  <data name="&gt;&gt;InfoGenre.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoGenre.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="Splitter1.AutoSize" type="System.Boolean, mscorlib">
@@ -211,10 +208,10 @@
     <value>NoControl</value>
   </data>
   <data name="Splitter1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 48</value>
+    <value>76, 38</value>
   </data>
   <data name="Splitter1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 3, 0, 0</value>
+    <value>0, 6, 0, 0</value>
   </data>
   <data name="Splitter1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 0, 0</value>
@@ -240,76 +237,76 @@
   <data name="&gt;&gt;Splitter1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="InfoQuality.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoQuality.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="InfoQuality.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoQuality.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="InfoQuality.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoQuality.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="InfoQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 47</value>
+  <data name="infoQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>98, 36</value>
   </data>
-  <data name="InfoQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 0</value>
+  <data name="infoQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 0, 20</value>
   </data>
-  <data name="InfoQuality.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoQuality.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
   </data>
-  <data name="InfoQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>1049</value>
+  <data name="infoQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>1051</value>
   </data>
-  <data name="InfoQuality.Text" xml:space="preserve">
+  <data name="infoQuality.Text" xml:space="preserve">
     <value>Quality</value>
   </data>
-  <data name="&gt;&gt;InfoQuality.Name" xml:space="preserve">
-    <value>InfoQuality</value>
+  <data name="&gt;&gt;infoQuality.Name" xml:space="preserve">
+    <value>infoQuality</value>
   </data>
-  <data name="&gt;&gt;InfoQuality.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoQuality.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InfoQuality.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoQuality.Parent" xml:space="preserve">
     <value>InfoPanel1</value>
   </data>
-  <data name="&gt;&gt;InfoQuality.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoQuality.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="InfoDescription.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoDescription.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="InfoDescription.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoDescription.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="InfoDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoDescription.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="InfoDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 90</value>
+  <data name="infoDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 79</value>
   </data>
-  <data name="InfoDescription.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 0, 0, 0</value>
+  <data name="infoDescription.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 0, 0</value>
   </data>
-  <data name="InfoDescription.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 23</value>
   </data>
-  <data name="InfoDescription.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoDescription.TabIndex" type="System.Int32, mscorlib">
     <value>1060</value>
   </data>
-  <data name="InfoDescription.Text" xml:space="preserve">
+  <data name="infoDescription.Text" xml:space="preserve">
     <value>Description</value>
   </data>
-  <data name="&gt;&gt;InfoDescription.Name" xml:space="preserve">
-    <value>InfoDescription</value>
+  <data name="&gt;&gt;infoDescription.Name" xml:space="preserve">
+    <value>infoDescription</value>
   </data>
-  <data name="&gt;&gt;InfoDescription.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoDescription.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InfoDescription.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoDescription.Parent" xml:space="preserve">
     <value>InfoPanel1</value>
   </data>
-  <data name="&gt;&gt;InfoDescription.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoDescription.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="lblSubDirectors.AutoSize" type="System.Boolean, mscorlib">
@@ -322,10 +319,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubDirectors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 137</value>
+    <value>3, 126</value>
   </data>
   <data name="lblSubDirectors.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 12, 0, 0</value>
+    <value>3, 12, 0, 0</value>
   </data>
   <data name="lblSubDirectors.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
@@ -348,40 +345,40 @@
   <data name="&gt;&gt;lblSubDirectors.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="InfoDirectors.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoDirectors.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="InfoDirectors.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoDirectors.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="InfoDirectors.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoDirectors.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="InfoDirectors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 137</value>
+  <data name="infoDirectors.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 126</value>
   </data>
-  <data name="InfoDirectors.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="infoDirectors.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 12, 3, 0</value>
   </data>
-  <data name="InfoDirectors.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoDirectors.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 23</value>
   </data>
-  <data name="InfoDirectors.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoDirectors.TabIndex" type="System.Int32, mscorlib">
     <value>1049</value>
   </data>
-  <data name="InfoDirectors.Text" xml:space="preserve">
+  <data name="infoDirectors.Text" xml:space="preserve">
     <value>Directors</value>
   </data>
-  <data name="&gt;&gt;InfoDirectors.Name" xml:space="preserve">
-    <value>InfoDirectors</value>
+  <data name="&gt;&gt;infoDirectors.Name" xml:space="preserve">
+    <value>infoDirectors</value>
   </data>
-  <data name="&gt;&gt;InfoDirectors.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoDirectors.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InfoDirectors.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoDirectors.Parent" xml:space="preserve">
     <value>InfoPanel1</value>
   </data>
-  <data name="&gt;&gt;InfoDirectors.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoDirectors.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="lblSubCast.AutoSize" type="System.Boolean, mscorlib">
@@ -394,10 +391,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubCast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 166</value>
+    <value>3, 155</value>
   </data>
   <data name="lblSubCast.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 6, 0, 0</value>
+    <value>3, 6, 0, 0</value>
   </data>
   <data name="lblSubCast.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 23</value>
@@ -420,47 +417,47 @@
   <data name="&gt;&gt;lblSubCast.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="InfoCast.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoCast.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="InfoCast.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoCast.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="InfoCast.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoCast.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="InfoCast.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 166</value>
+  <data name="infoCast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 155</value>
   </data>
-  <data name="InfoCast.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="infoCast.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 6, 3, 0</value>
   </data>
-  <data name="InfoCast.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoCast.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 23</value>
   </data>
-  <data name="InfoCast.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoCast.TabIndex" type="System.Int32, mscorlib">
     <value>1048</value>
   </data>
-  <data name="InfoCast.Text" xml:space="preserve">
+  <data name="infoCast.Text" xml:space="preserve">
     <value>Stars</value>
   </data>
-  <data name="&gt;&gt;InfoCast.Name" xml:space="preserve">
-    <value>InfoCast</value>
+  <data name="&gt;&gt;infoCast.Name" xml:space="preserve">
+    <value>infoCast</value>
   </data>
-  <data name="&gt;&gt;InfoCast.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoCast.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InfoCast.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoCast.Parent" xml:space="preserve">
     <value>InfoPanel1</value>
   </data>
-  <data name="&gt;&gt;InfoCast.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoCast.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="InfoPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>302, 29</value>
+    <value>300, 20</value>
   </data>
   <data name="InfoPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>530, 376</value>
+    <value>545, 270</value>
   </data>
   <data name="InfoPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>1082</value>
@@ -475,70 +472,67 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;InfoPanel1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>24</value>
   </data>
-  <data name="InfoYear.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoYear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="InfoYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 18</value>
+  <data name="infoYear.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="InfoYear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 18, 3, 0</value>
+  <data name="infoYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 8</value>
   </data>
-  <data name="InfoYear.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoYear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 8, 3, 0</value>
+  </data>
+  <data name="infoYear.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 23</value>
   </data>
-  <data name="InfoYear.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoYear.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
-  <data name="InfoYear.Text" xml:space="preserve">
+  <data name="infoYear.Text" xml:space="preserve">
     <value>Year</value>
   </data>
-  <data name="&gt;&gt;InfoYear.Name" xml:space="preserve">
-    <value>InfoYear</value>
+  <data name="&gt;&gt;infoYear.Name" xml:space="preserve">
+    <value>infoYear</value>
   </data>
-  <data name="&gt;&gt;InfoYear.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoYear.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InfoYear.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoYear.Parent" xml:space="preserve">
     <value>InfoPanel1</value>
   </data>
-  <data name="&gt;&gt;InfoYear.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoYear.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="MovieDuration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="MovieDuration.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoDuration.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="panelDetails.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="lblHeaderDetails.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="lblHeaderDetails.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblHeaderDetails.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 12.8pt, style=Bold</value>
+    <value>Segoe UI Semibold, 12.2pt</value>
   </data>
   <data name="lblHeaderDetails.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblHeaderDetails.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 0</value>
+    <value>3, 0</value>
   </data>
   <data name="lblHeaderDetails.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 3, 20</value>
+    <value>3, 0, 3, 15</value>
   </data>
   <data name="lblHeaderDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 25</value>
+    <value>72, 23</value>
   </data>
   <data name="lblHeaderDetails.TabIndex" type="System.Int32, mscorlib">
-    <value>1069</value>
+    <value>0</value>
   </data>
   <data name="lblHeaderDetails.Text" xml:space="preserve">
     <value>DETAILS</value>
@@ -568,7 +562,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubRating.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 45</value>
+    <value>3, 38</value>
   </data>
   <data name="lblSubRating.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -594,43 +588,43 @@
   <data name="&gt;&gt;lblSubRating.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="MovieRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="infoRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="MovieRating.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoRating.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MovieRating.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoRating.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="MovieRating.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoRating.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MovieRating.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 45</value>
+  <data name="infoRating.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 38</value>
   </data>
-  <data name="MovieRating.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="infoRating.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
   </data>
-  <data name="MovieRating.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoRating.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 23</value>
   </data>
-  <data name="MovieRating.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoRating.TabIndex" type="System.Int32, mscorlib">
     <value>1070</value>
   </data>
-  <data name="MovieRating.Text" xml:space="preserve">
+  <data name="infoRating.Text" xml:space="preserve">
     <value>Rating</value>
   </data>
-  <data name="&gt;&gt;MovieRating.Name" xml:space="preserve">
-    <value>MovieRating</value>
+  <data name="&gt;&gt;infoRating.Name" xml:space="preserve">
+    <value>infoRating</value>
   </data>
-  <data name="&gt;&gt;MovieRating.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoRating.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovieRating.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoRating.Parent" xml:space="preserve">
     <value>panelDetails</value>
   </data>
-  <data name="&gt;&gt;MovieRating.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoRating.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="lblSubRuntime.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -646,7 +640,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubRuntime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 72</value>
+    <value>3, 65</value>
   </data>
   <data name="lblSubRuntime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -685,7 +679,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubReleaseDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 99</value>
+    <value>3, 92</value>
   </data>
   <data name="lblSubReleaseDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -711,43 +705,43 @@
   <data name="&gt;&gt;lblSubReleaseDate.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="MovieReleaseDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="infoReleaseDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="MovieReleaseDate.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoReleaseDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MovieReleaseDate.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoReleaseDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="MovieReleaseDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoReleaseDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MovieReleaseDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 99</value>
+  <data name="infoReleaseDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 92</value>
   </data>
-  <data name="MovieReleaseDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="infoReleaseDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
   </data>
-  <data name="MovieReleaseDate.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoReleaseDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 23</value>
   </data>
-  <data name="MovieReleaseDate.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoReleaseDate.TabIndex" type="System.Int32, mscorlib">
     <value>1077</value>
   </data>
-  <data name="MovieReleaseDate.Text" xml:space="preserve">
+  <data name="infoReleaseDate.Text" xml:space="preserve">
     <value>Date</value>
   </data>
-  <data name="&gt;&gt;MovieReleaseDate.Name" xml:space="preserve">
-    <value>MovieReleaseDate</value>
+  <data name="&gt;&gt;infoReleaseDate.Name" xml:space="preserve">
+    <value>infoReleaseDate</value>
   </data>
-  <data name="&gt;&gt;MovieReleaseDate.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoReleaseDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovieReleaseDate.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoReleaseDate.Parent" xml:space="preserve">
     <value>panelDetails</value>
   </data>
-  <data name="&gt;&gt;MovieReleaseDate.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoReleaseDate.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="lblSubCountry.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -763,7 +757,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubCountry.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 126</value>
+    <value>3, 119</value>
   </data>
   <data name="lblSubCountry.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -789,43 +783,43 @@
   <data name="&gt;&gt;lblSubCountry.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="MovieCountry.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="infoCountry.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="MovieCountry.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoCountry.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MovieCountry.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoCountry.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="MovieCountry.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoCountry.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MovieCountry.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 126</value>
+  <data name="infoCountry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 119</value>
   </data>
-  <data name="MovieCountry.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="infoCountry.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
   </data>
-  <data name="MovieCountry.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoCountry.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 23</value>
   </data>
-  <data name="MovieCountry.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoCountry.TabIndex" type="System.Int32, mscorlib">
     <value>1087</value>
   </data>
-  <data name="MovieCountry.Text" xml:space="preserve">
+  <data name="infoCountry.Text" xml:space="preserve">
     <value>Country</value>
   </data>
-  <data name="&gt;&gt;MovieCountry.Name" xml:space="preserve">
-    <value>MovieCountry</value>
+  <data name="&gt;&gt;infoCountry.Name" xml:space="preserve">
+    <value>infoCountry</value>
   </data>
-  <data name="&gt;&gt;MovieCountry.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoCountry.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovieCountry.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoCountry.Parent" xml:space="preserve">
     <value>panelDetails</value>
   </data>
-  <data name="&gt;&gt;MovieCountry.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoCountry.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="lblSubLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -841,7 +835,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 153</value>
+    <value>3, 146</value>
   </data>
   <data name="lblSubLanguage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -867,43 +861,43 @@
   <data name="&gt;&gt;lblSubLanguage.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="MovieLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="infoLanguage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="MovieLanguage.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoLanguage.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MovieLanguage.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoLanguage.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="MovieLanguage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoLanguage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MovieLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 153</value>
+  <data name="infoLanguage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 146</value>
   </data>
-  <data name="MovieLanguage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="infoLanguage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
   </data>
-  <data name="MovieLanguage.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
   </data>
-  <data name="MovieLanguage.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoLanguage.TabIndex" type="System.Int32, mscorlib">
     <value>1086</value>
   </data>
-  <data name="MovieLanguage.Text" xml:space="preserve">
+  <data name="infoLanguage.Text" xml:space="preserve">
     <value>Language</value>
   </data>
-  <data name="&gt;&gt;MovieLanguage.Name" xml:space="preserve">
-    <value>MovieLanguage</value>
+  <data name="&gt;&gt;infoLanguage.Name" xml:space="preserve">
+    <value>infoLanguage</value>
   </data>
-  <data name="&gt;&gt;MovieLanguage.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoLanguage.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovieLanguage.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoLanguage.Parent" xml:space="preserve">
     <value>panelDetails</value>
   </data>
-  <data name="&gt;&gt;MovieLanguage.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoLanguage.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="lblSubProduction.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -919,7 +913,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubProduction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 180</value>
+    <value>3, 173</value>
   </data>
   <data name="lblSubProduction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -945,43 +939,43 @@
   <data name="&gt;&gt;lblSubProduction.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="MovieProduction.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="infoProduction.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="MovieProduction.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoProduction.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MovieProduction.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoProduction.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="MovieProduction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoProduction.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MovieProduction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 180</value>
+  <data name="infoProduction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 173</value>
   </data>
-  <data name="MovieProduction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="infoProduction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
   </data>
-  <data name="MovieProduction.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoProduction.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 23</value>
   </data>
-  <data name="MovieProduction.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoProduction.TabIndex" type="System.Int32, mscorlib">
     <value>1079</value>
   </data>
-  <data name="MovieProduction.Text" xml:space="preserve">
+  <data name="infoProduction.Text" xml:space="preserve">
     <value>Company</value>
   </data>
-  <data name="&gt;&gt;MovieProduction.Name" xml:space="preserve">
-    <value>MovieProduction</value>
+  <data name="&gt;&gt;infoProduction.Name" xml:space="preserve">
+    <value>infoProduction</value>
   </data>
-  <data name="&gt;&gt;MovieProduction.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoProduction.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovieProduction.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoProduction.Parent" xml:space="preserve">
     <value>panelDetails</value>
   </data>
-  <data name="&gt;&gt;MovieProduction.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoProduction.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="lblSubBoxOffice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -997,7 +991,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubBoxOffice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 207</value>
+    <value>3, 200</value>
   </data>
   <data name="lblSubBoxOffice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -1023,43 +1017,43 @@
   <data name="&gt;&gt;lblSubBoxOffice.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="MovieBoxOffice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="infoBoxOffice.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="MovieBoxOffice.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoBoxOffice.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MovieBoxOffice.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoBoxOffice.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="MovieBoxOffice.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoBoxOffice.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MovieBoxOffice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 207</value>
+  <data name="infoBoxOffice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 200</value>
   </data>
-  <data name="MovieBoxOffice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="infoBoxOffice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
   </data>
-  <data name="MovieBoxOffice.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoBoxOffice.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 23</value>
   </data>
-  <data name="MovieBoxOffice.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoBoxOffice.TabIndex" type="System.Int32, mscorlib">
     <value>1081</value>
   </data>
-  <data name="MovieBoxOffice.Text" xml:space="preserve">
+  <data name="infoBoxOffice.Text" xml:space="preserve">
     <value>Price</value>
   </data>
-  <data name="&gt;&gt;MovieBoxOffice.Name" xml:space="preserve">
-    <value>MovieBoxOffice</value>
+  <data name="&gt;&gt;infoBoxOffice.Name" xml:space="preserve">
+    <value>infoBoxOffice</value>
   </data>
-  <data name="&gt;&gt;MovieBoxOffice.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoBoxOffice.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovieBoxOffice.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoBoxOffice.Parent" xml:space="preserve">
     <value>panelDetails</value>
   </data>
-  <data name="&gt;&gt;MovieBoxOffice.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoBoxOffice.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
   <data name="lblSubAwards.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -1075,7 +1069,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubAwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 234</value>
+    <value>3, 227</value>
   </data>
   <data name="lblSubAwards.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -1101,47 +1095,47 @@
   <data name="&gt;&gt;lblSubAwards.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="MovieAwards.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="infoAwards.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="MovieAwards.AutoSize" type="System.Boolean, mscorlib">
+  <data name="infoAwards.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MovieAwards.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoAwards.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="MovieAwards.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoAwards.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MovieAwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 234</value>
+  <data name="infoAwards.Location" type="System.Drawing.Point, System.Drawing">
+    <value>73, 227</value>
   </data>
-  <data name="MovieAwards.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="infoAwards.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
   </data>
-  <data name="MovieAwards.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="infoAwards.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 23</value>
   </data>
-  <data name="MovieAwards.TabIndex" type="System.Int32, mscorlib">
+  <data name="infoAwards.TabIndex" type="System.Int32, mscorlib">
     <value>1089</value>
   </data>
-  <data name="MovieAwards.Text" xml:space="preserve">
+  <data name="infoAwards.Text" xml:space="preserve">
     <value>Awards</value>
   </data>
-  <data name="&gt;&gt;MovieAwards.Name" xml:space="preserve">
-    <value>MovieAwards</value>
+  <data name="&gt;&gt;infoAwards.Name" xml:space="preserve">
+    <value>infoAwards</value>
   </data>
-  <data name="&gt;&gt;MovieAwards.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoAwards.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovieAwards.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoAwards.Parent" xml:space="preserve">
     <value>panelDetails</value>
   </data>
-  <data name="&gt;&gt;MovieAwards.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;infoAwards.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
   <data name="panelDetails.Location" type="System.Drawing.Point, System.Drawing">
-    <value>868, 140</value>
+    <value>885, 118</value>
   </data>
   <data name="panelDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 354</value>
@@ -1159,73 +1153,76 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelDetails.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>9</value>
   </data>
-  <data name="MovieDuration.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="infoDuration.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="MovieDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 72</value>
-  </data>
-  <data name="MovieDuration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 23</value>
-  </data>
-  <data name="MovieDuration.TabIndex" type="System.Int32, mscorlib">
-    <value>1071</value>
-  </data>
-  <data name="MovieDuration.Text" xml:space="preserve">
-    <value>Runtime</value>
-  </data>
-  <data name="&gt;&gt;MovieDuration.Name" xml:space="preserve">
-    <value>MovieDuration</value>
-  </data>
-  <data name="&gt;&gt;MovieDuration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MovieDuration.Parent" xml:space="preserve">
-    <value>panelDetails</value>
-  </data>
-  <data name="&gt;&gt;MovieDuration.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="MovieImageLinkText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="MovieImageLinkText.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MovieImageLinkText.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="MovieImageLinkText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoDuration.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MovieImageLinkText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 703</value>
+  <data name="infoDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 65</value>
   </data>
-  <data name="MovieImageLinkText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 21</value>
+  <data name="infoDuration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 23</value>
   </data>
-  <data name="MovieImageLinkText.TabIndex" type="System.Int32, mscorlib">
-    <value>1047</value>
+  <data name="infoDuration.TabIndex" type="System.Int32, mscorlib">
+    <value>1071</value>
   </data>
-  <data name="MovieImageLinkText.Text" xml:space="preserve">
-    <value>Image Link (Hidden)</value>
+  <data name="infoDuration.Text" xml:space="preserve">
+    <value>Runtime</value>
   </data>
-  <data name="MovieImageLinkText.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;infoDuration.Name" xml:space="preserve">
+    <value>infoDuration</value>
   </data>
-  <data name="&gt;&gt;MovieImageLinkText.Name" xml:space="preserve">
-    <value>MovieImageLinkText</value>
-  </data>
-  <data name="&gt;&gt;MovieImageLinkText.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoDuration.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovieImageLinkText.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoDuration.Parent" xml:space="preserve">
+    <value>panelDetails</value>
+  </data>
+  <data name="&gt;&gt;infoDuration.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="infoImageLink.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="infoImageLink.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 9.75pt</value>
+  </data>
+  <data name="infoImageLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="infoImageLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 702</value>
+  </data>
+  <data name="infoImageLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="infoImageLink.TabIndex" type="System.Int32, mscorlib">
+    <value>1047</value>
+  </data>
+  <data name="infoImageLink.Text" xml:space="preserve">
+    <value>infoImageLink</value>
+  </data>
+  <data name="infoImageLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="infoImageLink.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;infoImageLink.Name" xml:space="preserve">
+    <value>infoImageLink</value>
+  </data>
+  <data name="&gt;&gt;infoImageLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infoImageLink.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;MovieImageLinkText.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;infoImageLink.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="BtnFavouriteList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1649,8 +1646,8 @@
   <data name="BtnFavouriteList.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>232, 3</value>
+  <metadata name="ToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>120, 2</value>
   </metadata>
   <data name="BtnFavouriteList.ToolTip" xml:space="preserve">
     <value>Add to Favourites</value>
@@ -1866,7 +1863,7 @@
     <value>6</value>
   </data>
   <data name="ActionsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 537</value>
+    <value>54, 531</value>
   </data>
   <data name="ActionsPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 38</value>
@@ -1884,11 +1881,212 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ActionsPanel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>23</value>
   </data>
-  <metadata name="getStarsTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>-2, 2</value>
-  </metadata>
+  <data name="infoWatchLinks.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 9.75pt</value>
+  </data>
+  <data name="infoWatchLinks.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="infoWatchLinks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 682</value>
+  </data>
+  <data name="infoWatchLinks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 20</value>
+  </data>
+  <data name="infoWatchLinks.TabIndex" type="System.Int32, mscorlib">
+    <value>1056</value>
+  </data>
+  <data name="infoWatchLinks.Text" xml:space="preserve">
+    <value>infoWatchLinks</value>
+  </data>
+  <data name="infoWatchLinks.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="infoWatchLinks.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;infoWatchLinks.Name" xml:space="preserve">
+    <value>infoWatchLinks</value>
+  </data>
+  <data name="&gt;&gt;infoWatchLinks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infoWatchLinks.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;infoWatchLinks.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="infoRatingIMDb.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="infoRatingIMDb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 14pt</value>
+  </data>
+  <data name="infoRatingIMDb.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="infoRatingIMDb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>882, 74</value>
+  </data>
+  <data name="infoRatingIMDb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 32</value>
+  </data>
+  <data name="infoRatingIMDb.TabIndex" type="System.Int32, mscorlib">
+    <value>1072</value>
+  </data>
+  <data name="infoRatingIMDb.Text" xml:space="preserve">
+    <value>0.0</value>
+  </data>
+  <data name="infoRatingIMDb.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;infoRatingIMDb.Name" xml:space="preserve">
+    <value>infoRatingIMDb</value>
+  </data>
+  <data name="&gt;&gt;infoRatingIMDb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infoRatingIMDb.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;infoRatingIMDb.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="infoRatingMetaScore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="infoRatingMetaScore.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 14pt</value>
+  </data>
+  <data name="infoRatingMetaScore.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="infoRatingMetaScore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1022, 74</value>
+  </data>
+  <data name="infoRatingMetaScore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 32</value>
+  </data>
+  <data name="infoRatingMetaScore.TabIndex" type="System.Int32, mscorlib">
+    <value>1076</value>
+  </data>
+  <data name="infoRatingMetaScore.Text" xml:space="preserve">
+    <value>00</value>
+  </data>
+  <data name="infoRatingMetaScore.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;infoRatingMetaScore.Name" xml:space="preserve">
+    <value>infoRatingMetaScore</value>
+  </data>
+  <data name="&gt;&gt;infoRatingMetaScore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infoRatingMetaScore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;infoRatingMetaScore.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lblSimilar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSimilar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="lblSimilar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="lblSimilar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblSimilar.Name" xml:space="preserve">
+    <value>lblSimilar</value>
+  </data>
+  <data name="&gt;&gt;lblSimilar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSimilar.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblSimilar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="infoImdbId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 9.75pt</value>
+  </data>
+  <data name="infoImdbId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="infoImdbId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 662</value>
+  </data>
+  <data name="infoImdbId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 20</value>
+  </data>
+  <data name="infoImdbId.TabIndex" type="System.Int32, mscorlib">
+    <value>1090</value>
+  </data>
+  <data name="infoImdbId.Text" xml:space="preserve">
+    <value>infoImdbId</value>
+  </data>
+  <data name="infoImdbId.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="infoImdbId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;infoImdbId.Name" xml:space="preserve">
+    <value>infoImdbId</value>
+  </data>
+  <data name="&gt;&gt;infoImdbId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infoImdbId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;infoImdbId.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="infoRTomLink.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 9.75pt</value>
+  </data>
+  <data name="infoRTomLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="infoRTomLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 642</value>
+  </data>
+  <data name="infoRTomLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 20</value>
+  </data>
+  <data name="infoRTomLink.TabIndex" type="System.Int32, mscorlib">
+    <value>1091</value>
+  </data>
+  <data name="infoRTomLink.Text" xml:space="preserve">
+    <value>infoRTomLink</value>
+  </data>
+  <data name="infoRTomLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="infoRTomLink.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;infoRTomLink.Name" xml:space="preserve">
+    <value>infoRTomLink</value>
+  </data>
+  <data name="&gt;&gt;infoRTomLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infoRTomLink.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;infoRTomLink.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
   <data name="MovieLinkText.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
   </data>
@@ -1896,7 +2094,7 @@
     <value>NoControl</value>
   </data>
   <data name="MovieLinkText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 685</value>
+    <value>60, 646</value>
   </data>
   <data name="MovieLinkText.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 20</value>
@@ -1919,251 +2117,524 @@
   <data name="&gt;&gt;MovieLinkText.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovieLinkText.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 209</value>
   </data>
-  <data name="&gt;&gt;MovieLinkText.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="FlowLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 20, 3, 3</value>
   </data>
-  <data name="MovieImdbRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>524, 255</value>
   </data>
-  <data name="MovieImdbRating.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 16pt</value>
+  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1094</value>
   </data>
-  <data name="MovieImdbRating.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
   </data>
-  <data name="MovieImdbRating.Location" type="System.Drawing.Point, System.Drawing">
-    <value>865, 86</value>
+  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MovieImdbRating.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 32</value>
+  <data name="FlowLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="MovieImdbRating.TabIndex" type="System.Int32, mscorlib">
-    <value>1072</value>
+  <data name="FlowLayoutPanel2.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="MovieImdbRating.Text" xml:space="preserve">
-    <value>0.0</value>
+  <data name="FlowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 247</value>
   </data>
-  <data name="MovieImdbRating.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
+  <data name="FlowLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 2, 3, 3</value>
   </data>
-  <data name="&gt;&gt;MovieImdbRating.Name" xml:space="preserve">
-    <value>MovieImdbRating</value>
+  <data name="FlowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>520, 195</value>
   </data>
-  <data name="&gt;&gt;MovieImdbRating.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="FlowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1097</value>
   </data>
-  <data name="&gt;&gt;MovieImdbRating.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;FlowLayoutPanel2.Name" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
   </data>
-  <data name="&gt;&gt;MovieImdbRating.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;FlowLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MovieTomRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="panelShareComment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="MovieTomRating.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 16pt</value>
+  <data name="lblMessageSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="MovieTomRating.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lblMessageSent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 10.5pt</value>
   </data>
-  <data name="MovieTomRating.Location" type="System.Drawing.Point, System.Drawing">
-    <value>939, 86</value>
+  <data name="lblMessageSent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 45</value>
   </data>
-  <data name="MovieTomRating.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 32</value>
+  <data name="lblMessageSent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 25</value>
   </data>
-  <data name="MovieTomRating.TabIndex" type="System.Int32, mscorlib">
-    <value>1074</value>
+  <data name="lblMessageSent.TabIndex" type="System.Int32, mscorlib">
+    <value>100005</value>
   </data>
-  <data name="MovieTomRating.Text" xml:space="preserve">
-    <value>00%</value>
+  <data name="lblMessageSent.Text" xml:space="preserve">
+    <value>Your comment has been sent.</value>
   </data>
-  <data name="MovieTomRating.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;MovieTomRating.Name" xml:space="preserve">
-    <value>MovieTomRating</value>
-  </data>
-  <data name="&gt;&gt;MovieTomRating.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MovieTomRating.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MovieTomRating.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="MovieMetaRating.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="MovieMetaRating.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 16pt</value>
-  </data>
-  <data name="MovieMetaRating.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MovieMetaRating.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1009, 86</value>
-  </data>
-  <data name="MovieMetaRating.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 32</value>
-  </data>
-  <data name="MovieMetaRating.TabIndex" type="System.Int32, mscorlib">
-    <value>1076</value>
-  </data>
-  <data name="MovieMetaRating.Text" xml:space="preserve">
-    <value>00</value>
-  </data>
-  <data name="MovieMetaRating.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="&gt;&gt;MovieMetaRating.Name" xml:space="preserve">
-    <value>MovieMetaRating</value>
-  </data>
-  <data name="&gt;&gt;MovieMetaRating.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MovieMetaRating.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MovieMetaRating.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="MovieImdbId.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Light, 9.75pt</value>
-  </data>
-  <data name="MovieImdbId.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MovieImdbId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 665</value>
-  </data>
-  <data name="MovieImdbId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
-  </data>
-  <data name="MovieImdbId.TabIndex" type="System.Int32, mscorlib">
-    <value>1090</value>
-  </data>
-  <data name="MovieImdbId.Text" xml:space="preserve">
-    <value>MovieImdbId</value>
-  </data>
-  <data name="MovieImdbId.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="MovieImdbId.Visible" type="System.Boolean, mscorlib">
+  <data name="lblMessageSent.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;MovieImdbId.Name" xml:space="preserve">
-    <value>MovieImdbId</value>
+  <data name="&gt;&gt;lblMessageSent.Name" xml:space="preserve">
+    <value>lblMessageSent</value>
   </data>
-  <data name="&gt;&gt;MovieImdbId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MovieImdbId.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MovieImdbId.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="MovieRTomLink.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Light, 9.75pt</value>
-  </data>
-  <data name="MovieRTomLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MovieRTomLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 645</value>
-  </data>
-  <data name="MovieRTomLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
-  </data>
-  <data name="MovieRTomLink.TabIndex" type="System.Int32, mscorlib">
-    <value>1091</value>
-  </data>
-  <data name="MovieRTomLink.Text" xml:space="preserve">
-    <value>MovieRTomLink</value>
-  </data>
-  <data name="MovieRTomLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="MovieRTomLink.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;MovieRTomLink.Name" xml:space="preserve">
-    <value>MovieRTomLink</value>
-  </data>
-  <data name="&gt;&gt;MovieRTomLink.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MovieRTomLink.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MovieRTomLink.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Light, 9.75pt</value>
-  </data>
-  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 645</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>1091</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>MovieRTomLink</value>
-  </data>
-  <data name="Label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="Label1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MovImage.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="MovImage.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="MovImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 29</value>
-  </data>
-  <data name="MovImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 376</value>
-  </data>
-  <data name="MovImage.TabIndex" type="System.Int32, mscorlib">
-    <value>1084</value>
-  </data>
-  <data name="MovImage.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;MovImage.Name" xml:space="preserve">
-    <value>MovImage</value>
-  </data>
-  <data name="&gt;&gt;MovImage.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblMessageSent.Type" xml:space="preserve">
     <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;MovImage.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblMessageSent.Parent" xml:space="preserve">
+    <value>panelShareComment</value>
+  </data>
+  <data name="&gt;&gt;lblMessageSent.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtShareName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.2pt</value>
+  </data>
+  <data name="txtShareName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 44</value>
+  </data>
+  <data name="txtShareName.MaxLength" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="txtShareName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="txtShareName.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txtShareName.Name" xml:space="preserve">
+    <value>txtShareName</value>
+  </data>
+  <data name="&gt;&gt;txtShareName.Type" xml:space="preserve">
+    <value>ChreneLib.Controls.TextBoxes.CTextBox, ChreneLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtShareName.Parent" xml:space="preserve">
+    <value>panelShareComment</value>
+  </data>
+  <data name="&gt;&gt;txtShareName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtShareComment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtShareComment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.2pt</value>
+  </data>
+  <data name="txtShareComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 11</value>
+  </data>
+  <data name="txtShareComment.MaxLength" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="txtShareComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>508, 22</value>
+  </data>
+  <data name="txtShareComment.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;txtShareComment.Name" xml:space="preserve">
+    <value>txtShareComment</value>
+  </data>
+  <data name="&gt;&gt;txtShareComment.Type" xml:space="preserve">
+    <value>ChreneLib.Controls.TextBoxes.CTextBox, ChreneLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtShareComment.Parent" xml:space="preserve">
+    <value>panelShareComment</value>
+  </data>
+  <data name="&gt;&gt;txtShareComment.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtFormCommentBG.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtFormCommentBG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtFormCommentBG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="txtFormCommentBG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>523, 35</value>
+  </data>
+  <data name="txtFormCommentBG.TabIndex" type="System.Int32, mscorlib">
+    <value>100002</value>
+  </data>
+  <data name="txtFormCommentBG.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtFormCommentBG.Name" xml:space="preserve">
+    <value>txtFormCommentBG</value>
+  </data>
+  <data name="&gt;&gt;txtFormCommentBG.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtFormCommentBG.Parent" xml:space="preserve">
+    <value>panelShareComment</value>
+  </data>
+  <data name="&gt;&gt;txtFormCommentBG.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnCommentSubmit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnCommentSubmit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9.75pt</value>
+  </data>
+  <data name="btnCommentSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 38</value>
+  </data>
+  <data name="btnCommentSubmit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 35</value>
+  </data>
+  <data name="btnCommentSubmit.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="btnCommentSubmit.Text" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="&gt;&gt;btnCommentSubmit.Name" xml:space="preserve">
+    <value>btnCommentSubmit</value>
+  </data>
+  <data name="&gt;&gt;btnCommentSubmit.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnCommentSubmit.Parent" xml:space="preserve">
+    <value>panelShareComment</value>
+  </data>
+  <data name="&gt;&gt;btnCommentSubmit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtFormNameBG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtFormNameBG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 37</value>
+  </data>
+  <data name="txtFormNameBG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 35</value>
+  </data>
+  <data name="txtFormNameBG.TabIndex" type="System.Int32, mscorlib">
+    <value>100004</value>
+  </data>
+  <data name="txtFormNameBG.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtFormNameBG.Name" xml:space="preserve">
+    <value>txtFormNameBG</value>
+  </data>
+  <data name="&gt;&gt;txtFormNameBG.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtFormNameBG.Parent" xml:space="preserve">
+    <value>panelShareComment</value>
+  </data>
+  <data name="&gt;&gt;txtFormNameBG.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panelShareComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 325</value>
+  </data>
+  <data name="panelShareComment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 18, 0, 0</value>
+  </data>
+  <data name="panelShareComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>542, 78</value>
+  </data>
+  <data name="panelShareComment.TabIndex" type="System.Int32, mscorlib">
+    <value>1095</value>
+  </data>
+  <data name="&gt;&gt;panelShareComment.Name" xml:space="preserve">
+    <value>panelShareComment</value>
+  </data>
+  <data name="&gt;&gt;panelShareComment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelShareComment.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;MovImage.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelShareComment.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblHeaderComments.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblHeaderComments.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12.2pt</value>
+  </data>
+  <data name="lblHeaderComments.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblHeaderComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 293</value>
+  </data>
+  <data name="lblHeaderComments.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblHeaderComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 23</value>
+  </data>
+  <data name="lblHeaderComments.TabIndex" type="System.Int32, mscorlib">
+    <value>1100</value>
+  </data>
+  <data name="lblHeaderComments.Text" xml:space="preserve">
+    <value>USER REVIEWS</value>
+  </data>
+  <data name="&gt;&gt;lblHeaderComments.Name" xml:space="preserve">
+    <value>lblHeaderComments</value>
+  </data>
+  <data name="&gt;&gt;lblHeaderComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblHeaderComments.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHeaderComments.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="panelComments.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="panelComments.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panelComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 404</value>
+  </data>
+  <data name="panelComments.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 0, 0</value>
+  </data>
+  <data name="panelComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>542, 162</value>
+  </data>
+  <data name="panelComments.TabIndex" type="System.Int32, mscorlib">
+    <value>1096</value>
+  </data>
+  <data name="&gt;&gt;panelComments.Name" xml:space="preserve">
+    <value>panelComments</value>
+  </data>
+  <data name="&gt;&gt;panelComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelComments.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelComments.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="infoTrailerLink.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 9.75pt</value>
+  </data>
+  <data name="infoTrailerLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="infoTrailerLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>51, 622</value>
+  </data>
+  <data name="infoTrailerLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 20</value>
+  </data>
+  <data name="infoTrailerLink.TabIndex" type="System.Int32, mscorlib">
+    <value>1103</value>
+  </data>
+  <data name="infoTrailerLink.Text" xml:space="preserve">
+    <value>infoTrailerLink</value>
+  </data>
+  <data name="infoTrailerLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="infoTrailerLink.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;infoTrailerLink.Name" xml:space="preserve">
+    <value>infoTrailerLink</value>
+  </data>
+  <data name="&gt;&gt;infoTrailerLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infoTrailerLink.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;infoTrailerLink.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="msgErrorComments.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="msgErrorComments.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12.75pt</value>
+  </data>
+  <data name="msgErrorComments.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="msgErrorComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 325</value>
+  </data>
+  <data name="msgErrorComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>522, 40</value>
+  </data>
+  <data name="msgErrorComments.TabIndex" type="System.Int32, mscorlib">
+    <value>10005</value>
+  </data>
+  <data name="msgErrorComments.Text" xml:space="preserve">
+    <value>Unable to load comments :/</value>
+  </data>
+  <data name="msgErrorComments.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="msgErrorComments.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;msgErrorComments.Name" xml:space="preserve">
+    <value>msgErrorComments</value>
+  </data>
+  <data name="&gt;&gt;msgErrorComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;msgErrorComments.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;msgErrorComments.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="imgPanelsEmpty0.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="imgPanelsEmpty0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12.75pt</value>
+  </data>
+  <data name="imgPanelsEmpty0.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="imgPanelsEmpty0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 331</value>
+  </data>
+  <data name="imgPanelsEmpty0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>522, 56</value>
+  </data>
+  <data name="imgPanelsEmpty0.TabIndex" type="System.Int32, mscorlib">
+    <value>10005</value>
+  </data>
+  <data name="imgPanelsEmpty0.Text" xml:space="preserve">
+    <value>Unable to load comments :/</value>
+  </data>
+  <data name="imgPanelsEmpty0.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="imgPanelsEmpty0.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;imgPanelsEmpty0.Name" xml:space="preserve">
+    <value>imgPanelsEmpty0</value>
+  </data>
+  <data name="&gt;&gt;imgPanelsEmpty0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="timerHideNotifications.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>219, 2</value>
+  </metadata>
+  <metadata name="getStarsTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>-2, 2</value>
+  </metadata>
+  <metadata name="timerHideNotification.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>219, 2</value>
+  </metadata>
+  <data name="lineComments.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 13.25pt</value>
+  </data>
+  <data name="lineComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 319</value>
+  </data>
+  <data name="lineComments.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 16, 0, 3</value>
+  </data>
+  <data name="lineComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 2</value>
+  </data>
+  <data name="lineComments.TabIndex" type="System.Int32, mscorlib">
+    <value>1102</value>
+  </data>
+  <data name="lineComments.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lineComments.Name" xml:space="preserve">
+    <value>lineComments</value>
+  </data>
+  <data name="&gt;&gt;lineComments.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lineComments.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lineComments.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="btnWatchTrailer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 14.5pt</value>
+  </data>
+  <data name="btnWatchTrailer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 408</value>
+  </data>
+  <data name="btnWatchTrailer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 35</value>
+  </data>
+  <data name="btnWatchTrailer.TabIndex" type="System.Int32, mscorlib">
+    <value>1093</value>
+  </data>
+  <data name="btnWatchTrailer.Text" xml:space="preserve">
+    <value>Watch Trailer</value>
+  </data>
+  <data name="&gt;&gt;btnWatchTrailer.Name" xml:space="preserve">
+    <value>btnWatchTrailer</value>
+  </data>
+  <data name="&gt;&gt;btnWatchTrailer.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnWatchTrailer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnWatchTrailer.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lineSplitter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lineSplitter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 13.25pt</value>
+  </data>
+  <data name="lineSplitter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 319</value>
+  </data>
+  <data name="lineSplitter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 16, 3, 3</value>
+  </data>
+  <data name="lineSplitter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>535, 2</value>
+  </data>
+  <data name="lineSplitter.TabIndex" type="System.Int32, mscorlib">
+    <value>1096</value>
+  </data>
+  <data name="lineSplitter.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lineSplitter.Name" xml:space="preserve">
+    <value>lineSplitter</value>
+  </data>
+  <data name="&gt;&gt;lineSplitter.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lineSplitter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lineSplitter.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="SplitterLine1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -2172,10 +2643,10 @@
     <value>Segoe UI Semibold, 13.25pt</value>
   </data>
   <data name="SplitterLine1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>848, 29</value>
+    <value>866, 23</value>
   </data>
   <data name="SplitterLine1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 530</value>
+    <value>2, 550</value>
   </data>
   <data name="SplitterLine1.TabIndex" type="System.Int32, mscorlib">
     <value>1064</value>
@@ -2193,13 +2664,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SplitterLine1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>18</value>
   </data>
   <data name="btnDownloadMovie.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 14.5pt</value>
   </data>
   <data name="btnDownloadMovie.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 493</value>
+    <value>23, 490</value>
   </data>
   <data name="btnDownloadMovie.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 35</value>
@@ -2220,13 +2691,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDownloadMovie.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>19</value>
   </data>
   <data name="btnWatchMovie.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 14.5pt</value>
   </data>
   <data name="btnWatchMovie.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 452</value>
+    <value>23, 449</value>
   </data>
   <data name="btnWatchMovie.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 35</value>
@@ -2247,11 +2718,38 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnWatchMovie.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>21</value>
   </data>
-  <metadata name="frmFadeIn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>125, 3</value>
+  <metadata name="timerHideNotificationss.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>219, 2</value>
   </metadata>
+  <data name="MovImage.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="MovImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MovImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="MovImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 376</value>
+  </data>
+  <data name="MovImage.TabIndex" type="System.Int32, mscorlib">
+    <value>10006</value>
+  </data>
+  <data name="&gt;&gt;MovImage.Name" xml:space="preserve">
+    <value>MovImage</value>
+  </data>
+  <data name="&gt;&gt;MovImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MovImage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MovImage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="ImgMetaCritic.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -2262,10 +2760,10 @@
     <value>NoControl</value>
   </data>
   <data name="ImgMetaCritic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1016, 29</value>
+    <value>1032, 23</value>
   </data>
   <data name="ImgMetaCritic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+    <value>45, 45</value>
   </data>
   <data name="ImgMetaCritic.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2283,73 +2781,40 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ImgMetaCritic.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>15</value>
   </data>
-  <data name="ImgRTomatoes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="imgImdb.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="ImgRTomatoes.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="imgImdb.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="ImgRTomatoes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="imgImdb.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="ImgRTomatoes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>945, 29</value>
+  <data name="imgImdb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>892, 23</value>
   </data>
-  <data name="ImgRTomatoes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+  <data name="imgImdb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 45</value>
   </data>
-  <data name="ImgRTomatoes.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="imgImdb.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <data name="ImgRTomatoes.TabIndex" type="System.Int32, mscorlib">
-    <value>1073</value>
-  </data>
-  <data name="&gt;&gt;ImgRTomatoes.Name" xml:space="preserve">
-    <value>ImgRTomatoes</value>
-  </data>
-  <data name="&gt;&gt;ImgRTomatoes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ImgRTomatoes.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ImgRTomatoes.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="ImgImdb.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="ImgImdb.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="ImgImdb.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ImgImdb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>872, 29</value>
-  </data>
-  <data name="ImgImdb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="ImgImdb.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="ImgImdb.TabIndex" type="System.Int32, mscorlib">
+  <data name="imgImdb.TabIndex" type="System.Int32, mscorlib">
     <value>1071</value>
   </data>
-  <data name="&gt;&gt;ImgImdb.Name" xml:space="preserve">
-    <value>ImgImdb</value>
+  <data name="&gt;&gt;imgImdb.Name" xml:space="preserve">
+    <value>imgImdb</value>
   </data>
-  <data name="&gt;&gt;ImgImdb.Type" xml:space="preserve">
+  <data name="&gt;&gt;imgImdb.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ImgImdb.Parent" xml:space="preserve">
+  <data name="&gt;&gt;imgImdb.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ImgImdb.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;imgImdb.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <data name="appClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2358,10 +2823,10 @@
     <value>NoControl</value>
   </data>
   <data name="appClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1150, 29</value>
+    <value>1167, 23</value>
   </data>
   <data name="appClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
+    <value>28, 28</value>
   </data>
   <data name="appClose.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2379,151 +2844,103 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;appClose.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>22</value>
   </data>
-  <data name="btnWatchTrailer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 14.5pt</value>
+  <data name="infoRatingNetflix.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="btnWatchTrailer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 411</value>
+  <data name="infoRatingNetflix.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 14pt</value>
   </data>
-  <data name="btnWatchTrailer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 35</value>
-  </data>
-  <data name="btnWatchTrailer.TabIndex" type="System.Int32, mscorlib">
-    <value>1093</value>
-  </data>
-  <data name="btnWatchTrailer.Text" xml:space="preserve">
-    <value>Watch Trailer (beta)</value>
-  </data>
-  <data name="&gt;&gt;btnWatchTrailer.Name" xml:space="preserve">
-    <value>btnWatchTrailer</value>
-  </data>
-  <data name="&gt;&gt;btnWatchTrailer.Type" xml:space="preserve">
-    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnWatchTrailer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnWatchTrailer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PosterLinkText.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Light, 9.75pt</value>
-  </data>
-  <data name="PosterLinkText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="infoRatingNetflix.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="PosterLinkText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 705</value>
+  <data name="infoRatingNetflix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>952, 74</value>
   </data>
-  <data name="PosterLinkText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
+  <data name="infoRatingNetflix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 32</value>
   </data>
-  <data name="PosterLinkText.TabIndex" type="System.Int32, mscorlib">
-    <value>1094</value>
+  <data name="infoRatingNetflix.TabIndex" type="System.Int32, mscorlib">
+    <value>10008</value>
   </data>
-  <data name="PosterLinkText.Text" xml:space="preserve">
-    <value>Poster Link</value>
+  <data name="infoRatingNetflix.Text" xml:space="preserve">
+    <value>00</value>
   </data>
-  <data name="PosterLinkText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="infoRatingNetflix.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="PosterLinkText.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;infoRatingNetflix.Name" xml:space="preserve">
+    <value>infoRatingNetflix</value>
   </data>
-  <data name="&gt;&gt;PosterLinkText.Name" xml:space="preserve">
-    <value>PosterLinkText</value>
-  </data>
-  <data name="&gt;&gt;PosterLinkText.Type" xml:space="preserve">
+  <data name="&gt;&gt;infoRatingNetflix.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PosterLinkTetx.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Light, 9.75pt</value>
-  </data>
-  <data name="PosterLinkTetx.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PosterLinkTetx.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 705</value>
-  </data>
-  <data name="PosterLinkTetx.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
-  </data>
-  <data name="PosterLinkTetx.TabIndex" type="System.Int32, mscorlib">
-    <value>1094</value>
-  </data>
-  <data name="PosterLinkTetx.Text" xml:space="preserve">
-    <value>Poster Link</value>
-  </data>
-  <data name="PosterLinkTetx.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="PosterLinkTetx.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;PosterLinkTetx.Name" xml:space="preserve">
-    <value>PosterLinkTetx</value>
-  </data>
-  <data name="&gt;&gt;PosterLinkTetx.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblSimilar.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSimilar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 12.2pt</value>
-  </data>
-  <data name="lblSimilar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblSimilar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="lblSimilar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblSimilar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 23</value>
-  </data>
-  <data name="lblSimilar.TabIndex" type="System.Int32, mscorlib">
-    <value>1059</value>
-  </data>
-  <data name="lblSimilar.Text" xml:space="preserve">
-    <value>Movies you may like...</value>
-  </data>
-  <data name="&gt;&gt;lblSimilar.Name" xml:space="preserve">
-    <value>lblSimilar</value>
-  </data>
-  <data name="&gt;&gt;lblSimilar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSimilar.Parent" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;lblSimilar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>302, 407</value>
-  </data>
-  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>530, 255</value>
-  </data>
-  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1094</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;infoRatingNetflix.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;infoRatingNetflix.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="imgNetflix.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="imgNetflix.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="imgNetflix.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="imgNetflix.Location" type="System.Drawing.Point, System.Drawing">
+    <value>962, 23</value>
+  </data>
+  <data name="imgNetflix.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 45</value>
+  </data>
+  <data name="imgNetflix.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="imgNetflix.TabIndex" type="System.Int32, mscorlib">
+    <value>10007</value>
+  </data>
+  <data name="&gt;&gt;imgNetflix.Name" xml:space="preserve">
+    <value>imgNetflix</value>
+  </data>
+  <data name="&gt;&gt;imgNetflix.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imgNetflix.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;imgNetflix.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="PictureBox1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>959, 23</value>
+  </data>
+  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>10007</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
+    <value>PictureBox1</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -8716,7 +9133,19 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value> </value>
+    <value>Movie Details</value>
+  </data>
+  <data name="&gt;&gt;ToolTip.Name" xml:space="preserve">
+    <value>ToolTip</value>
+  </data>
+  <data name="&gt;&gt;ToolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerHideNotifications.Name" xml:space="preserve">
+    <value>timerHideNotifications</value>
+  </data>
+  <data name="&gt;&gt;timerHideNotifications.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;getStarsTimer.Name" xml:space="preserve">
     <value>getStarsTimer</value>
@@ -8724,17 +9153,17 @@
   <data name="&gt;&gt;getStarsTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;frmFadeIn.Name" xml:space="preserve">
-    <value>frmFadeIn</value>
+  <data name="&gt;&gt;timerHideNotification.Name" xml:space="preserve">
+    <value>timerHideNotification</value>
   </data>
-  <data name="&gt;&gt;frmFadeIn.Type" xml:space="preserve">
+  <data name="&gt;&gt;timerHideNotification.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
-    <value>ToolTip1</value>
+  <data name="&gt;&gt;timerHideNotificationss.Name" xml:space="preserve">
+    <value>timerHideNotificationss</value>
   </data>
-  <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;timerHideNotificationss.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMovieDetails</value>

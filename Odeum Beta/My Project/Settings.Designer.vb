@@ -56,18 +56,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property doo() As Boolean
-            Get
-                Return CType(Me("doo"),Boolean)
-            End Get
-            Set
-                Me("doo") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public Property NotifNumbers() As String
             Get
@@ -87,30 +75,6 @@ Namespace My
             End Get
             Set
                 Me("doTheme") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property doStartScr() As Integer
-            Get
-                Return CType(Me("doStartScr"),Integer)
-            End Get
-            Set
-                Me("doStartScr") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property doFilters() As Boolean
-            Get
-                Return CType(Me("doFilters"),Boolean)
-            End Get
-            Set
-                Me("doFilters") = value
             End Set
         End Property
         
@@ -141,24 +105,24 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property doWatchList() As Boolean
+        Public Property doDownloadBtn() As Boolean
             Get
-                Return CType(Me("doWatchList"),Boolean)
+                Return CType(Me("doDownloadBtn"),Boolean)
             End Get
             Set
-                Me("doWatchList") = value
+                Me("doDownloadBtn") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property doRndmBtn() As Boolean
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property doUserComments() As Boolean
             Get
-                Return CType(Me("doRndmBtn"),Boolean)
+                Return CType(Me("doUserComments"),Boolean)
             End Get
             Set
-                Me("doRndmBtn") = value
+                Me("doUserComments") = value
             End Set
         End Property
         
@@ -171,18 +135,6 @@ Namespace My
             End Get
             Set
                 Me("doBackupDb") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property doFilterNum() As Integer
-            Get
-                Return CType(Me("doFilterNum"),Integer)
-            End Get
-            Set
-                Me("doFilterNum") = value
             End Set
         End Property
         
@@ -272,18 +224,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-        Public Property doCelebr8() As Boolean
-            Get
-                Return CType(Me("doCelebr8"),Boolean)
-            End Get
-            Set
-                Me("doCelebr8") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
         Public Property doOnTop() As Boolean
             Get
@@ -315,6 +255,102 @@ Namespace My
             End Get
             Set
                 Me("doQualityOnPoster") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property listLastWatched() As String
+            Get
+                Return CType(Me("listLastWatched"),String)
+            End Get
+            Set
+                Me("listLastWatched") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property firstStart() As Boolean
+            Get
+                Return CType(Me("firstStart"),Boolean)
+            End Get
+            Set
+                Me("firstStart") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property userOne() As String
+            Get
+                Return CType(Me("userOne"),String)
+            End Get
+            Set
+                Me("userOne") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property userTwo() As String
+            Get
+                Return CType(Me("userTwo"),String)
+            End Get
+            Set
+                Me("userTwo") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property userThree() As String
+            Get
+                Return CType(Me("userThree"),String)
+            End Get
+            Set
+                Me("userThree") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property userOneImage() As String
+            Get
+                Return CType(Me("userOneImage"),String)
+            End Get
+            Set
+                Me("userOneImage") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property userTwoImage() As String
+            Get
+                Return CType(Me("userTwoImage"),String)
+            End Get
+            Set
+                Me("userTwoImage") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property userThreeImage() As String
+            Get
+                Return CType(Me("userThreeImage"),String)
+            End Get
+            Set
+                Me("userThreeImage") = value
             End Set
         End Property
     End Class

@@ -6,7 +6,7 @@ Public Class frmDownloadClient
         LblTitleProgress.Text = "Connecting..."
         Top = 28
         Left = 0
-        Size = New Size(Movieo.Size.Width, Movieo.Size.Height - Movieo.AppTitle.Size.Height)
+        Size = New Size(Movieo.Size.Width, Movieo.Size.Height)
         BtnCancel.Text = "Cancel"
     End Sub
 
@@ -29,7 +29,7 @@ Public Class frmDownloadClient
             AddHandler client.DownloadFileCompleted, AddressOf client_DownloadCompleted
             client.DownloadFileAsync(New Uri(MovieLink), DownloadDirectory)
         Catch ex As Exception
-            Movieo.ShowPopupError("Unable to download movie.", ex.Message, Me)
+            Movieo.ShowPopupOk("Unable to download movie.", ex.Message, Me)
         End Try
     End Sub
 
@@ -56,7 +56,7 @@ Public Class frmDownloadClient
             Else
                 LblTitleProgress.Text = "Download Failed :("
                 BtnCancel.Text = "Close"
-                Movieo.ShowPopupError("Unable to download movie.", e.Error.InnerException.Message, Me)
+                Movieo.ShowPopupOk("Unable to download movie.", e.Error.InnerException.Message, Me)
             End If
         Catch ex As Exception
         End Try

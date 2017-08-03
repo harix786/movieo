@@ -4,21 +4,24 @@
 
     Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Set position/size of window
-        Top = 0
+        Top = 28
         Left = 0
-        Size = New Size(Movieo.Size)
+        Size = New Size(Movieo.Size.Width, Movieo.Size.Height)
 
         'General
-        cmboboxStartScreen.SelectedIndex = My.Settings.doStartScr
-        chckFilters.Checked = My.Settings.doFilters
+        chkAlwaysOnTop.Checked = My.Settings.doOnTop
+        chkShowRating.Checked = My.Settings.doRatingOnPoster
         cmboboxWatchedMovies.SelectedIndex = My.Settings.doWatchedMovies
+
+        'Quality
+        chkShowMovieQuality.Checked = My.Settings.doQualityOnPoster
 
         'Playback
         chckPlayFullscr.Checked = My.Settings.doFullScr
 
         'Features
-        chckWatchList.Checked = My.Settings.doWatchList
-        chckRandomizeBtn.Checked = My.Settings.doRndmBtn
+        chckDownloadBtn.Checked = My.Settings.doDownloadBtn
+        chckUserComments.Checked = My.Settings.doUserComments
 
         'Database
         chckBackupDb.Checked = My.Settings.doBackupDb
@@ -34,7 +37,6 @@
 
         'Miscellaneous
         chckAutoUpdate.Checked = My.Settings.doAutoUpdate
-        chckCelebr8.Checked = My.Settings.doCelebr8
     End Sub
 
     'Close window image
@@ -46,7 +48,8 @@
         MeClose.Image = My.Resources.PopupCloseL
     End Sub
 
-    Private Sub MeClose_MouseClick(sender As Object, e As EventArgs) Handles MeClose.MouseClick
+    Private Sub MeClose_MouseClick(sender As Object, e As EventArgs) Handles MeClose.Click
+        My.Settings.Reload()
         Close()
     End Sub
 
@@ -66,19 +69,6 @@
 
     Private Sub chkShowRating_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowRating.CheckedChanged
         My.Settings.doRatingOnPoster = chkShowRating.Checked
-    End Sub
-
-    Private Sub cmboTxtStartScreen_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles cmboTxtStartScreen.ClickButtonArea
-        cmboboxStartScreen.DroppedDown = True
-    End Sub
-
-    Private Sub cmboboxStartScreen_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxStartScreen.SelectedIndexChanged
-        cmboTxtStartScreen.Text = cmboboxStartScreen.SelectedItem.ToString
-        My.Settings.doStartScr = cmboboxStartScreen.SelectedIndex
-    End Sub
-
-    Private Sub chckFilters_CheckedChanged(sender As Object, e As EventArgs) Handles chckFilters.CheckedChanged
-        My.Settings.doFilters = chckFilters.Checked
     End Sub
 
     Private Sub cmboTxtWatchedMovies_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles cmboTxtWatchedMovies.ClickButtonArea
@@ -110,12 +100,12 @@
 
 #Region "Features"
 
-    Private Sub chckWatchList_CheckedChanged(Sender As Object, e As EventArgs) Handles chckWatchList.CheckedChanged
-        My.Settings.doWatchList = chckWatchList.Checked
+    Private Sub chckDownloadBtn_CheckedChanged(Sender As Object, e As EventArgs) Handles chckDownloadBtn.CheckedChanged
+        My.Settings.doDownloadBtn = chckDownloadBtn.Checked
     End Sub
 
-    Private Sub chckRandomizeBtn_CheckedChanged(Sender As Object, e As EventArgs) Handles chckRandomizeBtn.CheckedChanged
-        My.Settings.doRndmBtn = chckRandomizeBtn.Checked
+    Private Sub chckUserComments_CheckedChanged(Sender As Object, e As EventArgs) Handles chckUserComments.CheckedChanged
+        My.Settings.doUserComments = chckUserComments.Checked
     End Sub
 
 #End Region
@@ -130,7 +120,7 @@
         Dim ab As New SaveFileDialog
         If ab.ShowDialog = DialogResult.OK Then
             Try
-                Movieo.NetDl.DownloadFile(Movieo.linkDatabase, ab.FileName)
+                Movieo.NetDl.DownloadFile(Movieo.linkMovieDatabase, ab.FileName)
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -197,10 +187,6 @@
         My.Settings.doAutoUpdate = chckAutoUpdate.Checked
     End Sub
 
-    Private Sub chckCelebr8e_CheckedChanged(Sender As Object, e As EventArgs) Handles chckCelebr8.CheckedChanged
-        My.Settings.doCelebr8 = chckCelebr8.Checked
-    End Sub
-
 #End Region
 
 #Region "Save Settings / Reset Settings / Flush Databases"
@@ -211,19 +197,25 @@
         My.Settings.webProxyUsername = txtProxyUsername.Text
         My.Settings.webProxyPassword = txtProxyPassword.Text
         My.Settings.Save()
-        showMessage("Your settings have been saved.")
+        showMessage("✔ Your settings have been saved.")
     End Sub
 
     Private Sub btnResetSettings_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnResetSettings.ClickButtonArea
-        If Movieo.ShowYesNo("Confirmation", "Are you sure you want to reset your settings?", Me) = MsgBoxResult.Yes Then
+        If Movieo.ShowPopupYesNo("Confirmation", "Are you sure you want to reset all your settings to default?", Me) = MsgBoxResult.Yes Then
+            My.Settings.Reset()
             showMessage("Settings restored to default.")
+            If Movieo.ShowPopupYesNo("Restart Required", "You may need to restart Movieo for some settings to take effect. Restart now?", Me) = MsgBoxStyle.YesNo Then
+                Application.Restart()
+            End If
         End If
     End Sub
 
     Private Sub btnResetAllDatabases_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnResetAllDatabases.ClickButtonArea
-        If Movieo.ShowYesNo("Confirmation", "Are you sure you want to delete all of your custom-made lists? You can restore from the recyling bin on your computer to bring them back.", Me) = MsgBoxResult.Yes Then
+        If Movieo.ShowPopupYesNo("Confirmation", "Are you sure you want to delete all of your custom lists? You will not be able to recover them.", Me) = MsgBoxResult.Yes Then
             Movieo.CreateEmptyListFiles()
-            showMessage("Your lists have been wiped.")
+            showMessage("Your personal lists have been wiped.")
+            Movieo.ShowPopupOk("Restart Required", "You must restart Movieo immediately to apply these changes.", Me)
+            Application.Restart()
         End If
     End Sub
 
@@ -245,21 +237,21 @@
 
 #End Region
 
-#Region "Notification message"
+#Region "Notification Message"
 
     Private Sub HideSettingsConfirmation_Tick(sender As Object, e As EventArgs) Handles timerHideNotifications.Tick
-        lblSucessText.Visible = False
+        lblSuccessText.Visible = False
         timerHideNotifications.Enabled = False
     End Sub
 
-    Private Sub HideSettingsConfirmation_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles lblSucessText.ClickButtonArea
-        lblSucessText.Visible = False
+    Private Sub HideSettingsConfirmation_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles lblSuccessText.ClickButtonArea
+        lblSuccessText.Visible = False
         timerHideNotifications.Enabled = False
     End Sub
 
     Public Sub showMessage(Message As String)
-        lblSucessText.Text = Message
-        lblSucessText.Visible = True
+        lblSuccessText.Text = Message
+        lblSuccessText.Visible = True
         timerHideNotifications.Enabled = True
     End Sub
 

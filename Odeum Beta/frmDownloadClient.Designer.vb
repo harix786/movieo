@@ -178,7 +178,7 @@ Partial Class frmDownloadClient
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Downloading Movie..."
+        Me.Text = "Download Movie"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

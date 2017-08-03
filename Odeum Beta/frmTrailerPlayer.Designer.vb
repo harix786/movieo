@@ -46,9 +46,9 @@ Partial Class frmTrailerPlayer
         Me.appClose.Cursor = System.Windows.Forms.Cursors.Hand
         Me.appClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
         Me.appClose.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.appClose.Location = New System.Drawing.Point(1164, 29)
+        Me.appClose.Location = New System.Drawing.Point(1178, 12)
         Me.appClose.Name = "appClose"
-        Me.appClose.Size = New System.Drawing.Size(25, 25)
+        Me.appClose.Size = New System.Drawing.Size(28, 28)
         Me.appClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.appClose.TabIndex = 49
         Me.appClose.TabStop = False
@@ -67,7 +67,7 @@ Partial Class frmTrailerPlayer
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Movieo - Watch Tailer"
+        Me.Text = "Watch Tailer"
         CType(Me.appClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

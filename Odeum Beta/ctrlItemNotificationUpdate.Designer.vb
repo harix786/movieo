@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class ctrlNotificationUpdate
+Partial Class ctrlItemNotificationUpdate
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,12 +23,10 @@ Partial Class ctrlNotificationUpdate
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ctrlNotificationUpdate))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ctrlItemNotificationUpdate))
         Me.LblNotification = New System.Windows.Forms.Label()
         Me.BtnInstall = New CButtonLib.CButton()
-        Me.AppClose = New System.Windows.Forms.PictureBox()
         Me.PanelItems = New System.Windows.Forms.FlowLayoutPanel()
-        CType(Me.AppClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelItems.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,29 +71,16 @@ Partial Class ctrlNotificationUpdate
         Me.BtnInstall.TextMargin = New System.Windows.Forms.Padding(2, 3, 2, 2)
         Me.BtnInstall.TextShadowShow = False
         '
-        'AppClose
-        '
-        Me.AppClose.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.AppClose.BackColor = System.Drawing.Color.Transparent
-        Me.AppClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AppClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
-        Me.AppClose.Location = New System.Drawing.Point(739, 10)
-        Me.AppClose.Name = "AppClose"
-        Me.AppClose.Size = New System.Drawing.Size(14, 14)
-        Me.AppClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.AppClose.TabIndex = 1051
-        Me.AppClose.TabStop = False
-        '
         'PanelItems
         '
         Me.PanelItems.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelItems.BackColor = System.Drawing.Color.Transparent
         Me.PanelItems.Controls.Add(Me.LblNotification)
         Me.PanelItems.Controls.Add(Me.BtnInstall)
-        Me.PanelItems.Location = New System.Drawing.Point(7, 3)
+        Me.PanelItems.Location = New System.Drawing.Point(4, 3)
         Me.PanelItems.Margin = New System.Windows.Forms.Padding(0, 3, 3, 3)
         Me.PanelItems.Name = "PanelItems"
-        Me.PanelItems.Size = New System.Drawing.Size(720, 28)
+        Me.PanelItems.Size = New System.Drawing.Size(760, 28)
         Me.PanelItems.TabIndex = 1052
         '
         'ctrlNotificationUpdate
@@ -105,7 +90,6 @@ Partial Class ctrlNotificationUpdate
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(768, 34)
         Me.Controls.Add(Me.PanelItems)
-        Me.Controls.Add(Me.AppClose)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -117,7 +101,6 @@ Partial Class ctrlNotificationUpdate
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "UpdateNotification"
         Me.TransparencyKey = System.Drawing.Color.DarkGray
-        CType(Me.AppClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelItems.ResumeLayout(False)
         Me.PanelItems.PerformLayout()
         Me.ResumeLayout(False)
@@ -126,6 +109,5 @@ Partial Class ctrlNotificationUpdate
 
     Friend WithEvents LblNotification As Label
     Public WithEvents BtnInstall As CButtonLib.CButton
-    Friend WithEvents AppClose As PictureBox
     Friend WithEvents PanelItems As FlowLayoutPanel
 End Class

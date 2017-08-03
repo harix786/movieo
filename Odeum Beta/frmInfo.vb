@@ -9,9 +9,9 @@ Public Class frmInfo
         Tab.SelectedTab = Movieo.InfoSelectedTab
 
         'Set position/size of window
-        Top = 0
-        Left = 0
-        Size = New Size(Movieo.Size)
+        Top = 24
+        Left = Movieo.ClientRectangle.Left
+        Size = Movieo.ClientSize
 
         'Latest changelog text
         Try
@@ -23,15 +23,23 @@ Public Class frmInfo
         'Fix bug where textboxes were sometimes hidden (sent to the back of backgrounds)
         txtFormMessageBG.SendToBack()
         txtFormEmailBG.SendToBack()
+
+        lblAboutVersion.Text = Movieo.infoVersionText
     End Sub
 
     'Close window image
     Private Sub MeClose_MouseMove(sender As Object, e As MouseEventArgs) Handles meClose.MouseMove
-        meClose.Image = My.Resources.PopupCloseH
+        Try
+            meClose.Image = My.Resources.PopupCloseH
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub MeClose_MouseLeave(sender As Object, e As EventArgs) Handles meClose.MouseLeave
-        meClose.Image = My.Resources.PopupCloseL
+        Try
+            meClose.Image = My.Resources.PopupCloseL
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub MeClose_MouseClick(sender As Object, e As EventArgs) Handles meClose.MouseClick
@@ -111,17 +119,17 @@ Public Class frmInfo
     End Sub
 
     'Data provider link
-    Private Sub ImgProvider_Click(sender As Object, e As EventArgs) Handles imgDataProvider.Click
+    Private Sub ImgProvider_Click(sender As Object, e As EventArgs)
         Process.Start("http://omdbapi.com/")
     End Sub
 
     'Share links
     Private Sub BtnShareTw_Click(sender As Object, e As EventArgs) Handles btnShareTwitter.Click
-        Process.Start("https://twitter.com/intent/tweet?text=https://twitter.com/intent/tweet?url=http%3A%2F%2Fitsmovieo.esy.es%2F&text=Watch%20your%20favourite%20movies%20with%20Odeum%20Movies!%20Download%20it%20at%20&original_referer=")
+        Process.Start("https://twitter.com/intent/tweet?text=https://twitter.com/intent/tweet?url=http%3A%2F%2Fmovieo.info%2F&text=Watch%20and%20discover%20movies%20instantly%20with%20Movieo!%20Download%20it%20at%20&original_referer=")
     End Sub
 
     Private Sub BtnShareFb_Click(sender As Object, e As EventArgs) Handles btnShareFacebook.Click
-        Process.Start("https://www.facebook.com/sharer/sharer.php?u=http://itsmovieo.esy.es")
+        Process.Start("https://www.facebook.com/sharer/sharer.php?u=http://movieo.info")
     End Sub
 
     'Message submit button
@@ -160,10 +168,8 @@ Public Class frmInfo
         End If
     End Sub
 
-    Dim invalid As Boolean = False
 
     Public Function IsValidEmail(strIn As String) As Boolean
-        invalid = False
         If String.IsNullOrEmpty(strIn) Then Return False
 
         ' Use IdnMapping class to convert Unicode domain names.
@@ -173,8 +179,6 @@ Public Class frmInfo
         Catch ex As RegexMatchTimeoutException
             Return False
         End Try
-
-        If invalid Then Return False
 
         ' Return true if strIn is in valid e-mail format.
         Try
@@ -195,7 +199,6 @@ Public Class frmInfo
         Try
             domainName = idn.GetAscii(domainName)
         Catch ex As ArgumentException
-            invalid = True
         End Try
         Return match.Groups(1).Value + domainName
     End Function
@@ -233,7 +236,7 @@ Public Class frmInfo
     End Sub
 
     Private Sub ContactTwitter_Click(sender As Object, e As EventArgs) Handles lblSocialTwitter.Click
-        Process.Start("http://twitter.com/accurynx")
+        Process.Start("http://twitter.com/soinfamousdev")
     End Sub
 
     Private Sub TabAbout_Scroll(sender As Object, e As ScrollEventArgs) Handles tabAbout.Scroll
@@ -256,4 +259,19 @@ Public Class frmInfo
         tabContact.Update()
     End Sub
 
+#Region "DATA PROVIDERS"
+
+    Private Sub imgProviderDropbox_Click(sender As Object, e As EventArgs) Handles imgProviderDropbox.Click
+        Process.Start("https://dropbox.com")
+    End Sub
+
+    Private Sub imgProviderOMDbAPI_Click(sender As Object, e As EventArgs) Handles imgProviderOMDbAPI.Click
+        Process.Start("https://omdbapi.com")
+    End Sub
+
+    Private Sub imgProviderPopcornTime_Click(sender As Object, e As EventArgs) Handles imgProviderPopcornTime.Click
+        Process.Start("https://popcorntime.sh/")
+    End Sub
+
+#End Region
 End Class

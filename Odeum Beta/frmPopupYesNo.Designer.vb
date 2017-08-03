@@ -163,7 +163,7 @@ Partial Class frmPopupYesNo
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "PopupError"
+        Me.Text = "Dialog"
         Me.TransparencyKey = System.Drawing.Color.Black
         Me.ResumeLayout(False)
         Me.PerformLayout()

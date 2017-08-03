@@ -124,8 +124,31 @@ We adore movies but finding where to watch was usually a hassle. We had been sea
 
 Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.</value>
   </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Movieo doesn't host any content, all the movies are hosted by third-party media servers which content can be freely accessed by anyone over the web.
+
+Of course, we are willing to remove any violating material from the catalogue immediately upon request from the copyright owner.
+
+If you're a copyright owner, and you wish to remove your content from the app, you can submit a Copyright Infrigement message along with your contact details and appropriate information to our email address - hi@movieo.info
+
+All movies included in the catalogue are provided legally to the best of our knowledge.
+
+Movie details and images are provided by third-party sources, such as OMDb API (omdbapi.com) and Popcorn Time (docs.popcornofficial.apiary.io) both compliant with fair use.
+
+All third-party content are not associated with or endorsed by Movieo.</value>
+  </data>
   <data name="lblLegalText.Text" xml:space="preserve">
     <value>All of the free movies found on this freeware are hosted on third-party servers that are freely available to watch online for all internet users. Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.</value>
+  </data>
+  <data name="qSub6.Text" xml:space="preserve">
+    <value>We’d LOVE to create them but currently don’t have the resources to do so. We plan to build AWESOME apps in the future as Movieo grows. Until then just use Movieo on your computer! It’s not perfect but it works well :o</value>
+  </data>
+  <data name="qSub5.Text" xml:space="preserve">
+    <value>Many apps offer recommendations but usually fail to provide good ones. We decided to focus on great browsing experience that makes it easy to quickly find a movie you'll enjoy watching.
+
+At the core of the system are seenlist &amp; blacklist that allow you to hide movies that you've already seen or want to ignore. Once they're filled up you become completely surrounded by great movies you haven't watched yet. You can then use a variety of filters to find exatcly what you want or check out published lists that others created for inspiration.
+
+Basically we're trying to improve the process of picking something for yourself, instead of us picking something for you.</value>
   </data>
   <data name="qSub0.Text" xml:space="preserve">
     <value>Movieo is a project funded entirely by it’s creators and there’s only two of us working on it full-time. This means that our resources are limited and have to be allocated wisely.
@@ -139,7 +162,7 @@ Your feedback is extremely important as it makes it easier for us to focus on th
     <value>This is most likely because your Internet is blocking access to our core data service provider. If you are, then simply allow Movieo to access the web through your firewall and you won't have anymore issues!</value>
   </data>
   <data name="qSub2.Text" xml:space="preserve">
-    <value>We're still in beta as they're may be a few bugs but Movieo is being worked on the best as we can to keep you enjoying your favourite movies. As you may run into some bugs that might occur, we rely on the community to help us, we've added some report features that allow you to send us a quick message and/or a screenshot with it, so we can try our best to fix it for you.</value>
+    <value>We're still in beta; so you may come accross a few issues and we're trying our very best to provide a clean stable app to watch your favourite movies. This is where we need your help. We rely on you, the community, to help us find and squish these bugs! We've got a small message form that you can use to send us a message, otherwise you can contact us at our email: hi@movieo.info</value>
   </data>
   <metadata name="timerHideMessageSent.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>-2, 2</value>

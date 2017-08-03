@@ -40,9 +40,9 @@ Partial Class frmPopupOk
         Me.DialogMessage.ForeColor = System.Drawing.Color.White
         Me.DialogMessage.Location = New System.Drawing.Point(19, 52)
         Me.DialogMessage.Name = "DialogMessage"
-        Me.DialogMessage.Size = New System.Drawing.Size(467, 75)
+        Me.DialogMessage.Size = New System.Drawing.Size(467, 65)
         Me.DialogMessage.TabIndex = 999
-        Me.DialogMessage.Text = "Message"
+        Me.DialogMessage.Text = "Message" & Global.Microsoft.VisualBasic.ChrW(13)
         '
         'DialogTitle
         '
@@ -75,7 +75,7 @@ Partial Class frmPopupOk
         Me.btnOk.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnOk.Font = New System.Drawing.Font("Segoe UI", 10.5!, System.Drawing.FontStyle.Bold)
         Me.btnOk.ImageIndex = 0
-        Me.btnOk.Location = New System.Drawing.Point(403, 161)
+        Me.btnOk.Location = New System.Drawing.Point(403, 143)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnOk.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -101,7 +101,7 @@ Partial Class frmPopupOk
         Me.panelBottom.FillType = CButtonLib.CButton.eFillType.Solid
         Me.panelBottom.ForeColor = System.Drawing.Color.Black
         Me.panelBottom.ImageIndex = 0
-        Me.panelBottom.Location = New System.Drawing.Point(-1, 146)
+        Me.panelBottom.Location = New System.Drawing.Point(-1, 128)
         Me.panelBottom.Name = "panelBottom"
         Me.panelBottom.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.panelBottom.Size = New System.Drawing.Size(509, 62)
@@ -114,7 +114,7 @@ Partial Class frmPopupOk
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(507, 207)
+        Me.ClientSize = New System.Drawing.Size(507, 189)
         Me.Controls.Add(Me.DialogMessage)
         Me.Controls.Add(Me.DialogTitle)
         Me.Controls.Add(Me.btnOk)
@@ -128,7 +128,7 @@ Partial Class frmPopupOk
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "PopupError"
+        Me.Text = "Dialog"
         Me.TransparencyKey = System.Drawing.Color.Black
         Me.ResumeLayout(False)
         Me.PerformLayout()
