@@ -3,8 +3,8 @@
 
     Private Sub frmRequestMovie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Top = 28
-        Left = 0
-        Size = New Size(Movieo.Size.Width, Movieo.Size.Height)
+        Left = Movieo.ClientRectangle.Left
+        Size = Movieo.ClientSize
     End Sub
 
     Private Sub btnFormSubmit_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnFormSubmit.ClickButtonArea

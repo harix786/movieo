@@ -26,9 +26,9 @@ Public Class frmMovieDetails
 
     Private Sub MovieInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Hide()
-        Top = 24
+        Top = Movieo.ClientRectangle.Top + 24
         Left = Movieo.ClientRectangle.Left
-        Size = Movieo.Size
+        Size = Movieo.ClientSize
 
         If Movieo.itemsFavouritesList.Items.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
             BtnFavouriteList.Image = imgFavouriteSticky
@@ -125,15 +125,17 @@ Public Class frmMovieDetails
 
     Public Sub castItem_Click(sender As Object, e As EventArgs)
         Try
-            frmBackgroundMovieDetails.Hide()
-            Hide()
-            Movieo.txtboxSearch.Focus()
-            Movieo.txtboxSearch.Text = sender.text
-            Movieo.Tab.SelectedTab = Movieo.tabLoading
-            Movieo.timerSearchMovies.Enabled = True
-            Close()
+            If Not sender.Text = "N/A" Then
+                frmBackgroundMovieDetails.Hide()
+                Hide()
+                Movieo.txtboxSearch.Focus()
+                Movieo.txtboxSearch.Text = sender.text
+                Movieo.Tab.SelectedTab = Movieo.tabLoading
+                Movieo.timerSearchMovies.Enabled = True
+                Close()
+            End If
         Catch ex As Exception
-            'MsgBox(ex.Message)
+            'False Positive
         End Try
     End Sub
 
@@ -151,7 +153,7 @@ Public Class frmMovieDetails
         frmBackgroundMovieDetails.Hide()
         Hide()
         For Each a As Control In Movieo.panelGenres.Controls
-            If a.Text = sender.Text Then
+            If sender.Text = a.Text Then
                 a.BackColor = Color.FromArgb(43, 50, 61)
                 a.ForeColor = Color.White
             Else
@@ -163,7 +165,7 @@ Public Class frmMovieDetails
         Movieo.panelMovies.Controls.Clear()
         Movieo.storeControlsScroll.Clear()
 
-        Movieo.selectedGenre = sender.text
+        Movieo.selectedGenre = sender.Text
 
         Dim countMovie As Integer = 0
 
@@ -353,22 +355,13 @@ Public Class frmMovieDetails
     Dim webClient As WebClient = New WebClient()
 
     Private Sub btnWatchMovie_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnWatchMovie.ClickButtonArea
-        frmSelectSource.itemsMovieSources.Items.Clear()
-        Dim splitSources As String() = Split(infoWatchLinks.Text, "*")
-        For Each a As String In splitSources
-            Dim sourceTitle As String = a.Substring(a.LastIndexOf("/") + 1)
-            frmSelectSource.itemsMovieSourcesTitle.Items.Add(sourceTitle)
-            frmSelectSource.itemsMovieSources.Items.Add(a)
-        Next
-        frmSelectSource.Show(Me)
+        Dim getUrlFromUser As String = Movieo.returnSource(Me, infoTitle.Text + " (" + infoYear.Text + ")", infoWatchLinks.Text)
 
-        'Try
-        'frmMediaPlayer.PlayerMovieTitle.Text = infoTitle.Text + " (" + infoYear.Text + ")"
-        'frmMediaPlayer.MediaPlayerControl.URL = infoWatchLinks.Text
-        'frmMediaPlayer.Show(Me)
-        'Catch ex As Exception
-        'MsgBox(ex.Message)
-        'End Try
+        If Not getUrlFromUser = Nothing Then
+            frmMediaPlayer.Text = "Watching " + infoTitle.Text + " (" + infoYear.Text + ")"
+            frmMediaPlayer.MediaPlayerControl.URL = getUrlFromUser
+            frmMediaPlayer.Show(Me)
+        End If
     End Sub
 
     Private Sub btnWatchMovie_MouseMove(sender As Object, e As MouseEventArgs) Handles btnWatchMovie.MouseMove
@@ -387,7 +380,8 @@ Public Class frmMovieDetails
         Try
             If Not infoTrailerLink.Text = "" Then
                 Dim input = infoTrailerLink.Text
-                frmTrailerPlayer.web.Navigate("https://www.youtube.com/embed/" + GetVideoId(infoTrailerLink.Text) + "?VQ=HD720?autoplay=1")
+                'frmTrailerPlayer.web.Navigate("https://www.youtube.com/embed/" + GetVideoId(infoTrailerLink.Text) + "?VQ=HD720?autoplay=1")
+                frmTrailerPlayer.web.Navigate(infoTrailerLink.Text)
                 frmTrailerPlayer.Show(Me)
             End If
         Catch ex As Exception
@@ -420,10 +414,14 @@ Public Class frmMovieDetails
 
     Private Sub btnDownloadMovie_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnDownloadMovie.ClickButtonArea
         Try
-            frmDownloadClient.Show(Me)
-            frmDownloadClient.doDownload(infoWatchLinks.Text, infoTitle.Text, infoYear.Text, infoWatchLinks.Text.Substring(infoWatchLinks.Text.Length - 3))
+            Dim getUrlFromUser As String = Movieo.returnSource(Me, infoTitle.Text + " (" + infoYear.Text + ")", infoWatchLinks.Text)
+
+            If Not getUrlFromUser = Nothing Then
+                frmDownloadClient.doDownload(getUrlFromUser, infoTitle.Text, infoYear.Text, getUrlFromUser.Substring(infoWatchLinks.Text.Length - 3))
+                frmDownloadClient.ShowDialog(Me)
+            End If
         Catch ex As Exception
-            Movieo.ShowPopupOk("Unable to download movie", "It seems there's an issue preventing you from download this movie. We have sent the data to our team so we can fix this immediately. Sorry for the inconvenience", Me)
+            Movieo.ShowPopupOk("Unable to download movie", "It seems there's an issue connecting to the movie. Please try using a different source. " + ex.Message, Me)
         End Try
     End Sub
 
@@ -478,6 +476,10 @@ Public Class frmMovieDetails
     Private Sub BtnSubmitForm_MouseLeave(sender As Object, e As EventArgs) Handles btnCommentSubmit.MouseLeave, btnCommentSubmit.LostFocus
         sender.ForeColor = Color.FromArgb(172, 180, 191)
         sender.ColorFillSolid = Color.Transparent
+    End Sub
+
+    Private Sub panelComments_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelComments.ControlAdded
+        imgPanelsEmptyReviews.Visible = False
     End Sub
 
 #End Region
@@ -552,6 +554,5 @@ Public Class frmMovieDetails
     End Sub
 
 #End Region
-
 
 End Class

@@ -133,7 +133,7 @@ Partial Class frmSelectSource
         Me.itemsMovieSourcesTitle.Location = New System.Drawing.Point(224, 223)
         Me.itemsMovieSourcesTitle.Name = "itemsMovieSourcesTitle"
         Me.itemsMovieSourcesTitle.Size = New System.Drawing.Size(538, 171)
-        Me.itemsMovieSourcesTitle.TabIndex = 100000057
+        Me.itemsMovieSourcesTitle.TabIndex = 0
         Me.itemsMovieSourcesTitle.UseTabStops = False
         '
         'frmSelectSource

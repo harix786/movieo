@@ -24,17 +24,18 @@ Partial Class frmBackgroundMovieDetails
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'ctrlMovieDetailsBackground
+        'frmBackgroundMovieDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(768, 405)
         Me.ControlBox = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "ctrlMovieDetailsBackground"
+        Me.Name = "frmBackgroundMovieDetails"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide

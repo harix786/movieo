@@ -24,29 +24,8 @@ Public Class frmMediaPlayer
         Movieo.InfoSelectedTab = frmInfo.tabContact
         frmInfo.Show()
         frmInfo.txtFormMessage.Focus()
-        frmInfo.txtFormMessage.Text = "I am having issues with the movie """ + PlayerMovieTitle.Text + """ because "
+        frmInfo.txtFormMessage.Text = "I am having issues with the movie """ + Text.Replace("Watching ", "") + """ because "
         frmInfo.txtFormMessage.SelectionStart = frmInfo.txtFormMessage.TextLength
-    End Sub
-
-    Private Sub appClose_Click(sender As Object, e As EventArgs) Handles appClose.Click
-        If MediaPlayerControl.Ctlcontrols.currentMarker < 100 Then
-            Movieo.itemsRecentlyWatched.Items.Add(PlayerMovieTitle.Text + "~" + MediaPlayerControl.Ctlcontrols.currentPosition.ToString)
-        End If
-        Close()
-    End Sub
-
-    Private Sub appClose_MouseMove(sender As Object, e As EventArgs) Handles appClose.MouseMove
-        Try
-            appClose.Image = My.Resources.PopupCloseH
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub appClose_MouseLeave(sender As Object, e As EventArgs) Handles appClose.MouseLeave
-        Try
-            appClose.Image = My.Resources.PopupCloseL
-        Catch ex As Exception
-        End Try
     End Sub
 
     Private Sub btnReportBroken_MouseMove(sender As Object, e As MouseEventArgs) Handles btnReportBroken.MouseMove
@@ -102,7 +81,7 @@ Public Class frmMediaPlayer
 
             For Each a As String In Movieo.itemsRecentlyWatched.Items
                 Dim aCredential As String() = Split(a, "~")
-                If PlayerMovieTitle.Text = aCredential(0) Then
+                If Text = aCredential(0) Then
                     MediaPlayerControl.Ctlcontrols.currentPosition = CDbl(aCredential(1))
                     firstLoad = False
                     timerGoToTime.Enabled = False
@@ -116,7 +95,7 @@ Public Class frmMediaPlayer
     End Sub
 
     Private Sub MediaPlayerControl_EndOfStream(sender As Object, e As _WMPOCXEvents_EndOfStreamEvent) Handles MediaPlayerControl.EndOfStream
-        lblErrorText.Text = "You have finished watching: " + PlayerMovieTitle.Text + vbNewLine + "We hope you enjoyed!"
+        lblErrorText.Text = "You have finished watching: " + Text + vbNewLine + "We hope you enjoyed!"
         tab.SelectedTab = tabStatus
     End Sub
 
@@ -143,5 +122,9 @@ Public Class frmMediaPlayer
             End If
             timerUntilConnected.Enabled = False
         End If
+    End Sub
+
+    Private Sub btnReportBroken_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnReportBroken.ClickButtonArea
+
     End Sub
 End Class

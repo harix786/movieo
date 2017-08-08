@@ -1,8 +1,8 @@
 ﻿Public Class frmTrailerPlayer
     Private Sub frmTrailerPlayer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Top = 28
-        Left = 0
-        Size = New Size(Movieo.Size.Width, Movieo.Size.Height)
+        Top = Movieo.ClientRectangle.Top + 24
+        Left = Movieo.ClientRectangle.Left
+        Size = Movieo.ClientSize
     End Sub
 
     Private Sub appClose_Click(sender As Object, e As EventArgs) Handles appClose.Click

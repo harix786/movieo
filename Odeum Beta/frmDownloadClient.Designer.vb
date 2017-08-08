@@ -23,6 +23,7 @@ Partial Class frmDownloadClient
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDownloadClient))
         Me.LblTitleProgress = New System.Windows.Forms.Label()
         Me.LblLocation = New System.Windows.Forms.Label()
         Me.TextDownloadLocation = New System.Windows.Forms.Label()
@@ -172,13 +173,12 @@ Partial Class frmDownloadClient
         Me.Controls.Add(Me.LblTitleProgress)
         Me.Controls.Add(Me.DownloadClientBg)
         Me.ForeColor = System.Drawing.Color.White
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDownloadClient"
         Me.Opacity = 0.97R
-        Me.ShowInTaskbar = False
-        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Download Movie"
+        Me.Text = "Downloading Movie"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

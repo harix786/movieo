@@ -59,6 +59,17 @@ Partial Class frmMovieDetails
         Me.InfoPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.infoDescription = New System.Windows.Forms.Label()
         Me.infoCast = New System.Windows.Forms.Label()
+        Me.panelShareComment = New System.Windows.Forms.Panel()
+        Me.lblMessageSent = New CButtonLib.CButton()
+        Me.txtShareName = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txtShareComment = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.txtFormCommentBG = New CButtonLib.CButton()
+        Me.lineComments = New CButtonLib.CButton()
+        Me.panelComments = New System.Windows.Forms.FlowLayoutPanel()
+        Me.btnCommentSubmit = New CButtonLib.CButton()
+        Me.txtFormNameBG = New CButtonLib.CButton()
+        Me.lblHeaderComments = New System.Windows.Forms.Label()
+        Me.lineSplitter = New CButtonLib.CButton()
         Me.lblSimilar = New System.Windows.Forms.Label()
         Me.infoLanguage = New System.Windows.Forms.Label()
         Me.lblSubLanguage = New System.Windows.Forms.Label()
@@ -72,27 +83,12 @@ Partial Class frmMovieDetails
         Me.MovieLinkText = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.panelShareComment = New System.Windows.Forms.Panel()
-        Me.lblMessageSent = New CButtonLib.CButton()
-        Me.txtShareName = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txtShareComment = New ChreneLib.Controls.TextBoxes.CTextBox()
-        Me.txtFormCommentBG = New CButtonLib.CButton()
-        Me.btnCommentSubmit = New CButtonLib.CButton()
-        Me.txtFormNameBG = New CButtonLib.CButton()
-        Me.lblHeaderComments = New System.Windows.Forms.Label()
-        Me.panelComments = New System.Windows.Forms.FlowLayoutPanel()
         Me.infoTrailerLink = New System.Windows.Forms.Label()
         Me.msgErrorComments = New System.Windows.Forms.Label()
         Me.imgPanelsEmpty0 = New System.Windows.Forms.Label()
         Me.timerHideNotifications = New System.Windows.Forms.Timer(Me.components)
         Me.getStarsTimer = New System.Windows.Forms.Timer(Me.components)
         Me.timerHideNotification = New System.Windows.Forms.Timer(Me.components)
-        Me.lineComments = New CButtonLib.CButton()
-        Me.btnWatchTrailer = New CButtonLib.CButton()
-        Me.lineSplitter = New CButtonLib.CButton()
-        Me.SplitterLine1 = New CButtonLib.CButton()
-        Me.btnDownloadMovie = New CButtonLib.CButton()
-        Me.btnWatchMovie = New CButtonLib.CButton()
         Me.timerHideNotificationss = New System.Windows.Forms.Timer(Me.components)
         Me.MovImage = New System.Windows.Forms.PictureBox()
         Me.ImgMetaCritic = New System.Windows.Forms.PictureBox()
@@ -101,15 +97,20 @@ Partial Class frmMovieDetails
         Me.infoRatingNetflix = New System.Windows.Forms.Label()
         Me.imgNetflix = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnWatchTrailer = New CButtonLib.CButton()
+        Me.SplitterLine1 = New CButtonLib.CButton()
+        Me.btnDownloadMovie = New CButtonLib.CButton()
+        Me.btnWatchMovie = New CButtonLib.CButton()
+        Me.imgPanelsEmptyReviews = New System.Windows.Forms.Label()
         Me.ActionsPanel.SuspendLayout()
         CType(Me.BtnFavouriteList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnWatchList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnSeenList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BtnBlackList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.InfoPanel1.SuspendLayout()
+        Me.panelShareComment.SuspendLayout()
         Me.panelDetails.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
-        Me.panelShareComment.SuspendLayout()
         CType(Me.MovImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImgMetaCritic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgImdb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -359,6 +360,7 @@ Partial Class frmMovieDetails
         Me.InfoPanel1.Controls.Add(Me.infoDirectors)
         Me.InfoPanel1.Controls.Add(Me.lblSubCast)
         Me.InfoPanel1.Controls.Add(Me.infoCast)
+        Me.InfoPanel1.Controls.Add(Me.panelShareComment)
         Me.InfoPanel1.Name = "InfoPanel1"
         '
         'infoDescription
@@ -374,6 +376,174 @@ Partial Class frmMovieDetails
         Me.InfoPanel1.SetFlowBreak(Me.infoCast, True)
         Me.infoCast.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.infoCast.Name = "infoCast"
+        '
+        'panelShareComment
+        '
+        resources.ApplyResources(Me.panelShareComment, "panelShareComment")
+        Me.panelShareComment.BackColor = System.Drawing.Color.Transparent
+        Me.panelShareComment.Controls.Add(Me.imgPanelsEmptyReviews)
+        Me.panelShareComment.Controls.Add(Me.lblMessageSent)
+        Me.panelShareComment.Controls.Add(Me.txtShareName)
+        Me.panelShareComment.Controls.Add(Me.txtShareComment)
+        Me.panelShareComment.Controls.Add(Me.txtFormCommentBG)
+        Me.panelShareComment.Controls.Add(Me.lineComments)
+        Me.panelShareComment.Controls.Add(Me.panelComments)
+        Me.panelShareComment.Controls.Add(Me.btnCommentSubmit)
+        Me.panelShareComment.Controls.Add(Me.txtFormNameBG)
+        Me.panelShareComment.Controls.Add(Me.lblHeaderComments)
+        Me.panelShareComment.Controls.Add(Me.lineSplitter)
+        Me.panelShareComment.Name = "panelShareComment"
+        '
+        'lblMessageSent
+        '
+        resources.ApplyResources(Me.lblMessageSent, "lblMessageSent")
+        Me.lblMessageSent.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.lblMessageSent.BorderShow = False
+        Me.lblMessageSent.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.lblMessageSent.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblMessageSent.DesignerSelected = False
+        Me.lblMessageSent.DimFactorClick = 0
+        Me.lblMessageSent.DimFactorHover = 0
+        Me.lblMessageSent.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.lblMessageSent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.lblMessageSent.ImageIndex = 0
+        Me.lblMessageSent.Name = "lblMessageSent"
+        Me.lblMessageSent.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.lblMessageSent.TabStop = False
+        Me.lblMessageSent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblMessageSent.TextMargin = New System.Windows.Forms.Padding(0)
+        Me.lblMessageSent.TextShadowShow = False
+        '
+        'txtShareName
+        '
+        Me.txtShareName.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.txtShareName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        resources.ApplyResources(Me.txtShareName, "txtShareName")
+        Me.txtShareName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.txtShareName.Name = "txtShareName"
+        Me.txtShareName.WaterMark = "Your Name..."
+        Me.txtShareName.WaterMarkActiveForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.txtShareName.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtShareName.WaterMarkForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        '
+        'txtShareComment
+        '
+        resources.ApplyResources(Me.txtShareComment, "txtShareComment")
+        Me.txtShareComment.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.txtShareComment.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtShareComment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.txtShareComment.Name = "txtShareComment"
+        Me.txtShareComment.WaterMark = "Share your thoughts..."
+        Me.txtShareComment.WaterMarkActiveForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.txtShareComment.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtShareComment.WaterMarkForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        '
+        'txtFormCommentBG
+        '
+        resources.ApplyResources(Me.txtFormCommentBG, "txtFormCommentBG")
+        Me.txtFormCommentBG.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.txtFormCommentBG.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.txtFormCommentBG.Corners.UpperLeft = 2
+        Me.txtFormCommentBG.Corners.UpperRight = 2
+        Me.txtFormCommentBG.DesignerSelected = False
+        Me.txtFormCommentBG.DimFactorClick = 0
+        Me.txtFormCommentBG.DimFactorHover = 0
+        Me.txtFormCommentBG.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.txtFormCommentBG.ImageIndex = 0
+        Me.txtFormCommentBG.Name = "txtFormCommentBG"
+        Me.txtFormCommentBG.ShowFocus = CButtonLib.CButton.eFocus.None
+        '
+        'lineComments
+        '
+        Me.lineComments.BackColor = System.Drawing.Color.Transparent
+        Me.lineComments.BorderColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.lineComments.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.lineComments.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lineComments.DesignerSelected = False
+        Me.lineComments.DimFactorClick = 0
+        Me.lineComments.DimFactorHover = 0
+        Me.lineComments.FillType = CButtonLib.CButton.eFillType.Solid
+        resources.ApplyResources(Me.lineComments, "lineComments")
+        Me.lineComments.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.lineComments.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lineComments.ImageIndex = 0
+        Me.lineComments.ImageSize = New System.Drawing.Size(25, 36)
+        Me.lineComments.Name = "lineComments"
+        Me.lineComments.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.lineComments.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lineComments.SideImageSize = New System.Drawing.Size(36, 36)
+        Me.lineComments.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.lineComments.TextShadowShow = False
+        '
+        'panelComments
+        '
+        resources.ApplyResources(Me.panelComments, "panelComments")
+        Me.panelComments.BackColor = System.Drawing.Color.Transparent
+        Me.panelComments.Name = "panelComments"
+        '
+        'btnCommentSubmit
+        '
+        resources.ApplyResources(Me.btnCommentSubmit, "btnCommentSubmit")
+        Me.btnCommentSubmit.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.btnCommentSubmit.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.btnCommentSubmit.Corners.LowerLeft = 2
+        Me.btnCommentSubmit.Corners.LowerRight = 2
+        Me.btnCommentSubmit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCommentSubmit.DesignerSelected = False
+        Me.btnCommentSubmit.DimFactorClick = 0
+        Me.btnCommentSubmit.DimFactorHover = 0
+        Me.btnCommentSubmit.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.btnCommentSubmit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnCommentSubmit.ImageIndex = 0
+        Me.btnCommentSubmit.Name = "btnCommentSubmit"
+        Me.btnCommentSubmit.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.btnCommentSubmit.TextMargin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.btnCommentSubmit.TextShadowShow = False
+        '
+        'txtFormNameBG
+        '
+        Me.txtFormNameBG.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.txtFormNameBG.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.txtFormNameBG.Corners.LowerLeft = 2
+        Me.txtFormNameBG.Corners.LowerRight = 2
+        Me.txtFormNameBG.DesignerSelected = False
+        Me.txtFormNameBG.DimFactorClick = 0
+        Me.txtFormNameBG.DimFactorHover = 0
+        Me.txtFormNameBG.FillType = CButtonLib.CButton.eFillType.Solid
+        resources.ApplyResources(Me.txtFormNameBG, "txtFormNameBG")
+        Me.txtFormNameBG.ImageIndex = 0
+        Me.txtFormNameBG.Name = "txtFormNameBG"
+        Me.txtFormNameBG.ShowFocus = CButtonLib.CButton.eFocus.None
+        '
+        'lblHeaderComments
+        '
+        resources.ApplyResources(Me.lblHeaderComments, "lblHeaderComments")
+        Me.lblHeaderComments.BackColor = System.Drawing.Color.Transparent
+        Me.lblHeaderComments.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblHeaderComments.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.lblHeaderComments.Name = "lblHeaderComments"
+        '
+        'lineSplitter
+        '
+        resources.ApplyResources(Me.lineSplitter, "lineSplitter")
+        Me.lineSplitter.BackColor = System.Drawing.Color.Transparent
+        Me.lineSplitter.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(125, Byte), Integer))
+        Me.lineSplitter.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(125, Byte), Integer))
+        Me.lineSplitter.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lineSplitter.DesignerSelected = False
+        Me.lineSplitter.DimFactorClick = 0
+        Me.lineSplitter.DimFactorHover = 0
+        Me.lineSplitter.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.lineSplitter.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.lineSplitter.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lineSplitter.ImageIndex = 0
+        Me.lineSplitter.ImageSize = New System.Drawing.Size(25, 36)
+        Me.lineSplitter.Name = "lineSplitter"
+        Me.lineSplitter.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.lineSplitter.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lineSplitter.SideImageSize = New System.Drawing.Size(36, 36)
+        Me.lineSplitter.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.lineSplitter.TextShadowShow = False
         '
         'lblSimilar
         '
@@ -469,125 +639,6 @@ Partial Class frmMovieDetails
         resources.ApplyResources(Me.FlowLayoutPanel2, "FlowLayoutPanel2")
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         '
-        'panelShareComment
-        '
-        resources.ApplyResources(Me.panelShareComment, "panelShareComment")
-        Me.panelShareComment.BackColor = System.Drawing.Color.Transparent
-        Me.panelShareComment.Controls.Add(Me.lblMessageSent)
-        Me.panelShareComment.Controls.Add(Me.txtShareName)
-        Me.panelShareComment.Controls.Add(Me.txtShareComment)
-        Me.panelShareComment.Controls.Add(Me.txtFormCommentBG)
-        Me.panelShareComment.Controls.Add(Me.btnCommentSubmit)
-        Me.panelShareComment.Controls.Add(Me.txtFormNameBG)
-        Me.panelShareComment.Name = "panelShareComment"
-        '
-        'lblMessageSent
-        '
-        resources.ApplyResources(Me.lblMessageSent, "lblMessageSent")
-        Me.lblMessageSent.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.lblMessageSent.BorderShow = False
-        Me.lblMessageSent.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.lblMessageSent.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblMessageSent.DesignerSelected = False
-        Me.lblMessageSent.DimFactorClick = 0
-        Me.lblMessageSent.DimFactorHover = 0
-        Me.lblMessageSent.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.lblMessageSent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.lblMessageSent.ImageIndex = 0
-        Me.lblMessageSent.Name = "lblMessageSent"
-        Me.lblMessageSent.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.lblMessageSent.TabStop = False
-        Me.lblMessageSent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblMessageSent.TextMargin = New System.Windows.Forms.Padding(0)
-        Me.lblMessageSent.TextShadowShow = False
-        '
-        'txtShareName
-        '
-        Me.txtShareName.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.txtShareName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        resources.ApplyResources(Me.txtShareName, "txtShareName")
-        Me.txtShareName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtShareName.Name = "txtShareName"
-        Me.txtShareName.WaterMark = "Your Name..."
-        Me.txtShareName.WaterMarkActiveForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtShareName.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.txtShareName.WaterMarkForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        '
-        'txtShareComment
-        '
-        resources.ApplyResources(Me.txtShareComment, "txtShareComment")
-        Me.txtShareComment.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.txtShareComment.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtShareComment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtShareComment.Name = "txtShareComment"
-        Me.txtShareComment.WaterMark = "Share your thoughts..."
-        Me.txtShareComment.WaterMarkActiveForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtShareComment.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.txtShareComment.WaterMarkForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        '
-        'txtFormCommentBG
-        '
-        resources.ApplyResources(Me.txtFormCommentBG, "txtFormCommentBG")
-        Me.txtFormCommentBG.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.txtFormCommentBG.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.txtFormCommentBG.Corners.UpperLeft = 2
-        Me.txtFormCommentBG.Corners.UpperRight = 2
-        Me.txtFormCommentBG.DesignerSelected = False
-        Me.txtFormCommentBG.DimFactorClick = 0
-        Me.txtFormCommentBG.DimFactorHover = 0
-        Me.txtFormCommentBG.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.txtFormCommentBG.ImageIndex = 0
-        Me.txtFormCommentBG.Name = "txtFormCommentBG"
-        Me.txtFormCommentBG.ShowFocus = CButtonLib.CButton.eFocus.None
-        '
-        'btnCommentSubmit
-        '
-        resources.ApplyResources(Me.btnCommentSubmit, "btnCommentSubmit")
-        Me.btnCommentSubmit.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.btnCommentSubmit.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.btnCommentSubmit.Corners.LowerLeft = 2
-        Me.btnCommentSubmit.Corners.LowerRight = 2
-        Me.btnCommentSubmit.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCommentSubmit.DesignerSelected = False
-        Me.btnCommentSubmit.DimFactorClick = 0
-        Me.btnCommentSubmit.DimFactorHover = 0
-        Me.btnCommentSubmit.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.btnCommentSubmit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnCommentSubmit.ImageIndex = 0
-        Me.btnCommentSubmit.Name = "btnCommentSubmit"
-        Me.btnCommentSubmit.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.btnCommentSubmit.TextMargin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.btnCommentSubmit.TextShadowShow = False
-        '
-        'txtFormNameBG
-        '
-        Me.txtFormNameBG.BorderColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.txtFormNameBG.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.txtFormNameBG.Corners.LowerLeft = 2
-        Me.txtFormNameBG.Corners.LowerRight = 2
-        Me.txtFormNameBG.DesignerSelected = False
-        Me.txtFormNameBG.DimFactorClick = 0
-        Me.txtFormNameBG.DimFactorHover = 0
-        Me.txtFormNameBG.FillType = CButtonLib.CButton.eFillType.Solid
-        resources.ApplyResources(Me.txtFormNameBG, "txtFormNameBG")
-        Me.txtFormNameBG.ImageIndex = 0
-        Me.txtFormNameBG.Name = "txtFormNameBG"
-        Me.txtFormNameBG.ShowFocus = CButtonLib.CButton.eFocus.None
-        '
-        'lblHeaderComments
-        '
-        resources.ApplyResources(Me.lblHeaderComments, "lblHeaderComments")
-        Me.lblHeaderComments.BackColor = System.Drawing.Color.Transparent
-        Me.lblHeaderComments.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblHeaderComments.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.lblHeaderComments.Name = "lblHeaderComments"
-        '
-        'panelComments
-        '
-        resources.ApplyResources(Me.panelComments, "panelComments")
-        Me.panelComments.BackColor = System.Drawing.Color.Transparent
-        Me.panelComments.Name = "panelComments"
-        '
         'infoTrailerLink
         '
         Me.infoTrailerLink.BackColor = System.Drawing.Color.Transparent
@@ -621,27 +672,64 @@ Partial Class frmMovieDetails
         '
         Me.timerHideNotification.Interval = 4000
         '
-        'lineComments
+        'timerHideNotificationss
         '
-        Me.lineComments.BackColor = System.Drawing.Color.Transparent
-        Me.lineComments.BorderColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.lineComments.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.lineComments.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lineComments.DesignerSelected = False
-        Me.lineComments.DimFactorClick = 0
-        Me.lineComments.DimFactorHover = 0
-        Me.lineComments.FillType = CButtonLib.CButton.eFillType.Solid
-        resources.ApplyResources(Me.lineComments, "lineComments")
-        Me.lineComments.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.lineComments.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.lineComments.ImageIndex = 0
-        Me.lineComments.ImageSize = New System.Drawing.Size(25, 36)
-        Me.lineComments.Name = "lineComments"
-        Me.lineComments.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.lineComments.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.lineComments.SideImageSize = New System.Drawing.Size(36, 36)
-        Me.lineComments.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.lineComments.TextShadowShow = False
+        Me.timerHideNotificationss.Interval = 4000
+        '
+        'MovImage
+        '
+        resources.ApplyResources(Me.MovImage, "MovImage")
+        Me.MovImage.Name = "MovImage"
+        Me.MovImage.TabStop = False
+        '
+        'ImgMetaCritic
+        '
+        resources.ApplyResources(Me.ImgMetaCritic, "ImgMetaCritic")
+        Me.ImgMetaCritic.BackColor = System.Drawing.Color.Transparent
+        Me.ImgMetaCritic.Image = Global.Movieo.My.Resources.Resources.MetaCriticIcon
+        Me.ImgMetaCritic.Name = "ImgMetaCritic"
+        Me.ImgMetaCritic.TabStop = False
+        '
+        'imgImdb
+        '
+        resources.ApplyResources(Me.imgImdb, "imgImdb")
+        Me.imgImdb.BackColor = System.Drawing.Color.Transparent
+        Me.imgImdb.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.imgImdb.Image = Global.Movieo.My.Resources.Resources.ImdbIcon
+        Me.imgImdb.Name = "imgImdb"
+        Me.imgImdb.TabStop = False
+        '
+        'appClose
+        '
+        resources.ApplyResources(Me.appClose, "appClose")
+        Me.appClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.appClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
+        Me.appClose.Name = "appClose"
+        Me.appClose.TabStop = False
+        '
+        'infoRatingNetflix
+        '
+        resources.ApplyResources(Me.infoRatingNetflix, "infoRatingNetflix")
+        Me.infoRatingNetflix.BackColor = System.Drawing.Color.Transparent
+        Me.infoRatingNetflix.Cursor = System.Windows.Forms.Cursors.Default
+        Me.infoRatingNetflix.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.infoRatingNetflix.Name = "infoRatingNetflix"
+        '
+        'imgNetflix
+        '
+        resources.ApplyResources(Me.imgNetflix, "imgNetflix")
+        Me.imgNetflix.BackColor = System.Drawing.Color.Transparent
+        Me.imgNetflix.Image = Global.Movieo.My.Resources.Resources.NetflixIcon
+        Me.imgNetflix.Name = "imgNetflix"
+        Me.imgNetflix.TabStop = False
+        '
+        'PictureBox1
+        '
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.Movieo.My.Resources.Resources.NetflixIcon
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
         '
         'btnWatchTrailer
         '
@@ -669,28 +757,6 @@ Partial Class frmMovieDetails
         Me.btnWatchTrailer.SideImageSize = New System.Drawing.Size(36, 36)
         Me.btnWatchTrailer.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnWatchTrailer.TextShadowShow = False
-        '
-        'lineSplitter
-        '
-        resources.ApplyResources(Me.lineSplitter, "lineSplitter")
-        Me.lineSplitter.BackColor = System.Drawing.Color.Transparent
-        Me.lineSplitter.BorderColor = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(125, Byte), Integer))
-        Me.lineSplitter.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(98, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(125, Byte), Integer))
-        Me.lineSplitter.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lineSplitter.DesignerSelected = False
-        Me.lineSplitter.DimFactorClick = 0
-        Me.lineSplitter.DimFactorHover = 0
-        Me.lineSplitter.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.lineSplitter.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.lineSplitter.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.lineSplitter.ImageIndex = 0
-        Me.lineSplitter.ImageSize = New System.Drawing.Size(25, 36)
-        Me.lineSplitter.Name = "lineSplitter"
-        Me.lineSplitter.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.lineSplitter.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.lineSplitter.SideImageSize = New System.Drawing.Size(36, 36)
-        Me.lineSplitter.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.lineSplitter.TextShadowShow = False
         '
         'SplitterLine1
         '
@@ -763,82 +829,25 @@ Partial Class frmMovieDetails
         Me.btnWatchMovie.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnWatchMovie.TextShadowShow = False
         '
-        'timerHideNotificationss
+        'imgPanelsEmptyReviews
         '
-        Me.timerHideNotificationss.Interval = 4000
-        '
-        'MovImage
-        '
-        resources.ApplyResources(Me.MovImage, "MovImage")
-        Me.MovImage.Name = "MovImage"
-        Me.MovImage.TabStop = False
-        '
-        'ImgMetaCritic
-        '
-        resources.ApplyResources(Me.ImgMetaCritic, "ImgMetaCritic")
-        Me.ImgMetaCritic.BackColor = System.Drawing.Color.Transparent
-        Me.ImgMetaCritic.Image = Global.Movieo.My.Resources.Resources.MetaCriticIcon
-        Me.ImgMetaCritic.Name = "ImgMetaCritic"
-        Me.ImgMetaCritic.TabStop = False
-        '
-        'imgImdb
-        '
-        resources.ApplyResources(Me.imgImdb, "imgImdb")
-        Me.imgImdb.BackColor = System.Drawing.Color.Transparent
-        Me.imgImdb.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.imgImdb.Image = Global.Movieo.My.Resources.Resources.ImdbIcon
-        Me.imgImdb.Name = "imgImdb"
-        Me.imgImdb.TabStop = False
-        '
-        'appClose
-        '
-        resources.ApplyResources(Me.appClose, "appClose")
-        Me.appClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.appClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
-        Me.appClose.Name = "appClose"
-        Me.appClose.TabStop = False
-        '
-        'infoRatingNetflix
-        '
-        resources.ApplyResources(Me.infoRatingNetflix, "infoRatingNetflix")
-        Me.infoRatingNetflix.BackColor = System.Drawing.Color.Transparent
-        Me.infoRatingNetflix.Cursor = System.Windows.Forms.Cursors.Default
-        Me.infoRatingNetflix.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.infoRatingNetflix.Name = "infoRatingNetflix"
-        '
-        'imgNetflix
-        '
-        resources.ApplyResources(Me.imgNetflix, "imgNetflix")
-        Me.imgNetflix.BackColor = System.Drawing.Color.Transparent
-        Me.imgNetflix.Image = Global.Movieo.My.Resources.Resources.NetflixIcon
-        Me.imgNetflix.Name = "imgNetflix"
-        Me.imgNetflix.TabStop = False
-        '
-        'PictureBox1
-        '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.Movieo.My.Resources.Resources.NetflixIcon
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
+        resources.ApplyResources(Me.imgPanelsEmptyReviews, "imgPanelsEmptyReviews")
+        Me.imgPanelsEmptyReviews.BackColor = System.Drawing.Color.Transparent
+        Me.imgPanelsEmptyReviews.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.imgPanelsEmptyReviews.Name = "imgPanelsEmptyReviews"
         '
         'frmMovieDetails
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.Controls.Add(Me.infoRatingNetflix)
         Me.Controls.Add(Me.imgNetflix)
         Me.Controls.Add(Me.MovImage)
         Me.Controls.Add(Me.infoTrailerLink)
-        Me.Controls.Add(Me.panelComments)
-        Me.Controls.Add(Me.lineComments)
-        Me.Controls.Add(Me.panelShareComment)
         Me.Controls.Add(Me.btnWatchTrailer)
-        Me.Controls.Add(Me.lblHeaderComments)
         Me.Controls.Add(Me.panelDetails)
         Me.Controls.Add(Me.infoImageLink)
-        Me.Controls.Add(Me.lineSplitter)
         Me.Controls.Add(Me.infoRTomLink)
         Me.Controls.Add(Me.infoImdbId)
         Me.Controls.Add(Me.infoRatingMetaScore)
@@ -868,11 +877,11 @@ Partial Class frmMovieDetails
         CType(Me.BtnBlackList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.InfoPanel1.ResumeLayout(False)
         Me.InfoPanel1.PerformLayout()
+        Me.panelShareComment.ResumeLayout(False)
+        Me.panelShareComment.PerformLayout()
         Me.panelDetails.ResumeLayout(False)
         Me.panelDetails.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.panelShareComment.ResumeLayout(False)
-        Me.panelShareComment.PerformLayout()
         CType(Me.MovImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ImgMetaCritic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.imgImdb, System.ComponentModel.ISupportInitialize).EndInit()
@@ -880,7 +889,6 @@ Partial Class frmMovieDetails
         CType(Me.imgNetflix, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents infoTitle As Label
@@ -960,4 +968,5 @@ Partial Class frmMovieDetails
     Friend WithEvents infoRatingNetflix As Label
     Friend WithEvents imgNetflix As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents imgPanelsEmptyReviews As Label
 End Class

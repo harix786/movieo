@@ -1,7 +1,7 @@
 ﻿Public Class frmSelectSource
 
     Private Sub frmSelectSource_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Top = 24
+        Top = 28
         Left = Movieo.ClientRectangle.Left
         Size = Movieo.ClientSize
     End Sub
@@ -9,9 +9,8 @@
     Private Sub itemsMovieSourcesTitle_SelectedIndexChanged(sender As Object, e As EventArgs) Handles itemsMovieSourcesTitle.SelectedIndexChanged
         Try
             itemsMovieSources.SelectedIndex = itemsMovieSourcesTitle.SelectedIndex
-            frmMediaPlayer.PlayerMovieTitle.Text = frmMovieDetails.infoTitle.Text + " (" + frmMovieDetails.infoYear.Text + ")"
             frmMediaPlayer.MediaPlayerControl.URL = itemsMovieSources.SelectedItem.ToString
-            frmMediaPlayer.Show(frmMovieDetails)
+            DialogResult = DialogResult.OK
             Close()
         Catch ex As Exception
             Close()
@@ -21,7 +20,7 @@
 #Region "Close Button"
 
     Private Sub meClose_Click(sender As Object, e As EventArgs) Handles meClose.Click
-        Close()
+        DialogResult = DialogResult.Cancel
     End Sub
 
     Private Sub meClose_MouseMove(sender As Object, e As MouseEventArgs) Handles meClose.MouseMove

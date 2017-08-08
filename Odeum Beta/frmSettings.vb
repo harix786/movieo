@@ -5,8 +5,8 @@
     Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Set position/size of window
         Top = 28
-        Left = 0
-        Size = New Size(Movieo.Size.Width, Movieo.Size.Height)
+        Left = Movieo.ClientRectangle.Left
+        Size = Movieo.ClientSize
 
         'General
         chkAlwaysOnTop.Checked = My.Settings.doOnTop

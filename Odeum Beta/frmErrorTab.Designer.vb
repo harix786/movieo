@@ -32,14 +32,14 @@ Partial Class frmErrorTab
         '
         Me.TextError.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextError.Font = New System.Drawing.Font("Segoe UI", 19.5!, System.Drawing.FontStyle.Bold)
+        Me.TextError.Font = New System.Drawing.Font("Segoe UI Semibold", 16.0!)
         Me.TextError.ForeColor = System.Drawing.Color.White
-        Me.TextError.Location = New System.Drawing.Point(223, 98)
+        Me.TextError.Location = New System.Drawing.Point(223, 110)
         Me.TextError.Name = "TextError"
         Me.TextError.Size = New System.Drawing.Size(758, 81)
         Me.TextError.TabIndex = 9999
         Me.TextError.Text = "Oops!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Something's gone wrong..."
-        Me.TextError.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.TextError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnRestart
         '

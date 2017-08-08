@@ -8,8 +8,8 @@ Public Class Movieo
 #Region "Preferences (some can be changed)"
 
     Public devMode As Boolean = True
-    'Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
-    Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7fb0qd74u1h5ddw/movieo-dbTESTING.txt?dl=0" 'FOR TESTING
+    Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
+    'Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7fb0qd74u1h5ddw/movieo-dbTESTING.txt?dl=0" 'FOR TESTING
     Public linkChangelog As String = "https://dl.dropbox.com/s/3514qygmbok1rvv/movieo-changelog.txt?dl=0"
     Public linkNotifications As String = "https://dl.dropbox.com/s/eqxi751t8z031na/movieo-notifications.txt?dl=0"
     Public linkMovieComments As String = "https://dl.dropbox.com/s/swbt9fkbknmoqzz/movieo-comments.txt?dl=0"
@@ -31,7 +31,7 @@ Public Class Movieo
     Public infoVersionText As String = "Beta Build v" + Application.ProductVersion
     Public ctrlSearchBoxWatermark As String = "Search movies, people, years..."
     Public msgBackupDatabaseError As String = "Movieo has bumped into an issue loading movies from our database. Information on your issue has been sent to us, we promise we'll be back up soon :)"
-    Public msgNoInternetConnection As String = "Movieo is unable to access the internet to reach our server. Please check your internet connection and try again. If you have anymore issues then please email us at info@movieo.at.vu"
+    Public msgNoInternetConnection As String = "Movieo is unable to access the internet to reach our server. Please check your internet connection and try again. If you have anymore issues then please email us at hi@movieo.info"
     Public SearchingTexts As ICollection(Of String) = {"Have a great day!",
         "Thank you for using Movieo." + vbNewLine + "We hope you enjoy!",
         "If nobody comes back from the future to" + vbNewLine + "stop you, then how bad of a decision" + vbNewLine + "can it really be?",
@@ -46,7 +46,7 @@ Public Class Movieo
         "Teaching snakes to kick."}
 
     Dim UseBackupDatabase As Boolean = False
-    Dim dbMoviesAZ As ArrayList
+    Dim saveListsOnClose As Boolean = True
     Dim intMaxPosters = 40
 
 #End Region
@@ -72,13 +72,15 @@ Public Class Movieo
             If My.Settings.doAutoUpdate = True Then
                 timerGetUpdate.Enabled = True
             End If
-            timerStartup.Enabled = True
             If My.Settings.doBackupDb = True Then
                 SaveBackupDatabase()
             End If
+            timerStartup.Enabled = True
         Else
             'Show error form on movies tab - if no backup database file stored
+            saveListsOnClose = False
             tabDiscover.Controls.Remove(panelMovies)
+            tabDiscover.Controls.Remove(panelGenres)
             Dim a As New frmErrorTab
             a.TopLevel = False
             a.Show()
@@ -87,6 +89,11 @@ Public Class Movieo
             a.BringToFront()
             Tab.SelectedTab = tabDiscover
             Enabled = True
+            txtboxSearch.Enabled = False
+            txtboxSearchBG.Enabled = False
+            imgSearchIcon.Enabled = False
+            titleCoreMyLists.Enabled = False
+            frmStartupTab.Close()
             ShowPopupOk("No internet connection",
             msgNoInternetConnection, Me)
         End If
@@ -94,7 +101,9 @@ Public Class Movieo
 
     'Save users list on application exit
     Private Sub Movieo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        SaveLists()
+        If saveListsOnClose = True Then
+            SaveLists()
+        End If
     End Sub
 
     Public Sub SaveBackupDatabase() 'Download and save a backup of the current database
@@ -789,18 +798,18 @@ Public Class Movieo
 
     Private Sub timerSearchMovies_Tick(sender As Object, e As EventArgs) Handles timerSearchMovies.Tick
         If txtboxSearch.Text = "" Then
-            Tab.SelectedTab = tabSearches
             tabsSearches.SelectedTab = tabSearchesHome
+            Tab.SelectedTab = tabSearches
         Else
             If ifURL(txtboxSearch.Text) = True Then
-                frmMediaPlayer.PlayerMovieTitle.Text = "Title Unavailable"
+                frmMediaPlayer.Text = "Title Unavailable"
                 frmMediaPlayer.MediaPlayerControl.URL = txtboxSearch.Text
                 frmMediaPlayer.Show(Me)
                 txtboxSearch.Text = ""
             Else
                 searchMovies()
-                Tab.SelectedTab = tabSearches
                 tabsSearches.SelectedTab = tabSearchesMovies
+                Tab.SelectedTab = tabSearches
             End If
         End If
         timerSearchMovies.Enabled = False
@@ -911,14 +920,6 @@ Public Class Movieo
 #End Region
 
 #Region "Show Empty Panel Message"
-
-    Private Sub PanelMovies_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelMovies.ControlAdded, panelMovies.ControlRemoved
-        If panelMovies.Controls.Count = 0 Then
-            imgPanelsEmptyAllMovies.Visible = True
-        Else
-            imgPanelsEmptyAllMovies.Visible = False
-        End If
-    End Sub
 
     Private Sub panelMyListsFavourites_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelMyListsFavourites.ControlAdded, panelMyListsFavourites.ControlRemoved
         If panelMyListsFavourites.Controls.Count = 0 Then
@@ -1042,7 +1043,7 @@ Public Class Movieo
     'Dim restOfMoviesWithGenre As New List(Of Control)
     Public selectedGenre As String = "All Movies"
 
-    Private Sub btnGenre_Click(sender As Object, e As EventArgs) Handles btnGenreDrama.Click, btnGenreFamily.Click, btnGenreFantasy.Click, btnGenreComedy.Click, btnGenreCrime.Click, btnGenreDocumentary.Click, btnGenreAllMovies.Click, btnGenreSciFi.Click, btnGenreThriller.Click, btnGenreWar.Click, btnGenreWestern.Click, btnGenreMusic.Click, btnGenreMystery.Click, btnGenreRomance.Click, btnGenreHistory.Click, btnGenreHorror.Click, btnGenreAnimation.Click, btnGenreAdventure.Click, btnGenreAction.Click
+    Public Sub btnGenre_Click(sender As Object, e As EventArgs) Handles btnGenreDrama.Click, btnGenreFamily.Click, btnGenreFantasy.Click, btnGenreComedy.Click, btnGenreCrime.Click, btnGenreDocumentary.Click, btnGenreAllMovies.Click, btnGenreSciFi.Click, btnGenreThriller.Click, btnGenreWar.Click, btnGenreWestern.Click, btnGenreMusic.Click, btnGenreMystery.Click, btnGenreRomance.Click, btnGenreHistory.Click, btnGenreHorror.Click, btnGenreAnimation.Click, btnGenreAdventure.Click, btnGenreAction.Click
         If Not sender.text = selectedGenre Then
             If sender.Text = "All Movies" Then
                 For Each a As Control In panelGenres.Controls
@@ -1112,6 +1113,31 @@ Public Class Movieo
             sender.BackColor = Color.FromArgb(24, 32, 45)
             sender.ForeColor = Color.FromArgb(161, 168, 179)
         End If
+    End Sub
+
+#End Region
+
+#Region "Select Source"
+
+    Public Function returnSource(parent As Form, movie As String, links As String) As String
+        frmSelectSource.itemsMovieSourcesTitle.Items.Clear()
+        frmSelectSource.itemsMovieSources.Items.Clear()
+        Dim splitSources As String() = Split(links, "*")
+        For Each a As String In splitSources
+            Dim sourceTitle As String = a.Substring(a.LastIndexOf("/") + 1)
+            frmSelectSource.itemsMovieSourcesTitle.Items.Add(sourceTitle)
+            frmSelectSource.itemsMovieSources.Items.Add(a)
+        Next
+
+        If frmSelectSource.ShowDialog(parent) = DialogResult.OK Then
+            Return frmSelectSource.itemsMovieSources.SelectedItem.ToString
+        Else
+            Return Nothing
+        End If
+    End Function
+
+    Private Sub panelSearches_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelSearches.ControlAdded
+        imgPanelsEmptySearches.Visible = False
     End Sub
 
 #End Region

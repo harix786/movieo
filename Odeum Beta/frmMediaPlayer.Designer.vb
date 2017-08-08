@@ -32,15 +32,12 @@ Partial Class frmMediaPlayer
         Me.lblErrorText = New System.Windows.Forms.Label()
         Me.PanelTop = New System.Windows.Forms.Panel()
         Me.btnReportBroken = New CButtonLib.CButton()
-        Me.PlayerMovieTitle = New System.Windows.Forms.Label()
-        Me.appClose = New System.Windows.Forms.PictureBox()
         Me.timerUntilConnected = New System.Windows.Forms.Timer(Me.components)
         Me.tab.SuspendLayout()
         Me.tabPlayer.SuspendLayout()
         CType(Me.MediaPlayerControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabStatus.SuspendLayout()
         Me.PanelTop.SuspendLayout()
-        CType(Me.appClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'timerGoToTime
@@ -58,7 +55,7 @@ Partial Class frmMediaPlayer
         Me.tab.Name = "tab"
         Me.tab.Padding = New System.Drawing.Point(0, 0)
         Me.tab.SelectedIndex = 0
-        Me.tab.Size = New System.Drawing.Size(1241, 758)
+        Me.tab.Size = New System.Drawing.Size(1241, 727)
         Me.tab.TabIndex = 1062
         '
         'tabPlayer
@@ -68,7 +65,7 @@ Partial Class frmMediaPlayer
         Me.tabPlayer.Location = New System.Drawing.Point(4, 22)
         Me.tabPlayer.Name = "tabPlayer"
         Me.tabPlayer.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabPlayer.Size = New System.Drawing.Size(1233, 732)
+        Me.tabPlayer.Size = New System.Drawing.Size(1233, 701)
         Me.tabPlayer.TabIndex = 0
         Me.tabPlayer.Text = "Media Player"
         '
@@ -79,7 +76,7 @@ Partial Class frmMediaPlayer
         Me.MediaPlayerControl.Location = New System.Drawing.Point(3, 3)
         Me.MediaPlayerControl.Name = "MediaPlayerControl"
         Me.MediaPlayerControl.OcxState = CType(resources.GetObject("MediaPlayerControl.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.MediaPlayerControl.Size = New System.Drawing.Size(1227, 726)
+        Me.MediaPlayerControl.Size = New System.Drawing.Size(1227, 695)
         Me.MediaPlayerControl.TabIndex = 1061
         '
         'tabStatus
@@ -89,7 +86,7 @@ Partial Class frmMediaPlayer
         Me.tabStatus.Location = New System.Drawing.Point(4, 22)
         Me.tabStatus.Name = "tabStatus"
         Me.tabStatus.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabStatus.Size = New System.Drawing.Size(1233, 732)
+        Me.tabStatus.Size = New System.Drawing.Size(1233, 701)
         Me.tabStatus.TabIndex = 1
         Me.tabStatus.Text = "Status"
         '
@@ -99,7 +96,7 @@ Partial Class frmMediaPlayer
         Me.lblErrorText.AutoEllipsis = True
         Me.lblErrorText.BackColor = System.Drawing.Color.Transparent
         Me.lblErrorText.Font = New System.Drawing.Font("Segoe UI Semibold", 13.0!)
-        Me.lblErrorText.Location = New System.Drawing.Point(346, 289)
+        Me.lblErrorText.Location = New System.Drawing.Point(346, 273)
         Me.lblErrorText.Name = "lblErrorText"
         Me.lblErrorText.Size = New System.Drawing.Size(540, 106)
         Me.lblErrorText.TabIndex = 1067
@@ -110,8 +107,6 @@ Partial Class frmMediaPlayer
         '
         Me.PanelTop.BackColor = System.Drawing.Color.Black
         Me.PanelTop.Controls.Add(Me.btnReportBroken)
-        Me.PanelTop.Controls.Add(Me.PlayerMovieTitle)
-        Me.PanelTop.Controls.Add(Me.appClose)
         Me.PanelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTop.Location = New System.Drawing.Point(0, 0)
         Me.PanelTop.Name = "PanelTop"
@@ -136,38 +131,13 @@ Partial Class frmMediaPlayer
         Me.btnReportBroken.Font = New System.Drawing.Font("Segoe UI Semibold", 10.25!)
         Me.btnReportBroken.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnReportBroken.ImageIndex = 0
-        Me.btnReportBroken.Location = New System.Drawing.Point(1064, 8)
+        Me.btnReportBroken.Location = New System.Drawing.Point(1103, 8)
         Me.btnReportBroken.Name = "btnReportBroken"
         Me.btnReportBroken.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnReportBroken.Size = New System.Drawing.Size(122, 31)
         Me.btnReportBroken.TabIndex = 1048
         Me.btnReportBroken.Text = "Report Broken"
         Me.btnReportBroken.TextShadowShow = False
-        '
-        'PlayerMovieTitle
-        '
-        Me.PlayerMovieTitle.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PlayerMovieTitle.AutoEllipsis = True
-        Me.PlayerMovieTitle.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PlayerMovieTitle.ForeColor = System.Drawing.Color.White
-        Me.PlayerMovieTitle.Location = New System.Drawing.Point(10, 6)
-        Me.PlayerMovieTitle.Name = "PlayerMovieTitle"
-        Me.PlayerMovieTitle.Size = New System.Drawing.Size(1049, 34)
-        Me.PlayerMovieTitle.TabIndex = 1061
-        Me.PlayerMovieTitle.Text = "Movie Title"
-        Me.PlayerMovieTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'appClose
-        '
-        Me.appClose.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.appClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.appClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
-        Me.appClose.Location = New System.Drawing.Point(1197, 11)
-        Me.appClose.Name = "appClose"
-        Me.appClose.Size = New System.Drawing.Size(25, 25)
-        Me.appClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.appClose.TabIndex = 1046
-        Me.appClose.TabStop = False
         '
         'timerUntilConnected
         '
@@ -177,23 +147,22 @@ Partial Class frmMediaPlayer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(1233, 772)
+        Me.ClientSize = New System.Drawing.Size(1233, 741)
         Me.Controls.Add(Me.PanelTop)
         Me.Controls.Add(Me.tab)
         Me.ForeColor = System.Drawing.Color.White
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimizeBox = False
         Me.Name = "frmMediaPlayer"
-        Me.ShowInTaskbar = False
-        Me.Text = "Watch Movie"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Watching ..."
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.tab.ResumeLayout(False)
         Me.tabPlayer.ResumeLayout(False)
         CType(Me.MediaPlayerControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabStatus.ResumeLayout(False)
         Me.PanelTop.ResumeLayout(False)
-        CType(Me.appClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -206,7 +175,5 @@ Partial Class frmMediaPlayer
     Friend WithEvents lblErrorText As Label
     Friend WithEvents PanelTop As Panel
     Public WithEvents btnReportBroken As CButtonLib.CButton
-    Friend WithEvents PlayerMovieTitle As Label
-    Friend WithEvents appClose As PictureBox
     Friend WithEvents timerUntilConnected As Timer
 End Class

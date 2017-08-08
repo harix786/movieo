@@ -8,7 +8,7 @@ Public Class ctrlPosterTitle
 
     Public Sub ShowMovie()
         Try
-            'prioritise already acquired information
+            'Prioritise already acquired information
             frmMovieDetails.infoTitle.Text = InfoTitle.Text
             frmMovieDetails.infoYear.Text = InfoYear.Text
             frmMovieDetails.infoGenre.Text = InfoGenre.Text
@@ -141,7 +141,7 @@ Public Class ctrlPosterTitle
                 Dim trailerLink As String = jsonPTAPI.SelectToken("trailer")
 
                 frmBackgroundMovieDetails.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(backgroundLink)))
-                frmMovieDetails.Opacity = 0.95
+                frmMovieDetails.Opacity = 0.9
 
                 'Details from Popcorn Time Api for Trailer Link (YouTube)
                 frmMovieDetails.infoTrailerLink.Text = trailerLink
@@ -154,6 +154,7 @@ Public Class ctrlPosterTitle
             frmBackgroundMovieDetails.Show(Movieo)
         Catch ex As Exception
             'False Positive (Ignore exception)
+            MsgBox(ex.Message)
         End Try
     End Sub
 

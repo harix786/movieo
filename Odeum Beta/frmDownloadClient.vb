@@ -5,8 +5,8 @@ Public Class frmDownloadClient
     Private Sub DownloadClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LblTitleProgress.Text = "Connecting..."
         Top = 28
-        Left = 0
-        Size = New Size(Movieo.Size.Width, Movieo.Size.Height)
+        Left = Movieo.ClientRectangle.Left
+        Size = Movieo.ClientSize
         BtnCancel.Text = "Cancel"
     End Sub
 

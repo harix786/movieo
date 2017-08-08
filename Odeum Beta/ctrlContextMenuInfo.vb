@@ -40,7 +40,7 @@
             Movieo.IsContextOpen = False
             Movieo.InfoSelectedTab = frmInfo.tabAbout
             Hide()
-            frmInfo.Show(Movieo)
+            frmInfo.ShowDialog(Movieo)
         Catch ex As Exception
         End Try
     End Sub
@@ -50,7 +50,7 @@
             Movieo.IsContextOpen = False
             Movieo.InfoSelectedTab = frmInfo.tabLegal
             Hide()
-            frmInfo.Show(Movieo)
+            frmInfo.ShowDialog(Movieo)
         Catch ex As Exception
         End Try
     End Sub
@@ -60,7 +60,7 @@
             Movieo.IsContextOpen = False
             Movieo.InfoSelectedTab = frmInfo.tabHelpFaq
             Hide()
-            frmInfo.Show(Movieo)
+            frmInfo.ShowDialog(Movieo)
         Catch ex As Exception
         End Try
     End Sub
@@ -70,7 +70,7 @@
             Movieo.IsContextOpen = False
             Movieo.InfoSelectedTab = frmInfo.tabChangelog
             Hide()
-            frmInfo.Show(Movieo)
+            frmInfo.ShowDialog(Movieo)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -81,7 +81,7 @@
             Movieo.IsContextOpen = False
             Movieo.InfoSelectedTab = frmInfo.tabContact
             Hide()
-            frmInfo.Show(Movieo)
+            frmInfo.ShowDialog(Movieo)
         Catch ex As Exception
         End Try
     End Sub
@@ -90,7 +90,7 @@
         Try
             Movieo.IsContextOpen = False
             Hide()
-            frmRequestMovie.Show(Movieo)
+            frmRequestMovie.ShowDialog(Movieo)
         Catch ex As Exception
         End Try
     End Sub
@@ -99,7 +99,7 @@
         Try
             Movieo.IsContextOpen = False
             Hide()
-            frmNotifications.Show(Movieo)
+            frmNotifications.ShowDialog(Movieo)
         Catch ex As Exception
         End Try
     End Sub
@@ -108,7 +108,7 @@
         Try
             Movieo.IsContextOpen = False
             Hide()
-            frmSettings.Show(Movieo)
+            frmSettings.ShowDialog(Movieo)
         Catch ex As Exception
         End Try
     End Sub

@@ -89,18 +89,18 @@ Partial Class ctrlItemComment
         Me.infoDate.Text = "a day ago"
         Me.infoDate.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'ctrlComment
+        'ctrlItemComment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(46, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(459, 55)
         Me.Controls.Add(Me.infoDate)
         Me.Controls.Add(Me.infoUserName)
         Me.Controls.Add(Me.infoUserComment)
         Me.Controls.Add(Me.underline)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "ctrlComment"
+        Me.Name = "ctrlItemComment"
         Me.Text = "ctrlComment"
         Me.ResumeLayout(False)
         Me.PerformLayout()
