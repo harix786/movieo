@@ -1,4 +1,4 @@
-# Movieo by SoInfamous & Others
+# Movieo by NV & Others
 
 ## What is Movieo?
 
@@ -6,17 +6,17 @@ This is a place for browsing and watching movies, made with love by a few develo
 
 ## Screenshots
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/47hrtqw2fqjh3l9/Movieo%20-%20Movies%20-%20All%20Movies.png?dl=0" alt="Discover Movies">
+<img width="450" align="middle" src="https://dl.dropbox.com/s/mg95ysefsrxxdqa/Movieo%20-%20Action%20Movies.png?dl=0" alt="Discover new movies by Genres.">
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/nfxxbqd6k2u2o57/Movieo%20-%20Movie%20Details.png?dl=0" alt="View Movie Details">
+<img width="450" align="middle" src="https://dl.dropbox.com/s/8ky4xa5ewfww9pg/Movieo%20-%20Movie%20Details.png?dl=0" alt="View all possible movie details.">
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/yqo8rwnjihd4q6i/Movieo%20-%20Collections.png?dl=0" alt="Browse Collections of Movies">
+<img width="450" align="middle" src="https://dl.dropbox.com/s/dgdjaz0zvij34zh/Movieo%20-%20Choose%20Source.png?dl=0" alt="Choose from multiple of sources.">
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/phbqcezp70xuyuv/Movieo%20-%20My%20Lists%20-%20Favourites.png?dl=0" alt="Keep track of movies">
+<img width="450" align="middle" src="https://dl.dropbox.com/s/b3vnvjykiazh2x0/Movieo%20-%20Seen%20List.png?dl=0" alt="Keep track of movies">
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/rceee5zkgho47us/Movieo%20-%20Downloads.png?dl=0" alt="Download Movies">
+<img width="450" align="middle" src="https://dl.dropbox.com/s/ynlfzdh1kpxifjg/Movieo%20-%20Download%20Movies.png?dl=0" alt="Download movies to your computer or storage device.">
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/fkgrnip0t9ouljs/Movieo%20-%20Request%20Movie.png?dl=0" alt="Request Movie">
+<img width="450" align="middle" src="https://dl.dropbox.com/s/v4fcg12fiil0dah/Movieo%20-%20Request%20Movie.png?dl=0" alt="Request movies we may not have. Our team will do their best to provide you with the best possible quality there is out there.">
 
 ## Data Provider
 
