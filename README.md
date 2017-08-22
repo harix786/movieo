@@ -10,8 +10,7 @@ Available for free at http://movieo.info/
 
 <img width="450" align="middle" src="https://dl.dropbox.com/s/ratkby98cea5wq7/Movieo%20-%20New%20Releases.png?dl=0" alt="Discover new releases.">
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/mcu56v44sviemlk/Movieo%20-%20Top%20Rated.png?dl=0
-" alt="Discover top rated movies.">
+<img width="450" align="middle" src="https://dl.dropbox.com/s/mcu56v44sviemlk/Movieo%20-%20Top%20Rated.png?dl=0" alt="Discover top rated movies.">
 
 <img width="450" align="middle" src="https://dl.dropbox.com/s/wbdk67funruzub6/Movieo%20-%20Movie%20Details%20%28Goodfellas%29.png?dl=0" alt="View movie details.">
 
