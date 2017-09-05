@@ -2,7 +2,7 @@
 
 
     Private Sub frmRequestMovie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Top = 28
+        Top = Movieo.ClientRectangle.Top + 23
         Left = Movieo.ClientRectangle.Left
         Size = Movieo.ClientSize
     End Sub

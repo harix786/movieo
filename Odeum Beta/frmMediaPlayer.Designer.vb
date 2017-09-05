@@ -55,7 +55,7 @@ Partial Class frmMediaPlayer
         Me.tab.Name = "tab"
         Me.tab.Padding = New System.Drawing.Point(0, 0)
         Me.tab.SelectedIndex = 0
-        Me.tab.Size = New System.Drawing.Size(1241, 727)
+        Me.tab.Size = New System.Drawing.Size(1241, 719)
         Me.tab.TabIndex = 1062
         '
         'tabPlayer
@@ -65,7 +65,7 @@ Partial Class frmMediaPlayer
         Me.tabPlayer.Location = New System.Drawing.Point(4, 22)
         Me.tabPlayer.Name = "tabPlayer"
         Me.tabPlayer.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabPlayer.Size = New System.Drawing.Size(1233, 701)
+        Me.tabPlayer.Size = New System.Drawing.Size(1233, 693)
         Me.tabPlayer.TabIndex = 0
         Me.tabPlayer.Text = "Media Player"
         '
@@ -76,7 +76,7 @@ Partial Class frmMediaPlayer
         Me.MediaPlayerControl.Location = New System.Drawing.Point(3, 3)
         Me.MediaPlayerControl.Name = "MediaPlayerControl"
         Me.MediaPlayerControl.OcxState = CType(resources.GetObject("MediaPlayerControl.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.MediaPlayerControl.Size = New System.Drawing.Size(1227, 695)
+        Me.MediaPlayerControl.Size = New System.Drawing.Size(1227, 687)
         Me.MediaPlayerControl.TabIndex = 1061
         '
         'tabStatus
@@ -149,7 +149,7 @@ Partial Class frmMediaPlayer
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(1233, 741)
+        Me.ClientSize = New System.Drawing.Size(1233, 733)
         Me.Controls.Add(Me.PanelTop)
         Me.Controls.Add(Me.tab)
         Me.ForeColor = System.Drawing.Color.White

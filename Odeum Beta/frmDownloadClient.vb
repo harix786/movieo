@@ -2,12 +2,13 @@
 Imports System.Net
 
 Public Class frmDownloadClient
+
     Private Sub DownloadClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LblTitleProgress.Text = "Connecting..."
-        Top = 28
+        lblProgress.Text = "Connecting"
+        BtnCancel.Text = "Cancel"
+        Top = Movieo.ClientRectangle.Top + 23
         Left = Movieo.ClientRectangle.Left
         Size = Movieo.ClientSize
-        BtnCancel.Text = "Cancel"
     End Sub
 
     Dim client As WebClient = New WebClient
@@ -17,33 +18,48 @@ Public Class frmDownloadClient
 
     Public Sub doDownload(MovieLink As String, MovieTitle As String, MovieYear As String, MovieExtension As String)
         Try
-            LblTitleProgress.Text = "Connecting..."
+            lblProgress.Text = "Connecting"
             If Not My.Computer.FileSystem.DirectoryExists(Movieo.pathDownloads) Then
                 My.Computer.FileSystem.CreateDirectory(Movieo.pathDownloads)
             End If
             TitleAndYear = MovieTitle + " (" + MovieYear + ")"
             Title = MovieTitle
             Dim DownloadDirectory As String = Movieo.pathDownloads + TitleAndYear + "." + MovieExtension
-            TextDownloadLocation.Text = DownloadDirectory
+            lblLocation.Text = DownloadDirectory
             AddHandler client.DownloadProgressChanged, AddressOf client_ProgressChanged
             AddHandler client.DownloadFileCompleted, AddressOf client_DownloadCompleted
+            SW = Stopwatch.StartNew
             client.DownloadFileAsync(New Uri(MovieLink), DownloadDirectory)
         Catch ex As Exception
+            lblProgress.Text = "Download Failed :/"
             Movieo.ShowPopupOk("Unable to download movie.", ex.Message, Me)
         End Try
     End Sub
 
+    Dim SW As Stopwatch
     Private Sub client_ProgressChanged(ByVal sender As Object, ByVal e As DownloadProgressChangedEventArgs)
         Try
+            lblMovieTitle.Text = TitleAndYear
+            lblMovieTitle.Visible = True
+            prgbarStatus.Visible = True
+            bgStatus.Visible = True
+            lblTitleSize.Visible = True
+            lblTitleSpeed.Visible = True
+            lblTitleLocation.Visible = True
+            lblSize.Visible = True
+            lblSpeed.Visible = True
+            lblLocation.Visible = True
+
             Dim bytesIn As Double = Double.Parse(e.BytesReceived.ToString())
             Dim totalBytes As Double = Double.Parse(e.TotalBytesToReceive.ToString())
             Dim percentage As Double = bytesIn / totalBytes * 100
 
-            prgBar.Value = Int32.Parse(Math.Truncate(percentage).ToString())
+            prgbarStatus.Value = Int32.Parse(Math.Truncate(percentage).ToString())
 
-            LblTitleProgress.Text = "Downloading " + Title + " (" + prgBar.Value.ToString + "%)"
+            lblProgress.Text = "Downloading " + "(" + prgbarStatus.Value.ToString + "%)"
             Dim SmallFormat As String = FormatBytes(e.BytesReceived).ToString
-            TextDownloadSize.Text = SmallFormat + "/" + FormatBytes(e.TotalBytesToReceive)
+            lblSize.Text = SmallFormat + "/" + FormatBytes(e.TotalBytesToReceive)
+            lblSpeed.Text = (e.BytesReceived / SW.ElapsedMilliseconds).ToString + " KB/Sec"
         Catch ex As Exception
         End Try
     End Sub
@@ -51,11 +67,32 @@ Public Class frmDownloadClient
     Private Sub client_DownloadCompleted(ByVal sender As Object, ByVal e As AsyncCompletedEventArgs)
         Try
             If Not e.Cancelled AndAlso e.Error Is Nothing Then
-                LblTitleProgress.Text = "Download Completed!"
+                lblProgress.Text = "Download Completed!"
                 BtnCancel.Text = "Close"
+
+                lblMovieTitle.Visible = False
+                prgbarStatus.Visible = False
+                bgStatus.Visible = False
+                lblTitleSize.Visible = False
+                lblTitleSpeed.Visible = False
+                lblTitleLocation.Visible = False
+                lblSize.Visible = False
+                lblSpeed.Visible = False
+                lblLocation.Visible = False
             Else
-                LblTitleProgress.Text = "Download Failed :("
+                lblProgress.Text = "Download Failed :("
                 BtnCancel.Text = "Close"
+
+                lblMovieTitle.Visible = False
+                prgbarStatus.Visible = False
+                bgStatus.Visible = False
+                lblTitleSize.Visible = False
+                lblTitleSpeed.Visible = False
+                lblTitleLocation.Visible = False
+                lblSize.Visible = False
+                lblSpeed.Visible = False
+                lblLocation.Visible = False
+
                 Movieo.ShowPopupOk("Unable to download movie.", e.Error.InnerException.Message, Me)
             End If
         Catch ex As Exception
@@ -99,7 +136,7 @@ Public Class frmDownloadClient
         End Try
     End Sub
 
-    Private Sub TextDownloadLocation_Click(sender As Object, e As EventArgs) Handles TextDownloadLocation.Click
-        Movieo.ShowFile(TextDownloadLocation.Text)
+    Private Sub lblLocation_Click(sender As Object, e As EventArgs) Handles lblLocation.Click
+        Movieo.ShowFile(lblLocation.Text)
     End Sub
 End Class

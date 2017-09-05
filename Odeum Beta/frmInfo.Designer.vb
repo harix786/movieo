@@ -226,7 +226,7 @@ Partial Class frmInfo
         Me.lblAboutSubHeader2.AutoSize = True
         Me.lblAboutSubHeader2.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAboutSubHeader2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.lblAboutSubHeader2.Location = New System.Drawing.Point(131, 627)
+        Me.lblAboutSubHeader2.Location = New System.Drawing.Point(123, 627)
         Me.lblAboutSubHeader2.MaximumSize = New System.Drawing.Size(730, 0)
         Me.lblAboutSubHeader2.MinimumSize = New System.Drawing.Size(730, 0)
         Me.lblAboutSubHeader2.Name = "lblAboutSubHeader2"
@@ -240,7 +240,7 @@ Partial Class frmInfo
         Me.imgProviderPopcornTime.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.imgProviderPopcornTime.Cursor = System.Windows.Forms.Cursors.Hand
         Me.imgProviderPopcornTime.Image = Global.Movieo.My.Resources.Resources.PopcornTime
-        Me.imgProviderPopcornTime.Location = New System.Drawing.Point(565, 672)
+        Me.imgProviderPopcornTime.Location = New System.Drawing.Point(557, 672)
         Me.imgProviderPopcornTime.Name = "imgProviderPopcornTime"
         Me.imgProviderPopcornTime.Size = New System.Drawing.Size(220, 50)
         Me.imgProviderPopcornTime.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -252,7 +252,7 @@ Partial Class frmInfo
         Me.imgProviderOMDbAPI.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.imgProviderOMDbAPI.Cursor = System.Windows.Forms.Cursors.Hand
         Me.imgProviderOMDbAPI.Image = Global.Movieo.My.Resources.Resources.OMDbLogo
-        Me.imgProviderOMDbAPI.Location = New System.Drawing.Point(449, 672)
+        Me.imgProviderOMDbAPI.Location = New System.Drawing.Point(441, 672)
         Me.imgProviderOMDbAPI.Name = "imgProviderOMDbAPI"
         Me.imgProviderOMDbAPI.Size = New System.Drawing.Size(95, 50)
         Me.imgProviderOMDbAPI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -264,7 +264,7 @@ Partial Class frmInfo
         Me.imgProviderDropbox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.imgProviderDropbox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.imgProviderDropbox.Image = Global.Movieo.My.Resources.Resources.DropboxLogo
-        Me.imgProviderDropbox.Location = New System.Drawing.Point(233, 672)
+        Me.imgProviderDropbox.Location = New System.Drawing.Point(225, 672)
         Me.imgProviderDropbox.Name = "imgProviderDropbox"
         Me.imgProviderDropbox.Size = New System.Drawing.Size(195, 50)
         Me.imgProviderDropbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -276,7 +276,7 @@ Partial Class frmInfo
         Me.lblAboutDevs.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblAboutDevs.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.lblAboutDevs.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblAboutDevs.Location = New System.Drawing.Point(211, 777)
+        Me.lblAboutDevs.Location = New System.Drawing.Point(203, 777)
         Me.lblAboutDevs.Name = "lblAboutDevs"
         Me.lblAboutDevs.Size = New System.Drawing.Size(570, 20)
         Me.lblAboutDevs.TabIndex = 1093
@@ -288,7 +288,7 @@ Partial Class frmInfo
         Me.lblAboutVersion.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblAboutVersion.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.lblAboutVersion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblAboutVersion.Location = New System.Drawing.Point(328, 803)
+        Me.lblAboutVersion.Location = New System.Drawing.Point(320, 803)
         Me.lblAboutVersion.Name = "lblAboutVersion"
         Me.lblAboutVersion.Size = New System.Drawing.Size(341, 20)
         Me.lblAboutVersion.TabIndex = 1092
@@ -301,7 +301,7 @@ Partial Class frmInfo
         Me.lblAboutSubHeader1.AutoSize = True
         Me.lblAboutSubHeader1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAboutSubHeader1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.lblAboutSubHeader1.Location = New System.Drawing.Point(131, 468)
+        Me.lblAboutSubHeader1.Location = New System.Drawing.Point(123, 468)
         Me.lblAboutSubHeader1.MaximumSize = New System.Drawing.Size(730, 0)
         Me.lblAboutSubHeader1.MinimumSize = New System.Drawing.Size(730, 0)
         Me.lblAboutSubHeader1.Name = "lblAboutSubHeader1"
@@ -316,7 +316,7 @@ Partial Class frmInfo
         Me.AboutSubText.AutoSize = True
         Me.AboutSubText.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.AboutSubText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.AboutSubText.Location = New System.Drawing.Point(131, 189)
+        Me.AboutSubText.Location = New System.Drawing.Point(123, 189)
         Me.AboutSubText.MaximumSize = New System.Drawing.Size(730, 0)
         Me.AboutSubText.MinimumSize = New System.Drawing.Size(730, 0)
         Me.AboutSubText.Name = "AboutSubText"
@@ -331,7 +331,7 @@ Partial Class frmInfo
         Me.lblHeaderAbout.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblHeaderAbout.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderAbout.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderAbout.Location = New System.Drawing.Point(362, 126)
+        Me.lblHeaderAbout.Location = New System.Drawing.Point(354, 126)
         Me.lblHeaderAbout.Name = "lblHeaderAbout"
         Me.lblHeaderAbout.Size = New System.Drawing.Size(269, 45)
         Me.lblHeaderAbout.TabIndex = 1083
@@ -342,7 +342,7 @@ Partial Class frmInfo
         Me.panelHelpGrowSocial.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.panelHelpGrowSocial.Controls.Add(Me.btnShareTwitter)
         Me.panelHelpGrowSocial.Controls.Add(Me.btnShareFacebook)
-        Me.panelHelpGrowSocial.Location = New System.Drawing.Point(314, 503)
+        Me.panelHelpGrowSocial.Location = New System.Drawing.Point(306, 503)
         Me.panelHelpGrowSocial.Name = "panelHelpGrowSocial"
         Me.panelHelpGrowSocial.Size = New System.Drawing.Size(364, 50)
         Me.panelHelpGrowSocial.TabIndex = 1091
@@ -426,7 +426,7 @@ Partial Class frmInfo
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(83, 332)
+        Me.Label2.Location = New System.Drawing.Point(75, 332)
         Me.Label2.MaximumSize = New System.Drawing.Size(730, 0)
         Me.Label2.MinimumSize = New System.Drawing.Size(730, 0)
         Me.Label2.Name = "Label2"
@@ -441,7 +441,7 @@ Partial Class frmInfo
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(58, 377)
+        Me.Label1.Location = New System.Drawing.Point(50, 377)
         Me.Label1.MaximumSize = New System.Drawing.Size(780, 0)
         Me.Label1.MinimumSize = New System.Drawing.Size(780, 0)
         Me.Label1.Name = "Label1"
@@ -457,7 +457,7 @@ Partial Class frmInfo
         Me.lblLegalText.AutoSize = True
         Me.lblLegalText.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.lblLegalText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblLegalText.Location = New System.Drawing.Point(58, 190)
+        Me.lblLegalText.Location = New System.Drawing.Point(50, 190)
         Me.lblLegalText.MaximumSize = New System.Drawing.Size(780, 0)
         Me.lblLegalText.MinimumSize = New System.Drawing.Size(780, 0)
         Me.lblLegalText.Name = "lblLegalText"
@@ -474,7 +474,7 @@ Partial Class frmInfo
         Me.lblHeaderLegal.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblHeaderLegal.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderLegal.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderLegal.Location = New System.Drawing.Point(274, 126)
+        Me.lblHeaderLegal.Location = New System.Drawing.Point(266, 126)
         Me.lblHeaderLegal.Name = "lblHeaderLegal"
         Me.lblHeaderLegal.Size = New System.Drawing.Size(349, 45)
         Me.lblHeaderLegal.TabIndex = 1086
@@ -519,7 +519,7 @@ Partial Class frmInfo
         Me.qHeader7.AutoSize = True
         Me.qHeader7.Font = New System.Drawing.Font("Segoe UI", 18.0!)
         Me.qHeader7.ForeColor = System.Drawing.Color.White
-        Me.qHeader7.Location = New System.Drawing.Point(122, 1863)
+        Me.qHeader7.Location = New System.Drawing.Point(114, 1863)
         Me.qHeader7.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qHeader7.MinimumSize = New System.Drawing.Size(750, 0)
         Me.qHeader7.Name = "qHeader7"
@@ -533,7 +533,7 @@ Partial Class frmInfo
         Me.Splitter1g.AutoSize = True
         Me.Splitter1g.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1g.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1g.Location = New System.Drawing.Point(120, 1806)
+        Me.Splitter1g.Location = New System.Drawing.Point(112, 1806)
         Me.Splitter1g.Margin = New System.Windows.Forms.Padding(3, 0, 3, 25)
         Me.Splitter1g.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1g.MinimumSize = New System.Drawing.Size(750, 0)
@@ -548,7 +548,7 @@ Partial Class frmInfo
         Me.qSub7.AutoSize = True
         Me.qSub7.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.qSub7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.qSub7.Location = New System.Drawing.Point(123, 1910)
+        Me.qSub7.Location = New System.Drawing.Point(115, 1910)
         Me.qSub7.Margin = New System.Windows.Forms.Padding(3, 15, 3, 25)
         Me.qSub7.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qSub7.MinimumSize = New System.Drawing.Size(750, 0)
@@ -565,7 +565,7 @@ Partial Class frmInfo
         Me.qHeader6.AutoSize = True
         Me.qHeader6.Font = New System.Drawing.Font("Segoe UI", 18.0!)
         Me.qHeader6.ForeColor = System.Drawing.Color.White
-        Me.qHeader6.Location = New System.Drawing.Point(122, 1659)
+        Me.qHeader6.Location = New System.Drawing.Point(114, 1659)
         Me.qHeader6.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qHeader6.MinimumSize = New System.Drawing.Size(750, 0)
         Me.qHeader6.Name = "qHeader6"
@@ -579,7 +579,7 @@ Partial Class frmInfo
         Me.Splitter1f.AutoSize = True
         Me.Splitter1f.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1f.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1f.Location = New System.Drawing.Point(120, 1602)
+        Me.Splitter1f.Location = New System.Drawing.Point(112, 1602)
         Me.Splitter1f.Margin = New System.Windows.Forms.Padding(3, 0, 3, 25)
         Me.Splitter1f.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1f.MinimumSize = New System.Drawing.Size(750, 0)
@@ -594,7 +594,7 @@ Partial Class frmInfo
         Me.qSub6.AutoSize = True
         Me.qSub6.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.qSub6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.qSub6.Location = New System.Drawing.Point(123, 1706)
+        Me.qSub6.Location = New System.Drawing.Point(115, 1706)
         Me.qSub6.Margin = New System.Windows.Forms.Padding(3, 15, 3, 25)
         Me.qSub6.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qSub6.MinimumSize = New System.Drawing.Size(750, 0)
@@ -609,7 +609,7 @@ Partial Class frmInfo
         Me.qHeader5.AutoSize = True
         Me.qHeader5.Font = New System.Drawing.Font("Segoe UI", 18.0!)
         Me.qHeader5.ForeColor = System.Drawing.Color.White
-        Me.qHeader5.Location = New System.Drawing.Point(122, 1230)
+        Me.qHeader5.Location = New System.Drawing.Point(114, 1230)
         Me.qHeader5.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qHeader5.MinimumSize = New System.Drawing.Size(750, 0)
         Me.qHeader5.Name = "qHeader5"
@@ -623,7 +623,7 @@ Partial Class frmInfo
         Me.Splitter1e.AutoSize = True
         Me.Splitter1e.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1e.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1e.Location = New System.Drawing.Point(120, 1173)
+        Me.Splitter1e.Location = New System.Drawing.Point(112, 1173)
         Me.Splitter1e.Margin = New System.Windows.Forms.Padding(3, 0, 3, 25)
         Me.Splitter1e.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1e.MinimumSize = New System.Drawing.Size(750, 0)
@@ -638,7 +638,7 @@ Partial Class frmInfo
         Me.qSub5.AutoSize = True
         Me.qSub5.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.qSub5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.qSub5.Location = New System.Drawing.Point(123, 1277)
+        Me.qSub5.Location = New System.Drawing.Point(115, 1277)
         Me.qSub5.Margin = New System.Windows.Forms.Padding(3, 15, 3, 25)
         Me.qSub5.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qSub5.MinimumSize = New System.Drawing.Size(750, 0)
@@ -653,7 +653,7 @@ Partial Class frmInfo
         Me.qHeader0.AutoSize = True
         Me.qHeader0.Font = New System.Drawing.Font("Segoe UI", 18.0!)
         Me.qHeader0.ForeColor = System.Drawing.Color.White
-        Me.qHeader0.Location = New System.Drawing.Point(122, 239)
+        Me.qHeader0.Location = New System.Drawing.Point(114, 239)
         Me.qHeader0.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qHeader0.MinimumSize = New System.Drawing.Size(750, 0)
         Me.qHeader0.Name = "qHeader0"
@@ -667,7 +667,7 @@ Partial Class frmInfo
         Me.qSub0.AutoSize = True
         Me.qSub0.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.qSub0.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.qSub0.Location = New System.Drawing.Point(123, 286)
+        Me.qSub0.Location = New System.Drawing.Point(115, 286)
         Me.qSub0.Margin = New System.Windows.Forms.Padding(3, 15, 3, 25)
         Me.qSub0.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qSub0.MinimumSize = New System.Drawing.Size(750, 0)
@@ -682,7 +682,7 @@ Partial Class frmInfo
         Me.Splitter1aa.AutoSize = True
         Me.Splitter1aa.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1aa.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1aa.Location = New System.Drawing.Point(120, 182)
+        Me.Splitter1aa.Location = New System.Drawing.Point(112, 182)
         Me.Splitter1aa.Margin = New System.Windows.Forms.Padding(3, 0, 3, 25)
         Me.Splitter1aa.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1aa.MinimumSize = New System.Drawing.Size(750, 0)
@@ -697,7 +697,7 @@ Partial Class frmInfo
         Me.qHeader4.AutoSize = True
         Me.qHeader4.Font = New System.Drawing.Font("Segoe UI", 18.0!)
         Me.qHeader4.ForeColor = System.Drawing.Color.White
-        Me.qHeader4.Location = New System.Drawing.Point(122, 1001)
+        Me.qHeader4.Location = New System.Drawing.Point(114, 1001)
         Me.qHeader4.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qHeader4.MinimumSize = New System.Drawing.Size(750, 0)
         Me.qHeader4.Name = "qHeader4"
@@ -711,7 +711,7 @@ Partial Class frmInfo
         Me.qHeader3.AutoSize = True
         Me.qHeader3.Font = New System.Drawing.Font("Segoe UI", 18.0!)
         Me.qHeader3.ForeColor = System.Drawing.Color.White
-        Me.qHeader3.Location = New System.Drawing.Point(122, 797)
+        Me.qHeader3.Location = New System.Drawing.Point(114, 797)
         Me.qHeader3.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qHeader3.MinimumSize = New System.Drawing.Size(750, 0)
         Me.qHeader3.Name = "qHeader3"
@@ -725,7 +725,7 @@ Partial Class frmInfo
         Me.qHeader2.AutoSize = True
         Me.qHeader2.Font = New System.Drawing.Font("Segoe UI", 18.0!)
         Me.qHeader2.ForeColor = System.Drawing.Color.White
-        Me.qHeader2.Location = New System.Drawing.Point(122, 543)
+        Me.qHeader2.Location = New System.Drawing.Point(114, 543)
         Me.qHeader2.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qHeader2.MinimumSize = New System.Drawing.Size(750, 0)
         Me.qHeader2.Name = "qHeader2"
@@ -739,7 +739,7 @@ Partial Class frmInfo
         Me.Splitter1d.AutoSize = True
         Me.Splitter1d.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1d.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1d.Location = New System.Drawing.Point(120, 944)
+        Me.Splitter1d.Location = New System.Drawing.Point(112, 944)
         Me.Splitter1d.Margin = New System.Windows.Forms.Padding(3, 0, 3, 25)
         Me.Splitter1d.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1d.MinimumSize = New System.Drawing.Size(750, 0)
@@ -754,7 +754,7 @@ Partial Class frmInfo
         Me.qSub4.AutoSize = True
         Me.qSub4.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.qSub4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.qSub4.Location = New System.Drawing.Point(123, 1048)
+        Me.qSub4.Location = New System.Drawing.Point(115, 1048)
         Me.qSub4.Margin = New System.Windows.Forms.Padding(3, 15, 3, 25)
         Me.qSub4.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qSub4.MinimumSize = New System.Drawing.Size(750, 0)
@@ -769,7 +769,7 @@ Partial Class frmInfo
         Me.Splitter1c.AutoSize = True
         Me.Splitter1c.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1c.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1c.Location = New System.Drawing.Point(120, 740)
+        Me.Splitter1c.Location = New System.Drawing.Point(112, 740)
         Me.Splitter1c.Margin = New System.Windows.Forms.Padding(3, 0, 3, 25)
         Me.Splitter1c.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1c.MinimumSize = New System.Drawing.Size(750, 0)
@@ -784,7 +784,7 @@ Partial Class frmInfo
         Me.qSub3.AutoSize = True
         Me.qSub3.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.qSub3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.qSub3.Location = New System.Drawing.Point(123, 844)
+        Me.qSub3.Location = New System.Drawing.Point(115, 844)
         Me.qSub3.Margin = New System.Windows.Forms.Padding(3, 15, 3, 25)
         Me.qSub3.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qSub3.MinimumSize = New System.Drawing.Size(750, 0)
@@ -799,7 +799,7 @@ Partial Class frmInfo
         Me.Splitter1b.AutoSize = True
         Me.Splitter1b.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1b.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1b.Location = New System.Drawing.Point(120, 486)
+        Me.Splitter1b.Location = New System.Drawing.Point(112, 486)
         Me.Splitter1b.Margin = New System.Windows.Forms.Padding(3, 0, 3, 25)
         Me.Splitter1b.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1b.MinimumSize = New System.Drawing.Size(750, 0)
@@ -814,7 +814,7 @@ Partial Class frmInfo
         Me.qSub2.AutoSize = True
         Me.qSub2.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.qSub2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.qSub2.Location = New System.Drawing.Point(123, 590)
+        Me.qSub2.Location = New System.Drawing.Point(115, 590)
         Me.qSub2.Margin = New System.Windows.Forms.Padding(3, 15, 3, 25)
         Me.qSub2.MaximumSize = New System.Drawing.Size(750, 0)
         Me.qSub2.MinimumSize = New System.Drawing.Size(750, 0)
@@ -830,7 +830,7 @@ Partial Class frmInfo
         Me.lblHeaderHelpFaq.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblHeaderHelpFaq.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderHelpFaq.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderHelpFaq.Location = New System.Drawing.Point(284, 126)
+        Me.lblHeaderHelpFaq.Location = New System.Drawing.Point(276, 126)
         Me.lblHeaderHelpFaq.Name = "lblHeaderHelpFaq"
         Me.lblHeaderHelpFaq.Size = New System.Drawing.Size(427, 45)
         Me.lblHeaderHelpFaq.TabIndex = 1052
@@ -904,7 +904,7 @@ Partial Class frmInfo
         Me.lblMessageSent.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!)
         Me.lblMessageSent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.lblMessageSent.ImageIndex = 0
-        Me.lblMessageSent.Location = New System.Drawing.Point(338, 57)
+        Me.lblMessageSent.Location = New System.Drawing.Point(330, 57)
         Me.lblMessageSent.Name = "lblMessageSent"
         Me.lblMessageSent.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.lblMessageSent.Size = New System.Drawing.Size(284, 35)
@@ -923,7 +923,7 @@ Partial Class frmInfo
         Me.txtFormEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtFormEmail.Font = New System.Drawing.Font("Segoe UI", 12.5!)
         Me.txtFormEmail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtFormEmail.Location = New System.Drawing.Point(241, 469)
+        Me.txtFormEmail.Location = New System.Drawing.Point(233, 469)
         Me.txtFormEmail.MaxLength = 75
         Me.txtFormEmail.Name = "txtFormEmail"
         Me.txtFormEmail.Size = New System.Drawing.Size(511, 23)
@@ -940,7 +940,7 @@ Partial Class frmInfo
         Me.txtFormMessage.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtFormMessage.Font = New System.Drawing.Font("Segoe UI", 12.5!)
         Me.txtFormMessage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtFormMessage.Location = New System.Drawing.Point(241, 265)
+        Me.txtFormMessage.Location = New System.Drawing.Point(233, 265)
         Me.txtFormMessage.MaxLength = 250
         Me.txtFormMessage.Multiline = True
         Me.txtFormMessage.Name = "txtFormMessage"
@@ -962,7 +962,7 @@ Partial Class frmInfo
         Me.panelContactUs.Controls.Add(Me.lblSocialSourceForge)
         Me.panelContactUs.Controls.Add(Me.lblVisitUsOn2)
         Me.panelContactUs.Controls.Add(Me.lblSocialTwitter)
-        Me.panelContactUs.Location = New System.Drawing.Point(229, 591)
+        Me.panelContactUs.Location = New System.Drawing.Point(221, 591)
         Me.panelContactUs.Name = "panelContactUs"
         Me.panelContactUs.Size = New System.Drawing.Size(530, 101)
         Me.panelContactUs.TabIndex = 1057
@@ -1086,7 +1086,7 @@ Partial Class frmInfo
         Me.Splitter2a.DimFactorHover = 0
         Me.Splitter2a.FillType = CButtonLib.CButton.eFillType.Solid
         Me.Splitter2a.ImageIndex = 0
-        Me.Splitter2a.Location = New System.Drawing.Point(234, 571)
+        Me.Splitter2a.Location = New System.Drawing.Point(226, 571)
         Me.Splitter2a.Name = "Splitter2a"
         Me.Splitter2a.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.Splitter2a.Size = New System.Drawing.Size(525, 1)
@@ -1112,7 +1112,7 @@ Partial Class frmInfo
         Me.btnFormSubmit.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!)
         Me.btnFormSubmit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnFormSubmit.ImageIndex = 0
-        Me.btnFormSubmit.Location = New System.Drawing.Point(587, 509)
+        Me.btnFormSubmit.Location = New System.Drawing.Point(579, 509)
         Me.btnFormSubmit.Name = "btnFormSubmit"
         Me.btnFormSubmit.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnFormSubmit.Size = New System.Drawing.Size(172, 37)
@@ -1127,7 +1127,7 @@ Partial Class frmInfo
         Me.lblHeaderContact.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblHeaderContact.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderContact.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderContact.Location = New System.Drawing.Point(392, 126)
+        Me.lblHeaderContact.Location = New System.Drawing.Point(384, 126)
         Me.lblHeaderContact.Name = "lblHeaderContact"
         Me.lblHeaderContact.Size = New System.Drawing.Size(208, 45)
         Me.lblHeaderContact.TabIndex = 99999
@@ -1139,7 +1139,7 @@ Partial Class frmInfo
         Me.lblSubContact.AutoSize = True
         Me.lblSubContact.Font = New System.Drawing.Font("Segoe UI", 14.25!)
         Me.lblSubContact.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblSubContact.Location = New System.Drawing.Point(131, 190)
+        Me.lblSubContact.Location = New System.Drawing.Point(123, 190)
         Me.lblSubContact.MaximumSize = New System.Drawing.Size(730, 0)
         Me.lblSubContact.MinimumSize = New System.Drawing.Size(730, 0)
         Me.lblSubContact.Name = "lblSubContact"
@@ -1163,7 +1163,7 @@ Partial Class frmInfo
         Me.txtFormMessageBG.DimFactorHover = 0
         Me.txtFormMessageBG.FillType = CButtonLib.CButton.eFillType.Solid
         Me.txtFormMessageBG.ImageIndex = 0
-        Me.txtFormMessageBG.Location = New System.Drawing.Point(234, 259)
+        Me.txtFormMessageBG.Location = New System.Drawing.Point(226, 259)
         Me.txtFormMessageBG.Name = "txtFormMessageBG"
         Me.txtFormMessageBG.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.txtFormMessageBG.Size = New System.Drawing.Size(525, 195)
@@ -1185,7 +1185,7 @@ Partial Class frmInfo
         Me.txtFormEmailBG.DimFactorHover = 0
         Me.txtFormEmailBG.FillType = CButtonLib.CButton.eFillType.Solid
         Me.txtFormEmailBG.ImageIndex = 0
-        Me.txtFormEmailBG.Location = New System.Drawing.Point(234, 463)
+        Me.txtFormEmailBG.Location = New System.Drawing.Point(226, 463)
         Me.txtFormEmailBG.Name = "txtFormEmailBG"
         Me.txtFormEmailBG.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.txtFormEmailBG.Size = New System.Drawing.Size(525, 37)

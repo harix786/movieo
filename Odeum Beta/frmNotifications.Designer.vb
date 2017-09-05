@@ -40,7 +40,7 @@ Partial Class frmNotifications
         Me.splitterTop.BackColor = System.Drawing.Color.Transparent
         Me.splitterTop.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.splitterTop.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.splitterTop.Location = New System.Drawing.Point(182, 152)
+        Me.splitterTop.Location = New System.Drawing.Point(180, 152)
         Me.splitterTop.MaximumSize = New System.Drawing.Size(745, 0)
         Me.splitterTop.MinimumSize = New System.Drawing.Size(745, 0)
         Me.splitterTop.Name = "splitterTop"
@@ -56,7 +56,7 @@ Partial Class frmNotifications
         Me.lblTopHeader.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblTopHeader.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTopHeader.ForeColor = System.Drawing.Color.White
-        Me.lblTopHeader.Location = New System.Drawing.Point(448, 96)
+        Me.lblTopHeader.Location = New System.Drawing.Point(446, 96)
         Me.lblTopHeader.Name = "lblTopHeader"
         Me.lblTopHeader.Size = New System.Drawing.Size(213, 45)
         Me.lblTopHeader.TabIndex = 100
@@ -85,7 +85,7 @@ Partial Class frmNotifications
         Me.panelNotifications.AutoSize = True
         Me.panelNotifications.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.panelNotifications.BackColor = System.Drawing.Color.Transparent
-        Me.panelNotifications.Location = New System.Drawing.Point(186, 267)
+        Me.panelNotifications.Location = New System.Drawing.Point(184, 220)
         Me.panelNotifications.MaximumSize = New System.Drawing.Size(745, 0)
         Me.panelNotifications.MinimumSize = New System.Drawing.Size(745, 100)
         Me.panelNotifications.Name = "panelNotifications"
@@ -98,14 +98,14 @@ Partial Class frmNotifications
         Me.lblStatus.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblStatus.BackColor = System.Drawing.Color.Transparent
-        Me.lblStatus.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.lblStatus.Font = New System.Drawing.Font("Segoe UI Semibold", 13.75!)
         Me.lblStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.lblStatus.Location = New System.Drawing.Point(189, 268)
+        Me.lblStatus.Location = New System.Drawing.Point(187, 232)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(730, 56)
+        Me.lblStatus.Size = New System.Drawing.Size(730, 229)
         Me.lblStatus.TabIndex = 100
         Me.lblStatus.Text = "Loading..."
-        Me.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblStatus.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'frmNotifications
         '

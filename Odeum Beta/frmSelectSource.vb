@@ -1,19 +1,20 @@
 ﻿Public Class frmSelectSource
 
     Private Sub frmSelectSource_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Top = 28
+        frmMovieDetails.Opacity = 0
+        Top = Movieo.ClientRectangle.Top + 23
         Left = Movieo.ClientRectangle.Left
         Size = Movieo.ClientSize
+        btnOk.Enabled = False
     End Sub
 
     Private Sub itemsMovieSourcesTitle_SelectedIndexChanged(sender As Object, e As EventArgs) Handles itemsMovieSourcesTitle.SelectedIndexChanged
         Try
-            itemsMovieSources.SelectedIndex = itemsMovieSourcesTitle.SelectedIndex
-            frmMediaPlayer.MediaPlayerControl.URL = itemsMovieSources.SelectedItem.ToString
-            DialogResult = DialogResult.OK
-            Close()
+            If Not itemsMovieSourcesTitle.SelectedIndex = -1 Then
+                itemsMovieSources.SelectedIndex = itemsMovieSourcesTitle.SelectedIndex
+                btnOk.Enabled = True
+            End If
         Catch ex As Exception
-            Close()
         End Try
     End Sub
 

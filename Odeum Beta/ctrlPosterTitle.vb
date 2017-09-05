@@ -6,12 +6,15 @@ Imports Newtonsoft.Json.Linq
 
 Public Class ctrlPosterTitle
 
+    Private Sub InfoPoster_Click(sender As Object, e As EventArgs) Handles InfoPoster.Click
+        ShowMovie()
+    End Sub
+
     Public Sub ShowMovie()
         Try
-            'Prioritise already acquired information
+            'Prioritise already acquired information in the case of an error
             frmMovieDetails.infoTitle.Text = InfoTitle.Text
             frmMovieDetails.infoYear.Text = InfoYear.Text
-            frmMovieDetails.infoGenre.Text = InfoGenre.Text
             frmMovieDetails.infoCountry.Text = InfoCountry.Text
             frmMovieDetails.infoLanguage.Text = InfoLanguage.Text
             frmMovieDetails.infoImdbId.Text = InfoImdbId.Text
@@ -19,8 +22,6 @@ Public Class ctrlPosterTitle
             frmMovieDetails.infoQuality.Text = ReturnQuality(InfoMovieLink.Text)
             frmMovieDetails.infoWatchLinks.Text = InfoMovieLink.Text
             frmMovieDetails.infoImageLink.Text = InfoPosterLink.Text
-            frmMovieDetails.infoCast.Text = InfoStars.Text
-            frmMovieDetails.infoDirectors.Text = InfoDirector.Text
 
 
             Dim WebClient = New WebClient()
@@ -52,59 +53,66 @@ Public Class ctrlPosterTitle
             End Try
 
             Try
-                'Split Director/Cast into clickable Labels to search
+                'Split Director/Cast/Genres into clickable Labels to search
+
+                Dim countDirector As Integer = 0
                 frmMovieDetails.infoDirectors.Visible = False
-                Dim aDirector As New Label
-                With aDirector
-                    .AutoSize = True
-                    .Font = Movieo.CreateFont("Segoe UI", 12.5, False, False, False)
-                    .ForeColor = Color.FromArgb(150, 159, 170)
-                    .Margin = New Padding(0, 14, 3, 0)
-                    .Text = InfoDirector.Text
-                    .BackColor = Color.Transparent
-                    .Cursor = Cursors.Hand
-                    .Name = InfoDirector.Text
-                    .Show()
-                    AddHandler .Click, AddressOf frmMovieDetails.castItem_Click
-                    AddHandler .MouseMove, AddressOf frmMovieDetails.castItem_MouseMove
-                    AddHandler .MouseLeave, AddressOf frmMovieDetails.castItem_MouseLeave
-                End With
-                frmMovieDetails.InfoPanel1.Controls.Add(aDirector)
-                frmMovieDetails.InfoPanel1.Controls.SetChildIndex(aDirector, 8)
-                frmMovieDetails.InfoPanel1.SetFlowBreak(aDirector, True)
-                frmMovieDetails.dynControls.Add(aDirector)
+                frmMovieDetails.infoDirectors.Text = InfoDirector.Text
+                Dim directorInText() As String = Split(InfoDirector.Text, ", ")
+                For Each director As String In directorInText
+                    countDirector = countDirector + 1
+                    Dim aDirector As New Label
+                    With aDirector
+                        .AutoSize = True
+                        .Font = Movieo.CreateFont("Segoe UI", 12.5, False, False, False)
+                        .ForeColor = Color.FromArgb(150, 159, 170)
+                        .Margin = New Padding(0, 13, 0, 0)
+                        .Text = director
+                        .BackColor = Color.Transparent
+                        .Cursor = Cursors.Hand
+                        .Name = director
+                        .Show()
+                        AddHandler .Click, AddressOf frmMovieDetails.searchItem_Click
+                        AddHandler .MouseMove, AddressOf frmMovieDetails.searchItem_MouseMove
+                        AddHandler .MouseLeave, AddressOf frmMovieDetails.searchItem_MouseLeave
+                    End With
+                    frmMovieDetails.InfoPanel1.Controls.Add(aDirector)
+                    frmMovieDetails.InfoPanel1.Controls.SetChildIndex(aDirector, frmMovieDetails.InfoPanel1.Controls.IndexOf(frmMovieDetails.lblSubDirectors) + 1)
+                    frmMovieDetails.dynControls.Add(aDirector)
+                    If countDirector = 1 Then
+                        frmMovieDetails.InfoPanel1.SetFlowBreak(aDirector, True)
+                    End If
+                Next
 
                 frmMovieDetails.infoCast.Visible = False
-                Dim countCast As Integer = 0
+                frmMovieDetails.infoCast.Text = InfoStars.Text
                 Dim castInText() As String = Split(InfoStars.Text, ", ")
                 For Each cast As String In castInText
-                    countCast = countCast + 1
                     Dim aCast As New Label
                     With aCast
                         .AutoSize = True
                         .Font = Movieo.CreateFont("Segoe UI", 12.5, False, False, False)
                         .ForeColor = Color.FromArgb(150, 159, 170)
-                        .Margin = New Padding(0, 7, 3, 0)
+                        .Margin = New Padding(0, 7, 0, 0)
                         .Text = cast
                         .BackColor = Color.Transparent
                         .Cursor = Cursors.Hand
                         .Name = cast
                         .Show()
-                        AddHandler .Click, AddressOf frmMovieDetails.castItem_Click
-                        AddHandler .MouseMove, AddressOf frmMovieDetails.castItem_MouseMove
-                        AddHandler .MouseLeave, AddressOf frmMovieDetails.castItem_MouseLeave
+                        AddHandler .Click, AddressOf frmMovieDetails.searchItem_Click
+                        AddHandler .MouseMove, AddressOf frmMovieDetails.searchItem_MouseMove
+                        AddHandler .MouseLeave, AddressOf frmMovieDetails.searchItem_MouseLeave
                     End With
                     frmMovieDetails.InfoPanel1.Controls.Add(aCast)
-                    frmMovieDetails.InfoPanel1.Controls.SetChildIndex(aCast, 10)
+                    frmMovieDetails.InfoPanel1.Controls.SetChildIndex(aCast, frmMovieDetails.InfoPanel1.Controls.IndexOf(frmMovieDetails.lblSubCast) + 1)
                     frmMovieDetails.dynControls.Add(aCast)
                 Next
 
-                'Split Genres
                 frmMovieDetails.infoGenre.Visible = False
+                frmMovieDetails.infoGenre.Text = InfoGenre.Text
                 Dim countGenres As Integer = 0
                 Dim genresInText() As String = Split(InfoGenre.Text, ", ")
                 For Each genre As String In genresInText
-                    countCast = countCast + 1
                     Dim aGenre As New Label
                     With aGenre
                         .AutoSize = True
@@ -117,8 +125,8 @@ Public Class ctrlPosterTitle
                         .Name = genre
                         .Show()
                         AddHandler .Click, AddressOf frmMovieDetails.genreItem_Click
-                        AddHandler .MouseMove, AddressOf frmMovieDetails.castItem_MouseMove
-                        AddHandler .MouseLeave, AddressOf frmMovieDetails.castItem_MouseLeave
+                        AddHandler .MouseMove, AddressOf frmMovieDetails.genreItem_MouseMove
+                        AddHandler .MouseLeave, AddressOf frmMovieDetails.genreItem_MouseLeave
                     End With
                     frmMovieDetails.InfoPanel1.Controls.Add(aGenre)
                     frmMovieDetails.InfoPanel1.Controls.SetChildIndex(aGenre, 3)
@@ -128,7 +136,8 @@ Public Class ctrlPosterTitle
             End Try
 
             Try
-                frmMovieDetails.MovImage.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
+                frmMovieDetails.imgPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
+                frmMovieDetails.imgPoster.BackgroundImage = ChangeOpacity(frmMovieDetails.imgPoster.BackgroundImage, 0.8)
             Catch
             End Try
 
@@ -141,20 +150,21 @@ Public Class ctrlPosterTitle
                 Dim trailerLink As String = jsonPTAPI.SelectToken("trailer")
 
                 frmBackgroundMovieDetails.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(backgroundLink)))
-                frmMovieDetails.Opacity = 0.9
+                frmMovieDetails.infoBackgroundImageLink.Text = backgroundLink
+                frmMovieDetails.Opacity = 0.75
 
-                'Details from Popcorn Time Api for Trailer Link (YouTube)
+                'Details from Popcorn Time API for Trailer Link (YouTube)
                 frmMovieDetails.infoTrailerLink.Text = trailerLink
             Catch ex As Exception
+                frmMovieDetails.infoTrailerLink.Text = ""
+                frmMovieDetails.infoBackgroundImageLink.Text = ""
                 frmMovieDetails.Opacity = 0.98
-                frmBackgroundMovieDetails.Opacity = 0
             End Try
 
             frmMovieDetails.Show(frmBackgroundMovieDetails)
             frmBackgroundMovieDetails.Show(Movieo)
         Catch ex As Exception
             'False Positive (Ignore exception)
-            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -204,17 +214,13 @@ Public Class ctrlPosterTitle
 
     Private Sub MovieTitle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InfoImdbRatingPoster.Parent = InfoPoster
-        InfoImdbRatingPoster.BorderColor = Color.White
-        InfoImdbRatingPoster.Corners.All = 2
-        InfoImdbRatingPoster.ShowFocus = CButtonLib.CButton.eFocus.None
         InfoImdbRatingPoster.BackColor = Color.Transparent
-        InfoImdbRatingPoster.ForeColor = Color.White
+        InfoImdbRatingPoster.ShowFocus = CButtonLib.CButton.eFocus.None
         InfoImdbRatingPoster.BringToFront()
-        InfoImdbRatingPoster.Location = New Point(6, 6)
+        InfoImdbRatingPoster.Location = New Point(64, 8)
         InfoImdbRatingPoster.Visible = False
 
         BackColor = Movieo.panelMovies.BackColor
-
     End Sub
 
 #Region "Get Quality"
@@ -252,10 +258,6 @@ Public Class ctrlPosterTitle
             Return "n/a"
         End If
     End Function
-
-    Private Sub InfoPoster_Click(sender As Object, e As EventArgs) Handles InfoPoster.Click
-        ShowMovie()
-    End Sub
 
 #End Region
 

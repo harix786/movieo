@@ -4,7 +4,7 @@
 
     Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Set position/size of window
-        Top = 28
+        Top = Movieo.ClientRectangle.Top + 23
         Left = Movieo.ClientRectangle.Left
         Size = Movieo.ClientSize
 
@@ -26,14 +26,6 @@
         'Database
         chckBackupDb.Checked = My.Settings.doBackupDb
         txtDbDir.Text = Movieo.pathBackupDatabase
-
-        'Connection
-        rdioAutoProxy.Checked = My.Settings.doAutoProxy
-        rdioManualProxy.Checked = My.Settings.doManualProxy
-        txtProxyAddress.Text = My.Settings.webProxyAddress
-        txtProxyPort.Text = My.Settings.webProxyPort
-        txtProxyUsername.Text = My.Settings.webProxyUsername
-        txtProxyPassword.Text = My.Settings.webProxyPassword
 
         'Miscellaneous
         chckAutoUpdate.Checked = My.Settings.doAutoUpdate
@@ -141,46 +133,6 @@
 
 #End Region
 
-#Region "Connection"
-
-    Private Sub rdioAutoProxy_CheckedChanged(sender As Object, e As EventArgs) Handles rdioAutoProxy.CheckedChanged
-        My.Settings.doAutoProxy = rdioAutoProxy.Checked
-
-        txtProxyAddress.Enabled = False
-        txtProxyAddressBg.Enabled = False
-        txtProxyPassword.Enabled = False
-        txtProxyPasswordBg.Enabled = False
-        txtProxyPort.Enabled = False
-        txtProxyPortBg.Enabled = False
-        txtProxyUsername.Enabled = False
-        txtProxyUsernameBg.Enabled = False
-
-        lblProxyAddress.Enabled = False
-        lblProxyPassword.Enabled = False
-        lblProxyPort.Enabled = False
-        lblProxyUsername.Enabled = False
-    End Sub
-
-    Private Sub rdioManualProxy_CheckedChanged(sender As Object, e As EventArgs) Handles rdioManualProxy.CheckedChanged
-        My.Settings.doManualProxy = rdioManualProxy.Checked
-
-        txtProxyAddress.Enabled = True
-        txtProxyAddressBg.Enabled = True
-        txtProxyPassword.Enabled = True
-        txtProxyPasswordBg.Enabled = True
-        txtProxyPort.Enabled = True
-        txtProxyPortBg.Enabled = True
-        txtProxyUsername.Enabled = True
-        txtProxyUsernameBg.Enabled = True
-
-        lblProxyAddress.Enabled = True
-        lblProxyPassword.Enabled = True
-        lblProxyPort.Enabled = True
-        lblProxyUsername.Enabled = True
-    End Sub
-
-#End Region
-
 #Region "Miscellaneous"
 
     Private Sub chckAutoUpdate_CheckedChanged(Sender As Object, e As EventArgs) Handles chckAutoUpdate.CheckedChanged
@@ -192,18 +144,14 @@
 #Region "Save Settings / Reset Settings / Flush Databases"
 
     Private Sub btnSaveSettings_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnSaveSettings.ClickButtonArea
-        My.Settings.webProxyAddress = txtProxyAddress.Text
-        My.Settings.webProxyPort = txtProxyPort.Text
-        My.Settings.webProxyUsername = txtProxyUsername.Text
-        My.Settings.webProxyPassword = txtProxyPassword.Text
         My.Settings.Save()
-        showMessage("✔ Your settings have been saved.")
+        showNotification("✔ Your settings have been saved.")
     End Sub
 
     Private Sub btnResetSettings_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnResetSettings.ClickButtonArea
         If Movieo.ShowPopupYesNo("Confirmation", "Are you sure you want to reset all your settings to default?", Me) = MsgBoxResult.Yes Then
             My.Settings.Reset()
-            showMessage("Settings restored to default.")
+            showNotification("Settings restored to default.")
             If Movieo.ShowPopupYesNo("Restart Required", "You may need to restart Movieo for some settings to take effect. Restart now?", Me) = MsgBoxStyle.YesNo Then
                 Application.Restart()
             End If
@@ -211,10 +159,10 @@
     End Sub
 
     Private Sub btnResetAllDatabases_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnResetAllDatabases.ClickButtonArea
-        If Movieo.ShowPopupYesNo("Confirmation", "Are you sure you want to delete all of your custom lists? You will not be able to recover them.", Me) = MsgBoxResult.Yes Then
+        If Movieo.ShowPopupYesNo("Confirmation", "Are you sure you want to delete all movies in your library? You will not be able to recover them.", Me) = MsgBoxResult.Yes Then
             Movieo.CreateEmptyListFiles()
-            showMessage("Your personal lists have been wiped.")
-            Movieo.ShowPopupOk("Restart Required", "You must restart Movieo immediately to apply these changes.", Me)
+            showNotification("Your library have been wiped.")
+            Movieo.ShowPopupOk("Restart Required", "You must restart Movieo to apply these changes.", Me)
             Application.Restart()
         End If
     End Sub
@@ -249,8 +197,14 @@
         timerHideNotifications.Enabled = False
     End Sub
 
-    Public Sub showMessage(Message As String)
-        lblSuccessText.Text = Message
+    Public Sub showNotification(message As String)
+        lblSuccessText.Text = message
+        Dim myFont As New Font(lblSuccessText.Font.FontFamily, lblSuccessText.Font.Size)
+        Dim mySize = lblSuccessText.CreateGraphics.MeasureString(message, myFont)
+        lblSuccessText.Width = CType(Math.Round(mySize.Width, 0), Integer) + 20
+        lblSuccessText.Height = CType(Math.Round(mySize.Height, 0), Integer) + 14
+        lblSuccessText.Location = New Point((ClientSize.Width - lblSuccessText.Width) \ 2, -1)
+        lblSuccessText.Visible = True
         lblSuccessText.Visible = True
         timerHideNotifications.Enabled = True
     End Sub

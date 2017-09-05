@@ -358,7 +358,7 @@
     <value>85, 126</value>
   </data>
   <data name="infoDirectors.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 12, 3, 0</value>
+    <value>0, 12, 0, 0</value>
   </data>
   <data name="infoDirectors.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 23</value>
@@ -430,7 +430,7 @@
     <value>50, 155</value>
   </data>
   <data name="infoCast.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 6, 3, 0</value>
+    <value>0, 6, 0, 0</value>
   </data>
   <data name="infoCast.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 23</value>
@@ -453,164 +453,38 @@
   <data name="&gt;&gt;infoCast.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="panelShareComment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="panelHeaders.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="imgPanelsEmptyReviews.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="panelComments.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="imgPanelsEmptyReviews.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 12.25pt</value>
+  <data name="panelComments.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="imgPanelsEmptyReviews.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="panelComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 107</value>
   </data>
-  <data name="imgPanelsEmptyReviews.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 119</value>
+  <data name="panelComments.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 0, 0</value>
   </data>
-  <data name="imgPanelsEmptyReviews.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 56</value>
+  <data name="panelComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>530, 185</value>
   </data>
-  <data name="imgPanelsEmptyReviews.TabIndex" type="System.Int32, mscorlib">
-    <value>100006</value>
+  <data name="panelComments.TabIndex" type="System.Int32, mscorlib">
+    <value>1096</value>
   </data>
-  <data name="imgPanelsEmptyReviews.Text" xml:space="preserve">
-    <value>Be the first one to comment :o</value>
+  <data name="&gt;&gt;panelComments.Name" xml:space="preserve">
+    <value>panelComments</value>
   </data>
-  <data name="imgPanelsEmptyReviews.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+  <data name="&gt;&gt;panelComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;imgPanelsEmptyReviews.Name" xml:space="preserve">
-    <value>imgPanelsEmptyReviews</value>
+  <data name="&gt;&gt;panelComments.Parent" xml:space="preserve">
+    <value>panelHeaders</value>
   </data>
-  <data name="&gt;&gt;imgPanelsEmptyReviews.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imgPanelsEmptyReviews.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
-  </data>
-  <data name="&gt;&gt;imgPanelsEmptyReviews.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelComments.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="lblMessageSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="lblMessageSent.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 10.5pt</value>
-  </data>
-  <data name="lblMessageSent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 77</value>
-  </data>
-  <data name="lblMessageSent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 25</value>
-  </data>
-  <data name="lblMessageSent.TabIndex" type="System.Int32, mscorlib">
-    <value>100005</value>
-  </data>
-  <data name="lblMessageSent.Text" xml:space="preserve">
-    <value>Your comment has been sent.</value>
-  </data>
-  <data name="lblMessageSent.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblMessageSent.Name" xml:space="preserve">
-    <value>lblMessageSent</value>
-  </data>
-  <data name="&gt;&gt;lblMessageSent.Type" xml:space="preserve">
-    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lblMessageSent.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
-  </data>
-  <data name="&gt;&gt;lblMessageSent.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtShareName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12.2pt</value>
-  </data>
-  <data name="txtShareName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 76</value>
-  </data>
-  <data name="txtShareName.MaxLength" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="txtShareName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 22</value>
-  </data>
-  <data name="txtShareName.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;txtShareName.Name" xml:space="preserve">
-    <value>txtShareName</value>
-  </data>
-  <data name="&gt;&gt;txtShareName.Type" xml:space="preserve">
-    <value>ChreneLib.Controls.TextBoxes.CTextBox, ChreneLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtShareName.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
-  </data>
-  <data name="&gt;&gt;txtShareName.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="txtShareComment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="txtShareComment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12.2pt</value>
-  </data>
-  <data name="txtShareComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 43</value>
-  </data>
-  <data name="txtShareComment.MaxLength" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="txtShareComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 22</value>
-  </data>
-  <data name="txtShareComment.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;txtShareComment.Name" xml:space="preserve">
-    <value>txtShareComment</value>
-  </data>
-  <data name="&gt;&gt;txtShareComment.Type" xml:space="preserve">
-    <value>ChreneLib.Controls.TextBoxes.CTextBox, ChreneLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtShareComment.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
-  </data>
-  <data name="&gt;&gt;txtShareComment.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="txtFormCommentBG.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="txtFormCommentBG.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="txtFormCommentBG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 37</value>
-  </data>
-  <data name="txtFormCommentBG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>530, 35</value>
-  </data>
-  <data name="txtFormCommentBG.TabIndex" type="System.Int32, mscorlib">
-    <value>100002</value>
-  </data>
-  <data name="txtFormCommentBG.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;txtFormCommentBG.Name" xml:space="preserve">
-    <value>txtFormCommentBG</value>
-  </data>
-  <data name="&gt;&gt;txtFormCommentBG.Type" xml:space="preserve">
-    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtFormCommentBG.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
-  </data>
-  <data name="&gt;&gt;txtFormCommentBG.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="lineComments.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 13.25pt</value>
@@ -637,97 +511,46 @@
     <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lineComments.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
+    <value>panelHeaders</value>
   </data>
   <data name="&gt;&gt;lineComments.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>1</value>
   </data>
-  <data name="panelComments.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="imgPanelsEmptyReviews.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="panelComments.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="imgPanelsEmptyReviews.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12.25pt</value>
   </data>
-  <data name="panelComments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 109</value>
+  <data name="imgPanelsEmptyReviews.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="panelComments.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 0, 0, 0</value>
+  <data name="imgPanelsEmptyReviews.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 117</value>
   </data>
-  <data name="panelComments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>530, 162</value>
+  <data name="imgPanelsEmptyReviews.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 56</value>
   </data>
-  <data name="panelComments.TabIndex" type="System.Int32, mscorlib">
-    <value>1096</value>
+  <data name="imgPanelsEmptyReviews.TabIndex" type="System.Int32, mscorlib">
+    <value>100006</value>
   </data>
-  <data name="&gt;&gt;panelComments.Name" xml:space="preserve">
-    <value>panelComments</value>
+  <data name="imgPanelsEmptyReviews.Text" xml:space="preserve">
+    <value>Be the first one to comment :o</value>
   </data>
-  <data name="&gt;&gt;panelComments.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="imgPanelsEmptyReviews.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;panelComments.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
+  <data name="&gt;&gt;imgPanelsEmptyReviews.Name" xml:space="preserve">
+    <value>imgPanelsEmptyReviews</value>
   </data>
-  <data name="&gt;&gt;panelComments.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;imgPanelsEmptyReviews.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnCommentSubmit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;imgPanelsEmptyReviews.Parent" xml:space="preserve">
+    <value>panelHeaders</value>
   </data>
-  <data name="btnCommentSubmit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 9.75pt</value>
-  </data>
-  <data name="btnCommentSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 71</value>
-  </data>
-  <data name="btnCommentSubmit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 35</value>
-  </data>
-  <data name="btnCommentSubmit.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="btnCommentSubmit.Text" xml:space="preserve">
-    <value>Submit</value>
-  </data>
-  <data name="&gt;&gt;btnCommentSubmit.Name" xml:space="preserve">
-    <value>btnCommentSubmit</value>
-  </data>
-  <data name="&gt;&gt;btnCommentSubmit.Type" xml:space="preserve">
-    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnCommentSubmit.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
-  </data>
-  <data name="&gt;&gt;btnCommentSubmit.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="txtFormNameBG.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="txtFormNameBG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 69</value>
-  </data>
-  <data name="txtFormNameBG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 35</value>
-  </data>
-  <data name="txtFormNameBG.TabIndex" type="System.Int32, mscorlib">
-    <value>100004</value>
-  </data>
-  <data name="txtFormNameBG.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;txtFormNameBG.Name" xml:space="preserve">
-    <value>txtFormNameBG</value>
-  </data>
-  <data name="&gt;&gt;txtFormNameBG.Type" xml:space="preserve">
-    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtFormNameBG.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
-  </data>
-  <data name="&gt;&gt;txtFormNameBG.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;imgPanelsEmptyReviews.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="lblHeaderComments.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -760,10 +583,40 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblHeaderComments.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
+    <value>panelHeaders</value>
   </data>
   <data name="&gt;&gt;lblHeaderComments.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>3</value>
+  </data>
+  <data name="btnCommentSubmit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnCommentSubmit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9.75pt</value>
+  </data>
+  <data name="btnCommentSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>459, 71</value>
+  </data>
+  <data name="btnCommentSubmit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 35</value>
+  </data>
+  <data name="btnCommentSubmit.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="btnCommentSubmit.Text" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="&gt;&gt;btnCommentSubmit.Name" xml:space="preserve">
+    <value>btnCommentSubmit</value>
+  </data>
+  <data name="&gt;&gt;btnCommentSubmit.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnCommentSubmit.Parent" xml:space="preserve">
+    <value>panelHeaders</value>
+  </data>
+  <data name="&gt;&gt;btnCommentSubmit.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="lineSplitter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -772,7 +625,7 @@
     <value>Segoe UI Semibold, 13.25pt</value>
   </data>
   <data name="lineSplitter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 26</value>
+    <value>5, 26</value>
   </data>
   <data name="lineSplitter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 16, 3, 3</value>
@@ -793,33 +646,147 @@
     <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lineSplitter.Parent" xml:space="preserve">
-    <value>panelShareComment</value>
+    <value>panelHeaders</value>
   </data>
   <data name="&gt;&gt;lineSplitter.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>5</value>
   </data>
-  <data name="panelShareComment.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtShareComment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtShareComment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.2pt</value>
+  </data>
+  <data name="txtShareComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 43</value>
+  </data>
+  <data name="txtShareComment.MaxLength" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="txtShareComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>516, 22</value>
+  </data>
+  <data name="txtShareComment.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;txtShareComment.Name" xml:space="preserve">
+    <value>txtShareComment</value>
+  </data>
+  <data name="&gt;&gt;txtShareComment.Type" xml:space="preserve">
+    <value>ChreneLib.Controls.TextBoxes.CTextBox, ChreneLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtShareComment.Parent" xml:space="preserve">
+    <value>panelHeaders</value>
+  </data>
+  <data name="&gt;&gt;txtShareComment.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtShareName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12.2pt</value>
+  </data>
+  <data name="txtShareName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 76</value>
+  </data>
+  <data name="txtShareName.MaxLength" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="txtShareName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="txtShareName.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;txtShareName.Name" xml:space="preserve">
+    <value>txtShareName</value>
+  </data>
+  <data name="&gt;&gt;txtShareName.Type" xml:space="preserve">
+    <value>ChreneLib.Controls.TextBoxes.CTextBox, ChreneLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtShareName.Parent" xml:space="preserve">
+    <value>panelHeaders</value>
+  </data>
+  <data name="&gt;&gt;txtShareName.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="txtFormCommentBG.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtFormCommentBG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtFormCommentBG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 37</value>
+  </data>
+  <data name="txtFormCommentBG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>530, 35</value>
+  </data>
+  <data name="txtFormCommentBG.TabIndex" type="System.Int32, mscorlib">
+    <value>100002</value>
+  </data>
+  <data name="txtFormCommentBG.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtFormCommentBG.Name" xml:space="preserve">
+    <value>txtFormCommentBG</value>
+  </data>
+  <data name="&gt;&gt;txtFormCommentBG.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtFormCommentBG.Parent" xml:space="preserve">
+    <value>panelHeaders</value>
+  </data>
+  <data name="&gt;&gt;txtFormCommentBG.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="txtFormNameBG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtFormNameBG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 71</value>
+  </data>
+  <data name="txtFormNameBG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 35</value>
+  </data>
+  <data name="txtFormNameBG.TabIndex" type="System.Int32, mscorlib">
+    <value>100004</value>
+  </data>
+  <data name="txtFormNameBG.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;txtFormNameBG.Name" xml:space="preserve">
+    <value>txtFormNameBG</value>
+  </data>
+  <data name="&gt;&gt;txtFormNameBG.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtFormNameBG.Parent" xml:space="preserve">
+    <value>panelHeaders</value>
+  </data>
+  <data name="&gt;&gt;txtFormNameBG.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="panelHeaders.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 198</value>
   </data>
-  <data name="panelShareComment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelHeaders.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 20, 0, 0</value>
   </data>
-  <data name="panelShareComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>538, 274</value>
+  <data name="panelHeaders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>538, 295</value>
   </data>
-  <data name="panelShareComment.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelHeaders.TabIndex" type="System.Int32, mscorlib">
     <value>1095</value>
   </data>
-  <data name="&gt;&gt;panelShareComment.Name" xml:space="preserve">
-    <value>panelShareComment</value>
+  <data name="&gt;&gt;panelHeaders.Name" xml:space="preserve">
+    <value>panelHeaders</value>
   </data>
-  <data name="&gt;&gt;panelShareComment.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelHeaders.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelShareComment.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelHeaders.Parent" xml:space="preserve">
     <value>InfoPanel1</value>
   </data>
-  <data name="&gt;&gt;panelShareComment.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelHeaders.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="InfoPanel1.Location" type="System.Drawing.Point, System.Drawing">
@@ -841,19 +808,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;InfoPanel1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="infoYear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="infoYear.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="infoYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 8</value>
+    <value>139, 8</value>
   </data>
   <data name="infoYear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 8, 3, 0</value>
+    <value>3, 8, 3, 0</value>
   </data>
   <data name="infoYear.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 23</value>
@@ -888,14 +852,11 @@
   <data name="lblHeaderDetails.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 12.2pt</value>
   </data>
-  <data name="lblHeaderDetails.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="lblHeaderDetails.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
   <data name="lblHeaderDetails.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 3, 15</value>
+    <value>3, 0, 3, 12</value>
   </data>
   <data name="lblHeaderDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 23</value>
@@ -931,7 +892,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubRating.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 38</value>
+    <value>3, 35</value>
   </data>
   <data name="lblSubRating.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -970,7 +931,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoRating.Location" type="System.Drawing.Point, System.Drawing">
-    <value>62, 38</value>
+    <value>62, 35</value>
   </data>
   <data name="infoRating.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
@@ -1009,7 +970,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubRuntime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 65</value>
+    <value>3, 62</value>
   </data>
   <data name="lblSubRuntime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -1048,7 +1009,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubReleaseDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 92</value>
+    <value>3, 89</value>
   </data>
   <data name="lblSubReleaseDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -1087,7 +1048,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoReleaseDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 92</value>
+    <value>116, 89</value>
   </data>
   <data name="infoReleaseDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
@@ -1126,7 +1087,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubCountry.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 119</value>
+    <value>3, 116</value>
   </data>
   <data name="lblSubCountry.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -1165,7 +1126,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoCountry.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 119</value>
+    <value>80, 116</value>
   </data>
   <data name="infoCountry.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
@@ -1204,7 +1165,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 146</value>
+    <value>3, 143</value>
   </data>
   <data name="lblSubLanguage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -1243,7 +1204,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 146</value>
+    <value>92, 143</value>
   </data>
   <data name="infoLanguage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
@@ -1282,7 +1243,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubProduction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 173</value>
+    <value>3, 170</value>
   </data>
   <data name="lblSubProduction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -1321,7 +1282,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoProduction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 173</value>
+    <value>101, 170</value>
   </data>
   <data name="infoProduction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
@@ -1360,7 +1321,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubBoxOffice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 200</value>
+    <value>3, 197</value>
   </data>
   <data name="lblSubBoxOffice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -1399,7 +1360,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoBoxOffice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 200</value>
+    <value>97, 197</value>
   </data>
   <data name="infoBoxOffice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
@@ -1438,7 +1399,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSubAwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 227</value>
+    <value>3, 224</value>
   </data>
   <data name="lblSubAwards.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 0, 0, 4</value>
@@ -1477,7 +1438,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoAwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 227</value>
+    <value>73, 224</value>
   </data>
   <data name="infoAwards.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 3, 0</value>
@@ -1522,16 +1483,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelDetails.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="infoDuration.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
   </data>
-  <data name="infoDuration.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="infoDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 65</value>
+    <value>85, 62</value>
   </data>
   <data name="infoDuration.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 23</value>
@@ -1554,9 +1512,6 @@
   <data name="&gt;&gt;infoDuration.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="infoImageLink.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
   <data name="infoImageLink.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
   </data>
@@ -1564,7 +1519,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoImageLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 702</value>
+    <value>77, 550</value>
   </data>
   <data name="infoImageLink.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 20</value>
@@ -1591,7 +1546,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoImageLink.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="BtnFavouriteList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2232,7 +2187,7 @@
     <value>6</value>
   </data>
   <data name="ActionsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 531</value>
+    <value>54, 448</value>
   </data>
   <data name="ActionsPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 38</value>
@@ -2250,7 +2205,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ActionsPanel.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="infoWatchLinks.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
@@ -2259,7 +2214,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoWatchLinks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 682</value>
+    <value>46, 530</value>
   </data>
   <data name="infoWatchLinks.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 20</value>
@@ -2286,7 +2241,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoWatchLinks.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="infoRatingIMDb.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2322,7 +2277,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoRatingIMDb.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="infoRatingMetaScore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2358,7 +2313,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoRatingMetaScore.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="lblSimilar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2391,7 +2346,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoImdbId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 662</value>
+    <value>46, 510</value>
   </data>
   <data name="infoImdbId.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 20</value>
@@ -2418,43 +2373,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoImdbId.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="infoRTomLink.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Light, 9.75pt</value>
-  </data>
-  <data name="infoRTomLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="infoRTomLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 642</value>
-  </data>
-  <data name="infoRTomLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 20</value>
-  </data>
-  <data name="infoRTomLink.TabIndex" type="System.Int32, mscorlib">
-    <value>1091</value>
-  </data>
-  <data name="infoRTomLink.Text" xml:space="preserve">
-    <value>infoRTomLink</value>
-  </data>
-  <data name="infoRTomLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="infoRTomLink.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;infoRTomLink.Name" xml:space="preserve">
-    <value>infoRTomLink</value>
-  </data>
-  <data name="&gt;&gt;infoRTomLink.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;infoRTomLink.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;infoRTomLink.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="MovieLinkText.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
@@ -2535,7 +2454,7 @@
     <value>NoControl</value>
   </data>
   <data name="infoTrailerLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 622</value>
+    <value>46, 490</value>
   </data>
   <data name="infoTrailerLink.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 20</value>
@@ -2562,7 +2481,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoTrailerLink.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="msgErrorComments.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -2601,7 +2520,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;msgErrorComments.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="imgPanelsEmpty0.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -2642,38 +2561,32 @@
   <metadata name="getStarsTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>-2, 2</value>
   </metadata>
-  <metadata name="timerHideNotification.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>219, 2</value>
-  </metadata>
-  <metadata name="timerHideNotificationss.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>219, 2</value>
-  </metadata>
-  <data name="MovImage.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+  <data name="imgPoster.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="MovImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="imgPoster.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MovImage.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="imgPoster.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 23</value>
   </data>
-  <data name="MovImage.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="imgPoster.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 376</value>
   </data>
-  <data name="MovImage.TabIndex" type="System.Int32, mscorlib">
+  <data name="imgPoster.TabIndex" type="System.Int32, mscorlib">
     <value>10006</value>
   </data>
-  <data name="&gt;&gt;MovImage.Name" xml:space="preserve">
-    <value>MovImage</value>
+  <data name="&gt;&gt;imgPoster.Name" xml:space="preserve">
+    <value>imgPoster</value>
   </data>
-  <data name="&gt;&gt;MovImage.Type" xml:space="preserve">
+  <data name="&gt;&gt;imgPoster.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovImage.Parent" xml:space="preserve">
+  <data name="&gt;&gt;imgPoster.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;MovImage.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;imgPoster.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="ImgMetaCritic.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2706,7 +2619,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ImgMetaCritic.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="imgImdb.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2739,7 +2652,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;imgImdb.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="appClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2769,7 +2682,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;appClose.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="infoRatingNetflix.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2805,7 +2718,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoRatingNetflix.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="imgNetflix.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2838,60 +2751,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;imgNetflix.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="PictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="PictureBox1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>959, 23</value>
-  </data>
-  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>10007</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
-    <value>PictureBox1</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnWatchTrailer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 14.5pt</value>
-  </data>
-  <data name="btnWatchTrailer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 408</value>
-  </data>
-  <data name="btnWatchTrailer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 35</value>
-  </data>
-  <data name="btnWatchTrailer.TabIndex" type="System.Int32, mscorlib">
-    <value>1093</value>
-  </data>
-  <data name="btnWatchTrailer.Text" xml:space="preserve">
-    <value>Watch Trailer</value>
-  </data>
-  <data name="&gt;&gt;btnWatchTrailer.Name" xml:space="preserve">
-    <value>btnWatchTrailer</value>
-  </data>
-  <data name="&gt;&gt;btnWatchTrailer.Type" xml:space="preserve">
-    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnWatchTrailer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnWatchTrailer.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="SplitterLine1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2922,22 +2781,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SplitterLine1.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="btnDownloadMovie.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 14.5pt</value>
+    <value>Segoe UI Semibold, 13pt</value>
   </data>
   <data name="btnDownloadMovie.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 490</value>
+    <value>161, 406</value>
   </data>
   <data name="btnDownloadMovie.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 35</value>
+    <value>118, 36</value>
   </data>
   <data name="btnDownloadMovie.TabIndex" type="System.Int32, mscorlib">
     <value>1057</value>
   </data>
   <data name="btnDownloadMovie.Text" xml:space="preserve">
-    <value>Download Movie</value>
+    <value>DOWNLOAD</value>
   </data>
   <data name="&gt;&gt;btnDownloadMovie.Name" xml:space="preserve">
     <value>btnDownloadMovie</value>
@@ -2949,22 +2808,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDownloadMovie.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="btnWatchMovie.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 14.5pt</value>
+    <value>Segoe UI Semibold, 13pt</value>
   </data>
   <data name="btnWatchMovie.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 449</value>
+    <value>23, 406</value>
   </data>
   <data name="btnWatchMovie.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 35</value>
+    <value>132, 36</value>
   </data>
   <data name="btnWatchMovie.TabIndex" type="System.Int32, mscorlib">
     <value>999</value>
   </data>
   <data name="btnWatchMovie.Text" xml:space="preserve">
-    <value>Watch Movie</value>
+    <value>WATCH NOW</value>
   </data>
   <data name="&gt;&gt;btnWatchMovie.Name" xml:space="preserve">
     <value>btnWatchMovie</value>
@@ -2976,7 +2835,100 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnWatchMovie.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
+  </data>
+  <data name="lblMessageSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lblMessageSent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt</value>
+  </data>
+  <data name="lblMessageSent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>493, -1</value>
+  </data>
+  <data name="lblMessageSent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 35</value>
+  </data>
+  <data name="lblMessageSent.TabIndex" type="System.Int32, mscorlib">
+    <value>100001</value>
+  </data>
+  <data name="lblMessageSent.Text" xml:space="preserve">
+    <value>Your comment has been sent.</value>
+  </data>
+  <data name="lblMessageSent.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblMessageSent.Name" xml:space="preserve">
+    <value>lblMessageSent</value>
+  </data>
+  <data name="&gt;&gt;lblMessageSent.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblMessageSent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblMessageSent.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="infoBackgroundImageLink.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 9.75pt</value>
+  </data>
+  <data name="infoBackgroundImageLink.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="infoBackgroundImageLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 570</value>
+  </data>
+  <data name="infoBackgroundImageLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 20</value>
+  </data>
+  <data name="infoBackgroundImageLink.TabIndex" type="System.Int32, mscorlib">
+    <value>100002</value>
+  </data>
+  <data name="infoBackgroundImageLink.Text" xml:space="preserve">
+    <value>infoBackgroundImageLink</value>
+  </data>
+  <data name="infoBackgroundImageLink.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="infoBackgroundImageLink.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;infoBackgroundImageLink.Name" xml:space="preserve">
+    <value>infoBackgroundImageLink</value>
+  </data>
+  <data name="&gt;&gt;infoBackgroundImageLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infoBackgroundImageLink.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;infoBackgroundImageLink.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnWatchTrailer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 187</value>
+  </data>
+  <data name="btnWatchTrailer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 60</value>
+  </data>
+  <data name="btnWatchTrailer.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="btnWatchTrailer.TabIndex" type="System.Int32, mscorlib">
+    <value>100003</value>
+  </data>
+  <data name="&gt;&gt;btnWatchTrailer.Name" xml:space="preserve">
+    <value>btnWatchTrailer</value>
+  </data>
+  <data name="&gt;&gt;btnWatchTrailer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnWatchTrailer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnWatchTrailer.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -9187,18 +9139,6 @@
     <value>getStarsTimer</value>
   </data>
   <data name="&gt;&gt;getStarsTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timerHideNotification.Name" xml:space="preserve">
-    <value>timerHideNotification</value>
-  </data>
-  <data name="&gt;&gt;timerHideNotification.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timerHideNotificationss.Name" xml:space="preserve">
-    <value>timerHideNotificationss</value>
-  </data>
-  <data name="&gt;&gt;timerHideNotificationss.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -24,92 +24,104 @@ Partial Class frmDownloadClient
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDownloadClient))
-        Me.LblTitleProgress = New System.Windows.Forms.Label()
-        Me.LblLocation = New System.Windows.Forms.Label()
-        Me.TextDownloadLocation = New System.Windows.Forms.Label()
-        Me.TextDownloadSize = New System.Windows.Forms.Label()
-        Me.LblSize = New System.Windows.Forms.Label()
-        Me.prgBar = New System.Windows.Forms.ProgressBar()
+        Me.lblProgress = New System.Windows.Forms.Label()
+        Me.lblTitleLocation = New System.Windows.Forms.Label()
+        Me.lblLocation = New System.Windows.Forms.Label()
+        Me.lblSize = New System.Windows.Forms.Label()
+        Me.lblTitleSize = New System.Windows.Forms.Label()
+        Me.prgbarStatus = New System.Windows.Forms.ProgressBar()
         Me.BtnCancel = New CButtonLib.CButton()
-        Me.DownloadClientBg = New CButtonLib.CButton()
+        Me.bgStatus = New CButtonLib.CButton()
+        Me.lblMovieTitle = New System.Windows.Forms.Label()
+        Me.lblSpeed = New System.Windows.Forms.Label()
+        Me.lblTitleSpeed = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'LblTitleProgress
+        'lblProgress
         '
-        Me.LblTitleProgress.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LblTitleProgress.AutoEllipsis = True
-        Me.LblTitleProgress.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
-        Me.LblTitleProgress.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!)
-        Me.LblTitleProgress.Location = New System.Drawing.Point(241, 175)
-        Me.LblTitleProgress.Name = "LblTitleProgress"
-        Me.LblTitleProgress.Size = New System.Drawing.Size(502, 25)
-        Me.LblTitleProgress.TabIndex = 0
-        Me.LblTitleProgress.Text = "Downloading..."
-        Me.LblTitleProgress.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblProgress.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblProgress.AutoEllipsis = True
+        Me.lblProgress.BackColor = System.Drawing.Color.Transparent
+        Me.lblProgress.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!)
+        Me.lblProgress.Location = New System.Drawing.Point(242, 178)
+        Me.lblProgress.Name = "lblProgress"
+        Me.lblProgress.Size = New System.Drawing.Size(502, 25)
+        Me.lblProgress.TabIndex = 0
+        Me.lblProgress.Text = "Connecting"
+        Me.lblProgress.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'LblLocation
+        'lblTitleLocation
         '
-        Me.LblLocation.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LblLocation.AutoSize = True
-        Me.LblLocation.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
-        Me.LblLocation.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.LblLocation.Location = New System.Drawing.Point(308, 232)
-        Me.LblLocation.Name = "LblLocation"
-        Me.LblLocation.Size = New System.Drawing.Size(130, 19)
-        Me.LblLocation.TabIndex = 1060
-        Me.LblLocation.Text = "Download Location:"
+        Me.lblTitleLocation.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblTitleLocation.AutoSize = True
+        Me.lblTitleLocation.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.lblTitleLocation.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.lblTitleLocation.Location = New System.Drawing.Point(310, 306)
+        Me.lblTitleLocation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 0)
+        Me.lblTitleLocation.Name = "lblTitleLocation"
+        Me.lblTitleLocation.Size = New System.Drawing.Size(64, 19)
+        Me.lblTitleLocation.TabIndex = 1060
+        Me.lblTitleLocation.Text = "Location:"
+        Me.lblTitleLocation.Visible = False
         '
-        'TextDownloadLocation
+        'lblLocation
         '
-        Me.TextDownloadLocation.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextDownloadLocation.AutoEllipsis = True
-        Me.TextDownloadLocation.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
-        Me.TextDownloadLocation.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TextDownloadLocation.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.TextDownloadLocation.Location = New System.Drawing.Point(440, 232)
-        Me.TextDownloadLocation.Name = "TextDownloadLocation"
-        Me.TextDownloadLocation.Size = New System.Drawing.Size(236, 20)
-        Me.TextDownloadLocation.TabIndex = 1061
-        Me.TextDownloadLocation.Text = "\Downloads\"
-        Me.TextDownloadLocation.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblLocation.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblLocation.AutoEllipsis = True
+        Me.lblLocation.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.lblLocation.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblLocation.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.lblLocation.Location = New System.Drawing.Point(380, 306)
+        Me.lblLocation.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
+        Me.lblLocation.Name = "lblLocation"
+        Me.lblLocation.Size = New System.Drawing.Size(298, 20)
+        Me.lblLocation.TabIndex = 1061
+        Me.lblLocation.Text = "\Downloads\"
+        Me.lblLocation.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblLocation.Visible = False
         '
-        'TextDownloadSize
+        'lblSize
         '
-        Me.TextDownloadSize.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextDownloadSize.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
-        Me.TextDownloadSize.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.TextDownloadSize.Location = New System.Drawing.Point(349, 255)
-        Me.TextDownloadSize.Name = "TextDownloadSize"
-        Me.TextDownloadSize.Size = New System.Drawing.Size(327, 17)
-        Me.TextDownloadSize.TabIndex = 1065
-        Me.TextDownloadSize.Text = "MB"
-        Me.TextDownloadSize.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblSize.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblSize.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.lblSize.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.lblSize.Location = New System.Drawing.Point(351, 283)
+        Me.lblSize.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
+        Me.lblSize.Name = "lblSize"
+        Me.lblSize.Size = New System.Drawing.Size(327, 17)
+        Me.lblSize.TabIndex = 1065
+        Me.lblSize.Text = "MB"
+        Me.lblSize.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblSize.Visible = False
         '
-        'LblSize
+        'lblTitleSize
         '
-        Me.LblSize.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LblSize.AutoSize = True
-        Me.LblSize.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
-        Me.LblSize.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.LblSize.Location = New System.Drawing.Point(308, 255)
-        Me.LblSize.Name = "LblSize"
-        Me.LblSize.Size = New System.Drawing.Size(35, 19)
-        Me.LblSize.TabIndex = 1064
-        Me.LblSize.Text = "Size:"
+        Me.lblTitleSize.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblTitleSize.AutoSize = True
+        Me.lblTitleSize.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.lblTitleSize.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.lblTitleSize.Location = New System.Drawing.Point(310, 283)
+        Me.lblTitleSize.Margin = New System.Windows.Forms.Padding(3, 4, 3, 0)
+        Me.lblTitleSize.Name = "lblTitleSize"
+        Me.lblTitleSize.Size = New System.Drawing.Size(35, 19)
+        Me.lblTitleSize.TabIndex = 1064
+        Me.lblTitleSize.Text = "Size:"
+        Me.lblTitleSize.Visible = False
         '
-        'prgBar
+        'prgbarStatus
         '
-        Me.prgBar.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.prgBar.Location = New System.Drawing.Point(225, 209)
-        Me.prgBar.Name = "prgBar"
-        Me.prgBar.Size = New System.Drawing.Size(536, 12)
-        Me.prgBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.prgBar.TabIndex = 1066
+        Me.prgbarStatus.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.prgbarStatus.Location = New System.Drawing.Point(225, 219)
+        Me.prgbarStatus.Name = "prgbarStatus"
+        Me.prgbarStatus.Size = New System.Drawing.Size(536, 12)
+        Me.prgbarStatus.Style = System.Windows.Forms.ProgressBarStyle.Continuous
+        Me.prgbarStatus.TabIndex = 1066
+        Me.prgbarStatus.Visible = False
         '
         'BtnCancel
         '
         Me.BtnCancel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BtnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.BtnCancel.BackColor = System.Drawing.Color.Transparent
         Me.BtnCancel.BorderColor = System.Drawing.Color.White
         Me.BtnCancel.BorderShow = False
         Me.BtnCancel.ColorFillSolid = System.Drawing.Color.Firebrick
@@ -126,7 +138,7 @@ Partial Class frmDownloadClient
         Me.BtnCancel.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.BtnCancel.ForeColor = System.Drawing.Color.Gainsboro
         Me.BtnCancel.ImageIndex = 0
-        Me.BtnCancel.Location = New System.Drawing.Point(442, 294)
+        Me.BtnCancel.Location = New System.Drawing.Point(443, 373)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.BtnCancel.Size = New System.Drawing.Size(100, 34)
@@ -134,29 +146,72 @@ Partial Class frmDownloadClient
         Me.BtnCancel.Text = "Cancel"
         Me.BtnCancel.TextShadowShow = False
         '
-        'DownloadClientBg
+        'bgStatus
         '
-        Me.DownloadClientBg.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DownloadClientBg.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
-        Me.DownloadClientBg.BorderShow = False
-        Me.DownloadClientBg.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
-        Me.DownloadClientBg.Corners.All = 4
-        Me.DownloadClientBg.Corners.LowerLeft = 4
-        Me.DownloadClientBg.Corners.LowerRight = 4
-        Me.DownloadClientBg.Corners.UpperLeft = 4
-        Me.DownloadClientBg.Corners.UpperRight = 4
-        Me.DownloadClientBg.DesignerSelected = False
-        Me.DownloadClientBg.DimFactorClick = 0
-        Me.DownloadClientBg.DimFactorHover = 0
-        Me.DownloadClientBg.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.DownloadClientBg.FocalPoints.CenterPtX = 0!
-        Me.DownloadClientBg.FocalPoints.CenterPtY = 0!
-        Me.DownloadClientBg.ImageIndex = 0
-        Me.DownloadClientBg.Location = New System.Drawing.Point(187, 159)
-        Me.DownloadClientBg.Name = "DownloadClientBg"
-        Me.DownloadClientBg.Size = New System.Drawing.Size(612, 190)
-        Me.DownloadClientBg.TabIndex = 1059
-        Me.DownloadClientBg.Text = ""
+        Me.bgStatus.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.bgStatus.BorderColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.bgStatus.BorderShow = False
+        Me.bgStatus.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.bgStatus.Corners.All = 4
+        Me.bgStatus.Corners.LowerLeft = 4
+        Me.bgStatus.Corners.LowerRight = 4
+        Me.bgStatus.Corners.UpperLeft = 4
+        Me.bgStatus.Corners.UpperRight = 4
+        Me.bgStatus.DesignerSelected = False
+        Me.bgStatus.DimFactorClick = 0
+        Me.bgStatus.DimFactorHover = 0
+        Me.bgStatus.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.bgStatus.FocalPoints.CenterPtX = 0!
+        Me.bgStatus.FocalPoints.CenterPtY = 0!
+        Me.bgStatus.ImageIndex = 0
+        Me.bgStatus.Location = New System.Drawing.Point(303, 253)
+        Me.bgStatus.Name = "bgStatus"
+        Me.bgStatus.Size = New System.Drawing.Size(380, 80)
+        Me.bgStatus.TabIndex = 1059
+        Me.bgStatus.Text = ""
+        Me.bgStatus.Visible = False
+        '
+        'lblMovieTitle
+        '
+        Me.lblMovieTitle.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblMovieTitle.AutoEllipsis = True
+        Me.lblMovieTitle.BackColor = System.Drawing.Color.Transparent
+        Me.lblMovieTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!)
+        Me.lblMovieTitle.Location = New System.Drawing.Point(242, 102)
+        Me.lblMovieTitle.Name = "lblMovieTitle"
+        Me.lblMovieTitle.Size = New System.Drawing.Size(502, 25)
+        Me.lblMovieTitle.TabIndex = 1067
+        Me.lblMovieTitle.Text = "Movie Title"
+        Me.lblMovieTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblMovieTitle.Visible = False
+        '
+        'lblSpeed
+        '
+        Me.lblSpeed.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblSpeed.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.lblSpeed.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.lblSpeed.Location = New System.Drawing.Point(390, 261)
+        Me.lblSpeed.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
+        Me.lblSpeed.Name = "lblSpeed"
+        Me.lblSpeed.Size = New System.Drawing.Size(288, 17)
+        Me.lblSpeed.TabIndex = 1069
+        Me.lblSpeed.Text = "/Sec"
+        Me.lblSpeed.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblSpeed.Visible = False
+        '
+        'lblTitleSpeed
+        '
+        Me.lblTitleSpeed.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblTitleSpeed.AutoSize = True
+        Me.lblTitleSpeed.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        Me.lblTitleSpeed.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.lblTitleSpeed.Location = New System.Drawing.Point(310, 261)
+        Me.lblTitleSpeed.Margin = New System.Windows.Forms.Padding(3, 4, 3, 0)
+        Me.lblTitleSpeed.Name = "lblTitleSpeed"
+        Me.lblTitleSpeed.Size = New System.Drawing.Size(49, 19)
+        Me.lblTitleSpeed.TabIndex = 1068
+        Me.lblTitleSpeed.Text = "Speed:"
+        Me.lblTitleSpeed.Visible = False
         '
         'frmDownloadClient
         '
@@ -164,32 +219,38 @@ Partial Class frmDownloadClient
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(46, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(986, 508)
-        Me.Controls.Add(Me.prgBar)
-        Me.Controls.Add(Me.TextDownloadSize)
-        Me.Controls.Add(Me.LblSize)
-        Me.Controls.Add(Me.TextDownloadLocation)
-        Me.Controls.Add(Me.LblLocation)
+        Me.Controls.Add(Me.lblSpeed)
+        Me.Controls.Add(Me.lblTitleSpeed)
+        Me.Controls.Add(Me.lblMovieTitle)
+        Me.Controls.Add(Me.prgbarStatus)
+        Me.Controls.Add(Me.lblSize)
+        Me.Controls.Add(Me.lblTitleSize)
+        Me.Controls.Add(Me.lblLocation)
+        Me.Controls.Add(Me.lblTitleLocation)
         Me.Controls.Add(Me.BtnCancel)
-        Me.Controls.Add(Me.LblTitleProgress)
-        Me.Controls.Add(Me.DownloadClientBg)
+        Me.Controls.Add(Me.lblProgress)
+        Me.Controls.Add(Me.bgStatus)
         Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDownloadClient"
         Me.Opacity = 0.97R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Downloading Movie"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents LblTitleProgress As Label
+    Friend WithEvents lblProgress As Label
     Public WithEvents BtnCancel As CButtonLib.CButton
-    Friend WithEvents DownloadClientBg As CButtonLib.CButton
-    Friend WithEvents LblLocation As Label
-    Friend WithEvents TextDownloadLocation As Label
-    Friend WithEvents TextDownloadSize As Label
-    Friend WithEvents LblSize As Label
-    Friend WithEvents prgBar As ProgressBar
+    Friend WithEvents bgStatus As CButtonLib.CButton
+    Friend WithEvents lblTitleLocation As Label
+    Friend WithEvents lblLocation As Label
+    Friend WithEvents lblSize As Label
+    Friend WithEvents lblTitleSize As Label
+    Friend WithEvents prgbarStatus As ProgressBar
+    Friend WithEvents lblMovieTitle As Label
+    Friend WithEvents lblSpeed As Label
+    Friend WithEvents lblTitleSpeed As Label
 End Class

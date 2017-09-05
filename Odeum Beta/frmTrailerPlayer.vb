@@ -1,6 +1,6 @@
 ﻿Public Class frmTrailerPlayer
     Private Sub frmTrailerPlayer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Top = Movieo.ClientRectangle.Top + 24
+        Top = Movieo.ClientRectangle.Top + 23
         Left = Movieo.ClientRectangle.Left
         Size = Movieo.ClientSize
     End Sub

@@ -8,10 +8,6 @@ Public Class frmMediaPlayer
     Private Sub FastWeb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tab.SelectedTab = tabStatus
         firstLoad = True
-        Top = 0
-        Left = 0
-        Size = Movieo.Size
-
 
         MediaPlayerControl.uiMode = "full"
         MediaPlayerControl.stretchToFit = True
@@ -40,7 +36,7 @@ Public Class frmMediaPlayer
         sender.ColorFillSolid = Color.Transparent
     End Sub
 
-    Public Sub MediaPlayerControl_PlayStateChange(ByVal sender As Object, ByVal e As AxWMPLib._WMPOCXEvents_PlayStateChangeEvent) Handles MediaPlayerControl.PlayStateChange
+    Public Sub MediaPlayerControl_PlayStateChange(ByVal sender As Object, ByVal e As _WMPOCXEvents_PlayStateChangeEvent) Handles MediaPlayerControl.PlayStateChange
         'Test the current state of the player, display a message for each state. (https://msdn.microsoft.com/en-us/library/windows/desktop/dd562460)
         Select Case e.newState
             Case 0 ' Undefined
@@ -70,7 +66,7 @@ Public Class frmMediaPlayer
             Case 11 ' Reconnecting
                 'currentStateLabel.Text = "Reconnecting"
             Case 12 ' Last
-                MsgBox("Last")
+                'Last
             Case Else
                 'currentStateLabel.Text = ("Unknown State: " + e.newState.ToString())
         End Select

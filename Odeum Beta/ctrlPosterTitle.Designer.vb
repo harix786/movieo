@@ -50,6 +50,7 @@ Partial Class ctrlPosterTitle
         Me.InfoImdbRatingPoster = New CButtonLib.CButton()
         Me.imageBackgroundEffect = New System.Windows.Forms.PictureBox()
         Me.infoRatingNetflix = New System.Windows.Forms.Label()
+        Me.InfoTitleAndYear = New System.Windows.Forms.Label()
         CType(Me.imageBackgroundEffect, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -382,18 +383,27 @@ Partial Class ctrlPosterTitle
         '
         'InfoImdbRatingPoster
         '
-        Me.InfoImdbRatingPoster.BorderColor = System.Drawing.Color.White
-        Me.InfoImdbRatingPoster.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.InfoImdbRatingPoster.DesignerSelected = False
+        Me.InfoImdbRatingPoster.BorderColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.InfoImdbRatingPoster.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(201, Byte), Integer), CType(CType(22, Byte), Integer))
+        Me.InfoImdbRatingPoster.Corners.All = 12
+        Me.InfoImdbRatingPoster.Corners.LowerLeft = 12
+        Me.InfoImdbRatingPoster.Corners.LowerRight = 12
+        Me.InfoImdbRatingPoster.Corners.UpperLeft = 12
+        Me.InfoImdbRatingPoster.Corners.UpperRight = 12
+        Me.InfoImdbRatingPoster.DesignerSelected = True
         Me.InfoImdbRatingPoster.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.InfoImdbRatingPoster.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InfoImdbRatingPoster.ForeColor = System.Drawing.Color.Black
         Me.InfoImdbRatingPoster.ImageIndex = 0
-        Me.InfoImdbRatingPoster.Location = New System.Drawing.Point(7, 8)
+        Me.InfoImdbRatingPoster.Location = New System.Drawing.Point(74, 13)
         Me.InfoImdbRatingPoster.Name = "InfoImdbRatingPoster"
-        Me.InfoImdbRatingPoster.Size = New System.Drawing.Size(52, 25)
+        Me.InfoImdbRatingPoster.Size = New System.Drawing.Size(74, 26)
         Me.InfoImdbRatingPoster.TabIndex = 58
-        Me.InfoImdbRatingPoster.Text = "0.0/10"
-        Me.InfoImdbRatingPoster.TextMargin = New System.Windows.Forms.Padding(3, 2, 2, 2)
+        Me.InfoImdbRatingPoster.Text = "IMDB 0.0"
+        Me.InfoImdbRatingPoster.TextMargin = New System.Windows.Forms.Padding(2, 3, 2, 2)
         Me.InfoImdbRatingPoster.TextShadow = System.Drawing.Color.Gray
+        Me.InfoImdbRatingPoster.TextShadowShow = False
+        Me.InfoImdbRatingPoster.Visible = False
         '
         'imageBackgroundEffect
         '
@@ -420,6 +430,18 @@ Partial Class ctrlPosterTitle
         Me.infoRatingNetflix.TabIndex = 59
         Me.infoRatingNetflix.Text = "n/a"
         Me.infoRatingNetflix.Visible = False
+        '
+        'InfoTitleAndYear
+        '
+        Me.InfoTitleAndYear.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.InfoTitleAndYear.AutoSize = True
+        Me.InfoTitleAndYear.Location = New System.Drawing.Point(76, 139)
+        Me.InfoTitleAndYear.Name = "InfoTitleAndYear"
+        Me.InfoTitleAndYear.Size = New System.Drawing.Size(0, 13)
+        Me.InfoTitleAndYear.TabIndex = 60
+        Me.InfoTitleAndYear.Visible = False
         '
         'ctrlPosterTitle
         '
@@ -455,6 +477,7 @@ Partial Class ctrlPosterTitle
         Me.Controls.Add(Me.InfoRating)
         Me.Controls.Add(Me.infoRatingMetaScore)
         Me.Controls.Add(Me.infoRatingNetflix)
+        Me.Controls.Add(Me.InfoTitleAndYear)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -497,4 +520,5 @@ Partial Class ctrlPosterTitle
     Friend WithEvents InfoMovieQuality As Label
     Friend WithEvents InfoImdbRatingPoster As CButtonLib.CButton
     Friend WithEvents infoRatingNetflix As Label
+    Friend WithEvents InfoTitleAndYear As Label
 End Class

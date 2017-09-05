@@ -136,6 +136,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="ctrlCollectionsThumbnail.Designer.vb">
+      <DependentUpon>ctrlCollectionsThumbnail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlCollectionsThumbnail.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ctrlItemComment.Designer.vb">
       <DependentUpon>ctrlItemComment.vb</DependentUpon>
     </Compile>
@@ -274,6 +280,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ctrlCollectionsThumbnail.resx">
+      <DependentUpon>ctrlCollectionsThumbnail.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlItemComment.resx">
       <DependentUpon>ctrlItemComment.vb</DependentUpon>
     </EmbeddedResource>
@@ -531,6 +540,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
     <COMReference Include="AxWMPLib">
       <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
       <VersionMajor>1</VersionMajor>
@@ -540,6 +557,15 @@
       <Isolated>False</Isolated>
       <Private>True</Private>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="WMPLib">
       <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>

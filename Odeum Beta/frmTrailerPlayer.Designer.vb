@@ -22,23 +22,12 @@ Partial Class frmTrailerPlayer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.web = New System.Windows.Forms.WebBrowser()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTrailerPlayer))
         Me.appClose = New System.Windows.Forms.PictureBox()
+        Me.swfPlayer = New AxShockwaveFlashObjects.AxShockwaveFlash()
         CType(Me.appClose, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.swfPlayer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'web
-        '
-        Me.web.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.web.Location = New System.Drawing.Point(80, 64)
-        Me.web.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.web.Name = "web"
-        Me.web.ScriptErrorsSuppressed = True
-        Me.web.ScrollBarsEnabled = False
-        Me.web.Size = New System.Drawing.Size(1058, 604)
-        Me.web.TabIndex = 0
         '
         'appClose
         '
@@ -53,14 +42,26 @@ Partial Class frmTrailerPlayer
         Me.appClose.TabIndex = 49
         Me.appClose.TabStop = False
         '
+        'swfPlayer
+        '
+        Me.swfPlayer.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.swfPlayer.Enabled = True
+        Me.swfPlayer.Location = New System.Drawing.Point(173, 12)
+        Me.swfPlayer.Name = "swfPlayer"
+        Me.swfPlayer.OcxState = CType(resources.GetObject("swfPlayer.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.swfPlayer.Size = New System.Drawing.Size(872, 539)
+        Me.swfPlayer.TabIndex = 50
+        '
         'frmTrailerPlayer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(46, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1218, 733)
+        Me.ClientSize = New System.Drawing.Size(1218, 563)
+        Me.Controls.Add(Me.swfPlayer)
         Me.Controls.Add(Me.appClose)
-        Me.Controls.Add(Me.web)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTrailerPlayer"
         Me.Opacity = 0.97R
@@ -69,10 +70,10 @@ Partial Class frmTrailerPlayer
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Watch Tailer"
         CType(Me.appClose, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.swfPlayer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents web As WebBrowser
     Friend WithEvents appClose As PictureBox
+    Friend WithEvents swfPlayer As AxShockwaveFlashObjects.AxShockwaveFlash
 End Class

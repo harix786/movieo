@@ -23,11 +23,13 @@ Partial Class frmSelectSource
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSelectSource))
         Me.itemsBackground = New CButtonLib.CButton()
         Me.itemsMovieSources = New System.Windows.Forms.ListBox()
-        Me.titleForm = New CButtonLib.CButton()
         Me.meClose = New System.Windows.Forms.PictureBox()
         Me.itemsMovieSourcesTitle = New System.Windows.Forms.ListBox()
+        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.btnOk = New CButtonLib.CButton()
         CType(Me.meClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -36,7 +38,6 @@ Partial Class frmSelectSource
         Me.itemsBackground.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.itemsBackground.BackColor = System.Drawing.Color.Transparent
         Me.itemsBackground.BorderColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.itemsBackground.BorderShow = False
         Me.itemsBackground.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.itemsBackground.Corners.All = 2
         Me.itemsBackground.Corners.LowerLeft = 2
@@ -51,7 +52,7 @@ Partial Class frmSelectSource
         Me.itemsBackground.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.itemsBackground.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.itemsBackground.ImageIndex = 0
-        Me.itemsBackground.Location = New System.Drawing.Point(221, 218)
+        Me.itemsBackground.Location = New System.Drawing.Point(221, 207)
         Me.itemsBackground.Margin = New System.Windows.Forms.Padding(0)
         Me.itemsBackground.Name = "itemsBackground"
         Me.itemsBackground.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -74,38 +75,11 @@ Partial Class frmSelectSource
         Me.itemsMovieSources.FormattingEnabled = True
         Me.itemsMovieSources.HorizontalScrollbar = True
         Me.itemsMovieSources.ItemHeight = 19
-        Me.itemsMovieSources.Location = New System.Drawing.Point(224, 223)
+        Me.itemsMovieSources.Location = New System.Drawing.Point(224, 212)
         Me.itemsMovieSources.Name = "itemsMovieSources"
         Me.itemsMovieSources.Size = New System.Drawing.Size(538, 171)
         Me.itemsMovieSources.TabIndex = 0
         Me.itemsMovieSources.UseTabStops = False
-        '
-        'titleForm
-        '
-        Me.titleForm.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.titleForm.BackColor = System.Drawing.Color.Transparent
-        Me.titleForm.BorderColor = System.Drawing.Color.Transparent
-        Me.titleForm.BorderShow = False
-        Me.titleForm.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.titleForm.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.titleForm.DesignerSelected = False
-        Me.titleForm.DimFactorClick = 0
-        Me.titleForm.DimFactorHover = 0
-        Me.titleForm.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.titleForm.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold)
-        Me.titleForm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.titleForm.ImageIndex = 0
-        Me.titleForm.Location = New System.Drawing.Point(275, 161)
-        Me.titleForm.Name = "titleForm"
-        Me.titleForm.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.titleForm.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.titleForm.SideImageSize = New System.Drawing.Size(14, 15)
-        Me.titleForm.Size = New System.Drawing.Size(436, 42)
-        Me.titleForm.TabIndex = 0
-        Me.titleForm.TabStop = False
-        Me.titleForm.Text = "Choose Movie Source:"
-        Me.titleForm.TextShadow = System.Drawing.Color.White
-        Me.titleForm.TextShadowShow = False
         '
         'meClose
         '
@@ -130,11 +104,57 @@ Partial Class frmSelectSource
         Me.itemsMovieSourcesTitle.FormattingEnabled = True
         Me.itemsMovieSourcesTitle.HorizontalScrollbar = True
         Me.itemsMovieSourcesTitle.ItemHeight = 19
-        Me.itemsMovieSourcesTitle.Location = New System.Drawing.Point(224, 223)
+        Me.itemsMovieSourcesTitle.Location = New System.Drawing.Point(224, 212)
         Me.itemsMovieSourcesTitle.Name = "itemsMovieSourcesTitle"
         Me.itemsMovieSourcesTitle.Size = New System.Drawing.Size(538, 171)
         Me.itemsMovieSourcesTitle.TabIndex = 0
         Me.itemsMovieSourcesTitle.UseTabStops = False
+        '
+        'lblTitle
+        '
+        Me.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblTitle.AutoSize = True
+        Me.lblTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 17.0!)
+        Me.lblTitle.ForeColor = System.Drawing.Color.White
+        Me.lblTitle.Location = New System.Drawing.Point(394, 129)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(198, 31)
+        Me.lblTitle.TabIndex = 100000057
+        Me.lblTitle.Text = "Available Streams"
+        '
+        'btnOk
+        '
+        Me.btnOk.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnOk.BackColor = System.Drawing.Color.Transparent
+        Me.btnOk.BorderColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.btnOk.BorderShow = False
+        Me.btnOk.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.btnOk.Corners.All = 2
+        Me.btnOk.Corners.LowerLeft = 2
+        Me.btnOk.Corners.LowerRight = 2
+        Me.btnOk.Corners.UpperLeft = 2
+        Me.btnOk.Corners.UpperRight = 2
+        Me.btnOk.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnOk.DesignerSelected = True
+        Me.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.btnOk.DimFactorClick = -15
+        Me.btnOk.DimFactorHover = -15
+        Me.btnOk.Enabled = False
+        Me.btnOk.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.btnOk.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnOk.ImageIndex = 0
+        Me.btnOk.Location = New System.Drawing.Point(684, 395)
+        Me.btnOk.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnOk.Name = "btnOk"
+        Me.btnOk.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.btnOk.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnOk.SideImageSize = New System.Drawing.Size(14, 15)
+        Me.btnOk.Size = New System.Drawing.Size(82, 32)
+        Me.btnOk.TabIndex = 100000058
+        Me.btnOk.TabStop = False
+        Me.btnOk.Text = "Done"
+        Me.btnOk.TextShadow = System.Drawing.Color.White
+        Me.btnOk.TextShadowShow = False
         '
         'frmSelectSource
         '
@@ -142,12 +162,14 @@ Partial Class frmSelectSource
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(986, 561)
+        Me.Controls.Add(Me.btnOk)
+        Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.itemsMovieSourcesTitle)
         Me.Controls.Add(Me.meClose)
-        Me.Controls.Add(Me.titleForm)
         Me.Controls.Add(Me.itemsBackground)
         Me.Controls.Add(Me.itemsMovieSources)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmSelectSource"
@@ -155,15 +177,17 @@ Partial Class frmSelectSource
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Choose Movie Source:"
+        Me.Text = "Available Streams"
         CType(Me.meClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents itemsBackground As CButtonLib.CButton
     Friend WithEvents itemsMovieSources As ListBox
-    Friend WithEvents titleForm As CButtonLib.CButton
     Friend WithEvents meClose As PictureBox
     Friend WithEvents itemsMovieSourcesTitle As ListBox
+    Friend WithEvents lblTitle As Label
+    Friend WithEvents btnOk As CButtonLib.CButton
 End Class
