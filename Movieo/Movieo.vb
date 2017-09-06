@@ -8,8 +8,8 @@ Public Class Movieo
 #Region "Preferences (some can be changed)"
 
     Public devMode As Boolean = True
-    'Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
-    Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7fb0qd74u1h5ddw/movieo-dbTESTING.txt?dl=0" 'FOR TESTING
+    Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
+    'Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7fb0qd74u1h5ddw/movieo-dbTESTING.txt?dl=0" 'FOR TESTING
     Public linkChangelog As String = "https://dl.dropbox.com/s/3514qygmbok1rvv/movieo-changelog.txt?dl=0"
     Public linkNotifications As String = "https://dl.dropbox.com/s/eqxi751t8z031na/movieo-notifications.txt?dl=0"
     Public linkMovieComments As String = "https://dl.dropbox.com/s/swbt9fkbknmoqzz/movieo-comments.txt?dl=0"
@@ -52,12 +52,14 @@ Public Class Movieo
 
 #Region "Movieo"
 
+    Dim ab As New frmStartupTab
+
     Private Sub Movieo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Show startup loading page
-        frmStartupTab.txtLoading.Text = "Loading, please wait..."
-        frmStartupTab.Size = New Size(ClientSize.Width, ClientSize.Height)
-        frmStartupTab.Show(Me)
-        frmStartupTab.Location = New Point(ClientRectangle.Location.X, ClientRectangle.Location.Y + 23)
+        ab.txtLoading.Text = "Loading, please wait..."
+        ab.Size = New Size(ClientSize.Width, ClientSize.Height)
+        ab.Show(Me)
+        ab.Location = New Point(ClientRectangle.Location.X, ClientRectangle.Location.Y + 23)
         If My.Settings.doOnTop = True Then
             TopMost = True
         End If
@@ -75,6 +77,7 @@ Public Class Movieo
                 SaveBackupDatabase()
             End If
             timerStartup.Enabled = True
+            ab.Close()
         Else
             'Show error form on movies tab - if no backup database file stored
             saveListsOnClose = False
@@ -92,7 +95,7 @@ Public Class Movieo
             txtboxSearchBG.Enabled = False
             imgSearchIcon.Enabled = False
             titleCoreLibrary.Enabled = False
-            frmStartupTab.Close()
+            ab.Close()
             ShowPopupOk("No internet connection",
             msgNoInternetConnection, Me)
         End If
@@ -130,21 +133,21 @@ Public Class Movieo
 
     Public Sub ShowPopupOk(Title As String, Message As String, owns As Form)
         Try
-            frmPopupBg.Show(owns)
-            frmPopupOk.DialogTitle.Text = Title
-            frmPopupOk.DialogMessage.Text = Message
-            frmPopupOk.Show(frmPopupBg)
+            Dim a As New frmPopupOk
+            a.DialogTitle.Text = Title
+            a.DialogMessage.Text = Message
+            a.ShowDialog(owns)
         Catch ex As Exception
         End Try
     End Sub
 
     Public Function ShowPopupYesNo(Title As String, Message As String, owns As Form) As DialogResult
         Try
-            frmPopupBg.Show(owns)
-            frmPopupYesNo.DialogTitle.Text = Title
-            frmPopupYesNo.DialogMessage.Text = Message
-            frmPopupYesNo.Show(frmPopupBg)
-            Return frmPopupYesNo.DialogResult
+            Dim a As New frmPopupYesNo
+            a.DialogTitle.Text = Title
+            a.DialogMessage.Text = Message
+            a.ShowDialog(owns)
+            Return a.DialogResult
         Catch ex As Exception
             Return DialogResult.No
         End Try
@@ -339,7 +342,7 @@ Public Class Movieo
         'filterGenreBox.SelectedIndex = My.Settings.doFilterNum
         'End If
 
-        frmStartupTab.Hide()
+        ab.Close()
         Tab.SelectedTab = tabDiscover
         timerStartup.Enabled = False
     End Sub
@@ -1010,15 +1013,6 @@ Public Class Movieo
 
             If Not versionfile(0).Contains(currentversion) Then
                 UpdateAvailable = True
-
-                Dim a As New ctrlItemNotificationUpdate
-                a.LblNotification.Text = versionfile(1) + " - v" + versionfile(0)
-                a.Size = New Size(panelMovies.Size.Width - 25, a.Size.Height)
-                a.TopLevel = False
-                a.Show()
-                panelMovies.Controls.Add(a)
-                panelMovies.Controls.SetChildIndex(a, 0)
-                panelMovies.SetFlowBreak(a, True)
             End If
             timerGetUpdate.Enabled = False
         Catch ex As Exception

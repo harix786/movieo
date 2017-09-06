@@ -196,12 +196,6 @@
     <Compile Include="frmTrailerPlayer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPopupBg.Designer.vb">
-      <DependentUpon>frmPopupBg.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmPopupBg.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmMediaPlayer.Designer.vb">
       <DependentUpon>frmMediaPlayer.vb</DependentUpon>
     </Compile>
@@ -272,12 +266,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ctrlItemNotificationUpdate.Designer.vb">
-      <DependentUpon>ctrlItemNotificationUpdate.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ctrlItemNotificationUpdate.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ctrlCollectionsThumbnail.resx">
@@ -319,9 +307,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPopupBg.resx">
-      <DependentUpon>frmPopupBg.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMediaPlayer.resx">
       <DependentUpon>frmMediaPlayer.vb</DependentUpon>
     </EmbeddedResource>
@@ -350,9 +335,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlPosterTitle.resx">
       <DependentUpon>ctrlPosterTitle.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ctrlItemNotificationUpdate.resx">
-      <DependentUpon>ctrlItemNotificationUpdate.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

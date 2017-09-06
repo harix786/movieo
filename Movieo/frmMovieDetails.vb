@@ -412,6 +412,7 @@ Public Class frmMovieDetails
     Private Sub btnDownloadMovie_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnDownloadMovie.ClickButtonArea
         Try
             If infoBackgroundImageLink.Text = "" Then
+                Hide()
                 frmSelectSource.Opacity = 0.98
             Else
                 Hide()
@@ -426,7 +427,8 @@ Public Class frmMovieDetails
             End If
             Show()
         Catch ex As Exception
-            Movieo.ShowPopupOk("Unable To download movie", "It seems there's an issue connecting to the movie. Please try using a different source. " + ex.Message, Me)
+            Show()
+            Movieo.ShowPopupOk("Unable To download movie", "It seems there's an issue connecting to the stream. Please try using a different source. " + ex.Message, Me)
         End Try
     End Sub
 
