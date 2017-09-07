@@ -8,7 +8,9 @@ Download available at http://movieo.info/
 
 ## Screenshots
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/8e9eej5472ug746/Movieo%20-%20New%20Releases.png?dl=0" alt="Discover new releases."> <img width="450" align="middle" src="https://dl.dropbox.com/s/blcisomugg0clsl/Movieo%20-%20Top%20Rated.png?dl=0" alt="Discover top rated movies.">
+<img width="450" align="middle" src="https://dl.dropbox.com/s/8e9eej5472ug746/Movieo%20-%20New%20Releases.png?dl=0" alt="Discover new releases.">
+
+<img width="450" align="middle" src="https://dl.dropbox.com/s/blcisomugg0clsl/Movieo%20-%20Top%20Rated.png?dl=0" alt="Discover top rated movies.">
 
 <img width="450" align="middle" src="https://dl.dropbox.com/s/f7nxnu52q2speoa/Movieo%20-%20Collections.png?dl=0" alt="Browse the best collections there are.">
 
