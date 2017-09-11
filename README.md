@@ -1,5 +1,7 @@
 # Movieo by NV & Others
 
+[![Join the chat at https://gitter.im/movieo-app/Lobby](https://badges.gitter.im/movieo-app/Lobby.svg)](https://gitter.im/movieo-app/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## What is Movieo?
 
 This is a place for browsing and watching movies, made with love by a few developers. We adore movies but finding where to watch was usually a hassle. We had been searching for a nicely designed and simple interface for watching movies without the use of torrents, yet we couldn’t find one… so we made one ourselves. Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.
