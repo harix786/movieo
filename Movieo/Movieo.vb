@@ -8,8 +8,8 @@ Public Class Movieo
 #Region "Preferences (some can be changed)"
 
     Public devMode As Boolean = True
-    'Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
-    Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7fb0qd74u1h5ddw/movieo-dbTESTING.txt?dl=0" 'FOR TESTING
+    Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
+    'Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7fb0qd74u1h5ddw/movieo-dbTESTING.txt?dl=0" 'FOR TESTING
     Public linkChangelog As String = "https://dl.dropbox.com/s/3514qygmbok1rvv/movieo-changelog.txt?dl=0"
     Public linkNotifications As String = "https://dl.dropbox.com/s/eqxi751t8z031na/movieo-notifications.txt?dl=0"
     Public linkMovieComments As String = "https://dl.dropbox.com/s/swbt9fkbknmoqzz/movieo-comments.txt?dl=0"
@@ -517,7 +517,7 @@ Public Class Movieo
 
                 If MovieItem Mod 30 = 0 Then 'Change to a random loading text every x movies, this case it's 30
                     lblSubLoading.Text = RandomText(SearchingTexts)
-                    Threading.Thread.Sleep(1200)
+                    Threading.Thread.Sleep(1000)
                 End If
 
             End If
