@@ -31,7 +31,9 @@ Download available for free at http://movieo.info/
 ## Get Social
 
 Facebook : https://facebook.com/itsmovieo
+
 Twitter : https://twitter.com/itsmovieo
+
 YouTube : https://www.youtube.com/bettercodes
 
 ## Data Provider
