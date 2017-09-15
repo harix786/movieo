@@ -151,11 +151,13 @@ Public Class ctrlPosterTitle
 
                 frmBackgroundMovieDetails.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(backgroundLink)))
                 frmMovieDetails.infoBackgroundImageLink.Text = backgroundLink
-                frmMovieDetails.Opacity = 0.75
+                frmMovieDetails.Opacity = 0.85
 
                 'Details from Popcorn Time API for Trailer Link (YouTube)
                 frmMovieDetails.infoTrailerLink.Text = trailerLink
+                frmBackgroundMovieDetails.Opacity = 100
             Catch ex As Exception
+                frmBackgroundMovieDetails.Opacity = 0
                 frmMovieDetails.infoTrailerLink.Text = ""
                 frmMovieDetails.infoBackgroundImageLink.Text = ""
                 frmMovieDetails.Opacity = 0.98

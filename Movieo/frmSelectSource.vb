@@ -1,7 +1,6 @@
 ﻿Public Class frmSelectSource
 
     Private Sub frmSelectSource_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        frmMovieDetails.Opacity = 0
         Top = Movieo.ClientRectangle.Top + 23
         Left = Movieo.ClientRectangle.Left
         Size = Movieo.ClientSize

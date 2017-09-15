@@ -164,9 +164,6 @@ Your feedback is extremely important as it makes it easier for us to focus on th
   <data name="qSub2.Text" xml:space="preserve">
     <value>We're still in beta; so you may come across a few issues and we're trying our very best to provide a clean stable app to watch your favourite movies. This is where we need your help. We rely on you, the community, to help us find and squish these bugs! We've got a small message form that you can use to send us a message, otherwise you can contact us at our email: hi@movieo.info</value>
   </data>
-  <metadata name="timerHideMessageSent.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>-2, 2</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

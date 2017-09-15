@@ -91,7 +91,8 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CButtonLib">
+    <Reference Include="CButtonLib, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\- Plugins\CButton\CButton\bin\Debug\CButtonLib.dll</HintPath>
     </Reference>
     <Reference Include="ChreneLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -136,10 +137,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="ctrlCollectionsThumbnail.Designer.vb">
-      <DependentUpon>ctrlCollectionsThumbnail.vb</DependentUpon>
+    <Compile Include="ctrlCollectionThumbnail.Designer.vb">
+      <DependentUpon>ctrlCollectionThumbnail.vb</DependentUpon>
     </Compile>
-    <Compile Include="ctrlCollectionsThumbnail.vb">
+    <Compile Include="ctrlCollectionThumbnail.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ctrlItemComment.Designer.vb">
@@ -268,8 +269,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ctrlCollectionsThumbnail.resx">
-      <DependentUpon>ctrlCollectionsThumbnail.vb</DependentUpon>
+    <EmbeddedResource Include="ctrlCollectionThumbnail.resx">
+      <DependentUpon>ctrlCollectionThumbnail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlItemComment.resx">
       <DependentUpon>ctrlItemComment.vb</DependentUpon>

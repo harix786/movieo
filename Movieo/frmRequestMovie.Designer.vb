@@ -43,7 +43,7 @@ Partial Class frmRequestMovie
         Me.Splitter1a.AutoSize = True
         Me.Splitter1a.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Splitter1a.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1a.Location = New System.Drawing.Point(171, 152)
+        Me.Splitter1a.Location = New System.Drawing.Point(168, 152)
         Me.Splitter1a.MaximumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1a.MinimumSize = New System.Drawing.Size(750, 0)
         Me.Splitter1a.Name = "Splitter1a"
@@ -136,8 +136,8 @@ Partial Class frmRequestMovie
         Me.lblSubContact.Name = "lblSubContact"
         Me.lblSubContact.Size = New System.Drawing.Size(730, 50)
         Me.lblSubContact.TabIndex = 1
-        Me.lblSubContact.Text = "Search movies before sending the request. Please leave movie name, some additiona" &
-    "l information and a message to help us find the movie as quickly as possible."
+        Me.lblSubContact.Text = "Search movies before sending the request. Please leave movie name and some additi" &
+    "onal information to help us find the movie as quickly as possible."
         Me.lblSubContact.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'txtFormEmailBG
@@ -176,7 +176,7 @@ Partial Class frmRequestMovie
         Me.txtFormMoreInfo.Name = "txtFormMoreInfo"
         Me.txtFormMoreInfo.Size = New System.Drawing.Size(511, 23)
         Me.txtFormMoreInfo.TabIndex = 3
-        Me.txtFormMoreInfo.WaterMark = "Some More Info"
+        Me.txtFormMoreInfo.WaterMark = "Some More Info..."
         Me.txtFormMoreInfo.WaterMarkActiveForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.txtFormMoreInfo.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.5!)
         Me.txtFormMoreInfo.WaterMarkForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
@@ -223,13 +223,13 @@ Partial Class frmRequestMovie
         Me.lblMessageSent.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!)
         Me.lblMessageSent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.lblMessageSent.ImageIndex = 0
-        Me.lblMessageSent.Location = New System.Drawing.Point(382, -2)
+        Me.lblMessageSent.Location = New System.Drawing.Point(460, -2)
         Me.lblMessageSent.Name = "lblMessageSent"
         Me.lblMessageSent.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.lblMessageSent.Size = New System.Drawing.Size(328, 35)
+        Me.lblMessageSent.Size = New System.Drawing.Size(172, 35)
         Me.lblMessageSent.TabIndex = 100000067
         Me.lblMessageSent.TabStop = False
-        Me.lblMessageSent.Text = "Movie request sent! Thank you so much ❤"
+        Me.lblMessageSent.Text = "Opening Mail Client..."
         Me.lblMessageSent.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.lblMessageSent.TextMargin = New System.Windows.Forms.Padding(2, 2, 2, 5)
         Me.lblMessageSent.TextShadowShow = False

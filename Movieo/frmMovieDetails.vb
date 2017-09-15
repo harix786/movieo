@@ -125,6 +125,7 @@ Public Class frmMovieDetails
         Else
             btnWatchTrailer.Visible = True
         End If
+        Show()
     End Sub
 
 #Region "Searchable Labels Events"
@@ -375,8 +376,13 @@ Public Class frmMovieDetails
 
     Private Sub btnWatchMovie_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnWatchMovie.ClickButtonArea
         Try
+            If infoBackgroundImageLink.Text = "" Then
+                frmSelectSource.Opacity = 0.98
+            Else
+                frmSelectSource.Opacity = 0.85
+            End If
+
             Dim getUrlFromUser As String = Movieo.returnSource(Me, infoTitle.Text + " (" + infoYear.Text + ")", infoWatchLinks.Text, "watch")
-            Opacity = 0.9
 
             If Not getUrlFromUser = Nothing Then
                 frmMediaPlayer.Text = "Watching " + infoTitle.Text + " (" + infoYear.Text + ")"
@@ -412,11 +418,9 @@ Public Class frmMovieDetails
     Private Sub btnDownloadMovie_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnDownloadMovie.ClickButtonArea
         Try
             If infoBackgroundImageLink.Text = "" Then
-                Hide()
                 frmSelectSource.Opacity = 0.98
             Else
-                Hide()
-                frmSelectSource.Opacity = 0.9
+                frmSelectSource.Opacity = 0.85
             End If
 
             Dim getUrlFromUser As String = Movieo.returnSource(Me, infoTitle.Text + " (" + infoYear.Text + ")", infoWatchLinks.Text, "download")
@@ -425,10 +429,9 @@ Public Class frmMovieDetails
                 frmDownloadClient.doDownload(getUrlFromUser, infoTitle.Text, infoYear.Text, getUrlFromUser.Substring(infoWatchLinks.Text.Length - 3))
                 frmDownloadClient.ShowDialog(Me)
             End If
-            Show()
         Catch ex As Exception
             Show()
-            Movieo.ShowPopupOk("Unable To download movie", "It seems there's an issue connecting to the stream. Please try using a different source. " + ex.Message, Me)
+            Movieo.ShowPopupOk("Unable to download movie", "It seems there's an issue connecting to the stream. Please try using a different source. ", Me)
         End Try
     End Sub
 
@@ -457,10 +460,10 @@ Public Class frmMovieDetails
             If txtShareComment.Text = "" Or txtShareName.Text = "" Then
                 showMessage("Content can't be blank," + vbNewLine + "Content is too short (minimum is 1 character)")
             Else
-                Movieo.SendMail("New Comment", "Date: " + Date.Now.ToString("dd/MM/yyyy") + vbNewLine + "Movie: " + infoTitle.Text + "(" + infoYear.Text + ")" + vbNewLine + "Comment: " + txtShareComment.Text + vbNewLine + "Name: " + txtShareName.Text)
+                showMessage("Opening default mail client...")
+                Movieo.openMail("Movieo - New Comment", "Date: " + Date.Now.ToString("dd/MM/yyyy") + "%0A" + "Movie: " + infoTitle.Text + " (" + infoYear.Text + ")" + "%0A" + "Name: " + txtShareName.Text + "%0A" + "Comment: " + txtShareComment.Text)
                 txtShareComment.Text = ""
                 txtShareName.Text = ""
-                showMessage("Your comment was successfully submitted!")
             End If
         Else
             showMessage("Please wait before posting again.")
@@ -496,17 +499,12 @@ Public Class frmMovieDetails
     End Sub
 
     Public Sub showMessage(Message As String)
+        timerHideNotifications.Enabled = False
+
         lblMessageSent.Text = Message
         Dim myFont As New Font(lblMessageSent.Font.FontFamily, Me.lblMessageSent.Font.Size)
-        '
-        ' Or, use this for a specific font and font size.
-        ' Dim myFont As New System.Drawing.Font("Verdana", 8)
-
-        ' Get the size given the string and the font
         Dim mySize = lblMessageSent.CreateGraphics.MeasureString(Message, myFont)
 
-        ' Resize the textbox to accommodate the entire string
-        'Me.TextBox1.Width = mySize.Width
         lblMessageSent.Width = CType(Math.Round(mySize.Width, 0), Integer) + 20
         lblMessageSent.Height = CType(Math.Round(mySize.Height, 0), Integer) + 14
         lblMessageSent.Location = New Point((ClientSize.Width - lblMessageSent.Width) \ 2, -1)

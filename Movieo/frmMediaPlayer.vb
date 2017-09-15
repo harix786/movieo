@@ -17,11 +17,10 @@ Public Class frmMediaPlayer
     End Sub
 
     Private Sub btnReportBroken_ClickButtonArea(sender As Object, e As EventArgs) Handles btnReportBroken.ClickButtonArea
-        Movieo.InfoSelectedTab = frmInfo.tabContact
-        frmInfo.Show()
-        frmInfo.txtFormMessage.Focus()
-        frmInfo.txtFormMessage.Text = "I am having issues with the movie """ + Text.Replace("Watching ", "") + """ because "
-        frmInfo.txtFormMessage.SelectionStart = frmInfo.txtFormMessage.TextLength
+        MediaPlayerControl.Ctlcontrols.pause()
+        Movieo.openMail("Movieo - Report Broken",
+                "Movie Title: " + Text.Replace("Watching ", "") + "%0A" + "%0A" +
+                "Please explain your problem with the movie source." + "%0A")
     End Sub
 
     Private Sub btnReportBroken_MouseMove(sender As Object, e As MouseEventArgs) Handles btnReportBroken.MouseMove
@@ -37,6 +36,10 @@ Public Class frmMediaPlayer
     End Sub
 
     Public Sub MediaPlayerControl_PlayStateChange(ByVal sender As Object, ByVal e As _WMPOCXEvents_PlayStateChangeEvent) Handles MediaPlayerControl.PlayStateChange
+        MediaPlayerControl.uiMode = "full"
+        MediaPlayerControl.stretchToFit = True
+        MediaPlayerControl.enableContextMenu = False
+
         'Test the current state of the player, display a message for each state. (https://msdn.microsoft.com/en-us/library/windows/desktop/dd562460)
         Select Case e.newState
             Case 0 ' Undefined
@@ -68,7 +71,7 @@ Public Class frmMediaPlayer
             Case 12 ' Last
                 'Last
             Case Else
-                'currentStateLabel.Text = ("Unknown State: " + e.newState.ToString())
+                'currentStateLabel.Text = ("Unknown State:  " + e.newState.ToString())
         End Select
     End Sub
 
@@ -84,7 +87,6 @@ Public Class frmMediaPlayer
                 End If
             Next
         Catch ex As Exception
-            MsgBox(ex.Message)
             firstLoad = False
             timerGoToTime.Enabled = False
         End Try

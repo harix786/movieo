@@ -8,8 +8,8 @@ Public Class Movieo
 #Region "Preferences (some can be changed)"
 
     Public devMode As Boolean = True
-    Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
-    'Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7fb0qd74u1h5ddw/movieo-dbTESTING.txt?dl=0" 'FOR TESTING
+    'Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
+    Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7fb0qd74u1h5ddw/movieo-dbTESTING.txt?dl=0" 'FOR TESTING
     Public linkChangelog As String = "https://dl.dropbox.com/s/3514qygmbok1rvv/movieo-changelog.txt?dl=0"
     Public linkNotifications As String = "https://dl.dropbox.com/s/eqxi751t8z031na/movieo-notifications.txt?dl=0"
     Public linkMovieComments As String = "https://dl.dropbox.com/s/swbt9fkbknmoqzz/movieo-comments.txt?dl=0"
@@ -26,6 +26,7 @@ Public Class Movieo
     Public pathSeenList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\seen list.txt"
     Public pathBlackList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\black list.txt"
     Public pathDownloads As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Downloads\"
+    Public pathLogFile As String = Application.StartupPath + "\log file.txt"
     Public pathUpdater As String = Application.StartupPath + "\Movieo Updater.exe"
     Public infoVersionText As String = "Beta Build v" + Application.ProductVersion
     Public ctrlSearchBoxWatermark As String = "Search movies, people, years..."
@@ -70,16 +71,16 @@ Public Class Movieo
             UseBackupDatabase = False 'So the database function uses the latest (from the server
             LoadLists() 'Load movies into users lists (ListBox)
             Enabled = False
-            If My.Settings.doAutoUpdate = True Then
+            If My.Settings.doAutoUpdate = True Then 'Check for update
                 timerGetUpdate.Enabled = True
             End If
-            If My.Settings.doBackupDb = True Then
+            If My.Settings.doBackupDb = True Then 'Save backup database
                 SaveBackupDatabase()
             End If
             timerStartup.Enabled = True
             ab.Close()
         Else
-            'Show error form on movies tab - if no backup database file stored
+            'Show error form on movies tab - if no backup database file available
             saveListsOnClose = False
             tabDiscover.Controls.Remove(panelMovies)
             tabDiscover.Controls.Remove(panelGenresCtrls)
@@ -205,16 +206,16 @@ Public Class Movieo
                 If Not itemCollection = "" Then
                     Dim itemsCollection As String() = Split(itemCollection, "|")
 
-                    Dim a As New ctrlCollectionsThumbnail
+                    Dim a As New ctrlCollectionThumbnail
                     a.TopLevel = False
-                    a.lblCollectionsTitle.Text = itemsCollection(0)
-                    a.lblCollectionsComment.Text = itemsCollection(1)
-                    a.imgCollectionsThumbnail.BackgroundImage = New Bitmap(New MemoryStream(WebDl.DownloadData(itemsCollection(2))))
-                    a.imgCollectionsThumbnail.BackgroundImage = ctrlPosterTitle.ChangeOpacity(a.imgCollectionsThumbnail.BackgroundImage, 0.7)
+                    a.lblCollectionTitle.Text = itemsCollection(0)
+                    a.lblCollectionDescription.Text = itemsCollection(1)
+                    a.imgCollectionThumbnail.BackgroundImage = New Bitmap(New MemoryStream(WebDl.DownloadData(itemsCollection(2))))
+                    a.imgCollectionThumbnail.BackgroundImage = ctrlPosterTitle.ChangeOpacity(a.imgCollectionThumbnail.BackgroundImage, 0.7)
 
                     Dim movieInCollections As String() = Split(itemsCollection(3), "*")
                     For Each movie As String In movieInCollections
-                        a.itemsCollectionsMovies.Items.Add(movie)
+                        a.itemsCollectionMovies.Items.Add(movie)
                     Next
                     a.Visible = True
                     a.Show()
@@ -327,7 +328,7 @@ Public Class Movieo
 
 #End Region
 
-#Region "Startup Timer / Grab Movies"
+#Region "Startup Timer / Load Movies"
 
     Private Sub StartupTimer_Tick(sender As Object, e As EventArgs) Handles timerStartup.Tick
         If UseBackupDatabase = False Then
@@ -515,8 +516,8 @@ Public Class Movieo
                 End If
 
                 If MovieItem Mod 30 = 0 Then 'Change to a random loading text every x movies, this case it's 30
-                    frmStartupTab.txtLoading.Text = RandomText(SearchingTexts)
-                    Threading.Thread.Sleep(3500)
+                    lblSubLoading.Text = RandomText(SearchingTexts)
+                    Threading.Thread.Sleep(1200)
                 End If
 
             End If
@@ -606,7 +607,7 @@ Public Class Movieo
             titleCoreCollections.ForeColor = Color.FromArgb(161, 168, 179)
             titleCoreLibrary.ForeColor = Color.FromArgb(161, 168, 179)
             titleCoreDownloads.ForeColor = Color.FromArgb(161, 168, 179)
-            lblSearchingText.Text = RandomText(SearchingTexts)
+            lblSubLoading.Text = RandomText(SearchingTexts)
             SearchboxActive()
         End If
     End Sub
@@ -661,6 +662,10 @@ Public Class Movieo
 
     Private Sub panelSearches_Scroll(sender As Object, e As ScrollEventArgs) Handles panelSearches.Scroll
         panelSearches.Update()
+    End Sub
+
+    Private Sub panelDownloads_Scroll(sender As Object, e As ScrollEventArgs) Handles panelDownloads.Scroll
+        panelDownloads.Update()
     End Sub
 
 #End Region
@@ -843,10 +848,11 @@ Public Class Movieo
             Tab.SelectedTab = tabSearches
         Else
             If ifURL(txtboxSearch.Text) = True Then
-                frmMediaPlayer.Text = "Watching Title Unavailable"
+                frmMediaPlayer.Text = "Title Unavailable"
                 frmMediaPlayer.MediaPlayerControl.URL = txtboxSearch.Text
                 frmMediaPlayer.Show(Me)
                 txtboxSearch.Text = ""
+                Tab.SelectedTab = tabDiscover
             Else
                 searchMovies()
                 tabsSearches.SelectedTab = tabSearchesMovies
@@ -1024,23 +1030,13 @@ Public Class Movieo
 
 #Region "Send Mail"
 
-    Public Sub SendMail(bodytext As String, messagetext As String)
-        Try
-            Dim smtp As New SmtpClient
-            Dim message As New MailMessage
-            Dim username As String = "contactzeduc@gmail.com"
-            Dim password As String = "asecret1"
-            smtp.Host = "smtp.gmail.com"
-            smtp.EnableSsl = True
-            smtp.Port = 587
-            smtp.Credentials = New NetworkCredential(username, password)
-            message.To.Add(username)
-            message.From = New MailAddress(username)
-            message.Subject = bodytext
-            message.Body = messagetext
-            smtp.Send(message)
-        Catch ex As Exception
-        End Try
+    Public emailMovieo As String = "hi@movieo.info"
+
+    Public Sub openMail(txtSubject As String, txtBody As String)
+        Process.Start("mailto:" + emailMovieo +
+                      "?subject=" + txtSubject +
+                      "&body=" + txtBody) '+
+        '"&attachment=" + pathLogFile)
     End Sub
 
 #End Region
@@ -1309,8 +1305,8 @@ Public Class Movieo
         panelCollectionsItems.Update()
     End Sub
 
-    Private Sub panelCollectionsMovies_Scroll(sender As Object, e As ScrollEventArgs) Handles panelCollectionsMovies.Scroll
-        panelCollectionsMovies.Update()
+    Private Sub panelCollectionsCtrls_Scroll(sender As Object, e As ScrollEventArgs) Handles panelCollectionsCtrls.Scroll
+        panelCollectionsCtrls.Update()
     End Sub
 
 #End Region
@@ -1375,6 +1371,27 @@ Public Class Movieo
     Private Sub Movieo_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
         btnGenre_Click(btnGenreAllMovies, e)
     End Sub
+
+#End Region
+
+#Region "Get Movie Title by IMDB Id"
+
+    Public Function returnMovieTitle(imdbId As String) As String
+        Try
+            For Each a In storeControlsAllMovies
+                For Each ab As Control In a.Controls
+                    If ab.Name = "InfoImdbId" Then
+                        If ab.Text = imdbId Then
+                            Dim titleYear As Label = a.Controls.Find("InfoTitleAndYear", True)(0)
+                            Return titleYear.Text
+                        End If
+                    End If
+                Next
+            Next
+        Catch
+            Return Nothing
+        End Try
+    End Function
 
 #End Region
 

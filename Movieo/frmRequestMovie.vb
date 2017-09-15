@@ -10,14 +10,14 @@
     Private Sub btnFormSubmit_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnFormSubmit.ClickButtonArea
         If Not txtFormMovieTitle.Text = "" Then
             Try
-                Movieo.SendMail("Movie Request",
-                "Movie Title: " + vbNewLine + txtFormMovieTitle.Text + vbNewLine + vbNewLine +
-                "More Info: " + vbNewLine + txtFormMoreInfo.Text)
-                showMessage("Message sent! Thank you so much ❤")
+                showMessage("Opening Mail Client...")
+                Movieo.openMail("Movieo - Request Movie",
+                "Movie Title: " + txtFormMovieTitle.Text + "%0A" +
+                "More Info: " + txtFormMoreInfo.Text + "%0A")
                 txtFormMovieTitle.Text = ""
                 txtFormMoreInfo.Text = ""
             Catch ex As Exception
-                showMessage("Unable to send your movie request.")
+                showMessage("Unable to open request.")
             End Try
         Else
             showMessage("Movie title can't be blank.")
@@ -67,8 +67,17 @@
     End Sub
 
     Public Sub showMessage(Message As String)
+        timerHideNotifications.Enabled = False
+
         lblMessageSent.Text = Message
+        Dim myFont As New Font(lblMessageSent.Font.FontFamily, Me.lblMessageSent.Font.Size)
+        Dim mySize = lblMessageSent.CreateGraphics.MeasureString(Message, myFont)
+
+        lblMessageSent.Width = CType(Math.Round(mySize.Width, 0), Integer) + 20
+        lblMessageSent.Height = CType(Math.Round(mySize.Height, 0), Integer) + 14
+        lblMessageSent.Location = New Point((ClientSize.Width - lblMessageSent.Width) \ 2, -1)
         lblMessageSent.Visible = True
+
         timerHideNotifications.Enabled = True
     End Sub
 
