@@ -4,9 +4,11 @@
 
 ## What is Movieo?
 
-This is a place for browsing and watching movies, made with love by a few developers. We adore movies but finding where to watch was usually a hassle. We had been searching for a nicely designed and simple interface for watching movies without the use of torrents, yet we couldn’t find one… so we made one ourselves. Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.
+This is a place for browsing and watching movies, made with love by a few developers. We adore movies but finding where to watch was usually a hassle. We had been searching for a nicely designed and simple interface for watching movies without the use of torrents, yet we couldn’t find one… so we made one ourselves.
 
-Download available at http://movieo.info/
+Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.
+
+Download available for free at http://movieo.info/
 
 ## Screenshots
 
@@ -29,7 +31,9 @@ Download available at http://movieo.info/
 ## Get Social
 
 Facebook : https://facebook.com/itsmovieo
+
 Twitter : https://twitter.com/itsmovieo
+
 YouTube : https://www.youtube.com/bettercodes
 
 ## Data Provider
