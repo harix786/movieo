@@ -18,7 +18,7 @@ Download available for free at http://movieo.info/
 
 <img width="450" align="middle" src="https://dl.dropbox.com/s/f7nxnu52q2speoa/Movieo%20-%20Collections.png?dl=0" alt="Browse the best collections there are.">
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/jypgckhxbiprcv9/Movieo%20-%20Movie%20Details.png?dl=0" alt="View movie details.">
+![Movie Details](https://dl.dropbox.com/s/jypgckhxbiprcv9/Movieo%20-%20Movie%20Details.png?dl=0)
 
 <img width="450" align="middle" src="https://dl.dropbox.com/s/elcgjm5bc4ath52/Movieo%20-%20Available%20Streams.png?dl=0" alt="Choose from multiple of sources.">
 
