@@ -12,21 +12,21 @@ Download available for free at http://movieo.info/
 
 ## Screenshots
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/8e9eej5472ug746/Movieo%20-%20New%20Releases.png?dl=0" alt="Discover new releases.">
+![Discover - New Releases](https://dl.dropbox.com/s/8e9eej5472ug746/Movieo%20-%20New%20Releases.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/blcisomugg0clsl/Movieo%20-%20Top%20Rated.png?dl=0" alt="Discover top rated movies.">
+<img width="450" align="middle" src="" alt="Discover top rated movies.">
+![Discover - Top Rated Movies](https://dl.dropbox.com/s/blcisomugg0clsl/Movieo%20-%20Top%20Rated.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/f7nxnu52q2speoa/Movieo%20-%20Collections.png?dl=0" alt="Browse the best collections there are.">
+![Discover Collections](https://dl.dropbox.com/s/f7nxnu52q2speoa/Movieo%20-%20Collections.png?dl=0)
 
-![Movie Details](https://dl.dropbox.com/s/jypgckhxbiprcv9/Movieo%20-%20Movie%20Details.png?dl=0)
+![Supports Multiple Sources](https://dl.dropbox.com/s/elcgjm5bc4ath52/Movieo%20-%20Available%20Streams.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/elcgjm5bc4ath52/Movieo%20-%20Available%20Streams.png?dl=0" alt="Choose from multiple of sources.">
+![Track Movies](https://dl.dropbox.com/s/je9y9ssncj8mt42/Movieo%20-%20Library.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/je9y9ssncj8mt42/Movieo%20-%20Library.png?dl=0" alt="Keep track of movies in your library.">
+<img width="450" align="middle" src="" alt="Download movies to your computer or storage device.">
+![Download Movies](https://dl.dropbox.com/s/ynlfzdh1kpxifjg/Movieo%20-%20Download%20Movies.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/ynlfzdh1kpxifjg/Movieo%20-%20Download%20Movies.png?dl=0" alt="Download movies to your computer or storage device.">
-
-<img width="450" align="middle" src="https://dl.dropbox.com/s/v4fcg12fiil0dah/Movieo%20-%20Request%20Movie.png?dl=0" alt="Request movies we may not have. Our team will do their best to provide you with the best possible quality there is out there.">
+![Request Movies](ttps://dl.dropbox.com/s/v4fcg12fiil0dah/Movieo%20-%20Request%20Movie.png?dl=0)
 
 ## Get Social
 
@@ -42,3 +42,12 @@ All of the movie information and details are hosted on a third-party site (http:
 
 ## Legal Side of Things...
 All of the free movies found on this app are hosted on third-party servers that are freely available to watch online for all internet users. Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.
+
+## License
+If you distribute a copy or make a fork of the project, you have to credit this project as source.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+**This project and the distribution of this project is not illegal, nor does it violate any DMCA laws. The use of this project, however, may be illegal in your area. Check your local laws and regulations regarding the use of torrents to watch potentially copyrighted content. The maintainers of this project do not condone the use of this project for anything illegal, in any state, region, country, or planet. Please use at your own risk.**
