@@ -8,9 +8,7 @@ This is a place for browsing and watching movies, made with love by a few develo
 
 Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.
 
-[Terms of Service](http://movieo.info/more/tos.html)
-[Frequently Asked Questions](http://movieo.info/more/faq.html)
-[Release Notes](http://movieo.info/more/release-notes.html)
+[Terms of Service](http://movieo.info/more/tos.html) | [Frequently Asked Questions](http://movieo.info/more/faq.html) | [Release Notes](http://movieo.info/more/release-notes.html) | [Email Us](mailto:hi@movieo.info)
 
 ## Supported platforms
 Works with Windows 7 and above (Windows 7, 8, 8.1, 10)
@@ -49,5 +47,3 @@ This program is free software: you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 **This project and the distribution of this project is not illegal, nor does it violate any DMCA laws. The use of this project, however, may be illegal in your area. Check your local laws and regulations regarding the use of torrents to watch potentially copyrighted content. The maintainers of this project do not condone the use of this project for anything illegal, in any state, region, country, or planet. Please use at your own risk.**
-
-[Email Us](hi@movieo.info)
