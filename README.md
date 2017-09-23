@@ -32,9 +32,7 @@ Download installer [here](http://movieo.info/movieo-setup.zip)
 ![Request Movies](https://dl.dropbox.com/s/v4fcg12fiil0dah/Movieo%20-%20Request%20Movie.png?dl=0)
 
 ## Get Social
-Facebook : https://facebook.com/itsmovieo
-Twitter : https://twitter.com/itsmovieo
-YouTube : https://www.youtube.com/bettercodes
+[Facebook](https://facebook.com/itsmovieo) | [Twitter](https://twitter.com/itsmovieo) | [YouTube](https://www.youtube.com/bettercodes)
 
 ## Legal Side of Things...
 All of the free movies found on this app are hosted on third-party servers that are freely available to watch online for all internet users. Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.
