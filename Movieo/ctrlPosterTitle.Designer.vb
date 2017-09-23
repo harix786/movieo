@@ -342,7 +342,7 @@ Partial Class ctrlPosterTitle
         Me.InfoPoster.BorderShow = False
         Me.InfoPoster.ColorFillSolid = System.Drawing.Color.Transparent
         Me.InfoPoster.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.InfoPoster.DesignerSelected = False
+        Me.InfoPoster.DesignerSelected = True
         Me.InfoPoster.DimFactorClick = 0
         Me.InfoPoster.DimFactorHover = 0
         Me.InfoPoster.FillType = CButtonLib.CButton.eFillType.Solid

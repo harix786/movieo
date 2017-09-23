@@ -1,33 +1,53 @@
 # Movieo by NV & Others
 
+[![Join the chat at https://gitter.im/movieo-app/Lobby](https://badges.gitter.im/movieo-app/Lobby.svg)](https://gitter.im/movieo-app/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## What is Movieo?
 
-This is a place for browsing and watching movies, made with love by a few developers. We adore movies but finding where to watch was usually a hassle. We had been searching for a nicely designed and simple interface for watching movies without the use of torrents, yet we couldn’t find one… so we made one ourselves. Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.
+This is a place for browsing and watching movies, made with love by a few developers. We adore movies but finding where to watch was usually a hassle. We had been searching for a nicely designed and simple interface for watching movies without the use of torrents, yet we couldn’t find one… so we made one ourselves.
 
-Available for free at http://movieo.info/
+Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.
+
+[Terms of Service](http://movieo.info/more/tos.html)
+[Frequently Asked Questions](http://movieo.info/more/faq.html)
+[Release Notes](http://movieo.info/more/release-notes.html)
+
+## Supported platforms
+Works with Windows 7 and above (Windows 7, 8, 8.1, 10)
+
+## Installation
+Download installer [here](http://movieo.info/movieo-setup.zip)
 
 ## Screenshots
+![Discover - New Releases](https://dl.dropbox.com/s/8e9eej5472ug746/Movieo%20-%20New%20Releases.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/ratkby98cea5wq7/Movieo%20-%20New%20Releases.png?dl=0" alt="Discover new releases.">
+![Discover - Top Rated](https://dl.dropbox.com/s/blcisomugg0clsl/Movieo%20-%20Top%20Rated.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/mcu56v44sviemlk/Movieo%20-%20Top%20Rated.png?dl=0" alt="Discover top rated movies.">
+![Collections Made by Others](https://dl.dropbox.com/s/f7nxnu52q2speoa/Movieo%20-%20Collections.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/wbdk67funruzub6/Movieo%20-%20Movie%20Details%20%28Goodfellas%29.png?dl=0" alt="View movie details.">
+![Supports Multiple Sources](https://dl.dropbox.com/s/elcgjm5bc4ath52/Movieo%20-%20Available%20Streams.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/dgdjaz0zvij34zh/Movieo%20-%20Choose%20Source.png?dl=0" alt="Choose from multiple of sources.">
+![Track Movies](https://dl.dropbox.com/s/je9y9ssncj8mt42/Movieo%20-%20Library.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/je9y9ssncj8mt42/Movieo%20-%20Library.png?dl=0" alt="Keep track of movies in your library.">
+![Download Movies](https://dl.dropbox.com/s/ynlfzdh1kpxifjg/Movieo%20-%20Download%20Movies.png?dl=0)
 
-<img width="450" align="middle" src="https://dl.dropbox.com/s/ynlfzdh1kpxifjg/Movieo%20-%20Download%20Movies.png?dl=0" alt="Download movies to your computer or storage device.">
-
-<img width="450" align="middle" src="https://dl.dropbox.com/s/v4fcg12fiil0dah/Movieo%20-%20Request%20Movie.png?dl=0" alt="Request movies we may not have. Our team will do their best to provide you with the best possible quality there is out there.">
+![Request Movies](https://dl.dropbox.com/s/v4fcg12fiil0dah/Movieo%20-%20Request%20Movie.png?dl=0)
 
 ## Get Social
-
 Facebook : https://facebook.com/itsmovieo
 Twitter : https://twitter.com/itsmovieo
 YouTube : https://www.youtube.com/bettercodes
 
-## Data Provider
+## Legal Side of Things...
+All of the free movies found on this app are hosted on third-party servers that are freely available to watch online for all internet users. Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.
 
-All of the movie information and details are hosted on a third-party site (http://omdbapi.com), we only store the movie title, year released and a link to the movie somewhere in the cloud. The movie links are hosted on a third-party site that are freely available to anyone and isn't affiliated with us.
+## License
+If you distribute a copy or make a fork of the project, you have to credit this project as source.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+**This project and the distribution of this project is not illegal, nor does it violate any DMCA laws. The use of this project, however, may be illegal in your area. Check your local laws and regulations regarding the use of torrents to watch potentially copyrighted content. The maintainers of this project do not condone the use of this project for anything illegal, in any state, region, country, or planet. Please use at your own risk.**
+
+[Email Us](hi@movieo.info)

@@ -4,11 +4,12 @@ Imports System.Net
 Public Class frmDownloadClient
 
     Private Sub DownloadClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblProgress.Text = "Connecting"
-        BtnCancel.Text = "Cancel"
         Top = Movieo.ClientRectangle.Top + 23
         Left = Movieo.ClientRectangle.Left
         Size = Movieo.ClientSize
+
+        lblProgress.Text = "Connecting"
+        BtnCancel.Text = "Cancel"
     End Sub
 
     Dim client As WebClient = New WebClient
@@ -32,7 +33,7 @@ Public Class frmDownloadClient
             client.DownloadFileAsync(New Uri(MovieLink), DownloadDirectory)
         Catch ex As Exception
             lblProgress.Text = "Download Failed :/"
-            Movieo.ShowPopupOk("Unable to download movie.", ex.Message, Me)
+            Movieo.ShowPopupOk("Unable to download movie", ex.Message, Me)
         End Try
     End Sub
 

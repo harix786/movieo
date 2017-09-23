@@ -499,17 +499,12 @@ Public Class frmMovieDetails
     End Sub
 
     Public Sub showMessage(Message As String)
+        timerHideNotifications.Enabled = False
+
         lblMessageSent.Text = Message
         Dim myFont As New Font(lblMessageSent.Font.FontFamily, Me.lblMessageSent.Font.Size)
-        '
-        ' Or, use this for a specific font and font size.
-        ' Dim myFont As New System.Drawing.Font("Verdana", 8)
-
-        ' Get the size given the string and the font
         Dim mySize = lblMessageSent.CreateGraphics.MeasureString(Message, myFont)
 
-        ' Resize the textbox to accommodate the entire string
-        'Me.TextBox1.Width = mySize.Width
         lblMessageSent.Width = CType(Math.Round(mySize.Width, 0), Integer) + 20
         lblMessageSent.Height = CType(Math.Round(mySize.Height, 0), Integer) + 14
         lblMessageSent.Location = New Point((ClientSize.Width - lblMessageSent.Width) \ 2, -1)
