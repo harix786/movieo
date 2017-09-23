@@ -20,10 +20,6 @@ Public Class frmInfo
             lblChangelogFull.Text = ex.Message
         End Try
 
-        'Fix bug where textboxes were sometimes hidden (sent to the back of backgrounds)
-        txtFormMessageBG.SendToBack()
-        txtFormEmailBG.SendToBack()
-
         lblAboutVersion.Text = Movieo.infoVersionText
     End Sub
 
@@ -133,39 +129,8 @@ Public Class frmInfo
     End Sub
 
     'Message submit button
-    Private Sub BtnSubmitForm_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnFormSubmit.ClickButtonArea
-        If Not txtFormMessage.Text = "" Then
-            If Not txtFormEmail.Text = "" Then
-                If IsValidEmail(txtFormEmail.Text) = True Then
-                    Try
-                        Movieo.SendMail("Message",
-                        "Message: " + vbNewLine + txtFormMessage.Text + vbNewLine + vbNewLine +
-                        "From: " + vbNewLine + txtFormEmail.Text)
-                        lblMessageSent.Text = "Message sent! Thank you so much ❤"
-                        txtFormMessage.Text = ""
-                        txtFormEmail.Text = ""
-                        lblMessageSent.Visible = True
-                        timerHideMessageSent.Enabled = True
-                    Catch ex As Exception
-                        lblMessageSent.Text = "Unable to send your message."
-                        lblMessageSent.Visible = True
-                        timerHideMessageSent.Enabled = True
-                    End Try
-                Else
-                    lblMessageSent.Text = "Your email doesn't look right."
-                    lblMessageSent.Visible = True
-                    timerHideMessageSent.Enabled = True
-                End If
-            Else
-                lblMessageSent.Text = "Your email cannot be blank."
-                lblMessageSent.Visible = True
-                timerHideMessageSent.Enabled = True
-            End If
-        Else
-            lblMessageSent.Text = "Your message cannot be blank."
-            lblMessageSent.Visible = True
-            timerHideMessageSent.Enabled = True
-        End If
+    Private Sub BtnSubmitForm_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnSendMail.ClickButtonArea
+        Process.Start("mailto:" + Movieo.emailMovieo + "?subject=" + "Movieo Feedback")
     End Sub
 
 
@@ -203,34 +168,7 @@ Public Class frmInfo
         Return match.Groups(1).Value + domainName
     End Function
 
-    Private Sub BtnSubmitForm_MouseMove(sender As Object, e As EventArgs) Handles btnFormSubmit.MouseMove, btnFormSubmit.GotFocus
-        sender.ForeColor = Color.White
-        sender.BorderColor = Color.White
-        sender.ColorFillSolid = Color.FromArgb(52, 59, 71)
-    End Sub
-
-    Private Sub BtnSubmitForm_MouseLeave(sender As Object, e As EventArgs) Handles btnFormSubmit.MouseLeave, btnFormSubmit.LostFocus
-        sender.ForeColor = Color.FromArgb(172, 180, 191)
-        sender.BorderColor = Color.FromArgb(172, 180, 191)
-        sender.ColorFillSolid = Color.Transparent
-    End Sub
-
-    'Confirmation text
-    Private Sub HideConfirmation_Tick(sender As Object, e As EventArgs) Handles timerHideMessageSent.Tick
-        lblMessageSent.Visible = False
-        timerHideMessageSent.Enabled = False
-    End Sub
-
-    Private Sub lblMessageSent_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles lblMessageSent.ClickButtonArea
-        lblMessageSent.Visible = False
-        timerHideMessageSent.Enabled = False
-    End Sub
-
-    'Social links
-    Private Sub ContactEmail_Click(sender As Object, e As EventArgs) Handles lblSocialEmail.Click
-        Process.Start("mailto:" + lblSocialEmail.Text)
-    End Sub
-
+    'Social links 
     Private Sub ContactSourceForge_Click(sender As Object, e As EventArgs) Handles lblSocialSourceForge.Click
         Process.Start("https://sourceforge.net/projects/odeum-movies-beta/")
     End Sub
@@ -271,6 +209,10 @@ Public Class frmInfo
 
     Private Sub imgProviderPopcornTime_Click(sender As Object, e As EventArgs) Handles imgProviderPopcornTime.Click
         Process.Start("https://popcorntime.sh/")
+    End Sub
+
+    Private Sub MeClose_MouseClick(sender As Object, e As MouseEventArgs) Handles meClose.MouseClick
+
     End Sub
 
 #End Region

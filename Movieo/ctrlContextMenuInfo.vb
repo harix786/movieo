@@ -1,10 +1,10 @@
 ﻿Public Class ctrlContextMenuInfo
 
-    Private Sub btnChangelog_MouseMove(sender As Object, e As MouseEventArgs) Handles btnSettings.MouseMove, btnNotifications.MouseMove, btnRequestMovie.MouseMove, btnLegalInfoDMCA.MouseMove, btnHelpFAQ.MouseMove, btnContactUs.MouseMove, btnReleaseNotes.MouseMove, btnAboutMovieo.MouseMove
+    Private Sub btnChangelog_MouseMove(sender As Object, e As MouseEventArgs) Handles btnSettings.MouseMove, btnNotifications.MouseMove, btnImportExport.MouseMove, btnRequestMovie.MouseMove, btnLegalInfoDMCA.MouseMove, btnHelpFAQ.MouseMove, btnContactUs.MouseMove, btnReleaseNotes.MouseMove, btnAboutMovieo.MouseMove
         sender.ForeColor = Color.White
     End Sub
 
-    Private Sub btnChangelog_MouseLeave(sender As Object, e As EventArgs) Handles btnSettings.MouseLeave, btnNotifications.MouseLeave, btnRequestMovie.MouseLeave, btnLegalInfoDMCA.MouseLeave, btnHelpFAQ.MouseLeave, btnContactUs.MouseLeave, btnReleaseNotes.MouseLeave, btnAboutMovieo.MouseLeave
+    Private Sub btnChangelog_MouseLeave(sender As Object, e As EventArgs) Handles btnSettings.MouseLeave, btnNotifications.MouseLeave, btnImportExport.MouseLeave, btnRequestMovie.MouseLeave, btnLegalInfoDMCA.MouseLeave, btnHelpFAQ.MouseLeave, btnContactUs.MouseLeave, btnReleaseNotes.MouseLeave, btnAboutMovieo.MouseLeave
         sender.ForeColor = Color.Silver
     End Sub
 
@@ -95,6 +95,15 @@
         End Try
     End Sub
 
+    Private Sub btnImportExport_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnImportExport.ClickButtonArea
+        Try
+            Movieo.IsContextOpen = False
+            Hide()
+            frmImportExport.ShowDialog(Movieo)
+        Catch ex As Exception
+        End Try
+    End Sub
+
     Private Sub btnNotifications_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnNotifications.ClickButtonArea
         Try
             Movieo.IsContextOpen = False
@@ -125,9 +134,5 @@
             End Try
         Catch ex As Exception
         End Try
-    End Sub
-
-    Private Sub ctrlContextMenuInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

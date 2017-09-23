@@ -31,23 +31,124 @@
         chckAutoUpdate.Checked = My.Settings.doAutoUpdate
     End Sub
 
-    'Close window image
-    Private Sub MeClose_MouseMove(sender As Object, e As MouseEventArgs) Handles MeClose.MouseMove
-        MeClose.Image = My.Resources.PopupCloseH
-    End Sub
-
-    Private Sub MeClose_MouseLeave(sender As Object, e As EventArgs) Handles MeClose.MouseLeave
-        MeClose.Image = My.Resources.PopupCloseL
-    End Sub
-
-    Private Sub MeClose_MouseClick(sender As Object, e As EventArgs) Handles MeClose.Click
-        My.Settings.Reload()
-        Close()
-    End Sub
-
     'Prevent lag on scroll
     Private Sub MyBase_Scroll(sender As Object, e As ScrollEventArgs) Handles MyBase.Scroll
         sender.update()
+    End Sub
+
+#End Region
+
+#Region "Close Window"
+
+    Private Sub MeClose_MouseMove(sender As Object, e As MouseEventArgs) Handles meClose.MouseMove
+        Try
+            meClose.Image = My.Resources.PopupCloseH
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub MeClose_MouseLeave(sender As Object, e As EventArgs) Handles meClose.MouseLeave
+        Try
+            meClose.Image = My.Resources.PopupCloseL
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub meClose_Click(sender As Object, e As EventArgs) Handles meClose.Click
+        My.Settings.Save()
+        Close()
+    End Sub
+
+#End Region
+
+#Region "Tabs"
+
+    Private Sub headerGeneral_Click(sender As Object, e As EventArgs) Handles headerGeneral.Click
+        Tab.SelectedTab = tabGeneral
+    End Sub
+
+    Private Sub headerQuality_Click(sender As Object, e As EventArgs) Handles headerQuality.Click
+        Tab.SelectedTab = tabQuality
+    End Sub
+
+    Private Sub headerPlayback_Click(sender As Object, e As EventArgs) Handles headerPlayback.Click
+        Tab.SelectedTab = tabPlayback
+    End Sub
+
+    Private Sub headerFeatures_Click(sender As Object, e As EventArgs) Handles headerFeatures.Click
+        Tab.SelectedTab = tabFeatures
+    End Sub
+
+    Private Sub headerDatabase_Click(sender As Object, e As EventArgs) Handles headerDatabase.Click
+        Tab.SelectedTab = tabDatabase
+    End Sub
+
+    Private Sub headerMiscellaneous_Click(sender As Object, e As EventArgs) Handles headerMiscellaneous.Click
+        Tab.SelectedTab = tabMiscellaneous
+    End Sub
+
+    Private Sub LblAbout_MouseMove(sender As Object, e As MouseEventArgs) Handles headerMiscellaneous.MouseMove, headerDatabase.MouseMove, headerFeatures.MouseMove, headerPlayback.MouseMove, headerQuality.MouseMove, headerGeneral.MouseMove
+        sender.ForeColor = SelectedTabColour
+    End Sub
+
+    Private Sub LblAbout_MouseLeave(sender As Object, e As EventArgs) Handles headerMiscellaneous.MouseLeave, headerDatabase.MouseLeave, headerFeatures.MouseLeave, headerPlayback.MouseLeave, headerQuality.MouseLeave, headerGeneral.MouseLeave
+        If sender IsNot CurrentTab Then sender.ForeColor = NonSelectedTabColour
+    End Sub
+
+    Dim CurrentTab As Object = headerGeneral
+    Dim SelectedTabColour As Color = Color.FromArgb(172, 180, 191)
+    Dim NonSelectedTabColour As Color = Color.FromArgb(86, 98, 115)
+
+    Private Sub Tab_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Tab.SelectedIndexChanged
+        If Tab.SelectedIndex = 0 Then
+            CurrentTab = headerGeneral
+            headerGeneral.ForeColor = SelectedTabColour
+            headerQuality.ForeColor = NonSelectedTabColour
+            headerPlayback.ForeColor = NonSelectedTabColour
+            headerFeatures.ForeColor = NonSelectedTabColour
+            headerDatabase.ForeColor = NonSelectedTabColour
+            headerMiscellaneous.ForeColor = NonSelectedTabColour
+        ElseIf Tab.SelectedIndex = 1 Then
+            CurrentTab = headerQuality
+            headerGeneral.ForeColor = NonSelectedTabColour
+            headerQuality.ForeColor = SelectedTabColour
+            headerPlayback.ForeColor = NonSelectedTabColour
+            headerFeatures.ForeColor = NonSelectedTabColour
+            headerDatabase.ForeColor = NonSelectedTabColour
+            headerMiscellaneous.ForeColor = NonSelectedTabColour
+        ElseIf Tab.SelectedIndex = 2 Then
+            CurrentTab = headerPlayback
+            headerGeneral.ForeColor = NonSelectedTabColour
+            headerQuality.ForeColor = NonSelectedTabColour
+            headerPlayback.ForeColor = SelectedTabColour
+            headerFeatures.ForeColor = NonSelectedTabColour
+            headerDatabase.ForeColor = NonSelectedTabColour
+            headerMiscellaneous.ForeColor = NonSelectedTabColour
+        ElseIf Tab.SelectedIndex = 3 Then
+            CurrentTab = headerFeatures
+            headerGeneral.ForeColor = NonSelectedTabColour
+            headerQuality.ForeColor = NonSelectedTabColour
+            headerPlayback.ForeColor = NonSelectedTabColour
+            headerFeatures.ForeColor = SelectedTabColour
+            headerDatabase.ForeColor = NonSelectedTabColour
+            headerMiscellaneous.ForeColor = NonSelectedTabColour
+        ElseIf Tab.SelectedIndex = 4 Then
+            CurrentTab = headerDatabase
+            headerGeneral.ForeColor = NonSelectedTabColour
+            headerQuality.ForeColor = NonSelectedTabColour
+            headerPlayback.ForeColor = NonSelectedTabColour
+            headerFeatures.ForeColor = NonSelectedTabColour
+            headerDatabase.ForeColor = SelectedTabColour
+            headerMiscellaneous.ForeColor = NonSelectedTabColour
+        ElseIf Tab.SelectedIndex = 5 Then
+            CurrentTab = headerMiscellaneous
+            headerGeneral.ForeColor = NonSelectedTabColour
+            headerQuality.ForeColor = NonSelectedTabColour
+            headerPlayback.ForeColor = NonSelectedTabColour
+            headerFeatures.ForeColor = NonSelectedTabColour
+            headerDatabase.ForeColor = NonSelectedTabColour
+            headerMiscellaneous.ForeColor = SelectedTabColour
+        End If
     End Sub
 
 #End Region
@@ -137,76 +238,6 @@
 
     Private Sub chckAutoUpdate_CheckedChanged(Sender As Object, e As EventArgs) Handles chckAutoUpdate.CheckedChanged
         My.Settings.doAutoUpdate = chckAutoUpdate.Checked
-    End Sub
-
-#End Region
-
-#Region "Save Settings / Reset Settings / Flush Databases"
-
-    Private Sub btnSaveSettings_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnSaveSettings.ClickButtonArea
-        My.Settings.Save()
-        showNotification("✔ Your settings have been saved.")
-    End Sub
-
-    Private Sub btnResetSettings_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnResetSettings.ClickButtonArea
-        If Movieo.ShowPopupYesNo("Confirmation", "Are you sure you want to reset all your settings to default?", Me) = MsgBoxResult.Yes Then
-            My.Settings.Reset()
-            showNotification("Settings restored to default.")
-            If Movieo.ShowPopupYesNo("Restart Required", "You may need to restart Movieo for some settings to take effect. Restart now?", Me) = MsgBoxStyle.YesNo Then
-                Application.Restart()
-            End If
-        End If
-    End Sub
-
-    Private Sub btnResetAllDatabases_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnResetAllDatabases.ClickButtonArea
-        If Movieo.ShowPopupYesNo("Confirmation", "Are you sure you want to delete all movies in your library? You will not be able to recover them.", Me) = MsgBoxResult.Yes Then
-            Movieo.CreateEmptyListFiles()
-            showNotification("Your library have been wiped.")
-            Movieo.ShowPopupOk("Restart Required", "You must restart Movieo to apply these changes.", Me)
-            Application.Restart()
-        End If
-    End Sub
-
-#End Region
-
-#Region "Highlight Buttons"
-
-    Private Sub HighlightButtons_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnSaveSettings.MouseMove, btnResetSettings.MouseMove, btnResetAllDatabases.MouseMove, btnDbExport.MouseMove
-        Sender.ForeColor = Color.White
-        Sender.BorderColor = Color.White
-        Sender.ColorFillSolid = Color.FromArgb(52, 59, 71)
-    End Sub
-
-    Private Sub HighlightButtons_MouseLeave(sender As Object, e As EventArgs) Handles btnSaveSettings.MouseLeave, btnResetSettings.MouseLeave, btnResetAllDatabases.MouseLeave, btnDbExport.MouseLeave
-        sender.ForeColor = Color.FromArgb(172, 180, 191)
-        sender.BorderColor = Color.FromArgb(172, 180, 191)
-        sender.ColorFillSolid = Color.Transparent
-    End Sub
-
-#End Region
-
-#Region "Notification Message"
-
-    Private Sub HideSettingsConfirmation_Tick(sender As Object, e As EventArgs) Handles timerHideNotifications.Tick
-        lblSuccessText.Visible = False
-        timerHideNotifications.Enabled = False
-    End Sub
-
-    Private Sub HideSettingsConfirmation_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles lblSuccessText.ClickButtonArea
-        lblSuccessText.Visible = False
-        timerHideNotifications.Enabled = False
-    End Sub
-
-    Public Sub showNotification(message As String)
-        lblSuccessText.Text = message
-        Dim myFont As New Font(lblSuccessText.Font.FontFamily, lblSuccessText.Font.Size)
-        Dim mySize = lblSuccessText.CreateGraphics.MeasureString(message, myFont)
-        lblSuccessText.Width = CType(Math.Round(mySize.Width, 0), Integer) + 20
-        lblSuccessText.Height = CType(Math.Round(mySize.Height, 0), Integer) + 14
-        lblSuccessText.Location = New Point((ClientSize.Width - lblSuccessText.Width) \ 2, -1)
-        lblSuccessText.Visible = True
-        lblSuccessText.Visible = True
-        timerHideNotifications.Enabled = True
     End Sub
 
 #End Region

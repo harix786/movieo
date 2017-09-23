@@ -10,10 +10,10 @@
     Private Sub btnFormSubmit_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnFormSubmit.ClickButtonArea
         If Not txtFormMovieTitle.Text = "" Then
             Try
-                Movieo.SendMail("Movie Request",
-                "Movie Title: " + vbNewLine + txtFormMovieTitle.Text + vbNewLine + vbNewLine +
-                "More Info: " + vbNewLine + txtFormMoreInfo.Text)
-                showMessage("Message sent! Thank you so much ❤")
+                showMessage("Opening Default Mail Client...")
+                Movieo.openMail("Movieo - Request Movie",
+                "Movie Title: " + txtFormMovieTitle.Text + "%0A" +
+                "More Info: " + txtFormMoreInfo.Text + "%0A")
                 txtFormMovieTitle.Text = ""
                 txtFormMoreInfo.Text = ""
             Catch ex As Exception

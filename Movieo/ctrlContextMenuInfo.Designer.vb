@@ -34,6 +34,7 @@ Partial Class ctrlContextMenuInfo
         Me.topArrow = New CButtonLib.CButton()
         Me.topHeaderBlank = New CButtonLib.CButton()
         Me.btnNotifications = New CButtonLib.CButton()
+        Me.btnImportExport = New CButtonLib.CButton()
         Me.SuspendLayout()
         '
         'btnUpdateAvailable
@@ -50,7 +51,7 @@ Partial Class ctrlContextMenuInfo
         Me.btnUpdateAvailable.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnUpdateAvailable.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnUpdateAvailable.ImageIndex = 0
-        Me.btnUpdateAvailable.Location = New System.Drawing.Point(-1, 231)
+        Me.btnUpdateAvailable.Location = New System.Drawing.Point(-1, 267)
         Me.btnUpdateAvailable.Margin = New System.Windows.Forms.Padding(0)
         Me.btnUpdateAvailable.Name = "btnUpdateAvailable"
         Me.btnUpdateAvailable.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -173,14 +174,14 @@ Partial Class ctrlContextMenuInfo
         Me.btnSettings.BorderColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.btnSettings.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSettings.DesignerSelected = True
+        Me.btnSettings.DesignerSelected = False
         Me.btnSettings.DimFactorClick = 20
         Me.btnSettings.DimFactorHover = 20
         Me.btnSettings.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnSettings.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnSettings.ForeColor = System.Drawing.Color.Silver
         Me.btnSettings.ImageIndex = 0
-        Me.btnSettings.Location = New System.Drawing.Point(-1, 303)
+        Me.btnSettings.Location = New System.Drawing.Point(-1, 339)
         Me.btnSettings.Margin = New System.Windows.Forms.Padding(0)
         Me.btnSettings.Name = "btnSettings"
         Me.btnSettings.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -298,7 +299,7 @@ Partial Class ctrlContextMenuInfo
         Me.btnNotifications.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnNotifications.ForeColor = System.Drawing.Color.Silver
         Me.btnNotifications.ImageIndex = 0
-        Me.btnNotifications.Location = New System.Drawing.Point(-1, 267)
+        Me.btnNotifications.Location = New System.Drawing.Point(-1, 303)
         Me.btnNotifications.Margin = New System.Windows.Forms.Padding(0)
         Me.btnNotifications.Name = "btnNotifications"
         Me.btnNotifications.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -309,12 +310,39 @@ Partial Class ctrlContextMenuInfo
         Me.btnNotifications.TextMargin = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.btnNotifications.TextShadowShow = False
         '
+        'btnImportExport
+        '
+        Me.btnImportExport.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnImportExport.BackColor = System.Drawing.Color.Transparent
+        Me.btnImportExport.BorderColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.btnImportExport.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.btnImportExport.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnImportExport.DesignerSelected = False
+        Me.btnImportExport.DimFactorClick = 20
+        Me.btnImportExport.DimFactorHover = 20
+        Me.btnImportExport.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.btnImportExport.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.btnImportExport.ForeColor = System.Drawing.Color.Silver
+        Me.btnImportExport.ImageIndex = 0
+        Me.btnImportExport.Location = New System.Drawing.Point(-1, 231)
+        Me.btnImportExport.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnImportExport.Name = "btnImportExport"
+        Me.btnImportExport.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.btnImportExport.Size = New System.Drawing.Size(219, 36)
+        Me.btnImportExport.TabIndex = 17
+        Me.btnImportExport.Text = "Import / Export"
+        Me.btnImportExport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnImportExport.TextMargin = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.btnImportExport.TextShadowShow = False
+        '
         'ctrlContextMenuInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(217, 342)
+        Me.ClientSize = New System.Drawing.Size(217, 378)
+        Me.Controls.Add(Me.btnImportExport)
         Me.Controls.Add(Me.btnNotifications)
         Me.Controls.Add(Me.btnUpdateAvailable)
         Me.Controls.Add(Me.btnRequestMovie)
@@ -331,7 +359,7 @@ Partial Class ctrlContextMenuInfo
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ctrlContextMenuInfo"
-        Me.Opacity = 0.99R
+        Me.Opacity = 0.98R
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
@@ -353,4 +381,5 @@ Partial Class ctrlContextMenuInfo
     Friend WithEvents btnRequestMovie As CButtonLib.CButton
     Friend WithEvents btnUpdateAvailable As CButtonLib.CButton
     Friend WithEvents btnNotifications As CButtonLib.CButton
+    Friend WithEvents btnImportExport As CButtonLib.CButton
 End Class

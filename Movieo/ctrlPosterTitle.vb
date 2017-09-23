@@ -1,4 +1,5 @@
 ﻿Option Explicit On
+Imports System.ComponentModel
 Imports System.Drawing.Imaging
 Imports System.IO
 Imports System.Net
@@ -151,11 +152,13 @@ Public Class ctrlPosterTitle
 
                 frmBackgroundMovieDetails.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(backgroundLink)))
                 frmMovieDetails.infoBackgroundImageLink.Text = backgroundLink
-                frmMovieDetails.Opacity = 0.75
+                frmMovieDetails.Opacity = 0.85
 
                 'Details from Popcorn Time API for Trailer Link (YouTube)
                 frmMovieDetails.infoTrailerLink.Text = trailerLink
+                frmBackgroundMovieDetails.Opacity = 100
             Catch ex As Exception
+                frmBackgroundMovieDetails.Opacity = 0
                 frmMovieDetails.infoTrailerLink.Text = ""
                 frmMovieDetails.infoBackgroundImageLink.Text = ""
                 frmMovieDetails.Opacity = 0.98
@@ -221,6 +224,30 @@ Public Class ctrlPosterTitle
         InfoImdbRatingPoster.Visible = False
 
         BackColor = Movieo.panelMovies.BackColor
+    End Sub
+
+    Private Sub ctrlPosterTitle_Validated(sender As Object, e As EventArgs) Handles Me.Validated
+        Dim WebClient = New WebClient()
+
+
+        If Movieo.listBlackList.Contains(InfoTitleAndYear.Text) Then
+            Hide()
+        Else
+            If Movieo.listSeenList.Contains(InfoTitleAndYear.Text) Then
+                If My.Settings.doWatchedMovies = 0 Then
+                    InfoPoster.BackgroundImage = ChangeOpacity(InfoPoster.BackgroundImage, 0.3)
+                    Show()
+                ElseIf My.Settings.doWatchedMovies = 1 Then
+                    Hide()
+                ElseIf My.Settings.doWatchedMovies = 2 Then
+                    InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
+                    Show()
+                End If
+            Else
+                InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
+                Show()
+            End If
+        End If
     End Sub
 
 #Region "Get Quality"

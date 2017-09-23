@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmSettings
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -24,255 +24,152 @@ Partial Class frmSettings
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSettings))
-        Me.Splitter1g = New System.Windows.Forms.Label()
-        Me.chckBackupDb = New System.Windows.Forms.CheckBox()
-        Me.txtDbDir = New System.Windows.Forms.TextBox()
-        Me.chckUserComments = New System.Windows.Forms.CheckBox()
-        Me.chckAutoUpdate = New System.Windows.Forms.CheckBox()
-        Me.lblHeaderMisc = New System.Windows.Forms.Label()
-        Me.Splitter1f = New System.Windows.Forms.Label()
-        Me.lblHeaderDb = New System.Windows.Forms.Label()
-        Me.Splitter1d = New System.Windows.Forms.Label()
-        Me.chckDownloadBtn = New System.Windows.Forms.CheckBox()
-        Me.lblSettingsFeatures = New System.Windows.Forms.Label()
-        Me.Splitter1c = New System.Windows.Forms.Label()
-        Me.chckPlayFullscr = New System.Windows.Forms.CheckBox()
-        Me.lblHeaderPlayBck = New System.Windows.Forms.Label()
+        Me.headerGeneral = New System.Windows.Forms.Label()
+        Me.headerFeatures = New System.Windows.Forms.Label()
+        Me.headerQuality = New System.Windows.Forms.Label()
+        Me.headerDatabase = New System.Windows.Forms.Label()
+        Me.Tab = New System.Windows.Forms.TabControl()
+        Me.tabGeneral = New System.Windows.Forms.TabPage()
         Me.cmboBoxWatchedMoviesPanel = New System.Windows.Forms.Panel()
         Me.cmboTxtWatchedMovies = New CButtonLib.CButton()
         Me.cmboboxWatchedMovies = New System.Windows.Forms.ComboBox()
-        Me.lblHeaderGeneral = New System.Windows.Forms.Label()
-        Me.Splitter1a = New System.Windows.Forms.Label()
         Me.lblWatchedMovies = New System.Windows.Forms.Label()
-        Me.lblSettings = New System.Windows.Forms.Label()
-        Me.Splitter1b = New System.Windows.Forms.Label()
-        Me.lblDbDir = New System.Windows.Forms.Label()
-        Me.timerHideNotifications = New System.Windows.Forms.Timer(Me.components)
-        Me.chkAlwaysOnTop = New System.Windows.Forms.CheckBox()
         Me.chkShowRating = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.chkAlwaysOnTop = New System.Windows.Forms.CheckBox()
+        Me.tabQuality = New System.Windows.Forms.TabPage()
         Me.chkShowMovieQuality = New System.Windows.Forms.CheckBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblSuccessText = New CButtonLib.CButton()
-        Me.btnResetAllDatabases = New CButtonLib.CButton()
-        Me.btnResetSettings = New CButtonLib.CButton()
-        Me.btnSaveSettings = New CButtonLib.CButton()
+        Me.tabPlayback = New System.Windows.Forms.TabPage()
+        Me.chckPlayFullscr = New System.Windows.Forms.CheckBox()
+        Me.tabFeatures = New System.Windows.Forms.TabPage()
+        Me.chckUserComments = New System.Windows.Forms.CheckBox()
+        Me.chckDownloadBtn = New System.Windows.Forms.CheckBox()
+        Me.tabDatabase = New System.Windows.Forms.TabPage()
         Me.btnDbExport = New CButtonLib.CButton()
+        Me.chckBackupDb = New System.Windows.Forms.CheckBox()
+        Me.txtDbDir = New System.Windows.Forms.TextBox()
         Me.txtDbDirBg = New CButtonLib.CButton()
-        Me.MeClose = New System.Windows.Forms.PictureBox()
         Me.imgOpenFolder = New System.Windows.Forms.PictureBox()
+        Me.lblDbDir = New System.Windows.Forms.Label()
+        Me.tabMiscellaneous = New System.Windows.Forms.TabPage()
+        Me.chckAutoUpdate = New System.Windows.Forms.CheckBox()
+        Me.panelTopHeaders = New System.Windows.Forms.Panel()
+        Me.headerMiscellaneous = New System.Windows.Forms.Label()
+        Me.headerPlayback = New System.Windows.Forms.Label()
+        Me.meClose = New System.Windows.Forms.PictureBox()
+        Me.Tab.SuspendLayout()
+        Me.tabGeneral.SuspendLayout()
         Me.cmboBoxWatchedMoviesPanel.SuspendLayout()
-        CType(Me.MeClose, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabQuality.SuspendLayout()
+        Me.tabPlayback.SuspendLayout()
+        Me.tabFeatures.SuspendLayout()
+        Me.tabDatabase.SuspendLayout()
         CType(Me.imgOpenFolder, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabMiscellaneous.SuspendLayout()
+        Me.panelTopHeaders.SuspendLayout()
+        CType(Me.meClose, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Splitter1g
+        'headerGeneral
         '
-        Me.Splitter1g.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Splitter1g.AutoSize = True
-        Me.Splitter1g.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Splitter1g.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1g.Location = New System.Drawing.Point(161, 1297)
-        Me.Splitter1g.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1g.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1g.Name = "Splitter1g"
-        Me.Splitter1g.Size = New System.Drawing.Size(750, 32)
-        Me.Splitter1g.TabIndex = 100000000
-        Me.Splitter1g.Text = "-------------------------------------------------------------------------"
+        Me.headerGeneral.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.headerGeneral.AutoSize = True
+        Me.headerGeneral.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.headerGeneral.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.headerGeneral.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.headerGeneral.Location = New System.Drawing.Point(88, 14)
+        Me.headerGeneral.Name = "headerGeneral"
+        Me.headerGeneral.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.headerGeneral.Size = New System.Drawing.Size(117, 30)
+        Me.headerGeneral.TabIndex = 1051
+        Me.headerGeneral.Text = "GENERAL"
         '
-        'chckBackupDb
+        'headerFeatures
         '
-        Me.chckBackupDb.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.chckBackupDb.AutoSize = True
-        Me.chckBackupDb.Checked = True
-        Me.chckBackupDb.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chckBackupDb.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chckBackupDb.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckBackupDb.Location = New System.Drawing.Point(170, 998)
-        Me.chckBackupDb.Name = "chckBackupDb"
-        Me.chckBackupDb.Size = New System.Drawing.Size(194, 25)
-        Me.chckBackupDb.TabIndex = 7
-        Me.chckBackupDb.Text = "Create backup database"
-        Me.chckBackupDb.UseVisualStyleBackColor = True
+        Me.headerFeatures.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.headerFeatures.AutoSize = True
+        Me.headerFeatures.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.headerFeatures.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.headerFeatures.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.headerFeatures.Location = New System.Drawing.Point(463, 14)
+        Me.headerFeatures.Name = "headerFeatures"
+        Me.headerFeatures.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.headerFeatures.Size = New System.Drawing.Size(123, 30)
+        Me.headerFeatures.TabIndex = 1052
+        Me.headerFeatures.Text = "FEATURES"
         '
-        'txtDbDir
+        'headerQuality
         '
-        Me.txtDbDir.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtDbDir.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.txtDbDir.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtDbDir.Font = New System.Drawing.Font("Segoe UI", 10.25!)
-        Me.txtDbDir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.txtDbDir.Location = New System.Drawing.Point(400, 1041)
-        Me.txtDbDir.Name = "txtDbDir"
-        Me.txtDbDir.ReadOnly = True
-        Me.txtDbDir.Size = New System.Drawing.Size(396, 19)
-        Me.txtDbDir.TabIndex = 8
+        Me.headerQuality.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.headerQuality.AutoSize = True
+        Me.headerQuality.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.headerQuality.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.headerQuality.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.headerQuality.Location = New System.Drawing.Point(211, 14)
+        Me.headerQuality.Name = "headerQuality"
+        Me.headerQuality.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.headerQuality.Size = New System.Drawing.Size(112, 30)
+        Me.headerQuality.TabIndex = 1053
+        Me.headerQuality.Text = "QUALITY"
         '
-        'chckUserComments
+        'headerDatabase
         '
-        Me.chckUserComments.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.chckUserComments.AutoSize = True
-        Me.chckUserComments.Checked = True
-        Me.chckUserComments.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chckUserComments.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chckUserComments.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckUserComments.Location = New System.Drawing.Point(170, 852)
-        Me.chckUserComments.Name = "chckUserComments"
-        Me.chckUserComments.Size = New System.Drawing.Size(179, 25)
-        Me.chckUserComments.TabIndex = 6
-        Me.chckUserComments.Text = "Show user comments"
-        Me.chckUserComments.UseVisualStyleBackColor = True
+        Me.headerDatabase.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.headerDatabase.AutoSize = True
+        Me.headerDatabase.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.headerDatabase.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.headerDatabase.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.headerDatabase.Location = New System.Drawing.Point(592, 14)
+        Me.headerDatabase.Name = "headerDatabase"
+        Me.headerDatabase.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.headerDatabase.Size = New System.Drawing.Size(129, 30)
+        Me.headerDatabase.TabIndex = 1054
+        Me.headerDatabase.Text = "DATABASE"
         '
-        'chckAutoUpdate
+        'Tab
         '
-        Me.chckAutoUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.chckAutoUpdate.AutoSize = True
-        Me.chckAutoUpdate.Checked = True
-        Me.chckAutoUpdate.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chckAutoUpdate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chckAutoUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckAutoUpdate.Location = New System.Drawing.Point(171, 1252)
-        Me.chckAutoUpdate.Name = "chckAutoUpdate"
-        Me.chckAutoUpdate.Size = New System.Drawing.Size(229, 25)
-        Me.chckAutoUpdate.TabIndex = 17
-        Me.chckAutoUpdate.Text = "Check for updates on startup"
-        Me.chckAutoUpdate.UseVisualStyleBackColor = True
+        Me.Tab.Alignment = System.Windows.Forms.TabAlignment.Left
+        Me.Tab.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Tab.Controls.Add(Me.tabGeneral)
+        Me.Tab.Controls.Add(Me.tabQuality)
+        Me.Tab.Controls.Add(Me.tabPlayback)
+        Me.Tab.Controls.Add(Me.tabFeatures)
+        Me.Tab.Controls.Add(Me.tabDatabase)
+        Me.Tab.Controls.Add(Me.tabMiscellaneous)
+        Me.Tab.Location = New System.Drawing.Point(-23, -4)
+        Me.Tab.Multiline = True
+        Me.Tab.Name = "Tab"
+        Me.Tab.SelectedIndex = 0
+        Me.Tab.Size = New System.Drawing.Size(1036, 569)
+        Me.Tab.TabIndex = 1055
         '
-        'lblHeaderMisc
+        'tabGeneral
         '
-        Me.lblHeaderMisc.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblHeaderMisc.AutoSize = True
-        Me.lblHeaderMisc.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHeaderMisc.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderMisc.Location = New System.Drawing.Point(165, 1200)
-        Me.lblHeaderMisc.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.lblHeaderMisc.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.lblHeaderMisc.Name = "lblHeaderMisc"
-        Me.lblHeaderMisc.Size = New System.Drawing.Size(750, 30)
-        Me.lblHeaderMisc.TabIndex = 100000000
-        Me.lblHeaderMisc.Text = "Miscellaneous"
-        '
-        'Splitter1f
-        '
-        Me.Splitter1f.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Splitter1f.AutoSize = True
-        Me.Splitter1f.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Splitter1f.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1f.Location = New System.Drawing.Point(161, 1147)
-        Me.Splitter1f.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1f.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1f.Name = "Splitter1f"
-        Me.Splitter1f.Size = New System.Drawing.Size(750, 32)
-        Me.Splitter1f.TabIndex = 100000000
-        Me.Splitter1f.Text = "-------------------------------------------------------------------------"
-        '
-        'lblHeaderDb
-        '
-        Me.lblHeaderDb.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblHeaderDb.AutoSize = True
-        Me.lblHeaderDb.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHeaderDb.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderDb.Location = New System.Drawing.Point(165, 951)
-        Me.lblHeaderDb.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.lblHeaderDb.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.lblHeaderDb.Name = "lblHeaderDb"
-        Me.lblHeaderDb.Size = New System.Drawing.Size(750, 30)
-        Me.lblHeaderDb.TabIndex = 100000000
-        Me.lblHeaderDb.Text = "Database"
-        '
-        'Splitter1d
-        '
-        Me.Splitter1d.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Splitter1d.AutoSize = True
-        Me.Splitter1d.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Splitter1d.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1d.Location = New System.Drawing.Point(161, 900)
-        Me.Splitter1d.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1d.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1d.Name = "Splitter1d"
-        Me.Splitter1d.Size = New System.Drawing.Size(750, 32)
-        Me.Splitter1d.TabIndex = 100000000
-        Me.Splitter1d.Text = "-------------------------------------------------------------------------"
-        '
-        'chckDownloadBtn
-        '
-        Me.chckDownloadBtn.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.chckDownloadBtn.AutoSize = True
-        Me.chckDownloadBtn.Checked = True
-        Me.chckDownloadBtn.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chckDownloadBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chckDownloadBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckDownloadBtn.Location = New System.Drawing.Point(170, 811)
-        Me.chckDownloadBtn.Name = "chckDownloadBtn"
-        Me.chckDownloadBtn.Size = New System.Drawing.Size(228, 25)
-        Me.chckDownloadBtn.TabIndex = 5
-        Me.chckDownloadBtn.Text = "Download button for movies"
-        Me.chckDownloadBtn.UseVisualStyleBackColor = True
-        '
-        'lblSettingsFeatures
-        '
-        Me.lblSettingsFeatures.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblSettingsFeatures.AutoSize = True
-        Me.lblSettingsFeatures.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSettingsFeatures.ForeColor = System.Drawing.Color.White
-        Me.lblSettingsFeatures.Location = New System.Drawing.Point(165, 761)
-        Me.lblSettingsFeatures.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.lblSettingsFeatures.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.lblSettingsFeatures.Name = "lblSettingsFeatures"
-        Me.lblSettingsFeatures.Size = New System.Drawing.Size(750, 30)
-        Me.lblSettingsFeatures.TabIndex = 100000000
-        Me.lblSettingsFeatures.Text = "Features"
-        '
-        'Splitter1c
-        '
-        Me.Splitter1c.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Splitter1c.AutoSize = True
-        Me.Splitter1c.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Splitter1c.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1c.Location = New System.Drawing.Point(161, 706)
-        Me.Splitter1c.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1c.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1c.Name = "Splitter1c"
-        Me.Splitter1c.Size = New System.Drawing.Size(750, 32)
-        Me.Splitter1c.TabIndex = 100000000
-        Me.Splitter1c.Text = "-------------------------------------------------------------------------"
-        '
-        'chckPlayFullscr
-        '
-        Me.chckPlayFullscr.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.chckPlayFullscr.AutoSize = True
-        Me.chckPlayFullscr.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chckPlayFullscr.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chckPlayFullscr.Location = New System.Drawing.Point(169, 656)
-        Me.chckPlayFullscr.Name = "chckPlayFullscr"
-        Me.chckPlayFullscr.Size = New System.Drawing.Size(256, 25)
-        Me.chckPlayFullscr.TabIndex = 4
-        Me.chckPlayFullscr.Text = "Always start playing in fullscreen"
-        Me.chckPlayFullscr.UseVisualStyleBackColor = True
-        '
-        'lblHeaderPlayBck
-        '
-        Me.lblHeaderPlayBck.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblHeaderPlayBck.AutoSize = True
-        Me.lblHeaderPlayBck.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHeaderPlayBck.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderPlayBck.Location = New System.Drawing.Point(165, 604)
-        Me.lblHeaderPlayBck.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.lblHeaderPlayBck.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.lblHeaderPlayBck.Name = "lblHeaderPlayBck"
-        Me.lblHeaderPlayBck.Size = New System.Drawing.Size(750, 30)
-        Me.lblHeaderPlayBck.TabIndex = 100000000
-        Me.lblHeaderPlayBck.Text = "Playback"
+        Me.tabGeneral.AutoScroll = True
+        Me.tabGeneral.AutoScrollMargin = New System.Drawing.Size(20, 70)
+        Me.tabGeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.tabGeneral.Controls.Add(Me.cmboBoxWatchedMoviesPanel)
+        Me.tabGeneral.Controls.Add(Me.cmboboxWatchedMovies)
+        Me.tabGeneral.Controls.Add(Me.lblWatchedMovies)
+        Me.tabGeneral.Controls.Add(Me.chkShowRating)
+        Me.tabGeneral.Controls.Add(Me.chkAlwaysOnTop)
+        Me.tabGeneral.Location = New System.Drawing.Point(23, 4)
+        Me.tabGeneral.Name = "tabGeneral"
+        Me.tabGeneral.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabGeneral.Size = New System.Drawing.Size(1009, 561)
+        Me.tabGeneral.TabIndex = 1
+        Me.tabGeneral.Text = "GENERAL"
         '
         'cmboBoxWatchedMoviesPanel
         '
         Me.cmboBoxWatchedMoviesPanel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmboBoxWatchedMoviesPanel.BackColor = System.Drawing.Color.Transparent
         Me.cmboBoxWatchedMoviesPanel.Controls.Add(Me.cmboTxtWatchedMovies)
-        Me.cmboBoxWatchedMoviesPanel.Location = New System.Drawing.Point(401, 345)
+        Me.cmboBoxWatchedMoviesPanel.Location = New System.Drawing.Point(645, 216)
         Me.cmboBoxWatchedMoviesPanel.Name = "cmboBoxWatchedMoviesPanel"
         Me.cmboBoxWatchedMoviesPanel.Size = New System.Drawing.Size(135, 31)
-        Me.cmboBoxWatchedMoviesPanel.TabIndex = 100000004
+        Me.cmboBoxWatchedMoviesPanel.TabIndex = 100000093
         '
         'cmboTxtWatchedMovies
         '
@@ -299,7 +196,7 @@ Partial Class frmSettings
         Me.cmboTxtWatchedMovies.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.cmboTxtWatchedMovies.SideImage = CType(resources.GetObject("cmboTxtWatchedMovies.SideImage"), System.Drawing.Image)
         Me.cmboTxtWatchedMovies.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.cmboTxtWatchedMovies.SideImageSize = New System.Drawing.Size(17, 18)
+        Me.cmboTxtWatchedMovies.SideImageSize = New System.Drawing.Size(18, 19)
         Me.cmboTxtWatchedMovies.Size = New System.Drawing.Size(134, 30)
         Me.cmboTxtWatchedMovies.TabIndex = 3
         Me.cmboTxtWatchedMovies.Text = "Fade"
@@ -318,40 +215,12 @@ Partial Class frmSettings
         Me.cmboboxWatchedMovies.ForeColor = System.Drawing.Color.White
         Me.cmboboxWatchedMovies.FormattingEnabled = True
         Me.cmboboxWatchedMovies.Items.AddRange(New Object() {"Fade", "Hide", "Show"})
-        Me.cmboboxWatchedMovies.Location = New System.Drawing.Point(401, 349)
+        Me.cmboboxWatchedMovies.Location = New System.Drawing.Point(645, 220)
         Me.cmboboxWatchedMovies.Name = "cmboboxWatchedMovies"
         Me.cmboboxWatchedMovies.Size = New System.Drawing.Size(134, 27)
-        Me.cmboboxWatchedMovies.TabIndex = 100000003
+        Me.cmboboxWatchedMovies.TabIndex = 100000092
         Me.cmboboxWatchedMovies.TabStop = False
         Me.cmboboxWatchedMovies.Visible = False
-        '
-        'lblHeaderGeneral
-        '
-        Me.lblHeaderGeneral.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblHeaderGeneral.AutoSize = True
-        Me.lblHeaderGeneral.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHeaderGeneral.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderGeneral.Location = New System.Drawing.Point(163, 203)
-        Me.lblHeaderGeneral.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.lblHeaderGeneral.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.lblHeaderGeneral.Name = "lblHeaderGeneral"
-        Me.lblHeaderGeneral.Size = New System.Drawing.Size(750, 30)
-        Me.lblHeaderGeneral.TabIndex = 100000000
-        Me.lblHeaderGeneral.Text = "General"
-        '
-        'Splitter1a
-        '
-        Me.Splitter1a.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Splitter1a.AutoSize = True
-        Me.Splitter1a.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Splitter1a.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1a.Location = New System.Drawing.Point(160, 152)
-        Me.Splitter1a.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1a.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1a.Name = "Splitter1a"
-        Me.Splitter1a.Size = New System.Drawing.Size(750, 32)
-        Me.Splitter1a.TabIndex = 100000000
-        Me.Splitter1a.Text = "-------------------------------------------------------------------------"
         '
         'lblWatchedMovies
         '
@@ -359,71 +228,11 @@ Partial Class frmSettings
         Me.lblWatchedMovies.AutoSize = True
         Me.lblWatchedMovies.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblWatchedMovies.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblWatchedMovies.Location = New System.Drawing.Point(165, 348)
-        Me.lblWatchedMovies.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.lblWatchedMovies.MinimumSize = New System.Drawing.Size(750, 0)
+        Me.lblWatchedMovies.Location = New System.Drawing.Point(244, 220)
         Me.lblWatchedMovies.Name = "lblWatchedMovies"
-        Me.lblWatchedMovies.Size = New System.Drawing.Size(750, 21)
-        Me.lblWatchedMovies.TabIndex = 100000000
+        Me.lblWatchedMovies.Size = New System.Drawing.Size(124, 21)
+        Me.lblWatchedMovies.TabIndex = 100000091
         Me.lblWatchedMovies.Text = "Watched movies"
-        '
-        'lblSettings
-        '
-        Me.lblSettings.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblSettings.AutoSize = True
-        Me.lblSettings.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lblSettings.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSettings.ForeColor = System.Drawing.Color.White
-        Me.lblSettings.Location = New System.Drawing.Point(468, 96)
-        Me.lblSettings.Name = "lblSettings"
-        Me.lblSettings.Size = New System.Drawing.Size(141, 45)
-        Me.lblSettings.TabIndex = 100000000
-        Me.lblSettings.Text = "Settings"
-        '
-        'Splitter1b
-        '
-        Me.Splitter1b.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Splitter1b.AutoSize = True
-        Me.Splitter1b.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Splitter1b.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Splitter1b.Location = New System.Drawing.Point(160, 393)
-        Me.Splitter1b.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1b.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.Splitter1b.Name = "Splitter1b"
-        Me.Splitter1b.Size = New System.Drawing.Size(750, 32)
-        Me.Splitter1b.TabIndex = 100000008
-        Me.Splitter1b.Text = "-------------------------------------------------------------------------"
-        '
-        'lblDbDir
-        '
-        Me.lblDbDir.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblDbDir.AutoSize = True
-        Me.lblDbDir.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDbDir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblDbDir.Location = New System.Drawing.Point(165, 1040)
-        Me.lblDbDir.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.lblDbDir.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.lblDbDir.Name = "lblDbDir"
-        Me.lblDbDir.Size = New System.Drawing.Size(750, 21)
-        Me.lblDbDir.TabIndex = 100000000
-        Me.lblDbDir.Text = "Database Directory"
-        '
-        'timerHideNotifications
-        '
-        Me.timerHideNotifications.Interval = 4000
-        '
-        'chkAlwaysOnTop
-        '
-        Me.chkAlwaysOnTop.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.chkAlwaysOnTop.AutoSize = True
-        Me.chkAlwaysOnTop.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkAlwaysOnTop.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chkAlwaysOnTop.Location = New System.Drawing.Point(168, 257)
-        Me.chkAlwaysOnTop.Name = "chkAlwaysOnTop"
-        Me.chkAlwaysOnTop.Size = New System.Drawing.Size(127, 25)
-        Me.chkAlwaysOnTop.TabIndex = 100000057
-        Me.chkAlwaysOnTop.Text = "Always on top"
-        Me.chkAlwaysOnTop.UseVisualStyleBackColor = True
         '
         'chkShowRating
         '
@@ -433,26 +242,37 @@ Partial Class frmSettings
         Me.chkShowRating.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkShowRating.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkShowRating.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chkShowRating.Location = New System.Drawing.Point(168, 302)
+        Me.chkShowRating.Location = New System.Drawing.Point(248, 172)
         Me.chkShowRating.Name = "chkShowRating"
         Me.chkShowRating.Size = New System.Drawing.Size(190, 25)
-        Me.chkShowRating.TabIndex = 100000058
+        Me.chkShowRating.TabIndex = 100000095
         Me.chkShowRating.Text = "Show rating on posters"
         Me.chkShowRating.UseVisualStyleBackColor = True
         '
-        'Label1
+        'chkAlwaysOnTop
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(84, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(161, 549)
-        Me.Label1.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.Label1.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(750, 32)
-        Me.Label1.TabIndex = 100000060
-        Me.Label1.Text = "-------------------------------------------------------------------------"
+        Me.chkAlwaysOnTop.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.chkAlwaysOnTop.AutoSize = True
+        Me.chkAlwaysOnTop.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkAlwaysOnTop.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.chkAlwaysOnTop.Location = New System.Drawing.Point(248, 127)
+        Me.chkAlwaysOnTop.Name = "chkAlwaysOnTop"
+        Me.chkAlwaysOnTop.Size = New System.Drawing.Size(127, 25)
+        Me.chkAlwaysOnTop.TabIndex = 100000094
+        Me.chkAlwaysOnTop.Text = "Always on top"
+        Me.chkAlwaysOnTop.UseVisualStyleBackColor = True
+        '
+        'tabQuality
+        '
+        Me.tabQuality.AutoScroll = True
+        Me.tabQuality.AutoScrollMargin = New System.Drawing.Size(0, 70)
+        Me.tabQuality.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.tabQuality.Controls.Add(Me.chkShowMovieQuality)
+        Me.tabQuality.Location = New System.Drawing.Point(23, 4)
+        Me.tabQuality.Name = "tabQuality"
+        Me.tabQuality.Size = New System.Drawing.Size(1009, 561)
+        Me.tabQuality.TabIndex = 4
+        Me.tabQuality.Text = "QUALITY"
         '
         'chkShowMovieQuality
         '
@@ -460,131 +280,96 @@ Partial Class frmSettings
         Me.chkShowMovieQuality.AutoSize = True
         Me.chkShowMovieQuality.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chkShowMovieQuality.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.chkShowMovieQuality.Location = New System.Drawing.Point(171, 499)
+        Me.chkShowMovieQuality.Location = New System.Drawing.Point(248, 127)
         Me.chkShowMovieQuality.Name = "chkShowMovieQuality"
         Me.chkShowMovieQuality.Size = New System.Drawing.Size(212, 25)
-        Me.chkShowMovieQuality.TabIndex = 100000059
+        Me.chkShowMovieQuality.TabIndex = 100000092
         Me.chkShowMovieQuality.Text = "Show movie quality on list"
         Me.chkShowMovieQuality.UseVisualStyleBackColor = True
         '
-        'Label2
+        'tabPlayback
         '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(163, 447)
-        Me.Label2.MaximumSize = New System.Drawing.Size(750, 0)
-        Me.Label2.MinimumSize = New System.Drawing.Size(750, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(750, 30)
-        Me.Label2.TabIndex = 100000061
-        Me.Label2.Text = "Quality"
+        Me.tabPlayback.AutoScroll = True
+        Me.tabPlayback.AutoScrollMargin = New System.Drawing.Size(0, 70)
+        Me.tabPlayback.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.tabPlayback.Controls.Add(Me.chckPlayFullscr)
+        Me.tabPlayback.Location = New System.Drawing.Point(23, 4)
+        Me.tabPlayback.Name = "tabPlayback"
+        Me.tabPlayback.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabPlayback.Size = New System.Drawing.Size(1009, 561)
+        Me.tabPlayback.TabIndex = 0
+        Me.tabPlayback.Text = "PLAYBACK"
         '
-        'lblSuccessText
+        'chckPlayFullscr
         '
-        Me.lblSuccessText.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.lblSuccessText.BorderColor = System.Drawing.Color.Transparent
-        Me.lblSuccessText.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.lblSuccessText.Corners.All = 2
-        Me.lblSuccessText.Corners.LowerLeft = 2
-        Me.lblSuccessText.Corners.LowerRight = 2
-        Me.lblSuccessText.Corners.UpperLeft = 2
-        Me.lblSuccessText.Corners.UpperRight = 2
-        Me.lblSuccessText.DesignerSelected = False
-        Me.lblSuccessText.DimFactorClick = 0
-        Me.lblSuccessText.DimFactorHover = 0
-        Me.lblSuccessText.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.lblSuccessText.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
-        Me.lblSuccessText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.lblSuccessText.ImageIndex = 0
-        Me.lblSuccessText.Location = New System.Drawing.Point(527, 1333)
-        Me.lblSuccessText.Name = "lblSuccessText"
-        Me.lblSuccessText.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.lblSuccessText.Size = New System.Drawing.Size(372, 35)
-        Me.lblSuccessText.TabIndex = 22
-        Me.lblSuccessText.Text = "✔ Your settings have been saved."
-        Me.lblSuccessText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblSuccessText.TextShadowShow = False
-        Me.lblSuccessText.Visible = False
+        Me.chckPlayFullscr.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.chckPlayFullscr.AutoSize = True
+        Me.chckPlayFullscr.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chckPlayFullscr.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.chckPlayFullscr.Location = New System.Drawing.Point(248, 127)
+        Me.chckPlayFullscr.Name = "chckPlayFullscr"
+        Me.chckPlayFullscr.Size = New System.Drawing.Size(256, 25)
+        Me.chckPlayFullscr.TabIndex = 100000063
+        Me.chckPlayFullscr.Text = "Always start playing in fullscreen"
+        Me.chckPlayFullscr.UseVisualStyleBackColor = True
         '
-        'btnResetAllDatabases
+        'tabFeatures
         '
-        Me.btnResetAllDatabases.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnResetAllDatabases.BorderColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnResetAllDatabases.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.btnResetAllDatabases.Corners.All = 2
-        Me.btnResetAllDatabases.Corners.LowerLeft = 2
-        Me.btnResetAllDatabases.Corners.LowerRight = 2
-        Me.btnResetAllDatabases.Corners.UpperLeft = 2
-        Me.btnResetAllDatabases.Corners.UpperRight = 2
-        Me.btnResetAllDatabases.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnResetAllDatabases.DesignerSelected = False
-        Me.btnResetAllDatabases.DimFactorClick = 0
-        Me.btnResetAllDatabases.DimFactorHover = 0
-        Me.btnResetAllDatabases.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.btnResetAllDatabases.Font = New System.Drawing.Font("Segoe UI Semibold", 11.5!)
-        Me.btnResetAllDatabases.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnResetAllDatabases.ImageIndex = 0
-        Me.btnResetAllDatabases.Location = New System.Drawing.Point(171, 1332)
-        Me.btnResetAllDatabases.Name = "btnResetAllDatabases"
-        Me.btnResetAllDatabases.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.btnResetAllDatabases.Size = New System.Drawing.Size(131, 35)
-        Me.btnResetAllDatabases.TabIndex = 21
-        Me.btnResetAllDatabases.Text = "Flush Libraries"
-        Me.btnResetAllDatabases.TextShadowShow = False
+        Me.tabFeatures.AutoScroll = True
+        Me.tabFeatures.AutoScrollMargin = New System.Drawing.Size(0, 70)
+        Me.tabFeatures.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.tabFeatures.Controls.Add(Me.chckUserComments)
+        Me.tabFeatures.Controls.Add(Me.chckDownloadBtn)
+        Me.tabFeatures.Location = New System.Drawing.Point(23, 4)
+        Me.tabFeatures.Name = "tabFeatures"
+        Me.tabFeatures.Size = New System.Drawing.Size(1009, 561)
+        Me.tabFeatures.TabIndex = 3
+        Me.tabFeatures.Text = "FEATURES"
         '
-        'btnResetSettings
+        'chckUserComments
         '
-        Me.btnResetSettings.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnResetSettings.BorderColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnResetSettings.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.btnResetSettings.Corners.All = 2
-        Me.btnResetSettings.Corners.LowerLeft = 2
-        Me.btnResetSettings.Corners.LowerRight = 2
-        Me.btnResetSettings.Corners.UpperLeft = 2
-        Me.btnResetSettings.Corners.UpperRight = 2
-        Me.btnResetSettings.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnResetSettings.DesignerSelected = False
-        Me.btnResetSettings.DimFactorClick = 0
-        Me.btnResetSettings.DimFactorHover = 0
-        Me.btnResetSettings.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.btnResetSettings.Font = New System.Drawing.Font("Segoe UI Semibold", 11.5!)
-        Me.btnResetSettings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnResetSettings.ImageIndex = 0
-        Me.btnResetSettings.Location = New System.Drawing.Point(308, 1332)
-        Me.btnResetSettings.Name = "btnResetSettings"
-        Me.btnResetSettings.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.btnResetSettings.Size = New System.Drawing.Size(144, 35)
-        Me.btnResetSettings.TabIndex = 20
-        Me.btnResetSettings.Text = "Restore Defaults"
-        Me.btnResetSettings.TextShadowShow = False
+        Me.chckUserComments.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.chckUserComments.AutoSize = True
+        Me.chckUserComments.Checked = True
+        Me.chckUserComments.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chckUserComments.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chckUserComments.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.chckUserComments.Location = New System.Drawing.Point(248, 172)
+        Me.chckUserComments.Name = "chckUserComments"
+        Me.chckUserComments.Size = New System.Drawing.Size(179, 25)
+        Me.chckUserComments.TabIndex = 100000066
+        Me.chckUserComments.Text = "Show user comments"
+        Me.chckUserComments.UseVisualStyleBackColor = True
         '
-        'btnSaveSettings
+        'chckDownloadBtn
         '
-        Me.btnSaveSettings.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.btnSaveSettings.BorderColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnSaveSettings.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.btnSaveSettings.Corners.All = 2
-        Me.btnSaveSettings.Corners.LowerLeft = 2
-        Me.btnSaveSettings.Corners.LowerRight = 2
-        Me.btnSaveSettings.Corners.UpperLeft = 2
-        Me.btnSaveSettings.Corners.UpperRight = 2
-        Me.btnSaveSettings.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSaveSettings.DesignerSelected = False
-        Me.btnSaveSettings.DimFactorClick = 0
-        Me.btnSaveSettings.DimFactorHover = 0
-        Me.btnSaveSettings.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.btnSaveSettings.Font = New System.Drawing.Font("Segoe UI Semibold", 11.5!)
-        Me.btnSaveSettings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnSaveSettings.ImageIndex = 0
-        Me.btnSaveSettings.Location = New System.Drawing.Point(458, 1332)
-        Me.btnSaveSettings.Name = "btnSaveSettings"
-        Me.btnSaveSettings.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.btnSaveSettings.Size = New System.Drawing.Size(62, 35)
-        Me.btnSaveSettings.TabIndex = 19
-        Me.btnSaveSettings.Text = "Save"
-        Me.btnSaveSettings.TextShadowShow = False
+        Me.chckDownloadBtn.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.chckDownloadBtn.AutoSize = True
+        Me.chckDownloadBtn.Checked = True
+        Me.chckDownloadBtn.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chckDownloadBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chckDownloadBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.chckDownloadBtn.Location = New System.Drawing.Point(248, 127)
+        Me.chckDownloadBtn.Name = "chckDownloadBtn"
+        Me.chckDownloadBtn.Size = New System.Drawing.Size(228, 25)
+        Me.chckDownloadBtn.TabIndex = 100000065
+        Me.chckDownloadBtn.Text = "Download button for movies"
+        Me.chckDownloadBtn.UseVisualStyleBackColor = True
+        '
+        'tabDatabase
+        '
+        Me.tabDatabase.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.tabDatabase.Controls.Add(Me.btnDbExport)
+        Me.tabDatabase.Controls.Add(Me.chckBackupDb)
+        Me.tabDatabase.Controls.Add(Me.txtDbDir)
+        Me.tabDatabase.Controls.Add(Me.txtDbDirBg)
+        Me.tabDatabase.Controls.Add(Me.imgOpenFolder)
+        Me.tabDatabase.Controls.Add(Me.lblDbDir)
+        Me.tabDatabase.Location = New System.Drawing.Point(23, 4)
+        Me.tabDatabase.Name = "tabDatabase"
+        Me.tabDatabase.Size = New System.Drawing.Size(1009, 561)
+        Me.tabDatabase.TabIndex = 5
+        Me.tabDatabase.Text = "DATABASE"
         '
         'btnDbExport
         '
@@ -601,16 +386,44 @@ Partial Class frmSettings
         Me.btnDbExport.DimFactorClick = 0
         Me.btnDbExport.DimFactorHover = 0
         Me.btnDbExport.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.btnDbExport.Font = New System.Drawing.Font("Segoe UI Semibold", 11.5!)
+        Me.btnDbExport.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.btnDbExport.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnDbExport.ImageIndex = 0
-        Me.btnDbExport.Location = New System.Drawing.Point(169, 1088)
+        Me.btnDbExport.Location = New System.Drawing.Point(248, 221)
         Me.btnDbExport.Name = "btnDbExport"
         Me.btnDbExport.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.btnDbExport.Size = New System.Drawing.Size(142, 35)
-        Me.btnDbExport.TabIndex = 9
-        Me.btnDbExport.Text = "Export Database"
+        Me.btnDbExport.Size = New System.Drawing.Size(86, 32)
+        Me.btnDbExport.TabIndex = 100000091
+        Me.btnDbExport.Text = "Export..."
         Me.btnDbExport.TextShadowShow = False
+        '
+        'chckBackupDb
+        '
+        Me.chckBackupDb.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.chckBackupDb.AutoSize = True
+        Me.chckBackupDb.Checked = True
+        Me.chckBackupDb.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chckBackupDb.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chckBackupDb.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.chckBackupDb.Location = New System.Drawing.Point(248, 127)
+        Me.chckBackupDb.Name = "chckBackupDb"
+        Me.chckBackupDb.Size = New System.Drawing.Size(194, 25)
+        Me.chckBackupDb.TabIndex = 100000089
+        Me.chckBackupDb.Text = "Create backup database"
+        Me.chckBackupDb.UseVisualStyleBackColor = True
+        '
+        'txtDbDir
+        '
+        Me.txtDbDir.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtDbDir.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.txtDbDir.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDbDir.Font = New System.Drawing.Font("Segoe UI", 10.25!)
+        Me.txtDbDir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.txtDbDir.Location = New System.Drawing.Point(414, 174)
+        Me.txtDbDir.Name = "txtDbDir"
+        Me.txtDbDir.ReadOnly = True
+        Me.txtDbDir.Size = New System.Drawing.Size(315, 19)
+        Me.txtDbDir.TabIndex = 100000090
         '
         'txtDbDirBg
         '
@@ -628,132 +441,187 @@ Partial Class frmSettings
         Me.txtDbDirBg.Enabled = False
         Me.txtDbDirBg.FillType = CButtonLib.CButton.eFillType.Solid
         Me.txtDbDirBg.ImageIndex = 0
-        Me.txtDbDirBg.Location = New System.Drawing.Point(393, 1038)
+        Me.txtDbDirBg.Location = New System.Drawing.Point(407, 171)
         Me.txtDbDirBg.Name = "txtDbDirBg"
         Me.txtDbDirBg.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.txtDbDirBg.Size = New System.Drawing.Size(410, 26)
-        Me.txtDbDirBg.TabIndex = 100000020
+        Me.txtDbDirBg.Size = New System.Drawing.Size(329, 26)
+        Me.txtDbDirBg.TabIndex = 100000093
         Me.txtDbDirBg.TabStop = False
         Me.txtDbDirBg.Text = ""
-        '
-        'MeClose
-        '
-        Me.MeClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MeClose.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.MeClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
-        Me.MeClose.Location = New System.Drawing.Point(1035, 12)
-        Me.MeClose.Name = "MeClose"
-        Me.MeClose.Size = New System.Drawing.Size(28, 28)
-        Me.MeClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.MeClose.TabIndex = 100000055
-        Me.MeClose.TabStop = False
         '
         'imgOpenFolder
         '
         Me.imgOpenFolder.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.imgOpenFolder.Cursor = System.Windows.Forms.Cursors.Hand
         Me.imgOpenFolder.Image = Global.Movieo.My.Resources.Resources.BrowseIconL
-        Me.imgOpenFolder.Location = New System.Drawing.Point(812, 1042)
+        Me.imgOpenFolder.Location = New System.Drawing.Point(745, 175)
         Me.imgOpenFolder.Name = "imgOpenFolder"
         Me.imgOpenFolder.Size = New System.Drawing.Size(20, 18)
         Me.imgOpenFolder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgOpenFolder.TabIndex = 100000021
+        Me.imgOpenFolder.TabIndex = 100000094
         Me.imgOpenFolder.TabStop = False
+        '
+        'lblDbDir
+        '
+        Me.lblDbDir.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblDbDir.AutoSize = True
+        Me.lblDbDir.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDbDir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.lblDbDir.Location = New System.Drawing.Point(244, 172)
+        Me.lblDbDir.Name = "lblDbDir"
+        Me.lblDbDir.Size = New System.Drawing.Size(142, 21)
+        Me.lblDbDir.TabIndex = 100000092
+        Me.lblDbDir.Text = "Database Directory"
+        '
+        'tabMiscellaneous
+        '
+        Me.tabMiscellaneous.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.tabMiscellaneous.Controls.Add(Me.chckAutoUpdate)
+        Me.tabMiscellaneous.Location = New System.Drawing.Point(23, 4)
+        Me.tabMiscellaneous.Name = "tabMiscellaneous"
+        Me.tabMiscellaneous.Size = New System.Drawing.Size(1009, 561)
+        Me.tabMiscellaneous.TabIndex = 6
+        Me.tabMiscellaneous.Text = "MISCELLANEOUS"
+        '
+        'chckAutoUpdate
+        '
+        Me.chckAutoUpdate.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.chckAutoUpdate.AutoSize = True
+        Me.chckAutoUpdate.Checked = True
+        Me.chckAutoUpdate.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chckAutoUpdate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chckAutoUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.chckAutoUpdate.Location = New System.Drawing.Point(248, 127)
+        Me.chckAutoUpdate.Name = "chckAutoUpdate"
+        Me.chckAutoUpdate.Size = New System.Drawing.Size(229, 25)
+        Me.chckAutoUpdate.TabIndex = 100000069
+        Me.chckAutoUpdate.Text = "Check for updates on startup"
+        Me.chckAutoUpdate.UseVisualStyleBackColor = True
+        '
+        'panelTopHeaders
+        '
+        Me.panelTopHeaders.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelTopHeaders.Controls.Add(Me.headerMiscellaneous)
+        Me.panelTopHeaders.Controls.Add(Me.headerPlayback)
+        Me.panelTopHeaders.Controls.Add(Me.meClose)
+        Me.panelTopHeaders.Controls.Add(Me.headerGeneral)
+        Me.panelTopHeaders.Controls.Add(Me.headerDatabase)
+        Me.panelTopHeaders.Controls.Add(Me.headerFeatures)
+        Me.panelTopHeaders.Controls.Add(Me.headerQuality)
+        Me.panelTopHeaders.Location = New System.Drawing.Point(0, -1)
+        Me.panelTopHeaders.Name = "panelTopHeaders"
+        Me.panelTopHeaders.Size = New System.Drawing.Size(992, 60)
+        Me.panelTopHeaders.TabIndex = 1056
+        '
+        'headerMiscellaneous
+        '
+        Me.headerMiscellaneous.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.headerMiscellaneous.AutoSize = True
+        Me.headerMiscellaneous.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.headerMiscellaneous.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.headerMiscellaneous.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.headerMiscellaneous.Location = New System.Drawing.Point(727, 14)
+        Me.headerMiscellaneous.Name = "headerMiscellaneous"
+        Me.headerMiscellaneous.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.headerMiscellaneous.Size = New System.Drawing.Size(194, 30)
+        Me.headerMiscellaneous.TabIndex = 1058
+        Me.headerMiscellaneous.Text = "MISCELLANEOUS"
+        '
+        'headerPlayback
+        '
+        Me.headerPlayback.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.headerPlayback.AutoSize = True
+        Me.headerPlayback.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.headerPlayback.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.headerPlayback.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.headerPlayback.Location = New System.Drawing.Point(329, 14)
+        Me.headerPlayback.Name = "headerPlayback"
+        Me.headerPlayback.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.headerPlayback.Size = New System.Drawing.Size(128, 30)
+        Me.headerPlayback.TabIndex = 1056
+        Me.headerPlayback.Text = "PLAYBACK"
+        '
+        'meClose
+        '
+        Me.meClose.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.meClose.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.meClose.Image = Global.Movieo.My.Resources.Resources.PopupCloseL
+        Me.meClose.Location = New System.Drawing.Point(948, 16)
+        Me.meClose.Name = "meClose"
+        Me.meClose.Size = New System.Drawing.Size(28, 28)
+        Me.meClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.meClose.TabIndex = 1055
+        Me.meClose.TabStop = False
         '
         'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoScroll = True
-        Me.AutoScrollMargin = New System.Drawing.Size(0, 70)
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1109, 561)
-        Me.Controls.Add(Me.cmboBoxWatchedMoviesPanel)
-        Me.Controls.Add(Me.cmboboxWatchedMovies)
-        Me.Controls.Add(Me.lblWatchedMovies)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.chkShowMovieQuality)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.chkShowRating)
-        Me.Controls.Add(Me.chkAlwaysOnTop)
-        Me.Controls.Add(Me.MeClose)
-        Me.Controls.Add(Me.lblSuccessText)
-        Me.Controls.Add(Me.Splitter1g)
-        Me.Controls.Add(Me.btnResetAllDatabases)
-        Me.Controls.Add(Me.btnResetSettings)
-        Me.Controls.Add(Me.btnSaveSettings)
-        Me.Controls.Add(Me.btnDbExport)
-        Me.Controls.Add(Me.chckBackupDb)
-        Me.Controls.Add(Me.txtDbDir)
-        Me.Controls.Add(Me.txtDbDirBg)
-        Me.Controls.Add(Me.chckUserComments)
-        Me.Controls.Add(Me.chckAutoUpdate)
-        Me.Controls.Add(Me.lblHeaderMisc)
-        Me.Controls.Add(Me.Splitter1f)
-        Me.Controls.Add(Me.lblHeaderDb)
-        Me.Controls.Add(Me.Splitter1d)
-        Me.Controls.Add(Me.chckDownloadBtn)
-        Me.Controls.Add(Me.lblSettingsFeatures)
-        Me.Controls.Add(Me.Splitter1c)
-        Me.Controls.Add(Me.chckPlayFullscr)
-        Me.Controls.Add(Me.lblHeaderPlayBck)
-        Me.Controls.Add(Me.lblHeaderGeneral)
-        Me.Controls.Add(Me.Splitter1a)
-        Me.Controls.Add(Me.lblSettings)
-        Me.Controls.Add(Me.imgOpenFolder)
-        Me.Controls.Add(Me.lblDbDir)
-        Me.Controls.Add(Me.Splitter1b)
+        Me.ClientSize = New System.Drawing.Size(1009, 561)
+        Me.Controls.Add(Me.panelTopHeaders)
+        Me.Controls.Add(Me.Tab)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmSettings"
         Me.Opacity = 0.98R
-        Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Settings"
+        Me.Text = "Movieo Info"
+        Me.Tab.ResumeLayout(False)
+        Me.tabGeneral.ResumeLayout(False)
+        Me.tabGeneral.PerformLayout()
         Me.cmboBoxWatchedMoviesPanel.ResumeLayout(False)
-        CType(Me.MeClose, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabQuality.ResumeLayout(False)
+        Me.tabQuality.PerformLayout()
+        Me.tabPlayback.ResumeLayout(False)
+        Me.tabPlayback.PerformLayout()
+        Me.tabFeatures.ResumeLayout(False)
+        Me.tabFeatures.PerformLayout()
+        Me.tabDatabase.ResumeLayout(False)
+        Me.tabDatabase.PerformLayout()
         CType(Me.imgOpenFolder, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabMiscellaneous.ResumeLayout(False)
+        Me.tabMiscellaneous.PerformLayout()
+        Me.panelTopHeaders.ResumeLayout(False)
+        Me.panelTopHeaders.PerformLayout()
+        CType(Me.meClose, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Splitter1g As Label
-    Friend WithEvents btnResetAllDatabases As CButtonLib.CButton
-    Friend WithEvents btnResetSettings As CButtonLib.CButton
-    Friend WithEvents btnSaveSettings As CButtonLib.CButton
-    Friend WithEvents chckBackupDb As CheckBox
-    Friend WithEvents txtDbDir As TextBox
-    Friend WithEvents txtDbDirBg As CButtonLib.CButton
-    Friend WithEvents chckUserComments As CheckBox
-    Friend WithEvents chckAutoUpdate As CheckBox
-    Friend WithEvents lblHeaderMisc As Label
-    Friend WithEvents Splitter1f As Label
-    Friend WithEvents lblHeaderDb As Label
-    Friend WithEvents Splitter1d As Label
-    Friend WithEvents chckDownloadBtn As CheckBox
-    Friend WithEvents lblSettingsFeatures As Label
-    Friend WithEvents Splitter1c As Label
-    Friend WithEvents chckPlayFullscr As CheckBox
-    Friend WithEvents lblHeaderPlayBck As Label
+    Friend WithEvents headerGeneral As Label
+    Friend WithEvents headerFeatures As Label
+    Friend WithEvents headerQuality As Label
+    Friend WithEvents headerDatabase As Label
+    Friend WithEvents Tab As TabControl
+    Friend WithEvents tabPlayback As TabPage
+    Friend WithEvents tabGeneral As TabPage
+    Friend WithEvents panelTopHeaders As Panel
+    Friend WithEvents meClose As PictureBox
+    Friend WithEvents tabFeatures As TabPage
+    Friend WithEvents MsgEmail As ChreneLib.Controls.TextBoxes.CTextBox
+    Friend WithEvents MsgText As ChreneLib.Controls.TextBoxes.CTextBox
+    Friend WithEvents tabQuality As TabPage
+    Friend WithEvents headerPlayback As Label
+    Friend WithEvents tabDatabase As TabPage
+    Friend WithEvents tabMiscellaneous As TabPage
+    Friend WithEvents headerMiscellaneous As Label
     Friend WithEvents cmboBoxWatchedMoviesPanel As Panel
     Friend WithEvents cmboTxtWatchedMovies As CButtonLib.CButton
     Friend WithEvents cmboboxWatchedMovies As ComboBox
-    Friend WithEvents lblHeaderGeneral As Label
-    Friend WithEvents Splitter1a As Label
     Friend WithEvents lblWatchedMovies As Label
-    Friend WithEvents lblSettings As Label
-    Friend WithEvents Splitter1b As Label
+    Friend WithEvents chkShowRating As CheckBox
+    Friend WithEvents chkAlwaysOnTop As CheckBox
+    Friend WithEvents chkShowMovieQuality As CheckBox
+    Friend WithEvents chckPlayFullscr As CheckBox
+    Friend WithEvents chckUserComments As CheckBox
+    Friend WithEvents chckDownloadBtn As CheckBox
+    Friend WithEvents btnDbExport As CButtonLib.CButton
+    Friend WithEvents chckBackupDb As CheckBox
+    Friend WithEvents txtDbDir As TextBox
+    Friend WithEvents txtDbDirBg As CButtonLib.CButton
     Friend WithEvents imgOpenFolder As PictureBox
     Friend WithEvents lblDbDir As Label
-    Friend WithEvents timerHideNotifications As Timer
-    Friend WithEvents btnDbExport As CButtonLib.CButton
-    Friend WithEvents MeClose As PictureBox
-    Friend WithEvents chkAlwaysOnTop As CheckBox
-    Friend WithEvents chkShowRating As CheckBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents chkShowMovieQuality As CheckBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents lblSuccessText As CButtonLib.CButton
+    Friend WithEvents chckAutoUpdate As CheckBox
 End Class

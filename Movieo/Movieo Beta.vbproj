@@ -91,7 +91,8 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CButtonLib">
+    <Reference Include="CButtonLib, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\- Plugins\CButton\CButton\bin\Debug\CButtonLib.dll</HintPath>
     </Reference>
     <Reference Include="ChreneLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -136,10 +137,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="ctrlCollectionsThumbnail.Designer.vb">
-      <DependentUpon>ctrlCollectionsThumbnail.vb</DependentUpon>
+    <Compile Include="ctrlCollectionThumbnail.Designer.vb">
+      <DependentUpon>ctrlCollectionThumbnail.vb</DependentUpon>
     </Compile>
-    <Compile Include="ctrlCollectionsThumbnail.vb">
+    <Compile Include="ctrlCollectionThumbnail.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ctrlItemComment.Designer.vb">
@@ -164,6 +165,12 @@
       <DependentUpon>frmDownloadClient.vb</DependentUpon>
     </Compile>
     <Compile Include="frmDownloadClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportExport.Designer.vb">
+      <DependentUpon>frmImportExport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportExport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNotifications.Designer.vb">
@@ -226,12 +233,6 @@
     <Compile Include="frmPopupYesNo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStartupTab.Designer.vb">
-      <DependentUpon>frmStartupTab.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmStartupTab.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmErrorTab.Designer.vb">
       <DependentUpon>frmErrorTab.vb</DependentUpon>
     </Compile>
@@ -268,8 +269,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ctrlCollectionsThumbnail.resx">
-      <DependentUpon>ctrlCollectionsThumbnail.vb</DependentUpon>
+    <EmbeddedResource Include="ctrlCollectionThumbnail.resx">
+      <DependentUpon>ctrlCollectionThumbnail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlItemComment.resx">
       <DependentUpon>ctrlItemComment.vb</DependentUpon>
@@ -282,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDownloadClient.resx">
       <DependentUpon>frmDownloadClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportExport.resx">
+      <DependentUpon>frmImportExport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNotifications.resx">
       <DependentUpon>frmNotifications.vb</DependentUpon>
@@ -323,9 +327,6 @@
     <EmbeddedResource Include="frmPopupYesNo.resx">
       <DependentUpon>frmPopupYesNo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStartupTab.resx">
-      <DependentUpon>frmStartupTab.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmErrorTab.resx">
       <DependentUpon>frmErrorTab.vb</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +353,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Movieo Logo.ico" />
+    <None Include="Resources\omdb-logo.png" />
     <None Include="Resources\iconURLs.png" />
     <None Include="Resources\iconMovies.png" />
     <None Include="Resources\iconActors.png" />

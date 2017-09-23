@@ -390,7 +390,7 @@ Partial Class ctrlPosterTitle
         Me.InfoImdbRatingPoster.Corners.LowerRight = 12
         Me.InfoImdbRatingPoster.Corners.UpperLeft = 12
         Me.InfoImdbRatingPoster.Corners.UpperRight = 12
-        Me.InfoImdbRatingPoster.DesignerSelected = True
+        Me.InfoImdbRatingPoster.DesignerSelected = False
         Me.InfoImdbRatingPoster.FillType = CButtonLib.CButton.eFillType.Solid
         Me.InfoImdbRatingPoster.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InfoImdbRatingPoster.ForeColor = System.Drawing.Color.Black
