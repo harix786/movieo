@@ -8,7 +8,7 @@ This is a place for browsing and watching movies, made with love by a few develo
 
 Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.
 
-[Terms of Service](http://movieo.info/more/tos.html) | [Frequently Asked Questions](http://movieo.info/more/faq.html) | [Release Notes](http://movieo.info/more/release-notes.html) | [Email Us](mailto:hi@movieo.info)
+[Terms of Service](http://movieo.info/more/tos.html)  |  [Frequently Asked Questions](http://movieo.info/more/faq.html)  |  [Release Notes](http://movieo.info/more/release-notes.html)  |  [Email Us](mailto:hi@movieo.info)
 
 ## Supported platforms
 Works with Windows 7 and above (Windows 7, 8, 8.1, 10)
