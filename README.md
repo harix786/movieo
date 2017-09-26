@@ -1,6 +1,15 @@
-# Movieo by NV & Others
+<h1 align="center">
+  <img src="https://dl.dropbox.com/s/54avkywzmv91elc/movieo-logo.png?dl=0" height="128" width="128" alt="Logo" />
+  <br />
+  Movieo
+</h1>
+
+<h3 align="center">Discover and watch movies instantly</h3>
+
+<div align="center">
 
 [![Join the chat at https://gitter.im/movieo-app/Lobby](https://badges.gitter.im/movieo-app/Lobby.svg)](https://gitter.im/movieo-app/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+</div>
 
 ## What is Movieo?
 
