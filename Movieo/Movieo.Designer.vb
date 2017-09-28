@@ -57,16 +57,22 @@ Partial Class Movieo
         Me.tabCollectionsMovies = New System.Windows.Forms.TabPage()
         Me.panelCollectionsCtrls = New System.Windows.Forms.FlowLayoutPanel()
         Me.panelCollectionsDetails = New System.Windows.Forms.FlowLayoutPanel()
+        Me.imgCollectionsB2Browse = New System.Windows.Forms.PictureBox()
         Me.lblCollectionsTitle = New System.Windows.Forms.Label()
         Me.lblCollectionsComment = New System.Windows.Forms.Label()
         Me.lblCollectionMoviesWatched = New System.Windows.Forms.Label()
         Me.panelCollectionsMovies = New System.Windows.Forms.FlowLayoutPanel()
         Me.tabLibrary = New System.Windows.Forms.TabPage()
         Me.panelLibraryCtrls = New System.Windows.Forms.Panel()
-        Me.btnListsBlack = New CButtonLib.CButton()
-        Me.btnListsSeen = New CButtonLib.CButton()
-        Me.btnListWatch = New CButtonLib.CButton()
+        Me.lblEmptyPanelMyLists = New System.Windows.Forms.Label()
+        Me.panelMyCoreListsCtrls = New System.Windows.Forms.Panel()
         Me.btnListsFavourites = New CButtonLib.CButton()
+        Me.btnListsWatch = New CButtonLib.CButton()
+        Me.btnListsSeen = New CButtonLib.CButton()
+        Me.btnListsBlack = New CButtonLib.CButton()
+        Me.lblHeaderLibrary = New System.Windows.Forms.Label()
+        Me.lblHeaderMyLists = New System.Windows.Forms.Label()
+        Me.panelMyListsCtrls = New System.Windows.Forms.FlowLayoutPanel()
         Me.tabsLibrary = New System.Windows.Forms.TabControl()
         Me.tabLibraryFavourites = New System.Windows.Forms.TabPage()
         Me.lblEmptyFavourites = New System.Windows.Forms.Label()
@@ -80,6 +86,9 @@ Partial Class Movieo
         Me.tabLibraryBlackList = New System.Windows.Forms.TabPage()
         Me.lblEmptyBlackList = New System.Windows.Forms.Label()
         Me.panelLibraryBlackList = New System.Windows.Forms.FlowLayoutPanel()
+        Me.tabLibraryMyLists = New System.Windows.Forms.TabPage()
+        Me.lblEmptyMyLists = New System.Windows.Forms.Label()
+        Me.panelMyListsMovies = New System.Windows.Forms.FlowLayoutPanel()
         Me.tabDownloads = New System.Windows.Forms.TabPage()
         Me.lblEmptyDownloads = New System.Windows.Forms.Label()
         Me.panelDownloads = New System.Windows.Forms.FlowLayoutPanel()
@@ -87,8 +96,11 @@ Partial Class Movieo
         Me.tabsSearches = New System.Windows.Forms.TabControl()
         Me.tabSearchesHome = New System.Windows.Forms.TabPage()
         Me.lblSearch3 = New System.Windows.Forms.Label()
+        Me.imgSearch3 = New System.Windows.Forms.PictureBox()
         Me.lblSearch1 = New System.Windows.Forms.Label()
+        Me.imgSearch1 = New System.Windows.Forms.PictureBox()
         Me.lblSearch2 = New System.Windows.Forms.Label()
+        Me.imgSearch2 = New System.Windows.Forms.PictureBox()
         Me.tabSearchesMovies = New System.Windows.Forms.TabPage()
         Me.lblEmptyPanelSearches = New System.Windows.Forms.Label()
         Me.panelSearches = New System.Windows.Forms.FlowLayoutPanel()
@@ -102,12 +114,15 @@ Partial Class Movieo
         Me.timerStartup = New System.Windows.Forms.Timer(Me.components)
         Me.timerCheckForUpdate = New System.Windows.Forms.Timer(Me.components)
         Me.panelTabTitles = New System.Windows.Forms.Panel()
-        Me.titleCoreDownloads = New CButtonLib.CButton()
+        Me.btnCreateList = New CButtonLib.CButton()
         Me.titleCoreCollections = New CButtonLib.CButton()
         Me.titleCoreLibrary = New CButtonLib.CButton()
         Me.txtboxSearch = New ChreneLib.Controls.TextBoxes.CTextBox()
+        Me.btnInfoMenu = New System.Windows.Forms.PictureBox()
         Me.titleCoreDiscover = New CButtonLib.CButton()
+        Me.imgSearchIcon = New System.Windows.Forms.PictureBox()
         Me.txtboxSearchBG = New CButtonLib.CButton()
+        Me.titleCoreDownloads = New CButtonLib.CButton()
         Me.timerResetFilters = New System.Windows.Forms.Timer(Me.components)
         Me.timerFilterGenre = New System.Windows.Forms.Timer(Me.components)
         Me.timerSearchMovies = New System.Windows.Forms.Timer(Me.components)
@@ -117,12 +132,6 @@ Partial Class Movieo
         Me.timerHideNotificationss = New System.Windows.Forms.Timer(Me.components)
         Me.timerCountdownLiveMovie = New System.Windows.Forms.Timer(Me.components)
         Me.timerGoToTime = New System.Windows.Forms.Timer(Me.components)
-        Me.btnInfoMenu = New System.Windows.Forms.PictureBox()
-        Me.imgSearchIcon = New System.Windows.Forms.PictureBox()
-        Me.imgCollectionsB2Browse = New System.Windows.Forms.PictureBox()
-        Me.imgSearch3 = New System.Windows.Forms.PictureBox()
-        Me.imgSearch1 = New System.Windows.Forms.PictureBox()
-        Me.imgSearch2 = New System.Windows.Forms.PictureBox()
         Me.icoLoadingWeb = New System.Windows.Forms.PictureBox()
         Me.Tab.SuspendLayout()
         Me.tabDiscover.SuspendLayout()
@@ -133,27 +142,29 @@ Partial Class Movieo
         Me.tabCollectionsMovies.SuspendLayout()
         Me.panelCollectionsCtrls.SuspendLayout()
         Me.panelCollectionsDetails.SuspendLayout()
+        CType(Me.imgCollectionsB2Browse, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabLibrary.SuspendLayout()
         Me.panelLibraryCtrls.SuspendLayout()
+        Me.panelMyCoreListsCtrls.SuspendLayout()
         Me.tabsLibrary.SuspendLayout()
         Me.tabLibraryFavourites.SuspendLayout()
         Me.tabLibraryWatchList.SuspendLayout()
         Me.tabLibrarySeenList.SuspendLayout()
         Me.tabLibraryBlackList.SuspendLayout()
+        Me.tabLibraryMyLists.SuspendLayout()
         Me.tabDownloads.SuspendLayout()
         Me.tabSearches.SuspendLayout()
         Me.tabsSearches.SuspendLayout()
         Me.tabSearchesHome.SuspendLayout()
+        CType(Me.imgSearch3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgSearch1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgSearch2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabSearchesMovies.SuspendLayout()
         Me.tabLoading.SuspendLayout()
         Me.tabMovieBackground.SuspendLayout()
         Me.panelTabTitles.SuspendLayout()
         CType(Me.btnInfoMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgSearchIcon, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.imgCollectionsB2Browse, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.imgSearch3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.imgSearch1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.imgSearch2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.icoLoadingWeb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -982,6 +993,17 @@ Partial Class Movieo
         Me.panelCollectionsDetails.Size = New System.Drawing.Size(300, 75)
         Me.panelCollectionsDetails.TabIndex = 100032
         '
+        'imgCollectionsB2Browse
+        '
+        Me.imgCollectionsB2Browse.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.imgCollectionsB2Browse.Location = New System.Drawing.Point(11, 3)
+        Me.imgCollectionsB2Browse.Margin = New System.Windows.Forms.Padding(11, 3, 0, 3)
+        Me.imgCollectionsB2Browse.Name = "imgCollectionsB2Browse"
+        Me.imgCollectionsB2Browse.Size = New System.Drawing.Size(23, 23)
+        Me.imgCollectionsB2Browse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgCollectionsB2Browse.TabIndex = 100031
+        Me.imgCollectionsB2Browse.TabStop = False
+        '
         'lblCollectionsTitle
         '
         Me.lblCollectionsTitle.AutoSize = True
@@ -1051,10 +1073,11 @@ Partial Class Movieo
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.panelLibraryCtrls.AutoScroll = True
         Me.panelLibraryCtrls.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.panelLibraryCtrls.Controls.Add(Me.btnListsBlack)
-        Me.panelLibraryCtrls.Controls.Add(Me.btnListsSeen)
-        Me.panelLibraryCtrls.Controls.Add(Me.btnListWatch)
-        Me.panelLibraryCtrls.Controls.Add(Me.btnListsFavourites)
+        Me.panelLibraryCtrls.Controls.Add(Me.lblEmptyPanelMyLists)
+        Me.panelLibraryCtrls.Controls.Add(Me.panelMyCoreListsCtrls)
+        Me.panelLibraryCtrls.Controls.Add(Me.lblHeaderLibrary)
+        Me.panelLibraryCtrls.Controls.Add(Me.lblHeaderMyLists)
+        Me.panelLibraryCtrls.Controls.Add(Me.panelMyListsCtrls)
         Me.panelLibraryCtrls.Location = New System.Drawing.Point(0, 0)
         Me.panelLibraryCtrls.Margin = New System.Windows.Forms.Padding(3, 3, 0, 3)
         Me.panelLibraryCtrls.Name = "panelLibraryCtrls"
@@ -1062,35 +1085,90 @@ Partial Class Movieo
         Me.panelLibraryCtrls.Size = New System.Drawing.Size(172, 693)
         Me.panelLibraryCtrls.TabIndex = 100021
         '
-        'btnListsBlack
+        'lblEmptyPanelMyLists
         '
-        Me.btnListsBlack.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.lblEmptyPanelMyLists.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnListsBlack.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.btnListsBlack.BorderColor = System.Drawing.Color.Transparent
-        Me.btnListsBlack.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.btnListsBlack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnListsBlack.DesignerSelected = False
-        Me.btnListsBlack.DimFactorClick = 0
-        Me.btnListsBlack.DimFactorHover = 0
-        Me.btnListsBlack.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.btnListsBlack.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
-        Me.btnListsBlack.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.btnListsBlack.ImageIndex = 0
-        Me.btnListsBlack.Location = New System.Drawing.Point(10, 93)
-        Me.btnListsBlack.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnListsBlack.Name = "btnListsBlack"
-        Me.btnListsBlack.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.btnListsBlack.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnListsBlack.SideImageSize = New System.Drawing.Size(14, 15)
-        Me.btnListsBlack.Size = New System.Drawing.Size(154, 28)
-        Me.btnListsBlack.TabIndex = 100039
-        Me.btnListsBlack.TabStop = False
-        Me.btnListsBlack.Text = "Black List"
-        Me.btnListsBlack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnListsBlack.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
-        Me.btnListsBlack.TextShadow = System.Drawing.Color.White
-        Me.btnListsBlack.TextShadowShow = False
+        Me.lblEmptyPanelMyLists.AutoSize = True
+        Me.lblEmptyPanelMyLists.BackColor = System.Drawing.Color.Transparent
+        Me.lblEmptyPanelMyLists.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.lblEmptyPanelMyLists.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.lblEmptyPanelMyLists.Location = New System.Drawing.Point(21, 180)
+        Me.lblEmptyPanelMyLists.Name = "lblEmptyPanelMyLists"
+        Me.lblEmptyPanelMyLists.Size = New System.Drawing.Size(131, 38)
+        Me.lblEmptyPanelMyLists.TabIndex = 999
+        Me.lblEmptyPanelMyLists.Text = "You haven't created" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "any lists yet!"
+        Me.lblEmptyPanelMyLists.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'panelMyCoreListsCtrls
+        '
+        Me.panelMyCoreListsCtrls.Controls.Add(Me.btnListsFavourites)
+        Me.panelMyCoreListsCtrls.Controls.Add(Me.btnListsWatch)
+        Me.panelMyCoreListsCtrls.Controls.Add(Me.btnListsSeen)
+        Me.panelMyCoreListsCtrls.Controls.Add(Me.btnListsBlack)
+        Me.panelMyCoreListsCtrls.Location = New System.Drawing.Point(9, 29)
+        Me.panelMyCoreListsCtrls.Name = "panelMyCoreListsCtrls"
+        Me.panelMyCoreListsCtrls.Size = New System.Drawing.Size(154, 112)
+        Me.panelMyCoreListsCtrls.TabIndex = 100041
+        '
+        'btnListsFavourites
+        '
+        Me.btnListsFavourites.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnListsFavourites.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(61, Byte), Integer))
+        Me.btnListsFavourites.BorderColor = System.Drawing.Color.Transparent
+        Me.btnListsFavourites.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.btnListsFavourites.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnListsFavourites.DesignerSelected = False
+        Me.btnListsFavourites.DimFactorClick = 0
+        Me.btnListsFavourites.DimFactorHover = 0
+        Me.btnListsFavourites.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.btnListsFavourites.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.btnListsFavourites.ImageIndex = 0
+        Me.btnListsFavourites.Location = New System.Drawing.Point(0, 0)
+        Me.btnListsFavourites.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnListsFavourites.Name = "btnListsFavourites"
+        Me.btnListsFavourites.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.btnListsFavourites.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnListsFavourites.SideImageSize = New System.Drawing.Size(14, 15)
+        Me.btnListsFavourites.Size = New System.Drawing.Size(154, 28)
+        Me.btnListsFavourites.TabIndex = 100019
+        Me.btnListsFavourites.TabStop = False
+        Me.btnListsFavourites.Text = "Favourites"
+        Me.btnListsFavourites.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnListsFavourites.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnListsFavourites.TextShadow = System.Drawing.Color.White
+        Me.btnListsFavourites.TextShadowShow = False
+        '
+        'btnListsWatch
+        '
+        Me.btnListsWatch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnListsWatch.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.btnListsWatch.BorderColor = System.Drawing.Color.Transparent
+        Me.btnListsWatch.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.btnListsWatch.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnListsWatch.DesignerSelected = False
+        Me.btnListsWatch.DimFactorClick = 0
+        Me.btnListsWatch.DimFactorHover = 0
+        Me.btnListsWatch.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.btnListsWatch.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.btnListsWatch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.btnListsWatch.ImageIndex = 0
+        Me.btnListsWatch.Location = New System.Drawing.Point(0, 28)
+        Me.btnListsWatch.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnListsWatch.Name = "btnListsWatch"
+        Me.btnListsWatch.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.btnListsWatch.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnListsWatch.SideImageSize = New System.Drawing.Size(14, 15)
+        Me.btnListsWatch.Size = New System.Drawing.Size(154, 28)
+        Me.btnListsWatch.TabIndex = 100020
+        Me.btnListsWatch.TabStop = False
+        Me.btnListsWatch.Text = "Watch List"
+        Me.btnListsWatch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnListsWatch.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnListsWatch.TextShadow = System.Drawing.Color.White
+        Me.btnListsWatch.TextShadowShow = False
         '
         'btnListsSeen
         '
@@ -1107,7 +1185,7 @@ Partial Class Movieo
         Me.btnListsSeen.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnListsSeen.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnListsSeen.ImageIndex = 0
-        Me.btnListsSeen.Location = New System.Drawing.Point(10, 65)
+        Me.btnListsSeen.Location = New System.Drawing.Point(0, 56)
         Me.btnListsSeen.Margin = New System.Windows.Forms.Padding(0)
         Me.btnListsSeen.Name = "btnListsSeen"
         Me.btnListsSeen.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -1122,64 +1200,80 @@ Partial Class Movieo
         Me.btnListsSeen.TextShadow = System.Drawing.Color.White
         Me.btnListsSeen.TextShadowShow = False
         '
-        'btnListWatch
+        'btnListsBlack
         '
-        Me.btnListWatch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.btnListsBlack.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnListWatch.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.btnListWatch.BorderColor = System.Drawing.Color.Transparent
-        Me.btnListWatch.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.btnListWatch.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnListWatch.DesignerSelected = False
-        Me.btnListWatch.DimFactorClick = 0
-        Me.btnListWatch.DimFactorHover = 0
-        Me.btnListWatch.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.btnListWatch.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
-        Me.btnListWatch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.btnListWatch.ImageIndex = 0
-        Me.btnListWatch.Location = New System.Drawing.Point(9, 37)
-        Me.btnListWatch.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnListWatch.Name = "btnListWatch"
-        Me.btnListWatch.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.btnListWatch.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnListWatch.SideImageSize = New System.Drawing.Size(14, 15)
-        Me.btnListWatch.Size = New System.Drawing.Size(154, 28)
-        Me.btnListWatch.TabIndex = 100020
-        Me.btnListWatch.TabStop = False
-        Me.btnListWatch.Text = "Watch List"
-        Me.btnListWatch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnListWatch.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
-        Me.btnListWatch.TextShadow = System.Drawing.Color.White
-        Me.btnListWatch.TextShadowShow = False
+        Me.btnListsBlack.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.btnListsBlack.BorderColor = System.Drawing.Color.Transparent
+        Me.btnListsBlack.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.btnListsBlack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnListsBlack.DesignerSelected = False
+        Me.btnListsBlack.DimFactorClick = 0
+        Me.btnListsBlack.DimFactorHover = 0
+        Me.btnListsBlack.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.btnListsBlack.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
+        Me.btnListsBlack.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.btnListsBlack.ImageIndex = 0
+        Me.btnListsBlack.Location = New System.Drawing.Point(0, 84)
+        Me.btnListsBlack.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnListsBlack.Name = "btnListsBlack"
+        Me.btnListsBlack.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.btnListsBlack.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnListsBlack.SideImageSize = New System.Drawing.Size(14, 15)
+        Me.btnListsBlack.Size = New System.Drawing.Size(154, 28)
+        Me.btnListsBlack.TabIndex = 100039
+        Me.btnListsBlack.TabStop = False
+        Me.btnListsBlack.Text = "Black List"
+        Me.btnListsBlack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnListsBlack.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnListsBlack.TextShadow = System.Drawing.Color.White
+        Me.btnListsBlack.TextShadowShow = False
         '
-        'btnListsFavourites
+        'lblHeaderLibrary
         '
-        Me.btnListsFavourites.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.lblHeaderLibrary.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnListsFavourites.BackColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(61, Byte), Integer))
-        Me.btnListsFavourites.BorderColor = System.Drawing.Color.Transparent
-        Me.btnListsFavourites.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.btnListsFavourites.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnListsFavourites.DesignerSelected = False
-        Me.btnListsFavourites.DimFactorClick = 0
-        Me.btnListsFavourites.DimFactorHover = 0
-        Me.btnListsFavourites.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.btnListsFavourites.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
-        Me.btnListsFavourites.ImageIndex = 0
-        Me.btnListsFavourites.Location = New System.Drawing.Point(9, 9)
-        Me.btnListsFavourites.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnListsFavourites.Name = "btnListsFavourites"
-        Me.btnListsFavourites.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.btnListsFavourites.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnListsFavourites.SideImageSize = New System.Drawing.Size(14, 15)
-        Me.btnListsFavourites.Size = New System.Drawing.Size(154, 28)
-        Me.btnListsFavourites.TabIndex = 100019
-        Me.btnListsFavourites.TabStop = False
-        Me.btnListsFavourites.Text = "Favourites"
-        Me.btnListsFavourites.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnListsFavourites.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
-        Me.btnListsFavourites.TextShadow = System.Drawing.Color.White
-        Me.btnListsFavourites.TextShadowShow = False
+        Me.lblHeaderLibrary.AutoSize = True
+        Me.lblHeaderLibrary.BackColor = System.Drawing.Color.Transparent
+        Me.lblHeaderLibrary.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!)
+        Me.lblHeaderLibrary.ForeColor = System.Drawing.Color.White
+        Me.lblHeaderLibrary.Location = New System.Drawing.Point(6, 9)
+        Me.lblHeaderLibrary.Margin = New System.Windows.Forms.Padding(3, 0, 3, 6)
+        Me.lblHeaderLibrary.Name = "lblHeaderLibrary"
+        Me.lblHeaderLibrary.Size = New System.Drawing.Size(91, 15)
+        Me.lblHeaderLibrary.TabIndex = 100040
+        Me.lblHeaderLibrary.Text = "MY CORE LISTS"
+        Me.lblHeaderLibrary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHeaderMyLists
+        '
+        Me.lblHeaderMyLists.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblHeaderMyLists.AutoSize = True
+        Me.lblHeaderMyLists.BackColor = System.Drawing.Color.Transparent
+        Me.lblHeaderMyLists.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!)
+        Me.lblHeaderMyLists.ForeColor = System.Drawing.Color.White
+        Me.lblHeaderMyLists.Location = New System.Drawing.Point(6, 151)
+        Me.lblHeaderMyLists.Name = "lblHeaderMyLists"
+        Me.lblHeaderMyLists.Size = New System.Drawing.Size(111, 15)
+        Me.lblHeaderMyLists.TabIndex = 10009
+        Me.lblHeaderMyLists.Text = "MY CREATED LISTS"
+        Me.lblHeaderMyLists.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'panelMyListsCtrls
+        '
+        Me.panelMyListsCtrls.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelMyListsCtrls.AutoSize = True
+        Me.panelMyListsCtrls.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.panelMyListsCtrls.Location = New System.Drawing.Point(9, 172)
+        Me.panelMyListsCtrls.MaximumSize = New System.Drawing.Size(154, 0)
+        Me.panelMyListsCtrls.MinimumSize = New System.Drawing.Size(154, 0)
+        Me.panelMyListsCtrls.Name = "panelMyListsCtrls"
+        Me.panelMyListsCtrls.Size = New System.Drawing.Size(154, 0)
+        Me.panelMyListsCtrls.TabIndex = 10009
         '
         'tabsLibrary
         '
@@ -1190,6 +1284,7 @@ Partial Class Movieo
         Me.tabsLibrary.Controls.Add(Me.tabLibraryWatchList)
         Me.tabsLibrary.Controls.Add(Me.tabLibrarySeenList)
         Me.tabsLibrary.Controls.Add(Me.tabLibraryBlackList)
+        Me.tabsLibrary.Controls.Add(Me.tabLibraryMyLists)
         Me.tabsLibrary.Location = New System.Drawing.Point(168, -22)
         Me.tabsLibrary.Name = "tabsLibrary"
         Me.tabsLibrary.SelectedIndex = 0
@@ -1345,6 +1440,43 @@ Partial Class Movieo
         Me.panelLibraryBlackList.Size = New System.Drawing.Size(1119, 693)
         Me.panelLibraryBlackList.TabIndex = 10008
         '
+        'tabLibraryMyLists
+        '
+        Me.tabLibraryMyLists.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.tabLibraryMyLists.Controls.Add(Me.lblEmptyMyLists)
+        Me.tabLibraryMyLists.Controls.Add(Me.panelMyListsMovies)
+        Me.tabLibraryMyLists.Location = New System.Drawing.Point(4, 22)
+        Me.tabLibraryMyLists.Name = "tabLibraryMyLists"
+        Me.tabLibraryMyLists.Size = New System.Drawing.Size(1119, 693)
+        Me.tabLibraryMyLists.TabIndex = 4
+        Me.tabLibraryMyLists.Text = "tabLibraryMyLists"
+        '
+        'lblEmptyMyLists
+        '
+        Me.lblEmptyMyLists.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblEmptyMyLists.BackColor = System.Drawing.Color.Transparent
+        Me.lblEmptyMyLists.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.lblEmptyMyLists.ForeColor = System.Drawing.Color.FromArgb(CType(CType(86, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.lblEmptyMyLists.Location = New System.Drawing.Point(138, 80)
+        Me.lblEmptyMyLists.Name = "lblEmptyMyLists"
+        Me.lblEmptyMyLists.Size = New System.Drawing.Size(841, 56)
+        Me.lblEmptyMyLists.TabIndex = 10010
+        Me.lblEmptyMyLists.Text = "Nothing to see here..."
+        Me.lblEmptyMyLists.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'panelMyListsMovies
+        '
+        Me.panelMyListsMovies.AutoScroll = True
+        Me.panelMyListsMovies.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.panelMyListsMovies.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.panelMyListsMovies.Location = New System.Drawing.Point(0, 0)
+        Me.panelMyListsMovies.Margin = New System.Windows.Forms.Padding(3, 6, 3, 3)
+        Me.panelMyListsMovies.Name = "panelMyListsMovies"
+        Me.panelMyListsMovies.Padding = New System.Windows.Forms.Padding(0, 6, 0, 0)
+        Me.panelMyListsMovies.Size = New System.Drawing.Size(1119, 693)
+        Me.panelMyListsMovies.TabIndex = 10009
+        '
         'tabDownloads
         '
         Me.tabDownloads.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
@@ -1432,6 +1564,18 @@ Partial Class Movieo
         Me.lblSearch3.Text = "Paste HTTP links"
         Me.lblSearch3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'imgSearch3
+        '
+        Me.imgSearch3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.imgSearch3.Image = Global.Movieo.My.Resources.Resources.iconURLs
+        Me.imgSearch3.Location = New System.Drawing.Point(890, 79)
+        Me.imgSearch3.Margin = New System.Windows.Forms.Padding(100, 3, 100, 3)
+        Me.imgSearch3.Name = "imgSearch3"
+        Me.imgSearch3.Size = New System.Drawing.Size(90, 90)
+        Me.imgSearch3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgSearch3.TabIndex = 4
+        Me.imgSearch3.TabStop = False
+        '
         'lblSearch1
         '
         Me.lblSearch1.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -1444,6 +1588,18 @@ Partial Class Movieo
         Me.lblSearch1.Text = "Search for movies"
         Me.lblSearch1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'imgSearch1
+        '
+        Me.imgSearch1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.imgSearch1.Image = Global.Movieo.My.Resources.Resources.iconMovies
+        Me.imgSearch1.Location = New System.Drawing.Point(310, 79)
+        Me.imgSearch1.Margin = New System.Windows.Forms.Padding(100, 3, 100, 3)
+        Me.imgSearch1.Name = "imgSearch1"
+        Me.imgSearch1.Size = New System.Drawing.Size(90, 90)
+        Me.imgSearch1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgSearch1.TabIndex = 2
+        Me.imgSearch1.TabStop = False
+        '
         'lblSearch2
         '
         Me.lblSearch2.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -1455,6 +1611,18 @@ Partial Class Movieo
         Me.lblSearch2.TabIndex = 1
         Me.lblSearch2.Text = "Search for actors, directors and writers"
         Me.lblSearch2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'imgSearch2
+        '
+        Me.imgSearch2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.imgSearch2.Image = Global.Movieo.My.Resources.Resources.iconActors
+        Me.imgSearch2.Location = New System.Drawing.Point(600, 79)
+        Me.imgSearch2.Margin = New System.Windows.Forms.Padding(100, 3, 100, 3)
+        Me.imgSearch2.Name = "imgSearch2"
+        Me.imgSearch2.Size = New System.Drawing.Size(90, 90)
+        Me.imgSearch2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgSearch2.TabIndex = 0
+        Me.imgSearch2.TabStop = False
         '
         'tabSearchesMovies
         '
@@ -1520,7 +1688,7 @@ Partial Class Movieo
         '
         'richtxtMovieDb
         '
-        Me.richtxtMovieDb.Location = New System.Drawing.Point(276, 175)
+        Me.richtxtMovieDb.Location = New System.Drawing.Point(3, 3)
         Me.richtxtMovieDb.Name = "richtxtMovieDb"
         Me.richtxtMovieDb.Size = New System.Drawing.Size(120, 96)
         Me.richtxtMovieDb.TabIndex = 23
@@ -1584,7 +1752,7 @@ Partial Class Movieo
         'panelTabTitles
         '
         Me.panelTabTitles.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(55, Byte), Integer))
-        Me.panelTabTitles.Controls.Add(Me.titleCoreDownloads)
+        Me.panelTabTitles.Controls.Add(Me.btnCreateList)
         Me.panelTabTitles.Controls.Add(Me.titleCoreCollections)
         Me.panelTabTitles.Controls.Add(Me.titleCoreLibrary)
         Me.panelTabTitles.Controls.Add(Me.txtboxSearch)
@@ -1592,42 +1760,40 @@ Partial Class Movieo
         Me.panelTabTitles.Controls.Add(Me.titleCoreDiscover)
         Me.panelTabTitles.Controls.Add(Me.imgSearchIcon)
         Me.panelTabTitles.Controls.Add(Me.txtboxSearchBG)
+        Me.panelTabTitles.Controls.Add(Me.titleCoreDownloads)
         Me.panelTabTitles.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelTabTitles.Location = New System.Drawing.Point(0, 0)
         Me.panelTabTitles.Name = "panelTabTitles"
         Me.panelTabTitles.Size = New System.Drawing.Size(1291, 40)
         Me.panelTabTitles.TabIndex = 1027
         '
-        'titleCoreDownloads
+        'btnCreateList
         '
-        Me.titleCoreDownloads.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.titleCoreDownloads.BackColor = System.Drawing.Color.Transparent
-        Me.titleCoreDownloads.BorderColor = System.Drawing.Color.Transparent
-        Me.titleCoreDownloads.BorderShow = False
-        Me.titleCoreDownloads.ColorFillSolid = System.Drawing.Color.Transparent
-        Me.titleCoreDownloads.Corners.UpperLeft = 2
-        Me.titleCoreDownloads.Corners.UpperRight = 2
-        Me.titleCoreDownloads.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.titleCoreDownloads.DesignerSelected = False
-        Me.titleCoreDownloads.DimFactorClick = 0
-        Me.titleCoreDownloads.DimFactorHover = 0
-        Me.titleCoreDownloads.FillType = CButtonLib.CButton.eFillType.Solid
-        Me.titleCoreDownloads.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.titleCoreDownloads.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.titleCoreDownloads.ImageIndex = 0
-        Me.titleCoreDownloads.Location = New System.Drawing.Point(260, 8)
-        Me.titleCoreDownloads.Margin = New System.Windows.Forms.Padding(0)
-        Me.titleCoreDownloads.Name = "titleCoreDownloads"
-        Me.titleCoreDownloads.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.titleCoreDownloads.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.titleCoreDownloads.SideImageSize = New System.Drawing.Size(14, 15)
-        Me.titleCoreDownloads.Size = New System.Drawing.Size(99, 24)
-        Me.titleCoreDownloads.TabIndex = 100028
-        Me.titleCoreDownloads.TabStop = False
-        Me.titleCoreDownloads.Text = "DOWNLOADS"
-        Me.titleCoreDownloads.TextMargin = New System.Windows.Forms.Padding(2, 4, 2, 2)
-        Me.titleCoreDownloads.TextShadow = System.Drawing.Color.White
-        Me.titleCoreDownloads.TextShadowShow = False
+        Me.btnCreateList.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btnCreateList.BorderColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.btnCreateList.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.btnCreateList.Corners.All = 2
+        Me.btnCreateList.Corners.LowerLeft = 2
+        Me.btnCreateList.Corners.LowerRight = 2
+        Me.btnCreateList.Corners.UpperLeft = 2
+        Me.btnCreateList.Corners.UpperRight = 2
+        Me.btnCreateList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCreateList.DesignerSelected = False
+        Me.btnCreateList.DimFactorClick = 0
+        Me.btnCreateList.DimFactorHover = 0
+        Me.btnCreateList.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.btnCreateList.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!)
+        Me.btnCreateList.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.btnCreateList.ImageIndex = 0
+        Me.btnCreateList.Location = New System.Drawing.Point(1113, 6)
+        Me.btnCreateList.Margin = New System.Windows.Forms.Padding(3, 3, 3, 6)
+        Me.btnCreateList.Name = "btnCreateList"
+        Me.btnCreateList.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.btnCreateList.SideImageSize = New System.Drawing.Size(298, 300)
+        Me.btnCreateList.Size = New System.Drawing.Size(109, 28)
+        Me.btnCreateList.TabIndex = 100029
+        Me.btnCreateList.Text = "CREATE A LIST"
+        Me.btnCreateList.TextShadowShow = False
         '
         'titleCoreCollections
         '
@@ -1698,7 +1864,7 @@ Partial Class Movieo
         Me.txtboxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtboxSearch.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.txtboxSearch.ForeColor = System.Drawing.Color.White
-        Me.txtboxSearch.Location = New System.Drawing.Point(849, 10)
+        Me.txtboxSearch.Location = New System.Drawing.Point(851, 10)
         Me.txtboxSearch.MaxLength = 50
         Me.txtboxSearch.Name = "txtboxSearch"
         Me.txtboxSearch.Size = New System.Drawing.Size(213, 18)
@@ -1707,6 +1873,20 @@ Partial Class Movieo
         Me.txtboxSearch.WaterMarkActiveForeColor = System.Drawing.Color.White
         Me.txtboxSearch.WaterMarkFont = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.txtboxSearch.WaterMarkForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
+        '
+        'btnInfoMenu
+        '
+        Me.btnInfoMenu.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.btnInfoMenu.BackColor = System.Drawing.Color.Transparent
+        Me.btnInfoMenu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnInfoMenu.Image = Global.Movieo.My.Resources.Resources.DropletsIconL
+        Me.btnInfoMenu.Location = New System.Drawing.Point(1249, 5)
+        Me.btnInfoMenu.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnInfoMenu.Name = "btnInfoMenu"
+        Me.btnInfoMenu.Size = New System.Drawing.Size(34, 32)
+        Me.btnInfoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnInfoMenu.TabIndex = 1006
+        Me.btnInfoMenu.TabStop = False
         '
         'titleCoreDiscover
         '
@@ -1738,6 +1918,20 @@ Partial Class Movieo
         Me.titleCoreDiscover.TextShadow = System.Drawing.Color.White
         Me.titleCoreDiscover.TextShadowShow = False
         '
+        'imgSearchIcon
+        '
+        Me.imgSearchIcon.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.imgSearchIcon.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.imgSearchIcon.Cursor = System.Windows.Forms.Cursors.Default
+        Me.imgSearchIcon.Image = CType(resources.GetObject("imgSearchIcon.Image"), System.Drawing.Image)
+        Me.imgSearchIcon.Location = New System.Drawing.Point(828, 12)
+        Me.imgSearchIcon.Margin = New System.Windows.Forms.Padding(0)
+        Me.imgSearchIcon.Name = "imgSearchIcon"
+        Me.imgSearchIcon.Size = New System.Drawing.Size(18, 18)
+        Me.imgSearchIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgSearchIcon.TabIndex = 100026
+        Me.imgSearchIcon.TabStop = False
+        '
         'txtboxSearchBG
         '
         Me.txtboxSearchBG.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -1752,7 +1946,7 @@ Partial Class Movieo
         Me.txtboxSearchBG.FillType = CButtonLib.CButton.eFillType.Solid
         Me.txtboxSearchBG.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
         Me.txtboxSearchBG.ImageIndex = 0
-        Me.txtboxSearchBG.Location = New System.Drawing.Point(814, 0)
+        Me.txtboxSearchBG.Location = New System.Drawing.Point(816, 0)
         Me.txtboxSearchBG.Name = "txtboxSearchBG"
         Me.txtboxSearchBG.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.txtboxSearchBG.Size = New System.Drawing.Size(255, 40)
@@ -1761,6 +1955,37 @@ Partial Class Movieo
         Me.txtboxSearchBG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.txtboxSearchBG.TextShadow = System.Drawing.Color.White
         Me.txtboxSearchBG.TextShadowShow = False
+        '
+        'titleCoreDownloads
+        '
+        Me.titleCoreDownloads.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.titleCoreDownloads.BackColor = System.Drawing.Color.Transparent
+        Me.titleCoreDownloads.BorderColor = System.Drawing.Color.Transparent
+        Me.titleCoreDownloads.BorderShow = False
+        Me.titleCoreDownloads.ColorFillSolid = System.Drawing.Color.Transparent
+        Me.titleCoreDownloads.Corners.UpperLeft = 2
+        Me.titleCoreDownloads.Corners.UpperRight = 2
+        Me.titleCoreDownloads.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.titleCoreDownloads.DesignerSelected = False
+        Me.titleCoreDownloads.DimFactorClick = 0
+        Me.titleCoreDownloads.DimFactorHover = 0
+        Me.titleCoreDownloads.FillType = CButtonLib.CButton.eFillType.Solid
+        Me.titleCoreDownloads.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.titleCoreDownloads.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.titleCoreDownloads.ImageIndex = 0
+        Me.titleCoreDownloads.Location = New System.Drawing.Point(255, 8)
+        Me.titleCoreDownloads.Margin = New System.Windows.Forms.Padding(0)
+        Me.titleCoreDownloads.Name = "titleCoreDownloads"
+        Me.titleCoreDownloads.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.titleCoreDownloads.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.titleCoreDownloads.SideImageSize = New System.Drawing.Size(14, 15)
+        Me.titleCoreDownloads.Size = New System.Drawing.Size(99, 24)
+        Me.titleCoreDownloads.TabIndex = 100028
+        Me.titleCoreDownloads.TabStop = False
+        Me.titleCoreDownloads.Text = "DOWNLOADS"
+        Me.titleCoreDownloads.TextMargin = New System.Windows.Forms.Padding(2, 4, 2, 2)
+        Me.titleCoreDownloads.TextShadow = System.Drawing.Color.White
+        Me.titleCoreDownloads.TextShadowShow = False
         '
         'timerResetFilters
         '
@@ -1793,82 +2018,6 @@ Partial Class Movieo
         'timerGoToTime
         '
         Me.timerGoToTime.Interval = 500
-        '
-        'btnInfoMenu
-        '
-        Me.btnInfoMenu.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.btnInfoMenu.BackColor = System.Drawing.Color.Transparent
-        Me.btnInfoMenu.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnInfoMenu.Image = Global.Movieo.My.Resources.Resources.DropletsIconL
-        Me.btnInfoMenu.Location = New System.Drawing.Point(1249, 5)
-        Me.btnInfoMenu.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnInfoMenu.Name = "btnInfoMenu"
-        Me.btnInfoMenu.Size = New System.Drawing.Size(34, 32)
-        Me.btnInfoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnInfoMenu.TabIndex = 1006
-        Me.btnInfoMenu.TabStop = False
-        '
-        'imgSearchIcon
-        '
-        Me.imgSearchIcon.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.imgSearchIcon.BackColor = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.imgSearchIcon.Cursor = System.Windows.Forms.Cursors.Default
-        Me.imgSearchIcon.Image = CType(resources.GetObject("imgSearchIcon.Image"), System.Drawing.Image)
-        Me.imgSearchIcon.Location = New System.Drawing.Point(825, 12)
-        Me.imgSearchIcon.Margin = New System.Windows.Forms.Padding(0)
-        Me.imgSearchIcon.Name = "imgSearchIcon"
-        Me.imgSearchIcon.Size = New System.Drawing.Size(18, 18)
-        Me.imgSearchIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgSearchIcon.TabIndex = 100026
-        Me.imgSearchIcon.TabStop = False
-        '
-        'imgCollectionsB2Browse
-        '
-        Me.imgCollectionsB2Browse.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.imgCollectionsB2Browse.Image = Global.Movieo.My.Resources.Resources.ArrowLeftH
-        Me.imgCollectionsB2Browse.Location = New System.Drawing.Point(11, 3)
-        Me.imgCollectionsB2Browse.Margin = New System.Windows.Forms.Padding(11, 3, 0, 3)
-        Me.imgCollectionsB2Browse.Name = "imgCollectionsB2Browse"
-        Me.imgCollectionsB2Browse.Size = New System.Drawing.Size(23, 23)
-        Me.imgCollectionsB2Browse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgCollectionsB2Browse.TabIndex = 100031
-        Me.imgCollectionsB2Browse.TabStop = False
-        '
-        'imgSearch3
-        '
-        Me.imgSearch3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.imgSearch3.Image = Global.Movieo.My.Resources.Resources.iconURLs
-        Me.imgSearch3.Location = New System.Drawing.Point(890, 79)
-        Me.imgSearch3.Margin = New System.Windows.Forms.Padding(100, 3, 100, 3)
-        Me.imgSearch3.Name = "imgSearch3"
-        Me.imgSearch3.Size = New System.Drawing.Size(90, 90)
-        Me.imgSearch3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgSearch3.TabIndex = 4
-        Me.imgSearch3.TabStop = False
-        '
-        'imgSearch1
-        '
-        Me.imgSearch1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.imgSearch1.Image = Global.Movieo.My.Resources.Resources.iconMovies
-        Me.imgSearch1.Location = New System.Drawing.Point(310, 79)
-        Me.imgSearch1.Margin = New System.Windows.Forms.Padding(100, 3, 100, 3)
-        Me.imgSearch1.Name = "imgSearch1"
-        Me.imgSearch1.Size = New System.Drawing.Size(90, 90)
-        Me.imgSearch1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgSearch1.TabIndex = 2
-        Me.imgSearch1.TabStop = False
-        '
-        'imgSearch2
-        '
-        Me.imgSearch2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.imgSearch2.Image = Global.Movieo.My.Resources.Resources.iconActors
-        Me.imgSearch2.Location = New System.Drawing.Point(600, 79)
-        Me.imgSearch2.Margin = New System.Windows.Forms.Padding(100, 3, 100, 3)
-        Me.imgSearch2.Name = "imgSearch2"
-        Me.imgSearch2.Size = New System.Drawing.Size(90, 90)
-        Me.imgSearch2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgSearch2.TabIndex = 0
-        Me.imgSearch2.TabStop = False
         '
         'icoLoadingWeb
         '
@@ -1904,17 +2053,24 @@ Partial Class Movieo
         Me.panelCollectionsCtrls.PerformLayout()
         Me.panelCollectionsDetails.ResumeLayout(False)
         Me.panelCollectionsDetails.PerformLayout()
+        CType(Me.imgCollectionsB2Browse, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabLibrary.ResumeLayout(False)
         Me.panelLibraryCtrls.ResumeLayout(False)
+        Me.panelLibraryCtrls.PerformLayout()
+        Me.panelMyCoreListsCtrls.ResumeLayout(False)
         Me.tabsLibrary.ResumeLayout(False)
         Me.tabLibraryFavourites.ResumeLayout(False)
         Me.tabLibraryWatchList.ResumeLayout(False)
         Me.tabLibrarySeenList.ResumeLayout(False)
         Me.tabLibraryBlackList.ResumeLayout(False)
+        Me.tabLibraryMyLists.ResumeLayout(False)
         Me.tabDownloads.ResumeLayout(False)
         Me.tabSearches.ResumeLayout(False)
         Me.tabsSearches.ResumeLayout(False)
         Me.tabSearchesHome.ResumeLayout(False)
+        CType(Me.imgSearch3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgSearch1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgSearch2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabSearchesMovies.ResumeLayout(False)
         Me.tabLoading.ResumeLayout(False)
         Me.tabMovieBackground.ResumeLayout(False)
@@ -1922,10 +2078,6 @@ Partial Class Movieo
         Me.panelTabTitles.PerformLayout()
         CType(Me.btnInfoMenu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.imgSearchIcon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.imgCollectionsB2Browse, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.imgSearch3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.imgSearch1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.imgSearch2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.icoLoadingWeb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -2005,7 +2157,7 @@ Partial Class Movieo
     Friend WithEvents panelLibraryCtrls As Panel
     Friend WithEvents btnListsBlack As CButtonLib.CButton
     Friend WithEvents btnListsSeen As CButtonLib.CButton
-    Friend WithEvents btnListWatch As CButtonLib.CButton
+    Friend WithEvents btnListsWatch As CButtonLib.CButton
     Friend WithEvents btnListsFavourites As CButtonLib.CButton
     Friend WithEvents ToolTip As ToolTip
     Friend WithEvents timerHideNotification As Timer
@@ -2036,4 +2188,13 @@ Partial Class Movieo
     Friend WithEvents panelMovieFeatures As Panel
     Friend WithEvents lblLoadingSub As Label
     Friend WithEvents lblLoading As Label
+    Friend WithEvents panelMyListsCtrls As FlowLayoutPanel
+    Friend WithEvents tabLibraryMyLists As TabPage
+    Friend WithEvents panelMyListsMovies As FlowLayoutPanel
+    Friend WithEvents btnCreateList As CButtonLib.CButton
+    Friend WithEvents lblHeaderLibrary As Label
+    Friend WithEvents lblHeaderMyLists As Label
+    Friend WithEvents lblEmptyMyLists As Label
+    Friend WithEvents panelMyCoreListsCtrls As Panel
+    Friend WithEvents lblEmptyPanelMyLists As Label
 End Class

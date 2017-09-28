@@ -88,7 +88,7 @@ Public Class frmImportExport
         cmboboxImportFrom.DroppedDown = True
     End Sub
 
-    Private Sub cmboboxWatchedMovies_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxImportFrom.SelectedIndexChanged
+    Private Sub cmboboxImportFrom_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxImportFrom.SelectedIndexChanged
         cmboLblImportFrom.Text = cmboboxImportFrom.SelectedItem.ToString
     End Sub
 
@@ -118,11 +118,11 @@ Public Class frmImportExport
             lblImportFile.Text = "Please choose a file"
         Else
             If cmboboxImportFrom.SelectedIndex = 0 AndAlso cmboboxImportTo.SelectedIndex = 0 Then
-                ImportIMDb(Movieo.listWatchList)
+                ImportIMDb("Watch List")
             ElseIf cmboboxImportFrom.SelectedIndex = 0 AndAlso cmboboxImportTo.SelectedIndex = 1 Then
-                ImportIMDb(Movieo.listSeenList)
+                ImportIMDb("Seen List")
             ElseIf cmboboxImportFrom.SelectedIndex = 0 AndAlso cmboboxImportTo.SelectedIndex = 2 Then
-                ImportIMDb(Movieo.listBlackList)
+                ImportIMDb("Black List")
             End If
         End If
     End Sub
@@ -139,7 +139,7 @@ Public Class frmImportExport
         sender.ColorFillSolid = Color.Transparent
     End Sub
 
-    Private Sub ImportIMDb(itemsList As List(Of String))
+    Private Sub ImportIMDb(nameList As String)
         Try
             Dim MyReader As New FileIO.TextFieldParser(fileToImportPath)
             MyReader.TextFieldType = FileIO.FieldType.Delimited
@@ -150,37 +150,75 @@ Public Class frmImportExport
                 Try
                     currentRow = MyReader.ReadFields()
                     If Not currentRow(5) = "Title" Then
+                        Dim movieIMDbId = currentRow(1)
                         Dim movieTitle = currentRow(5)
                         Dim movieYear = currentRow(11)
                         Dim movieTitleYear As String = movieTitle + " (" + movieYear + ")"
-                        Movieo.accessList(itemsList, movieTitleYear)
+
+                        If nameList = "Watch List" Then
+                            If Movieo.listWatchList.Contains(movieTitleYear) Then
+                                Movieo.RemoveMovie(Movieo.panelLibraryWatchList, Movieo.listWatchList, movieTitle, movieYear, movieIMDbId)
+                            Else
+                                Movieo.AddMovieToList(Movieo.panelLibraryWatchList, Movieo.listWatchList, movieTitle, movieYear, movieIMDbId)
+
+                                If Movieo.listBlackList.Contains(movieTitleYear) Then
+                                    Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+                                End If
+
+                                If Movieo.listSeenList.Contains(movieTitleYear) Then
+                                    Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+                                End If
+                            End If
+                        ElseIf nameList = "Seen List" Then
+                            If Movieo.listWatchList.Contains(movieTitleYear) Then
+                                Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+                            Else
+                                Movieo.AddMovieToList(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+
+                                If Movieo.listBlackList.Contains(movieTitleYear) Then
+                                    Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+                                End If
+
+                                If Movieo.listSeenList.Contains(movieTitleYear) Then
+                                    Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+                                End If
+                            End If
+                        ElseIf nameList = "Black List" Then
+                            If Movieo.listWatchList.Contains(movieTitleYear) Then
+                                Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+                            Else
+                                Movieo.AddMovieToList(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+
+                                If Movieo.listBlackList.Contains(movieTitleYear) Then
+                                    Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+                                End If
+
+                                If Movieo.listSeenList.Contains(movieTitleYear) Then
+                                    Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+                                End If
+                            End If
+                        End If
                     End If
                 Catch
                 End Try
             End While
-            lblImportFile.Text = "IMDb List Imported!"
+            lblImportFile.Text = "List Imported!"
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-    Private Sub ReadCustomCSV(itemsList As List(Of String))
-        Dim fileReader As StreamReader = My.Computer.FileSystem.OpenTextFileReader(fileToImportPath)
-        Dim stringReader As String = fileReader.ReadLine()
-
-        For Each movieItem As String In stringReader
-            Dim fields = movieItem.Split(""""c)
-            Dim quote = """"c
-            Dim movieTitle As String = fields(5).Trim(quote)
-            Dim movieYear As String = fields(11).Trim(quote)
-            Dim movieTitleAndYear As String = movieTitle + " (" + movieYear + ")"
-            Movieo.accessList(itemsList, movieTitleAndYear)
-        Next
-    End Sub
-
 #End Region
 
 #Region "Export"
+
+    Private Sub cmboboxExportFrom_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles cmboLblExportFrom.ClickButtonArea
+        cmboboxExportFrom.DroppedDown = True
+    End Sub
+
+    Private Sub cmboboxExportFrom_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxExportFrom.SelectedIndexChanged
+        cmboboxExportFrom.Text = cmboboxExportFrom.SelectedItem.ToString
+    End Sub
 
     Private Sub btnStartExporting_MouseMove(sender As Object, e As EventArgs) Handles btnStartExporting.MouseMove, btnStartExporting.GotFocus
         sender.ForeColor = Color.White

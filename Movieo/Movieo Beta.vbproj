@@ -143,6 +143,12 @@
     <Compile Include="ctrlCollectionThumbnail.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ctrlContextMenuMyLists.Designer.vb">
+      <DependentUpon>ctrlContextMenuMyLists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctrlContextMenuMyLists.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ctrlItemComment.Designer.vb">
       <DependentUpon>ctrlItemComment.vb</DependentUpon>
     </Compile>
@@ -159,6 +165,12 @@
       <DependentUpon>frmBackgroundMovieDetails.vb</DependentUpon>
     </Compile>
     <Compile Include="frmBackgroundMovieDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateList.Designer.vb">
+      <DependentUpon>frmCreateList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDownloadClient.Designer.vb">
@@ -183,6 +195,12 @@
       <DependentUpon>frmRequestMovie.vb</DependentUpon>
     </Compile>
     <Compile Include="frmRequestMovie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectList.Designer.vb">
+      <DependentUpon>frmSelectList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSelectSource.Designer.vb">
@@ -272,6 +290,9 @@
     <EmbeddedResource Include="ctrlCollectionThumbnail.resx">
       <DependentUpon>ctrlCollectionThumbnail.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ctrlContextMenuMyLists.resx">
+      <DependentUpon>ctrlContextMenuMyLists.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlItemComment.resx">
       <DependentUpon>ctrlItemComment.vb</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBackgroundMovieDetails.resx">
       <DependentUpon>frmBackgroundMovieDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateList.resx">
+      <DependentUpon>frmCreateList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDownloadClient.resx">
       <DependentUpon>frmDownloadClient.vb</DependentUpon>
@@ -292,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRequestMovie.resx">
       <DependentUpon>frmRequestMovie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectList.resx">
+      <DependentUpon>frmSelectList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelectSource.resx">
       <DependentUpon>frmSelectSource.vb</DependentUpon>
@@ -353,24 +380,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Movieo Logo.ico" />
+    <None Include="Resources\Create List.png" />
+    <None Include="Resources\MetaCriticIcon.png" />
+    <None Include="Resources\Edit Icon.png" />
+    <None Include="Resources\My Lists L.png" />
+    <None Include="Resources\My Lists H.png" />
+    <None Include="Resources\popcorntime-logo.png" />
+    <None Include="Resources\starRatingH.png" />
+    <None Include="Resources\starRatingL.png" />
+    <None Include="Resources\starRatingHH.png" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\Favourite H STICKY.png" />
     <None Include="Resources\omdb-logo.png" />
     <None Include="Resources\iconURLs.png" />
     <None Include="Resources\iconMovies.png" />
     <None Include="Resources\iconActors.png" />
     <None Include="Resources\NetflixIcon.png" />
-    <None Include="Resources\Drop Shadow.png" />
     <None Include="Resources\ArrowDownL.png" />
     <None Include="Resources\BookmarkIconH.png" />
     <None Include="Resources\BookmarkIcon.png" />
     <None Include="Resources\Watch List L1.png" />
-    <None Include="Resources\Default User.png" />
-    <None Include="Resources\Default User Icon.png" />
     <None Include="Resources\CelebSummer.png" />
-    <None Include="Resources\Popcorn Time.png" />
     <None Include="Resources\OMDb Logo.png" />
     <None Include="Resources\Dropbox Logo.png" />
     <None Include="Resources\Background2.png" />
-    <None Include="Resources\Scrollbar Thumb.png" />
     <None Include="Resources\Background1.png" />
     <None Include="Resources\PlayIcon.png" />
     <None Include="Resources\Dropbox and OMDb.png" />
@@ -379,7 +412,6 @@
     <None Include="Resources\FacebookL.png" />
     <None Include="Resources\FacebookH.png" />
     <None Include="packages.config" />
-    <None Include="Resources\Empty Panel.png" />
     <None Include="Resources\SearchIconH.png" />
     <None Include="Resources\SearchIconL.png" />
     <None Include="Resources\notificationsIconL.png" />
@@ -389,12 +421,10 @@
     <None Include="Resources\CelebHalloween.png" />
     <None Include="Resources\BrowseIconH.png" />
     <None Include="Resources\BrowseIconL.png" />
-    <None Include="Resources\Favourite H STICKY.png" />
     <None Include="Resources\Watch List H STICKY.png" />
     <None Include="Resources\Seen List H STICKY.png" />
     <None Include="Resources\Black List Icon STICKY.png" />
     <None Include="Resources\RTomatoesIcon.png" />
-    <None Include="Resources\MetaCriticIcon.png" />
     <None Include="Resources\ImdbIcon.png" />
     <None Include="Resources\ArrowLeftH.png" />
     <None Include="Resources\ArrowLeftL.png" />
@@ -416,20 +446,12 @@
     <None Include="Resources\UnderlineGlow2.png" />
     <None Include="Resources\UnderlineGlow1.png" />
     <None Include="Resources\UnderlineGlow.png" />
-    <None Include="Resources\Movieo Glow1.png" />
     <None Include="Resources\Movieo Glow.png" />
     <None Include="Resources\PosterGlow.png" />
     <None Include="Resources\DropletsIconL.png" />
     <None Include="Resources\DropletsIconH.png" />
-    <None Include="Resources\DropletsIconBgH.png" />
-    <None Include="Resources\MovieErrorImage.png" />
     <None Include="Resources\FeedbackH.png" />
-    <None Include="Resources\FeedbackL2.png" />
     <None Include="Resources\FavouriteH.png" />
-    <None Include="Resources\MinimiseAppL.png" />
-    <None Include="Resources\MinimiseAppH.png" />
-    <None Include="Resources\MaximiseAppL.png" />
-    <None Include="Resources\MaximiseAppH.png" />
     <None Include="Resources\CloseAppL.png" />
     <None Include="Resources\CloseAppH.png" />
     <None Include="Resources\SearchIconH1.png" />
@@ -445,20 +467,13 @@
     <None Include="Resources\FacebookLogo.png" />
     <None Include="Resources\twitterLogo.png" />
     <None Include="Resources\themoviedb.org.png" />
-    <None Include="Resources\Add Movies to Favourites.png" />
-    <None Include="Resources\Add Movies to Favourites1.png" />
-    <None Include="Resources\MaximiseApp.png" />
     <None Include="Resources\CloseApp.png" />
-    <None Include="Resources\MinimiseApp.png" />
     <None Include="Resources\SearchIconL2.png" />
-    <None Include="Resources\Search.png" />
     <None Include="Resources\SearchIconL1.png" />
     <None Include="Resources\ArrowDown1.png" />
     <None Include="Resources\FavouriteL2.png" />
     <None Include="Resources\FavouriteL1.png" />
     <None Include="Resources\FavouriteL.png" />
-    <None Include="Resources\closeL.png" />
-    <None Include="Resources\closeH.png" />
     <None Include="Resources\twitter logo.png" />
     <None Include="Resources\twitter logo WHITE.png" />
     <None Include="Resources\the_movie_db-c1cc8205ad01c84e5c86b31b3885698af54fd8c10851fe0c5453903f8bbc2401.png" />
@@ -470,42 +485,14 @@
     <None Include="Resources\seenH.png" />
     <None Include="Resources\SearchIconXXX.png" />
     <None Include="Resources\SearchIconX.png" />
-    <None Include="Resources\search-icon-hi %281%29.png" />
     <None Include="Resources\Search-icon.png" />
     <None Include="Resources\SearchIcon.png" />
-    <None Include="Resources\minimiseIcon.png" />
-    <None Include="Resources\menuIconXXX.png" />
-    <None Include="Resources\menuIconX.png" />
-    <None Include="Resources\menuIcon.png" />
-    <None Include="Resources\maximiseIcon.png" />
-    <None Include="Resources\left_round.png" />
-    <None Include="Resources\heartttHOVER.png" />
-    <None Include="Resources\hearttt.png" />
-    <None Include="Resources\HeartOutlineL2.png" />
-    <None Include="Resources\HeartOutlineL1.png" />
-    <None Include="Resources\HeartOutlineL.png" />
-    <None Include="Resources\HeartOutlineH.png" />
-    <None Include="Resources\gradientBg2.png" />
-    <None Include="Resources\feedbackLxx.png" />
-    <None Include="Resources\FeedbackL1.png" />
-    <None Include="Resources\feedbackL.png" />
-    <None Include="Resources\FeedbackH1.png" />
-    <None Include="Resources\faveicon1HRed.png" />
-    <None Include="Resources\faveicon1H.png" />
-    <None Include="Resources\faveicon1.png" />
-    <None Include="Resources\faveicon.png" />
     <None Include="Resources\facebook-4096.png" />
     <None Include="Resources\facebook logo WHITE.png" />
     <None Include="Resources\f.png" />
-    <None Include="Resources\expandIcon.png" />
-    <None Include="Resources\closeLxxxxxxxxxxxxxxxxxxx.png" />
-    <None Include="Resources\closeIcon.png" />
     <None Include="Resources\btnAddonx31.png" />
     <None Include="Resources\Background.png" />
     <None Include="Resources\ArrowDown.png" />
-    <None Include="Resources\add.png" />
-    <None Include="Resources\6797810-hd-space-wallpapers.jpg" />
-    <None Include="Resources\1.jpg" />
     <None Include="Resources\watchImage1.png" />
     <None Include="Resources\watchImage.png" />
     <None Include="Resources\watchepH.png" />

@@ -144,12 +144,12 @@ Partial Class frmImportExport
         Me.btnStartImporting.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!)
         Me.btnStartImporting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.btnStartImporting.ImageIndex = 0
-        Me.btnStartImporting.Location = New System.Drawing.Point(398, 489)
+        Me.btnStartImporting.Location = New System.Drawing.Point(374, 489)
         Me.btnStartImporting.Margin = New System.Windows.Forms.Padding(3, 3, 3, 6)
         Me.btnStartImporting.Name = "btnStartImporting"
         Me.btnStartImporting.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnStartImporting.Size = New System.Drawing.Size(197, 37)
-        Me.btnStartImporting.TabIndex = 100000098
+        Me.btnStartImporting.TabIndex = 6
         Me.btnStartImporting.Text = "START IMPORTING"
         Me.btnStartImporting.TextShadowShow = False
         '
@@ -159,10 +159,10 @@ Partial Class frmImportExport
         Me.lblImportFile.AutoSize = True
         Me.lblImportFile.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!)
         Me.lblImportFile.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblImportFile.Location = New System.Drawing.Point(472, 445)
+        Me.lblImportFile.Location = New System.Drawing.Point(456, 445)
         Me.lblImportFile.Name = "lblImportFile"
         Me.lblImportFile.Size = New System.Drawing.Size(94, 17)
-        Me.lblImportFile.TabIndex = 100000097
+        Me.lblImportFile.TabIndex = 99999
         Me.lblImportFile.Text = "No file chosen"
         '
         'btnImportChooseFile
@@ -170,10 +170,10 @@ Partial Class frmImportExport
         Me.btnImportChooseFile.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnImportChooseFile.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnImportChooseFile.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!)
-        Me.btnImportChooseFile.Location = New System.Drawing.Point(398, 444)
+        Me.btnImportChooseFile.Location = New System.Drawing.Point(382, 444)
         Me.btnImportChooseFile.Name = "btnImportChooseFile"
         Me.btnImportChooseFile.Size = New System.Drawing.Size(72, 21)
-        Me.btnImportChooseFile.TabIndex = 4
+        Me.btnImportChooseFile.TabIndex = 5
         Me.btnImportChooseFile.Text = "Choose file"
         Me.btnImportChooseFile.UseVisualStyleBackColor = True
         '
@@ -182,7 +182,7 @@ Partial Class frmImportExport
         Me.cmboBoxPanelImportTo.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmboBoxPanelImportTo.BackColor = System.Drawing.Color.Transparent
         Me.cmboBoxPanelImportTo.Controls.Add(Me.cmboLblImportTo)
-        Me.cmboBoxPanelImportTo.Location = New System.Drawing.Point(398, 391)
+        Me.cmboBoxPanelImportTo.Location = New System.Drawing.Point(382, 391)
         Me.cmboBoxPanelImportTo.Name = "cmboBoxPanelImportTo"
         Me.cmboBoxPanelImportTo.Size = New System.Drawing.Size(197, 31)
         Me.cmboBoxPanelImportTo.TabIndex = 100000096
@@ -210,11 +210,11 @@ Partial Class frmImportExport
         Me.cmboLblImportTo.Location = New System.Drawing.Point(0, 0)
         Me.cmboLblImportTo.Name = "cmboLblImportTo"
         Me.cmboLblImportTo.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.cmboLblImportTo.SideImage = Global.Movieo.My.Resources.Resources.ArrowDown
+        Me.cmboLblImportTo.SideImage = Global.Movieo.My.Resources.Resources.ArrowDownH
         Me.cmboLblImportTo.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmboLblImportTo.SideImageSize = New System.Drawing.Size(18, 19)
         Me.cmboLblImportTo.Size = New System.Drawing.Size(197, 30)
-        Me.cmboLblImportTo.TabIndex = 3
+        Me.cmboLblImportTo.TabIndex = 4
         Me.cmboLblImportTo.Text = "Watch List"
         Me.cmboLblImportTo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.cmboLblImportTo.TextMargin = New System.Windows.Forms.Padding(4, 2, 2, 2)
@@ -231,7 +231,7 @@ Partial Class frmImportExport
         Me.cmboboxImportTo.ForeColor = System.Drawing.Color.White
         Me.cmboboxImportTo.FormattingEnabled = True
         Me.cmboboxImportTo.Items.AddRange(New Object() {"Watch List", "Seen List", "Black List"})
-        Me.cmboboxImportTo.Location = New System.Drawing.Point(398, 395)
+        Me.cmboboxImportTo.Location = New System.Drawing.Point(382, 395)
         Me.cmboboxImportTo.Name = "cmboboxImportTo"
         Me.cmboboxImportTo.Size = New System.Drawing.Size(197, 27)
         Me.cmboboxImportTo.TabIndex = 100000095
@@ -244,12 +244,12 @@ Partial Class frmImportExport
         Me.lblSubImportData.AutoSize = True
         Me.lblSubImportData.Font = New System.Drawing.Font("Segoe UI", 12.75!)
         Me.lblSubImportData.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblSubImportData.Location = New System.Drawing.Point(131, 179)
+        Me.lblSubImportData.Location = New System.Drawing.Point(115, 179)
         Me.lblSubImportData.MaximumSize = New System.Drawing.Size(730, 0)
         Me.lblSubImportData.MinimumSize = New System.Drawing.Size(730, 0)
         Me.lblSubImportData.Name = "lblSubImportData"
         Me.lblSubImportData.Size = New System.Drawing.Size(730, 46)
-        Me.lblSubImportData.TabIndex = 100000096
+        Me.lblSubImportData.TabIndex = 99999
         Me.lblSubImportData.Text = "Import movies from other services" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "into any of your lists."
         Me.lblSubImportData.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
@@ -259,10 +259,10 @@ Partial Class frmImportExport
         Me.lblImportTo.AutoSize = True
         Me.lblImportTo.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.lblImportTo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblImportTo.Location = New System.Drawing.Point(437, 354)
+        Me.lblImportTo.Location = New System.Drawing.Point(421, 354)
         Me.lblImportTo.Name = "lblImportTo"
         Me.lblImportTo.Size = New System.Drawing.Size(118, 21)
-        Me.lblImportTo.TabIndex = 100000094
+        Me.lblImportTo.TabIndex = 99999
         Me.lblImportTo.Text = "AND PUT INTO"
         '
         'lblHeaderImportData
@@ -272,10 +272,10 @@ Partial Class frmImportExport
         Me.lblHeaderImportData.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblHeaderImportData.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeaderImportData.ForeColor = System.Drawing.Color.White
-        Me.lblHeaderImportData.Location = New System.Drawing.Point(394, 126)
+        Me.lblHeaderImportData.Location = New System.Drawing.Point(378, 126)
         Me.lblHeaderImportData.Name = "lblHeaderImportData"
         Me.lblHeaderImportData.Size = New System.Drawing.Size(204, 45)
-        Me.lblHeaderImportData.TabIndex = 100000095
+        Me.lblHeaderImportData.TabIndex = 99999
         Me.lblHeaderImportData.Text = "Import Data"
         '
         'cmboBoxPanelImportFrom
@@ -283,7 +283,7 @@ Partial Class frmImportExport
         Me.cmboBoxPanelImportFrom.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.cmboBoxPanelImportFrom.BackColor = System.Drawing.Color.Transparent
         Me.cmboBoxPanelImportFrom.Controls.Add(Me.cmboLblImportFrom)
-        Me.cmboBoxPanelImportFrom.Location = New System.Drawing.Point(398, 303)
+        Me.cmboBoxPanelImportFrom.Location = New System.Drawing.Point(382, 303)
         Me.cmboBoxPanelImportFrom.Name = "cmboBoxPanelImportFrom"
         Me.cmboBoxPanelImportFrom.Size = New System.Drawing.Size(197, 31)
         Me.cmboBoxPanelImportFrom.TabIndex = 100000093
@@ -311,7 +311,7 @@ Partial Class frmImportExport
         Me.cmboLblImportFrom.Location = New System.Drawing.Point(0, 0)
         Me.cmboLblImportFrom.Name = "cmboLblImportFrom"
         Me.cmboLblImportFrom.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.cmboLblImportFrom.SideImage = Global.Movieo.My.Resources.Resources.ArrowDown
+        Me.cmboLblImportFrom.SideImage = Global.Movieo.My.Resources.Resources.ArrowDownH
         Me.cmboLblImportFrom.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmboLblImportFrom.SideImageSize = New System.Drawing.Size(18, 19)
         Me.cmboLblImportFrom.Size = New System.Drawing.Size(197, 30)
@@ -332,7 +332,7 @@ Partial Class frmImportExport
         Me.cmboboxImportFrom.ForeColor = System.Drawing.Color.White
         Me.cmboboxImportFrom.FormattingEnabled = True
         Me.cmboboxImportFrom.Items.AddRange(New Object() {"IMDb"})
-        Me.cmboboxImportFrom.Location = New System.Drawing.Point(398, 307)
+        Me.cmboboxImportFrom.Location = New System.Drawing.Point(382, 307)
         Me.cmboboxImportFrom.Name = "cmboboxImportFrom"
         Me.cmboboxImportFrom.Size = New System.Drawing.Size(197, 27)
         Me.cmboboxImportFrom.TabIndex = 100000092
@@ -345,10 +345,10 @@ Partial Class frmImportExport
         Me.lblImportFrom.AutoSize = True
         Me.lblImportFrom.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!)
         Me.lblImportFrom.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.lblImportFrom.Location = New System.Drawing.Point(437, 266)
+        Me.lblImportFrom.Location = New System.Drawing.Point(421, 266)
         Me.lblImportFrom.Name = "lblImportFrom"
         Me.lblImportFrom.Size = New System.Drawing.Size(119, 21)
-        Me.lblImportFrom.TabIndex = 100000091
+        Me.lblImportFrom.TabIndex = 99999
         Me.lblImportFrom.Text = "IMPORT FROM"
         '
         'tabExport
@@ -391,7 +391,7 @@ Partial Class frmImportExport
         Me.btnStartExporting.Name = "btnStartExporting"
         Me.btnStartExporting.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnStartExporting.Size = New System.Drawing.Size(197, 37)
-        Me.btnStartExporting.TabIndex = 100000104
+        Me.btnStartExporting.TabIndex = 1
         Me.btnStartExporting.Text = "START EXPORTING"
         Me.btnStartExporting.TextShadowShow = False
         '
@@ -428,11 +428,11 @@ Partial Class frmImportExport
         Me.cmboLblExportFrom.Location = New System.Drawing.Point(0, 0)
         Me.cmboLblExportFrom.Name = "cmboLblExportFrom"
         Me.cmboLblExportFrom.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.cmboLblExportFrom.SideImage = Global.Movieo.My.Resources.Resources.ArrowDown
+        Me.cmboLblExportFrom.SideImage = Global.Movieo.My.Resources.Resources.ArrowDownH
         Me.cmboLblExportFrom.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.cmboLblExportFrom.SideImageSize = New System.Drawing.Size(18, 19)
         Me.cmboLblExportFrom.Size = New System.Drawing.Size(197, 30)
-        Me.cmboLblExportFrom.TabIndex = 3
+        Me.cmboLblExportFrom.TabIndex = 0
         Me.cmboLblExportFrom.Text = "Watch List"
         Me.cmboLblExportFrom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.cmboLblExportFrom.TextMargin = New System.Windows.Forms.Padding(4, 2, 2, 2)
@@ -465,7 +465,7 @@ Partial Class frmImportExport
         Me.lblExportFrom.Location = New System.Drawing.Point(445, 233)
         Me.lblExportFrom.Name = "lblExportFrom"
         Me.lblExportFrom.Size = New System.Drawing.Size(117, 21)
-        Me.lblExportFrom.TabIndex = 100000100
+        Me.lblExportFrom.TabIndex = 99999
         Me.lblExportFrom.Text = "EXPORT FROM"
         '
         'lblSubExportData
@@ -479,8 +479,8 @@ Partial Class frmImportExport
         Me.lblSubExportData.MinimumSize = New System.Drawing.Size(730, 0)
         Me.lblSubExportData.Name = "lblSubExportData"
         Me.lblSubExportData.Size = New System.Drawing.Size(730, 23)
-        Me.lblSubExportData.TabIndex = 100000098
-        Me.lblSubExportData.Text = "Export any list into a plan text file."
+        Me.lblSubExportData.TabIndex = 99999
+        Me.lblSubExportData.Text = "Export any list into a plain text file."
         Me.lblSubExportData.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'lblHeaderExportData
@@ -493,7 +493,7 @@ Partial Class frmImportExport
         Me.lblHeaderExportData.Location = New System.Drawing.Point(404, 126)
         Me.lblHeaderExportData.Name = "lblHeaderExportData"
         Me.lblHeaderExportData.Size = New System.Drawing.Size(200, 45)
-        Me.lblHeaderExportData.TabIndex = 100000097
+        Me.lblHeaderExportData.TabIndex = 99999
         Me.lblHeaderExportData.Text = "Export Data"
         '
         'panelTopHeaders

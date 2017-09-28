@@ -78,7 +78,7 @@ Public Class frmMediaPlayer
     Private Sub timerGoToTime_Tick(sender As Object, e As EventArgs) Handles timerGoToTime.Tick
         Try
 
-            For Each a As String In Movieo.itemsRecentlyWatched.Items
+            For Each a As String In Movieo.listRecentlyWatchedTimes
                 Dim aCredential As String() = Split(a, "~")
                 If Text = aCredential(0) Then
                     MediaPlayerControl.Ctlcontrols.currentPosition = CDbl(aCredential(1))

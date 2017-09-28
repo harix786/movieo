@@ -126,13 +126,11 @@
         Try
             Movieo.IsContextOpen = False
             Hide()
-            Try
-                Process.Start(Movieo.pathUpdater)
-                Application.Exit()
-            Catch ex As Exception
-                Movieo.ShowPopupOk("Update Failed", ex.Message, Movieo)
-            End Try
+            Process.Start(Movieo.pathUpdater)
+            Application.Exit()
         Catch ex As Exception
+            Movieo.ShowPopupOk("Update Failed", ex.Message, Movieo)
         End Try
     End Sub
+
 End Class

@@ -226,26 +226,29 @@ Public Class ctrlPosterTitle
         BackColor = Movieo.panelMovies.BackColor
     End Sub
 
+    Dim ignoreControls As ICollection(Of String) = {Movieo.panelLibraryBlackList.Name, Movieo.panelLibrarySeenList.Name, Movieo.panelLibraryWatchList.Name, Movieo.panelLibraryFavourites.Name, Movieo.panelDownloads.Name, Movieo.panelMyListsMovies.Name}
+
     Private Sub ctrlPosterTitle_Validated(sender As Object, e As EventArgs) Handles Me.Validated
         Dim WebClient = New WebClient()
 
-
-        If Movieo.listBlackList.Contains(InfoTitleAndYear.Text) Then
-            Hide()
-        Else
-            If Movieo.listSeenList.Contains(InfoTitleAndYear.Text) Then
-                If My.Settings.doWatchedMovies = 0 Then
-                    InfoPoster.BackgroundImage = ChangeOpacity(InfoPoster.BackgroundImage, 0.3)
-                    Show()
-                ElseIf My.Settings.doWatchedMovies = 1 Then
-                    Hide()
-                ElseIf My.Settings.doWatchedMovies = 2 Then
+        If Not ignoreControls.Contains(Parent.Name) Then
+            If Movieo.listBlackList.Contains(InfoTitleAndYear.Text) Then
+                Hide()
+            Else
+                If Movieo.listSeenList.Contains(InfoTitleAndYear.Text) Then
+                    If My.Settings.doWatchedMovies = 0 Then
+                        InfoPoster.BackgroundImage = ChangeOpacity(InfoPoster.BackgroundImage, 0.3)
+                        Show()
+                    ElseIf My.Settings.doWatchedMovies = 1 Then
+                        Hide()
+                    ElseIf My.Settings.doWatchedMovies = 2 Then
+                        InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
+                        Show()
+                    End If
+                Else
                     InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
                     Show()
                 End If
-            Else
-                InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
-                Show()
             End If
         End If
     End Sub

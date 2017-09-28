@@ -233,7 +233,7 @@ Partial Class frmInfo
         '
         Me.imgProviderPopcornTime.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.imgProviderPopcornTime.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.imgProviderPopcornTime.Image = Global.Movieo.My.Resources.Resources.PopcornTime
+        Me.imgProviderPopcornTime.Image = Global.Movieo.My.Resources.Resources.popcorntime_logo
         Me.imgProviderPopcornTime.Location = New System.Drawing.Point(545, 672)
         Me.imgProviderPopcornTime.Margin = New System.Windows.Forms.Padding(10, 3, 10, 3)
         Me.imgProviderPopcornTime.Name = "imgProviderPopcornTime"

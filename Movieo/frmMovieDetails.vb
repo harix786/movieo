@@ -21,6 +21,9 @@ Public Class frmMovieDetails
     Public imgBlackListH As Bitmap = My.Resources.Black_List_Icon_H
     Public imgBlackListL As Bitmap = My.Resources.Black_List_Icon_L
     Public imgBlackListSticky As Bitmap = My.Resources.Black_List_H_STICKY
+    '
+    Public imgMyListsH As Bitmap = My.Resources.My_Lists_H
+    Public imgMyListsL As Bitmap = My.Resources.My_Lists_L
 
 #End Region
 
@@ -31,27 +34,27 @@ Public Class frmMovieDetails
         Size = Movieo.ClientSize
 
         If Movieo.listFavourites.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnFavouriteList.Image = imgFavouriteSticky
+            btnFavouriteList.Image = imgFavouriteSticky
         Else
-            BtnFavouriteList.Image = imgFavouriteL
+            btnFavouriteList.Image = imgFavouriteL
         End If
 
         If Movieo.listWatchList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnWatchList.Image = imgWatchListSticky
+            btnWatchList.Image = imgWatchListSticky
         Else
-            BtnWatchList.Image = imgWatchListL
+            btnWatchList.Image = imgWatchListL
         End If
 
         If Movieo.listSeenList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnSeenList.Image = imgSeenListSticky
+            btnSeenList.Image = imgSeenListSticky
         Else
-            BtnSeenList.Image = imgSeenListL
+            btnSeenList.Image = imgSeenListL
         End If
 
         If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnBlackList.Image = imgBlackListSticky
+            btnBlackList.Image = imgBlackListSticky
         Else
-            BtnBlackList.Image = imgBlackListL
+            btnBlackList.Image = imgBlackListL
         End If
 
         panelHeaders.Size = New Size(InfoPanel1.Size.Width, InfoPanel1.Size.Height)
@@ -92,24 +95,24 @@ Public Class frmMovieDetails
 
                 panelComments.Visible = True
                 panelHeaders.Visible = True
-                lblHeaderComments.Visible = True
+                lblHeaderUserReviews.Visible = True
                 lineSplitter.Visible = True
-                lineComments.Visible = True
+                lineUserReviews.Visible = True
                 txtFormNameBG.Visible = True
             Catch ex As Exception
                 panelComments.Visible = False
                 panelHeaders.Visible = False
-                lblHeaderComments.Visible = False
+                lblHeaderUserReviews.Visible = False
                 lineSplitter.Visible = False
-                lineComments.Visible = False
+                lineUserReviews.Visible = False
                 txtFormNameBG.Visible = True
             End Try
         Else
             panelComments.Visible = False
             panelHeaders.Visible = False
-            lblHeaderComments.Visible = False
+            lblHeaderUserReviews.Visible = False
             lineSplitter.Visible = False
-            lineComments.Visible = False
+            lineUserReviews.Visible = False
             txtFormNameBG.Visible = False
         End If
 
@@ -224,148 +227,183 @@ Public Class frmMovieDetails
 
 #Region "Lists Buttons"
 
-    Private Sub BtnFavouriteList_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnFavouriteList.MouseMove
+    Private Sub BtnFavouriteList_MouseMove(sender As Object, e As MouseEventArgs) Handles btnFavouriteList.MouseMove
         If Movieo.listFavourites.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnFavouriteList.Image = imgFavouriteSticky
+            btnFavouriteList.Image = imgFavouriteSticky
         Else
-            BtnFavouriteList.Image = imgFavouriteH
+            btnFavouriteList.Image = imgFavouriteH
         End If
     End Sub
 
-    Private Sub BtnFavouriteList_MouseLeave(sender As Object, e As EventArgs) Handles BtnFavouriteList.MouseLeave
+    Private Sub BtnFavouriteList_MouseLeave(sender As Object, e As EventArgs) Handles btnFavouriteList.MouseLeave
         If Movieo.listFavourites.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnFavouriteList.Image = imgFavouriteSticky
+            btnFavouriteList.Image = imgFavouriteSticky
         Else
-            BtnFavouriteList.Image = imgFavouriteL
+            btnFavouriteList.Image = imgFavouriteL
         End If
     End Sub
 
-    Private Sub BtnFavouriteList_Click(sender As Object, e As EventArgs) Handles BtnFavouriteList.Click
+    Private Sub BtnFavouriteList_Click(sender As Object, e As EventArgs) Handles btnFavouriteList.Click
         If Movieo.listFavourites.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
             Movieo.RemoveMovie(Movieo.panelLibraryFavourites, Movieo.listFavourites, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-            BtnFavouriteList.Image = imgFavouriteL
+            btnFavouriteList.Image = imgFavouriteL
             showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " removed from Favourites")
         Else
-            Movieo.AddMovie(Movieo.panelLibraryFavourites, Movieo.listFavourites, infoTitle.Text, infoYear.Text, infoGenre.Text, infoDirectors.Text, infoCast.Text, infoDescription.Text, infoDuration.Text, infoRating.Text, infoReleaseDate.Text, infoCountry.Text, infoLanguage.Text, infoProduction.Text, infoBoxOffice.Text, infoAwards.Text, infoImdbId.Text, infoRatingIMDb.Text, infoRatingNetflix.Text, infoRatingMetaScore.Text, infoImageLink.Text, MovieLinkText.Text)
-            BtnFavouriteList.Image = imgFavouriteSticky
+            Movieo.AddMovieToList(Movieo.panelLibraryFavourites, Movieo.listFavourites, infoTitle.Text, infoYear.Text, infoImdbId.Text)
+            btnFavouriteList.Image = imgFavouriteSticky
             showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " added to Favourites")
         End If
     End Sub
 
-    Private Sub BtnWatchList_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnWatchList.MouseMove
+    Private Sub BtnWatchList_MouseMove(sender As Object, e As MouseEventArgs) Handles btnWatchList.MouseMove
         If Movieo.listWatchList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnWatchList.Image = imgWatchListSticky
+            btnWatchList.Image = imgWatchListSticky
         Else
-            BtnWatchList.Image = imgWatchListH
+            btnWatchList.Image = imgWatchListH
         End If
     End Sub
 
-    Private Sub BtnWatchList_MouseLeave(sender As Object, e As EventArgs) Handles BtnWatchList.MouseLeave
+    Private Sub BtnWatchList_MouseLeave(sender As Object, e As EventArgs) Handles btnWatchList.MouseLeave
         If Movieo.listWatchList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnWatchList.Image = imgWatchListSticky
+            btnWatchList.Image = imgWatchListSticky
         Else
-            BtnWatchList.Image = imgWatchListL
+            btnWatchList.Image = imgWatchListL
         End If
     End Sub
 
-    Private Sub btnWatchList_Click(sender As Object, e As EventArgs) Handles BtnWatchList.Click
+    Private Sub btnWatchList_Click(sender As Object, e As EventArgs) Handles btnWatchList.Click
         If Movieo.listWatchList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
             Movieo.RemoveMovie(Movieo.panelLibraryWatchList, Movieo.listWatchList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-            BtnWatchList.Image = imgWatchListL
+            btnWatchList.Image = imgWatchListL
             showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " removed from Watch List")
         Else
-            Movieo.AddMovie(Movieo.panelLibraryWatchList, Movieo.listWatchList, infoTitle.Text, infoYear.Text, infoGenre.Text, infoDirectors.Text, infoCast.Text, infoDescription.Text, infoDuration.Text, infoRating.Text, infoReleaseDate.Text, infoCountry.Text, infoLanguage.Text, infoProduction.Text, infoBoxOffice.Text, infoAwards.Text, infoImdbId.Text, infoRatingIMDb.Text, infoRatingNetflix.Text, infoRatingMetaScore.Text, infoImageLink.Text, MovieLinkText.Text)
-            BtnWatchList.Image = imgWatchListSticky
+            Movieo.AddMovieToList(Movieo.panelLibraryWatchList, Movieo.listWatchList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
+            btnWatchList.Image = imgWatchListSticky
             showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " added to Watch List")
 
-            If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-                Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-                BtnBlackList.Image = imgBlackListL
-            End If
-
             If Movieo.listSeenList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
                 Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-                BtnSeenList.Image = imgSeenListL
+                btnSeenList.Image = imgSeenListL
+            End If
+
+            If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
+                Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
+                btnBlackList.Image = imgBlackListL
             End If
         End If
-
     End Sub
 
-    Private Sub btnSeenList_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnSeenList.MouseMove
+    Private Sub btnSeenList_MouseMove(sender As Object, e As MouseEventArgs) Handles btnSeenList.MouseMove
         If Movieo.listSeenList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnSeenList.Image = imgSeenListSticky
+            btnSeenList.Image = imgSeenListSticky
         Else
-            BtnSeenList.Image = imgSeenListH
+            btnSeenList.Image = imgSeenListH
         End If
     End Sub
 
-    Private Sub btnSeenList_MouseLeave(sender As Object, e As EventArgs) Handles BtnSeenList.MouseLeave
+    Private Sub btnSeenList_MouseLeave(sender As Object, e As EventArgs) Handles btnSeenList.MouseLeave
         If Movieo.listSeenList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnSeenList.Image = imgSeenListSticky
+            btnSeenList.Image = imgSeenListSticky
         Else
-            BtnSeenList.Image = imgSeenListL
+            btnSeenList.Image = imgSeenListL
         End If
     End Sub
 
-    Private Sub btnSeenList_Click(sender As Object, e As EventArgs) Handles BtnSeenList.Click
+    Private Sub btnSeenList_Click(sender As Object, e As EventArgs) Handles btnSeenList.Click
         If Movieo.listSeenList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
             Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-            BtnSeenList.Image = imgSeenListL
+            btnSeenList.Image = imgSeenListL
             showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " removed from Seen List")
         Else
-            Movieo.AddMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, infoTitle.Text, infoYear.Text, infoGenre.Text, infoDirectors.Text, infoCast.Text, infoDescription.Text, infoDuration.Text, infoRating.Text, infoReleaseDate.Text, infoCountry.Text, infoLanguage.Text, infoProduction.Text, infoBoxOffice.Text, infoAwards.Text, infoImdbId.Text, infoRatingIMDb.Text, infoRatingNetflix.Text, infoRatingMetaScore.Text, infoImageLink.Text, MovieLinkText.Text)
-            BtnSeenList.Image = imgSeenListSticky
+            Movieo.AddMovieToList(Movieo.panelLibrarySeenList, Movieo.listSeenList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
+            btnSeenList.Image = imgSeenListSticky
             showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " added to Seen List")
+
+            If Movieo.listWatchList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
+                Movieo.RemoveMovie(Movieo.panelLibraryWatchList, Movieo.listWatchList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
+                btnWatchList.Image = imgWatchListL
+            End If
 
             If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
                 Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-                BtnBlackList.Image = imgBlackListL
+                btnBlackList.Image = imgBlackListL
             End If
+        End If
+
+    End Sub
+
+    Private Sub BtnBlackList_MouseMove(sender As Object, e As MouseEventArgs) Handles btnBlackList.MouseMove
+        If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
+            btnBlackList.Image = imgBlackListSticky
+        Else
+            btnBlackList.Image = imgBlackListH
+        End If
+    End Sub
+
+    Private Sub BtnBlackList_MouseLeave(sender As Object, e As EventArgs) Handles btnBlackList.MouseLeave
+        If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
+            btnBlackList.Image = imgBlackListSticky
+        Else
+            btnBlackList.Image = imgBlackListL
+        End If
+    End Sub
+
+    Private Sub BtnBlackList_Click(sender As Object, e As EventArgs) Handles btnBlackList.Click
+        If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
+            Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
+            btnBlackList.Image = imgBlackListL
+            showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " removed from Black List")
+        Else
+            Movieo.AddMovieToList(Movieo.panelLibraryBlackList, Movieo.listBlackList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
+            btnBlackList.Image = imgBlackListSticky
+            showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " added to Black List")
 
             If Movieo.listWatchList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
                 Movieo.RemoveMovie(Movieo.panelLibraryWatchList, Movieo.listWatchList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-                BtnWatchList.Image = imgWatchListL
+                btnWatchList.Image = imgWatchListL
             End If
-        End If
-
-    End Sub
-
-    Private Sub BtnBlackList_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnBlackList.MouseMove
-        If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnBlackList.Image = imgBlackListSticky
-        Else
-            BtnBlackList.Image = imgBlackListH
-        End If
-    End Sub
-
-    Private Sub BtnBlackList_MouseLeave(sender As Object, e As EventArgs) Handles BtnBlackList.MouseLeave
-        If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            BtnBlackList.Image = imgBlackListSticky
-        Else
-            BtnBlackList.Image = imgBlackListL
-        End If
-    End Sub
-
-    Private Sub BtnBlackList_Click(sender As Object, e As EventArgs) Handles BtnBlackList.Click
-        If Movieo.listBlackList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-            Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-            BtnBlackList.Image = imgBlackListL
-            showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " removed from Black List")
-        Else
-            Movieo.AddMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, infoTitle.Text, infoYear.Text, infoGenre.Text, infoDirectors.Text, infoCast.Text, infoDescription.Text, infoDuration.Text, infoRating.Text, infoReleaseDate.Text, infoCountry.Text, infoLanguage.Text, infoProduction.Text, infoBoxOffice.Text, infoAwards.Text, infoImdbId.Text, infoRatingIMDb.Text, infoRatingNetflix.Text, infoRatingMetaScore.Text, infoImageLink.Text, MovieLinkText.Text)
-            BtnBlackList.Image = imgBlackListSticky
-            showMessage(infoTitle.Text + " (" + infoYear.Text + ")" + " added to Black List")
 
             If Movieo.listSeenList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
                 Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-                BtnSeenList.Image = imgSeenListL
-            End If
-
-            If Movieo.listWatchList.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then
-                Movieo.RemoveMovie(Movieo.panelLibraryWatchList, Movieo.listWatchList, infoTitle.Text, infoYear.Text, infoImdbId.Text)
-                BtnWatchList.Image = imgWatchListL
+                btnSeenList.Image = imgSeenListL
             End If
         End If
+    End Sub
+
+
+    Private Sub btnMyList_MouseMove(sender As Object, e As MouseEventArgs) Handles btnMyList.MouseMove
+        btnMyList.Image = imgMyListsH
+    End Sub
+
+    Private Sub btnMyList_MouseLeave(sender As Object, e As EventArgs) Handles btnMyList.MouseLeave
+        btnMyList.Image = imgMyListsL
+    End Sub
+
+    Private Sub btnMyList_Click(sender As Object, e As EventArgs) Handles btnMyList.Click
+        listAddRemove(infoTitle.Text + " (" + infoYear.Text + ")")
+    End Sub
+
+    Public Sub listAddRemove(Title As String)
+        Try
+            Dim a As New frmSelectList
+            a.TopLevel = True
+            a.currentMovie = Title
+
+            a.itemsMyListsTitle.Items.Clear()
+            a.itemsMyListsPath.Items.Clear()
+
+            Dim exts As String() = {"*.txt"}
+            Dim fileNames = My.Computer.FileSystem.GetFiles(Movieo.pathMyLists, FileIO.SearchOption.SearchTopLevelOnly, exts)
+
+            For Each fileName As String In fileNames
+                Dim cutFileName As String = fileName.Replace(Movieo.pathMyLists, "")
+                a.itemsMyListsTitle.Items.Add(cutFileName.Substring(0, cutFileName.Length - 4))
+                a.itemsMyListsPath.Items.Add(fileName)
+            Next
+            a.ShowDialog()
+        Catch ex As Exception
+            showMessage("Unable to add/remove movie to list.")
+        End Try
     End Sub
 
 #End Region
@@ -489,26 +527,26 @@ Public Class frmMovieDetails
 #Region "Notification Message"
 
     Private Sub timerHideNotification_Tick(sender As Object, e As EventArgs) Handles timerHideNotifications.Tick
-        lblMessageSent.Visible = False
+        lblStatus.Visible = False
         timerHideNotifications.Enabled = False
     End Sub
 
-    Private Sub lblMessageSent_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles lblMessageSent.ClickButtonArea
-        lblMessageSent.Visible = False
+    Private Sub lblMessageSent_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles lblStatus.ClickButtonArea
+        lblStatus.Visible = False
         timerHideNotifications.Enabled = False
     End Sub
 
     Public Sub showMessage(Message As String)
         timerHideNotifications.Enabled = False
 
-        lblMessageSent.Text = Message
-        Dim myFont As New Font(lblMessageSent.Font.FontFamily, Me.lblMessageSent.Font.Size)
-        Dim mySize = lblMessageSent.CreateGraphics.MeasureString(Message, myFont)
+        lblStatus.Text = Message
+        Dim myFont As New Font(lblStatus.Font.FontFamily, Me.lblStatus.Font.Size)
+        Dim mySize = lblStatus.CreateGraphics.MeasureString(Message, myFont)
 
-        lblMessageSent.Width = CType(Math.Round(mySize.Width, 0), Integer) + 20
-        lblMessageSent.Height = CType(Math.Round(mySize.Height, 0), Integer) + 14
-        lblMessageSent.Location = New Point((ClientSize.Width - lblMessageSent.Width) \ 2, -1)
-        lblMessageSent.Visible = True
+        lblStatus.Width = CType(Math.Round(mySize.Width, 0), Integer) + 20
+        lblStatus.Height = CType(Math.Round(mySize.Height, 0), Integer) + 14
+        lblStatus.Location = New Point((ClientSize.Width - lblStatus.Width) \ 2, -1)
+        lblStatus.Visible = True
         TimeStamp = Date.Now
         timerHideNotifications.Enabled = True
     End Sub
@@ -557,13 +595,14 @@ Public Class frmMovieDetails
 
     Private Sub frmMovieDetails_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         Try
-            For Each item As Label In dynControls
-                InfoPanel1.Controls.Remove(item)
-            Next
             dynControls.Clear()
             frmBackgroundMovieDetails.Close()
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub btnWatchTrailer_Click(sender As Object, e As EventArgs) Handles btnWatchTrailer.Click
+
     End Sub
 
 #End Region
