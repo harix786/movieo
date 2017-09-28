@@ -1,6 +1,15 @@
-# Movieo by NV & Others
+<h1 align="center">
+  <img src="https://dl.dropbox.com/s/54avkywzmv91elc/movieo-logo.png?dl=0" height="128" width="128" alt="Logo" />
+  <br />
+  Movieo
+</h1>
+
+<h3 align="center">Discover and watch movies instantly</h3>
+
+<div align="center">
 
 [![Join the chat at https://gitter.im/movieo-app/Lobby](https://badges.gitter.im/movieo-app/Lobby.svg)](https://gitter.im/movieo-app/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+</div>
 
 ## What is Movieo?
 
@@ -8,9 +17,7 @@ This is a place for browsing and watching movies, made with love by a few develo
 
 Movieo started out as a passion project and continues to improve thanks to wonderful people like yourself who give us invaluable feedback on a daily basis.
 
-[Terms of Service](http://movieo.info/more/tos.html)
-[Frequently Asked Questions](http://movieo.info/more/faq.html)
-[Release Notes](http://movieo.info/more/release-notes.html)
+[Terms of Service](http://movieo.info/more/tos.html)  |  [Frequently Asked Questions](http://movieo.info/more/faq.html)  |  [Release Notes](http://movieo.info/more/release-notes.html)  |  [Email Us](mailto:hi@movieo.info)
 
 ## Supported platforms
 Works with Windows 7 and above (Windows 7, 8, 8.1, 10)
@@ -34,9 +41,7 @@ Download installer [here](http://movieo.info/movieo-setup.zip)
 ![Request Movies](https://dl.dropbox.com/s/v4fcg12fiil0dah/Movieo%20-%20Request%20Movie.png?dl=0)
 
 ## Get Social
-Facebook : https://facebook.com/itsmovieo
-Twitter : https://twitter.com/itsmovieo
-YouTube : https://www.youtube.com/bettercodes
+[Facebook](https://facebook.com/itsmovieo) | [Twitter](https://twitter.com/itsmovieo) | [YouTube](https://www.youtube.com/bettercodes)
 
 ## Legal Side of Things...
 All of the free movies found on this app are hosted on third-party servers that are freely available to watch online for all internet users. Any legal issues regarding the free online movies on this website should be taken up with the actual file hosts themselves, as we're not affiliated with them.
@@ -49,5 +54,3 @@ This program is free software: you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 **This project and the distribution of this project is not illegal, nor does it violate any DMCA laws. The use of this project, however, may be illegal in your area. Check your local laws and regulations regarding the use of torrents to watch potentially copyrighted content. The maintainers of this project do not condone the use of this project for anything illegal, in any state, region, country, or planet. Please use at your own risk.**
-
-[Email Us](hi@movieo.info)
