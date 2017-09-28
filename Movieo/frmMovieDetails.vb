@@ -465,7 +465,7 @@ Public Class frmMovieDetails
 
             If Not getUrlFromUser = Nothing Then
                 frmDownloadClient.doDownload(getUrlFromUser, infoTitle.Text, infoYear.Text, getUrlFromUser.Substring(infoWatchLinks.Text.Length - 3))
-                frmDownloadClient.ShowDialog(Me)
+                frmDownloadClient.Show()
             End If
         Catch ex As Exception
             Show()

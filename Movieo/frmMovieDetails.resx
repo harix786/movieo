@@ -2247,7 +2247,7 @@
     <value>1047</value>
   </data>
   <data name="btnMyList.ToolTip" xml:space="preserve">
-    <value>Add to Black List</value>
+    <value>Add to Custom List</value>
   </data>
   <data name="&gt;&gt;btnMyList.Name" xml:space="preserve">
     <value>btnMyList</value>
@@ -9128,9 +9128,6 @@
         9QJV4eoEAAAAADGyuzYtpq9yIJ2mYBOZpBQAAAAAHZulAgAAAAAAAAAAAAAAAP//AAD4HwAA8A8AAPAP
         AADwDwAA8A8AAOAPAADgBwAA4AcAAOAHAADgDwAA4A8AAOAPAADkDwAA/h8AAP//AAA=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

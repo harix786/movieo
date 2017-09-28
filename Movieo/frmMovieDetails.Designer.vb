@@ -31,10 +31,15 @@ Partial Class frmMovieDetails
         Me.infoQuality = New System.Windows.Forms.Label()
         Me.infoImageLink = New System.Windows.Forms.Label()
         Me.ActionsPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.btnFavouriteList = New System.Windows.Forms.PictureBox()
         Me.Splitter2 = New System.Windows.Forms.Label()
+        Me.btnWatchList = New System.Windows.Forms.PictureBox()
         Me.Splitter3 = New System.Windows.Forms.Label()
+        Me.btnSeenList = New System.Windows.Forms.PictureBox()
         Me.Splitter4 = New System.Windows.Forms.Label()
+        Me.btnBlackList = New System.Windows.Forms.PictureBox()
         Me.Splitter5 = New System.Windows.Forms.Label()
+        Me.btnMyList = New System.Windows.Forms.PictureBox()
         Me.infoDirectors = New System.Windows.Forms.Label()
         Me.infoWatchLinks = New System.Windows.Forms.Label()
         Me.lblSubCast = New System.Windows.Forms.Label()
@@ -93,12 +98,12 @@ Partial Class frmMovieDetails
         Me.ImgMetaCritic = New System.Windows.Forms.PictureBox()
         Me.imgImdb = New System.Windows.Forms.PictureBox()
         Me.appClose = New System.Windows.Forms.PictureBox()
-        Me.btnFavouriteList = New System.Windows.Forms.PictureBox()
-        Me.btnWatchList = New System.Windows.Forms.PictureBox()
-        Me.btnSeenList = New System.Windows.Forms.PictureBox()
-        Me.btnBlackList = New System.Windows.Forms.PictureBox()
-        Me.btnMyList = New System.Windows.Forms.PictureBox()
         Me.ActionsPanel.SuspendLayout()
+        CType(Me.btnFavouriteList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnWatchList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnSeenList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnBlackList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMyList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.InfoPanel1.SuspendLayout()
         Me.panelHeaders.SuspendLayout()
         Me.panelDetails.SuspendLayout()
@@ -108,11 +113,6 @@ Partial Class frmMovieDetails
         CType(Me.ImgMetaCritic, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgImdb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.appClose, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnFavouriteList, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnWatchList, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnSeenList, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnBlackList, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMyList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'infoTitle
@@ -171,11 +171,28 @@ Partial Class frmMovieDetails
         resources.ApplyResources(Me.ActionsPanel, "ActionsPanel")
         Me.ActionsPanel.Name = "ActionsPanel"
         '
+        'btnFavouriteList
+        '
+        Me.btnFavouriteList.Cursor = System.Windows.Forms.Cursors.Hand
+        resources.ApplyResources(Me.btnFavouriteList, "btnFavouriteList")
+        Me.btnFavouriteList.Name = "btnFavouriteList"
+        Me.btnFavouriteList.TabStop = False
+        Me.ToolTip.SetToolTip(Me.btnFavouriteList, resources.GetString("btnFavouriteList.ToolTip"))
+        '
         'Splitter2
         '
         resources.ApplyResources(Me.Splitter2, "Splitter2")
         Me.Splitter2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.Splitter2.Name = "Splitter2"
+        '
+        'btnWatchList
+        '
+        Me.btnWatchList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnWatchList.Image = Global.Movieo.My.Resources.Resources.Watch_List_L
+        resources.ApplyResources(Me.btnWatchList, "btnWatchList")
+        Me.btnWatchList.Name = "btnWatchList"
+        Me.btnWatchList.TabStop = False
+        Me.ToolTip.SetToolTip(Me.btnWatchList, resources.GetString("btnWatchList.ToolTip"))
         '
         'Splitter3
         '
@@ -183,17 +200,44 @@ Partial Class frmMovieDetails
         Me.Splitter3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.Splitter3.Name = "Splitter3"
         '
+        'btnSeenList
+        '
+        Me.btnSeenList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSeenList.Image = Global.Movieo.My.Resources.Resources.Seen_List_L
+        resources.ApplyResources(Me.btnSeenList, "btnSeenList")
+        Me.btnSeenList.Name = "btnSeenList"
+        Me.btnSeenList.TabStop = False
+        Me.ToolTip.SetToolTip(Me.btnSeenList, resources.GetString("btnSeenList.ToolTip"))
+        '
         'Splitter4
         '
         resources.ApplyResources(Me.Splitter4, "Splitter4")
         Me.Splitter4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.Splitter4.Name = "Splitter4"
         '
+        'btnBlackList
+        '
+        Me.btnBlackList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBlackList.Image = Global.Movieo.My.Resources.Resources.Black_List_Icon_L
+        resources.ApplyResources(Me.btnBlackList, "btnBlackList")
+        Me.btnBlackList.Name = "btnBlackList"
+        Me.btnBlackList.TabStop = False
+        Me.ToolTip.SetToolTip(Me.btnBlackList, resources.GetString("btnBlackList.ToolTip"))
+        '
         'Splitter5
         '
         resources.ApplyResources(Me.Splitter5, "Splitter5")
         Me.Splitter5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.Splitter5.Name = "Splitter5"
+        '
+        'btnMyList
+        '
+        Me.btnMyList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMyList.Image = Global.Movieo.My.Resources.Resources.My_Lists_L
+        resources.ApplyResources(Me.btnMyList, "btnMyList")
+        Me.btnMyList.Name = "btnMyList"
+        Me.btnMyList.TabStop = False
+        Me.ToolTip.SetToolTip(Me.btnMyList, resources.GetString("btnMyList.ToolTip"))
         '
         'infoDirectors
         '
@@ -688,7 +732,7 @@ Partial Class frmMovieDetails
         Me.lblStatus.Corners.LowerLeft = 2
         Me.lblStatus.Corners.LowerRight = 2
         Me.lblStatus.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblStatus.DesignerSelected = True
+        Me.lblStatus.DesignerSelected = False
         Me.lblStatus.DimFactorClick = 0
         Me.lblStatus.DimFactorHover = 0
         Me.lblStatus.FillType = CButtonLib.CButton.eFillType.Solid
@@ -755,50 +799,6 @@ Partial Class frmMovieDetails
         Me.appClose.Name = "appClose"
         Me.appClose.TabStop = False
         '
-        'btnFavouriteList
-        '
-        Me.btnFavouriteList.Cursor = System.Windows.Forms.Cursors.Hand
-        resources.ApplyResources(Me.btnFavouriteList, "btnFavouriteList")
-        Me.btnFavouriteList.Name = "btnFavouriteList"
-        Me.btnFavouriteList.TabStop = False
-        Me.ToolTip.SetToolTip(Me.btnFavouriteList, resources.GetString("btnFavouriteList.ToolTip"))
-        '
-        'btnWatchList
-        '
-        Me.btnWatchList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnWatchList.Image = Global.Movieo.My.Resources.Resources.Watch_List_L
-        resources.ApplyResources(Me.btnWatchList, "btnWatchList")
-        Me.btnWatchList.Name = "btnWatchList"
-        Me.btnWatchList.TabStop = False
-        Me.ToolTip.SetToolTip(Me.btnWatchList, resources.GetString("btnWatchList.ToolTip"))
-        '
-        'btnSeenList
-        '
-        Me.btnSeenList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSeenList.Image = Global.Movieo.My.Resources.Resources.Seen_List_L
-        resources.ApplyResources(Me.btnSeenList, "btnSeenList")
-        Me.btnSeenList.Name = "btnSeenList"
-        Me.btnSeenList.TabStop = False
-        Me.ToolTip.SetToolTip(Me.btnSeenList, resources.GetString("btnSeenList.ToolTip"))
-        '
-        'btnBlackList
-        '
-        Me.btnBlackList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBlackList.Image = Global.Movieo.My.Resources.Resources.Black_List_Icon_L
-        resources.ApplyResources(Me.btnBlackList, "btnBlackList")
-        Me.btnBlackList.Name = "btnBlackList"
-        Me.btnBlackList.TabStop = False
-        Me.ToolTip.SetToolTip(Me.btnBlackList, resources.GetString("btnBlackList.ToolTip"))
-        '
-        'btnMyList
-        '
-        Me.btnMyList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMyList.Image = Global.Movieo.My.Resources.Resources.My_Lists_L
-        resources.ApplyResources(Me.btnMyList, "btnMyList")
-        Me.btnMyList.Name = "btnMyList"
-        Me.btnMyList.TabStop = False
-        Me.ToolTip.SetToolTip(Me.btnMyList, resources.GetString("btnMyList.ToolTip"))
-        '
         'frmMovieDetails
         '
         resources.ApplyResources(Me, "$this")
@@ -835,6 +835,11 @@ Partial Class frmMovieDetails
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.ActionsPanel.ResumeLayout(False)
+        CType(Me.btnFavouriteList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnWatchList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnSeenList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnBlackList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMyList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.InfoPanel1.ResumeLayout(False)
         Me.InfoPanel1.PerformLayout()
         Me.panelHeaders.ResumeLayout(False)
@@ -847,11 +852,6 @@ Partial Class frmMovieDetails
         CType(Me.ImgMetaCritic, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.imgImdb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.appClose, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnFavouriteList, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnWatchList, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnSeenList, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnBlackList, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMyList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

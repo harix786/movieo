@@ -133,6 +133,8 @@ Partial Class Movieo
         Me.timerCountdownLiveMovie = New System.Windows.Forms.Timer(Me.components)
         Me.timerGoToTime = New System.Windows.Forms.Timer(Me.components)
         Me.icoLoadingWeb = New System.Windows.Forms.PictureBox()
+        Me.lblHeaderGenres = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Tab.SuspendLayout()
         Me.tabDiscover.SuspendLayout()
         Me.panelGenresCtrls.SuspendLayout()
@@ -208,6 +210,8 @@ Partial Class Movieo
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.panelGenresCtrls.AutoScroll = True
         Me.panelGenresCtrls.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.panelGenresCtrls.Controls.Add(Me.Label1)
+        Me.panelGenresCtrls.Controls.Add(Me.lblHeaderGenres)
         Me.panelGenresCtrls.Controls.Add(Me.btnFilterTopRated)
         Me.panelGenresCtrls.Controls.Add(Me.btnFilterNewReleases)
         Me.panelGenresCtrls.Controls.Add(Me.btnFilterTrending)
@@ -252,7 +256,7 @@ Partial Class Movieo
         Me.btnFilterTopRated.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnFilterTopRated.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnFilterTopRated.ImageIndex = 0
-        Me.btnFilterTopRated.Location = New System.Drawing.Point(9, 65)
+        Me.btnFilterTopRated.Location = New System.Drawing.Point(9, 85)
         Me.btnFilterTopRated.Margin = New System.Windows.Forms.Padding(0)
         Me.btnFilterTopRated.Name = "btnFilterTopRated"
         Me.btnFilterTopRated.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -263,7 +267,7 @@ Partial Class Movieo
         Me.btnFilterTopRated.TabStop = False
         Me.btnFilterTopRated.Text = "Top Rated"
         Me.btnFilterTopRated.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFilterTopRated.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnFilterTopRated.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnFilterTopRated.TextShadow = System.Drawing.Color.White
         Me.btnFilterTopRated.TextShadowShow = False
         '
@@ -282,7 +286,7 @@ Partial Class Movieo
         Me.btnFilterNewReleases.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnFilterNewReleases.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnFilterNewReleases.ImageIndex = 0
-        Me.btnFilterNewReleases.Location = New System.Drawing.Point(9, 37)
+        Me.btnFilterNewReleases.Location = New System.Drawing.Point(9, 57)
         Me.btnFilterNewReleases.Margin = New System.Windows.Forms.Padding(0)
         Me.btnFilterNewReleases.Name = "btnFilterNewReleases"
         Me.btnFilterNewReleases.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -293,7 +297,7 @@ Partial Class Movieo
         Me.btnFilterNewReleases.TabStop = False
         Me.btnFilterNewReleases.Text = "New Releases"
         Me.btnFilterNewReleases.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFilterNewReleases.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnFilterNewReleases.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnFilterNewReleases.TextShadow = System.Drawing.Color.White
         Me.btnFilterNewReleases.TextShadowShow = False
         '
@@ -312,7 +316,7 @@ Partial Class Movieo
         Me.btnFilterTrending.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnFilterTrending.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnFilterTrending.ImageIndex = 0
-        Me.btnFilterTrending.Location = New System.Drawing.Point(9, 9)
+        Me.btnFilterTrending.Location = New System.Drawing.Point(9, 29)
         Me.btnFilterTrending.Margin = New System.Windows.Forms.Padding(0)
         Me.btnFilterTrending.Name = "btnFilterTrending"
         Me.btnFilterTrending.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -323,7 +327,7 @@ Partial Class Movieo
         Me.btnFilterTrending.TabStop = False
         Me.btnFilterTrending.Text = "Trending"
         Me.btnFilterTrending.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnFilterTrending.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnFilterTrending.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnFilterTrending.TextShadow = System.Drawing.Color.White
         Me.btnFilterTrending.TextShadowShow = False
         '
@@ -341,7 +345,7 @@ Partial Class Movieo
         Me.btnGenreAllMovies.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnGenreAllMovies.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreAllMovies.ImageIndex = 0
-        Me.btnGenreAllMovies.Location = New System.Drawing.Point(9, 597)
+        Me.btnGenreAllMovies.Location = New System.Drawing.Point(9, 653)
         Me.btnGenreAllMovies.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreAllMovies.Name = "btnGenreAllMovies"
         Me.btnGenreAllMovies.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -352,7 +356,7 @@ Partial Class Movieo
         Me.btnGenreAllMovies.TabStop = False
         Me.btnGenreAllMovies.Text = "All Movies"
         Me.btnGenreAllMovies.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreAllMovies.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreAllMovies.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreAllMovies.TextShadow = System.Drawing.Color.White
         Me.btnGenreAllMovies.TextShadowShow = False
         '
@@ -371,7 +375,7 @@ Partial Class Movieo
         Me.btnGenreWestern.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreWestern.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreWestern.ImageIndex = 0
-        Me.btnGenreWestern.Location = New System.Drawing.Point(9, 569)
+        Me.btnGenreWestern.Location = New System.Drawing.Point(9, 625)
         Me.btnGenreWestern.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreWestern.Name = "btnGenreWestern"
         Me.btnGenreWestern.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -382,7 +386,7 @@ Partial Class Movieo
         Me.btnGenreWestern.TabStop = False
         Me.btnGenreWestern.Text = "Western"
         Me.btnGenreWestern.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreWestern.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreWestern.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreWestern.TextShadow = System.Drawing.Color.White
         Me.btnGenreWestern.TextShadowShow = False
         '
@@ -401,7 +405,7 @@ Partial Class Movieo
         Me.btnGenreWar.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreWar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreWar.ImageIndex = 0
-        Me.btnGenreWar.Location = New System.Drawing.Point(9, 541)
+        Me.btnGenreWar.Location = New System.Drawing.Point(9, 597)
         Me.btnGenreWar.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreWar.Name = "btnGenreWar"
         Me.btnGenreWar.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -412,7 +416,7 @@ Partial Class Movieo
         Me.btnGenreWar.TabStop = False
         Me.btnGenreWar.Text = "War"
         Me.btnGenreWar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreWar.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreWar.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreWar.TextShadow = System.Drawing.Color.White
         Me.btnGenreWar.TextShadowShow = False
         '
@@ -431,7 +435,7 @@ Partial Class Movieo
         Me.btnGenreThriller.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreThriller.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreThriller.ImageIndex = 0
-        Me.btnGenreThriller.Location = New System.Drawing.Point(9, 513)
+        Me.btnGenreThriller.Location = New System.Drawing.Point(9, 569)
         Me.btnGenreThriller.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreThriller.Name = "btnGenreThriller"
         Me.btnGenreThriller.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -442,7 +446,7 @@ Partial Class Movieo
         Me.btnGenreThriller.TabStop = False
         Me.btnGenreThriller.Text = "Thriller"
         Me.btnGenreThriller.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreThriller.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreThriller.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreThriller.TextShadow = System.Drawing.Color.White
         Me.btnGenreThriller.TextShadowShow = False
         '
@@ -461,7 +465,7 @@ Partial Class Movieo
         Me.btnGenreSciFi.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreSciFi.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreSciFi.ImageIndex = 0
-        Me.btnGenreSciFi.Location = New System.Drawing.Point(9, 485)
+        Me.btnGenreSciFi.Location = New System.Drawing.Point(9, 541)
         Me.btnGenreSciFi.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreSciFi.Name = "btnGenreSciFi"
         Me.btnGenreSciFi.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -472,7 +476,7 @@ Partial Class Movieo
         Me.btnGenreSciFi.TabStop = False
         Me.btnGenreSciFi.Text = "Sci-Fi"
         Me.btnGenreSciFi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreSciFi.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreSciFi.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreSciFi.TextShadow = System.Drawing.Color.White
         Me.btnGenreSciFi.TextShadowShow = False
         '
@@ -491,7 +495,7 @@ Partial Class Movieo
         Me.btnGenreRomance.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreRomance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreRomance.ImageIndex = 0
-        Me.btnGenreRomance.Location = New System.Drawing.Point(9, 457)
+        Me.btnGenreRomance.Location = New System.Drawing.Point(9, 513)
         Me.btnGenreRomance.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreRomance.Name = "btnGenreRomance"
         Me.btnGenreRomance.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -502,7 +506,7 @@ Partial Class Movieo
         Me.btnGenreRomance.TabStop = False
         Me.btnGenreRomance.Text = "Romance"
         Me.btnGenreRomance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreRomance.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreRomance.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreRomance.TextShadow = System.Drawing.Color.White
         Me.btnGenreRomance.TextShadowShow = False
         '
@@ -514,14 +518,14 @@ Partial Class Movieo
         Me.btnGenreMystery.BorderColor = System.Drawing.Color.Transparent
         Me.btnGenreMystery.ColorFillSolid = System.Drawing.Color.Transparent
         Me.btnGenreMystery.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnGenreMystery.DesignerSelected = False
+        Me.btnGenreMystery.DesignerSelected = True
         Me.btnGenreMystery.DimFactorClick = 0
         Me.btnGenreMystery.DimFactorHover = 0
         Me.btnGenreMystery.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnGenreMystery.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreMystery.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreMystery.ImageIndex = 0
-        Me.btnGenreMystery.Location = New System.Drawing.Point(9, 429)
+        Me.btnGenreMystery.Location = New System.Drawing.Point(9, 485)
         Me.btnGenreMystery.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreMystery.Name = "btnGenreMystery"
         Me.btnGenreMystery.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -532,7 +536,7 @@ Partial Class Movieo
         Me.btnGenreMystery.TabStop = False
         Me.btnGenreMystery.Text = "Mystery"
         Me.btnGenreMystery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreMystery.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreMystery.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreMystery.TextShadow = System.Drawing.Color.White
         Me.btnGenreMystery.TextShadowShow = False
         '
@@ -551,7 +555,7 @@ Partial Class Movieo
         Me.btnGenreMusic.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreMusic.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreMusic.ImageIndex = 0
-        Me.btnGenreMusic.Location = New System.Drawing.Point(9, 401)
+        Me.btnGenreMusic.Location = New System.Drawing.Point(9, 457)
         Me.btnGenreMusic.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreMusic.Name = "btnGenreMusic"
         Me.btnGenreMusic.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -562,7 +566,7 @@ Partial Class Movieo
         Me.btnGenreMusic.TabStop = False
         Me.btnGenreMusic.Text = "Music"
         Me.btnGenreMusic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreMusic.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreMusic.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreMusic.TextShadow = System.Drawing.Color.White
         Me.btnGenreMusic.TextShadowShow = False
         '
@@ -581,7 +585,7 @@ Partial Class Movieo
         Me.btnGenreHorror.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreHorror.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreHorror.ImageIndex = 0
-        Me.btnGenreHorror.Location = New System.Drawing.Point(9, 373)
+        Me.btnGenreHorror.Location = New System.Drawing.Point(9, 429)
         Me.btnGenreHorror.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreHorror.Name = "btnGenreHorror"
         Me.btnGenreHorror.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -592,7 +596,7 @@ Partial Class Movieo
         Me.btnGenreHorror.TabStop = False
         Me.btnGenreHorror.Text = "Horror"
         Me.btnGenreHorror.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreHorror.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreHorror.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreHorror.TextShadow = System.Drawing.Color.White
         Me.btnGenreHorror.TextShadowShow = False
         '
@@ -611,7 +615,7 @@ Partial Class Movieo
         Me.btnGenreHistory.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreHistory.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreHistory.ImageIndex = 0
-        Me.btnGenreHistory.Location = New System.Drawing.Point(9, 345)
+        Me.btnGenreHistory.Location = New System.Drawing.Point(9, 401)
         Me.btnGenreHistory.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreHistory.Name = "btnGenreHistory"
         Me.btnGenreHistory.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -622,7 +626,7 @@ Partial Class Movieo
         Me.btnGenreHistory.TabStop = False
         Me.btnGenreHistory.Text = "History"
         Me.btnGenreHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreHistory.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreHistory.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreHistory.TextShadow = System.Drawing.Color.White
         Me.btnGenreHistory.TextShadowShow = False
         '
@@ -641,7 +645,7 @@ Partial Class Movieo
         Me.btnGenreFantasy.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreFantasy.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreFantasy.ImageIndex = 0
-        Me.btnGenreFantasy.Location = New System.Drawing.Point(9, 317)
+        Me.btnGenreFantasy.Location = New System.Drawing.Point(9, 373)
         Me.btnGenreFantasy.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreFantasy.Name = "btnGenreFantasy"
         Me.btnGenreFantasy.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -652,7 +656,7 @@ Partial Class Movieo
         Me.btnGenreFantasy.TabStop = False
         Me.btnGenreFantasy.Text = "Fantasy"
         Me.btnGenreFantasy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreFantasy.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreFantasy.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreFantasy.TextShadow = System.Drawing.Color.White
         Me.btnGenreFantasy.TextShadowShow = False
         '
@@ -671,7 +675,7 @@ Partial Class Movieo
         Me.btnGenreFamily.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreFamily.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreFamily.ImageIndex = 0
-        Me.btnGenreFamily.Location = New System.Drawing.Point(9, 289)
+        Me.btnGenreFamily.Location = New System.Drawing.Point(9, 345)
         Me.btnGenreFamily.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreFamily.Name = "btnGenreFamily"
         Me.btnGenreFamily.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -682,7 +686,7 @@ Partial Class Movieo
         Me.btnGenreFamily.TabStop = False
         Me.btnGenreFamily.Text = "Family"
         Me.btnGenreFamily.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreFamily.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreFamily.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreFamily.TextShadow = System.Drawing.Color.White
         Me.btnGenreFamily.TextShadowShow = False
         '
@@ -701,7 +705,7 @@ Partial Class Movieo
         Me.btnGenreDrama.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreDrama.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreDrama.ImageIndex = 0
-        Me.btnGenreDrama.Location = New System.Drawing.Point(9, 261)
+        Me.btnGenreDrama.Location = New System.Drawing.Point(9, 317)
         Me.btnGenreDrama.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreDrama.Name = "btnGenreDrama"
         Me.btnGenreDrama.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -712,7 +716,7 @@ Partial Class Movieo
         Me.btnGenreDrama.TabStop = False
         Me.btnGenreDrama.Text = "Drama"
         Me.btnGenreDrama.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreDrama.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreDrama.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreDrama.TextShadow = System.Drawing.Color.White
         Me.btnGenreDrama.TextShadowShow = False
         '
@@ -731,7 +735,7 @@ Partial Class Movieo
         Me.btnGenreDocumentary.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreDocumentary.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreDocumentary.ImageIndex = 0
-        Me.btnGenreDocumentary.Location = New System.Drawing.Point(9, 233)
+        Me.btnGenreDocumentary.Location = New System.Drawing.Point(9, 289)
         Me.btnGenreDocumentary.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreDocumentary.Name = "btnGenreDocumentary"
         Me.btnGenreDocumentary.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -742,7 +746,7 @@ Partial Class Movieo
         Me.btnGenreDocumentary.TabStop = False
         Me.btnGenreDocumentary.Text = "Documentary"
         Me.btnGenreDocumentary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreDocumentary.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreDocumentary.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreDocumentary.TextShadow = System.Drawing.Color.White
         Me.btnGenreDocumentary.TextShadowShow = False
         '
@@ -761,7 +765,7 @@ Partial Class Movieo
         Me.btnGenreCrime.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreCrime.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreCrime.ImageIndex = 0
-        Me.btnGenreCrime.Location = New System.Drawing.Point(9, 205)
+        Me.btnGenreCrime.Location = New System.Drawing.Point(9, 261)
         Me.btnGenreCrime.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreCrime.Name = "btnGenreCrime"
         Me.btnGenreCrime.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -772,7 +776,7 @@ Partial Class Movieo
         Me.btnGenreCrime.TabStop = False
         Me.btnGenreCrime.Text = "Crime"
         Me.btnGenreCrime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreCrime.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreCrime.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreCrime.TextShadow = System.Drawing.Color.White
         Me.btnGenreCrime.TextShadowShow = False
         '
@@ -791,7 +795,7 @@ Partial Class Movieo
         Me.btnGenreComedy.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreComedy.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreComedy.ImageIndex = 0
-        Me.btnGenreComedy.Location = New System.Drawing.Point(9, 177)
+        Me.btnGenreComedy.Location = New System.Drawing.Point(9, 233)
         Me.btnGenreComedy.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreComedy.Name = "btnGenreComedy"
         Me.btnGenreComedy.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -802,7 +806,7 @@ Partial Class Movieo
         Me.btnGenreComedy.TabStop = False
         Me.btnGenreComedy.Text = "Comedy"
         Me.btnGenreComedy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreComedy.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreComedy.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreComedy.TextShadow = System.Drawing.Color.White
         Me.btnGenreComedy.TextShadowShow = False
         '
@@ -821,7 +825,7 @@ Partial Class Movieo
         Me.btnGenreAnimation.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreAnimation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreAnimation.ImageIndex = 0
-        Me.btnGenreAnimation.Location = New System.Drawing.Point(9, 149)
+        Me.btnGenreAnimation.Location = New System.Drawing.Point(9, 205)
         Me.btnGenreAnimation.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreAnimation.Name = "btnGenreAnimation"
         Me.btnGenreAnimation.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -832,7 +836,7 @@ Partial Class Movieo
         Me.btnGenreAnimation.TabStop = False
         Me.btnGenreAnimation.Text = "Animation"
         Me.btnGenreAnimation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreAnimation.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreAnimation.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreAnimation.TextShadow = System.Drawing.Color.White
         Me.btnGenreAnimation.TextShadowShow = False
         '
@@ -851,7 +855,7 @@ Partial Class Movieo
         Me.btnGenreAdventure.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreAdventure.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreAdventure.ImageIndex = 0
-        Me.btnGenreAdventure.Location = New System.Drawing.Point(9, 121)
+        Me.btnGenreAdventure.Location = New System.Drawing.Point(9, 177)
         Me.btnGenreAdventure.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreAdventure.Name = "btnGenreAdventure"
         Me.btnGenreAdventure.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -862,7 +866,7 @@ Partial Class Movieo
         Me.btnGenreAdventure.TabStop = False
         Me.btnGenreAdventure.Text = "Adventure"
         Me.btnGenreAdventure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreAdventure.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreAdventure.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreAdventure.TextShadow = System.Drawing.Color.White
         Me.btnGenreAdventure.TextShadowShow = False
         '
@@ -881,7 +885,7 @@ Partial Class Movieo
         Me.btnGenreAction.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.btnGenreAction.ForeColor = System.Drawing.Color.FromArgb(CType(CType(161, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.btnGenreAction.ImageIndex = 0
-        Me.btnGenreAction.Location = New System.Drawing.Point(9, 93)
+        Me.btnGenreAction.Location = New System.Drawing.Point(9, 149)
         Me.btnGenreAction.Margin = New System.Windows.Forms.Padding(0)
         Me.btnGenreAction.Name = "btnGenreAction"
         Me.btnGenreAction.ShowFocus = CButtonLib.CButton.eFocus.None
@@ -892,7 +896,7 @@ Partial Class Movieo
         Me.btnGenreAction.TabStop = False
         Me.btnGenreAction.Text = "Action"
         Me.btnGenreAction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenreAction.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnGenreAction.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnGenreAction.TextShadow = System.Drawing.Color.White
         Me.btnGenreAction.TextShadowShow = False
         '
@@ -1136,7 +1140,7 @@ Partial Class Movieo
         Me.btnListsFavourites.TabStop = False
         Me.btnListsFavourites.Text = "Favourites"
         Me.btnListsFavourites.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnListsFavourites.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnListsFavourites.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnListsFavourites.TextShadow = System.Drawing.Color.White
         Me.btnListsFavourites.TextShadowShow = False
         '
@@ -1166,7 +1170,7 @@ Partial Class Movieo
         Me.btnListsWatch.TabStop = False
         Me.btnListsWatch.Text = "Watch List"
         Me.btnListsWatch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnListsWatch.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnListsWatch.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnListsWatch.TextShadow = System.Drawing.Color.White
         Me.btnListsWatch.TextShadowShow = False
         '
@@ -1196,7 +1200,7 @@ Partial Class Movieo
         Me.btnListsSeen.TabStop = False
         Me.btnListsSeen.Text = "Seen List"
         Me.btnListsSeen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnListsSeen.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnListsSeen.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnListsSeen.TextShadow = System.Drawing.Color.White
         Me.btnListsSeen.TextShadowShow = False
         '
@@ -1226,7 +1230,7 @@ Partial Class Movieo
         Me.btnListsBlack.TabStop = False
         Me.btnListsBlack.Text = "Black List"
         Me.btnListsBlack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnListsBlack.TextMargin = New System.Windows.Forms.Padding(20, 2, 2, 2)
+        Me.btnListsBlack.TextMargin = New System.Windows.Forms.Padding(15, 2, 2, 2)
         Me.btnListsBlack.TextShadow = System.Drawing.Color.White
         Me.btnListsBlack.TextShadowShow = False
         '
@@ -2027,6 +2031,38 @@ Partial Class Movieo
         Me.icoLoadingWeb.TabIndex = 0
         Me.icoLoadingWeb.TabStop = False
         '
+        'lblHeaderGenres
+        '
+        Me.lblHeaderGenres.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblHeaderGenres.AutoSize = True
+        Me.lblHeaderGenres.BackColor = System.Drawing.Color.Transparent
+        Me.lblHeaderGenres.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!)
+        Me.lblHeaderGenres.ForeColor = System.Drawing.Color.White
+        Me.lblHeaderGenres.Location = New System.Drawing.Point(6, 128)
+        Me.lblHeaderGenres.Margin = New System.Windows.Forms.Padding(3, 0, 3, 6)
+        Me.lblHeaderGenres.Name = "lblHeaderGenres"
+        Me.lblHeaderGenres.Size = New System.Drawing.Size(50, 15)
+        Me.lblHeaderGenres.TabIndex = 100043
+        Me.lblHeaderGenres.Text = "GENRES"
+        Me.lblHeaderGenres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(6, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(3, 0, 3, 6)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(55, 15)
+        Me.Label1.TabIndex = 100044
+        Me.Label1.Text = "BROWSE"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Movieo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2045,6 +2081,7 @@ Partial Class Movieo
         Me.Tab.ResumeLayout(False)
         Me.tabDiscover.ResumeLayout(False)
         Me.panelGenresCtrls.ResumeLayout(False)
+        Me.panelGenresCtrls.PerformLayout()
         Me.tabCollections.ResumeLayout(False)
         Me.tabsCollections.ResumeLayout(False)
         Me.tabCollectionsHome.ResumeLayout(False)
@@ -2197,4 +2234,6 @@ Partial Class Movieo
     Friend WithEvents lblEmptyMyLists As Label
     Friend WithEvents panelMyCoreListsCtrls As Panel
     Friend WithEvents lblEmptyPanelMyLists As Label
+    Friend WithEvents lblHeaderGenres As Label
+    Friend WithEvents Label1 As Label
 End Class

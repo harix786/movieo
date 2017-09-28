@@ -15,6 +15,8 @@ Public Class frmCreateList
             txtMovies.Visible = False
             underline2.Visible = False
         Else
+            txtTitle.Text = ""
+            txtDescription.Text = ""
             txtMovies.Visible = True
             underline2.Visible = True
         End If

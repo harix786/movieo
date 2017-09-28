@@ -53,7 +53,6 @@ Public Class Movieo
 
 #Region "Movieo"
 
-
     Private Sub Movieo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnCreateList.SideImageSize = New Size(22, 14)
 
@@ -288,7 +287,7 @@ Public Class Movieo
                 a.ForeColor = Color.FromArgb(161, 168, 179)
                 a.ColorFillSolid = Color.Transparent
                 a.BorderColor = Color.Transparent
-                a.TextMargin = New Padding(20, 2, 2, 2)
+                a.TextMargin = New Padding(10, 2, 2, 2)
                 a.ShowFocus = CButtonLib.CButton.eFocus.None
                 a.Font = CreateFont("Segoe UI Semibold", 10, False, False, False)
                 a.Text = cutFileName.Substring(0, cutFileName.Length - 4)
