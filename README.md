@@ -26,17 +26,21 @@ Works with Windows 7 and above (Windows 7, 8, 8.1, 10)
 Download installer [here](http://movieo.info/movieo-setup.zip)
 
 ## Screenshots
-![Discover - New Releases](https://dl.dropbox.com/s/8e9eej5472ug746/Movieo%20-%20New%20Releases.png?dl=0)
+![Discover - Trending Movies](https://dl.dropbox.com/s/qlh8dxtsxfqqsnx/Movieo%20-%20Trending.png?dl=0)
 
-![Discover - Top Rated](https://dl.dropbox.com/s/blcisomugg0clsl/Movieo%20-%20Top%20Rated.png?dl=0)
+![Discover - All Movies](https://dl.dropbox.com/s/apdtl7wjosp4rs5/Movieo%20-%20All%20Movies.png?dl=0)
 
-![Collections Made by Others](https://dl.dropbox.com/s/f7nxnu52q2speoa/Movieo%20-%20Collections.png?dl=0)
+![Discover - Movie Details](https://dl.dropbox.com/s/xc2ypskjvdhi1ss/Movieo%20-%20Movie%20Details.png?dl=0)
 
-![Supports Multiple Sources](https://dl.dropbox.com/s/elcgjm5bc4ath52/Movieo%20-%20Available%20Streams.png?dl=0)
+![Collections Made by Others](https://dl.dropbox.com/s/fds9bdolw07pgxd/Movieo%20-%20Collections.png?dl=0)
 
-![Track Movies](https://dl.dropbox.com/s/je9y9ssncj8mt42/Movieo%20-%20Library.png?dl=0)
+![Supports Multiple Sources](https://dl.dropbox.com/s/cn55x5ye8yosgdl/Movieo%20-%20Available%20Streams.png?dl=0)
 
-![Download Movies](https://dl.dropbox.com/s/ynlfzdh1kpxifjg/Movieo%20-%20Download%20Movies.png?dl=0)
+![Track Movies](https://dl.dropbox.com/s/bh938xhudvrls5w/Movieo%20-%20Library.png?dl=0)
+
+![Create Lists](https://dl.dropbox.com/s/k25xeu27nhndmmn/Movieo%20-%20Create%20List.png?dl=0)
+
+![Download Movies](https://dl.dropbox.com/s/quxf5phgjoko4b1/Movieo%20-%20Download%20Movies.png?dl=0)
 
 ![Request Movies](https://dl.dropbox.com/s/v4fcg12fiil0dah/Movieo%20-%20Request%20Movie.png?dl=0)
 
