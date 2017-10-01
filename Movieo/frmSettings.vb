@@ -4,8 +4,7 @@
 
     Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Set position/size of window
-        Top = Movieo.ClientRectangle.Top + 23
-        Left = Movieo.ClientRectangle.Left
+        Location = Movieo.PointToScreen(Point.Empty)
         Size = Movieo.ClientSize
 
         'General

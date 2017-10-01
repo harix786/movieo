@@ -6,8 +6,7 @@ Public Class frmCreateList
     Public oldTitle As String = ""
 
     Private Sub frmRequestMovie_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Top = Movieo.ClientRectangle.Top + 23
-        Left = Movieo.ClientRectangle.Left
+        Location = Movieo.PointToScreen(Point.Empty)
         Size = Movieo.ClientSize
 
         If replaceList = True Then
@@ -20,6 +19,9 @@ Public Class frmCreateList
             txtMovies.Visible = True
             underline2.Visible = True
         End If
+
+        txtTitle.Focus()
+        txtTitle.SelectionStart = 0
     End Sub
 
     Private Sub btnFormSubmit_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnFrmCreateList.ClickButtonArea

@@ -9,8 +9,7 @@ Public Class frmInfo
         Tab.SelectedTab = Movieo.InfoSelectedTab
 
         'Set position/size of window
-        Top = Movieo.ClientRectangle.Top + 23
-        Left = Movieo.ClientRectangle.Left
+        Location = Movieo.PointToScreen(Point.Empty)
         Size = Movieo.ClientSize
 
         'Latest changelog text

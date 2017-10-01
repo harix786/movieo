@@ -29,8 +29,7 @@ Public Class frmMovieDetails
 
     Private Sub MovieInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Hide()
-        Top = Movieo.ClientRectangle.Top + 23
-        Left = Movieo.ClientRectangle.Left
+        Location = Movieo.PointToScreen(Point.Empty)
         Size = Movieo.ClientSize
 
         If Movieo.listFavourites.Contains(infoTitle.Text + " (" + infoYear.Text + ")") Then

@@ -253,6 +253,11 @@ Public Class Movieo
                 listRecentlyWatchedTimes.AddRange(RecentlyWatchedItem.Split(","))
             End If
 
+            btnListsFavourites.Text = "Favourites (" + listFavourites.Count.ToString() + ")"
+            btnListsWatch.Text = "Watch List (" + listWatchList.Count.ToString() + ")"
+            btnListsSeen.Text = "Seen List (" + listSeenList.Count.ToString() + ")"
+            btnListsBlack.Text = "Black List (" + listBlackList.Count.ToString() + ")"
+
             ListFiles(pathDownloads)
             loadMyLists()
         Catch ex As Exception
@@ -270,105 +275,6 @@ Public Class Movieo
             Dim cutFileName As String = fileName.Replace(pathDownloads, "")
             listMoviesDownloads.Add(cutFileName.Substring(0, cutFileName.Length - 4))
         Next
-    End Sub
-
-    Public Sub loadMyLists()
-        Try
-            panelMyListsCtrls.Controls.Clear()
-
-            Dim exts As String() = {"*.txt"}
-            Dim fileNames = My.Computer.FileSystem.GetFiles(pathMyLists, FileIO.SearchOption.SearchTopLevelOnly, exts)
-
-            For Each fileName As String In fileNames
-                Dim cutFileName As String = fileName.Replace(pathMyLists, "")
-                Dim a As New CButtonLib.CButton
-                a.Hide()
-                a.BackColor = Color.Transparent
-                a.ForeColor = Color.FromArgb(161, 168, 179)
-                a.ColorFillSolid = Color.Transparent
-                a.BorderColor = Color.Transparent
-                a.TextMargin = New Padding(10, 2, 2, 2)
-                a.ShowFocus = CButtonLib.CButton.eFocus.None
-                a.Font = CreateFont("Segoe UI Semibold", 10, False, False, False)
-                a.Text = cutFileName.Substring(0, cutFileName.Length - 4)
-                a.TextAlign = ContentAlignment.MiddleLeft
-                a.TextShadowShow = False
-                a.FillType = CButtonLib.CButton.eFillType.Solid
-                a.Cursor = Cursors.Hand
-                a.Size = New Size(154, 28)
-                a.Margin = New Padding(0, 0, 0, 0)
-                a.Show()
-                AddHandler a.ClickButtonArea, AddressOf ctrlMyLists_ClickButtonArea
-                AddHandler a.MouseMove, AddressOf ctrlMyLists_MouseMove
-                AddHandler a.MouseLeave, AddressOf ctrlMyLists_MouseLeave
-                AddHandler a.SideImageClicked, AddressOf ctrlMyLists_SideImageClicked
-                panelMyListsCtrls.Controls.Add(a)
-            Next
-        Catch ex As Exception
-            'No Lists
-        End Try
-    End Sub
-
-    Public Sub ctrlMyLists_SideImageClicked(sender As Object, e As MouseEventArgs)
-        ctrlContextMenuMyLists.oldTitle = sender.Text
-        ctrlContextMenuMyLists.Location = sender.PointToScreen(Point.Empty)
-        ctrlContextMenuMyLists.Size = New Size(ctrlContextMenuMyLists.Size.Width, ctrlContextMenuMyLists.Size.Height)
-        ctrlContextMenuMyLists.Show()
-    End Sub
-
-    Public Sub ctrlMyLists_ClickButtonArea(sender As Object, e As EventArgs)
-        Try
-            panelMyListsMovies.Controls.Clear()
-
-            Dim moviesInList() As String = File.ReadAllLines(pathMyLists + "\" + sender.Text + ".txt")
-
-            For Each movie As String In moviesInList
-                For Each a In storeControlsAllMovies
-                    For Each ab As Control In a.Controls
-                        If ab.Name = "InfoTitleAndYear" Then
-                            If ab.Text = movie Then
-                                panelMyListsMovies.Controls.Add(a)
-                            End If
-                        End If
-                    Next
-                Next
-            Next
-
-            For Each a As Control In panelMyListsCtrls.Controls
-                a.BackColor = Color.FromArgb(24, 32, 45)
-                a.ForeColor = Color.FromArgb(161, 168, 179)
-            Next
-
-            tabsLibrary.SelectedTab = tabLibraryMyLists
-            selectedList = sender.Text
-
-            For Each a As Control In panelMyCoreListsCtrls.Controls
-                a.BackColor = Color.FromArgb(24, 32, 45)
-                a.ForeColor = Color.FromArgb(161, 168, 179)
-            Next
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
-    Public Sub ctrlMyLists_MouseMove(sender As Object, e As MouseEventArgs)
-        sender.BackColor = Color.FromArgb(43, 50, 61)
-        sender.ForeColor = Color.White
-
-        sender.SideImageIsClickable = True
-        sender.SideImage = My.Resources.Edit_Icon
-        sender.SideImageAlign = ContentAlignment.MiddleRight
-        sender.SideImageSize = New Size(21, 15)
-    End Sub
-
-    Public Sub ctrlMyLists_MouseLeave(sender As Object, e As EventArgs)
-        If Not selectedList = sender.Text Then
-            sender.BackColor = Color.Transparent
-            sender.ForeColor = Color.FromArgb(161, 168, 179)
-        End If
-
-        sender.SideImageIsClickable = False
-        sender.SideImage = Nothing
     End Sub
 
     Private Sub SaveLists()
@@ -753,6 +659,42 @@ Public Class Movieo
 
 #End Region
 
+#Region "Collections (beta)"
+
+    Public storeControlsCollectionsScroll As New List(Of Control)
+
+    Private Sub imgCollectionsB2Browse_Click(sender As Object, e As EventArgs) Handles imgCollectionsB2Browse.Click
+        tabsCollections.SelectedTab = tabCollectionsHome
+    End Sub
+
+    Private Sub panelCollectionsItems_Scroll(sender As Object, e As ScrollEventArgs) Handles panelCollectionsItems.Scroll
+        Try
+            Dim vs As VScrollProperties = panelCollectionsItems.VerticalScroll
+            If e.NewValue = (vs.Maximum - vs.LargeChange) + 1 Then
+                If storeControlsCollectionsScroll.Count >= 30 Then
+                    For Each ctrlMovie In storeControlsCollectionsScroll.Take(30)
+                        panelCollectionsItems.Controls.Add(ctrlMovie)
+                    Next
+                    storeControlsCollectionsScroll.RemoveRange(0, 30)
+                Else
+                    For Each ctrlMovie In storeControlsCollectionsScroll
+                        panelCollectionsItems.Controls.Add(ctrlMovie)
+                    Next
+                    storeControlsCollectionsScroll.Clear()
+                End If
+            End If
+        Catch ex As Exception
+        End Try
+
+        panelCollectionsItems.Update()
+    End Sub
+
+    Private Sub panelCollectionsCtrls_Scroll(sender As Object, e As ScrollEventArgs) Handles panelCollectionsCtrls.Scroll
+        panelCollectionsCtrls.Update()
+    End Sub
+
+#End Region
+
 #Region "Library - Tabs"
 
     Private Sub tabsMyLists_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tabsLibrary.SelectedIndexChanged
@@ -806,6 +748,164 @@ Public Class Movieo
             sender.BackColor = Color.FromArgb(24, 32, 45)
             sender.ForeColor = Color.FromArgb(161, 168, 179)
         End If
+    End Sub
+
+#End Region
+
+#Region "My Lists"
+
+    Private Sub btnCreateList_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnCreateList.ClickButtonArea
+        frmCreateList.replaceList = False
+        frmCreateList.oldTitle = ""
+        frmCreateList.ShowDialog(Me)
+    End Sub
+
+    Private Sub btnCreateList_MouseMove(sender As Object, e As EventArgs) Handles btnCreateList.MouseMove
+        sender.ForeColor = Color.White
+        sender.BorderColor = Color.White
+        sender.ColorFillSolid = Color.FromArgb(52, 59, 71)
+    End Sub
+
+    Private Sub btnCreateList_MouseLeave(sender As Object, e As EventArgs) Handles btnCreateList.MouseLeave
+        sender.ForeColor = Color.FromArgb(161, 168, 179)
+        sender.BorderColor = Color.FromArgb(161, 168, 179)
+        sender.ColorFillSolid = Color.Transparent
+    End Sub
+
+    Private Sub panelMyListsCtrls_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelMyListsCtrls.ControlAdded
+        If panelMyListsCtrls.Controls.Count = 0 Then
+            lblEmptyPanelMyLists.Visible = True
+        Else
+            lblEmptyPanelMyLists.Visible = False
+        End If
+    End Sub
+
+    Private Sub panelMyListsCtrls_ControlRemoved(sender As Object, e As ControlEventArgs) Handles panelMyListsCtrls.ControlRemoved
+        If panelMyListsCtrls.Controls.Count = 0 Then
+            lblEmptyPanelMyLists.Visible = True
+        Else
+            lblEmptyPanelMyLists.Visible = False
+        End If
+    End Sub
+
+
+    Public Sub loadMyLists()
+        Try
+            panelMyListsCtrls.Controls.Clear()
+
+            Dim exts As String() = {"*.txt"}
+            Dim fileNames = My.Computer.FileSystem.GetFiles(pathMyLists, FileIO.SearchOption.SearchTopLevelOnly, exts)
+
+            For Each fileName As String In fileNames
+                Dim cutFileName As String = fileName.Replace(pathMyLists, "")
+                Dim a As New CButtonLib.CButton
+                a.Hide()
+                a.BackColor = Color.Transparent
+                a.ForeColor = Color.FromArgb(161, 168, 179)
+                a.ColorFillSolid = Color.Transparent
+                a.BorderColor = Color.Transparent
+                a.TextMargin = New Padding(10, 2, 2, 2)
+                a.ShowFocus = CButtonLib.CButton.eFocus.None
+                a.Font = CreateFont("Segoe UI Semibold", 10, False, False, False)
+                a.Text = cutFileName.Substring(0, cutFileName.Length - 4)
+                a.TextAlign = ContentAlignment.MiddleLeft
+                a.TextShadowShow = False
+                a.FillType = CButtonLib.CButton.eFillType.Solid
+                a.Cursor = Cursors.Hand
+                a.Size = New Size(154, 28)
+                a.Margin = New Padding(0, 0, 0, 0)
+                If selectedList = a.Text Then
+                    a.BackColor = Color.FromArgb(43, 50, 61)
+                    a.ForeColor = Color.White
+                End If
+                a.Show()
+                AddHandler a.ClickButtonArea, AddressOf ctrlMyLists_ClickButtonArea
+                AddHandler a.MouseMove, AddressOf ctrlMyLists_MouseMove
+                AddHandler a.MouseLeave, AddressOf ctrlMyLists_MouseLeave
+                AddHandler a.SideImageClicked, AddressOf ctrlMyLists_SideImageClicked
+                panelMyListsCtrls.Controls.Add(a)
+            Next
+
+            btnListsFavourites.Text = "Favourites (" + listFavourites.Count.ToString() + ")"
+            btnListsWatch.Text = "Watch List (" + listWatchList.Count.ToString() + ")"
+            btnListsSeen.Text = "Seen List (" + listSeenList.Count.ToString() + ")"
+            btnListsBlack.Text = "Black List (" + listBlackList.Count.ToString() + ")"
+        Catch ex As Exception
+            'No Lists to load
+        End Try
+    End Sub
+
+    Public Sub ctrlMyLists_SideImageClicked(sender As Object, e As MouseEventArgs)
+        ctrlContextMenuMyLists.oldTitle = sender.Text
+        ctrlContextMenuMyLists.Location = sender.PointToScreen(Point.Empty)
+        ctrlContextMenuMyLists.Size = New Size(ctrlContextMenuMyLists.Size.Width, ctrlContextMenuMyLists.Size.Height)
+        ctrlContextMenuMyLists.Show()
+    End Sub
+
+    Public Sub ctrlMyLists_ClickButtonArea(sender As Object, e As EventArgs)
+        Try
+            panelMyListsMovies.Controls.Clear()
+
+            Dim moviesInList() As String = File.ReadAllLines(pathMyLists + "\" + sender.Text + ".txt")
+
+            For Each movie As String In moviesInList
+                For Each a In storeControlsAllMovies
+                    For Each ab As Control In a.Controls
+                        If ab.Name = "InfoTitleAndYear" Then
+                            If ab.Text = movie Then
+                                panelMyListsMovies.Controls.Add(a)
+                            End If
+                        End If
+                    Next
+                Next
+            Next
+
+            For Each a As Control In panelMyListsCtrls.Controls
+                a.BackColor = Color.FromArgb(24, 32, 45)
+                a.ForeColor = Color.FromArgb(161, 168, 179)
+            Next
+
+            tabsLibrary.SelectedTab = tabLibraryMyLists
+            selectedList = sender.Text
+
+            For Each a As Control In panelMyCoreListsCtrls.Controls
+                a.BackColor = Color.FromArgb(24, 32, 45)
+                a.ForeColor = Color.FromArgb(161, 168, 179)
+            Next
+        Catch ex As Exception
+            sender.hide()
+            Tab.SelectedTab = tabLibrary
+            selectedList = btnListsFavourites.Text
+            tabsLibrary.SelectedTab = tabLibraryFavourites
+        End Try
+    End Sub
+
+    Public Sub ctrlMyLists_MouseMove(sender As Object, e As MouseEventArgs)
+        sender.BackColor = Color.FromArgb(43, 50, 61)
+        sender.ForeColor = Color.White
+
+        sender.SideImageIsClickable = True
+        sender.SideImage = My.Resources.Edit_Icon
+        sender.SideImageAlign = ContentAlignment.MiddleRight
+        sender.SideImageSize = New Size(21, 15)
+    End Sub
+
+    Public Sub ctrlMyLists_MouseLeave(sender As Object, e As EventArgs)
+        If Not selectedList = sender.Text Then
+            sender.BackColor = Color.Transparent
+            sender.ForeColor = Color.FromArgb(161, 168, 179)
+        End If
+
+        sender.SideImageIsClickable = False
+        sender.SideImage = Nothing
+    End Sub
+
+#End Region
+
+#Region "Downloads - Tab"
+
+    Private Sub panelDownloads_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelDownloads.ControlAdded
+        lblEmptyDownloads.Visible = False
     End Sub
 
 #End Region
@@ -993,154 +1093,6 @@ Public Class Movieo
         imgSearchIcon.BackColor = Color.FromArgb(80, 85, 105)
         imgSearchIcon.Image = My.Resources.SearchIconH
     End Sub
-
-#End Region
-
-#Region "Info Context Menu"
-
-    Public InfoSelectedTab As TabPage = frmInfo.tabAbout
-
-    Public UpdateAvailable As Boolean = False
-    Public IsContextOpen As Boolean = False
-
-    Private Sub btnInfoMenu_Click(sender As Object, e As EventArgs) Handles btnInfoMenu.Click
-        Dim a As New ctrlContextMenuInfo
-        ctrlContextMenuInfo.Location = New Point(btnInfoMenu.Location.X - ctrlContextMenuInfo.Size.Width + btnInfoMenu.Size.Width + 5, btnInfoMenu.Location.Y + btnInfoMenu.Size.Height + 15)
-        If UpdateAvailable = True Then
-            ctrlContextMenuInfo.Size = New Size(a.Size.Width, a.Size.Height)
-            ctrlContextMenuInfo.btnUpdateAvailable.Visible = True
-        Else
-            ctrlContextMenuInfo.Size = New Size(a.Size.Width, a.Size.Height - a.btnAboutMovieo.Size.Height)
-            ctrlContextMenuInfo.btnUpdateAvailable.Visible = False
-        End If
-        btnInfoMenu.Image = My.Resources.DropletsIconH
-        ctrlContextMenuInfo.Show()
-        IsContextOpen = True
-    End Sub
-
-    Private Sub btnInfoMenu_MouseMove(sender As Object, e As MouseEventArgs) Handles btnInfoMenu.MouseMove
-        If IsContextOpen = True Then
-            btnInfoMenu.Image = My.Resources.DropletsIconH
-        Else
-            btnInfoMenu.Image = My.Resources.DropletsIconH
-        End If
-    End Sub
-
-    Private Sub btnInfoMenu_MouseLeave(sender As Object, e As EventArgs) Handles btnInfoMenu.MouseLeave
-        If IsContextOpen = True Then
-            btnInfoMenu.Image = My.Resources.DropletsIconH
-        Else
-            btnInfoMenu.Image = My.Resources.DropletsIconL
-        End If
-    End Sub
-
-#End Region
-
-#Region "Show Empty Panel Message"
-
-    Private Sub panelMyListsFavourites_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelLibraryFavourites.ControlAdded, panelLibraryFavourites.ControlRemoved
-        If panelLibraryFavourites.Controls.Count = 0 Then
-            lblEmptyFavourites.Visible = True
-        Else
-            lblEmptyFavourites.Visible = False
-        End If
-    End Sub
-
-    Private Sub panelMyListsWatchList_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelLibraryWatchList.ControlAdded, panelLibraryWatchList.ControlRemoved
-        If panelLibraryWatchList.Controls.Count = 0 Then
-            lblEmptyWatchList.Visible = True
-        Else
-            lblEmptyWatchList.Visible = False
-        End If
-    End Sub
-
-    Private Sub panelMyListsSeenList_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelLibrarySeenList.ControlAdded, panelLibrarySeenList.ControlRemoved
-        If panelLibrarySeenList.Controls.Count = 0 Then
-            lblEmptySeenList.Visible = True
-        Else
-            lblEmptySeenList.Visible = False
-        End If
-    End Sub
-
-    Private Sub panelMyListsBlackList_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelLibraryBlackList.ControlAdded, panelLibraryBlackList.ControlRemoved
-        If panelLibraryBlackList.Controls.Count = 0 Then
-            lblEmptyBlackList.Visible = True
-        Else
-            lblEmptyBlackList.Visible = False
-        End If
-    End Sub
-
-    Private Sub panelMyListsMovies_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelMyListsMovies.ControlAdded, panelMyListsMovies.ControlRemoved
-        If panelMyListsMovies.Controls.Count = 0 Then
-            lblEmptyMyLists.Visible = True
-        Else
-            lblEmptyMyLists.Visible = False
-        End If
-    End Sub
-
-#End Region
-
-#Region "Check for Update"
-
-    Private Sub GetUpdateNotification_Tick(sender As Object, e As EventArgs) Handles timerCheckForUpdate.Tick
-        Try
-            Dim request As HttpWebRequest = WebRequest.Create(linkLatestVersion)
-            Dim response As HttpWebResponse = request.GetResponse()
-            Dim sr As StreamReader = New StreamReader(response.GetResponseStream())
-            Dim versionfile As String() = Split(sr.ReadToEnd, "|")
-            Dim newestversion As String = versionfile(0)
-            Dim currentversion As String = Application.ProductVersion
-
-            If Not versionfile(0).Contains(currentversion) Then
-                UpdateAvailable = True
-            End If
-            timerCheckForUpdate.Enabled = False
-        Catch ex As Exception
-            timerCheckForUpdate.Enabled = False
-        End Try
-    End Sub
-
-#End Region
-
-#Region "Open Mail App"
-
-    Public emailMovieo As String = "hi@movieo.info"
-
-    Public Sub openMail(txtSubject As String, txtBody As String)
-        Process.Start("mailto:" + emailMovieo +
-                      "?subject=" + txtSubject +
-                      "&body=" + txtBody) '+
-        '"&attachment=" + pathLogFile)
-    End Sub
-
-#End Region
-
-#Region "Create Font"
-
-    'Thanks to https://stackoverflow.com/questions/1350993/vb-net-how-to-compose-and-apply-a-font-to-a-label-in-runtime
-    Public Function CreateFont(ByVal fontName As String,
-                           ByVal fontSize As Integer,
-                           ByVal isBold As Boolean,
-                           ByVal isItalic As Boolean,
-                           ByVal isStrikeout As Boolean) As Font
-
-        Dim styles As FontStyle = FontStyle.Regular
-
-        If (isBold) Then
-            styles = styles Or FontStyle.Bold
-        End If
-
-        If (isItalic) Then
-            styles = styles Or FontStyle.Italic
-        End If
-
-        If (isStrikeout) Then
-            styles = styles Or FontStyle.Strikeout
-        End If
-
-        Dim newFont As New Font(fontName, fontSize, styles)
-        Return newFont
-    End Function
 
 #End Region
 
@@ -1348,46 +1300,109 @@ Public Class Movieo
 
 #End Region
 
-#Region "Collections (beta)"
+#Region "Info Context Menu"
 
-    Public storeControlsCollectionsScroll As New List(Of Control)
+    Public InfoSelectedTab As TabPage = frmInfo.tabAbout
 
-    Private Sub imgCollectionsB2Browse_Click(sender As Object, e As EventArgs) Handles imgCollectionsB2Browse.Click
-        tabsCollections.SelectedTab = tabCollectionsHome
+    Public UpdateAvailable As Boolean = False
+    Public IsContextOpen As Boolean = False
+
+    Private Sub btnInfoMenu_Click(sender As Object, e As EventArgs) Handles btnInfoMenu.Click
+        Dim a As New ctrlContextMenuInfo
+        Dim ab As Point = New Point(-ctrlContextMenuInfo.Size.Width + btnInfoMenu.Size.Width + 5, btnInfoMenu.Size.Height)
+        ctrlContextMenuInfo.Location = btnInfoMenu.PointToScreen(ab)
+        If UpdateAvailable = True Then
+            ctrlContextMenuInfo.Size = New Size(a.Size.Width, a.Size.Height)
+            ctrlContextMenuInfo.btnUpdateAvailable.Visible = True
+        Else
+            ctrlContextMenuInfo.Size = New Size(a.Size.Width, a.Size.Height - a.btnAboutMovieo.Size.Height)
+            ctrlContextMenuInfo.btnUpdateAvailable.Visible = False
+        End If
+        btnInfoMenu.Image = My.Resources.DropletsIconH
+        ctrlContextMenuInfo.Show()
+        IsContextOpen = True
     End Sub
 
-    Private Sub panelCollectionsItems_Scroll(sender As Object, e As ScrollEventArgs) Handles panelCollectionsItems.Scroll
-        Try
-            Dim vs As VScrollProperties = panelCollectionsItems.VerticalScroll
-            If e.NewValue = (vs.Maximum - vs.LargeChange) + 1 Then
-                If storeControlsCollectionsScroll.Count >= 30 Then
-                    For Each ctrlMovie In storeControlsCollectionsScroll.Take(30)
-                        panelCollectionsItems.Controls.Add(ctrlMovie)
-                    Next
-                    storeControlsCollectionsScroll.RemoveRange(0, 30)
-                Else
-                    For Each ctrlMovie In storeControlsCollectionsScroll
-                        panelCollectionsItems.Controls.Add(ctrlMovie)
-                    Next
-                    storeControlsCollectionsScroll.Clear()
-                End If
-            End If
-        Catch ex As Exception
-        End Try
-
-        panelCollectionsItems.Update()
+    Private Sub btnInfoMenu_MouseMove(sender As Object, e As MouseEventArgs) Handles btnInfoMenu.MouseMove
+        If IsContextOpen = True Then
+            btnInfoMenu.Image = My.Resources.DropletsIconH
+        Else
+            btnInfoMenu.Image = My.Resources.DropletsIconH
+        End If
     End Sub
 
-    Private Sub panelCollectionsCtrls_Scroll(sender As Object, e As ScrollEventArgs) Handles panelCollectionsCtrls.Scroll
-        panelCollectionsCtrls.Update()
+    Private Sub btnInfoMenu_MouseLeave(sender As Object, e As EventArgs) Handles btnInfoMenu.MouseLeave
+        If IsContextOpen = True Then
+            btnInfoMenu.Image = My.Resources.DropletsIconH
+        Else
+            btnInfoMenu.Image = My.Resources.DropletsIconL
+        End If
     End Sub
 
 #End Region
 
-#Region "Downloads - Tab"
+#Region "Show Empty Panel Message"
 
-    Private Sub panelDownloads_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelDownloads.ControlAdded
-        lblEmptyDownloads.Visible = False
+    Private Sub panelMyListsFavourites_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelLibraryFavourites.ControlAdded, panelLibraryFavourites.ControlRemoved
+        If panelLibraryFavourites.Controls.Count = 0 Then
+            lblEmptyFavourites.Visible = True
+        Else
+            lblEmptyFavourites.Visible = False
+        End If
+    End Sub
+
+    Private Sub panelMyListsWatchList_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelLibraryWatchList.ControlAdded, panelLibraryWatchList.ControlRemoved
+        If panelLibraryWatchList.Controls.Count = 0 Then
+            lblEmptyWatchList.Visible = True
+        Else
+            lblEmptyWatchList.Visible = False
+        End If
+    End Sub
+
+    Private Sub panelMyListsSeenList_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelLibrarySeenList.ControlAdded, panelLibrarySeenList.ControlRemoved
+        If panelLibrarySeenList.Controls.Count = 0 Then
+            lblEmptySeenList.Visible = True
+        Else
+            lblEmptySeenList.Visible = False
+        End If
+    End Sub
+
+    Private Sub panelMyListsBlackList_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelLibraryBlackList.ControlAdded, panelLibraryBlackList.ControlRemoved
+        If panelLibraryBlackList.Controls.Count = 0 Then
+            lblEmptyBlackList.Visible = True
+        Else
+            lblEmptyBlackList.Visible = False
+        End If
+    End Sub
+
+    Private Sub panelMyListsMovies_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelMyListsMovies.ControlAdded, panelMyListsMovies.ControlRemoved
+        If panelMyListsMovies.Controls.Count = 0 Then
+            lblEmptyMyLists.Visible = True
+        Else
+            lblEmptyMyLists.Visible = False
+        End If
+    End Sub
+
+#End Region
+
+#Region "Check for Update"
+
+    Private Sub GetUpdateNotification_Tick(sender As Object, e As EventArgs) Handles timerCheckForUpdate.Tick
+        Try
+            Dim request As HttpWebRequest = WebRequest.Create(linkLatestVersion)
+            Dim response As HttpWebResponse = request.GetResponse()
+            Dim sr As StreamReader = New StreamReader(response.GetResponseStream())
+            Dim versionfile As String() = Split(sr.ReadToEnd, "|")
+            Dim newestversion As String = versionfile(0)
+            Dim currentversion As String = Application.ProductVersion
+
+            If Not versionfile(0).Contains(currentversion) Then
+                UpdateAvailable = True
+            End If
+            timerCheckForUpdate.Enabled = False
+        Catch ex As Exception
+            timerCheckForUpdate.Enabled = False
+        End Try
     End Sub
 
 #End Region
@@ -1468,46 +1483,45 @@ Public Class Movieo
 
 #End Region
 
-#Region "My Lists"
+#Region "Open Mail App"
 
-    Private Sub btnCreateList_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnCreateList.ClickButtonArea
-        frmCreateList.replaceList = False
-        frmCreateList.oldTitle = ""
-        frmCreateList.ShowDialog()
+    Public emailMovieo As String = "hi@movieo.info"
+
+    Public Sub openMail(txtSubject As String, txtBody As String)
+        Process.Start("mailto:" + emailMovieo +
+                      "?subject=" + txtSubject +
+                      "&body=" + txtBody) '+
+        '"&attachment=" + pathLogFile)
     End Sub
 
+#End Region
 
-    Private Sub btnCreateList_MouseMove(sender As Object, e As EventArgs) Handles btnCreateList.MouseMove
-        sender.ForeColor = Color.White
-        sender.BorderColor = Color.White
-        sender.ColorFillSolid = Color.FromArgb(52, 59, 71)
-    End Sub
+#Region "Create Font"
 
-    Private Sub btnCreateList_MouseLeave(sender As Object, e As EventArgs) Handles btnCreateList.MouseLeave
-        sender.ForeColor = Color.FromArgb(161, 168, 179)
-        sender.BorderColor = Color.FromArgb(161, 168, 179)
-        sender.ColorFillSolid = Color.Transparent
-    End Sub
+    'Thanks to https://stackoverflow.com/questions/1350993/vb-net-how-to-compose-and-apply-a-font-to-a-label-in-runtime
+    Public Function CreateFont(ByVal fontName As String,
+                           ByVal fontSize As Integer,
+                           ByVal isBold As Boolean,
+                           ByVal isItalic As Boolean,
+                           ByVal isStrikeout As Boolean) As Font
 
-    Private Sub panelMyListsCtrls_ControlAdded(sender As Object, e As ControlEventArgs) Handles panelMyListsCtrls.ControlAdded
-        If panelMyListsCtrls.Controls.Count = 0 Then
-            lblEmptyPanelMyLists.Visible = True
-        Else
-            lblEmptyPanelMyLists.Visible = False
+        Dim styles As FontStyle = FontStyle.Regular
+
+        If (isBold) Then
+            styles = styles Or FontStyle.Bold
         End If
-    End Sub
 
-    Private Sub panelMyListsCtrls_ControlRemoved(sender As Object, e As ControlEventArgs) Handles panelMyListsCtrls.ControlRemoved
-        If panelMyListsCtrls.Controls.Count = 0 Then
-            lblEmptyPanelMyLists.Visible = True
-        Else
-            lblEmptyPanelMyLists.Visible = False
+        If (isItalic) Then
+            styles = styles Or FontStyle.Italic
         End If
-    End Sub
 
-    Private Sub btnCreateList_MouseMove(sender As Object, e As MouseEventArgs) Handles btnCreateList.MouseMove
+        If (isStrikeout) Then
+            styles = styles Or FontStyle.Strikeout
+        End If
 
-    End Sub
+        Dim newFont As New Font(fontName, fontSize, styles)
+        Return newFont
+    End Function
 
 #End Region
 

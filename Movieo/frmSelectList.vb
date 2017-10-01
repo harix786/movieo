@@ -5,8 +5,7 @@ Public Class frmSelectList
     Public currentMovie As String
 
     Private Sub frmSelectSource_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Top = Movieo.ClientRectangle.Top + 23
-        Left = Movieo.ClientRectangle.Left
+        Location = Movieo.PointToScreen(Point.Empty)
         Size = Movieo.ClientSize
         btnAddRemoveMovie.Enabled = False
     End Sub

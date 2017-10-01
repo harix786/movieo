@@ -232,23 +232,21 @@ Public Class ctrlPosterTitle
         Dim WebClient = New WebClient()
 
         If Not ignoreControls.Contains(Parent.Name) Then
-            If Movieo.listBlackList.Contains(InfoTitleAndYear.Text) Then
-                Hide()
-            Else
-                If Movieo.listSeenList.Contains(InfoTitleAndYear.Text) Then
-                    If My.Settings.doWatchedMovies = 0 Then
-                        InfoPoster.BackgroundImage = ChangeOpacity(InfoPoster.BackgroundImage, 0.3)
-                        Show()
-                    ElseIf My.Settings.doWatchedMovies = 1 Then
-                        Hide()
-                    ElseIf My.Settings.doWatchedMovies = 2 Then
-                        InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
-                        Show()
-                    End If
-                Else
+            If Movieo.listSeenList.Contains(InfoTitleAndYear.Text) Then
+                If My.Settings.doWatchedMovies = 0 Then
+                    InfoPoster.BackgroundImage = ChangeOpacity(InfoPoster.BackgroundImage, 0.3)
+                    Show()
+                ElseIf My.Settings.doWatchedMovies = 1 Then
+                    Hide()
+                ElseIf My.Settings.doWatchedMovies = 2 Then
                     InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
                     Show()
                 End If
+            ElseIf Movieo.listBlackList.Contains(InfoTitleAndYear.Text) Then
+                Hide()
+            Else
+                InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
+                Show()
             End If
         End If
     End Sub

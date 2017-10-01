@@ -1,8 +1,7 @@
 ﻿Public Class frmSelectSource
 
     Private Sub frmSelectSource_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Top = Movieo.ClientRectangle.Top + 23
-        Left = Movieo.ClientRectangle.Left
+        Location = Movieo.PointToScreen(Point.Empty)
         Size = Movieo.ClientSize
         btnOk.Enabled = False
     End Sub
