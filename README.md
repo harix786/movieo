@@ -33,6 +33,8 @@ Movieo started out as a passion project and continues to improve thanks to wonde
 - Already tracking movies someplace else? Just transfer them with our import tool and you'll be all set
 - Download movies directly to your computer
 - Can't find the movie you're after? Request it and we'll put it up in no time
+- Movies and sources updated everyday by our amazing team of researchers
+- Automatically check for updates, so you never miss the new features available
 
 ## Supported Platforms
 Works with Windows 7 and above (Windows 7, 8, 8.1, 10)
