@@ -4,7 +4,7 @@
   Movieo
 </h1>
 
-<h3 align="center">Discover and watch movies instantly</h3>
+<h3 align="center">Discover, organize and watch movies instantly</h3>
 
 <div align="center">
 
