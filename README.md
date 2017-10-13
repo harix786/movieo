@@ -31,6 +31,7 @@ Movieo started out as a passion project and continues to improve thanks to wonde
 - Track movies by adding them to your Watch List, Seen List or Black List
 - Watch movie trailers
 - Already tracking movies someplace else? Just transfer them with our import tool and you'll be all set
+- Multiple sources available for almost every movie, so you're not tied down to just the one
 - Download movies directly to your computer
 - Can't find the movie you're after? Request it and we'll put it up in no time
 - Movies and sources updated everyday by our amazing team of researchers
