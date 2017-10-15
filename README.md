@@ -4,7 +4,7 @@
   Movieo
 </h1>
 
-<h3 align="center">Discover and watch movies instantly</h3>
+<h3 align="center">Discover, organize and watch movies instantly</h3>
 
 <div align="center">
 
@@ -19,7 +19,25 @@ Movieo started out as a passion project and continues to improve thanks to wonde
 
 [Terms of Service](http://movieo.info/more/tos.html)  |  [Frequently Asked Questions](http://movieo.info/more/faq.html)  |  [Release Notes](http://movieo.info/more/release-notes.html)  |  [Email Us](mailto:hi@movieo.info)
 
-## Supported platforms
+## Core Features:
+- Discover hundreds of movies all in one place
+- Watch movies straight from the app, no wait time or ads (No torrents, only raw media files hosted over the Internet!)
+- Browse Collections made by other cinephiles
+- All the data you wish - We’ve collected movie data from around the web so you don’t have to
+- Search for movies, actors, directors, writers and even paste HTTP links or drag and drop files
+- Filter movies by Genre, Trending, New Releases or Top Rated
+- Create your own lists, they're saved locally for easy management
+- Instead of picking movies for you, we make it super easy to discover great stuff yourself
+- Track movies by adding them to your Watch List, Seen List or Black List
+- Watch movie trailers
+- Already tracking movies someplace else? Just transfer them with our import tool and you'll be all set
+- Multiple sources available for almost every movie, so you're not tied down to just the one
+- Download movies directly to your computer
+- Can't find the movie you're after? Request it and we'll put it up in no time
+- Movies and sources updated everyday by our amazing team of researchers
+- Automatically check for updates, so you never miss the new features available
+
+## Supported Platforms
 Works with Windows 7 and above (Windows 7, 8, 8.1, 10)
 
 ## Installation
