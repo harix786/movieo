@@ -12,6 +12,7 @@ Bug Fixes:
 - loading stuck on startup
 - removes invalid characters in list title
 - list posters not updating
+- issue preventing some downloads due to file extension
 
 ## 0.3.2 Beta - There's Nothing on TV
 
