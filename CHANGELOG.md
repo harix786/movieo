@@ -1,16 +1,32 @@
+## 0.3.3 Beta - It's Cold Outside
+
+New Features:
+- movie details interface improvements
+- drag and drop files
+- import to created lists
+- export lists to csv
+- export created lists
+- support for external media players
+
+Bug Fixes:
+- loading stuck on startup
+- removes invalid characters in list title
+- list posters not updating
+
 ## 0.3.2 Beta - There's Nothing on TV
 
 New Features:
 - due to security reasons, web mail has been replaced with manual mail app
-- settings ui design
+- settings UI design
 - collection description shows on thumbnail
 - number of movies watched in collections
-- import/export imdb lists
+- import IMDb lists to core lists
+- export core lists
 - create your own lists (unlimited)
 - local files in available streams
 
 Bug Fixes:
-- minor ui bugs
+- minor UI bugs
 - posters not updating when user changed list status
 - movie background not hiding bug
 
@@ -40,16 +56,16 @@ Bug Fixes:
 ## 0.2.7.4-2 Beta - Oh So Smooooth
 
 New Features:
-- ui improvements
+- UI improvements
 - posters load on scroll, instead of all at once
 - filter genre are now selected by buttons
 - movie details are pulled on poster click
 - sizeable main form
 - select source on download
 - search movies tab
-- paste urls in search box
+- paste URLs in search box
 - netflix ratings
-- movie details can be on clicked to search (genre, director, cast)
+- movie details searched on click (genre, director and cast)
 
 Removed Features:
 - collections, due to bugs and instability
@@ -113,7 +129,7 @@ Bug Fixes:
 ## 0.2.7.1 Beta - All Hail Lord Helix
 
 New Features:
-- few minor ui changes
+- few UI changes
 - control box (minimise, maximise and close buttons)
 - notifications design
 - movies marked as 'watched' are dimmed (by default)
@@ -287,7 +303,7 @@ Bug Fixes:
 ## 0.2.1 Beta
 
 New Features:
-- ui on all buttons more effective
+- UI on all buttons more effective
 - faster searching movies
 - filter movie genres
 - search movies by: title, actor, year released & genre
