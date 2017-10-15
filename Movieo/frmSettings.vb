@@ -214,7 +214,7 @@
             Try
                 Movieo.NetDl.DownloadFile(Movieo.linkMovieDatabase, ab.FileName)
             Catch ex As Exception
-                MsgBox(ex.Message)
+                Movieo.ShowPopupOk("Unable to download database", ex.InnerException.Message, Me)
             End Try
         End If
     End Sub

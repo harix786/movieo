@@ -126,7 +126,7 @@ Partial Class ctrlPosterTitle
         Me.InfoYear.BackColor = System.Drawing.Color.Transparent
         Me.InfoYear.Font = New System.Drawing.Font("Segoe UI", 9.25!)
         Me.InfoYear.ForeColor = System.Drawing.Color.DarkGray
-        Me.InfoYear.Location = New System.Drawing.Point(7, 248)
+        Me.InfoYear.Location = New System.Drawing.Point(7, 251)
         Me.InfoYear.Margin = New System.Windows.Forms.Padding(0, 0, 1, 0)
         Me.InfoYear.Name = "InfoYear"
         Me.InfoYear.Size = New System.Drawing.Size(33, 17)
@@ -153,7 +153,7 @@ Partial Class ctrlPosterTitle
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.InfoSearches.Location = New System.Drawing.Point(26, 22)
         Me.InfoSearches.Name = "InfoSearches"
-        Me.InfoSearches.Size = New System.Drawing.Size(10, 25)
+        Me.InfoSearches.Size = New System.Drawing.Size(10, 28)
         Me.InfoSearches.TabIndex = 31
         Me.InfoSearches.Text = ""
         Me.InfoSearches.Visible = False
@@ -205,7 +205,7 @@ Partial Class ctrlPosterTitle
         Me.InfoTitle.BackColor = System.Drawing.Color.Transparent
         Me.InfoTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.InfoTitle.ForeColor = System.Drawing.Color.White
-        Me.InfoTitle.Location = New System.Drawing.Point(6, 225)
+        Me.InfoTitle.Location = New System.Drawing.Point(6, 228)
         Me.InfoTitle.Margin = New System.Windows.Forms.Padding(3)
         Me.InfoTitle.Name = "InfoTitle"
         Me.InfoTitle.Size = New System.Drawing.Size(148, 25)
@@ -323,7 +323,7 @@ Partial Class ctrlPosterTitle
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.InfoMovieQuality.Font = New System.Drawing.Font("Segoe UI", 9.25!)
         Me.InfoMovieQuality.ForeColor = System.Drawing.Color.DarkGray
-        Me.InfoMovieQuality.Location = New System.Drawing.Point(92, 248)
+        Me.InfoMovieQuality.Location = New System.Drawing.Point(92, 251)
         Me.InfoMovieQuality.Name = "InfoMovieQuality"
         Me.InfoMovieQuality.Size = New System.Drawing.Size(61, 18)
         Me.InfoMovieQuality.TabIndex = 56
@@ -342,7 +342,7 @@ Partial Class ctrlPosterTitle
         Me.InfoPoster.BorderShow = False
         Me.InfoPoster.ColorFillSolid = System.Drawing.Color.Transparent
         Me.InfoPoster.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.InfoPoster.DesignerSelected = True
+        Me.InfoPoster.DesignerSelected = False
         Me.InfoPoster.DimFactorClick = 0
         Me.InfoPoster.DimFactorHover = 0
         Me.InfoPoster.FillType = CButtonLib.CButton.eFillType.Solid
@@ -351,7 +351,7 @@ Partial Class ctrlPosterTitle
         Me.InfoPoster.Location = New System.Drawing.Point(7, 8)
         Me.InfoPoster.Name = "InfoPoster"
         Me.InfoPoster.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.InfoPoster.Size = New System.Drawing.Size(146, 211)
+        Me.InfoPoster.Size = New System.Drawing.Size(146, 214)
         Me.InfoPoster.TabIndex = 38
         Me.InfoPoster.TabStop = False
         Me.InfoPoster.Text = ""
@@ -376,7 +376,7 @@ Partial Class ctrlPosterTitle
         Me.InfoPoster2.Location = New System.Drawing.Point(8, 8)
         Me.InfoPoster2.Name = "InfoPoster2"
         Me.InfoPoster2.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.InfoPoster2.Size = New System.Drawing.Size(144, 209)
+        Me.InfoPoster2.Size = New System.Drawing.Size(144, 212)
         Me.InfoPoster2.TabIndex = 44
         Me.InfoPoster2.TabStop = False
         Me.InfoPoster2.Text = ""
@@ -413,7 +413,7 @@ Partial Class ctrlPosterTitle
         Me.imageBackgroundEffect.Image = Global.Movieo.My.Resources.Resources.PosterGlow
         Me.imageBackgroundEffect.Location = New System.Drawing.Point(-2, -3)
         Me.imageBackgroundEffect.Name = "imageBackgroundEffect"
-        Me.imageBackgroundEffect.Size = New System.Drawing.Size(165, 230)
+        Me.imageBackgroundEffect.Size = New System.Drawing.Size(165, 233)
         Me.imageBackgroundEffect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.imageBackgroundEffect.TabIndex = 45
         Me.imageBackgroundEffect.TabStop = False
@@ -449,7 +449,7 @@ Partial Class ctrlPosterTitle
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(161, 275)
+        Me.ClientSize = New System.Drawing.Size(161, 278)
         Me.ControlBox = False
         Me.Controls.Add(Me.InfoImdbRatingPoster)
         Me.Controls.Add(Me.InfoMovieQuality)

@@ -2,13 +2,25 @@
 
 Public Class frmImportExport
 
-
 #Region "Base"
 
     Private Sub frmImportExport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Set position/size of window
         Location = Movieo.PointToScreen(Point.Empty)
         Size = Movieo.ClientSize
+
+        cmboboxImportTo.Items.Clear()
+        cmboboxExportFrom.Items.Clear()
+
+        Dim defaultLists = {"Watch List", "Seen List", "Black List"}
+        cmboboxImportTo.Items.AddRange(defaultLists)
+        cmboboxExportFrom.Items.AddRange(defaultLists)
+
+        For Each fileName As String In My.Computer.FileSystem.GetFiles(Movieo.pathMyLists, FileIO.SearchOption.SearchTopLevelOnly, "*.txt")
+            Dim cutFileName As String = fileName.Replace(Movieo.pathMyLists, "")
+            cmboboxImportTo.Items.Add(cutFileName.Substring(0, cutFileName.Length - 4))
+            cmboboxExportFrom.Items.Add(cutFileName.Substring(0, cutFileName.Length - 4))
+        Next
 
         cmboboxImportFrom.SelectedIndex = 0
         cmboboxImportTo.SelectedIndex = 0
@@ -122,6 +134,8 @@ Public Class frmImportExport
                 ImportIMDb("Seen List")
             ElseIf cmboboxImportFrom.SelectedIndex = 0 AndAlso cmboboxImportTo.SelectedIndex = 2 Then
                 ImportIMDb("Black List")
+            ElseIf cmboboxImportFrom.SelectedIndex = 0 AndAlso cmboboxImportTo.SelectedIndex >= 3 Then
+                ImportIMDb(cmboboxImportTo.GetItemText(cmboboxImportTo.SelectedItem))
             End If
         End If
     End Sub
@@ -156,54 +170,57 @@ Public Class frmImportExport
 
                         If nameList = "Watch List" Then
                             If Movieo.listWatchList.Contains(movieTitleYear) Then
-                                Movieo.RemoveMovie(Movieo.panelLibraryWatchList, Movieo.listWatchList, movieTitle, movieYear, movieIMDbId)
+                                Movieo.removeMovieFromCoreList(Movieo.panelLibraryWatchList, Movieo.listWatchList, movieTitle, movieYear, movieIMDbId)
                             Else
-                                Movieo.AddMovieToList(Movieo.panelLibraryWatchList, Movieo.listWatchList, movieTitle, movieYear, movieIMDbId)
+                                Movieo.addMovieToCoreList(Movieo.panelLibraryWatchList, Movieo.listWatchList, movieTitle, movieYear, movieIMDbId)
 
                                 If Movieo.listBlackList.Contains(movieTitleYear) Then
-                                    Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+                                    Movieo.removeMovieFromCoreList(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
                                 End If
 
                                 If Movieo.listSeenList.Contains(movieTitleYear) Then
-                                    Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+                                    Movieo.removeMovieFromCoreList(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
                                 End If
                             End If
                         ElseIf nameList = "Seen List" Then
                             If Movieo.listWatchList.Contains(movieTitleYear) Then
-                                Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+                                Movieo.removeMovieFromCoreList(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
                             Else
-                                Movieo.AddMovieToList(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+                                Movieo.addMovieToCoreList(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
 
                                 If Movieo.listBlackList.Contains(movieTitleYear) Then
-                                    Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+                                    Movieo.removeMovieFromCoreList(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
                                 End If
 
                                 If Movieo.listSeenList.Contains(movieTitleYear) Then
-                                    Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+                                    Movieo.removeMovieFromCoreList(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
                                 End If
                             End If
                         ElseIf nameList = "Black List" Then
                             If Movieo.listWatchList.Contains(movieTitleYear) Then
-                                Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+                                Movieo.removeMovieFromCoreList(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
                             Else
-                                Movieo.AddMovieToList(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+                                Movieo.addMovieToCoreList(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
 
                                 If Movieo.listBlackList.Contains(movieTitleYear) Then
-                                    Movieo.RemoveMovie(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
+                                    Movieo.removeMovieFromCoreList(Movieo.panelLibraryBlackList, Movieo.listBlackList, movieTitle, movieYear, movieIMDbId)
                                 End If
 
                                 If Movieo.listSeenList.Contains(movieTitleYear) Then
-                                    Movieo.RemoveMovie(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
+                                    Movieo.removeMovieFromCoreList(Movieo.panelLibrarySeenList, Movieo.listSeenList, movieTitle, movieYear, movieIMDbId)
                                 End If
                             End If
+                        Else
+                            Movieo.addMovieToMyList(nameList, movieTitleYear)
                         End If
                     End If
                 Catch
                 End Try
             End While
-            lblImportFile.Text = "List Imported!"
+            showMessage("List Successfully Imported!")
         Catch ex As Exception
-            MsgBox(ex.Message)
+            showMessage("Unable to Import List")
+            Movieo.ShowPopupOk("Unable to Import List", ex.InnerException.Message, Me)
         End Try
     End Sub
 
@@ -216,7 +233,7 @@ Public Class frmImportExport
     End Sub
 
     Private Sub cmboboxExportFrom_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmboboxExportFrom.SelectedIndexChanged
-        cmboboxExportFrom.Text = cmboboxExportFrom.SelectedItem.ToString
+        cmboLblExportFrom.Text = cmboboxExportFrom.SelectedItem.ToString
     End Sub
 
     Private Sub btnStartExporting_MouseMove(sender As Object, e As EventArgs) Handles btnStartExporting.MouseMove, btnStartExporting.GotFocus
@@ -238,20 +255,92 @@ Public Class frmImportExport
             ExportList(Movieo.listSeenList)
         ElseIf cmboboxExportFrom.SelectedIndex = 2 Then
             ExportList(Movieo.listBlackList)
+        ElseIf cmboboxExportFrom.SelectedIndex >= 3 Then
+            ExportMyList(cmboboxExportFrom.SelectedItem.ToString)
         End If
     End Sub
 
     Public Sub ExportList(itemsList As List(Of String))
-        Dim a As New SaveFileDialog
-        a.Title = "Save"
+        Try
+            Dim a As New FolderBrowserDialog
 
-        If a.ShowDialog() = DialogResult.OK Then
-            Dim BuildList As New Text.StringBuilder()
-            For Each MovieItem As String In itemsList
-                BuildList.AppendLine(MovieItem)
-            Next
-            File.WriteAllText(a.FileName + cmboboxExportFrom.SelectedItem.ToString + ".txt", BuildList.ToString())
-        End If
+            If a.ShowDialog() = DialogResult.OK Then
+                Dim csvFile As String = a.SelectedPath + "\" + cmboboxExportFrom.SelectedItem.ToString.Replace(" ", "") + "-" + Date.Now.ToString("yyyy-MM-dd") + ".csv"
+
+                If File.Exists(csvFile) Then
+                    File.Delete(csvFile)
+                End If
+
+                Dim objWriter As StreamWriter = File.AppendText(csvFile)
+
+                objWriter.WriteLine("imdb_id,title,year")
+                For Each MovieItem As String In itemsList
+                    If Not MovieItem = "" Then
+                        objWriter.WriteLine(Movieo.returnIMDb(MovieItem) + "," + MovieItem.Substring(0, MovieItem.Length - 7) + "," + MovieItem.Substring(MovieItem.Length - 5, 4))
+                    End If
+                Next
+
+                objWriter.Close()
+            End If
+            showMessage("List Successfully Exported!")
+        Catch ex As Exception
+            showMessage("Unable to Export List")
+            Movieo.ShowPopupOk("Unable to Export List", ex.Message, Me)
+        End Try
+    End Sub
+
+    Public Sub ExportMyList(listTitle As String)
+        Try
+            Dim moviesListPath As String() = File.ReadAllLines(Movieo.pathMyLists + listTitle + ".txt")
+
+            Dim a As New FolderBrowserDialog
+
+            If a.ShowDialog() = DialogResult.OK Then
+                Dim csvFile As String = a.SelectedPath + "\" + cmboboxExportFrom.SelectedItem.ToString.Replace(" ", "") + "-" + Date.Now.ToString("yyyy-MM-dd") + ".csv"
+
+                If File.Exists(csvFile) Then
+                    File.Delete(csvFile)
+                End If
+
+                Dim objWriter As StreamWriter = File.AppendText(csvFile)
+
+                objWriter.WriteLine("imdb_id,title,year")
+                For Each MovieItem As String In moviesListPath
+                    If Not MovieItem = "" Then
+                        objWriter.WriteLine(Movieo.returnIMDb(MovieItem) + "," + MovieItem.Substring(0, MovieItem.Length - 7) + "," + MovieItem.Substring(MovieItem.Length - 5, 4))
+                    End If
+                Next
+
+                objWriter.Close()
+            End If
+            showMessage("List Successfully Exported!")
+        Catch ex As Exception
+            showMessage("Unable to Export List")
+            Movieo.ShowPopupOk("Unable to Export List", ex.Message, Me)
+        End Try
+    End Sub
+
+#End Region
+
+#Region "Notification Message"
+
+    Private Sub HideSettingsConfirmation_Tick(sender As Object, e As EventArgs) Handles timerHideNotifications.Tick
+        lblStatus.Visible = False
+        timerHideNotifications.Enabled = False
+    End Sub
+
+    Public Sub showMessage(Message As String)
+        timerHideNotifications.Enabled = False
+
+        lblStatus.Text = Message
+        Dim myFont As New Font(lblStatus.Font.FontFamily, Me.lblStatus.Font.Size)
+        Dim mySize = lblStatus.CreateGraphics.MeasureString(Message, myFont)
+
+        lblStatus.Width = CType(Math.Round(mySize.Width, 0), Integer) + 20
+        lblStatus.Height = CType(Math.Round(mySize.Height, 0), Integer) + 14
+        lblStatus.Location = New Point((ClientSize.Width - lblStatus.Width) \ 2, 56)
+        lblStatus.Visible = True
+        timerHideNotifications.Enabled = True
     End Sub
 
 #End Region

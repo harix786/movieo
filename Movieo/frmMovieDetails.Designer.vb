@@ -30,7 +30,7 @@ Partial Class frmMovieDetails
         Me.infoDuration = New System.Windows.Forms.Label()
         Me.infoQuality = New System.Windows.Forms.Label()
         Me.infoImageLink = New System.Windows.Forms.Label()
-        Me.ActionsPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.ListsPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnFavouriteList = New System.Windows.Forms.PictureBox()
         Me.Splitter2 = New System.Windows.Forms.Label()
         Me.btnWatchList = New System.Windows.Forms.PictureBox()
@@ -89,7 +89,6 @@ Partial Class frmMovieDetails
         Me.infoRatingNetflix = New System.Windows.Forms.Label()
         Me.SplitterLine1 = New CButtonLib.CButton()
         Me.btnDownloadMovie = New CButtonLib.CButton()
-        Me.btnWatchMovie = New CButtonLib.CButton()
         Me.lblStatus = New CButtonLib.CButton()
         Me.infoBackgroundImageLink = New System.Windows.Forms.Label()
         Me.btnWatchTrailer = New System.Windows.Forms.PictureBox()
@@ -97,8 +96,10 @@ Partial Class frmMovieDetails
         Me.imgPoster = New System.Windows.Forms.PictureBox()
         Me.ImgMetaCritic = New System.Windows.Forms.PictureBox()
         Me.imgImdb = New System.Windows.Forms.PictureBox()
+        Me.btnWatchMovie = New CButtonLib.CButton()
         Me.appClose = New System.Windows.Forms.PictureBox()
-        Me.ActionsPanel.SuspendLayout()
+        Me.ListsPanelBackground = New CButtonLib.CButton()
+        Me.ListsPanel.SuspendLayout()
         CType(Me.btnFavouriteList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnWatchList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSeenList, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,20 +157,20 @@ Partial Class frmMovieDetails
         Me.infoImageLink.ForeColor = System.Drawing.Color.White
         Me.infoImageLink.Name = "infoImageLink"
         '
-        'ActionsPanel
+        'ListsPanel
         '
-        Me.ActionsPanel.BackColor = System.Drawing.Color.Transparent
-        Me.ActionsPanel.Controls.Add(Me.btnFavouriteList)
-        Me.ActionsPanel.Controls.Add(Me.Splitter2)
-        Me.ActionsPanel.Controls.Add(Me.btnWatchList)
-        Me.ActionsPanel.Controls.Add(Me.Splitter3)
-        Me.ActionsPanel.Controls.Add(Me.btnSeenList)
-        Me.ActionsPanel.Controls.Add(Me.Splitter4)
-        Me.ActionsPanel.Controls.Add(Me.btnBlackList)
-        Me.ActionsPanel.Controls.Add(Me.Splitter5)
-        Me.ActionsPanel.Controls.Add(Me.btnMyList)
-        resources.ApplyResources(Me.ActionsPanel, "ActionsPanel")
-        Me.ActionsPanel.Name = "ActionsPanel"
+        Me.ListsPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.ListsPanel.Controls.Add(Me.btnFavouriteList)
+        Me.ListsPanel.Controls.Add(Me.Splitter2)
+        Me.ListsPanel.Controls.Add(Me.btnWatchList)
+        Me.ListsPanel.Controls.Add(Me.Splitter3)
+        Me.ListsPanel.Controls.Add(Me.btnSeenList)
+        Me.ListsPanel.Controls.Add(Me.Splitter4)
+        Me.ListsPanel.Controls.Add(Me.btnBlackList)
+        Me.ListsPanel.Controls.Add(Me.Splitter5)
+        Me.ListsPanel.Controls.Add(Me.btnMyList)
+        resources.ApplyResources(Me.ListsPanel, "ListsPanel")
+        Me.ListsPanel.Name = "ListsPanel"
         '
         'btnFavouriteList
         '
@@ -679,11 +680,11 @@ Partial Class frmMovieDetails
         Me.btnDownloadMovie.BackColor = System.Drawing.Color.Transparent
         Me.btnDownloadMovie.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.btnDownloadMovie.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.btnDownloadMovie.Corners.All = 3
-        Me.btnDownloadMovie.Corners.LowerLeft = 3
-        Me.btnDownloadMovie.Corners.LowerRight = 3
-        Me.btnDownloadMovie.Corners.UpperLeft = 3
-        Me.btnDownloadMovie.Corners.UpperRight = 3
+        Me.btnDownloadMovie.Corners.All = 2
+        Me.btnDownloadMovie.Corners.LowerLeft = 2
+        Me.btnDownloadMovie.Corners.LowerRight = 2
+        Me.btnDownloadMovie.Corners.UpperLeft = 2
+        Me.btnDownloadMovie.Corners.UpperRight = 2
         Me.btnDownloadMovie.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDownloadMovie.DesignerSelected = False
         Me.btnDownloadMovie.DimFactorClick = 0
@@ -694,35 +695,8 @@ Partial Class frmMovieDetails
         Me.btnDownloadMovie.ImageIndex = 0
         Me.btnDownloadMovie.Name = "btnDownloadMovie"
         Me.btnDownloadMovie.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.btnDownloadMovie.TextMargin = New System.Windows.Forms.Padding(0, 2, 0, 2)
         Me.btnDownloadMovie.TextShadowShow = False
-        '
-        'btnWatchMovie
-        '
-        Me.btnWatchMovie.BackColor = System.Drawing.Color.Transparent
-        Me.btnWatchMovie.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.btnWatchMovie.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.btnWatchMovie.Corners.All = 3
-        Me.btnWatchMovie.Corners.LowerLeft = 3
-        Me.btnWatchMovie.Corners.LowerRight = 3
-        Me.btnWatchMovie.Corners.UpperLeft = 3
-        Me.btnWatchMovie.Corners.UpperRight = 3
-        Me.btnWatchMovie.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnWatchMovie.DesignerSelected = False
-        Me.btnWatchMovie.DimFactorClick = 0
-        Me.btnWatchMovie.DimFactorHover = 0
-        Me.btnWatchMovie.FillType = CButtonLib.CButton.eFillType.Solid
-        resources.ApplyResources(Me.btnWatchMovie, "btnWatchMovie")
-        Me.btnWatchMovie.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.btnWatchMovie.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnWatchMovie.ImageIndex = 0
-        Me.btnWatchMovie.ImageSize = New System.Drawing.Size(25, 36)
-        Me.btnWatchMovie.Name = "btnWatchMovie"
-        Me.btnWatchMovie.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.btnWatchMovie.SideImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnWatchMovie.SideImageSize = New System.Drawing.Size(25, 25)
-        Me.btnWatchMovie.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnWatchMovie.TextMargin = New System.Windows.Forms.Padding(1, 2, 0, 2)
-        Me.btnWatchMovie.TextShadowShow = False
         '
         'lblStatus
         '
@@ -791,6 +765,36 @@ Partial Class frmMovieDetails
         Me.imgImdb.Name = "imgImdb"
         Me.imgImdb.TabStop = False
         '
+        'btnWatchMovie
+        '
+        Me.btnWatchMovie.BackColor = System.Drawing.Color.Transparent
+        Me.btnWatchMovie.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.btnWatchMovie.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.btnWatchMovie.Corners.All = 2
+        Me.btnWatchMovie.Corners.LowerLeft = 2
+        Me.btnWatchMovie.Corners.LowerRight = 2
+        Me.btnWatchMovie.Corners.UpperLeft = 2
+        Me.btnWatchMovie.Corners.UpperRight = 2
+        Me.btnWatchMovie.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnWatchMovie.DesignerSelected = False
+        Me.btnWatchMovie.DimFactorClick = 0
+        Me.btnWatchMovie.DimFactorHover = 0
+        Me.btnWatchMovie.FillType = CButtonLib.CButton.eFillType.Solid
+        resources.ApplyResources(Me.btnWatchMovie, "btnWatchMovie")
+        Me.btnWatchMovie.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.btnWatchMovie.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnWatchMovie.ImageIndex = 0
+        Me.btnWatchMovie.ImageSize = New System.Drawing.Size(25, 36)
+        Me.btnWatchMovie.Name = "btnWatchMovie"
+        Me.btnWatchMovie.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.btnWatchMovie.SideImage = CType(resources.GetObject("btnWatchMovie.SideImage"), System.Drawing.Image)
+        Me.btnWatchMovie.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnWatchMovie.SideImageIsClickable = True
+        Me.btnWatchMovie.SideImageSize = New System.Drawing.Size(32, 18)
+        Me.btnWatchMovie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnWatchMovie.TextMargin = New System.Windows.Forms.Padding(10, 2, 2, 2)
+        Me.btnWatchMovie.TextShadowShow = False
+        '
         'appClose
         '
         resources.ApplyResources(Me.appClose, "appClose")
@@ -799,11 +803,36 @@ Partial Class frmMovieDetails
         Me.appClose.Name = "appClose"
         Me.appClose.TabStop = False
         '
+        'ListsPanelBackground
+        '
+        Me.ListsPanelBackground.BackColor = System.Drawing.Color.Transparent
+        Me.ListsPanelBackground.BorderColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.ListsPanelBackground.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.ListsPanelBackground.Corners.All = 2
+        Me.ListsPanelBackground.Corners.LowerLeft = 2
+        Me.ListsPanelBackground.Corners.LowerRight = 2
+        Me.ListsPanelBackground.Corners.UpperLeft = 2
+        Me.ListsPanelBackground.Corners.UpperRight = 2
+        Me.ListsPanelBackground.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ListsPanelBackground.DesignerSelected = False
+        Me.ListsPanelBackground.DimFactorClick = 0
+        Me.ListsPanelBackground.DimFactorHover = 0
+        Me.ListsPanelBackground.FillType = CButtonLib.CButton.eFillType.Solid
+        resources.ApplyResources(Me.ListsPanelBackground, "ListsPanelBackground")
+        Me.ListsPanelBackground.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
+        Me.ListsPanelBackground.ImageIndex = 0
+        Me.ListsPanelBackground.Name = "ListsPanelBackground"
+        Me.ListsPanelBackground.ShowFocus = CButtonLib.CButton.eFocus.None
+        Me.ListsPanelBackground.TextMargin = New System.Windows.Forms.Padding(0, 2, 0, 2)
+        Me.ListsPanelBackground.TextShadowShow = False
+        '
         'frmMovieDetails
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.Controls.Add(Me.msgErrorComments)
+        Me.Controls.Add(Me.panelDetails)
         Me.Controls.Add(Me.btnWatchTrailer)
         Me.Controls.Add(Me.infoBackgroundImageLink)
         Me.Controls.Add(Me.lblStatus)
@@ -811,7 +840,6 @@ Partial Class frmMovieDetails
         Me.Controls.Add(Me.imgNetflix)
         Me.Controls.Add(Me.imgPoster)
         Me.Controls.Add(Me.infoTrailerLink)
-        Me.Controls.Add(Me.panelDetails)
         Me.Controls.Add(Me.infoImageLink)
         Me.Controls.Add(Me.infoImdbId)
         Me.Controls.Add(Me.infoRatingMetaScore)
@@ -823,9 +851,9 @@ Partial Class frmMovieDetails
         Me.Controls.Add(Me.infoWatchLinks)
         Me.Controls.Add(Me.btnWatchMovie)
         Me.Controls.Add(Me.appClose)
-        Me.Controls.Add(Me.ActionsPanel)
+        Me.Controls.Add(Me.ListsPanel)
         Me.Controls.Add(Me.InfoPanel1)
-        Me.Controls.Add(Me.msgErrorComments)
+        Me.Controls.Add(Me.ListsPanelBackground)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -834,7 +862,7 @@ Partial Class frmMovieDetails
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.ActionsPanel.ResumeLayout(False)
+        Me.ListsPanel.ResumeLayout(False)
         CType(Me.btnFavouriteList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnWatchList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnSeenList, System.ComponentModel.ISupportInitialize).EndInit()
@@ -860,7 +888,7 @@ Partial Class frmMovieDetails
     Friend WithEvents infoGenre As Label
     Friend WithEvents btnFavouriteList As PictureBox
     Friend WithEvents appClose As PictureBox
-    Friend WithEvents ActionsPanel As FlowLayoutPanel
+    Friend WithEvents ListsPanel As FlowLayoutPanel
     Friend WithEvents Splitter2 As Label
     Friend WithEvents btnWatchList As PictureBox
     Friend WithEvents infoDuration As Label
@@ -929,4 +957,5 @@ Partial Class frmMovieDetails
     Friend WithEvents btnWatchTrailer As PictureBox
     Friend WithEvents Splitter5 As Label
     Friend WithEvents btnMyList As PictureBox
+    Public WithEvents ListsPanelBackground As CButtonLib.CButton
 End Class

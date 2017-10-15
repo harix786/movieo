@@ -11,7 +11,6 @@ Public Class frmMediaPlayer
 
         MediaPlayerControl.uiMode = "full"
         MediaPlayerControl.stretchToFit = True
-        MediaPlayerControl.enableContextMenu = False
 
         timerUntilConnected.Enabled = True
     End Sub
@@ -38,14 +37,14 @@ Public Class frmMediaPlayer
     Public Sub MediaPlayerControl_PlayStateChange(ByVal sender As Object, ByVal e As _WMPOCXEvents_PlayStateChangeEvent) Handles MediaPlayerControl.PlayStateChange
         MediaPlayerControl.uiMode = "full"
         MediaPlayerControl.stretchToFit = True
-        MediaPlayerControl.enableContextMenu = False
 
         'Test the current state of the player, display a message for each state. (https://msdn.microsoft.com/en-us/library/windows/desktop/dd562460)
         Select Case e.newState
             Case 0 ' Undefined
                 'currentStateLabel.Text = "Undefined"
             Case 1 ' Stopped
-                'currentStateLabel.Text = "Stopped"
+                lblErrorText.Text = "You have finished watching: " + Text.Replace("Watching ", "") + vbNewLine + "We hope you enjoyed!"
+                tab.SelectedTab = tabStatus
             Case 2 ' Paused
                 'currentStateLabel.Text = "Paused"
             Case 3 ' Playing
@@ -93,7 +92,7 @@ Public Class frmMediaPlayer
     End Sub
 
     Private Sub MediaPlayerControl_EndOfStream(sender As Object, e As _WMPOCXEvents_EndOfStreamEvent) Handles MediaPlayerControl.EndOfStream
-        lblErrorText.Text = "You have finished watching: " + Text + vbNewLine + "We hope you enjoyed!"
+        lblErrorText.Text = "You have finished watching: " + Text.Replace("Watching  ", "") + vbNewLine + "We hope you enjoyed!"
         tab.SelectedTab = tabStatus
     End Sub
 
@@ -120,9 +119,5 @@ Public Class frmMediaPlayer
             End If
             timerUntilConnected.Enabled = False
         End If
-    End Sub
-
-    Private Sub btnReportBroken_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnReportBroken.ClickButtonArea
-
     End Sub
 End Class

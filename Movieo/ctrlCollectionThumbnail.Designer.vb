@@ -34,12 +34,12 @@ Partial Class ctrlCollectionThumbnail
         '
         'lblCollectionTitle
         '
-        Me.lblCollectionTitle.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblCollectionTitle.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.lblCollectionTitle.AutoEllipsis = True
         Me.lblCollectionTitle.BackColor = System.Drawing.Color.Transparent
         Me.lblCollectionTitle.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
         Me.lblCollectionTitle.ForeColor = System.Drawing.Color.White
-        Me.lblCollectionTitle.Location = New System.Drawing.Point(10, 185)
+        Me.lblCollectionTitle.Location = New System.Drawing.Point(10, 190)
         Me.lblCollectionTitle.Margin = New System.Windows.Forms.Padding(3)
         Me.lblCollectionTitle.Name = "lblCollectionTitle"
         Me.lblCollectionTitle.Size = New System.Drawing.Size(315, 25)
@@ -49,7 +49,9 @@ Partial Class ctrlCollectionThumbnail
         '
         'imgCollectionThumbnail
         '
-        Me.imgCollectionThumbnail.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.imgCollectionThumbnail.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.imgCollectionThumbnail.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
         Me.imgCollectionThumbnail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.imgCollectionThumbnail.BorderColor = System.Drawing.Color.White
@@ -65,14 +67,16 @@ Partial Class ctrlCollectionThumbnail
         Me.imgCollectionThumbnail.Location = New System.Drawing.Point(7, 10)
         Me.imgCollectionThumbnail.Name = "imgCollectionThumbnail"
         Me.imgCollectionThumbnail.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.imgCollectionThumbnail.Size = New System.Drawing.Size(312, 169)
+        Me.imgCollectionThumbnail.Size = New System.Drawing.Size(312, 174)
         Me.imgCollectionThumbnail.TabIndex = 38
         Me.imgCollectionThumbnail.TabStop = False
         Me.imgCollectionThumbnail.Text = ""
         '
         'imgCollectionThumbnailDefault
         '
-        Me.imgCollectionThumbnailDefault.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.imgCollectionThumbnailDefault.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.imgCollectionThumbnailDefault.BackColor = System.Drawing.Color.Transparent
         Me.imgCollectionThumbnailDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.imgCollectionThumbnailDefault.BorderColor = System.Drawing.Color.White
@@ -88,30 +92,32 @@ Partial Class ctrlCollectionThumbnail
         Me.imgCollectionThumbnailDefault.Location = New System.Drawing.Point(7, 10)
         Me.imgCollectionThumbnailDefault.Name = "imgCollectionThumbnailDefault"
         Me.imgCollectionThumbnailDefault.ShowFocus = CButtonLib.CButton.eFocus.None
-        Me.imgCollectionThumbnailDefault.Size = New System.Drawing.Size(312, 169)
+        Me.imgCollectionThumbnailDefault.Size = New System.Drawing.Size(312, 174)
         Me.imgCollectionThumbnailDefault.TabIndex = 44
         Me.imgCollectionThumbnailDefault.TabStop = False
         Me.imgCollectionThumbnailDefault.Text = ""
         '
         'imageBackgroundEffect
         '
-        Me.imageBackgroundEffect.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.imageBackgroundEffect.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.imageBackgroundEffect.Image = Global.Movieo.My.Resources.Resources.PosterGlow
         Me.imageBackgroundEffect.Location = New System.Drawing.Point(-5, 2)
         Me.imageBackgroundEffect.Name = "imageBackgroundEffect"
-        Me.imageBackgroundEffect.Size = New System.Drawing.Size(338, 183)
+        Me.imageBackgroundEffect.Size = New System.Drawing.Size(338, 188)
         Me.imageBackgroundEffect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.imageBackgroundEffect.TabIndex = 45
         Me.imageBackgroundEffect.TabStop = False
         '
         'lblCollectionDescription
         '
-        Me.lblCollectionDescription.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblCollectionDescription.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.lblCollectionDescription.AutoEllipsis = True
         Me.lblCollectionDescription.BackColor = System.Drawing.Color.Transparent
         Me.lblCollectionDescription.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCollectionDescription.ForeColor = System.Drawing.Color.White
-        Me.lblCollectionDescription.Location = New System.Drawing.Point(11, 211)
+        Me.lblCollectionDescription.Location = New System.Drawing.Point(11, 216)
         Me.lblCollectionDescription.Margin = New System.Windows.Forms.Padding(3)
         Me.lblCollectionDescription.Name = "lblCollectionDescription"
         Me.lblCollectionDescription.Size = New System.Drawing.Size(308, 15)
@@ -134,7 +140,7 @@ Partial Class ctrlCollectionThumbnail
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(328, 235)
+        Me.ClientSize = New System.Drawing.Size(328, 240)
         Me.ControlBox = False
         Me.Controls.Add(Me.itemsCollectionMovies)
         Me.Controls.Add(Me.imgCollectionThumbnail)

@@ -142,15 +142,15 @@ Partial Class frmSelectList
         Me.btnAddRemoveMovie.FillType = CButtonLib.CButton.eFillType.Solid
         Me.btnAddRemoveMovie.Font = New System.Drawing.Font("Segoe UI Semibold", 10.25!)
         Me.btnAddRemoveMovie.ImageIndex = 0
-        Me.btnAddRemoveMovie.Location = New System.Drawing.Point(529, 395)
+        Me.btnAddRemoveMovie.Location = New System.Drawing.Point(576, 395)
         Me.btnAddRemoveMovie.Margin = New System.Windows.Forms.Padding(0)
         Me.btnAddRemoveMovie.Name = "btnAddRemoveMovie"
         Me.btnAddRemoveMovie.ShowFocus = CButtonLib.CButton.eFocus.None
         Me.btnAddRemoveMovie.SideImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAddRemoveMovie.SideImageSize = New System.Drawing.Size(14, 15)
-        Me.btnAddRemoveMovie.Size = New System.Drawing.Size(159, 30)
+        Me.btnAddRemoveMovie.Size = New System.Drawing.Size(112, 30)
         Me.btnAddRemoveMovie.TabIndex = 1
-        Me.btnAddRemoveMovie.Text = "Add / Remove Movie"
+        Me.btnAddRemoveMovie.Text = "Add / Remove"
         Me.btnAddRemoveMovie.TextShadow = System.Drawing.Color.White
         Me.btnAddRemoveMovie.TextShadowShow = False
         '

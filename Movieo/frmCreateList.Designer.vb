@@ -44,7 +44,7 @@ Partial Class frmCreateList
         Me.txtTitle.Font = New System.Drawing.Font("Segoe UI", 20.0!)
         Me.txtTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(172, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
         Me.txtTitle.Location = New System.Drawing.Point(260, 112)
-        Me.txtTitle.MaxLength = 75
+        Me.txtTitle.MaxLength = 255
         Me.txtTitle.Name = "txtTitle"
         Me.txtTitle.Size = New System.Drawing.Size(572, 36)
         Me.txtTitle.TabIndex = 0
@@ -64,7 +64,7 @@ Partial Class frmCreateList
         Me.btnFrmCreateList.Corners.UpperLeft = 2
         Me.btnFrmCreateList.Corners.UpperRight = 2
         Me.btnFrmCreateList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnFrmCreateList.DesignerSelected = True
+        Me.btnFrmCreateList.DesignerSelected = False
         Me.btnFrmCreateList.DimFactorClick = 0
         Me.btnFrmCreateList.DimFactorHover = 0
         Me.btnFrmCreateList.FillType = CButtonLib.CButton.eFillType.Solid
@@ -236,7 +236,6 @@ Partial Class frmCreateList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoScroll = True
         Me.AutoScrollMargin = New System.Drawing.Size(0, 70)
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1092, 561)

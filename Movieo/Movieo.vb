@@ -6,10 +6,10 @@ Public Class Movieo
 
 #Region "Preferences (some can be changed)"
 
-    Public devMode As Boolean = True
+    Public devMode As Boolean = False
     Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7rhzy2odzkal6tx/movieo-db.txt?dl=0"
     'Public linkMovieDatabase As String = "https://dl.dropbox.com/s/7fb0qd74u1h5ddw/movieo-dbTESTING.txt?dl=0" 'FOR TESTING
-    Public linkChangelog As String = "https://dl.dropbox.com/s/3514qygmbok1rvv/movieo-changelog.txt?dl=0"
+    Public linkReleaseNotes As String = "https://dl.dropbox.com/s/m8d9if0s57fc3mk/CHANGELOG.md?dl=0"
     Public linkNotifications As String = "https://dl.dropbox.com/s/eqxi751t8z031na/movieo-notifications.txt?dl=0"
     Public linkMovieComments As String = "https://dl.dropbox.com/s/swbt9fkbknmoqzz/movieo-comments.txt?dl=0"
     Public linkNewReleases As String = "https://dl.dropbox.com/s/lqxnvez68fxvmx7/movieo-new-releases.txt?dl=0"
@@ -20,13 +20,12 @@ Public Class Movieo
     Public linkLatestVersion As String = "https://dl.dropbox.com/s/n0lwh73gh15vpf5/movieo-version.txt?dl=0"
     Public linkUpdater As String = "https://dl.dropbox.com/s/aqouj2qgn7galjd/Movieo%20Updater.exe?dl=0"
     Public pathBackupDatabase As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Movieo.db"
-    Public pathFavouritesList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\favourites.txt"
-    Public pathWatchList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\watch list.txt"
-    Public pathSeenList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\seen list.txt"
-    Public pathBlackList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\black list.txt"
+    Public pathFavouritesList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\Favourites.txt"
+    Public pathWatchList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\Watch List.txt"
+    Public pathSeenList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\Seen List.txt"
+    Public pathBlackList As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\Black List.txt"
     Public pathMyLists As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\My Lists\"
     Public pathDownloads As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Downloads\"
-    Public pathLogFile As String = Application.StartupPath + "\log file.txt"
     Public pathUpdater As String = Application.StartupPath + "\Movieo Updater.exe"
     Public infoVersionText As String = "Beta Build v" + Application.ProductVersion
     Public ctrlSearchBoxWatermark As String = "Search movies, people, years..."
@@ -43,32 +42,48 @@ Public Class Movieo
         "Don't think of purple hippos",
         "The mystery of life isn't a problem to" + vbNewLine + "solve, but a reality of experience.",
         "Remember to get up && stretch" + vbNewLine + "once in a while.",
-        "Teaching snakes to kick."}
+        "Teaching snakes to kick.",
+        "While the satellite moves into position",
+        "The Elders of the Internet would never stand for it.",
+        "Go ahead, hold your breath and do ironman plank till loading complete",
+        "It's not you. It's me.",
+        "Computing the secret to life, the universe, and everything.",
+        "Swapping time and space...",
+        "Feel free to spin in your chair",
+        "I'm not lazy, I'm just relaxed!!",
+        "Cleaning off the cobwebs...",
+        "Please hold on as we reheat our coffee",
+        "Adults are just kids with money.",
+        "I didn't choose the engineering life. The engineering life chose me.",
+        "Finding someone to hold my beer",
+        "Cracking military-grade encryption...",
+        "Why so serious?",
+        "I should have had a V8 this morning.",
+        "What the what?",
+        "@todo Insert witty loading message",
+        "Wait, do you smell something burning?",
+        "You shall not pass! yet..",
+        "Laughing at your pictures-i mean, loading...",
+        "Testing on Timmy... We're going to need another Timmy."}
 
-    Dim UseBackupDatabase As Boolean = False
-    Dim saveListsOnClose As Boolean = True
-    Dim intMaxPosters = 40
+    Public UseBackupDatabase As Boolean = False
+    Public saveListsOnClose As Boolean = True
+    Public intMaxPosters As Integer = 75
+    Public intFadeOpacity As Double = 0.15
 
 #End Region
 
 #Region "Movieo"
 
     Private Sub Movieo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        btnCreateList.SideImageSize = New Size(22, 14)
+        TopMost = My.Settings.doOnTop
 
-        If My.Settings.doOnTop = True Then
-            TopMost = True
-        End If
         Tab.SelectedTab = tabLoading 'Show loading page
         txtboxSearch.WaterMark = ctrlSearchBoxWatermark  'Set search bar watermark text
-        frmInfo.lblAboutVersion.Text = infoVersionText  'Set current version in ABOUT page
         If CheckForInternetConnection() = True Then 'Proceed to internet required functions
             UseBackupDatabase = False 'So the database function uses the latest (from the server
             LoadLists() 'Load movies into users lists (ListBox)
-            'Enabled = False
-            If My.Settings.doAutoUpdate = True Then
-                timerCheckForUpdate.Enabled = True
-            End If
+            timerCheckForUpdate.Enabled = My.Settings.doAutoUpdate
             If My.Settings.doBackupDb = True Then
                 SaveBackupDatabase()
             End If
@@ -253,25 +268,17 @@ Public Class Movieo
                 listRecentlyWatchedTimes.AddRange(RecentlyWatchedItem.Split(","))
             End If
 
-            btnListsFavourites.Text = "Favourites (" + listFavourites.Count.ToString() + ")"
-            btnListsWatch.Text = "Watch List (" + listWatchList.Count.ToString() + ")"
-            btnListsSeen.Text = "Seen List (" + listSeenList.Count.ToString() + ")"
-            btnListsBlack.Text = "Black List (" + listBlackList.Count.ToString() + ")"
-
-            ListFiles(pathDownloads)
+            loadDownloadsList()
             loadMyLists()
         Catch ex As Exception
             CreateEmptyListFiles()
         End Try
     End Sub
 
-    Private Sub ListFiles(ByVal folderPath As String)
+    Private Sub loadDownloadsList()
         listMoviesDownloads.Clear()
 
-        Dim exts As String() = {"*.mp4", "*.avi", "*.mkv"}
-        Dim fileNames = My.Computer.FileSystem.GetFiles(folderPath, FileIO.SearchOption.SearchTopLevelOnly, exts)
-
-        For Each fileName As String In fileNames
+        For Each fileName As String In My.Computer.FileSystem.GetFiles(pathDownloads, FileIO.SearchOption.SearchTopLevelOnly, {"*.mp4", "*.avi", "*.mkv"})
             Dim cutFileName As String = fileName.Replace(pathDownloads, "")
             listMoviesDownloads.Add(cutFileName.Substring(0, cutFileName.Length - 4))
         Next
@@ -321,13 +328,14 @@ Public Class Movieo
     End Sub
 
     Public Sub CreateEmptyListFiles()
-        My.Computer.FileSystem.CreateDirectory(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Lists\")
+        My.Computer.FileSystem.CreateDirectory(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Library\My Lists\")
+        My.Computer.FileSystem.CreateDirectory(My.Computer.FileSystem.SpecialDirectories.MyDocuments + "\Movieo\Downloads\")
         My.Computer.FileSystem.CreateDirectory(pathDownloads)
     End Sub
 
 #End Region
 
-#Region "Startup Timer / Grab Movies"
+#Region "Startup Timer / Grab Movies / Store Movies"
 
     Private Sub StartupTimer_Tick(sender As Object, e As EventArgs) Handles timerStartup.Tick
         If UseBackupDatabase = False Then
@@ -336,18 +344,9 @@ Public Class Movieo
             GrabMovies(pathBackupDatabase)
         End If
 
-        Enabled = True
-
-        'If My.Settings.doFilters = True Then
-        'filterGenreBox.SelectedIndex = My.Settings.doFilterNum
-        'End If
-
         Tab.SelectedTab = tabDiscover
         timerStartup.Enabled = False
     End Sub
-
-    'Get if movie is not found in omdbapi
-    Dim ErrorMovie As String = ""
 
     'Count movies
     Dim MovieItem As Integer
@@ -357,11 +356,6 @@ Public Class Movieo
 
     Public storeControlsAllMovies As New List(Of Control)
     Public storeControlsCollections As New List(Of Control)
-    Public storeControlsTempCollectionsMovies As New List(Of Control)
-    Public storeControlsFavourites As New List(Of Control)
-    Public storeControlsWatchList As New List(Of Control)
-    Public storeControlsSeenList As New List(Of Control)
-    Public storeControlsBlackList As New List(Of Control)
 
     Public Sub GrabMovies(Content As String)
         MovieItem = 0
@@ -395,15 +389,13 @@ Public Class Movieo
 
                 Dim TitleAndYear As String = MovieCred(0) + " (" + MovieCred(1) + ")"
 
-                ErrorMovie = TitleAndYear
-
                 a.InfoTitle.Text = MovieCred(0)
                 a.InfoYear.Text = MovieCred(1)
                 a.InfoTitleAndYear.Text = TitleAndYear
 
                 On Error Resume Next
 
-                Dim dstring = WebDl.DownloadString("http://www.omdbapi.com/?apikey=c933e052&t=" & a.InfoTitle.Text & "&y=" & a.InfoYear.Text + "&plot=full")
+                Dim dstring = WebDl.DownloadString("http://omdbapi.com/?apikey=c933e052&t=" & a.InfoTitle.Text & "&y=" & a.InfoYear.Text + "&plot=full")
                 Dim json As JObject = JObject.Parse(dstring)
 
                 'Necessary Details from OMDb API
@@ -435,13 +427,11 @@ Public Class Movieo
                 a.Name = a.InfoImdbId.Text
                 a.Show()
 
-                storeControlsAllMovies.Add(a)
-
                 If MovieItem <= intMaxPosters Then
                     If Not listBlackList.Contains(TitleAndYear) Then
                         If listSeenList.Contains(TitleAndYear) Then
                             If My.Settings.doWatchedMovies = 0 Then
-                                a.InfoPoster.BackgroundImage = a.ChangeOpacity(a.InfoPoster.BackgroundImage, 0.3)
+                                a.InfoPoster.BackgroundImage = a.ChangeOpacity(a.InfoPoster.BackgroundImage, intFadeOpacity)
                                 panelMovies.Controls.Add(a)
                             ElseIf My.Settings.doWatchedMovies = 1 Then
                                 'Do nothing
@@ -471,24 +461,19 @@ Public Class Movieo
                     End If
                 End If
 
-
                 If listFavourites.Contains(TitleAndYear) Then
-                    storeControlsFavourites.Add(a)
                     AddMovieOnStartup(panelLibraryFavourites, False, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoRating.Text, a.InfoReleaseDate.Text, a.InfoCountry.Text, a.InfoLanguage.Text, a.InfoProduction.Text, a.InfoBoxOffice.Text, a.InfoAwards.Text, a.InfoImdbId.Text, a.infoRatingIMDb.Text, a.infoRatingNetflix.Text, a.infoRatingMetaScore.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
                 End If
 
                 If listWatchList.Contains(TitleAndYear) Then
-                    storeControlsWatchList.Add(a)
                     AddMovieOnStartup(panelLibraryWatchList, False, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoRating.Text, a.InfoReleaseDate.Text, a.InfoCountry.Text, a.InfoLanguage.Text, a.InfoProduction.Text, a.InfoBoxOffice.Text, a.InfoAwards.Text, a.InfoImdbId.Text, a.infoRatingIMDb.Text, a.infoRatingNetflix.Text, a.infoRatingMetaScore.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
                 End If
 
                 If listSeenList.Contains(TitleAndYear) Then
-                    storeControlsSeenList.Add(a)
                     AddMovieOnStartup(panelLibrarySeenList, False, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoRating.Text, a.InfoReleaseDate.Text, a.InfoCountry.Text, a.InfoLanguage.Text, a.InfoProduction.Text, a.InfoBoxOffice.Text, a.InfoAwards.Text, a.InfoImdbId.Text, a.infoRatingIMDb.Text, a.infoRatingNetflix.Text, a.infoRatingMetaScore.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
                 End If
 
                 If listBlackList.Contains(TitleAndYear) Then
-                    storeControlsBlackList.Add(a)
                     AddMovieOnStartup(panelLibraryBlackList, False, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoRating.Text, a.InfoReleaseDate.Text, a.InfoCountry.Text, a.InfoLanguage.Text, a.InfoProduction.Text, a.InfoBoxOffice.Text, a.InfoAwards.Text, a.InfoImdbId.Text, a.infoRatingIMDb.Text, a.infoRatingNetflix.Text, a.infoRatingMetaScore.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
                 End If
 
@@ -496,9 +481,9 @@ Public Class Movieo
                     AddMovieOnStartup(panelDownloads, False, a.InfoTitle.Text, a.InfoYear.Text, a.InfoGenre.Text, a.InfoDirector.Text, a.InfoStars.Text, a.InfoDesc.Text, a.InfoDuration.Text, a.InfoRating.Text, a.InfoReleaseDate.Text, a.InfoCountry.Text, a.InfoLanguage.Text, a.InfoProduction.Text, a.InfoBoxOffice.Text, a.InfoAwards.Text, a.InfoImdbId.Text, a.infoRatingIMDb.Text, a.infoRatingNetflix.Text, a.infoRatingMetaScore.Text, a.InfoPosterLink.Text, a.InfoMovieLink.Text)
                 End If
 
-                If MovieItem Mod 30 = 0 Then 'Change to a random loading text every x movies, this case it's 30
+                If MovieItem Mod 100 = 0 Then 'Change loading text every X movies
                     lblLoadingSub.Text = RandomText(SearchingTexts)
-                    Threading.Thread.Sleep(3500)
+                    Threading.Thread.Sleep(650)
                 End If
 
             End If
@@ -610,11 +595,11 @@ Public Class Movieo
         Try
             Dim vs As VScrollProperties = panelMovies.VerticalScroll
             If e.NewValue = (vs.Maximum - vs.LargeChange) + 1 Then
-                If storeControlsScroll.Count >= 30 Then
-                    For Each ctrlMovie In storeControlsScroll.Take(30)
+                If storeControlsScroll.Count >= intMaxPosters Then
+                    For Each ctrlMovie In storeControlsScroll.Take(intMaxPosters)
                         panelMovies.Controls.Add(ctrlMovie)
                     Next
-                    storeControlsScroll.RemoveRange(0, 30)
+                    storeControlsScroll.RemoveRange(0, intMaxPosters)
                 Else
                     For Each ctrlMovie In storeControlsScroll
                         panelMovies.Controls.Add(ctrlMovie)
@@ -623,7 +608,6 @@ Public Class Movieo
                 End If
             End If
         Catch ex As Exception
-            'MsgBox(ex.Message)
         End Try
 
         panelMovies.Update()
@@ -671,11 +655,11 @@ Public Class Movieo
         Try
             Dim vs As VScrollProperties = panelCollectionsItems.VerticalScroll
             If e.NewValue = (vs.Maximum - vs.LargeChange) + 1 Then
-                If storeControlsCollectionsScroll.Count >= 30 Then
-                    For Each ctrlMovie In storeControlsCollectionsScroll.Take(30)
+                If storeControlsCollectionsScroll.Count >= intMaxPosters Then
+                    For Each ctrlMovie In storeControlsCollectionsScroll.Take(intMaxPosters)
                         panelCollectionsItems.Controls.Add(ctrlMovie)
                     Next
-                    storeControlsCollectionsScroll.RemoveRange(0, 30)
+                    storeControlsCollectionsScroll.RemoveRange(0, intMaxPosters)
                 Else
                     For Each ctrlMovie In storeControlsCollectionsScroll
                         panelCollectionsItems.Controls.Add(ctrlMovie)
@@ -716,21 +700,61 @@ Public Class Movieo
 
     'Go to selected tab
     Private Sub titleMyListsFavourites_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnListsFavourites.ClickButtonArea
+        panelLibraryFavourites.Controls.Clear()
+
+        For Each a As Control In storeControlsAllMovies
+            For Each ab As Control In a.Controls
+                If listFavourites.Contains(ab.Text) Then
+                    panelLibraryFavourites.Controls.Add(a)
+                End If
+            Next
+        Next
+
         selectedList = Sender.text
         tabsLibrary.SelectedTab = tabLibraryFavourites
     End Sub
 
     Private Sub titleMyListsWatchList_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnListsWatch.ClickButtonArea
+        panelLibraryWatchList.Controls.Clear()
+
+        For Each a As Control In storeControlsAllMovies
+            For Each ab As Control In a.Controls
+                If listWatchList.Contains(ab.Text) Then
+                    panelLibraryWatchList.Controls.Add(a)
+                End If
+            Next
+        Next
+
         selectedList = Sender.text
         tabsLibrary.SelectedTab = tabLibraryWatchList
     End Sub
 
     Private Sub titleMyListsSeenList_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnListsSeen.ClickButtonArea
+        panelLibrarySeenList.Controls.Clear()
+
+        For Each a As Control In storeControlsAllMovies
+            For Each ab As Control In a.Controls
+                If listSeenList.Contains(ab.Text) Then
+                    panelLibrarySeenList.Controls.Add(a)
+                End If
+            Next
+        Next
+
         selectedList = Sender.text
         tabsLibrary.SelectedTab = tabLibrarySeenList
     End Sub
 
     Private Sub titleMyListsBlackList_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnListsBlack.ClickButtonArea
+        panelLibraryBlackList.Controls.Clear()
+
+        For Each a As Control In storeControlsAllMovies
+            For Each ab As Control In a.Controls
+                If listBlackList.Contains(ab.Text) Then
+                    panelLibraryBlackList.Controls.Add(a)
+                End If
+            Next
+        Next
+
         selectedList = Sender.text
         tabsLibrary.SelectedTab = tabLibraryBlackList
     End Sub
@@ -825,11 +849,6 @@ Public Class Movieo
                 AddHandler a.SideImageClicked, AddressOf ctrlMyLists_SideImageClicked
                 panelMyListsCtrls.Controls.Add(a)
             Next
-
-            btnListsFavourites.Text = "Favourites (" + listFavourites.Count.ToString() + ")"
-            btnListsWatch.Text = "Watch List (" + listWatchList.Count.ToString() + ")"
-            btnListsSeen.Text = "Seen List (" + listSeenList.Count.ToString() + ")"
-            btnListsBlack.Text = "Black List (" + listBlackList.Count.ToString() + ")"
         Catch ex As Exception
             'No Lists to load
         End Try
@@ -910,7 +929,7 @@ Public Class Movieo
 
 #End Region
 
-#Region "Add/Remove Movies from Panel"
+#Region "Add/Remove Movies to/from Core Lists"
 
     Public Sub AddMovieOnStartup(AddToPanel As FlowLayoutPanel, isWatched As Boolean, Title As String, Year As String, Genre As String, Director As String, Stars As String, Description As String, Duration As String, Rating As String, ReleaseDate As String, Country As String, Language As String, Production As String, BoxOffice As String, Awards As String, ImdbId As String, ImdbRating As String, ratingNetflix As String, MetaCritic As String, PosterLink As String, MovieLink As String)
         Dim NetDl As New WebClient
@@ -953,7 +972,7 @@ Public Class Movieo
         End Try
 
         If isWatched = True Then
-            tab.InfoPoster.BackgroundImage = tab.ChangeOpacity(tab.InfoPoster.BackgroundImage, 0.1)
+            tab.InfoPoster.BackgroundImage = tab.ChangeOpacity(tab.InfoPoster.BackgroundImage, intFadeOpacity)
         End If
 
         tab.Show()
@@ -962,26 +981,20 @@ Public Class Movieo
     End Sub
 
     'Add Movie to Lists
-    Public Sub AddMovieToList(toPanel As FlowLayoutPanel, toList As List(Of String), movieTitle As String, movieYear As String, movieIMDbId As String)
-        For Each a In storeControlsAllMovies
-            For Each ab As Control In a.Controls
-                If ab.Text = movieIMDbId Then
-                    toPanel.Controls.Add(a)
-                End If
-            Next
-        Next
-
-        toList.Add(movieTitle + " (" + movieYear + ")")
+    Public Sub addMovieToCoreList(toPanel As FlowLayoutPanel, toList As List(Of String), movieTitle As String, movieYear As String, movieIMDbId As String)
+        Try
+            toList.Add(movieTitle + " (" + movieYear + ")")
+        Catch ex As Exception
+            ShowPopupOk("Unable to add movie", ex.Message, Me)
+        End Try
     End Sub
 
-    Public Sub RemoveMovie(fromPanel As FlowLayoutPanel, fromList As List(Of String), movieTitle As String, movieYear As String, movieIMDbId As String)
-        For Each a As Control In fromPanel.Controls
-            If a.Name = movieIMDbId Then
-                fromPanel.Controls.Remove(a)
-            End If
-        Next
-
-        fromList.Remove(movieTitle + " (" + movieYear + ")")
+    Public Sub removeMovieFromCoreList(fromPanel As FlowLayoutPanel, fromList As List(Of String), movieTitle As String, movieYear As String, movieIMDbId As String)
+        Try
+            fromList.Remove(movieTitle + " (" + movieYear + ")")
+        Catch ex As Exception
+            ShowPopupOk("Unable to remove movie", ex.Message, Me)
+        End Try
     End Sub
 
 #End Region
@@ -1096,14 +1109,14 @@ Public Class Movieo
 
 #End Region
 
-#Region "Filter Movies by Genre / Buttons"
+#Region "Filter Movies by Genre / Movies"
 
-    Public selectedGenre As String = "All Movies"
+    Public selectedGenre As String = "Any Genre"
     Public selectedGenreObject As Object = btnGenreAllMovies
 
-    Public Sub btnGenre_Click(sender As Object, e As EventArgs) Handles btnGenreAllMovies.Click, btnGenreAllMovies.Click, btnGenreDrama.Click, btnGenreFamily.Click, btnGenreFantasy.Click, btnGenreComedy.Click, btnGenreCrime.Click, btnGenreDocumentary.Click, btnGenreSciFi.Click, btnGenreThriller.Click, btnGenreWar.Click, btnGenreWestern.Click, btnGenreMusic.Click, btnGenreMystery.Click, btnGenreRomance.Click, btnGenreHistory.Click, btnGenreHorror.Click, btnGenreAnimation.Click, btnGenreAdventure.Click, btnGenreAction.Click
+    Public Sub btnGenre_Click(sender As Object, e As EventArgs) Handles btnFilterTrending.Click, btnFilterNewReleases.Click, btnFilterTopRated.Click, btnGenreAllMovies.Click, btnGenreAllMovies.Click, btnGenreDrama.Click, btnGenreFamily.Click, btnGenreFantasy.Click, btnGenreComedy.Click, btnGenreCrime.Click, btnGenreDocumentary.Click, btnGenreSciFi.Click, btnGenreThriller.Click, btnGenreWar.Click, btnGenreWestern.Click, btnGenreMusic.Click, btnGenreMystery.Click, btnGenreRomance.Click, btnGenreHistory.Click, btnGenreHorror.Click, btnGenreAnimation.Click, btnGenreAdventure.Click, btnGenreAction.Click
         Try
-            If sender.Text = "All Movies" Then
+            If sender.Text = "Any Genre" Then
                 For Each a As Control In panelGenresCtrls.Controls
                     a.BackColor = Color.FromArgb(24, 32, 45)
                     a.ForeColor = Color.FromArgb(161, 168, 179)
@@ -1122,14 +1135,13 @@ Public Class Movieo
 
                 For Each a In storeControlsAllMovies
                     countMovie = countMovie + 1
-                    If countMovie <= 40 Then
+                    If countMovie <= intMaxPosters Then
                         panelMovies.Controls.Add(a)
                     Else
                         storeControlsScroll.Add(a)
                     End If
                 Next
-
-            Else
+            ElseIf sender.Text = "Trending" Then
                 For Each a As Control In panelGenresCtrls.Controls
                     a.BackColor = Color.FromArgb(24, 32, 45)
                     a.ForeColor = Color.FromArgb(161, 168, 179)
@@ -1148,10 +1160,105 @@ Public Class Movieo
 
                 For Each a In storeControlsAllMovies
                     For Each ab As Control In a.Controls
+                        If ab.Name = "InfoTitleAndYear" Then
+                            If listMoviesTrending.Contains(ab.Text) Then
+                                countMovie = countMovie + 1
+                                If countMovie <= intMaxPosters Then
+                                    panelMovies.Controls.Add(a)
+                                Else
+                                    storeControlsScroll.Add(a)
+                                End If
+                            End If
+                        End If
+                    Next
+                Next
+            ElseIf sender.Text = "New Releases" Then
+                For Each a As Control In panelGenresCtrls.Controls
+                    a.BackColor = Color.FromArgb(24, 32, 45)
+                    a.ForeColor = Color.FromArgb(161, 168, 179)
+                Next
+
+                sender.BackColor = Color.FromArgb(43, 50, 61)
+                sender.ForeColor = Color.White
+
+                panelMovies.Controls.Clear()
+                storeControlsScroll.Clear()
+
+                selectedGenre = sender.text
+                selectedGenreObject = sender
+
+                Dim countMovie As Integer = 0
+
+                For Each a In storeControlsAllMovies
+                    For Each ab As Control In a.Controls
+                        If ab.Name = "InfoTitleAndYear" Then
+                            If listMoviesNewReleases.Contains(ab.Text) Then
+                                countMovie = countMovie + 1
+                                If countMovie <= intMaxPosters Then
+                                    panelMovies.Controls.Add(a)
+                                Else
+                                    storeControlsScroll.Add(a)
+                                End If
+                            End If
+                        End If
+                    Next
+                Next
+            ElseIf sender.Text = "Top Rated" Then
+                For Each a As Control In panelGenresCtrls.Controls
+                    a.BackColor = Color.FromArgb(24, 32, 45)
+                    a.ForeColor = Color.FromArgb(161, 168, 179)
+                Next
+
+                sender.BackColor = Color.FromArgb(43, 50, 61)
+                sender.ForeColor = Color.White
+
+                panelMovies.Controls.Clear()
+                storeControlsScroll.Clear()
+
+                selectedGenre = sender.text
+                selectedGenreObject = sender
+
+                Dim countMovie As Integer = 0
+
+                For Each a In storeControlsAllMovies
+                    For Each ab As Control In a.Controls
+                        If ab.Name = "InfoTitleAndYear" Then
+                            If listMoviesTopRated.Contains(ab.Text) Then
+                                countMovie = countMovie + 1
+                                If countMovie <= intMaxPosters Then
+                                    panelMovies.Controls.Add(a)
+                                Else
+                                    storeControlsScroll.Add(a)
+                                End If
+                            End If
+                        End If
+                    Next
+                Next
+            Else
+                For Each a As Control In panelGenresCtrls.Controls
+                    a.BackColor = Color.FromArgb(24, 32, 45)
+                    a.ForeColor = Color.FromArgb(161, 168, 179)
+                Next
+
+                sender.BackColor = Color.FromArgb(43, 50, 61)
+                sender.ForeColor = Color.White
+
+                panelMovies.Controls.Clear()
+                storeControlsScroll.Clear()
+
+                selectedGenre = sender.text
+                selectedGenreObject = sender
+
+                Dim countMovie As Integer = 0
+
+
+                For Each a In storeControlsAllMovies
+                    For Each ab As Control In a.Controls
                         If ab.Name = "InfoGenre" Then
+                            Dim movieYear As Label = a.Controls.Find("InfoYear", True)(0)
                             If ab.Text.ToLower.Contains(sender.Text.ToString.ToLower) Then
                                 countMovie = countMovie + 1
-                                If countMovie <= 40 Then
+                                If countMovie <= intMaxPosters Then
                                     panelMovies.Controls.Add(a)
                                 Else
                                     storeControlsScroll.Add(a)
@@ -1174,115 +1281,6 @@ Public Class Movieo
         If Not selectedGenre = sender.Text Then
             sender.BackColor = Color.FromArgb(24, 32, 45)
             sender.ForeColor = Color.FromArgb(161, 168, 179)
-        End If
-    End Sub
-
-
-    'Top Rated
-    Public Sub btnFilterTopRated_Click(sender As Object, e As EventArgs) Handles btnFilterTopRated.Click
-        If Not sender.text = selectedGenre Then
-            For Each a As Control In panelGenresCtrls.Controls
-                a.BackColor = Color.FromArgb(24, 32, 45)
-                a.ForeColor = Color.FromArgb(161, 168, 179)
-            Next
-
-            sender.BackColor = Color.FromArgb(43, 50, 61)
-            sender.ForeColor = Color.White
-
-            panelMovies.Controls.Clear()
-            storeControlsScroll.Clear()
-
-            selectedGenre = sender.text
-            selectedGenreObject = sender
-
-            Dim countMovie As Integer = 0
-
-            For Each a In storeControlsAllMovies
-                For Each ab As Control In a.Controls
-                    If ab.Name = "InfoTitleAndYear" Then
-                        If listMoviesTopRated.Contains(ab.Text) Then
-                            countMovie = countMovie + 1
-                            If countMovie <= 40 Then
-                                panelMovies.Controls.Add(a)
-                            Else
-                                storeControlsScroll.Add(a)
-                            End If
-                        End If
-                    End If
-                Next
-            Next
-        End If
-    End Sub
-
-    'New Relases
-    Public Sub btnFilterNewReleases_Click(sender As Object, e As EventArgs) Handles btnFilterNewReleases.Click
-        If Not sender.text = selectedGenre Then
-            For Each a As Control In panelGenresCtrls.Controls
-                a.BackColor = Color.FromArgb(24, 32, 45)
-                a.ForeColor = Color.FromArgb(161, 168, 179)
-            Next
-
-            sender.BackColor = Color.FromArgb(43, 50, 61)
-            sender.ForeColor = Color.White
-
-            panelMovies.Controls.Clear()
-            storeControlsScroll.Clear()
-
-            selectedGenre = sender.text
-            selectedGenreObject = sender
-
-            Dim countMovie As Integer = 0
-
-            For Each a In storeControlsAllMovies
-                For Each ab As Control In a.Controls
-                    If ab.Name = "InfoTitleAndYear" Then
-                        If listMoviesNewReleases.Contains(ab.Text) Then
-                            countMovie = countMovie + 1
-                            If countMovie <= 40 Then
-                                panelMovies.Controls.Add(a)
-                            Else
-                                storeControlsScroll.Add(a)
-                            End If
-                        End If
-                    End If
-                Next
-            Next
-        End If
-    End Sub
-
-    'Trending
-    Public Sub btnFilterTrending_Click(sender As Object, e As EventArgs) Handles btnFilterTrending.Click
-        If Not sender.text = selectedGenre Then
-            For Each a As Control In panelGenresCtrls.Controls
-                a.BackColor = Color.FromArgb(24, 32, 45)
-                a.ForeColor = Color.FromArgb(161, 168, 179)
-            Next
-
-            sender.BackColor = Color.FromArgb(43, 50, 61)
-            sender.ForeColor = Color.White
-
-            panelMovies.Controls.Clear()
-            storeControlsScroll.Clear()
-
-            selectedGenre = sender.text
-            selectedGenreObject = sender
-
-            Dim countMovie As Integer = 0
-
-            For Each a In storeControlsAllMovies
-                For Each ab As Control In a.Controls
-                    If ab.Name = "InfoTitleAndYear" Then
-                        If listMoviesTrending.Contains(ab.Text) Then
-                            countMovie = countMovie + 1
-                            If countMovie <= 40 Then
-                                panelMovies.Controls.Add(a)
-                            Else
-                                storeControlsScroll.Add(a)
-                            End If
-                        End If
-                    End If
-                Next
-            Next
         End If
     End Sub
 
@@ -1456,13 +1454,28 @@ Public Class Movieo
         End Try
     End Function
 
-    Private Sub Movieo_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
-        btnGenre_Click(btnGenreAllMovies, e)
+#End Region
+
+#Region "Drag & Drop"
+
+    Private Sub Movieo_DragDrop(sender As Object, e As DragEventArgs) Handles Me.DragDrop
+        Dim files() As String = e.Data.GetData(DataFormats.FileDrop)
+        For Each path In files
+            frmMediaPlayer.Text = "Watching " + Dir(path)
+            frmMediaPlayer.MediaPlayerControl.URL = path
+            frmMediaPlayer.Show(Me)
+        Next
+    End Sub
+
+    Private Sub Movieo_DragEnter(sender As Object, e As DragEventArgs) Handles Me.DragEnter
+        If e.Data.GetDataPresent(DataFormats.FileDrop) Then
+            e.Effect = DragDropEffects.Copy
+        End If
     End Sub
 
 #End Region
 
-#Region "Get Movie Title by IMDB Id"
+#Region "Get Movie Title by IMDb Id"
 
     Public Function returnMovieTitle(imdbId As String) As String
         Try
@@ -1480,6 +1493,54 @@ Public Class Movieo
             Return Nothing
         End Try
     End Function
+
+#End Region
+
+#Region "Get IMDb Id by Movie Tilte"
+
+    Public Function returnIMDb(movieTitleAndYear As String) As String
+        Try
+            For Each a In storeControlsAllMovies
+                For Each ab As Control In a.Controls
+                    If ab.Name = "InfoTitleAndYear" Then
+                        If ab.Text = movieTitleAndYear Then
+                            Dim imdbId As Label = a.Controls.Find("InfoImdbId", True)(0)
+                            Return imdbId.Text
+                        End If
+                    End If
+                Next
+            Next
+        Catch
+            Return """"""""
+        End Try
+    End Function
+
+#End Region
+
+#Region "Add Movie to My List"
+
+    Public Sub addMovieToMyList(listTitle As String, movieTitle As String)
+        Dim moviesListPath As String = pathMyLists + listTitle + ".txt"
+
+        Dim moviesList() As String = File.ReadAllLines(moviesListPath)
+        Dim copyList As New List(Of String)
+
+        For Each movieItem As String In moviesList
+            copyList.Add(movieItem)
+        Next
+
+        If Not copyList.Contains(movieTitle) Then
+            copyList.Add(movieTitle)
+        End If
+
+        Dim buildList As New Text.StringBuilder()
+        For Each movieItem As String In copyList
+            buildList.AppendLine(movieItem)
+        Next
+
+        File.Delete(moviesListPath)
+        File.WriteAllText(moviesListPath, buildList.ToString())
+    End Sub
 
 #End Region
 
@@ -1524,5 +1585,9 @@ Public Class Movieo
     End Function
 
 #End Region
+
+    Private Sub Movieo_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
+        btnGenre_Click(selectedGenreObject, e)
+    End Sub
 
 End Class

@@ -60,7 +60,7 @@ Public Class ctrlPosterTitle
                 frmMovieDetails.infoDirectors.Visible = False
                 frmMovieDetails.infoDirectors.Text = InfoDirector.Text
                 Dim directorInText() As String = Split(InfoDirector.Text, ", ")
-                For Each director As String In directorInText
+                For Each director As String In directorInText.Reverse
                     countDirector = countDirector + 1
                     Dim aDirector As New Label
                     With aDirector
@@ -88,7 +88,7 @@ Public Class ctrlPosterTitle
                 frmMovieDetails.infoCast.Visible = False
                 frmMovieDetails.infoCast.Text = InfoStars.Text
                 Dim castInText() As String = Split(InfoStars.Text, ", ")
-                For Each cast As String In castInText
+                For Each cast As String In castInText.Reverse
                     Dim aCast As New Label
                     With aCast
                         .AutoSize = True
@@ -113,7 +113,7 @@ Public Class ctrlPosterTitle
                 frmMovieDetails.infoGenre.Text = InfoGenre.Text
                 Dim countGenres As Integer = 0
                 Dim genresInText() As String = Split(InfoGenre.Text, ", ")
-                For Each genre As String In genresInText
+                For Each genre As String In genresInText.Reverse
                     Dim aGenre As New Label
                     With aGenre
                         .AutoSize = True
@@ -215,43 +215,20 @@ Public Class ctrlPosterTitle
         End Try
     End Function
 
+    Private Shared WebClient As New WebClient()
+
     Private Sub MovieTitle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        BackColor = Movieo.panelMovies.BackColor
+
         InfoImdbRatingPoster.Parent = InfoPoster
         InfoImdbRatingPoster.BackColor = Color.Transparent
         InfoImdbRatingPoster.ShowFocus = CButtonLib.CButton.eFocus.None
         InfoImdbRatingPoster.BringToFront()
         InfoImdbRatingPoster.Location = New Point(64, 8)
         InfoImdbRatingPoster.Visible = False
-
-        BackColor = Movieo.panelMovies.BackColor
     End Sub
 
-    Dim ignoreControls As ICollection(Of String) = {Movieo.panelLibraryBlackList.Name, Movieo.panelLibrarySeenList.Name, Movieo.panelLibraryWatchList.Name, Movieo.panelLibraryFavourites.Name, Movieo.panelDownloads.Name, Movieo.panelMyListsMovies.Name}
-
-    Private Sub ctrlPosterTitle_Validated(sender As Object, e As EventArgs) Handles Me.Validated
-        Dim WebClient = New WebClient()
-
-        If Not ignoreControls.Contains(Parent.Name) Then
-            If Movieo.listSeenList.Contains(InfoTitleAndYear.Text) Then
-                If My.Settings.doWatchedMovies = 0 Then
-                    InfoPoster.BackgroundImage = ChangeOpacity(InfoPoster.BackgroundImage, 0.3)
-                    Show()
-                ElseIf My.Settings.doWatchedMovies = 1 Then
-                    Hide()
-                ElseIf My.Settings.doWatchedMovies = 2 Then
-                    InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
-                    Show()
-                End If
-            ElseIf Movieo.listBlackList.Contains(InfoTitleAndYear.Text) Then
-                Hide()
-            Else
-                InfoPoster.BackgroundImage = New Bitmap(New MemoryStream(WebClient.DownloadData(InfoPosterLink.Text)))
-                Show()
-            End If
-        End If
-    End Sub
-
-#Region "Get Quality"
+#Region "Get Quality from URL File Name"
 
     Public Function ReturnQuality(Link As String) As String
         If Link.ToLower.Contains("1080") Then

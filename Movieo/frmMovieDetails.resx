@@ -493,13 +493,13 @@
     <value>Segoe UI, 12.2pt</value>
   </data>
   <data name="txtShareComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 41</value>
+    <value>12, 44</value>
   </data>
   <data name="txtShareComment.MaxLength" type="System.Int32, mscorlib">
     <value>75</value>
   </data>
   <data name="txtShareComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>516, 22</value>
+    <value>540, 22</value>
   </data>
   <data name="txtShareComment.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -523,10 +523,10 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="txtFormCommentBG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 35</value>
+    <value>5, 38</value>
   </data>
   <data name="txtFormCommentBG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>530, 35</value>
+    <value>554, 35</value>
   </data>
   <data name="txtFormCommentBG.TabIndex" type="System.Int32, mscorlib">
     <value>100002</value>
@@ -592,10 +592,10 @@
     <value>NoControl</value>
   </data>
   <data name="imgPanelsEmptyReviews.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 115</value>
+    <value>48, 118</value>
   </data>
   <data name="imgPanelsEmptyReviews.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 56</value>
+    <value>462, 56</value>
   </data>
   <data name="imgPanelsEmptyReviews.TabIndex" type="System.Int32, mscorlib">
     <value>100006</value>
@@ -631,7 +631,7 @@
     <value>10, 16, 3, 3</value>
   </data>
   <data name="lineSplitter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>529, 2</value>
+    <value>553, 2</value>
   </data>
   <data name="lineSplitter.TabIndex" type="System.Int32, mscorlib">
     <value>1096</value>
@@ -655,7 +655,7 @@
     <value>Segoe UI, 12.2pt</value>
   </data>
   <data name="txtShareName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 74</value>
+    <value>12, 77</value>
   </data>
   <data name="txtShareName.MaxLength" type="System.Int32, mscorlib">
     <value>75</value>
@@ -682,7 +682,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="txtFormNameBG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 69</value>
+    <value>5, 72</value>
   </data>
   <data name="txtFormNameBG.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 35</value>
@@ -712,7 +712,7 @@
     <value>Segoe UI Semibold, 9.75pt</value>
   </data>
   <data name="btnCommentSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>459, 69</value>
+    <value>483, 72</value>
   </data>
   <data name="btnCommentSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 35</value>
@@ -742,13 +742,13 @@
     <value>True</value>
   </data>
   <data name="panelComments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 105</value>
+    <value>5, 109</value>
   </data>
   <data name="panelComments.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>8, 0, 0, 0</value>
   </data>
   <data name="panelComments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>530, 185</value>
+    <value>554, 185</value>
   </data>
   <data name="panelComments.TabIndex" type="System.Int32, mscorlib">
     <value>1096</value>
@@ -772,7 +772,7 @@
     <value>3, 20, 0, 0</value>
   </data>
   <data name="panelHeaders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>538, 294</value>
+    <value>562, 294</value>
   </data>
   <data name="panelHeaders.TabIndex" type="System.Int32, mscorlib">
     <value>1095</value>
@@ -790,10 +790,10 @@
     <value>10</value>
   </data>
   <data name="InfoPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 20</value>
+    <value>280, 20</value>
   </data>
   <data name="InfoPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>545, 553</value>
+    <value>565, 553</value>
   </data>
   <data name="InfoPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>1082</value>
@@ -808,7 +808,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;InfoPanel1.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="infoYear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
@@ -1489,7 +1489,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelDetails.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>1</value>
   </data>
   <data name="infoDuration.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12.2pt</value>
@@ -1555,7 +1555,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoImageLink.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnFavouriteList.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1971,7 +1971,7 @@
     <value>3, 3</value>
   </data>
   <data name="btnFavouriteList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+    <value>28, 28</value>
   </data>
   <data name="btnFavouriteList.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1992,7 +1992,7 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnFavouriteList.Parent" xml:space="preserve">
-    <value>ActionsPanel</value>
+    <value>ListsPanel</value>
   </data>
   <data name="&gt;&gt;btnFavouriteList.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -2004,13 +2004,13 @@
     <value>NoControl</value>
   </data>
   <data name="Splitter2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 0</value>
+    <value>34, 0</value>
   </data>
   <data name="Splitter2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 2, 0</value>
   </data>
   <data name="Splitter2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 36</value>
+    <value>12, 34</value>
   </data>
   <data name="Splitter2.TabIndex" type="System.Int32, mscorlib">
     <value>1037</value>
@@ -2028,7 +2028,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Splitter2.Parent" xml:space="preserve">
-    <value>ActionsPanel</value>
+    <value>ListsPanel</value>
   </data>
   <data name="&gt;&gt;Splitter2.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -2037,10 +2037,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnWatchList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 3</value>
+    <value>51, 3</value>
   </data>
   <data name="btnWatchList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+    <value>28, 28</value>
   </data>
   <data name="btnWatchList.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2058,7 +2058,7 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnWatchList.Parent" xml:space="preserve">
-    <value>ActionsPanel</value>
+    <value>ListsPanel</value>
   </data>
   <data name="&gt;&gt;btnWatchList.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -2070,13 +2070,13 @@
     <value>NoControl</value>
   </data>
   <data name="Splitter3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 0</value>
+    <value>82, 0</value>
   </data>
   <data name="Splitter3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 2, 0</value>
   </data>
   <data name="Splitter3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 36</value>
+    <value>12, 34</value>
   </data>
   <data name="Splitter3.TabIndex" type="System.Int32, mscorlib">
     <value>1042</value>
@@ -2094,7 +2094,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Splitter3.Parent" xml:space="preserve">
-    <value>ActionsPanel</value>
+    <value>ListsPanel</value>
   </data>
   <data name="&gt;&gt;Splitter3.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -2103,10 +2103,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnSeenList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 3</value>
+    <value>99, 3</value>
   </data>
   <data name="btnSeenList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+    <value>28, 28</value>
   </data>
   <data name="btnSeenList.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2124,7 +2124,7 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnSeenList.Parent" xml:space="preserve">
-    <value>ActionsPanel</value>
+    <value>ListsPanel</value>
   </data>
   <data name="&gt;&gt;btnSeenList.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -2136,13 +2136,13 @@
     <value>NoControl</value>
   </data>
   <data name="Splitter4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 0</value>
+    <value>130, 0</value>
   </data>
   <data name="Splitter4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 2, 0</value>
   </data>
   <data name="Splitter4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 36</value>
+    <value>12, 34</value>
   </data>
   <data name="Splitter4.TabIndex" type="System.Int32, mscorlib">
     <value>1044</value>
@@ -2160,7 +2160,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Splitter4.Parent" xml:space="preserve">
-    <value>ActionsPanel</value>
+    <value>ListsPanel</value>
   </data>
   <data name="&gt;&gt;Splitter4.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -2169,10 +2169,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnBlackList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 3</value>
+    <value>147, 3</value>
   </data>
   <data name="btnBlackList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+    <value>28, 28</value>
   </data>
   <data name="btnBlackList.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2190,7 +2190,7 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnBlackList.Parent" xml:space="preserve">
-    <value>ActionsPanel</value>
+    <value>ListsPanel</value>
   </data>
   <data name="&gt;&gt;btnBlackList.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -2202,13 +2202,13 @@
     <value>NoControl</value>
   </data>
   <data name="Splitter5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 0</value>
+    <value>178, 0</value>
   </data>
   <data name="Splitter5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 2, 0</value>
   </data>
   <data name="Splitter5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 36</value>
+    <value>12, 34</value>
   </data>
   <data name="Splitter5.TabIndex" type="System.Int32, mscorlib">
     <value>1046</value>
@@ -2226,7 +2226,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Splitter5.Parent" xml:space="preserve">
-    <value>ActionsPanel</value>
+    <value>ListsPanel</value>
   </data>
   <data name="&gt;&gt;Splitter5.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -2235,10 +2235,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnMyList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 3</value>
+    <value>195, 3</value>
   </data>
   <data name="btnMyList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
+    <value>28, 28</value>
   </data>
   <data name="btnMyList.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -2256,31 +2256,31 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnMyList.Parent" xml:space="preserve">
-    <value>ActionsPanel</value>
+    <value>ListsPanel</value>
   </data>
   <data name="&gt;&gt;btnMyList.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="ActionsPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 448</value>
+  <data name="ListsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 446</value>
   </data>
-  <data name="ActionsPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 38</value>
+  <data name="ListsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 34</value>
   </data>
-  <data name="ActionsPanel.TabIndex" type="System.Int32, mscorlib">
+  <data name="ListsPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1040</value>
   </data>
-  <data name="&gt;&gt;ActionsPanel.Name" xml:space="preserve">
-    <value>ActionsPanel</value>
+  <data name="&gt;&gt;ListsPanel.Name" xml:space="preserve">
+    <value>ListsPanel</value>
   </data>
-  <data name="&gt;&gt;ActionsPanel.Type" xml:space="preserve">
+  <data name="&gt;&gt;ListsPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ActionsPanel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ListsPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ActionsPanel.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="&gt;&gt;ListsPanel.ZOrder" xml:space="preserve">
+    <value>20</value>
   </data>
   <data name="infoWatchLinks.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
@@ -2316,7 +2316,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoWatchLinks.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="infoRatingIMDb.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2352,7 +2352,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoRatingIMDb.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="infoRatingMetaScore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2388,7 +2388,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoRatingMetaScore.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="infoImdbId.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
@@ -2424,7 +2424,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoImdbId.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="MovieLinkText.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
@@ -2490,7 +2490,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoTrailerLink.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="msgErrorComments.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -2502,7 +2502,7 @@
     <value>NoControl</value>
   </data>
   <data name="msgErrorComments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>301, 325</value>
+    <value>315, 344</value>
   </data>
   <data name="msgErrorComments.Size" type="System.Drawing.Size, System.Drawing">
     <value>522, 40</value>
@@ -2529,7 +2529,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;msgErrorComments.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>0</value>
   </data>
   <data name="imgPanelsEmpty0.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -2604,7 +2604,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoRatingNetflix.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="SplitterLine1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
@@ -2634,22 +2634,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;SplitterLine1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="btnDownloadMovie.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 13pt</value>
   </data>
   <data name="btnDownloadMovie.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 406</value>
+    <value>172, 406</value>
   </data>
   <data name="btnDownloadMovie.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 36</value>
+    <value>102, 34</value>
   </data>
   <data name="btnDownloadMovie.TabIndex" type="System.Int32, mscorlib">
     <value>1057</value>
   </data>
   <data name="btnDownloadMovie.Text" xml:space="preserve">
-    <value>DOWNLOAD</value>
+    <value>Download</value>
   </data>
   <data name="&gt;&gt;btnDownloadMovie.Name" xml:space="preserve">
     <value>btnDownloadMovie</value>
@@ -2661,34 +2661,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDownloadMovie.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="btnWatchMovie.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 13pt</value>
-  </data>
-  <data name="btnWatchMovie.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 406</value>
-  </data>
-  <data name="btnWatchMovie.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 36</value>
-  </data>
-  <data name="btnWatchMovie.TabIndex" type="System.Int32, mscorlib">
-    <value>999</value>
-  </data>
-  <data name="btnWatchMovie.Text" xml:space="preserve">
-    <value>WATCH NOW</value>
-  </data>
-  <data name="&gt;&gt;btnWatchMovie.Name" xml:space="preserve">
-    <value>btnWatchMovie</value>
-  </data>
-  <data name="&gt;&gt;btnWatchMovie.Type" xml:space="preserve">
-    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnWatchMovie.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnWatchMovie.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="lblStatus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -2697,10 +2670,10 @@
     <value>Segoe UI Semibold, 11.25pt</value>
   </data>
   <data name="lblStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>541, -1</value>
+    <value>546, -1</value>
   </data>
   <data name="lblStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 35</value>
+    <value>132, 35</value>
   </data>
   <data name="lblStatus.TabIndex" type="System.Int32, mscorlib">
     <value>100001</value>
@@ -2721,7 +2694,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblStatus.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="infoBackgroundImageLink.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
@@ -2757,7 +2730,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;infoBackgroundImageLink.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnWatchTrailer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2784,7 +2757,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnWatchTrailer.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="imgNetflix.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2817,7 +2790,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;imgNetflix.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="imgPoster.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -2829,7 +2802,7 @@
     <value>23, 23</value>
   </data>
   <data name="imgPoster.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 376</value>
+    <value>251, 376</value>
   </data>
   <data name="imgPoster.TabIndex" type="System.Int32, mscorlib">
     <value>10006</value>
@@ -2844,7 +2817,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;imgPoster.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="ImgMetaCritic.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2877,7 +2850,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ImgMetaCritic.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="imgImdb.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2910,7 +2883,163 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;imgImdb.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
+  </data>
+  <data name="btnWatchMovie.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 13pt</value>
+  </data>
+  <data name="btnWatchMovie.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 406</value>
+  </data>
+  <data name="btnWatchMovie.SideImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAwwAAAGNCAYAAAC8DPYvAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAABy8SURBVHhe7d3dtdtWlgTgDmFC
+        UAgTgkNwCA7BGTgEh9AJzFp+mXeHMCE4hAnBw1KPbuucsyXxByQB7O/he+llq+V7iUIVCQL/+K///vPv
+        Sf43AKCxv//+G+CzhILBAAAMqtIA9JRQMBgAgEFVGoCeEgoGAwAwqEoD0FNCwWAAAAZVaQB6SigYDADA
+        oCoNQE8JBYMBABhUpQHoKaFgMAAAg6o0AD0lFAwGAGBQlQagp4SCwQAADKrSAPSUUDAYAIBBVRqAnhIK
+        BgMAMKhKA9BTQsFgAAAGVWkAekooGAwAwKAqDUBPCQWDAQAYVKUB6CmhYDAAAIOqNAA9JRQMBgBgUJUG
+        oKeEgsEAAAyq0gD0lFAwGACAQVUagJ4SCgYDADCoSgPQU0LBYAAABlVpAHpKKBgMAMCgKg1ATwkFgwEA
+        GFSlAegpoWAwAACDqjQAPSUUDAYAYFCVBqCnhILBAAAMqtIA9JRQMBgAgEFVGoCeEgoGAwAwqEoD0FNC
+        wWAAAAZVaQB6SigYDADAoCoNQE8JBYMBABhUpQHoKaFgMAAAg6o0AD0lFAwGAGBQlQagp4SCwQAADKrS
+        APSUUDAYAIBBVRqAnhIKBgMAMKhKA9BTQsFgAAAGVWkAekooGAwAwKAqDUBPCQWDAQAYVKUB6CmhYDAA
+        AIOqNAA9JRQMBgBgUJUGoKeEgsEAAAyq0gD0lFAwGACAQVUagJ4SCgYDADCoSgPQU0LBYAAABlVpAHpK
+        KBgMAMCgKg1ATwkFgwEAGFSlAegpoWAwAACDqjQAPSUUDAYAYFCVBqCnhILBAAAMqtIA9JRQMBgAgEFV
+        GoCeEgoGAwAwqEoD0FNCwWAAAAZVaQB6SigYDADAoCoNQE8JBYMBABhUpQHoKaFgMAAAg6o0AD0lFAwG
+        AGBQlQagp4SCwQAADKrSAPSUUDAYAIBBVRqAnhIKBgMAMKhKA9BTQsFgAAAGVWkAekooGAwAwKAqDUBP
+        CQWDAQAYVKUB6CmhYDAAAIOqNAA9JRQMBgBgUJUGoKeEgsEAAAyq0gD0lFAwGACAQVUagJ4SCgYDADCo
+        SgPQU0LBYAAABlVpAHpKKBgMAMCgKg1ATwkFgwEAGFSlAegpoWAwAACDqjQAPSUUDAYAYFCVBqCnhILB
+        AAAMqtIA9JRQMBgAgEFVGoCeEgoGAwAwqEoD0FNCwWAAAAZVaQB6SigYDADAoCoNQE8JBYMBABhUpQHo
+        KaFgMAAAg6o0AD0lFAwGAGBQlQagp4SCwQAADKrSAPSUUDAYAIBBVRqAnhIKBgMAMKhKA9BTQsFgAAAG
+        VWkAekooGAwAwKAqDUBPCQWDAQAYVKUB6CmhYDAAAIOqNAA9JRQMBgBgUJUGoKeEgsEAAAyq0gD0lFAw
+        GACAQVUagJ4SCgYDADCoSgPQU0LBYAAABlVpAHpKKBgMAMCgKg1ATwkFgwEAGFSlAegpoWAwAACDqjQA
+        PSUUDAYAYFCVBqCnhILBAAAMqtIA9JRQMBgAgEFVGoCeEgoGAwAwqEoD0FNCwWAAAAZVaQB6SigYDADA
+        oCoNQE8JBYMBABhUpQHoKaFgMAAAg6o0AD0lFAwGAGBQlQagp4SCwQAADKrSAPSUUDAYAIBBVRqAnhIK
+        BgMAMKhKA9BTQsFgAAAGVWkAekooGAwAwKAqDUBPCQWDAQAYVKUB6CmhYDAAAIOqNAA9JRQMBjiX/7z4
+        5eK3iz8u/rz434v5WJ/9z0X+2fx7P1/8x0X15wP/kmPkp4scM/+8yPHz10V1fM1yTOafzzGafz/HbI7d
+        6v/nLarSAPSUUJhDbAkNYNdSMlI4Uj7m4/lRGRH5s3dVZOCNMqZ/v8ixUR0zW8ix/OvFW4+7qjQAPSUU
+        5qBaQgPYnRSJlJZr383cQv6/Mh4+XVR/JzirjIR8gnDNJ3Vby3GXY/3l46EqDUBPCYU5nJbQAHYhlz/k
+        XcdXjoRvyTugKVHV3xPOIMdbBvIejrcv8nfJpUsvuVywKg1ATwmFOZCW0ADe6ktxece7mz+SApMR85IC
+        Ay+QT9DyaUL1et+LZEEy4anHXVUagJ4SCnMQLaEBvMWeh8LsJQUGniiv3Vz6U72+9+qpx11VGoCeEgpz
+        AC2hAbxcLvfZ06UQ1zIcOKJ8SnaEYf4tyYrNLxGsSgPQU0JhDp4lNICXSdHObRbn4/JoDAeOIF8kfubd
+        jl4t3y3a7KYEVWkAekoozIGzhAbwEnmH8Mjvclby35MvaVb/vfBOGbTVa/bocsxt8mlDVRqAnhIKc9gs
+        oQE83dGunb5VLpnIA66q/3Z4pbwD/4xnluxNvrj90Cd8VWkAekoozCGzhAbwNDmhn+mSiB/J5Vae48C7
+        ZLSe7VO870m23H28VaUB6CmhMAfMEhrAU+T66SN+sflRX77fUP1M4Fnyxebq9Xh2Od7ueuhbVRqAnhIK
+        c7gsoQFsLifwTu90VlymxKvs/bkKz5asufm7RFVpAHpKKMzBsoQGsCljYfTwtdbwHd3HwtduGg1VaQB6
+        SijMgbKEBrAZY6GWn8nm95GnPWNhdfVoqEoD0FNCYQ6TJTSATRgLP5YvRfu0gS0YC9921TivSgPQU0Jh
+        DpIlNICHpQR3/ILzPXzawCO63XnsHjnGfvhF6Ko0AD0lFOYgWUIDeFiH+75vzacN3MpYuF5Gw3ePr6o0
+        AD0lFOYQWUIDeMjZH8r2TD5t4FrGwu3yRkb1s/ysKg1ATwmFOUCW0ADultuGzscYt8vo8mkD32Is3O+b
+        z0SpSgPQU0JhDo8lNIC7pMT43sJ2Ugh/eN017eQ14Th7THlcVaUB6CmhMAfHEhrAXfLO3Xx88bg8sbf6
+        edOPO49tI2N8+flWpQHoKaEwB8cSGsDNPl3Mxxbb8YVojIVtLc9nqEoD0FNCYQ6NITCAu7gH/POlLOY7
+        ItXPn3PL791Y2FYu6xp+zlVpAHpKKMyhMQQGcDOfLrzWN7+0ySnlnfDqdcDjhk8ZqtIA9JRQmAPjIyyA
+        u/juwuvl9pAuUTo/Y+G5hk8ZqtIA9JRQmAPjIyyAu7hU4j3yc3cXpfMyFl7j47knVWkAekoozGHxdUAD
+        t8nJdj6meC13UTofDz98ndxQ4PPPvSoNQE8JhTksvg5p4Da+7LwP7qJ0Ho6p1/t87FSlAegpYTwHxRzW
+        wPU8QGo/POjt+IyF9/h8WVJVGoCeEshzUMyBDVzH3ZH2J99r+Lgmm8PIO9z5lKj6nfJ8GWplaQB6SjDP
+        QTEHN3Ad31/Yr1wDX/3O2J+MhXw6VP0eeY3PT36uSgPQU8J5Doo5vIHruJ3qvrn16v4ZC/tRlgagpwT0
+        EhLAXVxvvX++17Bf+b0YC/vxU1UagJ4S0nNIzCEOXCfvYM/HE/vjew37k7Hg+SX78ktVGoCeEtRzSMxB
+        DlzHYDiWXEJW/R55LWNhn36rSgPQU8J6Dok5zIHrGAzHk8vIfK/hffJJj7GwTwYD8CGBPYfEHOjAdQyG
+        Y8p180bD6/1yUf0+2AeDAfiQ0J5DYg514DoGw3HlXW5fhn4dY2H//lmVBqCnBPccEnOwA9cxGI4toyFF
+        tvrdsp08E6P6+bMvPmEAPiS855CYwx24jsFwDr4M/TxuPXwcBgPwIQE+h8Qc8MB1lKHzyO+y+h1zP8fH
+        sRgMwIeE+BwSc8gD1/Gk53PxZehteHrzMRkMwIeE+RwSc9gD18ktIufjiWPzZOjHGAvH5UnPwIcE+hwS
+        c+AD1/l0MR9PHJ87KN0nx4OxcFyfqtIA9JRQn0NiDn3gen9dzMcU5+AOStfz9OZjy++uLA1ATwn2OSjm
+        4Aeu55aR5/brRfV759+MheP746IsDUBPCfc5KObwB66XsjQfU5yLOyh9Wz6FMRaO7/OnaVVpAHpKwM9B
+        MZ8AgNu4LOn88g6sOyiNPL35PD6/tqvSAPSUkJ+DYj4JALfJZSvzccX5uO3qv3nNn8fny5GiKg1ATwmF
+        OSy+PgkAt0uJdFlGD/k0qfsdlDyQ7Vxye+jPv9uqNAA9JRTmsPj6RADcx0Pc+sg47DoajIVzyQD++P1W
+        pQHoKaEwB8ZHWAB38ylDL/ldd7rtal7ff15UPwuOa3gNV6UB6CmhMAfGR1gAD/El0H46jIaMBQ9kO5/h
+        04WoSgPQU0JhDo0hMICHeBe2n1yOVr0WzsDTm89rGbtVaQB6SijMoTEEBvAQlyb1dMZnNXgg23nljY3l
+        d16VBqCnhMIcHEtoAA/JXUfm44zzy2jIYKxeE0djLJxXfq/55Gj5vVelAegpoTCHxxIawMPcNamnMzyr
+        IZeqGAvnlWdoVL/3sjQAPSUU5vBYQgPYhFtQ9nTk0eCL++dWXor0RVUagJ4SCnOALKEBbMaXoHvKaDja
+        sxo8vfncclek7w7ZqjQAPSUU5hBZQgPYTE7Q7jLTUy7rOcpo8GnYuV31WqxKA9BTQmEOkiU0gE1lNPik
+        oacjjAZj4fyuel5IVRqAnhIKc5AsoQE8hWLWU0bDHh/w5tOvHq5+7VWlAegpoTCHyRIawNP8fjEfg/Sw
+        p9FgLPTwzTsiVarSAPSUUJgDZQkN4KlSHN22sqc9jIZcIpUvwFZ/P84jn2hWv/9vqkoD0FNCYQ6VJTSA
+        p0tpMxp6uuld34153fVw1zCtSgPQU0JhDpYlNICXcFlIXze/+7uBny6MhfO7+1OsqjQAPSUU5nBZQgN4
+        mYyGPy7m45Lze+VoSIms/g6cy0OXvFWlAegpoTAHzBIawMu5g1JPrxgNxkIPD42FqEoD0FNCYQ6ZJTSA
+        t1DsesonTPmkqXpNPMoQ7eHhsRBVaQB6SijMQbOEBvA2OfG7zryffJdl69FgLJxfsmKTsRBVaQB6SijM
+        gbOEBvBW7mTT01ajIX+GJ4ufXzJi06eIV6UB6CmhMIfOEhrA27lXfk+Pjob8u+68dX6bj4WoSgPQU0Jh
+        Dp4lNIBdUP56unc0pEB6vZzfU8ZCVKUB6CmhMIfPEhrAbri8pKcU/1tKYf5Zl7Gd39PGQlSlAegpoTAH
+        0BIawO74Ams/15ZDD2Tr4dYRebOqNAA9JRTmEFpCA9glo6GfH40Gt+Lt4d7L1G5SlQagp4TCHERLaAC7
+        pSD2863R4LXQw0vGQlSlAegpoTCH0RIawK4piv3Mo8GnTT28bCxEVRqAnhIKcyAtoQHsnuvW+/kyGoyF
+        HnKzg5eNhahKA9BTQmEOpSU0gENIeTQa4HwyCqtj/qmq0gD0lFCYg2kJDeAwMho84A3O4y1jIarSAPSU
+        UJjDaQkN4FBy2UKudZ6PbeBY3jYWoioNQE8JhTmgltAADsdogGP77aI6tl+mKg1ATwmFOaSW0AAOKaPh
+        j4v5GAf2LXc+q47pl6pKA9BTQmEOqiU0gENzFx04jl2MhahKA9BTQmEOqyU0gMMzGmD/djMWoioNQE8J
+        hTmwltAATsED3mCfcjvkPEulOm7fpioNQE8JhTm4ltAATsNogH2Zn9q9G1VpAHpKKMzhtYQGcCpGA+zD
+        bsdCVKUB6CmhMAfYEhrA6XgqNLzXrsdCVKUB6CmhMIfYEhrAKRkN8B55Rkpue1wdl7tRlQagp4TCHGRL
+        aACnZTTAax1iLERVGoCeEgpzmC2hAZyap0LDaxxmLERVGoCeEgpzoC2hAZye0QDPlWehHGYsRFUagJ4S
+        CnOoLaEBtGA0wHNkLFTH3K5VpQHoKaEwB9sSGkArngoN2znkWIiqNAA9JRTmcFtCA2jHaIDH/X5RHV+H
+        UJUGoKeEwhxwS2gALRkNcL88ILE6rg6jKg1ATwmFOeSW0ADa+vVizgjg+w4/FqIqDUBPCYU56JbQAFpL
+        +ZlzAqidYixEVRqAnhIKc9gtoQG0ZzTA9+UBiHkQYnX8HFJVGoCeEgpz6C2hAXDx84WnQsPqdGMhqtIA
+        9JRQmINvCQ2A/5dSZDTAv51yLERVGoCeEgpz+C2hAfAVowH+JQ86PNTTm29RlQagp4TCHIBLaABMMhr+
+        upjzA7o49ViIqjQAPSUU5hBcQgOgkLKU0jRnCJzd6cdCVKUB6CmhMAfhEhoA32A00E0eaHj6sRBVaQB6
+        SijMYbiEBsB3GA10kbFQHQOnVJUGoKeEwhyIS2gA/EBGQ8rUnCdwFq3GQlSlAegpoTCH4hIaAFcyGjij
+        Xy+q1/upVaUB6CmhMAfjEhoANzAaOJM85bx6nZ9eVRqAnhIKczguoQFwo98v5myBo2k7FqIqDUBPCYU5
+        IJfQALhDytacL3AEeTDhTxfV67qNqjQAPSUU5qBcQgPgTkYDR5OxkAcTVq/nVqrSAPSUUJjDcgkNgAcY
+        DRyFsfCVqjQAPSUU5sBcQgPgQT9fpIzNeQN70eLpzbeoSgPQU0JhDs0lNAA2kHdujQb2yFgoVKUB6Cmh
+        MAfnEhoAGzEa2Js/L4yFQlUagJ4SCnN4LqEBsCGjgb1o9/TmW1SlAegpoTAH6BIaABv7dJHLQOb8gVcx
+        Fn6gKg1ATwmFOUSX0AB4glwGYjTwDr9eVK9JvlKVBqCnhMIcpEtoADyJ0cCrtX568y2q0gD0lFCYw3QJ
+        DYAnMhp4hXxvJrf3rV6DFKrSAPSUUJhDdQkNgCfLaMg15XMewRYyFjyQ7UZVaQB6SijMwbqEBsCLGA1s
+        zVi4U1UagJ4SCnO4LqEB8EJGA1vxQLYHVKUB6CmhMAfsEhoAL2Y08Chj4UFVaQB6SijMIbuEBsAb5NaX
+        cz7BNTxjYQNVaQB6SijMQbuEBsCb5BaYc0bB9xgLG6lKA9BTQmEO2yU0AN7IaOBaHsi2oao0AD0lFObA
+        XUID4M2MBn7EA9k2VpUGoKeEwhy6S2gA7MBPF7lF5pxZ9JbXRF4b1WuGB1SlAegpoTCH7xIaADuR++kb
+        DXzhGQtPVJUGoKeEwhzAS2gA7IjRQOS2qZ8uqtcIG6hKA9BTQmEO4SU0AHbGaOjNMxZeoCoNQE8JhTmI
+        l9AA2KG8u5ziOGcY5+a2qS9SlQagp4TCHMZLaADsVN5lNhr6+P2ieh3wBFVpAHpKKMyBvIQGwI4ZDT24
+        beqLVaUB6CmhMIfyEhoAO2c0nFe+q/LzRfV754mq0gD0lFCYw3kJDYADyGj442LONI7LbVPfqCoNQE8J
+        hTmgl9AAOJB8KXbONY7HnZDerCoNQE8JhTmkl9AAOBij4djySZGx8GZVaQB6SijMQb2EBsABGQ3H5Lap
+        O1GVBqCnhMIc1ktoABxUbsM5Zxz75U5IO1KVBqCnhMIc2EtoABxYSuicc+xLvtz800X1++NNqtIA9JRQ
+        mIN7CQ2AgzMa9itfbnYnpB2qSgPQU0JhDu8lNABOwGjYnz8vfLl5p6rSAPSUUJgDfAkNgJMwGvYj3y+p
+        fkfsRFUagJ4SCnOIL6EBcCK5Vj7XzM/Zx2vkZ+/LzQdQlQagp4TCHOZLaACcTK6ZNxpe768L31c4iKo0
+        AD0lFOZAX0ID4ISMhtfyMLaDqUoD0FNCYQ71JTQATspoeL78fH+9qH7+7FhVGoCeEgpzuC+hAXBiGQ25
+        teechTzOLVMPrCoNQE8JhTngl9AAOLlcKmM0bOu3i+pnzUFUpQHoKaEwh/wSGgANGA3byBebPbX5BKrS
+        APSUUJjDfgkNgCaMhsfk2Qq+2HwSVWkAekoozIG/hAZAI0bD7XyqcEJVaQB6SijMwb+EBkAzGQ3/vJjz
+        kZXvKpxUVRqAnhIKc/gvoQHQlNHwbX9efLqofm6cQFUagJ4SCvNJYAkNgMaMhlEuP/r5ovpZcSJVaQB6
+        SijMJ4MlNACay4PH5qzsJg9gy+VHvtTcRFUagJ4SCvNJYQkNAD6/q971qdD5lMXlR81UpQHoKaEwnxiW
+        0ADgs25PhTYUGqtKA9BTQmE+QSyhAcCHXJKT5w3M2XkmhgJlaQB6SijMJ4olNABY5LkD+QLwnKFHZijw
+        oSoNQE8JhfmEsYQGAKV82pAvAs85eiT5XkY+MTEUGFSlAegpoTCfPJbQAOC7UraPdvvVfBfjlwt3PaJU
+        lQagp4TCfBJZQgOAq+x9OOQSqnyakC9vV39/+FCVBqCnhMJ8QllCA4CbfLlUaQ/fcfgyEjxsjZtUpQHo
+        KaEwn1yW0ADgbnk3P4X9lePhz4s8bM4nCdytKg1ATwmF+USzhAYAm8glSynyuWxpq+c55M/Jn5c/N3du
+        qv5/4WZVaQB6SijMJ58lNAB4mnwKkKKfwp/LmH4klxbln3dXI56qKg1ATwkFgwEAGFSlAegpoWAwAACD
+        qjQAPSUUDAYAYFCVBqCnhILBAAAMqtIA9JRQMBgAgEFVGoCeEgoGAwAwqEoD0FNCwWAAAAZVaQB6SigY
+        DADAoCoNQE8JBYMBABhUpQHoKaFgMAAAg6o0AD0lFAwGAGBQlQagp4SCwQAADKrSAPSUUDAYAIBBVRqA
+        nhIKBgMAMKhKA9BTQsFgAAAGVWkAekooGAwAwKAqDUBPCQWDAQAYVKUB6CmhYDAAAIOqNAA9JRQMBgBg
+        UJUGoKeEgsEAAAyq0gD0lFAwGACAQVUagJ4SCgYDADCoSgPQU0LBYAAABlVpAHpKKBgMAMCgKg1ATwkF
+        gwEAGFSlAegpoWAwAACDqjQAPSUUDAYAYFCVBqCnhILBAAAMqtIA9JRQMBgAgEFVGoCeEgoGAwAwqEoD
+        0FNCwWAAAAZVaQB6SigYDADAoCoNQE8JBYMBABhUpQHoKaFgMAAAg6o0AD0lFAwGAGBQlQagp4SCwQAA
+        DKrSAPSUUDAYAIBBVRqAnhIKBgMAMKhKA9BTQsFgAAAGVWkAekooGAwAwKAqDUBPCQWDAQAYVKUB6Cmh
+        YDAAAIOqNAA9JRQMBgBgUJUGoKeEgsEAAAyq0gD0lFAwGACAQVUagJ4SCgYDADCoSgPQU0LBYAAABlVp
+        AHpKKBgMAMCgKg1ATwkFgwEAGFSlAegpoWAwAACDqjQAPSUUDAYAYFCVBqCnhILBAAAMqtIA9JRQMBgA
+        gEFVGoCeEgoGAwAwqEoD0FNCwWAAAAZVaQB6SigYDADAoCoNQE8JBYMBABhUpQHoKaFgMAAAg6o0AD0l
+        FAwGAGBQlQagp4SCwQAADKrSAPSUUDAYAIBBVRqAnhIKBgMAMKhKA9BTQsFgAAAGVWkAekooGAwAwKAq
+        DUBPCQWDAQAYVKUB6CmhYDAAAIOqNAA9JRQMBgBgUJUGoKeEgsEAAAyq0gD0lFAwGACAQVUagJ4SCgYD
+        ADCoSgPQU0LBYAAABlVpAHpKKBgMAAdUhToAbC0nHYMB4ICqUAeAreWkYzAAHFAV6gCwtZx0DAaAA6pC
+        HQC2lpOOwQBwQFWoA8DWctIxGAAOqAp1ANhaTjoGA8ABVaEOAFvLScdgADigKtQBYGs56RgMAAdUhToA
+        bC0nHYMB4ICqUAeAreWkYzAAHFAV6gCwtZx0DAaAA6pCHQC2lpOOwQBwQFWoA8DWctIxGAAOqAp1ANha
+        TjoGA8ABVaEOAFvLScdgADigKtQBYGs56RgMAAdUhToAbC0nHYMB4ICqUAeAreWkYzAAHFAV6gCwtZx0
+        DAaAA6pCHQC2lpOOwQBwQFWoA8DWctIxGAAOqAp1ANhaTjoGA8ABVaEOAFvLScdgADigKtQBYGs56RgM
+        AAdUhToAbC0nHYMB4ICqUAeAreWkYzAAHFAV6gCwtZx0DAaAA6pCHQC2lpOOwQBwQFWoA8DWctIxGAAO
+        qAp1ANhaTjoGA8ABVaEOAFvLScdgADigKtQBYGs56RgMAAdUhToAbC0nHYMB4ICqUAeAreWkYzAAHFAV
+        6gCwtZx0DAaAA6pCHQC2lpOOwQBwQFWoA8DWctIxGAAOqAp1ANhaTjoGA8ABVaEOAFvLScdgADigKtQB
+        YGs56RgMAAdUhToAbOvvf/wfFu0yIfWe9NEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnWatchMovie.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 34</value>
+  </data>
+  <data name="btnWatchMovie.TabIndex" type="System.Int32, mscorlib">
+    <value>999</value>
+  </data>
+  <data name="btnWatchMovie.Text" xml:space="preserve">
+    <value>Watch Now</value>
+  </data>
+  <data name="&gt;&gt;btnWatchMovie.Name" xml:space="preserve">
+    <value>btnWatchMovie</value>
+  </data>
+  <data name="&gt;&gt;btnWatchMovie.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnWatchMovie.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnWatchMovie.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="appClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2940,7 +3069,34 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;appClose.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
+  </data>
+  <data name="ListsPanelBackground.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 13pt</value>
+  </data>
+  <data name="ListsPanelBackground.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 446</value>
+  </data>
+  <data name="ListsPanelBackground.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 34</value>
+  </data>
+  <data name="ListsPanelBackground.TabIndex" type="System.Int32, mscorlib">
+    <value>100004</value>
+  </data>
+  <data name="ListsPanelBackground.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ListsPanelBackground.Name" xml:space="preserve">
+    <value>ListsPanelBackground</value>
+  </data>
+  <data name="&gt;&gt;ListsPanelBackground.Type" xml:space="preserve">
+    <value>CButtonLib.CButton, CButtonLib, Version=3.0.6.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ListsPanelBackground.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ListsPanelBackground.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

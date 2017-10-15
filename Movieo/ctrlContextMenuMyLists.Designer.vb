@@ -61,7 +61,7 @@ Partial Class ctrlContextMenuMyLists
         Me.btnEditList.BorderColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.btnEditList.ColorFillSolid = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.btnEditList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEditList.DesignerSelected = True
+        Me.btnEditList.DesignerSelected = False
         Me.btnEditList.DimFactorClick = 20
         Me.btnEditList.DimFactorHover = 20
         Me.btnEditList.FillType = CButtonLib.CButton.eFillType.Solid

@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Text.RegularExpressions
 
 Public Class frmCreateList
 
@@ -21,55 +22,68 @@ Public Class frmCreateList
         End If
 
         txtTitle.Focus()
-        txtTitle.SelectionStart = 0
     End Sub
+
+    Dim invalidPathChars() As Char = Path.GetInvalidPathChars()
 
     Private Sub btnFormSubmit_ClickButtonArea(Sender As Object, e As MouseEventArgs) Handles btnFrmCreateList.ClickButtonArea
-        If Not txtTitle.Text = "" Then
-            If replaceList = True Then
-                showMessage("Saving your list...")
-                Dim moviesList() As String = File.ReadAllLines(Movieo.pathMyLists + oldTitle + ".txt")
-                Dim copyList As New List(Of String)
+        Try
+            If Not txtTitle.Text = "" Then
+                If replaceList = True Then
+                    showMessage("Saving your list...")
+                    Dim moviesList() As String = File.ReadAllLines(Movieo.pathMyLists + oldTitle + ".txt")
+                    Dim copyList As New List(Of String)
 
-                For Each movieItem As String In moviesList
-                    copyList.Add(movieItem)
-                Next
+                    For Each movieItem As String In moviesList
+                        copyList.Add(movieItem)
+                    Next
 
-                Dim buildList As New Text.StringBuilder()
-                For Each movieItem As String In copyList
-                    buildList.AppendLine(movieItem)
-                Next
+                    Dim buildList As New Text.StringBuilder()
+                    For Each movieItem As String In copyList
+                        buildList.AppendLine(movieItem)
+                    Next
 
-                File.Delete(Movieo.pathMyLists + oldTitle + ".txt")
+                    File.Delete(Movieo.pathMyLists + oldTitle + ".txt")
 
-                File.WriteAllText(Movieo.pathMyLists + txtTitle.Text + ".txt", buildList.ToString())
-                showMessage("Your list has been saved!")
-                Movieo.loadMyLists()
-                Close()
-            Else
-                If Not File.Exists(Movieo.pathMyLists + txtTitle.Text + ".txt") Then
-                    Try
-                        showMessage("Creating your list...")
-                        Dim movieInText As String() = Split(txtMovies.Text, ", ")
-                        Dim buildList As New Text.StringBuilder()
-                        For Each movieItem As String In movieInText
-                            buildList.AppendLine(movieItem)
-                        Next
-                        File.WriteAllText(Movieo.pathMyLists + txtTitle.Text + ".txt", buildList.ToString())
-                        showMessage("You have successfully created a list!")
-                        Movieo.loadMyLists()
-                        Close()
-                    Catch ex As Exception
-                        showMessage("Unable to create list.")
-                    End Try
+                    File.WriteAllText(Movieo.pathMyLists + cleanListTitle(txtTitle.Text) + ".txt", buildList.ToString())
+                    showMessage("Your list has been saved!")
+                    Movieo.loadMyLists()
+                    Close()
                 Else
-                    showMessage("List already exists.")
+                    If Not File.Exists(Movieo.pathMyLists + txtTitle.Text + ".txt") Then
+                        Try
+                            showMessage("Creating your list...")
+                            Dim movieInText As String() = Split(txtMovies.Text, ", ")
+                            Dim buildList As New Text.StringBuilder()
+                            For Each movieItem As String In movieInText
+                                buildList.AppendLine(movieItem)
+                            Next
+                            File.WriteAllText(Movieo.pathMyLists + cleanListTitle(txtTitle.Text) + ".txt", buildList.ToString())
+                            showMessage("You have successfully created a list!")
+                            Movieo.loadMyLists()
+                            Close()
+                        Catch ex As Exception
+                            showMessage("Unable to create list.")
+                        End Try
+                    Else
+                        showMessage("List already exists.")
+                    End If
                 End If
+            Else
+                showMessage("Title can't be blank.")
             End If
-        Else
-            showMessage("Title can't be blank.")
-        End If
+        Catch ex As Exception
+            showMessage("Unable to Create List")
+            Movieo.ShowPopupOk("Unable to create list", ex.InnerException.Message, Me)
+        End Try
     End Sub
+
+    Private Function cleanListTitle(UserInput As String) As String
+        For Each invalidChar In Path.GetInvalidFileNameChars
+            UserInput = UserInput.Replace(invalidChar, "")
+        Next
+        Return UserInput
+    End Function
 
     Private Sub BtnSubmitForm_MouseMove(sender As Object, e As EventArgs) Handles btnFrmCreateList.MouseMove, btnFrmCreateList.GotFocus
         sender.ForeColor = Color.White

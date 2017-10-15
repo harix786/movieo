@@ -14,7 +14,7 @@ Public Class frmInfo
 
         'Latest changelog text
         Try
-            lblChangelogFull.Text = New WebClient().DownloadString(Movieo.linkChangelog)
+            lblChangelogFull.Text = New WebClient().DownloadString(Movieo.linkReleaseNotes)
         Catch ex As Exception
             lblChangelogFull.Text = ex.Message
         End Try
@@ -208,10 +208,6 @@ Public Class frmInfo
 
     Private Sub imgProviderPopcornTime_Click(sender As Object, e As EventArgs) Handles imgProviderPopcornTime.Click
         Process.Start("https://popcorntime.sh/")
-    End Sub
-
-    Private Sub MeClose_MouseClick(sender As Object, e As MouseEventArgs) Handles meClose.MouseClick
-
     End Sub
 
 #End Region
